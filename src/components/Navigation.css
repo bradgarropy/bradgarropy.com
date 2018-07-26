@@ -1,0 +1,19 @@
+.navigation {
+    border: 3px solid black;
+    margin: 20px;
+    padding: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.navigation a {
+    color: black;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: #98fb98;
+}
+
+.navigation a:not(:last-child) {
+    padding-right: 10px;
+}

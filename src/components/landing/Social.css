@@ -1,0 +1,16 @@
+.social {
+    padding: 5px;
+}
+
+.social a:not(:last-child) {
+    margin-right: 20px;
+}
+
+.social .fa {
+    font-size: 75px;
+    color: #98fb98;
+}
+
+.social .fa:hover {
+    color: black;
+}
