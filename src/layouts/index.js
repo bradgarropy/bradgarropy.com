@@ -26,8 +26,6 @@ const Layout = ({ children, data }) => {
                 ]}
             />
 
-            <Navigation/>
-
             {children()}
 
         </div>
