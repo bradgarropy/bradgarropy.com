@@ -1,0 +1,9 @@
+.fourohfour {
+    display: grid;
+    justify-items: center;
+    font-family: "Righteous", cursive;
+}
+
+.fourohfour h1 {
+    font-size: 100px;
+}
