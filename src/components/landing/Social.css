@@ -8,9 +8,9 @@
 
 .social .fa {
     font-size: 75px;
-    color: #98fb98;
+    color: black;
 }
 
 .social .fa:hover {
-    color: black;
+    color: #98fb98;
 }
