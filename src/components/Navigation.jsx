@@ -4,45 +4,26 @@ import Link from "gatsby-link"
 // styles
 import "./Navigation.css"
 
+// components
+import Logo from "./Logo"
 
-class Navigation extends React.Component {
 
-    constructor(props) {
+const Navigation = () => {
 
-        super(props)
+    return (
 
-        this.state = {
+        <div className="navigation">
 
-        }
+            <Link to="/">
+                <Logo/>
+            </Link>
 
-    }
+        </div>
 
-    render() {
-
-        return (
-
-            <div className="navigation">
-
-                <Link to="/">Home</Link>
-                <Link to="/posts">Posts</Link>
-
-            </div>
-
-        )
-
-    }
+    )
 
 }
 
 
-Navigation.propTypes = {
-
-}
-
-
-Navigation.defaultProps = {
-
-}
-
-
+// export
 export default Navigation

@@ -1,0 +1,26 @@
+.blog {
+    display: grid;
+    grid-row-gap: 40px;
+    margin: 40px 0px;
+    font-family: "Lato", sans-serif;
+}
+
+.blog-article h1 {
+    margin: 0px;
+    font-size: 2.5em;
+}
+
+.blog-article time {
+    margin: 0px;
+    font-size: 1rem;
+}
+
+.blog-article a {
+    color: black;
+    display: block;
+    text-decoration: none;
+}
+
+.blog-article a:hover {
+    color: #98fb98;
+}
