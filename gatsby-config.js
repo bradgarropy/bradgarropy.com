@@ -2,8 +2,25 @@ require("dotenv").config({
     path: `.env.${process.env.NODE_ENV}`,
 })
 
-console.log(process.env.NODE_ENV)
-console.log(process.env.CONTEXT)
+
+let contentfulOptions = {}
+
+if(process.env.CONTEXT === "production") {
+    contentfulOptions = {
+        spaceId: process.env.CONTENTFUL_SPACE,
+        accessToken: process.env.CONTENTFUL_TOKEN,
+        host: process.env.CONTENTFUL_HOST,
+    }
+}
+else {
+    contentfulOptions = {
+        spaceId: process.env.CONTENTFUL_SPACE,
+        accessToken: process.env.CONTENTFUL_PREVIEW_TOKEN,
+        host: process.env.CONTENTFUL_PREVIEW_HOST,
+    }
+}
+
+console.log(contentfulOptions)
 
 
 module.exports = {
@@ -25,11 +42,7 @@ module.exports = {
         },
         {
             resolve: "gatsby-source-contentful",
-            options: {
-                spaceId: process.env.CONTENTFUL_SPACE,
-                accessToken: process.env.CONTENTFUL_TOKEN,
-                host: process.env.CONTENTFUL_HOST,
-            },
+            options: contentfulOptions,
         },
         {
             resolve: "gatsby-transformer-remark",
