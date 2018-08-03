@@ -20,9 +20,6 @@ else {
     }
 }
 
-console.log(process.env.CONTEXT)
-console.log(contentfulOptions)
-
 
 module.exports = {
     siteMetadata: {
