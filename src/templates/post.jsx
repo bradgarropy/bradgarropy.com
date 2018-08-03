@@ -5,15 +5,20 @@ import PropTypes from "prop-types"
 import "./post.css"
 
 
-const Post = (props) => {
+const Post = ({data}) => {
 
     return (
 
         <div className="post">
 
-            <h1>{props.data.contentfulPost.title}</h1>
-            <h3>{props.data.contentfulPost.date}</h3>
-            <div dangerouslySetInnerHTML={{ __html: props.data.contentfulPost.body.childMarkdownRemark.html }} />
+            <header>
+                <time>{data.contentfulPost.date}</time>
+                <h1>{data.contentfulPost.title}</h1>
+            </header>
+
+            <main>
+                <div dangerouslySetInnerHTML={{ __html: data.contentfulPost.body.childMarkdownRemark.html }} />
+            </main>
 
         </div>
 
@@ -23,12 +28,7 @@ const Post = (props) => {
 
 
 Post.propTypes = {
-
-}
-
-
-Post.defaultProps = {
-
+    data: PropTypes.object.isRequired,
 }
 
 
@@ -38,7 +38,7 @@ export const postQuery = graphql`
             id
             title
             slug
-            date
+            date(formatString: "MMMM D, YYYY")
             body {
                 childMarkdownRemark {
                     html

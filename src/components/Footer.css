@@ -1,0 +1,17 @@
+.footer {
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.footer a {
+    padding: 10px;
+}
+
+.footer .fa {
+    font-size: 40px;
+    color: black;
+}
+
+.footer .fa:hover {
+    color: #98fb98;
+}

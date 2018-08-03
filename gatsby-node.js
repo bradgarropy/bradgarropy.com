@@ -21,7 +21,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
                 edge => {
 
                     const options = {
-                        path: `post/${edge.node.slug}`,
+                        path: `${edge.node.slug}`,
                         component: path.resolve("./src/templates/post.jsx"),
                         context: {
                             slug: edge.node.slug,

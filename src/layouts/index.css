@@ -1,0 +1,14 @@
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+}

@@ -1,7 +1,7 @@
 import React from "react"
 
 // styles
-import "./fourohfour.css"
+import "./404.css"
 
 
 const FourOhFour = () => {

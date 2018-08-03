@@ -4,9 +4,13 @@ import Helmet from "react-helmet"
 
 // components
 import Navigation from "../components/Navigation"
+import Footer from "../components/Footer"
 
 // favicon
 import favicon from "../icons/favicon.ico"
+
+// styles
+import "./index.css"
 
 
 const Layout = ({ children, data }) => {
@@ -26,7 +30,13 @@ const Layout = ({ children, data }) => {
                 ]}
             />
 
-            {children()}
+            <div className="container">
+
+                <Navigation/>
+                {children()}
+                <Footer/>
+
+            </div>
 
         </div>
 
