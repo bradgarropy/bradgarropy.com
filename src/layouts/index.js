@@ -13,7 +13,7 @@ import favicon from "../icons/favicon.ico"
 import "./index.css"
 
 
-const Layout = ({ children, data }) => {
+const Layout = ({children, data}) => {
 
     return (
 
@@ -43,18 +43,23 @@ const Layout = ({ children, data }) => {
     )
 }
 
+
 Layout.propTypes = {
     children: PropTypes.func,
+    data: PropTypes.object,
 }
 
-export default Layout
 
 export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
+    query SiteTitleQuery {
+        site {
+            siteMetadata {
+            title
+            }
+        }
     }
-  }
 `
+
+
+// exports
+export default Layout

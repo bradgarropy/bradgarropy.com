@@ -5,7 +5,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
 
     const {createPage} = boundActionCreators
 
-    return new Promise((resolve, reject) => {
+    return new Promise(resolve => {
         graphql(
             `{
                 allContentfulPost {
@@ -17,6 +17,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
                 }
             }`
         ).then(result => {
+
             result.data.allContentfulPost.edges.forEach(
                 edge => {
 
