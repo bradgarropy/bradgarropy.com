@@ -33,9 +33,14 @@ module.exports = {
             resolve: "gatsby-plugin-google-fonts",
             options: {
                 fonts: [
-                    "lato",
                     "righteous",
                 ],
+            },
+        },
+        {
+            resolve: "gatsby-plugin-typography",
+            options: {
+                pathToConfigModule: "src/utils/typography.js",
             },
         },
         {
