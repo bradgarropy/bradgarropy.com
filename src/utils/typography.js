@@ -8,6 +8,13 @@ const overrideStyles = () => {
         li: {
             marginBottom: 0,
         },
+        a: {
+            color: "#47A8BD",
+            textDecoration: "none",
+        },
+        "a:hover": {
+            color: "#FF9770",
+        },
     }
 
     return style
