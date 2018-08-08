@@ -35,10 +35,8 @@ Post.propTypes = {
 export const postQuery = graphql`
     query postQuery($slug: String!) {
         contentfulPost(slug: {eq: $slug}) {
-            id
-            title
-            slug
             date(formatString: "MMMM D, YYYY")
+            title
             body {
                 childMarkdownRemark {
                     html

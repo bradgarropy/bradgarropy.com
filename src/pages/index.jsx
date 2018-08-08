@@ -21,20 +21,15 @@ export const homeQuery = graphql`
     query homeQuery {
         allContentfulPost (
             sort: {
-                fields: [createdAt], order: DESC
+                fields: [date], order: DESC
             }
         ) {
             edges {
                 node {
                     id
-                    title
                     slug
+                    title
                     date(formatString: "MMMM D, YYYY")
-                    body {
-                        childMarkdownRemark {
-                            html
-                        }
-                    }
                 }
             }
         }
