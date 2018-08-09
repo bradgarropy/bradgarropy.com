@@ -13,7 +13,7 @@ const Post = ({data}) => {
 
             <header>
                 <time>{data.contentfulPost.date}</time>
-                <h1>{data.contentfulPost.title}</h1>
+                <h1>{data.contentfulPost.title.childMarkdownRemark.excerpt}</h1>
             </header>
 
             <main>
@@ -34,9 +34,17 @@ Post.propTypes = {
 
 export const postQuery = graphql`
     query postQuery($slug: String!) {
-        contentfulPost(slug: {eq: $slug}) {
+        contentfulPost(
+            slug: {
+                eq: $slug
+            }
+        ) {
             date(formatString: "MMMM D, YYYY")
-            title
+            title {
+                childMarkdownRemark {
+                    excerpt
+                }
+            }
             body {
                 childMarkdownRemark {
                     html
