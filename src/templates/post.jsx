@@ -12,12 +12,16 @@ const Post = ({data}) => {
         <div className="post">
 
             <header>
-                <time>{data.contentfulPost.date}</time>
+                <time>{data.contentfulPost.date} in  #{data.contentfulPost.topic.name}</time>
                 <h1>{data.contentfulPost.title.childMarkdownRemark.excerpt}</h1>
             </header>
 
             <main>
-                <div dangerouslySetInnerHTML={{ __html: data.contentfulPost.body.childMarkdownRemark.html }} />
+                <div
+                    dangerouslySetInnerHTML={{
+                        __html: data.contentfulPost.body.childMarkdownRemark.html,
+                    }}
+                />
             </main>
 
         </div>
@@ -40,6 +44,9 @@ export const postQuery = graphql`
             }
         ) {
             date(formatString: "MMMM D, YYYY")
+            topic {
+                name
+            }
             title {
                 childMarkdownRemark {
                     excerpt
@@ -51,7 +58,8 @@ export const postQuery = graphql`
                 }
             }
         }
-    }`
+    }
+`
 
 
 // export

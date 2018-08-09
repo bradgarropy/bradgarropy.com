@@ -29,12 +29,15 @@ export const homeQuery = graphql`
                 node {
                     id
                     slug
+                    date(formatString: "MMMM D, YYYY")
+                    topic {
+                        name
+                    }
                     title {
                         childMarkdownRemark {
                             excerpt
                         }
                     }
-                    date(formatString: "MMMM D, YYYY")
                 }
             }
         }
