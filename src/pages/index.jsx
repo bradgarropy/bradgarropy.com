@@ -1,24 +1,30 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-
 // components
-import Blog from "../components/Blog"
+import PostList from "../components/PostList"
+
+// styles
+import "./index.css"
 
 
-const Home = ({data}) => {
+const Blog = ({data}) => {
 
     return (
 
-        <Blog posts={data.allContentfulPost.edges}/>
+        <div className="blog">
+
+            <PostList posts={data.allContentfulPost.edges}/>
+
+        </div>
 
     )
 
 }
 
 
-export const homeQuery = graphql`
-    query homeQuery {
+export const blogQuery = graphql`
+    query blogQuery {
         allContentfulPost (
             sort: {
                 fields: [date],
@@ -45,10 +51,10 @@ export const homeQuery = graphql`
 `
 
 
-Home.propTypes = {
+Blog.propTypes = {
     data: PropTypes.object.isRequired,
 }
 
 
 // export
-export default Home
+export default Blog
