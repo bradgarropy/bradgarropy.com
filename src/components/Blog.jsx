@@ -23,7 +23,7 @@ const Blog = ({posts}) => {
                         <time>{post.node.date}</time>
                         <h1>
                             <Link to={`/${post.node.slug}`}>
-                                {post.node.title}
+                                {post.node.title.childMarkdownRemark.excerpt}
                             </Link>
                         </h1>
 
