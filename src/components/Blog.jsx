@@ -20,7 +20,10 @@ const Blog = ({posts}) => {
                         className="blog-article"
                     >
 
-                        <time>{post.node.date}</time>
+                        <p>
+                            {post.node.date} in #{post.node.topic.name}
+                        </p>
+
                         <h1>
                             <Link to={`/${post.node.slug}`}>
                                 {post.node.title.childMarkdownRemark.excerpt}

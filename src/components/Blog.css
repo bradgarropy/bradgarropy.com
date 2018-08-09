@@ -10,9 +10,8 @@
     font-weight: 600;
 }
 
-.blog-article time {
+.blog-article p {
     margin: 0px;
-    font-size: 1rem;
 }
 
 .blog-article a {

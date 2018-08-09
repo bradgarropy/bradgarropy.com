@@ -12,6 +12,9 @@ exports.createPages = ({graphql, boundActionCreators}) => {
                     edges {
                         node {
                             slug
+                            topic {
+                                name
+                            }
                         }
                     }
                 }
@@ -21,11 +24,21 @@ exports.createPages = ({graphql, boundActionCreators}) => {
             result.data.allContentfulPost.edges.forEach(
                 edge => {
 
-                    const options = {
+                    let options = {
                         path: `${edge.node.slug}`,
                         component: path.resolve("./src/templates/post.jsx"),
                         context: {
                             slug: edge.node.slug,
+                        },
+                    }
+
+                    createPage(options)
+
+                    options = {
+                        path: `/topic/${edge.node.topic.name}`,
+                        component: path.resolve("./src/templates/topic.jsx"),
+                        context: {
+                            topic: edge.node.topic.name,
                         },
                     }
 
