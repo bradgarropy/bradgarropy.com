@@ -2,23 +2,32 @@ import React from "react"
 import Link from "gatsby-link"
 import PropTypes from "prop-types"
 
+// components
+import PostMeta from "./PostMeta"
+
 // styles
 import "./PostListItem.css"
 
 
 const PostListItem = ({post}) => {
 
+    const date = post.date
+    const topic = post.topic.name
+    const slug = post.slug
+    const title = post.title.childMarkdownRemark.excerpt
+
     return (
 
         <div className="post-list-item">
 
-            <p>
-                {post.node.date} in #{post.node.topic.name}
-            </p>
+            <PostMeta
+                date={date}
+                topic={topic}
+            />
 
             <h1>
-                <Link to={`/${post.node.slug}`}>
-                    {post.node.title.childMarkdownRemark.excerpt}
+                <Link to={`/${slug}`}>
+                    {title}
                 </Link>
             </h1>
 

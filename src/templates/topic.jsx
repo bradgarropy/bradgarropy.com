@@ -1,19 +1,27 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+// components
+import PostList from "../components/PostList"
+
 // styles
 import "./topic.css"
 
 
 const Topic = ({data}) => {
 
+    const topic = data.contentfulTopic.name
+    const posts = data.contentfulTopic.post
+
     return (
 
         <div className="topic">
 
             <h1>
-                {`Topic: ${data.contentfulTopic.name}`}
+                {`Topic: ${topic}`}
             </h1>
+
+            <PostList posts={posts}/>
 
         </div>
 
@@ -35,6 +43,19 @@ export const topicQuery = graphql`
             }
         ) {
             name
+            post {
+                id
+                slug
+                date
+                topic {
+                    name
+                }
+                title {
+                    childMarkdownRemark {
+                        excerpt
+                    }
+                }
+            }
         }
     }
 `

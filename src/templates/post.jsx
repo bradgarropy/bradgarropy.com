@@ -1,28 +1,36 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+// components
+import PostMeta from "../components/PostMeta"
+
 // styles
 import "./post.css"
 
 
 const Post = ({data}) => {
 
+    const date = data.contentfulPost.date
+    const topic = data.contentfulPost.topic.name
+    const title = data.contentfulPost.title.childMarkdownRemark.excerpt
+    const body = data.contentfulPost.body.childMarkdownRemark.html
+
     return (
 
         <div className="post">
 
-            <header>
-                <time>{data.contentfulPost.date} in  #{data.contentfulPost.topic.name}</time>
-                <h1>{data.contentfulPost.title.childMarkdownRemark.excerpt}</h1>
-            </header>
+            <PostMeta
+                date={date}
+                topic={topic}
+            />
 
-            <main>
-                <div
-                    dangerouslySetInnerHTML={{
-                        __html: data.contentfulPost.body.childMarkdownRemark.html,
-                    }}
-                />
-            </main>
+            <h1>{title}</h1>
+
+            <div
+                dangerouslySetInnerHTML={{
+                    __html: body,
+                }}
+            />
 
         </div>
 

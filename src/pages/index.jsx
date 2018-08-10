@@ -10,11 +10,15 @@ import "./index.css"
 
 const Blog = ({data}) => {
 
+    const posts = data.allContentfulPost.edges.map(
+        edge => edge.node
+    )
+
     return (
 
         <div className="blog">
 
-            <PostList posts={data.allContentfulPost.edges}/>
+            <PostList posts={posts}/>
 
         </div>
 
