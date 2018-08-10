@@ -17,7 +17,7 @@ const PostList = ({posts}) => {
             {posts.map(
                 post => (
                     <PostListItem
-                        key={post.node.id}
+                        key={post.id}
                         post={post}
                     />
                 )
