@@ -10,7 +10,7 @@
 
 .post-list-item a {
     color: black;
-    display: block;
+    display: inline-block;
     text-decoration: none;
 }
 

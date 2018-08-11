@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "gatsby-link"
 import PropTypes from "prop-types"
 
 // styles
@@ -12,7 +13,9 @@ const PostMeta = ({date, topic}) => {
         <div className="post-meta">
 
             <p>
-                {date} in #{topic}
+                {date} in <Link to={`/topic/${topic}`}>
+                    #{topic}
+                </Link>
             </p>
 
         </div>
