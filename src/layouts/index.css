@@ -12,3 +12,7 @@ body {
     max-width: 700px;
     margin: auto;
 }
+
+.content {
+    margin: 40px 0px;
+}
