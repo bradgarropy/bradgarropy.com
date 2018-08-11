@@ -57,13 +57,9 @@ export const topicQuery = graphql`
                 id
                 slug
                 date
+                title
                 topic {
                     name
-                }
-                title {
-                    childMarkdownRemark {
-                        excerpt
-                    }
                 }
             }
         }

@@ -12,7 +12,7 @@ const Post = ({data}) => {
 
     const date = data.contentfulPost.date
     const topic = data.contentfulPost.topic.name
-    const title = data.contentfulPost.title.childMarkdownRemark.excerpt
+    const title = data.contentfulPost.title
     const body = data.contentfulPost.body.childMarkdownRemark.html
 
     return (
@@ -51,14 +51,10 @@ export const postQuery = graphql`
                 eq: $slug
             }
         ) {
+            title
             date(formatString: "MMMM D, YYYY")
             topic {
                 name
-            }
-            title {
-                childMarkdownRemark {
-                    excerpt
-                }
             }
             body {
                 childMarkdownRemark {
