@@ -14,7 +14,7 @@ const PostListItem = ({post}) => {
     const date = post.date
     const topic = post.topic.name
     const slug = post.slug
-    const title = post.title.childMarkdownRemark.excerpt
+    const title = post.title
 
     return (
 

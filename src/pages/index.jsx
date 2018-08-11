@@ -39,14 +39,10 @@ export const blogQuery = graphql`
                 node {
                     id
                     slug
+                    title
                     date(formatString: "MMMM D, YYYY")
                     topic {
                         name
-                    }
-                    title {
-                        childMarkdownRemark {
-                            excerpt
-                        }
                     }
                 }
             }
