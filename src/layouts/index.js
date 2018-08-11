@@ -33,7 +33,11 @@ const Layout = ({children, data}) => {
             <div className="container">
 
                 <Navigation/>
-                {children()}
+
+                <div className="content">
+                    {children()}
+                </div>
+
                 <Footer/>
 
             </div>

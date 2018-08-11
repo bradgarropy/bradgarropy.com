@@ -11,7 +11,17 @@ import "./topic.css"
 const Topic = ({data}) => {
 
     const topic = data.contentfulTopic.name
-    const posts = data.contentfulTopic.post
+    let posts = data.contentfulTopic.post
+
+    posts.sort(function(a, b) {
+
+        const first = new Date(a.date)
+        const second = new Date(b.date)
+
+        const result = second - first
+
+        return result
+    })
 
     return (
 
