@@ -60,8 +60,8 @@ export const topicQuery = graphql`
             post {
                 id
                 slug
-                date
                 title
+                date(formatString: "MMMM D, YYYY")
                 topic {
                     name
                 }
