@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 
 // components
 import PostList from "../components/PostList"
+import TopicMeta from "../components/TopicMeta"
 
 // styles
 import "./topic.css"
@@ -11,6 +12,7 @@ import "./topic.css"
 const Topic = ({data}) => {
 
     const topic = data.contentfulTopic.name
+    const icon = data.contentfulTopic.icon
     let posts = data.contentfulTopic.post
 
     posts.sort(function(a, b) {
@@ -27,9 +29,10 @@ const Topic = ({data}) => {
 
         <div className="topic">
 
-            <h1>
-                {`Topic: ${topic}`}
-            </h1>
+            <TopicMeta
+                topic={topic}
+                icon={icon}
+            />
 
             <PostList posts={posts}/>
 
@@ -53,6 +56,7 @@ export const topicQuery = graphql`
             }
         ) {
             name
+            icon
             post {
                 id
                 slug
