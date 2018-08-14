@@ -6,7 +6,7 @@ import PropTypes from "prop-types"
 import PostMeta from "./PostMeta"
 
 // styles
-import "../styles/PostListItem.scss"
+import "../scss/PostListItem.scss"
 
 
 const PostListItem = ({post}) => {

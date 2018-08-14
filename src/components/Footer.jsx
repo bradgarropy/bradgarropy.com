@@ -2,7 +2,7 @@ import React from "react"
 
 
 // styles
-import "../styles/Footer.scss"
+import "../scss/Footer.scss"
 import "font-awesome/css/font-awesome.min.css"
 
 
