@@ -1,3 +1,5 @@
+@import "colors";
+
 .footer {
     text-align: center;
     padding: 20px 0px;
@@ -13,5 +15,5 @@
 }
 
 .footer .fa:hover {
-    color: #47A8BD;
+    color: $blue;
 }

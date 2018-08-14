@@ -6,7 +6,7 @@ import PostList from "../components/PostList"
 import TopicMeta from "../components/TopicMeta"
 
 // styles
-import "./topic.css"
+import "./topic.scss"
 
 
 const Topic = ({data}) => {

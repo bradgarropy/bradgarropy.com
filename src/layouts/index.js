@@ -10,7 +10,7 @@ import Footer from "../components/Footer"
 import favicon from "../icons/favicon.ico"
 
 // styles
-import "./index.css"
+import "./index.scss"
 
 
 const Layout = ({children, data}) => {

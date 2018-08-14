@@ -1,4 +1,7 @@
-.post-list-item h1 {
+@import "colors";
+
+.post-list-item h1
+{
     margin: 0px;
     font-size: 2.5em;
     font-weight: 600;
@@ -15,5 +18,5 @@
 }
 
 .post-list-item a:hover {
-    color: #47A8BD;
+    color: $blue;
 }

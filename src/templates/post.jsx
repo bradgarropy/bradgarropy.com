@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 import PostMeta from "../components/PostMeta"
 
 // styles
-import "./post.css"
+import "./post.scss"
 
 
 const Post = ({data}) => {

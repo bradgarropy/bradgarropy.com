@@ -1,7 +1,7 @@
 import React from "react"
 
 // styles
-import "./Logo.css"
+import "../styles/Logo.scss"
 
 
 const Logo = () => (

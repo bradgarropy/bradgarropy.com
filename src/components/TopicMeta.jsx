@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 // styles
-import "./TopicMeta.css"
+import "../styles/TopicMeta.scss"
 
 
 const TopicMeta = ({topic, icon}) => {
