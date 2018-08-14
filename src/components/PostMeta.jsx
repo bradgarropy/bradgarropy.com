@@ -3,7 +3,7 @@ import Link from "gatsby-link"
 import PropTypes from "prop-types"
 
 // styles
-import "./PostMeta.css"
+import "../styles/PostMeta.scss"
 
 
 const PostMeta = ({date, topic}) => {

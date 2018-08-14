@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 import PostList from "../components/PostList"
 
 // styles
-import "./index.css"
+import "./index.scss"
 
 
 const Blog = ({data}) => {

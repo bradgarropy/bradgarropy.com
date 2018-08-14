@@ -2,7 +2,7 @@ import React from "react"
 import Link from "gatsby-link"
 
 // styles
-import "./Navigation.css"
+import "../styles/Navigation.scss"
 
 // components
 import Logo from "./Logo"
