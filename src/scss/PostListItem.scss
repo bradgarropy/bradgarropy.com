@@ -1,22 +1,23 @@
 @import "colors";
 
+
 .post-list-item h1
 {
     margin: 0px;
     font-size: 2.5em;
-    font-weight: 600;
 }
 
 .post-list-item p {
     margin: 0px;
 }
 
-.post-list-item a {
+.post-list-item h1 a {
     color: black;
+    font-family: "Montserrat", sans-serif;
     display: inline-block;
     text-decoration: none;
 }
 
-.post-list-item a:hover {
+.post-list-item h1 a:hover {
     color: $blue;
 }

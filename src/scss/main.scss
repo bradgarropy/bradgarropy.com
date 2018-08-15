@@ -1,0 +1,51 @@
+@import "colors";
+
+html {
+    margin: 0rem;
+    padding: 0rem;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    overflow-y: scroll;
+    margin: 0rem;
+    padding: 0rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: rgba($color: black, $alpha: 1.0);
+    margin-top: 1.75rem;
+    margin-bottom: 1.75rem;
+    line-height: 2.75rem;
+}
+
+p {
+    color: rgba($color: black, $alpha: 0.8);
+    line-height: 1.75rem;
+    margin-top: 1.75rem;
+    margin-bottom: 1.75rem;
+}
+
+a {
+    color: $blue;
+    text-decoration: none;
+
+    &:hover {
+        color: $orange;
+    }
+}
+
+pre {
+    color: rgba($color: black, $alpha: 1);
+    line-height: 1.75rem;
+    padding: 1rem 2rem;
+    background-color: rgba($color: $blue, $alpha: 0.1)
+}
+
+code {
+    font-size: 0.9rem;
+}
