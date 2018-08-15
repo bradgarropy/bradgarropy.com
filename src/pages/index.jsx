@@ -4,11 +4,8 @@ import PropTypes from "prop-types"
 // components
 import PostList from "../components/PostList"
 
-// styles
-import "./index.scss"
 
-
-const Blog = ({data}) => {
+const Home = ({data}) => {
 
     const posts = data.allContentfulPost.edges.map(
         edge => edge.node
@@ -16,19 +13,15 @@ const Blog = ({data}) => {
 
     return (
 
-        <div className="blog">
-
-            <PostList posts={posts}/>
-
-        </div>
+        <PostList posts={posts}/>
 
     )
 
 }
 
 
-export const blogQuery = graphql`
-    query blogQuery {
+export const homeQuery = graphql`
+    query homeQuery {
         allContentfulPost (
             sort: {
                 fields: [date],
@@ -51,10 +44,10 @@ export const blogQuery = graphql`
 `
 
 
-Blog.propTypes = {
+Home.propTypes = {
     data: PropTypes.object.isRequired,
 }
 
 
 // export
-export default Blog
+export default Home
