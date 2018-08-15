@@ -5,9 +5,6 @@ import PropTypes from "prop-types"
 import PostList from "../components/PostList"
 import TopicMeta from "../components/TopicMeta"
 
-// styles
-import "./topic.scss"
-
 
 const Topic = ({data}) => {
 
@@ -27,7 +24,7 @@ const Topic = ({data}) => {
 
     return (
 
-        <div className="topic">
+        <div>
 
             <TopicMeta
                 topic={topic}

@@ -2,10 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 // components
-import PostMeta from "../components/PostMeta"
-
-// styles
-import "./post.scss"
+import PostHeader from "../components/PostHeader"
 
 
 const Post = ({data}) => {
@@ -17,14 +14,13 @@ const Post = ({data}) => {
 
     return (
 
-        <div className="post">
+        <div>
 
-            <PostMeta
+            <PostHeader
                 date={date}
                 topic={topic}
+                title={title}
             />
-
-            <h1>{title}</h1>
 
             <div
                 dangerouslySetInnerHTML={{

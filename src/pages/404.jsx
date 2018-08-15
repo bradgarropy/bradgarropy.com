@@ -1,20 +1,22 @@
 import React from "react"
 
+// components
+import FourOhFour from "../components/FourOhFour"
+
 // styles
-import "./404.scss"
+import "../scss/FourOhFour.scss"
 
 
-const FourOhFour = () => {
+const NotFound = () => {
 
     return (
 
-        <div className="fourohfour">
-            <h1>404</h1>
-        </div>
+        <FourOhFour/>
 
     )
 
 }
 
+
 // export
-export default FourOhFour
+export default NotFound
