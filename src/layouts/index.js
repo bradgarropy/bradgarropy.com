@@ -11,6 +11,7 @@ import favicon from "../icons/favicon.ico"
 
 // styles
 import "./index.scss"
+import "../scss/main.scss"
 
 
 const Layout = ({children, data}) => {

@@ -33,18 +33,14 @@ module.exports = {
             resolve: "gatsby-plugin-google-fonts",
             options: {
                 fonts: [
-                    "righteous",
+                    "righteous: 400",
+                    "montserrat: 400,500,600,700,800,900",
+                    "open sans: 400,500,600,700,800,900",
                 ],
             },
         },
         {
             resolve: "gatsby-plugin-sass",
-        },
-        {
-            resolve: "gatsby-plugin-typography",
-            options: {
-                pathToConfigModule: "src/utils/typography.js",
-            },
         },
         {
             resolve: "gatsby-source-contentful",

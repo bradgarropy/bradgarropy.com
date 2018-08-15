@@ -1,7 +1,17 @@
+@import "colors";
+
+
 .post-meta {
 
-}
+    p {
+        margin: 0rem;
+    }
 
-.post-meta p {
-    margin: 0px;
+    a {
+        color: rgba($color: black, $alpha: 0.8);
+
+        &:hover {
+            color: $blue;
+        }
+    }
 }
