@@ -30,6 +30,15 @@ module.exports = {
             resolve: "gatsby-plugin-react-helmet",
         },
         {
+            resolve: "gatsby-plugin-google-analytics",
+            options: {
+                trackingId: "UA-76434003-2",
+                head: true,
+                anonymize: true,
+                respectDNT: false,
+            },
+        },
+        {
             resolve: "gatsby-plugin-google-fonts",
             options: {
                 fonts: [
