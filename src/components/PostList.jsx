@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 // components
-import PostListItem from "./PostListItem"
+import PostHeader from "./PostHeader"
 
 // styles
 import "../scss/PostList.scss"
@@ -16,9 +16,12 @@ const PostList = ({posts}) => {
 
             {posts.map(
                 post => (
-                    <PostListItem
+                    <PostHeader
                         key={post.id}
-                        post={post}
+                        date={post.date}
+                        topic={post.topic.name}
+                        title={post.title}
+                        slug={post.slug}
                     />
                 )
             )}
