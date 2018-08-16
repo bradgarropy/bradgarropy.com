@@ -22,6 +22,7 @@ const PostHeader = ({date, topic, title, slug}) => {
 
             <PostTitle
                 title={title}
+                slug={slug}
             />
 
         </div>
@@ -33,7 +34,7 @@ const PostHeader = ({date, topic, title, slug}) => {
 
 PostHeader.propTypes = {
     date: PropTypes.string.isRequired,
-    topic: PropTypes.string,
+    topic: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     slug: PropTypes.string,
 }

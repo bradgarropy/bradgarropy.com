@@ -13,9 +13,7 @@ const PostMeta = ({date, topic}) => {
         <div className="post-meta">
 
             <p>
-                {date} in <Link to={`/topic/${topic}`}>
-                    #{topic}
-                </Link>
+                {date} in <Link to={`/topic/${topic}`}>#{topic}</Link>
             </p>
 
         </div>

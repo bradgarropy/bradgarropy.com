@@ -1,16 +1,29 @@
 import React from "react"
+import Link from "gatsby-link"
 import PropTypes from "prop-types"
 
 // styles
 import "../scss/PostTitle.scss"
 
 
-const PostTitle = ({title}) => {
+const PostTitle = ({title, slug}) => {
 
     return (
 
         <div className="post-title">
-            <h1>{title}</h1>
+
+            <h1>
+
+                {slug ?
+                    <Link to={`/${slug}`}>
+                        {title}
+                    </Link>
+                    :
+                    title
+                }
+
+            </h1>
+
         </div>
 
     )
@@ -20,6 +33,7 @@ const PostTitle = ({title}) => {
 
 PostTitle.propTypes = {
     title: PropTypes.string.isRequired,
+    slug: PropTypes.string,
 }
 
 
