@@ -1,19 +1,19 @@
 @import "colors";
 
 .footer {
-    text-align: center;
-    padding: 20px 0px;
-}
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    grid-column-gap: 1.25rem;
+    padding: 1.25rem 0rem;
 
-.footer a {
-    padding: 10px;
-}
+    .fa {
+        font-size: 2.5rem;
+        color: rgba($color: black, $alpha: 0.8);
 
-.footer .fa {
-    font-size: 40px;
-    color: rgba($color: black, $alpha: 0.8);
-}
+        &:hover {
+            color: $blue;
+        }
+    }
 
-.footer .fa:hover {
-    color: $blue;
 }

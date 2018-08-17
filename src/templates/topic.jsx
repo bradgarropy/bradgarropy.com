@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 
 // components
@@ -6,7 +7,7 @@ import PostList from "../components/PostList"
 import TopicMeta from "../components/TopicMeta"
 
 
-const Topic = ({data}) => {
+const TopicTemplate = ({data}) => {
 
     const topic = data.contentfulTopic.name
     const icon = data.contentfulTopic.icon
@@ -26,6 +27,10 @@ const Topic = ({data}) => {
 
         <div>
 
+            <Helmet>
+                <title>{topic}</title>
+            </Helmet>
+
             <TopicMeta
                 topic={topic}
                 icon={icon}
@@ -40,13 +45,13 @@ const Topic = ({data}) => {
 }
 
 
-Topic.propTypes = {
+TopicTemplate.propTypes = {
     data: PropTypes.object.isRequired,
 }
 
 
-export const topicQuery = graphql`
-    query topicQuery($topic: String!) {
+export const topicTemplateQuery = graphql`
+    query topicTemplateQuery($topic: String!) {
         contentfulTopic(
             name: {
                 eq: $topic
@@ -69,4 +74,4 @@ export const topicQuery = graphql`
 
 
 // export
-export default Topic
+export default TopicTemplate

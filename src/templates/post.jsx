@@ -1,32 +1,25 @@
 import React from "react"
+import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 
 // components
-import PostHeader from "../components/PostHeader"
+import Post from "../components/Post"
 
 
-const Post = ({data}) => {
+const PostTemplate = ({data}) => {
 
-    const date = data.contentfulPost.date
-    const topic = data.contentfulPost.topic.name
-    const title = data.contentfulPost.title
-    const body = data.contentfulPost.body.childMarkdownRemark.html
+    const post = data.contentfulPost
+    const title = post.title
 
     return (
 
         <div>
 
-            <PostHeader
-                date={date}
-                topic={topic}
-                title={title}
-            />
+            <Helmet>
+                <title>{title}</title>
+            </Helmet>
 
-            <div
-                dangerouslySetInnerHTML={{
-                    __html: body,
-                }}
-            />
+            <Post post={post}/>
 
         </div>
 
@@ -35,13 +28,13 @@ const Post = ({data}) => {
 }
 
 
-Post.propTypes = {
+PostTemplate.propTypes = {
     data: PropTypes.object.isRequired,
 }
 
 
-export const postQuery = graphql`
-    query postQuery($slug: String!) {
+export const postTemplateQuery = graphql`
+    query postTemplateQuery($slug: String!) {
         contentfulPost(
             slug: {
                 eq: $slug
@@ -63,4 +56,4 @@ export const postQuery = graphql`
 
 
 // export
-export default Post
+export default PostTemplate

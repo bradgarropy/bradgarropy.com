@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from "react-helmet"
 
 // components
 import FourOhFour from "../components/FourOhFour"
@@ -11,7 +12,15 @@ const NotFound = () => {
 
     return (
 
-        <FourOhFour/>
+        <div>
+
+            <Helmet>
+                <title>404</title>
+            </Helmet>
+
+            <FourOhFour/>
+
+        </div>
 
     )
 

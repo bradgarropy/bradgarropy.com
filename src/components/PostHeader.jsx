@@ -5,9 +5,6 @@ import PropTypes from "prop-types"
 import PostMeta from "./PostMeta"
 import PostTitle from "./PostTitle"
 
-// styles
-import "../scss/PostHeader.scss"
-
 
 const PostHeader = ({date, topic, title, slug}) => {
 

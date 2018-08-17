@@ -22,9 +22,6 @@ else {
 
 
 module.exports = {
-    siteMetadata: {
-        title: "bradgarropy",
-    },
     plugins: [
         {
             resolve: "gatsby-plugin-react-helmet",
