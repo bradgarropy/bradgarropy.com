@@ -20,16 +20,19 @@ const Layout = ({children, data}) => {
 
         <div>
 
-            <Helmet
-                title={data.site.siteMetadata.title}
-                meta={[
-                    {name: "description", content: "Sample"},
-                    {name: "keywords", content: "sample, something"},
-                ]}
-                link={[
-                    {rel: "icon", type: "image/png", href: favicon},
-                ]}
-            />
+            <Helmet>
+                <title>{data.site.siteMetadata.title}</title>
+                <meta name="description" content="Sample"/>
+                <meta name="keywords" content="sample, something"/>
+                <link rel="icon" type="image/png" href={favicon}/>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <script>
+                    {`(adsbygoogle = window.adsbygoogle || []).push({
+                        google_ad_client: "ca-pub-6761407051192110",
+                        enable_page_level_ads: true,
+                    })`}
+                </script>
+            </Helmet>
 
             <div className="container">
 
