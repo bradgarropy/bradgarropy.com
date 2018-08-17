@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 
 // components
@@ -13,7 +14,15 @@ const Home = ({data}) => {
 
     return (
 
-        <PostList posts={posts}/>
+        <div>
+
+            <Helmet>
+                <title>blog</title>
+            </Helmet>
+
+            <PostList posts={posts}/>
+
+        </div>
 
     )
 

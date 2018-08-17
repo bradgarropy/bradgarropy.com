@@ -14,14 +14,13 @@ import "./index.scss"
 import "../scss/main.scss"
 
 
-const Layout = ({children, data}) => {
+const IndexLayout = ({children}) => {
 
     return (
 
         <div>
 
             <Helmet>
-                <title>{data.site.siteMetadata.title}</title>
                 <meta name="description" content="Sample"/>
                 <meta name="keywords" content="sample, something"/>
                 <link rel="icon" type="image/png" href={favicon}/>
@@ -52,22 +51,10 @@ const Layout = ({children, data}) => {
 }
 
 
-Layout.propTypes = {
+IndexLayout.propTypes = {
     children: PropTypes.func,
-    data: PropTypes.object,
 }
 
 
-export const query = graphql`
-    query SiteTitleQuery {
-        site {
-            siteMetadata {
-            title
-            }
-        }
-    }
-`
-
-
 // exports
-export default Layout
+export default IndexLayout
