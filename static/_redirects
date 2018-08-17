@@ -1,0 +1,2 @@
+# redirect index to blog
+/       /blog       302
