@@ -20,12 +20,12 @@ h1, h2, h3, h4, h5, h6 {
     color: rgba($color: black, $alpha: 1.0);
     margin-top: 1.75rem;
     margin-bottom: 1.75rem;
-    line-height: 2.75rem;
+    line-height: 1.5;
 }
 
 p {
     color: rgba($color: black, $alpha: 0.8);
-    line-height: 1.75rem;
+    line-height: 1.75;
     margin-top: 1.75rem;
     margin-bottom: 1.75rem;
 }
@@ -41,7 +41,7 @@ a {
 
 pre {
     color: rgba($color: black, $alpha: 1);
-    line-height: 1.75rem;
+    line-height: 1.75;
     padding: 1rem 2rem;
     background-color: rgba($color: $blue, $alpha: 0.1)
 }
