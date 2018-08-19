@@ -29,7 +29,7 @@ const Footer = () => {
             </a>
 
             <a href="https://www.youtube.com/bradgarropy">
-                <i className="fab fa-youtube-play"></i>
+                <i className="fab fa-youtube"></i>
             </a>
 
         </div>
