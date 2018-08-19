@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: repeat(4, auto);
     justify-content: center;
-    grid-column-gap: 1.25rem;
+    column-gap: 1.25rem;
     padding: 1.25rem 0rem;
 
     .fab {
