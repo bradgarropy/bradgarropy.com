@@ -4,8 +4,6 @@ import PropTypes from "prop-types"
 // styles
 import "../scss/PostBody.scss"
 import "../scss/PrismFunky.scss"
-// import "../scss/PrismOkaidia.scss"
-// import "../scss/PrismTomorrow.scss"
 
 
 const PostBody = ({content}) => {
