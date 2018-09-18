@@ -21,9 +21,9 @@ const IndexLayout = ({children}) => {
         <div>
 
             <Helmet>
-                <meta name="description" content="Sample"/>
-                <meta name="keywords" content="sample, something"/>
                 <link rel="icon" type="image/png" href={favicon}/>
+                <meta name="description" content="🏠 my home on the web"/>
+                <meta name="keywords" content="gatsby, react, contentful, scss, eslint, blog, portfolio"/>
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <script>
                     {`(adsbygoogle = window.adsbygoogle || []).push({
