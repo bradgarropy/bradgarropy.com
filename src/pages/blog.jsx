@@ -1,8 +1,10 @@
 import React from "react"
 import Helmet from "react-helmet"
 import PropTypes from "prop-types"
+import {graphql} from "gatsby"
 
 // components
+import Layout from "../components/Layout"
 import PostList from "../components/PostList"
 
 
@@ -14,7 +16,7 @@ const blogPage = ({data}) => {
 
     return (
 
-        <div>
+        <Layout>
 
             <Helmet>
                 <title>blog</title>
@@ -22,7 +24,7 @@ const blogPage = ({data}) => {
 
             <PostList posts={posts}/>
 
-        </div>
+        </Layout>
 
     )
 
@@ -30,7 +32,7 @@ const blogPage = ({data}) => {
 
 
 export const blogPageQuery = graphql`
-    query blogPageQuery {
+    {
         allContentfulPost (
             sort: {
                 fields: [date],
