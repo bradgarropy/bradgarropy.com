@@ -1,8 +1,10 @@
 import React from "react"
 import Helmet from "react-helmet"
 import PropTypes from "prop-types"
+import {graphql} from "gatsby"
 
 // components
+import Layout from "../components/Layout"
 import PostList from "../components/PostList"
 import TopicMeta from "../components/TopicMeta"
 
@@ -25,7 +27,7 @@ const TopicTemplate = ({data}) => {
 
     return (
 
-        <div>
+        <Layout>
 
             <Helmet>
                 <title>{topic}</title>
@@ -38,7 +40,7 @@ const TopicTemplate = ({data}) => {
 
             <PostList posts={posts}/>
 
-        </div>
+        </Layout>
 
     )
 
@@ -51,7 +53,7 @@ TopicTemplate.propTypes = {
 
 
 export const topicTemplateQuery = graphql`
-    query topicTemplateQuery($topic: String!) {
+    query ($topic: String!) {
         contentfulTopic(
             name: {
                 eq: $topic

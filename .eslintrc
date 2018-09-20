@@ -18,17 +18,87 @@
         "react"
     ],
     "rules": {
-        "comma-dangle": ["error", "always-multiline"],
-        "comma-spacing": ["error", {"before": false, "after": true}],
-        "comma-style": ["error", "last"],
-        "eol-last": ["error", "always"],
-        "eqeqeq": ["error", "always"],
-        "indent": ["error", 4, {"SwitchCase": 1}],
-        "no-mixed-spaces-and-tabs": ["error"],
-        "no-unused-vars": ["error", { "ignoreRestSiblings": true }],
-        "semi": ["error", "never"],
-        "semi-spacing": ["error", {"before": false, "after": true}],
-        "semi-style": ["error", "last"],
-        "quotes": ["error", "double"]
+        "comma-dangle": [
+            "error",
+            "always-multiline"
+        ],
+        "comma-spacing": [
+            "error",
+            {
+                "before": false,
+                "after": true
+            }
+        ],
+        "comma-style": [
+            "error",
+            "last"
+        ],
+        "eol-last": [
+            "error",
+            "always"
+        ],
+        "eqeqeq": [
+            "error",
+            "always"
+        ],
+        "function-paren-newline": [
+            "error",
+            "consistent"
+        ],
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "no-mixed-spaces-and-tabs": [
+            "error"
+        ],
+        "no-unused-vars": [
+            "error",
+            {
+                "ignoreRestSiblings": true
+            }
+        ],
+        "object-curly-spacing": [
+            "error",
+            "never"
+        ],
+        "object-curly-newline": [
+            "error",
+            {
+                "consistent": true
+            }
+        ],
+        "object-property-newline": [
+            "error",
+            {
+                "allowAllPropertiesOnSameLine": true
+            }
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "semi-spacing": [
+            "error",
+            {
+                "before": false,
+                "after": true
+            }
+        ],
+        "semi-style": [
+            "error",
+            "last"
+        ],
+        "space-before-function-paren": [
+            "error",
+            "never"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ]
     }
 }

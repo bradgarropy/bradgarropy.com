@@ -2,6 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 
 // components
+import Layout from "../components/Layout"
 import FourOhFour from "../components/FourOhFour"
 
 // styles
@@ -12,7 +13,7 @@ const NotFound = () => {
 
     return (
 
-        <div>
+        <Layout>
 
             <Helmet>
                 <title>404</title>
@@ -20,7 +21,7 @@ const NotFound = () => {
 
             <FourOhFour/>
 
-        </div>
+        </Layout>
 
     )
 

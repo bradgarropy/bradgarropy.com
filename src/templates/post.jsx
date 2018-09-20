@@ -1,8 +1,10 @@
 import React from "react"
 import Helmet from "react-helmet"
 import PropTypes from "prop-types"
+import {graphql} from "gatsby"
 
 // components
+import Layout from "../components/Layout"
 import Post from "../components/Post"
 
 
@@ -13,7 +15,7 @@ const PostTemplate = ({data}) => {
 
     return (
 
-        <div>
+        <Layout>
 
             <Helmet>
                 <title>{title}</title>
@@ -21,7 +23,7 @@ const PostTemplate = ({data}) => {
 
             <Post post={post}/>
 
-        </div>
+        </Layout>
 
     )
 
@@ -34,7 +36,7 @@ PostTemplate.propTypes = {
 
 
 export const postTemplateQuery = graphql`
-    query postTemplateQuery($slug: String!) {
+    query ($slug: String!) {
         contentfulPost(
             slug: {
                 eq: $slug
