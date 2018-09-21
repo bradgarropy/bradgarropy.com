@@ -45,7 +45,7 @@ const IndexLayout = ({children}) => {
 
 
 IndexLayout.propTypes = {
-    children: PropTypes.func,
+    children: PropTypes.node,
 }
 
 
