@@ -46,3 +46,14 @@ code {
 img {
     width: 100%;
 }
+
+blockquote {
+    border-left: 3px solid $blue;
+    font-style: italic;
+    padding-left: 1rem;
+    color: rgba(0, 0, 0, 0.5)
+}
+
+ul {
+    color: rgba($color: black, $alpha: 0.8);
+}
