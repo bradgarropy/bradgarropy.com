@@ -62,5 +62,8 @@ module.exports = {
                 ],
             },
         },
+        {
+            resolve: "gatsby-plugin-twitter",
+        },
     ],
 }

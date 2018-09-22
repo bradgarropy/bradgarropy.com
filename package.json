@@ -1,6 +1,6 @@
 {
     "name": "bradgarropy.com",
-    "version": "1.1.2",
+    "version": "1.2.0",
     "description": "🏠 my home on the web",
     "keywords": [
         "gatsby",
@@ -36,6 +36,7 @@
         "gatsby-plugin-google-fonts": "0.0.4",
         "gatsby-plugin-react-helmet": "^3.0.0",
         "gatsby-plugin-sass": "^2.0.1",
+        "gatsby-plugin-twitter": "^2.0.5",
         "gatsby-remark-prismjs": "^3.0.0",
         "gatsby-source-contentful": "^2.0.1",
         "gatsby-transformer-remark": "^2.1.3",
