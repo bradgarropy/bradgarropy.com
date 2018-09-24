@@ -9,11 +9,11 @@ import PostList from "../components/PostList"
 import TopicMeta from "../components/TopicMeta"
 
 
-const TopicTemplate = ({data}) => {
+const TopicTemplate = (props) => {
 
-    const topic = data.contentfulTopic.name
-    const icon = data.contentfulTopic.icon
-    let posts = data.contentfulTopic.post
+    const topic = props.data.contentfulTopic.name
+    const icon = props.data.contentfulTopic.icon
+    let posts = props.data.contentfulTopic.post
 
     posts.sort(function(a, b) {
 
@@ -30,7 +30,21 @@ const TopicTemplate = ({data}) => {
         <Layout>
 
             <Helmet>
+
                 <title>{topic}</title>
+
+                <meta name="twitter:card" content="summary"/>
+                <meta name="twitter:site" content="@bradgarropy"/>
+                <meta name="twitter:title" content="bradgarropy"/>
+                <meta name="twitter:description" content={`${icon} ${topic}`}/>
+                <meta name="twitter:image" content="https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto,ar_1:1,c_mpad,w_600,b_white/bradgarropy/bg.png"/>
+
+                <meta property="og:url" content={props.location.href}/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:title" content="bradgarropy"/>
+                <meta property="og:description" content={`${icon} ${topic}`}/>
+                <meta property="og:image" content="https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto,ar_2:1,c_mpad,h_600,b_white/bradgarropy/bg.png"/>
+
             </Helmet>
 
             <TopicMeta
@@ -49,6 +63,7 @@ const TopicTemplate = ({data}) => {
 
 TopicTemplate.propTypes = {
     data: PropTypes.object.isRequired,
+    location: PropTypes.object,
 }
 
 
