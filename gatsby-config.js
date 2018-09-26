@@ -30,10 +30,10 @@ module.exports = {
             resolve: "gatsby-plugin-manifest",
             options: {
                 name: "bradgarropy",
-                short_name: "bg",
-                start_url: "/",
+                short_name: "bradgarropy",
+                start_url: "/blog",
                 background_color: "#ffffff",
-                theme_color: "#888888",
+                theme_color: "#ffffff",
                 display: "minimal-ui",
                 icon: "src/icons/pwa.png",
             },
