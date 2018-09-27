@@ -1,12 +1,19 @@
 import React from "react"
-import Helmet from "react-helmet"
 import PropTypes from "prop-types"
+import Helmet from "react-helmet"
+import {graphql} from "gatsby"
 
 // components
 import Layout from "../components/Layout"
+import PostList from "../components/PostList"
 
 
-const indexPage = (props) => {
+
+const blogPage = (props) => {
+
+    const posts = props.data.allContentfulPost.edges.map(
+        edge => edge.node
+    )
 
     return (
 
@@ -30,6 +37,8 @@ const indexPage = (props) => {
 
             </Helmet>
 
+            <PostList posts={posts}/>
+
         </Layout>
 
     )
@@ -37,10 +46,35 @@ const indexPage = (props) => {
 }
 
 
-indexPage.propTypes = {
+export const blogPageQuery = graphql`
+    {
+        allContentfulPost (
+            sort: {
+                fields: [date],
+                order: DESC
+            }
+        ) {
+            edges {
+                node {
+                    id
+                    slug
+                    title
+                    date(formatString: "MMMM D, YYYY")
+                    topic {
+                        name
+                    }
+                }
+            }
+        }
+    }
+`
+
+
+blogPage.propTypes = {
+    data: PropTypes.object.isRequired,
     location: PropTypes.object,
 }
 
 
 // export
-export default indexPage
+export default blogPage

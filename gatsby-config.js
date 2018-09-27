@@ -26,21 +26,21 @@ module.exports = {
         {
             resolve: "gatsby-plugin-react-helmet",
         },
-        // {
-        //     resolve: "gatsby-plugin-manifest",
-        //     options: {
-        //         name: "bradgarropy",
-        //         short_name: "bradgarropy",
-        //         start_url: "/blog",
-        //         background_color: "#ffffff",
-        //         theme_color: "#ffffff",
-        //         display: "minimal-ui",
-        //         icon: "src/icons/pwa.png",
-        //     },
-        // },
-        // {
-        //     resolve: "gatsby-plugin-offline",
-        // },
+        {
+            resolve: "gatsby-plugin-manifest",
+            options: {
+                name: "bradgarropy",
+                short_name: "bradgarropy",
+                start_url: "/",
+                background_color: "#ffffff",
+                theme_color: "#ffffff",
+                display: "minimal-ui",
+                icon: "src/icons/pwa.png",
+            },
+        },
+        {
+            resolve: "gatsby-plugin-offline",
+        },
         {
             resolve: "gatsby-plugin-google-analytics",
             options: {
