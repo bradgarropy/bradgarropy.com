@@ -31,7 +31,7 @@ module.exports = {
             options: {
                 name: "bradgarropy",
                 short_name: "bradgarropy",
-                start_url: "/blog",
+                start_url: "/",
                 background_color: "#ffffff",
                 theme_color: "#ffffff",
                 display: "minimal-ui",
