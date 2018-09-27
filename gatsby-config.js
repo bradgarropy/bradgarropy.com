@@ -38,10 +38,9 @@ module.exports = {
                 icon: "src/icons/pwa.png",
             },
         },
-        // disabling due to interfence with Netlify's redirects
-        // {
-        //     resolve: "gatsby-plugin-offline",
-        // },
+        {
+            resolve: "gatsby-plugin-offline",
+        },
         {
             resolve: "gatsby-plugin-google-analytics",
             options: {
