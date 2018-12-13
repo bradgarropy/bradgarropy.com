@@ -3,7 +3,7 @@ require("dotenv").config({
 })
 
 
-let contentfulOptions = {}
+let contentfulOptions
 
 if(process.env.CONTEXT === "production") {
     contentfulOptions = {
