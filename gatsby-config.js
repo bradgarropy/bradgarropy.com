@@ -2,24 +2,21 @@ require("dotenv").config({
     path: `.env.${process.env.NODE_ENV}`,
 })
 
-
 let contentfulOptions
 
-if(process.env.CONTEXT === "production") {
+if (process.env.CONTEXT === "production") {
     contentfulOptions = {
         spaceId: process.env.CONTENTFUL_SPACE,
         accessToken: process.env.CONTENTFUL_TOKEN,
         host: process.env.CONTENTFUL_HOST,
     }
-}
-else {
+} else {
     contentfulOptions = {
         spaceId: process.env.CONTENTFUL_SPACE,
         accessToken: process.env.CONTENTFUL_PREVIEW_TOKEN,
         host: process.env.CONTENTFUL_PREVIEW_HOST,
     }
 }
-
 
 module.exports = {
     plugins: [
@@ -35,7 +32,7 @@ module.exports = {
                 background_color: "#ffffff",
                 theme_color: "#ffffff",
                 display: "minimal-ui",
-                icon: "src/icons/pwa.png",
+                icon: "static/icons/icon.png",
             },
         },
         {

@@ -1,41 +1,25 @@
 import React from "react"
 import PropTypes from "prop-types"
-
-// components
 import PostHeader from "../components/PostHeader"
 import PostBody from "../components/PostBody"
 
-
 const Post = ({post}) => {
-
     const date = post.date
     const topic = post.topic.name
     const title = post.title
     const body = post.body.childMarkdownRemark.html
 
     return (
-
         <div className="post">
-
-            <PostHeader
-                date={date}
-                topic={topic}
-                title={title}
-            />
+            <PostHeader date={date} topic={topic} title={title}/>
 
             <PostBody content={body}/>
-
         </div>
-
     )
-
 }
-
 
 Post.propTypes = {
     post: PropTypes.object.isRequired,
 }
 
-
-// export
 export default Post
