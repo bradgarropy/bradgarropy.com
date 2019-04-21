@@ -11,6 +11,7 @@ const Layout = ({children}) => {
     return (
         <div>
             <Helmet>
+                <html lang="en"/>
                 <meta name="description" content="🏠 my home on the web"/>
                 <meta
                     name="keywords"
