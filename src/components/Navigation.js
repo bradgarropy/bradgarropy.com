@@ -6,7 +6,7 @@ import "../scss/Navigation.scss"
 const Navigation = () => {
     return (
         <div className="navigation">
-            <Link to="/">
+            <Link to="/" aria-label="bg">
                 <Logo/>
             </Link>
         </div>

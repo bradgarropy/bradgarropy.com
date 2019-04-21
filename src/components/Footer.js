@@ -12,19 +12,22 @@ const Footer = () => {
                 />
             </Helmet>
 
-            <a href="https://www.instagram.com/bradgarropy">
+            <a
+                href="https://www.instagram.com/bradgarropy"
+                aria-label="Instagram"
+            >
                 <i className="fab fa-instagram"/>
             </a>
 
-            <a href="https://twitter.com/bradgarropy">
+            <a href="https://twitter.com/bradgarropy" aria-label="Twitter">
                 <i className="fab fa-twitter-square"/>
             </a>
 
-            <a href="https://github.com/bradgarropy">
+            <a href="https://github.com/bradgarropy" aria-label="GitHub">
                 <i className="fab fa-github"/>
             </a>
 
-            <a href="https://www.youtube.com/bradgarropy">
+            <a href="https://www.youtube.com/bradgarropy" aria-label="YouTube">
                 <i className="fab fa-youtube"/>
             </a>
         </div>
