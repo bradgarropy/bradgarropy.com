@@ -20,7 +20,10 @@ const blogPage = props => {
                     name="twitter:description"
                     content="🏠 my home on the web"
                 />
-                <meta name="twitter:image" content="/static/twitter.webp"/>
+                <meta
+                    name="twitter:image"
+                    content={`${props.location.origin}/twitter.webp`}
+                />
 
                 <meta property="og:url" content={props.location.href}/>
                 <meta property="og:type" content="website"/>
@@ -29,7 +32,10 @@ const blogPage = props => {
                     property="og:description"
                     content="🏠 my home on the web"
                 />
-                <meta property="og:image" content="/static/facebook.webp"/>
+                <meta
+                    property="og:image"
+                    content={`${props.location.origin}/facebook.webp`}
+                />
             </Helmet>
 
             <PostList posts={posts}/>

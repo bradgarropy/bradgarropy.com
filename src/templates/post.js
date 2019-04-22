@@ -18,13 +18,19 @@ const PostTemplate = props => {
                 <meta name="twitter:site" content="@bradgarropy"/>
                 <meta name="twitter:title" content="bradgarropy"/>
                 <meta name="twitter:description" content={title}/>
-                <meta name="twitter:image" content="/static/twitter.webp"/>
+                <meta
+                    name="twitter:image"
+                    content={`${props.location.origin}/twitter.webp`}
+                />
 
                 <meta property="og:url" content={props.location.href}/>
                 <meta property="og:type" content="article"/>
                 <meta property="og:title" content="bradgarropy"/>
                 <meta property="og:description" content={title}/>
-                <meta property="og:image" content="/static/facebook.webp"/>
+                <meta
+                    property="og:image"
+                    content={`${props.location.origin}/facebook.webp`}
+                />
             </Helmet>
 
             <Post post={post}/>
