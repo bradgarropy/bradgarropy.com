@@ -20,10 +20,7 @@ const blogPage = props => {
                     name="twitter:description"
                     content="🏠 my home on the web"
                 />
-                <meta
-                    name="twitter:image"
-                    content="https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto,ar_1:1,c_mpad,w_600,b_white/bradgarropy/bg.png"
-                />
+                <meta name="twitter:image" content="/static/twitter.webp"/>
 
                 <meta property="og:url" content={props.location.href}/>
                 <meta property="og:type" content="website"/>
@@ -32,10 +29,7 @@ const blogPage = props => {
                     property="og:description"
                     content="🏠 my home on the web"
                 />
-                <meta
-                    property="og:image"
-                    content="https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto,ar_2:1,c_mpad,h_600,b_white/bradgarropy/bg.png"
-                />
+                <meta property="og:image" content="/static/facebook.webp"/>
             </Helmet>
 
             <PostList posts={posts}/>
