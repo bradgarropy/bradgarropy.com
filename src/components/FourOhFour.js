@@ -1,11 +1,18 @@
 import React from "react"
-import "../scss/FourOhFour.scss"
+import styled from "styled-components"
+
+const FourOhFourWrapper = styled.div`
+    display: grid;
+    justify-items: center;
+    font-family: "Righteous", cursive;
+    font-size: 5rem;
+`
 
 const FourOhFour = () => {
     return (
-        <div className="four-oh-four">
+        <FourOhFourWrapper>
             <h1>404</h1>
-        </div>
+        </FourOhFourWrapper>
     )
 }
 
