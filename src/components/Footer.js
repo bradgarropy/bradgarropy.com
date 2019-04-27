@@ -1,10 +1,27 @@
 import React from "react"
 import Helmet from "react-helmet"
-import "../scss/Footer.scss"
+import styled from "styled-components"
+
+const FooterWrapper = styled.footer`
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    column-gap: 1.25rem;
+    padding: 1.25rem 0rem;
+
+    .fab {
+        font-size: 2.5rem;
+        color: rgba(0, 0, 0, 0.8);
+
+        &:hover {
+            color: ${({theme}) => theme.colors.blue};
+        }
+    }
+`
 
 const Footer = () => {
     return (
-        <div className="footer">
+        <FooterWrapper>
             <Helmet>
                 <link
                     rel="stylesheet"
@@ -30,7 +47,7 @@ const Footer = () => {
             <a href="https://www.youtube.com/bradgarropy" aria-label="YouTube">
                 <i className="fab fa-youtube"/>
             </a>
-        </div>
+        </FooterWrapper>
     )
 }
 
