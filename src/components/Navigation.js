@@ -1,15 +1,24 @@
 import React from "react"
 import {Link} from "gatsby"
+import styled from "styled-components"
 import Logo from "./Logo"
-import "../scss/Navigation.scss"
+
+const NavigationWrapper = styled.nav`
+    text-align: center;
+    padding: 1.25rem 0rem;
+
+    a {
+        display: inline-block;
+    }
+`
 
 const Navigation = () => {
     return (
-        <div className="navigation">
+        <NavigationWrapper>
             <Link to="/" aria-label="bg">
                 <Logo/>
             </Link>
-        </div>
+        </NavigationWrapper>
     )
 }
 
