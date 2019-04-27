@@ -1,11 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 import PostHeader from "./PostHeader"
-import "../scss/PostList.scss"
+
+const PostListWrapper = styled.div`
+    display: grid;
+    row-gap: 2.25rem;
+`
 
 const PostList = ({posts}) => {
     return (
-        <div className="post-list">
+        <PostListWrapper>
             {posts.map(post => (
                 <PostHeader
                     key={post.id}
@@ -15,7 +20,7 @@ const PostList = ({posts}) => {
                     slug={post.slug}
                 />
             ))}
-        </div>
+        </PostListWrapper>
     )
 }
 
