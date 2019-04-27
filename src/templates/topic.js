@@ -31,7 +31,7 @@ const TopicTemplate = props => {
                 <meta name="twitter:description" content={`${icon} ${topic}`}/>
                 <meta
                     name="twitter:image"
-                    content={`${props.location.origin}/twitter.webp`}
+                    content="https://bradgarropy.com/twitter.webp"
                 />
 
                 <meta property="og:url" content={props.location.href}/>
@@ -40,7 +40,7 @@ const TopicTemplate = props => {
                 <meta property="og:description" content={`${icon} ${topic}`}/>
                 <meta
                     property="og:image"
-                    content={`${props.location.origin}/facebook.webp`}
+                    content="https://bradgarropy.com/facebook.webp"
                 />
             </Helmet>
 

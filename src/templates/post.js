@@ -20,7 +20,7 @@ const PostTemplate = props => {
                 <meta name="twitter:description" content={title}/>
                 <meta
                     name="twitter:image"
-                    content={`${props.location.origin}/twitter.webp`}
+                    content="https://bradgarropy.com/twitter.webp"
                 />
 
                 <meta property="og:url" content={props.location.href}/>
@@ -29,7 +29,7 @@ const PostTemplate = props => {
                 <meta property="og:description" content={title}/>
                 <meta
                     property="og:image"
-                    content={`${props.location.origin}/facebook.webp`}
+                    content="https://bradgarropy.com/facebook.webp"
                 />
             </Helmet>
 

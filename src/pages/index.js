@@ -22,7 +22,7 @@ const blogPage = props => {
                 />
                 <meta
                     name="twitter:image"
-                    content={`${props.location.origin}/twitter.webp`}
+                    content="https://bradgarropy.com/twitter.webp"
                 />
 
                 <meta property="og:url" content={props.location.href}/>
@@ -34,7 +34,7 @@ const blogPage = props => {
                 />
                 <meta
                     property="og:image"
-                    content={`${props.location.origin}/facebook.webp`}
+                    content="https://bradgarropy.com/facebook.webp"
                 />
             </Helmet>
 

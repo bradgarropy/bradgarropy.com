@@ -40,7 +40,7 @@
         "gatsby-remark-prismjs": "^3.2.8",
         "gatsby-source-contentful": "^2.0.50",
         "gatsby-transformer-remark": "^2.3.8",
-        "node-sass": "^4.11.0",
+        "node-sass": "^4.12.0",
         "prismjs": "^1.16.0",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
