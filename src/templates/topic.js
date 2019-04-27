@@ -31,7 +31,7 @@ const TopicTemplate = props => {
                 <meta name="twitter:description" content={`${icon} ${topic}`}/>
                 <meta
                     name="twitter:image"
-                    content="https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto,ar_1:1,c_mpad,w_600,b_white/bradgarropy/bg.png"
+                    content="https://bradgarropy.com/twitter.webp"
                 />
 
                 <meta property="og:url" content={props.location.href}/>
@@ -40,7 +40,7 @@ const TopicTemplate = props => {
                 <meta property="og:description" content={`${icon} ${topic}`}/>
                 <meta
                     property="og:image"
-                    content="https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto,ar_2:1,c_mpad,h_600,b_white/bradgarropy/bg.png"
+                    content="https://bradgarropy.com/facebook.webp"
                 />
             </Helmet>
 
