@@ -1,13 +1,34 @@
 import React from "react"
 import {Link} from "gatsby"
 import PropTypes from "prop-types"
-import "../scss/PostTitle.scss"
+import styled from "styled-components"
+
+const PostTitleWrapper = styled.div`
+    h1 {
+        margin: 0rem;
+        font-size: 2.5rem;
+        line-height: 1.1;
+
+        @media (max-width: 750px) {
+            font-size: 1.75rem;
+            line-height: 1.3;
+        }
+    }
+
+    a {
+        color: ${({theme}) => theme.colors.black};
+
+        &:hover {
+            color: ${({theme}) => theme.colors.blue};
+        }
+    }
+`
 
 const PostTitle = ({title, slug}) => {
     return (
-        <div className="post-title">
+        <PostTitleWrapper>
             <h1>{slug ? <Link to={`/${slug}`}>{title}</Link> : title}</h1>
-        </div>
+        </PostTitleWrapper>
     )
 }
 
