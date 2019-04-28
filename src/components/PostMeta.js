@@ -9,7 +9,7 @@ const PostMetaWrapper = styled.div`
     }
 
     a {
-        color: rgba($color: black, $alpha: 0.8);
+        color: rgba(0, 0, 0, 0.8);
 
         &:hover {
             color: ${({theme}) => theme.colors.blue};
