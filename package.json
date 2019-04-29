@@ -1,6 +1,6 @@
 {
     "name": "bradgarropy.com",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "description": "🏠 my home on the web",
     "keywords": [
         "gatsby",
@@ -30,21 +30,25 @@
         "build": "gatsby build"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.17",
+        "@fortawesome/free-brands-svg-icons": "^5.8.1",
+        "@fortawesome/react-fontawesome": "^0.1.4",
+        "babel-plugin-styled-components": "^1.10.0",
         "dotenv": "^7.0.0",
         "gatsby": "^2.3.25",
         "gatsby-plugin-google-analytics": "^2.0.18",
         "gatsby-plugin-google-fonts": "0.0.4",
         "gatsby-plugin-react-helmet": "^3.0.12",
-        "gatsby-plugin-sass": "^2.0.11",
+        "gatsby-plugin-styled-components": "^3.0.7",
         "gatsby-plugin-twitter": "^2.0.13",
         "gatsby-remark-prismjs": "^3.2.8",
         "gatsby-source-contentful": "^2.0.50",
         "gatsby-transformer-remark": "^2.3.8",
-        "node-sass": "^4.12.0",
         "prismjs": "^1.16.0",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
-        "react-helmet": "^5.2.0"
+        "react-helmet": "^5.2.0",
+        "styled-components": "^4.2.0"
     },
     "devDependencies": {
         "babel-eslint": "^10.0.1",

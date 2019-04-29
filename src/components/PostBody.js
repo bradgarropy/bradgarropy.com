@@ -1,17 +1,21 @@
 import React from "react"
 import PropTypes from "prop-types"
-import "../scss/PostBody.scss"
-import "../scss/PrismFunky.scss"
+import styled from "styled-components"
+import "../styles/PrismFunky.css"
+
+const PostBodyWrapper = styled.div`
+    margin: 2.25rem 0rem;
+`
 
 const PostBody = ({content}) => {
     return (
-        <div className="post-body">
+        <PostBodyWrapper>
             <div
                 dangerouslySetInnerHTML={{
                     __html: content,
                 }}
             />
-        </div>
+        </PostBodyWrapper>
     )
 }
 
