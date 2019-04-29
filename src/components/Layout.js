@@ -1,14 +1,22 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import {ThemeProvider} from "styled-components"
-import bg from "../../static/bg.png"
+import styled, {ThemeProvider} from "styled-components"
 import Navigation from "./Navigation"
 import Footer from "./Footer"
+import bg from "../../static/bg.png"
 import GlobalStyles from "../styles/GlobalStyles"
 import theme from "../styles/theme"
-import "../scss/Layout.scss"
-import "../scss/main.scss"
+
+const Container = styled.div`
+    max-width: 700px;
+    margin: auto;
+    padding: 0rem 1rem;
+`
+
+const Content = styled.div`
+    margin: 2.5rem 0rem;
+`
 
 const Layout = ({children}) => {
     return (
@@ -26,11 +34,11 @@ const Layout = ({children}) => {
                     <link rel="icon" type="image/png" href={bg}/>
                 </Helmet>
 
-                <div className="container">
+                <Container>
                     <Navigation/>
-                    <div className="content">{children}</div>
+                    <Content>{children}</Content>
                     <Footer/>
-                </div>
+                </Container>
             </>
         </ThemeProvider>
     )
