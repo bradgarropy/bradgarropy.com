@@ -1,6 +1,13 @@
 import React from "react"
 import Helmet from "react-helmet"
 import styled from "styled-components"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {
+    faInstagram,
+    faTwitterSquare,
+    faGithub,
+    faYoutube,
+} from "@fortawesome/free-brands-svg-icons"
 
 const FooterWrapper = styled.footer`
     display: grid;
@@ -8,14 +15,14 @@ const FooterWrapper = styled.footer`
     justify-content: center;
     column-gap: 1.25rem;
     padding: 1.25rem 0rem;
+`
 
-    .fab {
-        font-size: 2.5rem;
-        color: rgba(0, 0, 0, 0.8);
+const SocialLink = styled(FontAwesomeIcon)`
+    font-size: 2.5rem;
+    color: rgba(0, 0, 0, 0.8);
 
-        &:hover {
-            color: ${({theme}) => theme.colors.blue};
-        }
+    &:hover {
+        color: ${({theme}) => theme.colors.blue};
     }
 `
 
@@ -33,19 +40,19 @@ const Footer = () => {
                 href="https://www.instagram.com/bradgarropy"
                 aria-label="Instagram"
             >
-                <i className="fab fa-instagram"/>
+                <SocialLink icon={faInstagram}/>
             </a>
 
             <a href="https://twitter.com/bradgarropy" aria-label="Twitter">
-                <i className="fab fa-twitter-square"/>
+                <SocialLink icon={faTwitterSquare}/>
             </a>
 
             <a href="https://github.com/bradgarropy" aria-label="GitHub">
-                <i className="fab fa-github"/>
+                <SocialLink icon={faGithub}/>
             </a>
 
             <a href="https://www.youtube.com/bradgarropy" aria-label="YouTube">
-                <i className="fab fa-youtube"/>
+                <SocialLink icon={faYoutube}/>
             </a>
         </FooterWrapper>
     )
