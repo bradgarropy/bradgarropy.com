@@ -1,11 +1,11 @@
 {
     "name": "bradgarropy.com",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "🏠 my home on the web",
     "keywords": [
         "gatsby",
         "react",
-        "scss",
+        "styled-components",
         "eslint",
         "blog",
         "portfolio"
