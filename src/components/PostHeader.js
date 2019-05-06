@@ -7,7 +7,6 @@ const PostHeader = ({date, topic, title, slug}) => {
     return (
         <div className="post-header">
             <PostMeta date={date} topic={topic}/>
-
             <PostTitle title={title} slug={slug}/>
         </div>
     )

@@ -5,9 +5,9 @@ import Helmet from "react-helmet"
 import Layout from "../components/Layout"
 import Post from "../components/Post"
 
-const PostTemplate = props => {
-    const post = props.data.contentfulPost
-    const title = post.title
+const PostTemplate = ({location, data}) => {
+    const post = data.markdownRemark
+    const {title} = post
 
     return (
         <Layout>
@@ -23,7 +23,7 @@ const PostTemplate = props => {
                     content="https://bradgarropy.com/twitter.webp"
                 />
 
-                <meta property="og:url" content={props.location.href}/>
+                <meta property="og:url" content={location.href}/>
                 <meta property="og:type" content="article"/>
                 <meta property="og:title" content="bradgarropy"/>
                 <meta property="og:description" content={title}/>
@@ -39,21 +39,20 @@ const PostTemplate = props => {
 }
 
 PostTemplate.propTypes = {
-    data: PropTypes.object.isRequired,
     location: PropTypes.object,
+    data: PropTypes.object.isRequired,
 }
 
 export const postTemplateQuery = graphql`
     query($slug: String!) {
-        contentfulPost(slug: {eq: $slug}) {
-            title
-            date(formatString: "MMMM D, YYYY")
-            topic {
-                name
-            }
-            body {
-                childMarkdownRemark {
-                    html
+        markdownRemark(frontmatter: {slug: {eq: $slug}}) {
+            html
+            frontmatter {
+                title
+                date(formatString: "MMMM D, YYYY")
+                topic {
+                    name
+                    icon
                 }
             }
         }

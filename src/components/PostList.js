@@ -11,15 +11,19 @@ const PostListWrapper = styled.div`
 const PostList = ({posts}) => {
     return (
         <PostListWrapper>
-            {posts.map(post => (
-                <PostHeader
-                    key={post.id}
-                    date={post.date}
-                    topic={post.topic.name}
-                    title={post.title}
-                    slug={post.slug}
-                />
-            ))}
+            {posts.map((post, index) => {
+                const {date, topic, title, slug} = post.frontmatter
+
+                return (
+                    <PostHeader
+                        key={index}
+                        date={date}
+                        topic={topic}
+                        title={title}
+                        slug={slug}
+                    />
+                )
+            })}
         </PostListWrapper>
     )
 }

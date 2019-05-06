@@ -29,7 +29,7 @@ const Layout = ({children}) => {
                     <meta name="description" content="🏠 my home on the web"/>
                     <meta
                         name="keywords"
-                        content="gatsby, react, contentful, scss, eslint, blog, portfolio"
+                        content="gatsby, react, scss, eslint, blog, portfolio"
                     />
                     <link rel="icon" type="image/png" href={bg}/>
                 </Helmet>

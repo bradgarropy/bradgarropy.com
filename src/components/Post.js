@@ -4,16 +4,13 @@ import PostHeader from "../components/PostHeader"
 import PostBody from "../components/PostBody"
 
 const Post = ({post}) => {
-    const date = post.date
-    const topic = post.topic.name
-    const title = post.title
-    const body = post.body.childMarkdownRemark.html
+    const {html, frontmatter} = post
+    const {title, date, topic} = frontmatter
 
     return (
         <div className="post">
             <PostHeader date={date} topic={topic} title={title}/>
-
-            <PostBody content={body}/>
+            <PostBody content={html}/>
         </div>
     )
 }

@@ -18,10 +18,12 @@ const PostMetaWrapper = styled.div`
 `
 
 const PostMeta = ({date, topic}) => {
+    const {name} = topic
+
     return (
         <PostMetaWrapper>
             <p>
-                {date} in <Link to={`/topic/${topic}`}>#{topic}</Link>
+                {date} in <Link to={`/topic/${name}`}>#{name}</Link>
             </p>
         </PostMetaWrapper>
     )

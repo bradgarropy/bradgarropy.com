@@ -6,68 +6,64 @@ import Layout from "../components/Layout"
 import PostList from "../components/PostList"
 import TopicMeta from "../components/TopicMeta"
 
-const TopicTemplate = props => {
-    const topic = props.data.contentfulTopic.name
-    const icon = props.data.contentfulTopic.icon
-    let posts = props.data.contentfulTopic.post
-
-    posts.sort(function(a, b) {
-        const first = new Date(a.date)
-        const second = new Date(b.date)
-
-        const result = second - first
-
-        return result
-    })
+const TopicTemplate = ({location, pageContext, data}) => {
+    const {topic} = pageContext
+    const {name, icon} = topic
+    const posts = data.allMarkdownRemark.edges.map(edge => edge.node)
 
     return (
         <Layout>
             <Helmet>
-                <title>{topic}</title>
+                <title>{name}</title>
 
                 <meta name="twitter:card" content="summary"/>
                 <meta name="twitter:site" content="@bradgarropy"/>
                 <meta name="twitter:title" content="bradgarropy"/>
-                <meta name="twitter:description" content={`${icon} ${topic}`}/>
+                <meta name="twitter:description" content={`${name} ${icon}`}/>
                 <meta
                     name="twitter:image"
                     content="https://bradgarropy.com/twitter.webp"
                 />
 
-                <meta property="og:url" content={props.location.href}/>
+                <meta property="og:url" content={location.href}/>
                 <meta property="og:type" content="website"/>
                 <meta property="og:title" content="bradgarropy"/>
-                <meta property="og:description" content={`${icon} ${topic}`}/>
+                <meta property="og:description" content={`${name} ${icon}`}/>
                 <meta
                     property="og:image"
                     content="https://bradgarropy.com/facebook.webp"
                 />
             </Helmet>
 
-            <TopicMeta topic={topic} icon={icon}/>
-
+            <TopicMeta topic={topic}/>
             <PostList posts={posts}/>
         </Layout>
     )
 }
 
 TopicTemplate.propTypes = {
-    data: PropTypes.object.isRequired,
     location: PropTypes.object,
+    pageContext: PropTypes.object.isRequired,
+    data: PropTypes.object.isRequired,
 }
 
 export const topicTemplateQuery = graphql`
-    query($topic: String!) {
-        contentfulTopic(name: {eq: $topic}) {
-            name
-            icon
-            post {
-                id
-                slug
-                title
-                date(formatString: "MMMM D, YYYY")
-                topic {
-                    name
+    query($name: String!) {
+        allMarkdownRemark(
+            filter: {frontmatter: {topic: {name: {eq: $name}}}}
+            sort: {fields: frontmatter___date, order: DESC}
+        ) {
+            edges {
+                node {
+                    frontmatter {
+                        slug
+                        title
+                        topic {
+                            name
+                            icon
+                        }
+                        date(formatString: "MMMM D, YYYY")
+                    }
                 }
             }
         }
