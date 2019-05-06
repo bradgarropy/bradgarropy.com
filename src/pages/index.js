@@ -5,8 +5,8 @@ import {graphql} from "gatsby"
 import Layout from "../components/Layout"
 import PostList from "../components/PostList"
 
-const blogPage = props => {
-    const posts = props.data.allContentfulPost.edges.map(edge => edge.node)
+const blogPage = ({location, data}) => {
+    const posts = data.allMarkdownRemark.edges.map(edge => edge.node)
 
     return (
         <Layout>
@@ -25,7 +25,7 @@ const blogPage = props => {
                     content="https://bradgarropy.com/twitter.webp"
                 />
 
-                <meta property="og:url" content={props.location.href}/>
+                <meta property="og:url" content={location.href}/>
                 <meta property="og:type" content="website"/>
                 <meta property="og:title" content="bradgarropy"/>
                 <meta
@@ -45,15 +45,17 @@ const blogPage = props => {
 
 export const blogPageQuery = graphql`
     {
-        allContentfulPost(sort: {fields: [date], order: DESC}) {
+        allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
             edges {
                 node {
-                    id
-                    slug
-                    title
-                    date(formatString: "MMMM D, YYYY")
-                    topic {
-                        name
+                    frontmatter {
+                        slug
+                        title
+                        date(formatString: "MMMM D, YYYY")
+                        topic {
+                            name
+                            icon
+                        }
                     }
                 }
             }

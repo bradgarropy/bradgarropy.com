@@ -1,48 +1,64 @@
 const path = require("path")
 
-exports.createPages = ({graphql, actions}) => {
+const createPost = (slug, createPage) => {
+    const options = {
+        path: `/blog/${slug}`,
+        component: path.resolve("src/templates/post.js"),
+        context: {slug},
+    }
+
+    createPage(options)
+}
+
+const createTopic = (topic, createPage) => {
+    const {name} = topic
+
+    const options = {
+        path: `/topic/${name}`,
+        component: path.resolve("src/templates/topic.js"),
+        context: {name, topic},
+    }
+
+    createPage(options)
+}
+
+const createPages = ({graphql, actions}) => {
     const {createPage} = actions
 
-    return new Promise(resolve => {
-        graphql(
-            `
-                {
-                    allContentfulPost {
-                        edges {
-                            node {
+    const promise = new Promise(async resolve => {
+        const {data} = await graphql(`
+            {
+                posts: allMarkdownRemark {
+                    edges {
+                        node {
+                            frontmatter {
                                 slug
                                 topic {
                                     name
+                                    icon
                                 }
                             }
                         }
                     }
                 }
-            `,
-        ).then(result => {
-            result.data.allContentfulPost.edges.forEach(edge => {
-                let options = {
-                    path: `${edge.node.slug}`,
-                    component: path.resolve("./src/templates/post.js"),
-                    context: {
-                        slug: edge.node.slug,
-                    },
-                }
+            }
+        `)
 
-                createPage(options)
+        const posts = data.posts.edges.map(edge => edge.node)
 
-                options = {
-                    path: `/topic/${edge.node.topic.name}`,
-                    component: path.resolve("./src/templates/topic.js"),
-                    context: {
-                        topic: edge.node.topic.name,
-                    },
-                }
+        posts.forEach(post => {
+            const {slug, topic} = post.frontmatter
 
-                createPage(options)
-            })
-
-            resolve()
+            createPost(slug, createPage)
+            createTopic(topic, createPage)
         })
+
+        resolve()
     })
+
+    return promise
+}
+
+module.exports = {
+    createPages,
 }

@@ -11,19 +11,20 @@ const TopicMetaWrapper = styled.div`
     }
 `
 
-const TopicMeta = ({topic, icon}) => {
+const TopicMeta = ({topic}) => {
+    const {name, icon} = topic
+
     return (
         <TopicMetaWrapper>
             <h1>
-                {icon} {topic}
+                {icon} {name}
             </h1>
         </TopicMetaWrapper>
     )
 }
 
 TopicMeta.propTypes = {
-    topic: PropTypes.string.isRequired,
-    icon: PropTypes.string.isRequired,
+    topic: PropTypes.object.isRequired,
 }
 
 export default TopicMeta
