@@ -40,6 +40,7 @@
         "gatsby-plugin-react-helmet": "^3.0.12",
         "gatsby-plugin-styled-components": "^3.0.7",
         "gatsby-plugin-twitter": "^2.0.13",
+        "gatsby-remark-autolink-headers": "^2.0.16",
         "gatsby-remark-prismjs": "^3.2.9",
         "gatsby-source-filesystem": "^2.0.33",
         "gatsby-transformer-remark": "^2.3.12",

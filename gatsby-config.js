@@ -39,6 +39,13 @@ module.exports = {
             options: {
                 plugins: [
                     {
+                        resolve: "gatsby-remark-autolink-headers",
+                        options: {
+                            maintainCase: false,
+                            removeAccents: true,
+                        },
+                    },
+                    {
                         resolve: "gatsby-remark-prismjs",
                     },
                 ],
