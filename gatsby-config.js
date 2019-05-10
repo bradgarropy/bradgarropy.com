@@ -1,6 +1,11 @@
 require("dotenv").config()
 
 module.exports = {
+    siteMetadata: {
+        url: "https://bradgarropy.com",
+        title: "bradgarropy",
+        description: "🏠 my home on the web",
+    },
     plugins: [
         {
             resolve: "gatsby-plugin-react-helmet",

@@ -5,7 +5,8 @@ import {graphql} from "gatsby"
 import Layout from "../components/Layout"
 import PostList from "../components/PostList"
 
-const blogPage = ({location, data}) => {
+const blogPage = ({data}) => {
+    const {url, title, description} = data.site.siteMetadata
     const posts = data.allMarkdownRemark.edges.map(edge => edge.node)
 
     return (
@@ -15,27 +16,15 @@ const blogPage = ({location, data}) => {
 
                 <meta name="twitter:card" content="summary"/>
                 <meta name="twitter:site" content="@bradgarropy"/>
-                <meta name="twitter:title" content="bradgarropy"/>
-                <meta
-                    name="twitter:description"
-                    content="🏠 my home on the web"
-                />
-                <meta
-                    name="twitter:image"
-                    content="https://bradgarropy.com/twitter.webp"
-                />
+                <meta name="twitter:title" content={title}/>
+                <meta name="twitter:description" content={description}/>
+                <meta name="twitter:image" content={`${url}/twitter.webp`}/>
 
-                <meta property="og:url" content={location.href}/>
+                <meta property="og:url" content={url}/>
                 <meta property="og:type" content="website"/>
-                <meta property="og:title" content="bradgarropy"/>
-                <meta
-                    property="og:description"
-                    content="🏠 my home on the web"
-                />
-                <meta
-                    property="og:image"
-                    content="https://bradgarropy.com/facebook.webp"
-                />
+                <meta property="og:title" content={title}/>
+                <meta property="og:description" content={description}/>
+                <meta property="og:image" content={`${url}/facebook.webp`}/>
             </Helmet>
 
             <PostList posts={posts}/>
@@ -45,6 +34,13 @@ const blogPage = ({location, data}) => {
 
 export const blogPageQuery = graphql`
     {
+        site {
+            siteMetadata {
+                url
+                title
+                description
+            }
+        }
         allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
             edges {
                 node {

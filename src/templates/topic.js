@@ -6,7 +6,9 @@ import Layout from "../components/Layout"
 import PostList from "../components/PostList"
 import TopicMeta from "../components/TopicMeta"
 
-const TopicTemplate = ({location, pageContext, data}) => {
+const TopicTemplate = ({pageContext, data}) => {
+    const meta = data.site.siteMetadata
+    const {url, title} = meta
     const {topic} = pageContext
     const {name, icon} = topic
     const posts = data.allMarkdownRemark.edges.map(edge => edge.node)
@@ -18,21 +20,15 @@ const TopicTemplate = ({location, pageContext, data}) => {
 
                 <meta name="twitter:card" content="summary"/>
                 <meta name="twitter:site" content="@bradgarropy"/>
-                <meta name="twitter:title" content="bradgarropy"/>
+                <meta name="twitter:title" content={title}/>
                 <meta name="twitter:description" content={`${name} ${icon}`}/>
-                <meta
-                    name="twitter:image"
-                    content="https://bradgarropy.com/twitter.webp"
-                />
+                <meta name="twitter:image" content={`${url}/twitter.webp`}/>
 
-                <meta property="og:url" content={location.href}/>
+                <meta property="og:url" content={`${url}/topic/${name}`}/>
                 <meta property="og:type" content="website"/>
-                <meta property="og:title" content="bradgarropy"/>
+                <meta property="og:title" content={title}/>
                 <meta property="og:description" content={`${name} ${icon}`}/>
-                <meta
-                    property="og:image"
-                    content="https://bradgarropy.com/facebook.webp"
-                />
+                <meta property="og:image" content={`${url}/facebook.webp`}/>
             </Helmet>
 
             <TopicMeta topic={topic}/>
@@ -49,6 +45,13 @@ TopicTemplate.propTypes = {
 
 export const topicTemplateQuery = graphql`
     query($name: String!) {
+        site {
+            siteMetadata {
+                url
+                title
+                description
+            }
+        }
         allMarkdownRemark(
             filter: {frontmatter: {topic: {name: {eq: $name}}}}
             sort: {fields: frontmatter___date, order: DESC}
