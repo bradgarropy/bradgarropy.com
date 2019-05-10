@@ -7,7 +7,9 @@ import Post from "../components/Post"
 
 const PostTemplate = ({location, data}) => {
     const post = data.markdownRemark
-    const {title} = post
+    const {frontmatter} = post
+    const {title} = frontmatter
+    const twitter = `https://twitter.com/search?q=${location.href}`
 
     return (
         <Layout>
@@ -34,6 +36,9 @@ const PostTemplate = ({location, data}) => {
             </Helmet>
 
             <Post post={post}/>
+
+            <hr/>
+            <a href={twitter}>Discuss on Twitter</a>
         </Layout>
     )
 }
