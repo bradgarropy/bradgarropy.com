@@ -14,7 +14,7 @@ const FooterWrapper = styled.footer`
     grid-template-columns: repeat(4, auto);
     justify-content: center;
     column-gap: 1.25rem;
-    padding: 1.25rem 0rem;
+    padding: 3rem 0rem 5rem 0rem;
 `
 
 const SocialLink = styled(FontAwesomeIcon)`
