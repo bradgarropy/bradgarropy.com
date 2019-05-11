@@ -10,7 +10,6 @@ const PostTemplate = ({data}) => {
     const post = data.markdownRemark
     const {frontmatter} = post
     const {slug, title} = frontmatter
-    const twitter = `https://twitter.com/search?q=${meta.url}/${slug}`
 
     return (
         <Layout>
@@ -37,9 +36,6 @@ const PostTemplate = ({data}) => {
             </Helmet>
 
             <Post post={post}/>
-
-            <hr/>
-            <a href={twitter}>Discuss on Twitter</a>
         </Layout>
     )
 }
