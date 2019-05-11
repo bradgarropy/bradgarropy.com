@@ -1,6 +1,11 @@
 require("dotenv").config()
 
 module.exports = {
+    siteMetadata: {
+        url: "https://bradgarropy.com",
+        title: "bradgarropy",
+        description: "🏠 my home on the web",
+    },
     plugins: [
         {
             resolve: "gatsby-plugin-react-helmet",
@@ -38,6 +43,13 @@ module.exports = {
             resolve: "gatsby-transformer-remark",
             options: {
                 plugins: [
+                    {
+                        resolve: "gatsby-remark-autolink-headers",
+                        options: {
+                            maintainCase: false,
+                            removeAccents: true,
+                        },
+                    },
                     {
                         resolve: "gatsby-remark-prismjs",
                     },

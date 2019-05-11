@@ -14,7 +14,7 @@ const PostHeader = ({date, topic, title, slug}) => {
 
 PostHeader.propTypes = {
     date: PropTypes.string.isRequired,
-    topic: PropTypes.string.isRequired,
+    topic: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired,
     slug: PropTypes.string,
 }

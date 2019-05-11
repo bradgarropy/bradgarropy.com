@@ -2,15 +2,17 @@ import React from "react"
 import PropTypes from "prop-types"
 import PostHeader from "../components/PostHeader"
 import PostBody from "../components/PostBody"
+import PostFooter from "../components/PostFooter"
 
 const Post = ({post}) => {
     const {html, frontmatter} = post
-    const {title, date, topic} = frontmatter
+    const {slug, title, date, topic} = frontmatter
 
     return (
         <div className="post">
             <PostHeader date={date} topic={topic} title={title}/>
             <PostBody content={html}/>
+            <PostFooter slug={slug}/>
         </div>
     )
 }

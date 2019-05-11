@@ -31,7 +31,7 @@ const PostMeta = ({date, topic}) => {
 
 PostMeta.propTypes = {
     date: PropTypes.string.isRequired,
-    topic: PropTypes.string.isRequired,
+    topic: PropTypes.object.isRequired,
 }
 
 export default PostMeta
