@@ -1,10 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
 import styled, {ThemeProvider} from "styled-components"
 import Navigation from "./Navigation"
 import Footer from "./Footer"
-import bg from "../../static/bg.png"
 import GlobalStyles from "../styles/GlobalStyles"
 import theme from "../styles/theme"
 
@@ -23,16 +21,6 @@ const Layout = ({children}) => {
         <ThemeProvider theme={theme}>
             <>
                 <GlobalStyles/>
-
-                <Helmet>
-                    <html lang="en"/>
-                    <meta name="description" content="🏠 my home on the web"/>
-                    <meta
-                        name="keywords"
-                        content="gatsby, react, scss, eslint, blog, portfolio"
-                    />
-                    <link rel="icon" type="image/png" href={bg}/>
-                </Helmet>
 
                 <Container>
                     <Navigation/>

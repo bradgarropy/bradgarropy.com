@@ -1,35 +1,28 @@
 import React from "react"
-import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 import {graphql} from "gatsby"
 import Layout from "../components/Layout"
+import Meta from "../components/SEO/Meta"
+import Facebook from "../components/SEO/Facebook"
+import Twitter from "../components/SEO/Twitter"
 import PostList from "../components/PostList"
 import TopicMeta from "../components/TopicMeta"
 
 const TopicTemplate = ({pageContext, data}) => {
     const meta = data.site.siteMetadata
-    const {url, title} = meta
+    const {siteUrl} = meta
     const {topic} = pageContext
     const {name, icon} = topic
     const posts = data.allMarkdownRemark.edges.map(edge => edge.node)
 
     return (
         <Layout>
-            <Helmet>
-                <title>{name}</title>
-
-                <meta name="twitter:card" content="summary"/>
-                <meta name="twitter:site" content="@bradgarropy"/>
-                <meta name="twitter:title" content={title}/>
-                <meta name="twitter:description" content={`${name} ${icon}`}/>
-                <meta name="twitter:image" content={`${url}/twitter.webp`}/>
-
-                <meta property="og:url" content={`${url}/topic/${name}`}/>
-                <meta property="og:type" content="website"/>
-                <meta property="og:title" content={title}/>
-                <meta property="og:description" content={`${name} ${icon}`}/>
-                <meta property="og:image" content={`${url}/facebook.webp`}/>
-            </Helmet>
+            <Meta title={name}/>
+            <Facebook
+                url={`${siteUrl}/topic/${name}`}
+                description={`${icon} ${name}`}
+            />
+            <Twitter description={`${icon} ${name}`}/>
 
             <TopicMeta topic={topic}/>
             <PostList posts={posts}/>
@@ -47,9 +40,7 @@ export const topicTemplateQuery = graphql`
     query($name: String!) {
         site {
             siteMetadata {
-                url
-                title
-                description
+                siteUrl
             }
         }
         allMarkdownRemark(

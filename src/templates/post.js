@@ -1,39 +1,26 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {graphql} from "gatsby"
-import Helmet from "react-helmet"
 import Layout from "../components/Layout"
+import Meta from "../components/SEO/Meta"
+import Facebook from "../components/SEO/Facebook"
+import Twitter from "../components/SEO/Twitter"
 import Post from "../components/Post"
 
 const PostTemplate = ({data}) => {
     const meta = data.site.siteMetadata
     const post = data.markdownRemark
     const {frontmatter} = post
-    const {slug, title} = frontmatter
 
     return (
         <Layout>
-            <Helmet>
-                <title>{title}</title>
-
-                <meta name="twitter:card" content="summary"/>
-                <meta name="twitter:site" content="@bradgarropy"/>
-                <meta name="twitter:title" content={meta.title}/>
-                <meta name="twitter:description" content={title}/>
-                <meta
-                    name="twitter:image"
-                    content={`${meta.url}/twitter.webp`}
-                />
-
-                <meta property="og:url" content={`${meta.url}/blog/${slug}`}/>
-                <meta property="og:type" content="article"/>
-                <meta property="og:title" content={meta.title}/>
-                <meta property="og:description" content={title}/>
-                <meta
-                    property="og:image"
-                    content={`${meta.url}/facebook.webp`}
-                />
-            </Helmet>
+            <Meta title={frontmatter.title}/>
+            <Facebook
+                url={`${meta.siteUrl}/blog/${frontmatter.slug}`}
+                type="article"
+                description={frontmatter.title}
+            />
+            <Twitter description={frontmatter.title}/>
 
             <Post post={post}/>
         </Layout>
@@ -48,9 +35,7 @@ export const postTemplateQuery = graphql`
     query($slug: String!) {
         site {
             siteMetadata {
-                url
-                title
-                description
+                siteUrl
             }
         }
         markdownRemark(frontmatter: {slug: {eq: $slug}}) {
