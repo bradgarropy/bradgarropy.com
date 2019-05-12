@@ -8,14 +8,14 @@ const PostComments = ({slug}) => {
         {
             site {
                 siteMetadata {
-                    url
+                    siteUrl
                 }
             }
         }
     `)
 
-    const {url} = data.site.siteMetadata
-    const query = encodeURIComponent(`${url}/blog/${slug}`)
+    const {siteUrl} = data.site.siteMetadata
+    const query = encodeURIComponent(`${siteUrl}/blog/${slug}`)
     const discuss = `https://twitter.com/search?q=${query}`
 
     return (

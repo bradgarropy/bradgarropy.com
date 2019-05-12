@@ -2,9 +2,10 @@ require("dotenv").config()
 
 module.exports = {
     siteMetadata: {
-        url: "https://bradgarropy.com",
+        siteUrl: "https://bradgarropy.com",
         title: "bradgarropy",
         description: "🏠 my home on the web",
+        keywords: ["gatsby", "react", "scss", "eslint", "blog", "portfolio"],
     },
     plugins: [
         {
