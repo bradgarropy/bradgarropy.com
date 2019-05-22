@@ -7,13 +7,16 @@ import GlobalStyles from "../styles/GlobalStyles"
 import theme from "../styles/theme"
 
 const Container = styled.div`
-    max-width: 700px;
-    margin: auto;
-    padding: 0rem 1rem;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 2.5rem;
 `
 
 const Content = styled.div`
-    margin: 2.5rem 0rem;
+    max-width: 700px;
+    margin: auto;
+    padding: 0rem 1rem;
 `
 
 const Layout = ({children}) => {
