@@ -11,7 +11,7 @@ const HireMePage = () => {
             <Facebook/>
             <Twitter/>
 
-            <p>hire me.</p>
+            <p>coming soon.</p>
         </Layout>
     )
 }

@@ -11,7 +11,7 @@ const ContactPage = () => {
             <Facebook/>
             <Twitter/>
 
-            <p>contact.</p>
+            <p>coming soon.</p>
         </Layout>
     )
 }

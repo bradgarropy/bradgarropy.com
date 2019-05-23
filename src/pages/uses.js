@@ -11,7 +11,7 @@ const UsesPage = () => {
             <Facebook/>
             <Twitter/>
 
-            <p>uses.</p>
+            <p>coming soon.</p>
         </Layout>
     )
 }
