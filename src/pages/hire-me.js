@@ -4,7 +4,7 @@ import Meta from "../components/SEO/Meta"
 import Facebook from "../components/SEO/Facebook"
 import Twitter from "../components/SEO/Twitter"
 
-const hireMePage = () => {
+const HireMePage = () => {
     return (
         <Layout>
             <Meta title="hire me"/>
@@ -16,4 +16,4 @@ const hireMePage = () => {
     )
 }
 
-export default hireMePage
+export default HireMePage
