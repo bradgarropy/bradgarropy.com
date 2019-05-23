@@ -15,7 +15,7 @@ const Container = styled.div`
     row-gap: 2.5rem;
 `
 
-const Content = styled.div`
+const Content = styled.main`
     max-width: 700px;
     margin: auto;
     padding: 0rem 1.25rem;

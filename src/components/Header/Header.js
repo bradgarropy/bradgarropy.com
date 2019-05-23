@@ -4,7 +4,7 @@ import {Link} from "gatsby"
 import styled from "styled-components"
 import Logo from "../Logo"
 
-const HeaderWrapper = styled.nav`
+const HeaderWrapper = styled.header`
     display: grid;
     grid-auto-flow: column;
     justify-content: space-between;

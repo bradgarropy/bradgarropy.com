@@ -9,11 +9,11 @@ const Post = ({post}) => {
     const {slug, title, date, topic} = frontmatter
 
     return (
-        <div className="post">
+        <article>
             <PostHeader date={date} topic={topic} title={title}/>
             <PostBody content={html}/>
             <PostFooter slug={slug}/>
-        </div>
+        </article>
     )
 }
 

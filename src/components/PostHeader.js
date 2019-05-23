@@ -5,10 +5,10 @@ import PostTitle from "./PostTitle"
 
 const PostHeader = ({date, topic, title, slug}) => {
     return (
-        <div className="post-header">
+        <section>
             <PostMeta date={date} topic={topic}/>
             <PostTitle title={title} slug={slug}/>
-        </div>
+        </section>
     )
 }
 
