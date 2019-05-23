@@ -11,7 +11,7 @@ import {
 
 const FooterWrapper = styled.footer`
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-auto-flow: column;
     justify-content: center;
     column-gap: 1.25rem;
     padding: 3rem 0rem 5rem 0rem;

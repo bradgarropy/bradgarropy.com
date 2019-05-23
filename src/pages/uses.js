@@ -3,18 +3,17 @@ import Layout from "../components/Layout"
 import Meta from "../components/SEO/Meta"
 import Facebook from "../components/SEO/Facebook"
 import Twitter from "../components/SEO/Twitter"
-import FourOhFour from "../components/FourOhFour"
 
-const NotFoundPage = () => {
+const UsesPage = () => {
     return (
         <Layout>
-            <Meta title="not found"/>
+            <Meta title="uses"/>
             <Facebook/>
             <Twitter/>
 
-            <FourOhFour/>
+            <p>coming soon.</p>
         </Layout>
     )
 }
 
-export default NotFoundPage
+export default UsesPage

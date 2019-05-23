@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const TopicMetaWrapper = styled.div`
-    margin: 2.5rem 0rem 3.75rem 0rem;
+    margin: 0rem 0rem 3.75rem 0rem;
     text-align: center;
 
     h1 {

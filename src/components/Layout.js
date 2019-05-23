@@ -1,19 +1,24 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled, {ThemeProvider} from "styled-components"
-import Navigation from "./Navigation"
+import Header from "./Header/Header"
 import Footer from "./Footer"
 import GlobalStyles from "../styles/GlobalStyles"
 import theme from "../styles/theme"
 
 const Container = styled.div`
-    max-width: 700px;
+    min-height: 100vh;
+    max-width: 1000px;
     margin: auto;
-    padding: 0rem 1rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 2.5rem;
 `
 
-const Content = styled.div`
-    margin: 2.5rem 0rem;
+const Content = styled.main`
+    max-width: 700px;
+    margin: auto;
+    padding: 0rem 1.25rem;
 `
 
 const Layout = ({children}) => {
@@ -23,7 +28,7 @@ const Layout = ({children}) => {
                 <GlobalStyles/>
 
                 <Container>
-                    <Navigation/>
+                    <Header/>
                     <Content>{children}</Content>
                     <Footer/>
                 </Container>
