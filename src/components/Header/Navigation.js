@@ -16,13 +16,13 @@ const NavigationLink = styled(Link)`
 const Navigation = () => {
     return (
         <NavigationWrapper>
-            <NavigationLink to="blog">blog</NavigationLink>
+            <NavigationLink to="/blog">blog</NavigationLink>
             <span>|</span>
-            <NavigationLink to="uses">uses</NavigationLink>
+            <NavigationLink to="/uses">uses</NavigationLink>
             <span>|</span>
-            <NavigationLink to="hire-me">hire me</NavigationLink>
+            <NavigationLink to="/hire-me">hire me</NavigationLink>
             <span>|</span>
-            <NavigationLink to="contact">contact</NavigationLink>
+            <NavigationLink to="/contact">contact</NavigationLink>
         </NavigationWrapper>
     )
 }
