@@ -5,7 +5,6 @@ import styled from "styled-components"
 const NavigationWrapper = styled.nav`
     display: grid;
     grid-auto-flow: column;
-    justify-content: end;
     column-gap: 1.25rem;
 `
 
