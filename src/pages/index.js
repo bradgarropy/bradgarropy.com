@@ -7,9 +7,10 @@ import Twitter from "../components/SEO/Twitter"
 const indexPage = () => {
     return (
         <Layout>
-            <Meta title="blog"/>
+            <Meta title="bradgarropy"/>
             <Facebook/>
             <Twitter/>
+
             <p>suh dude.</p>
         </Layout>
     )

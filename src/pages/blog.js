@@ -7,7 +7,7 @@ import Facebook from "../components/SEO/Facebook"
 import Twitter from "../components/SEO/Twitter"
 import PostList from "../components/PostList"
 
-const blogPage = ({data}) => {
+const BlogPage = ({data}) => {
     const posts = data.allMarkdownRemark.edges.map(edge => edge.node)
 
     return (
@@ -41,9 +41,9 @@ export const blogPageQuery = graphql`
     }
 `
 
-blogPage.propTypes = {
+BlogPage.propTypes = {
     data: PropTypes.object.isRequired,
     location: PropTypes.object,
 }
 
-export default blogPage
+export default BlogPage

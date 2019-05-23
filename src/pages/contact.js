@@ -4,15 +4,16 @@ import Meta from "../components/SEO/Meta"
 import Facebook from "../components/SEO/Facebook"
 import Twitter from "../components/SEO/Twitter"
 
-const contactPage = () => {
+const ContactPage = () => {
     return (
         <Layout>
-            <Meta title="blog"/>
+            <Meta title="contact"/>
             <Facebook/>
             <Twitter/>
+
             <p>contact.</p>
         </Layout>
     )
 }
 
-export default contactPage
+export default ContactPage

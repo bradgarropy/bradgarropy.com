@@ -4,15 +4,16 @@ import Meta from "../components/SEO/Meta"
 import Facebook from "../components/SEO/Facebook"
 import Twitter from "../components/SEO/Twitter"
 
-const usesPage = () => {
+const UsesPage = () => {
     return (
         <Layout>
-            <Meta title="blog"/>
+            <Meta title="uses"/>
             <Facebook/>
             <Twitter/>
+
             <p>uses.</p>
         </Layout>
     )
 }
 
-export default usesPage
+export default UsesPage

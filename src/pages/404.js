@@ -1,18 +1,20 @@
 import React from "react"
-import Helmet from "react-helmet"
 import Layout from "../components/Layout"
+import Meta from "../components/SEO/Meta"
+import Facebook from "../components/SEO/Facebook"
+import Twitter from "../components/SEO/Twitter"
 import FourOhFour from "../components/FourOhFour"
 
-const NotFound = () => {
+const NotFoundPage = () => {
     return (
         <Layout>
-            <Helmet>
-                <title>404</title>
-            </Helmet>
+            <Meta title="not found"/>
+            <Facebook/>
+            <Twitter/>
 
             <FourOhFour/>
         </Layout>
     )
 }
 
-export default NotFound
+export default NotFoundPage
