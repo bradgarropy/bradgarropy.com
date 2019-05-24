@@ -1,6 +1,15 @@
+# Uses
+
+As a [developer][developer] and [tech][tech] lover in general, I use a lot of physical and digital stuff on a daily basis.
+These things serve many purposes. They bring me enjoyment, connect me to other people, and serve as tools that help me create software.
+
+I'm constantly improving and upgrading my setup, so expect this to change in the future.
+
+If you want to know more details or have any questions, ask me in my [AMA][ama].
+
 ## Desktop
 
-Custom built PC  
+Custom PC  
 [Razer BlackWidow Ultimate][blackwidow] Keyboard  
 [Mionix Naos 8200][naos] Mouse  
 [Mionix Propus 380][propus] Mouse Pad  
@@ -33,6 +42,9 @@ Custom built PC
 [Rode PSA1][psa1] Boom Arm  
 [OBS Studio][obs]
 
+[developer]: https://bradgarropy.com/topic/coding
+[tech]: https://bradgarropy.com/topic/tech
+[ama]: https://github.com/bradgarropy/ama#readme
 [blackwidow]: https://www.razer.com/gaming-keyboards-keypads/razer-blackwidow-ultimate
 [naos]: https://www.newegg.com/mionix-000mio8200m-naos-8200-usb-2-0-wired/p/N82E16826580004
 [propus]: https://www.newegg.com/p/N82E16826988006
