@@ -28,7 +28,9 @@ const createPages = ({graphql, actions}) => {
     const promise = new Promise(async resolve => {
         const {data} = await graphql(`
             {
-                posts: allMarkdownRemark {
+                posts: allMarkdownRemark(
+                    filter: {fileAbsolutePath: {regex: "/content/posts/"}}
+                ) {
                     edges {
                         node {
                             frontmatter {
