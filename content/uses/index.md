@@ -7,7 +7,7 @@ I'm constantly improving and upgrading my setup, so expect this to change in the
 
 If you want to know more details or have any questions, ask me in my [AMA][ama].
 
-## Home Office
+## 🏠 Home Office
 
 I use my home office as a place to stream, play games, and work on personal projects. This setup is based around a custom built Windows PC that is getting pretty old!
 
@@ -36,7 +36,7 @@ Every now and then I stream my coding sessions. I'm new to audio, so this is wha
 [Rode PSA1 Boom Arm][psa1]  
 [OBS Studio][obs]
 
-## Adobe Office
+## 🏢 Adobe Office
 
 At work everyone runs off of Apple laptops, so I joined the party. I decided to create a minimalist setup based around wireless peripherals. Space gray all day!
 
@@ -45,7 +45,7 @@ At work everyone runs off of Apple laptops, so I joined the party. I decided to 
 [Magic Trackpad 2][magic-trackpad]  
 [Dell U3419W Monitor][u3419w]
 
-## Software
+## 👨🏼‍💻 Software
 
 Regardless of what computer I'm on, I use these applications. As you may guess, cross platform compatibility is important to me.
 
@@ -55,7 +55,7 @@ Regardless of what computer I'm on, I use these applications. As you may guess, 
 [hub][hub] - integrated github cli  
 [carbon][carbon] - fancy code screenshots
 
-## Electronics
+## 🎧 Electronics
 
 These pieces of tech are always within reach.
 
