@@ -8,7 +8,7 @@ import Twitter from "../components/SEO/Twitter"
 import PostList from "../components/PostList"
 
 const BlogPage = ({data}) => {
-    const posts = data.allMarkdownRemark.edges.map(edge => edge.node)
+    const posts = data.posts.edges.map(edge => edge.node)
 
     return (
         <Layout>
@@ -21,9 +21,16 @@ const BlogPage = ({data}) => {
     )
 }
 
+BlogPage.propTypes = {
+    data: PropTypes.object.isRequired,
+}
+
 export const blogPageQuery = graphql`
     {
-        allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+        posts: allMarkdownRemark(
+            sort: {fields: frontmatter___date, order: DESC}
+            filter: {fileAbsolutePath: {regex: "/content/posts/"}}
+        ) {
             edges {
                 node {
                     frontmatter {
@@ -40,10 +47,5 @@ export const blogPageQuery = graphql`
         }
     }
 `
-
-BlogPage.propTypes = {
-    data: PropTypes.object.isRequired,
-    location: PropTypes.object,
-}
 
 export default BlogPage
