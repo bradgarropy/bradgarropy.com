@@ -11,6 +11,8 @@ If you want to know more details or have any questions, ask me in my [AMA][ama].
 
 I use my home office as a place to stream, play games, and work on personal projects. This setup is based around a custom built Windows PC that is getting pretty old!
 
+![home office][home-office]
+
 **_Custom PC_**  
 [Intel i7 3770K CPU][cpu]  
 [Gigabyte Z77X-UD5H Motherboard][motherboard]  
@@ -66,6 +68,7 @@ These pieces of tech are always within reach.
 [developer]: https://bradgarropy.com/topic/coding
 [tech]: https://bradgarropy.com/topic/tech
 [ama]: https://github.com/bradgarropy/ama#readme
+[home-office]: images/home-office.jpg
 [cpu]: https://amzn.to/2WmxEoN
 [motherboard]: https://www.gigabyte.com/us/Motherboard/GA-Z77X-UD5H-rev-10
 [gpu]: https://amzn.to/2M99Pgw
