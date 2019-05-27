@@ -14,8 +14,8 @@ const Footer = () => {
     return (
         <FooterWrapper>
             <SocialLink platform="instagram"/>
-            <SocialLink platform="twitter"/>
             <SocialLink platform="github"/>
+            <SocialLink platform="twitter"/>
             <SocialLink platform="youtube"/>
         </FooterWrapper>
     )
