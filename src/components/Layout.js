@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled, {ThemeProvider} from "styled-components"
 import Header from "./Header/Header"
-import Footer from "./Footer"
+import Footer from "./Footer/Footer"
 import GlobalStyles from "../styles/GlobalStyles"
 import theme from "../styles/theme"
 
