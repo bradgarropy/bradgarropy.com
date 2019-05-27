@@ -40,7 +40,7 @@ It may seem like I'm gushing about Project Fi even though I just signed up, but 
 [1]: https://www.apple.com/shop/buy-iphone/iphone-7
 [2]: https://store.google.com/us/product/pixel_2
 [3]: https://fi.google.com/about/
-[4]: https://res.cloudinary.com/bradgarropy/image/upload/q_auto,f_auto/bradgarropy/project-fi-furry.jpg
+[4]: images/project-fi-furry.jpg
 [5]: https://fi.google.com/about/plan/#calculator
 [6]: https://www.att.com/plans/unlimited-data-plans.html/#dmgUnlimited--packages
 [7]: https://www.t-mobile.com/cell-phone-plans/#plans

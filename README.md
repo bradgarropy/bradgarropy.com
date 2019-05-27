@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://bradgarropy.com">
-        <img alt="bg" src="/static/bg.png" width="150">
+        <img alt="bg" src="/static/bg-shadow.png" width="300">
     </a>
 </p>
 
