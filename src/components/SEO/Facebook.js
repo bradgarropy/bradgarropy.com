@@ -7,7 +7,7 @@ const Facebook = ({
     type = "website",
     title = "bradgarropy",
     description = "🏠 my home on the web",
-    image = "https://bradgarropy.com/facebook.webp",
+    image = "https://bradgarropy.com/facebook.png",
 }) => {
     return (
         <Helmet>

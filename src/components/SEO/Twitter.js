@@ -7,7 +7,7 @@ const Twitter = ({
     site = "@bradgarropy",
     title = "bradgarropy",
     description = "🏠 my home on the web",
-    image = "https://bradgarropy.com/twitter.webp",
+    image = "https://bradgarropy.com/twitter.png",
 }) => {
     return (
         <Helmet>
