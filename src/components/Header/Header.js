@@ -1,8 +1,10 @@
 import React from "react"
 import Navigation from "./Navigation"
+import MobileNavigation from "./MobileNavigation"
 import {Link} from "gatsby"
 import styled from "styled-components"
 import Logo from "../Logo"
+import {AppProvider} from "../../context/App"
 
 const HeaderWrapper = styled.header`
     display: grid;
@@ -23,7 +25,10 @@ const Header = () => {
                 <Logo/>
             </Link>
 
-            <Navigation/>
+            <AppProvider>
+                <Navigation/>
+                <MobileNavigation/>
+            </AppProvider>
         </HeaderWrapper>
     )
 }
