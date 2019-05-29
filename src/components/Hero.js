@@ -15,6 +15,14 @@ const HeroWrapper = styled.div`
 const HeroText = styled.div`
     display: grid;
     font-size: 1.75rem;
+
+    @media (max-width: 500px) {
+        font-size: 1.25rem;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 1rem;
+    }
 `
 
 const Hero = () => {

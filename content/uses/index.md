@@ -42,6 +42,8 @@ Every now and then I stream my coding sessions. I'm new to audio, so this is wha
 
 At work everyone runs off of Apple laptops, so I joined the party. I decided to create a minimalist setup based around wireless peripherals. Space gray all day!
 
+![adobe office][adobe-office]
+
 [MacBook Pro][macbook]  
 [Magic Keyboard with Numeric Keypad][magic-keyboard]  
 [Magic Trackpad 2][magic-trackpad]  
@@ -86,6 +88,7 @@ These pieces of tech are always within reach.
 [scarlett-solo]: https://amzn.to/2MbAcSW
 [psa1]: https://amzn.to/2Wgz8kH
 [obs]: https://obsproject.com/
+[adobe-office]: images/adobe-office.jpg
 [macbook]: https://amzn.to/2JZlZFQ
 [magic-keyboard]: https://amzn.to/2M5Ge7y
 [magic-trackpad]: https://amzn.to/2wg00Td

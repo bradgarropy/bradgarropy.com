@@ -6,6 +6,10 @@ const NavigationWrapper = styled.nav`
     display: grid;
     grid-auto-flow: column;
     column-gap: 1.25rem;
+
+    @media (max-width: 500px) {
+        display: none;
+    }
 `
 
 const NavigationLink = styled(Link)`

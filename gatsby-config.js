@@ -6,6 +6,7 @@ module.exports = {
         title: "bradgarropy",
         description: "🏠 my home on the web",
         keywords: ["gatsby", "react", "scss", "eslint", "blog", "portfolio"],
+        email: "bradgarropy@gmail.com",
     },
     plugins: [
         {

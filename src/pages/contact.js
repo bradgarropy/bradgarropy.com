@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import Meta from "../components/SEO/Meta"
 import Facebook from "../components/SEO/Facebook"
 import Twitter from "../components/SEO/Twitter"
+import Contact from "../components/Contact"
 
 const ContactPage = () => {
     return (
@@ -11,7 +12,7 @@ const ContactPage = () => {
             <Facebook/>
             <Twitter/>
 
-            <p>coming soon.</p>
+            <Contact/>
         </Layout>
     )
 }
