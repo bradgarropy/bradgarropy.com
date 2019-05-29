@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import Meta from "../components/SEO/Meta"
 import Facebook from "../components/SEO/Facebook"
 import Twitter from "../components/SEO/Twitter"
+import HireMe from "../components/HireMe"
 
 const HireMePage = () => {
     return (
@@ -11,7 +12,7 @@ const HireMePage = () => {
             <Facebook/>
             <Twitter/>
 
-            <p>coming soon.</p>
+            <HireMe/>
         </Layout>
     )
 }
