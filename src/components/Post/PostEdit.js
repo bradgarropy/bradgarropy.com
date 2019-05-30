@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Button from "../styles/Button"
+import Button from "../../styles/Button"
 
 const PostEdit = ({slug}) => {
     const edit = `https://github.com/bradgarropy/bradgarropy.com/edit/master/content/posts/${slug}/index.md`

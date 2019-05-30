@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import "../styles/PrismFunky.css"
+import "../../styles/PrismFunky.css"
 
 const PostBodyWrapper = styled.section`
     margin: 2.25rem 0rem;

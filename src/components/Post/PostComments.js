@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {graphql, useStaticQuery} from "gatsby"
-import Button from "../styles/Button"
+import Button from "../../styles/Button"
 
 const PostComments = ({slug}) => {
     const data = useStaticQuery(graphql`

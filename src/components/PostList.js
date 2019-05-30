@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import PostHeader from "./PostHeader"
+import PostHeader from "./Post/PostHeader"
 
 const PostListWrapper = styled.div`
     display: grid;

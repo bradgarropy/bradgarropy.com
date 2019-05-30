@@ -5,7 +5,7 @@ import Layout from "../components/Layout"
 import Meta from "../components/SEO/Meta"
 import Facebook from "../components/SEO/Facebook"
 import Twitter from "../components/SEO/Twitter"
-import Post from "../components/Post"
+import Post from "../components/Post/Post"
 
 const PostTemplate = ({data}) => {
     const meta = data.site.siteMetadata
