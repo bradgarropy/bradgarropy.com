@@ -34,9 +34,10 @@ const GlobalStyles = createGlobalStyle`
     a {
         color: ${({theme}) => theme.colors.blue};
         text-decoration: none;
+        transition: all 300ms;
 
         &:hover {
-            color: ${({theme}) => theme.colors.orange};
+            color: rgba(0, 0, 0, 0.8);
         }
     }
 
