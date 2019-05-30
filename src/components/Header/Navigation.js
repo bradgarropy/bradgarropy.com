@@ -14,6 +14,10 @@ const NavigationWrapper = styled.nav`
 
 const NavigationLink = styled(Link)`
     color: ${({theme}) => theme.colors.black};
+
+    &:hover {
+        color: ${({theme}) => theme.colors.blue};
+    }
 `
 
 const Navigation = () => {
