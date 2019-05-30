@@ -1,5 +1,5 @@
 import React from "react"
-import {graphql, useStaticQuery} from "gatsby"
+import {Link, graphql, useStaticQuery} from "gatsby"
 import styled from "styled-components"
 
 const ContactLinks = styled.div`
@@ -23,7 +23,7 @@ const Contact = () => {
         }
     `)
 
-    const {siteUrl, title, email} = data.site.siteMetadata
+    const {title, email} = data.site.siteMetadata
 
     return (
         <div>
@@ -45,8 +45,8 @@ const Contact = () => {
                 <br/>
                 Email works best for in depth discussions.
                 <br/>
-                Consider my <a href={`${siteUrl}/ama`}>AMA</a> if others can
-                benefit from the question.
+                Consider my <Link to="/ama">AMA</Link> if others can benefit
+                from the question.
             </p>
 
             <ContactLinks>
@@ -58,7 +58,7 @@ const Contact = () => {
                 <span role="img" aria-label="ama">
                     ❔
                 </span>
-                <a href={`${siteUrl}/ama`}>ask me anything</a>
+                <Link to="/ama">ask me anything</Link>
 
                 <span role="img" aria-label="twitter">
                     🐦
