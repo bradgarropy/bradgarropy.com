@@ -1,4 +1,6 @@
 import React from "react"
+import {graphql, useStaticQuery} from "gatsby"
+import Img from "gatsby-image"
 import styled from "styled-components"
 
 const HeroWrapper = styled.div`
@@ -6,10 +8,10 @@ const HeroWrapper = styled.div`
     grid-auto-flow: column;
     column-gap: 2rem;
     align-items: center;
+`
 
-    img {
-        width: 25rem;
-    }
+const HeroImage = styled(Img)`
+    width: 25rem;
 `
 
 const HeroText = styled.div`
@@ -26,9 +28,22 @@ const HeroText = styled.div`
 `
 
 const Hero = () => {
+    const data = useStaticQuery(graphql`
+        query {
+            file(relativePath: {eq: "bg-shadow.png"}) {
+                id
+                childImageSharp {
+                    fluid(maxWidth: 400) {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+    `)
+
     return (
         <HeroWrapper>
-            <img src="/bg-shadow.png" alt="bg shadow"/>
+            <HeroImage fluid={data.file.childImageSharp.fluid}/>
 
             <HeroText>
                 <span>i use code</span>
