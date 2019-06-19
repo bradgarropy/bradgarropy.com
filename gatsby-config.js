@@ -49,6 +49,13 @@ module.exports = {
             },
         },
         {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                name: "images",
+                path: "static",
+            },
+        },
+        {
             resolve: "gatsby-transformer-remark",
             options: {
                 plugins: [
@@ -76,6 +83,9 @@ module.exports = {
         },
         {
             resolve: "gatsby-plugin-sharp",
+        },
+        {
+            resolve: "gatsby-transformer-sharp",
         },
     ],
 }
