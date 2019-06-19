@@ -8,5 +8,8 @@ node_modules
 # build
 public
 
+# host
+.netlify
+
 # secrets
 .env
