@@ -1,0 +1,9 @@
+[[redirects]]
+    from = "/netlify"
+    to = "https://app.netlify.com"
+    status = 301
+
+[[redirects]]
+    from = "/ama"
+    to = "https://github.com/bradgarropy/ama#readme"
+    status = 301
