@@ -1,5 +1,5 @@
 ---
-title: 👷🏼🧰🏗 lodash custom builds
+title: 👷🏼 lodash custom builds
 slug: lodash-custom-builds
 date: 2019-06-19
 topic:
