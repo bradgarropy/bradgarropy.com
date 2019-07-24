@@ -13,7 +13,10 @@ I use my home office as a place to stream, play games, and work on personal proj
 
 ![home office][home-office]
 
-**_Custom PC_**  
+### 🖥 custom pc
+
+*A new computer is coming very soon! Check out the [parts list][parts].*
+
 [Intel i7 3770K CPU][cpu]  
 [Gigabyte Z77X-UD5H Motherboard][motherboard]  
 [EVGA GeForce 660 Ti Graphics Card][gpu]  
@@ -24,19 +27,27 @@ I use my home office as a place to stream, play games, and work on personal proj
 [TP-Link WiFi Adapter][wifi]  
 [Corsair Carbide 500R Case][case]
 
+### ⌨️ accessories
+
 As for accessories, I love clicky mechanical keyboards and large palm grip mice. I also find that dual monitor setups on Windows machines help maximize my productivity.
 
 [Razer BlackWidow Ultimate Keyboard][blackwidow]  
 [Mionix Naos 8200 Mouse][naos]  
 [Mionix Propus 380 Mouse Pad][propus]  
-2x [Dell U2515H Monitors][u2515h]
+2x [Dell U2515H Monitors][u2515h]  
+[Vivo Monitor Arms][arms]  
 
-Every now and then I stream my coding sessions. I'm new to audio, so this is what I found worked for my beginner setup.
+
+### 📷 streaming
+
+I'm getting more serious about [streaming][streams] my coding sessions, and now I've got a pretty solid setup going.
 
 [Shure SM58 Microphone][sm58]  
 [Focusrite Scarlett Solo Audio Interface][scarlett-solo]  
 [Rode PSA1 Boom Arm][psa1]  
-[OBS Studio][obs]
+[Sony a6000 Camera][a6000]  
+[Manfrotto Tripod][tripod]  
+[Elgato Cam Link 4K][camlink]  
 
 ## 🏢 adobe office
 
@@ -56,6 +67,7 @@ Regardless of what computer I'm on, I use these applications. As you may guess, 
 [Visual Studio Code][vscode]  
 [Google Chrome][chrome]  
 [Figma][figma]  
+[OBS Studio][obs]  
 [hub][hub] - integrated github cli  
 [carbon][carbon] - fancy code screenshots
 
@@ -65,11 +77,12 @@ These pieces of tech are always within reach.
 
 [Google Pixel 2][pixel]  
 [Google Pixel Buds][pixel-buds]  
-[Sony WH-1000XM3 Headphones][wh-1000mx3]
+[Fossil Explorist HR Smartwatch][explorist]  
+[Sony WH-1000XM3 Headphones][wh-1000mx3]  
 
 [developer]: https://bradgarropy.com/topic/coding
 [tech]: https://bradgarropy.com/topic/tech
-[ama]: https://github.com/bradgarropy/ama#readme
+[ama]: https://bradgarropy.com/ama
 [home-office]: images/home-office.jpg
 [cpu]: https://amzn.to/2WmxEoN
 [motherboard]: https://www.gigabyte.com/us/Motherboard/GA-Z77X-UD5H-rev-10
@@ -96,8 +109,15 @@ These pieces of tech are always within reach.
 [pixel]: https://amzn.to/2EwHsm6
 [pixel-buds]: https://store.google.com/product/google_pixel_buds
 [wh-1000mx3]: https://amzn.to/2W3fAAT
-[vscode]: https://code.visualstudio.com/
-[chrome]: https://www.google.com/chrome/
-[hub]: https://hub.github.com/
-[figma]: https://www.figma.com/
-[carbon]: https://carbon.now.sh/
+[explorist]: https://amzn.to/2SBvFc3
+[vscode]: https://code.visualstudio.com
+[chrome]: https://www.google.com/chrome
+[hub]: https://hub.github.com
+[figma]: https://www.figma.com
+[carbon]: https://carbon.now.sh
+[streams]: https://bradgarropy.com/streams
+[a6000]: https://amzn.to/2LF4NHn
+[tripod]: https://amzn.to/2JOOplp
+[camlink]: https://amzn.to/2ybpXEc
+[arms]: https://amzn.to/2Szyrym
+[parts]: https://docs.google.com/spreadsheets/d/1MBLOynrfWItKPpTBEluhAJV5xMLyWB2zhIDGEXMnpeo/edit?usp=sharing

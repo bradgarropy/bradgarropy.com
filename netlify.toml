@@ -7,3 +7,8 @@
     from = "/ama"
     to = "https://github.com/bradgarropy/ama#readme"
     status = 301
+
+[[redirects]]
+    from = "/streams"
+    to = "https://www.youtube.com/playlist?list=PL6Mu1AMmTL-uMkwOvZ5_Ytbu9qQ5SQSrc"
+    status = 301
