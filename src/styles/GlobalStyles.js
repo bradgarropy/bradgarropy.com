@@ -32,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     a {
-        color: ${({theme}) => theme.colors.blue};
+        color: ${({theme}) => theme.colors.red};
         text-decoration: none;
         transition: all 300ms;
 

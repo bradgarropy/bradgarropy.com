@@ -16,7 +16,7 @@ const NavigationLink = styled(Link)`
     color: ${({theme}) => theme.colors.black};
 
     &:hover {
-        color: ${({theme}) => theme.colors.blue};
+        color: ${({theme}) => theme.colors.red};
     }
 `
 
