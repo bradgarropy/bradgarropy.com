@@ -19,7 +19,7 @@ const HireMe = () => {
             </p>
             <p>
                 But right now I{" "}
-                <a href="https://twitter.com/bradgarropy/status/1123447712169562114">
+                <a href="https://twitter.com/bradgarropy/status/1160048090751148034">
                     really
                 </a>{" "}
                 <a href="https://www.instagram.com/stories/highlights/18018079972169140">
