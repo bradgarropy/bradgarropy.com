@@ -19,7 +19,7 @@ const PostTitleWrapper = styled.div`
         color: ${({theme}) => theme.colors.black};
 
         &:hover {
-            color: ${({theme}) => theme.colors.blue};
+            color: ${({theme}) => theme.colors.red};
         }
     }
 `

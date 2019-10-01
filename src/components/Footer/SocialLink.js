@@ -15,7 +15,7 @@ const FontAwesomeIconWrapper = styled(FontAwesomeIcon)`
     transition: all 300ms;
 
     &:hover {
-        color: ${({theme}) => theme.colors.blue};
+        color: ${({theme}) => theme.colors.red};
     }
 `
 
