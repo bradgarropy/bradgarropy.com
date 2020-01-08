@@ -7,54 +7,74 @@ topic:
     icon: 😎
 ---
 
-As **2019** was the first year I've ever really written down any resolutions, it would be prudent to review how I did. While some of these resolutions didn't come with a measurable goal, I'll just summarize how I did in that area over the course of the year.
+As **2019** was the first year I've ever written down any [resolutions][resolutions], it would be prudent to review how I did. Some of these resolutions didn't come with a measurable goal. So I'll summarize how I did in that area over the course of the year.
 
 ## 💏 marriage
 
-Early on in the year I established a habit where I would give my wife compliments at the end of the day. I'd tell her what she did that made me proud of her, what she did that made me happy, or just how I felt about her. While I didn't have a perfect track record with this habit, I found that I was much more open in telling Gaby how I felt about her, and this led to her feeling more loved by me.
+Early on in the year I established a habit where I would give my wife compliments at the end of the day. I'd tell her what she did that made me proud of her, what she did that made me happy, or how I felt about her. I didn't have a perfect track record with this habit. But I found that I was much more open in telling Gaby how I felt about her. This led to her feeling more loved by me.
 
 ## 🏋🏼 fitness
 
-I was lucky enough to travel to Cancun twice in 2019, so I worked hard in the gym to prepare for the beach and bathing suits. Shortly after the second trip in September, I began to burn out of my healthy routines and started to be more flexible with my diet. I basically took the month of December off from the gym, but I'm already back at it in 2020. Overall I'd say it was a balanced year in regards to fitness, and I was very happy with my physique in the summer!
+I was lucky enough to travel to Mexico twice in 2019 ([Cancun][cancun] and [Isla Mujeres][isla]). I worked hard in the gym to prepare for the beach and bathing suits. Shortly after the second trip in September, I began to burn out of my healthy routines. I started to be more flexible with my diet. I took a break from the gym in December, but I'm already back at it in 2020. I'd say it was a balanced year for my fitness, and I was very happy with my physique in the summer!
 
 ## 👨🏼‍💻 career
 
-I spent nearly all of the past decade working at Dell. But 2019 brought big changes in my career, as I finally made the jump to web development at Adobe! This career shift has made me incredibly happy, and I love my new team and company.
+I spent most of the past decade working at [Dell][dell], but 2019 brought big changes in my career. I finally made the jump to web development at [Adobe][adobe]! This career shift has reinvigorated me, and I love my new team and company.
 
 ## 💻 coding
 
-I think I bit off more than I could chew here, but that doesn't mean I didn't make progress. I accomplished a lot and improved my skills tremendously throughout 2019.
+I bit off more than I could chew here, but that doesn't mean I didn't make progress. I accomplished a lot and upgraded my skills throughout 2019.
 
 ### learning
 
-Not only did I complete Advanced React by Wes Bos (which is absolutely huge), I finished a ton of Level Up Tutorials courses by Scott Tolinski.
+I completed [Advanced React][advanced-react] by [Wes Bos][wes], which was absolutely huge. I also finished a ton of [Level Up Tutorials][lut] courses by [Scott Tolinski][scott]. I definitely accomplished my resolution to become more comfortable in [GraphQL][graphql] and [styled-components][styled].
 
-I recently purchased [Advanced React][2] by [Wes Bos][3]. I started working my way through the course and plan to finish it this year. My goal is to become comfortable working with [GraphQL][4] and [styled-components][5]. Additionally, I want to gain the skills required to make multi-user applications, with proper authentication.
+My work at [Adobe][adobe] gave me more experience with [Docker][docker], [Jest][jest], [Jenkins pipelines][jenkins], [Amazon Web Services][aws], and [Chrome extensions][chrome]. This breadth of build, test, and deployment technologies helped me become a more well rounded developer. And as icing on the cake, I also attended [Artifact Conf][artifact] here in Austin, which was my first conference.
+
+My last goal was to learn how to make an authenticated, multi-user application. I attempted this with [giftex][giftex], but fell short after having difficulty integrating [Firebase][firebase] with [Next.js][next].
 
 ### freelancing
 
-I'm currently working on a marketing and ecommerce website for [Iron Jimmy][6], a barbell sleeve company. It's my first real paid freelancing job! My goal is to gain one more paid client by the end of of the year.
+The [Iron Jimmy][iron-jimmy] project definitely exposed some growing pains in my freelancing career. After that experience, I did not pursue any other clients. While I'm not counting it out for the future, right now I'm happy building things for myself.
 
 ### open source
 
-I recently [contributed][7] to open source and it felt great knowing that my changes, however small, have an impact on project such as [styled-components][5]. I want to keep that trend going with at least three other contributions throughout the year.
+My goal was to contribute to three other open source repositories. I crushed that number with 13 [pull requests][pr], 11 of which got merged!
 
 ## 🌱 marketing
 
-My primary social media platform is [Twitter][8], where I tweet mostly about coding. I want to grow my social media presence on [Instagram][9] and [Facebook][10] to help market myself as a web developer and gain new clients. I haven't yet set any concrete goals in this area, but it's something I want to get better at.
+My [YouTube][youtube] channel has grown significantly over the year. I'm at almost 100 subscribers thanks to my coding [livestreams][streams]. [Twitter][twitter] has been my prominent platform this past year. It allows me to interact directly with the web development community. My [Instagram][instagram] has gained a few followers here and there. I'm definitely putting more work into showing a developer/fitness lifestyle. And [Facebook][facebook]? The platform is pretty much useless to me now that I'm no longer pursuing freelance clients.
 
 ## 📝 blogging
 
-This blog is my home on the web, it's my best opportunity to show others who I am and what I can do. I want to continue writing posts, with a goal of one per month. I also want to improve the website by expanding it to more than just a blog. My goal is to close all of these [issues][11] during the year.
+I did a great job posting once per month (and twice in April!) for a while, but by the time summer hit I fell off the wagon. I still believe blogging is very valuable, but I find it much easier to produce content via [YouTube][youtube] livestreams and [Twitter][twitter].
 
-[1]: https://www.homeaway.com/
-[2]: https://advancedreact.com/
-[3]: https://twitter.com/wesbos
-[4]: https://graphql.org/
-[5]: https://www.styled-components.com/
-[6]: https://ironjimmy.com/
-[7]: https://github.com/styled-components/styled-components-website/pull/410
-[8]: https://twitter.com/bradgarropy
-[9]: https://www.instagram.com/bradgarropy
-[10]: https://www.facebook.com/bradgarropy
-[11]: https://github.com/bradgarropy/bradgarropy.com/issues
+What's your opinion, where would you prefer to hear from me? Let me know!
+
+[resolutions]: https://bradgarropy.com/blog/new-years-resolutions
+[cancun]: https://goo.gl/maps/evjauLQy7fiPq9Lg7
+[isla]: https://goo.gl/maps/62vzDUBkbwfyvEZx8
+[dell]: https://delltechnologies.com
+[adobe]: https://adobe.com
+[advanced-react]: https://advancedreact.com
+[wes]: https://wesbos.com
+[lut]: https://leveluptutorials.com
+[scott]: https://scotttolinski.com
+[graphql]: https://graphql.org
+[styled]: https://styled-components.com
+[docker]: https://docker.com
+[jest]: https://jestjs.io
+[jenkins]: https://jenkins.io/solutions/pipeline
+[aws]: https://aws.amazon.com
+[chrome]: https://developer.chrome.com/extensions
+[artifact]: https://artifactconf.com
+[giftex]: https://github.com/bradgarropy/giftex
+[firebase]: https://firebase.google.com
+[next]: https://nextjs.org
+[iron-jimmy]: https://ironjimmy.com
+[pr]: https://github.com/pulls
+[youtube]: https://youtube.com/bradgarropy
+[streams]: https://youtube.com/playlist?list=PL6Mu1AMmTL-uMkwOvZ5_Ytbu9qQ5SQSrc
+[twitter]: https://twitter.com/bradgarropy
+[instagram]: https://instagram.com/bradgarropy
+[facebook]: https://facebook.com/profile.php?id=7933107
