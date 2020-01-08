@@ -1,7 +1,7 @@
 ---
 title: "📆 2019 in review"
-slug: year-in-review-2019
-date: 2020-01-06
+slug: 2019-in-review
+date: 2020-01-07
 topic:
     name: life
     icon: 😎
