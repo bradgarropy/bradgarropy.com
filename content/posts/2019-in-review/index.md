@@ -1,5 +1,5 @@
 ---
-title: "📆 2019 in review"
+title: "📅 2019 in review"
 slug: 2019-in-review
 date: 2020-01-07
 topic:
