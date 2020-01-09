@@ -8,11 +8,11 @@ import HireMe from "../components/HireMe"
 const HireMePage = () => {
     return (
         <Layout>
-            <Meta title="hire me"/>
-            <Facebook/>
-            <Twitter/>
+            <Meta title="hire me" />
+            <Facebook title="🤝 let's work together" description="" />
+            <Twitter title="🤝 let's work together" description="" />
 
-            <HireMe/>
+            <HireMe />
         </Layout>
     )
 }
