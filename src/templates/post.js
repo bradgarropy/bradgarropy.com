@@ -18,7 +18,8 @@ const PostTemplate = ({data}) => {
             <Facebook
                 url={`${meta.siteUrl}/blog/${frontmatter.slug}`}
                 type="article"
-                description={frontmatter.title}
+                title={frontmatter.title}
+                description=""
             />
             <Twitter title={frontmatter.title} description="" />
 
