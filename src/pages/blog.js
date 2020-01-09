@@ -12,11 +12,11 @@ const BlogPage = ({data}) => {
 
     return (
         <Layout>
-            <Meta title="blog"/>
-            <Facebook/>
-            <Twitter/>
+            <Meta title="blog" />
+            <Facebook title="✍🏼 blog" description="" />
+            <Twitter title="✍🏼 blog" description="" />
 
-            <PostList posts={posts}/>
+            <PostList posts={posts} />
         </Layout>
     )
 }
