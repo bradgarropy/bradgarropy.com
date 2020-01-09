@@ -6,9 +6,9 @@ import "../../styles/PrismFunky.css"
 const PostBodyWrapper = styled.section`
     margin: 2.25rem 0rem;
 
-    a {
+    a:not(.anchor) {
         color: rgba(0, 0, 0, 0.8);
-        box-shadow: inset 0 -3px ${({theme}) => theme.colors.red};
+        box-shadow: inset 0 -1px ${({theme}) => theme.colors.red};
 
         &:hover {
             box-shadow: inset 0 -25px 0 ${({theme}) => theme.colors.red};
@@ -18,13 +18,11 @@ const PostBodyWrapper = styled.section`
 
 const PostBody = ({content}) => {
     return (
-        <PostBodyWrapper>
-            <div
-                dangerouslySetInnerHTML={{
-                    __html: content,
-                }}
-            />
-        </PostBodyWrapper>
+        <PostBodyWrapper
+            dangerouslySetInnerHTML={{
+                __html: content,
+            }}
+        />
     )
 }
 
