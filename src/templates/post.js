@@ -14,15 +14,16 @@ const PostTemplate = ({data}) => {
 
     return (
         <Layout>
-            <Meta title={frontmatter.title}/>
+            <Meta title={frontmatter.title} />
             <Facebook
                 url={`${meta.siteUrl}/blog/${frontmatter.slug}`}
                 type="article"
-                description={frontmatter.title}
+                title={frontmatter.title}
+                description=""
             />
-            <Twitter description={frontmatter.title}/>
+            <Twitter title={frontmatter.title} description="" />
 
-            <Post post={post}/>
+            <Post post={post} />
         </Layout>
     )
 }

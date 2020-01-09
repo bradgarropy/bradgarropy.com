@@ -8,11 +8,11 @@ import Contact from "../components/Contact"
 const ContactPage = () => {
     return (
         <Layout>
-            <Meta title="contact"/>
-            <Facebook/>
-            <Twitter/>
+            <Meta title="contact" />
+            <Facebook title="👋🏼 say hi" description="" />
+            <Twitter title="👋🏼 say hi" description="" />
 
-            <Contact/>
+            <Contact />
         </Layout>
     )
 }

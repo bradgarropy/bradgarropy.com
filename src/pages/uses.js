@@ -11,9 +11,9 @@ const UsesPage = ({data}) => {
 
     return (
         <Layout>
-            <Meta title="uses"/>
-            <Facebook/>
-            <Twitter/>
+            <Meta title="uses" />
+            <Facebook title="💠 uses" description="" />
+            <Twitter title="💠 uses" description="" />
 
             <div
                 dangerouslySetInnerHTML={{
