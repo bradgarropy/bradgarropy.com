@@ -15,17 +15,15 @@ I use my home office as a place to stream, play games, and work on personal proj
 
 ### 💻 custom pc
 
-_A new computer is coming very soon! Check out the [parts list][parts]._
-
-[Intel i7 3770K CPU][cpu]  
-[Gigabyte Z77X-UD5H Motherboard][motherboard]  
-[EVGA GeForce 660 Ti Graphics Card][gpu]  
-[16Gb Corsair Vengeance DDR3 RAM][memory]  
-[Corsair HX650 Power Supply][power]  
-[SanDisk 120Gb SSD][ssd]  
-[Seagate 1Tb HDD][hdd]  
-[TP-Link WiFi Adapter][wifi]  
-[Corsair Carbide 500R Case][case]
+[NZXT N7 Z390 Motherboard][mobo]  
+[Intel i7 9700K CPU][cpu]  
+[NZXT Kraken X62 CPU Cooler][cooler]  
+[Samsung 970 Evo Plus M.2 SSD 1TB][ssd-tb]  
+[Samsung 970 Evo Plus M.2 SSD 500GB][ssd-gb]  
+[Corsair Vengeance RGB Pro Memory 32GB][ram]  
+[NVIDIA 2080 RTX Super Graphics Card][gpu]  
+[NZXT E 850W Power Supply][psu]  
+[NZXT H510i Case][case]
 
 ### ⌨️ accessories
 
@@ -84,15 +82,15 @@ These pieces of tech are always within reach.
 [tech]: https://bradgarropy.com/topic/tech
 [ama]: https://bradgarropy.com/ama
 [home-office]: images/home-office.jpg
-[cpu]: https://amzn.to/2WmxEoN
-[motherboard]: https://www.gigabyte.com/us/Motherboard/GA-Z77X-UD5H-rev-10
-[gpu]: https://amzn.to/2M99Pgw
-[memory]: https://amzn.to/2ExyqFl
-[power]: https://amzn.to/2QvVv0d
-[ssd]: https://amzn.to/2wl8XKQ
-[hdd]: https://amzn.to/2WmXYz3
-[wifi]: https://amzn.to/2Qp6054
-[case]: https://amzn.to/2W2DTPw
+[cpu]: https://www.amazon.com/Intel-i7-9700K-Desktop-Processor-Unlocked/dp/B07HHN6KBZ
+[cooler]: https://www.amazon.com/Kraken-280mm-Water-Cooling-Bracket/dp/B06XS9QNPS
+[mobo]: https://www.amazon.com/NZXT-Z390-N7-Z39XT-W1-Motherboard-Wireless-AC/dp/B07ZGFPLK3
+[ram]: https://www.amazon.com/Corsair-Vengeance-PC4-25600-Desktop-Memory/dp/B07RJXBMM7
+[gpu]: https://www.amazon.com/NVIDIA-GeForce-Super-Founders-Graphics/dp/B07W3P4PC2
+[psu]: https://www.amazon.com/NP-1PM-E850A-Modular-Digital-Supply-Certified/dp/B07CGCFWJY
+[ssd-gb]: https://www.amazon.com/Samsung-970-EVO-Plus-MZ-V7S500B/dp/B07M7Q21N7
+[ssd-tb]: https://www.amazon.com/Samsung-970-EVO-Plus-MZ-V7S500B/dp/B07MFZY2F2
+[case]: https://www.amazon.com/NZXT-H510i-Mid-Tower-Integrated-Water-Cooling/dp/B07SB3B1Z5
 [blackwidow]: https://amzn.to/2QsPZeI
 [naos]: https://amzn.to/2K3u3Fy
 [propus]: https://amzn.to/2whwgoS
