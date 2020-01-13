@@ -13,9 +13,9 @@ I use my home office as a place to stream, play games, and work on personal proj
 
 ![home office][home-office]
 
-### 🖥 custom pc
+### 💻 custom pc
 
-*A new computer is coming very soon! Check out the [parts list][parts].*
+_A new computer is coming very soon! Check out the [parts list][parts]._
 
 [Intel i7 3770K CPU][cpu]  
 [Gigabyte Z77X-UD5H Motherboard][motherboard]  
@@ -35,8 +35,7 @@ As for accessories, I love clicky mechanical keyboards and large palm grip mice.
 [Mionix Naos 8200 Mouse][naos]  
 [Mionix Propus 380 Mouse Pad][propus]  
 2x [Dell U2515H Monitors][u2515h]  
-[Vivo Monitor Arms][arms]  
-
+[Vivo Monitor Arms][arms]
 
 ### 📷 streaming
 
@@ -48,6 +47,7 @@ I'm getting more serious about [streaming][streams] my coding sessions, and now 
 [Sony a6000 Camera][a6000]  
 [Manfrotto Tripod][tripod]  
 [Elgato Cam Link 4K][camlink]  
+[Elgato Stream Deck Mini][stream-deck]
 
 ## 🏢 adobe office
 
@@ -78,7 +78,7 @@ These pieces of tech are always within reach.
 [Google Pixel 2][pixel]  
 [Google Pixel Buds][pixel-buds]  
 [Fossil Explorist HR Smartwatch][explorist]  
-[Sony WH-1000XM3 Headphones][wh-1000mx3]  
+[Sony WH-1000XM3 Headphones][wh-1000mx3]
 
 [developer]: https://bradgarropy.com/topic/coding
 [tech]: https://bradgarropy.com/topic/tech
@@ -100,7 +100,7 @@ These pieces of tech are always within reach.
 [sm58]: https://amzn.to/2W2z5cD
 [scarlett-solo]: https://amzn.to/2MbAcSW
 [psa1]: https://amzn.to/2Wgz8kH
-[obs]: https://obsproject.com/
+[obs]: https://obsproject.com
 [adobe-office]: images/adobe-office.jpg
 [macbook]: https://amzn.to/2JZlZFQ
 [magic-keyboard]: https://amzn.to/2M5Ge7y
@@ -119,5 +119,6 @@ These pieces of tech are always within reach.
 [a6000]: https://amzn.to/2LF4NHn
 [tripod]: https://amzn.to/2JOOplp
 [camlink]: https://amzn.to/2ybpXEc
+[stream-deck]: https://www.amazon.com/Elgato-Stream-Deck-Mini-customizable/dp/B07DYRS1WH
 [arms]: https://amzn.to/2Szyrym
 [parts]: https://docs.google.com/spreadsheets/d/1MBLOynrfWItKPpTBEluhAJV5xMLyWB2zhIDGEXMnpeo/edit?usp=sharing
