@@ -1,0 +1,30 @@
+/* prism-line-numbers custom tweaks */
+
+.gatsby-highlight {
+    position: relative;
+    padding: 1em 30px;
+    padding-left: 15px;
+}
+
+code[class*="language-"] {
+    left: 15px;
+}
+
+pre[class*="language-"].line-numbers {
+    color: white;
+    font-size: 14px;
+    padding-left: 1em;
+}
+
+pre[class*="language-"].line-numbers .line-numbers-rows {
+    left: 0;
+    border: none;
+}
+
+.gatsby-highlight-code-line {
+    position: relative;
+    left: -30px;
+    padding-left: 41px;
+    border-left: 3px solid #0cf;
+    background: linear-gradient(134deg, #222 0%, rgba(34, 34, 34, 0) 99%);
+}
