@@ -1,11 +1,16 @@
 [[redirects]]
-    from = "/netlify"
-    to = "https://app.netlify.com"
+    from = "/ama"
+    to = "https://github.com/bradgarropy/ama#readme"
     status = 301
 
 [[redirects]]
-    from = "/ama"
-    to = "https://github.com/bradgarropy/ama#readme"
+    from = "/dotfiles"
+    to = "https://github.com/bradgarropy/dotfiles"
+    status = 301
+
+[[redirects]]
+    from = "/netlify"
+    to = "https://app.netlify.com"
     status = 301
 
 [[redirects]]
