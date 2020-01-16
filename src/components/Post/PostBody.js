@@ -14,6 +14,10 @@ const PostBodyWrapper = styled.section`
             box-shadow: inset 0 -25px 0 ${({theme}) => theme.colors.red};
         }
     }
+
+    .twitter-tweet {
+        margin: 0 auto;
+    }
 `
 
 const PostBody = ({content}) => {
