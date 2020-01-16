@@ -10,9 +10,16 @@ code[class*="language-"] {
     left: 15px;
 }
 
+code[class*="language-"],
+pre[class*="language-"] {
+    /* fix for line-numbers missmatch */
+    font-size: 14px;
+}
+
 pre[class*="language-"].line-numbers {
     color: white;
     font-size: 14px;
+    line-height: 1.5;
     padding-left: 1em;
 }
 
