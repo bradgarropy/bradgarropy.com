@@ -9,7 +9,7 @@ topic:
 
 Today, [Google][1] dropped this bomb. As with thousands of others, I'm sad to see [Inbox][2] go. It was a fresh take on email, which offered some great features.
 
-<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">Over the past 4 years you’ve helped us make email better. We’ve brought popular Inbox features to <a href="https://twitter.com/gmail?ref_src=twsrc%5Etfw">@Gmail</a> helping 1B+ people get more done. Thank you.<br><br>We’ll be focusing on Gmail &amp; saying bye to Inbox at the end of March 2019. Here’s a transition guide → <a href="https://t.co/6dOxgExpbm">https://t.co/6dOxgExpbm</a></p>&mdash; Inbox by Gmail (@inboxbygmail) <a href="https://twitter.com/inboxbygmail/status/1039952354450309121?ref_src=twsrc%5Etfw">September 12, 2018</a></blockquote>
+https://twitter.com/inboxbygmail/status/1039952354450309121
 
 Google does indicate that by shutting down Inbox, they'll be putting more effort into [Gmail][3]. But as we all know, even with it's new look in the browser, Gmail is still far behind Inbox. I want to see a few things come to Gmail.
 
