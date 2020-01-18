@@ -7,18 +7,18 @@
 }
 
 code[class*="language-"] {
-    left: 15px;
+    left: 14px;
 }
 
 code[class*="language-"],
 pre[class*="language-"] {
     /* fix for line-numbers missmatch */
-    font-size: 14px;
+    font-size: 16px;
 }
 
 pre[class*="language-"].line-numbers {
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     padding-left: 1em;
 }
@@ -31,7 +31,7 @@ pre[class*="language-"].line-numbers .line-numbers-rows {
 .gatsby-highlight-code-line {
     position: relative;
     left: -30px;
-    padding-left: 41px;
+    padding-left: 42px;
     border-left: 3px solid #0cf;
     background: linear-gradient(134deg, #222 0%, rgba(34, 34, 34, 0) 99%);
 }
