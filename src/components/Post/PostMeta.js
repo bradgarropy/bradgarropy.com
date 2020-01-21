@@ -12,7 +12,7 @@ const PostMetaWrapper = styled.div`
         color: rgba(0, 0, 0, 0.8);
 
         &:hover {
-            color: ${({theme}) => theme.colors.red};
+            color: ${({theme}) => theme.colors.primary};
         }
     }
 `

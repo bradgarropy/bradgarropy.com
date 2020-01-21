@@ -15,7 +15,7 @@ const FontAwesomeIconWrapper = styled(FontAwesomeIcon)`
     transition: all 300ms;
 
     &:hover {
-        color: ${({theme}) => theme.colors.red};
+        color: ${({theme}) => theme.colors.primary};
     }
 `
 
@@ -47,7 +47,7 @@ const SocialLink = ({platform}) => {
 
     return (
         <a href={`https://${platform}.com/bradgarropy`} aria-label={label}>
-            <FontAwesomeIconWrapper icon={icon}/>
+            <FontAwesomeIconWrapper icon={icon} />
         </a>
     )
 }
