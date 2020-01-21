@@ -32,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     a {
-        color: ${({theme}) => theme.colors.red};
+        color: ${({theme}) => theme.colors.primary};
         text-decoration: none;
         transition: all 300ms;
 
@@ -52,13 +52,17 @@ const GlobalStyles = createGlobalStyle`
     }
 
     blockquote {
-        border-left: 3px solid ${({theme}) => theme.colors.blue};
+        border-left: 3px solid ${({theme}) => theme.colors.primary};
         font-style: italic;
         padding-left: 1rem;
     }
 
     ul {
         color: rgba(0, 0, 0, 0.8);
+    }
+
+    ::selection {
+        background-color: ${({theme}) => theme.colors.primary};
     }
 `
 

@@ -1,7 +1,10 @@
+// const red = "#f36565"
+const purple = "#c792ea"
+
 const colors = {
     black: "#000000",
     white: "#ffffff",
-    red: "#f36565",
+    primary: purple,
 }
 
 export default colors
