@@ -11,7 +11,7 @@ Every time I spin up a new website, I find myself settling on the same layout: a
 
 Before we get started, here is a [CodeSandbox][codesandbox] of the final layout. I like this layout because the footer aways sits at the bottom of the viewport, regardless of the content height. Short bits of content remain vertically centered, while long chunks of content cause the page to scroll.
 
-<iframe src="https://codesandbox.io/embed/my-favorite-layout-h3fpz?autoresize=1&fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2FApp.js" title="🧱 my favorite layout" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+https://codesandbox.io/s/my-favorite-layout-h3fpz?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2FApp.js&view=preview
 
 I start by scaffolding out the `App` component into the three main sections: `Header`, `Content`, and `Footer`.
 
