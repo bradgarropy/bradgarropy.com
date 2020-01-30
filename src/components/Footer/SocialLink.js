@@ -46,7 +46,12 @@ const SocialLink = ({platform}) => {
     }
 
     return (
-        <a href={`https://${platform}.com/bradgarropy`} aria-label={label}>
+        <a
+            href={`https://${platform}.com/bradgarropy`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={label}
+        >
             <FontAwesomeIconWrapper icon={icon} />
         </a>
     )
