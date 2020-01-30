@@ -37,33 +37,58 @@ const Contact = () => {
             <p>
                 I enjoy connecting with other developers, drop me a message and
                 let&apos;s talk!
-                <br/>
+                <br />
             </p>
 
             <p>
                 Social media is great for informal chats.
-                <br/>
+                <br />
                 Email works best for in depth discussions.
-                <br/>
-                Consider my <a href={`${siteUrl}/ama`}>AMA</a> if others can benefit
-                from the question.
+                <br />
+                Consider my{" "}
+                <a
+                    href={`${siteUrl}/ama`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    AMA
+                </a>{" "}
+                if others can benefit from the question.
             </p>
 
             <ContactLinks>
                 <span role="img" aria-label="email">
                     📧
                 </span>
-                <a href={`mailto:${email}`}>{email}</a>
+                <a
+                    href={`mailto:${email}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    {email}
+                </a>
 
                 <span role="img" aria-label="ama">
                     ❔
                 </span>
-                <a href={`${siteUrl}/ama`}>ask me anything</a>
+                <a
+                    href={`${siteUrl}/ama`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    ask me anything
+                </a>
 
                 <span role="img" aria-label="twitter">
                     🐦
                 </span>
-                <a href={`https://twitter.com/${title}`}>twitter</a>
+                <a
+                    href={`https://twitter.com/${title}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    twitter
+                </a>
             </ContactLinks>
         </div>
     )
