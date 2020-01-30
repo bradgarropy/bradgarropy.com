@@ -81,6 +81,12 @@ module.exports = {
                     {
                         resolve: "gatsby-remark-embedder",
                     },
+                    {
+                        resolve: "gatsby-remark-external-links",
+                        options: {
+                            rel: "noopener noreferrer",
+                        },
+                    },
                 ],
             },
         },
