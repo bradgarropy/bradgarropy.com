@@ -19,7 +19,7 @@ const PostComments = ({slug}) => {
     const discuss = `https://twitter.com/search?q=${query}`
 
     return (
-        <Button href={discuss}>
+        <Button href={discuss} target="_blank" rel="noopener noreferrer">
             <span role="img" aria-label="discuss on twitter">
                 💬
             </span>
