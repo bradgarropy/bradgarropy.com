@@ -6,7 +6,7 @@ const PostEdit = ({slug}) => {
     const edit = `https://github.com/bradgarropy/bradgarropy.com/edit/master/content/posts/${slug}/index.md`
 
     return (
-        <Button href={edit}>
+        <Button href={edit} target="_blank" rel="noopener noreferrer">
             <span role="img" aria-label="edit on github">
                 💻
             </span>
