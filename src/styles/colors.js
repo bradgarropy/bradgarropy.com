@@ -1,4 +1,3 @@
-// const red = "#f36565"
 const purple = "#c792ea"
 
 const colors = {

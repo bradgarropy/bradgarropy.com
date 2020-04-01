@@ -76,7 +76,11 @@ module.exports = {
                         },
                     },
                     {
-                        resolve: "gatsby-remark-prismjs",
+                        resolve: "gatsby-remark-vscode",
+                        options: {
+                            theme: "Shades of Purple",
+                            extensions: ["shades-of-purple"],
+                        },
                     },
                     {
                         resolve: "gatsby-remark-embedder",

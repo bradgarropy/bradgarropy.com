@@ -1,6 +1,14 @@
 import {createGlobalStyle} from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
+    :root {
+        --grvsc-line-highlighted-background-color: ${({theme}) =>
+            `${theme.colors.primary}66`};
+        --grvsc-line-highlighted-border-color: ${({theme}) =>
+            theme.colors.primary};
+        --grvsc-line-highlighted-border-width: 4px;
+    }
+
     html {
         margin: 0rem;
         padding: 0rem;
@@ -31,6 +39,17 @@ const GlobalStyles = createGlobalStyle`
         margin-bottom: 1.75rem;
     }
 
+    code {
+        line-height: 1.5;
+    }
+
+    code:not(.grvsc-code) {
+        background: #2d2b55;
+        color: #fad000;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.3rem;
+    }
+
     a {
         color: ${({theme}) => theme.colors.primary};
         text-decoration: none;
@@ -39,10 +58,6 @@ const GlobalStyles = createGlobalStyle`
         &:hover {
             color: rgba(0, 0, 0, 0.8);
         }
-    }
-
-    code {
-        font-size: 0.9rem;
     }
 
     img {
