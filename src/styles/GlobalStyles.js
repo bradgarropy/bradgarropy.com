@@ -79,6 +79,28 @@ const GlobalStyles = createGlobalStyle`
     ::selection {
         background-color: ${({theme}) => theme.colors.primary};
     }
+
+    /* youtube */
+    .youtube {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        margin: 2rem auto;
+
+        ::after {
+            padding-top: 56.25%;
+            display: block;
+            content: "";
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
 `
 
 export default GlobalStyles

@@ -14,6 +14,6 @@
     status = 301
 
 [[redirects]]
-    from = "/streams"
-    to = "https://www.youtube.com/playlist?list=PL6Mu1AMmTL-uMkwOvZ5_Ytbu9qQ5SQSrc"
+    from = "/stream"
+    to = "https://twitch.tv/bradgarropy"
     status = 301

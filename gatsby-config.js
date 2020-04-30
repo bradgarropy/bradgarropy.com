@@ -1,6 +1,8 @@
 require("dotenv").config()
 
-module.exports = {
+const youtube = require("./src/transformers/youtube")
+
+const config = {
     siteMetadata: {
         siteUrl: "https://bradgarropy.com",
         title: "bradgarropy",
@@ -84,6 +86,9 @@ module.exports = {
                     },
                     {
                         resolve: "gatsby-remark-embedder",
+                        options: {
+                            customTransformers: [youtube],
+                        },
                     },
                     {
                         resolve: "gatsby-remark-external-links",
@@ -105,3 +110,5 @@ module.exports = {
         },
     ],
 }
+
+module.exports = config
