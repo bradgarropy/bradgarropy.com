@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
+import {Helmet} from "react-helmet"
 
 const Twitter = ({
     card = "summary",
@@ -11,11 +11,11 @@ const Twitter = ({
 }) => {
     return (
         <Helmet>
-            <meta name="twitter:card" content={card}/>
-            <meta name="twitter:site" content={site}/>
-            <meta name="twitter:title" content={title}/>
-            <meta name="twitter:description" content={description}/>
-            <meta name="twitter:image" content={image}/>
+            <meta name="twitter:card" content={card} />
+            <meta name="twitter:site" content={site} />
+            <meta name="twitter:title" content={title} />
+            <meta name="twitter:description" content={description} />
+            <meta name="twitter:image" content={image} />
         </Helmet>
     )
 }

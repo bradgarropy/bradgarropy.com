@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
+import {Helmet} from "react-helmet"
 
 const Facebook = ({
     url = "https://bradgarropy.com",
@@ -11,11 +11,11 @@ const Facebook = ({
 }) => {
     return (
         <Helmet>
-            <meta property="og:url" content={url}/>
-            <meta property="og:type" content={type}/>
-            <meta property="og:title" content={title}/>
-            <meta property="og:description" content={description}/>
-            <meta property="og:image" content={image}/>
+            <meta property="og:url" content={url} />
+            <meta property="og:type" content={type} />
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={description} />
+            <meta property="og:image" content={image} />
         </Helmet>
     )
 }

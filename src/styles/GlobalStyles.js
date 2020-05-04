@@ -76,6 +76,10 @@ const GlobalStyles = createGlobalStyle`
         color: rgba(0, 0, 0, 0.8);
     }
 
+    table {
+        margin: 0 auto;
+    }
+
     ::selection {
         background-color: ${({theme}) => theme.colors.primary};
     }
