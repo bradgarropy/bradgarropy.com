@@ -1,5 +1,6 @@
 require("dotenv").config()
 
+const twitch = require("./src/transformers/twitch")
 const youtube = require("./src/transformers/youtube")
 
 const config = {
@@ -87,7 +88,7 @@ const config = {
                     {
                         resolve: "gatsby-remark-embedder",
                         options: {
-                            customTransformers: [youtube],
+                            customTransformers: [twitch, youtube],
                         },
                     },
                     {

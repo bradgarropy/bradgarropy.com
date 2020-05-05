@@ -76,16 +76,30 @@ const GlobalStyles = createGlobalStyle`
         color: rgba(0, 0, 0, 0.8);
     }
 
+    table {
+        margin: 1.75rem auto;
+    }
+
+    th, td {
+        padding: 0 2rem 0.5rem 0;
+    }
+
+    th:last-child,
+    td:last-child {
+        padding-right: 0;
+    }
+
     ::selection {
         background-color: ${({theme}) => theme.colors.primary};
     }
 
-    /* youtube */
+    /* responsive iframes */
+    .twitch,
     .youtube {
         overflow: hidden;
         position: relative;
         width: 100%;
-        margin: 2rem auto;
+        margin: 1.75rem auto;
 
         ::after {
             padding-top: 56.25%;

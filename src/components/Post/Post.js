@@ -10,9 +10,9 @@ const Post = ({post}) => {
 
     return (
         <article>
-            <PostHeader date={date} topic={topic} title={title}/>
-            <PostBody content={html}/>
-            <PostFooter slug={slug}/>
+            <PostHeader date={date} topic={topic} title={title} />
+            <PostBody content={html} />
+            <PostFooter slug={slug} />
         </article>
     )
 }

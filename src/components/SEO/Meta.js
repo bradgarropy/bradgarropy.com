@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
+import {Helmet} from "react-helmet"
 import {useStaticQuery, graphql} from "gatsby"
-import Helmet from "react-helmet"
 import bg from "../../../static/bg.png"
 
 const Meta = ({title}) => {
@@ -20,11 +20,11 @@ const Meta = ({title}) => {
 
     return (
         <Helmet>
-            <html lang="en"/>
+            <html lang="en" />
             <title>{title}</title>
-            <meta name="description" content={description}/>
-            <meta name="keywords" content={keywords}/>
-            <link rel="icon" type="image/png" href={bg}/>
+            <meta name="description" content={description} />
+            <meta name="keywords" content={keywords} />
+            <link rel="icon" type="image/png" href={bg} />
         </Helmet>
     )
 }
