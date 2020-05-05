@@ -77,7 +77,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     table {
-        margin: 2rem auto;
+        margin: 1.75rem auto;
     }
 
     th, td {
@@ -93,12 +93,13 @@ const GlobalStyles = createGlobalStyle`
         background-color: ${({theme}) => theme.colors.primary};
     }
 
-    /* youtube */
+    /* responsive iframes */
+    .twitch,
     .youtube {
         overflow: hidden;
         position: relative;
         width: 100%;
-        margin: 2rem auto;
+        margin: 1.75rem auto;
 
         ::after {
             padding-top: 56.25%;
