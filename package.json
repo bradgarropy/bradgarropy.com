@@ -49,7 +49,7 @@
         "gatsby-remark-external-links": "0.0.4",
         "gatsby-remark-images": "^3.3.0",
         "gatsby-remark-prismjs": "^3.5.0",
-        "gatsby-remark-vscode": "^2.0.3",
+        "gatsby-remark-vscode": "^2.1.1",
         "gatsby-source-filesystem": "^2.3.0",
         "gatsby-transformer-remark": "^2.8.5",
         "gatsby-transformer-sharp": "^2.5.0",
