@@ -77,7 +77,16 @@ const GlobalStyles = createGlobalStyle`
     }
 
     table {
-        margin: 0 auto;
+        margin: 2rem auto;
+    }
+
+    th, td {
+        padding: 0 1rem 0.5rem 0;
+    }
+
+    th:last-child,
+    td:last-child {
+        padding-right: 0;
     }
 
     ::selection {
