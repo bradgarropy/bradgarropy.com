@@ -81,7 +81,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     th, td {
-        padding: 0 1rem 0.5rem 0;
+        padding: 0 2rem 0.5rem 0;
     }
 
     th:last-child,
