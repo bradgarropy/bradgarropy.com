@@ -21,3 +21,6 @@
     from = "/stream"
     to = "https://twitch.tv/bradgarropy"
     status = 301
+
+[[plugins]]
+    package = "netlify-plugin-gatsby-cache"
