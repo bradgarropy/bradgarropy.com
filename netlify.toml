@@ -1,3 +1,7 @@
+[build]
+    command = "npm run build"
+    publish = "public"
+
 [[redirects]]
     from = "/ama"
     to = "https://github.com/bradgarropy/ama#readme"
