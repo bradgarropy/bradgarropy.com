@@ -7,9 +7,7 @@ import Meta from "../components/SEO/Meta"
 import Facebook from "../components/SEO/Facebook"
 import Twitter from "../components/SEO/Twitter"
 
-const PostBodyWrapper = styled.section`
-    margin: 2.25rem 0rem;
-
+const Resume = styled.section`
     a:not(.anchor) {
         color: rgba(0, 0, 0, 0.8);
         box-shadow: inset 0 -2px ${({theme}) => theme.colors.primary};
@@ -18,42 +16,34 @@ const PostBodyWrapper = styled.section`
             box-shadow: inset 0 -25px 0 ${({theme}) => theme.colors.primary};
         }
     }
-
-    .twitter-tweet {
-        margin: 0 auto;
-    }
 `
 
-const UsesPage = ({data}) => {
-    const {html} = data.uses
+const ResumePage = ({data}) => {
+    const {html} = data.resume
 
     return (
         <Layout>
-            <Meta title="uses" />
-            <Facebook title="💠 uses" description="" />
-            <Twitter title="💠 uses" description="" />
+            <Meta title="resume" />
+            <Facebook title="👔 resume" description="" />
+            <Twitter title="👔 resume" description="" />
 
-            <PostBodyWrapper
-                dangerouslySetInnerHTML={{
-                    __html: html,
-                }}
-            />
+            <Resume dangerouslySetInnerHTML={{__html: html}} />
         </Layout>
     )
 }
 
-UsesPage.propTypes = {
+ResumePage.propTypes = {
     data: PropTypes.object.isRequired,
 }
 
-export const usesPageQuery = graphql`
+export const query = graphql`
     {
-        uses: markdownRemark(
-            fileAbsolutePath: {regex: "/content/pages/uses/"}
+        resume: markdownRemark(
+            fileAbsolutePath: {regex: "/content/pages/resume/"}
         ) {
             html
         }
     }
 `
 
-export default UsesPage
+export default ResumePage
