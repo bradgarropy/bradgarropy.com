@@ -50,8 +50,8 @@ const config = {
         {
             resolve: "gatsby-source-filesystem",
             options: {
-                name: "uses",
-                path: "content/uses",
+                name: "pages",
+                path: "content",
             },
         },
         {
@@ -108,6 +108,9 @@ const config = {
         },
         {
             resolve: "gatsby-transformer-sharp",
+        },
+        {
+            resolve: "gatsby-plugin-catch-links",
         },
     ],
 }

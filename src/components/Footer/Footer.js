@@ -13,10 +13,11 @@ const FooterWrapper = styled.footer`
 const Footer = () => {
     return (
         <FooterWrapper>
-            <SocialLink platform="instagram"/>
-            <SocialLink platform="github"/>
-            <SocialLink platform="twitter"/>
-            <SocialLink platform="youtube"/>
+            <SocialLink platform="twitch" />
+            <SocialLink platform="github" />
+            <SocialLink platform="youtube" />
+            <SocialLink platform="twitter" />
+            <SocialLink platform="instagram" />
         </FooterWrapper>
     )
 }

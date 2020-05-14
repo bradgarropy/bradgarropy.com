@@ -1,14 +1,16 @@
 import React from "react"
-import PropTypes from "prop-types"
 import {graphql} from "gatsby"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 import Layout from "../components/Layout"
 import Meta from "../components/SEO/Meta"
 import Facebook from "../components/SEO/Facebook"
 import Twitter from "../components/SEO/Twitter"
 
-const PostBodyWrapper = styled.section`
-    margin: 2.25rem 0rem;
+const Resume = styled.section`
+    p:first-of-type {
+        margin-top: 0;
+    }
 
     a:not(.anchor) {
         color: rgba(0, 0, 0, 0.8);
@@ -19,41 +21,41 @@ const PostBodyWrapper = styled.section`
         }
     }
 
-    .twitter-tweet {
-        margin: 0 auto;
+    li > p {
+        margin: 0;
+    }
+
+    table {
+        margin: 0 0 0 0;
     }
 `
 
-const UsesPage = ({data}) => {
-    const {html} = data.uses
+const ResumePage = ({data}) => {
+    const {html} = data.resume
 
     return (
         <Layout>
-            <Meta title="uses" />
-            <Facebook title="💠 uses" description="" />
-            <Twitter title="💠 uses" description="" />
+            <Meta title="resume" />
+            <Facebook title="👔 resume" description="" />
+            <Twitter title="👔 resume" description="" />
 
-            <PostBodyWrapper
-                dangerouslySetInnerHTML={{
-                    __html: html,
-                }}
-            />
+            <Resume dangerouslySetInnerHTML={{__html: html}} />
         </Layout>
     )
 }
 
-UsesPage.propTypes = {
+ResumePage.propTypes = {
     data: PropTypes.object.isRequired,
 }
 
-export const usesPageQuery = graphql`
+export const query = graphql`
     {
-        uses: markdownRemark(
-            fileAbsolutePath: {regex: "/content/pages/uses/"}
+        resume: markdownRemark(
+            fileAbsolutePath: {regex: "/content/pages/resume/"}
         ) {
             html
         }
     }
 `
 
-export default UsesPage
+export default ResumePage
