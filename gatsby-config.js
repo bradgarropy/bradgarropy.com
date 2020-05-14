@@ -109,6 +109,9 @@ const config = {
         {
             resolve: "gatsby-transformer-sharp",
         },
+        {
+            resolve: "gatsby-plugin-catch-links",
+        },
     ],
 }
 
