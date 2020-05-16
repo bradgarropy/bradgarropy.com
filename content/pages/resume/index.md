@@ -17,11 +17,11 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 
 ### Software
 
-|                       |                                                          |
-| --------------------- | -------------------------------------------------------- |
-| _JavaScript (ES2020)_ | React, Gatsby, Next.js, Node.js, Express, Jest, Cypress  |
-| _Python 2.7_          | Paramiko, Beautiful Soup, JUnit, Selenium                |
-| _Others_              | HTML5, CSS3, Bash, Groovy, JSON, Markdown, YAML, TOML, C |
+|                       |                                                                              |
+| --------------------- | ---------------------------------------------------------------------------- |
+| _JavaScript (ES2020)_ | React, Gatsby, Next.js, Node.js, TypeScript, GraphQL, Express, Jest, Cypress |
+| _Python 2.7_          | Paramiko, Beautiful Soup, JUnit, Selenium                                    |
+| _Others_              | HTML5, CSS3, Bash, Groovy, JSON, Markdown, YAML, TOML, C                     |
 
 ### Tools
 
