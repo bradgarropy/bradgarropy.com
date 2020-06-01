@@ -17,7 +17,6 @@ const HireMe = styled.div`
 `
 
 const HireMePage = ({data}) => {
-    console.log(data)
     const {html} = data.hireMe
 
     return (
