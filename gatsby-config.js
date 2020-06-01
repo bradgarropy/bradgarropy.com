@@ -6,10 +6,12 @@ const youtube = require("./src/transformers/youtube")
 const config = {
     siteMetadata: {
         siteUrl: "https://bradgarropy.com",
+        url: "https://bradgarropy.com",
         title: "bradgarropy",
         description: "🏠 my home on the web",
         keywords: ["gatsby", "react", "scss", "eslint", "blog", "portfolio"],
         email: "bradgarropy@gmail.com",
+        twitter: "bradgarropy",
     },
     plugins: [
         {
@@ -111,6 +113,9 @@ const config = {
         },
         {
             resolve: "gatsby-plugin-catch-links",
+        },
+        {
+            resolve: "@bradgarropy/gatsby-plugin-seo",
         },
     ],
 }
