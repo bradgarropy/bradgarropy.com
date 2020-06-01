@@ -2,10 +2,8 @@ import React from "react"
 import {graphql} from "gatsby"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Layout from "../components/Layout"
-import Meta from "../components/SEO/Meta"
-import Facebook from "../components/SEO/Facebook"
-import Twitter from "../components/SEO/Twitter"
 
 const HireMe = styled.div`
     a:not(.anchor) {
@@ -24,9 +22,7 @@ const HireMePage = ({data}) => {
 
     return (
         <Layout>
-            <Meta title="hire me" />
-            <Facebook title="🤝 let's work together" description="" />
-            <Twitter title="🤝 let's work together" description="" />
+            <SEO title="🤝 let's work together" description="" />
 
             <HireMe dangerouslySetInnerHTML={{__html: html}} />
         </Layout>

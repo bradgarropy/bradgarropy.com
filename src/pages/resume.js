@@ -2,10 +2,8 @@ import React from "react"
 import {graphql} from "gatsby"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Layout from "../components/Layout"
-import Meta from "../components/SEO/Meta"
-import Facebook from "../components/SEO/Facebook"
-import Twitter from "../components/SEO/Twitter"
 
 const Resume = styled.section`
     p:first-of-type {
@@ -35,9 +33,7 @@ const ResumePage = ({data}) => {
 
     return (
         <Layout>
-            <Meta title="resume" />
-            <Facebook title="👔 resume" description="" />
-            <Twitter title="👔 resume" description="" />
+            <SEO title="👔 resume" description="" />
 
             <Resume dangerouslySetInnerHTML={{__html: html}} />
         </Layout>
