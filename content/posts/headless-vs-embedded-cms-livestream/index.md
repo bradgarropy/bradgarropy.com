@@ -15,7 +15,7 @@ After getting to know each other's areas of expertise, we found that we overlapp
 
 https://youtu.be/6hp-szqbQwg
 
-I really appreciated the opportunity, and I had a blast being a guest on stream! It helped advance my public speaking skills, and helped to grow my own audience as well. I've been [streaming][stream] myself, and getting more involved with the developer community on Twitch is a goal of mine. One day I'll have to have James on to talk about authentication!
+I really appreciated the opportunity, and I had a blast being a guest on stream! It helped advance my public speaking skills, and helped to grow my own audience as well. I've been [streaming][stream] myself, and getting more involved with the developer community on Twitch is a goal of mine. One day I'll have to have James as a guest on my stream to talk about authentication!
 
 If you didn't know, James is working on a new course called [React and Serverless - Fullstack Development][course]. I'm about halfway through it right now and I can say it's very comprehensive, and he shows you every step along the way. Go check it out, it'll be available on May 27!
 
