@@ -158,7 +158,8 @@ _7/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsby
 [🥪 adobe lunch][adobe-lunch]
 
 -   Lunch spot picker for my coworkers.
--   Leverages FourSquare for location information.
+-   Detects user location via browser API.
+-   Leverages FourSquare for restaurant information.
 -   Tracks most and least popular restaurants with Airtable.
 -   Built with Gatsby and React, hosted on Netlify.
 
@@ -210,7 +211,18 @@ _7/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsby
 
 -   Command line tool for managing issue labels across GitHub repositories.
 -   Built with JavaScript and Node.js.
--   Nearly 1,000 downloads!
+-   Over 1,000 downloads!
+
+[🃏 business-card][business-card]
+
+-   Digital business card.
+-   Run `npx bradgarropy` to see for yourself.
+
+[🔎 gatsby-plugin-seo][gatsby-plugin-seo]
+
+-   SEO plugin for Gatsby.
+-   Supports Facebook, Twitter, Open Graph, and meta tags.
+-   Over 250 downloads!
 
 [💎 eslint-config-bradgarropy][eslint]
 
@@ -229,6 +241,7 @@ _7/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsby
 [styled-components / styled-components-website][styled-components]  
 [magento / magento-product-recommendations][magento-product-recommendations]  
 [magento / magento-product-recommendations-admin][magento-product-recommendations-admin]  
+[MichaelDeBoey / gatsby-remark-embedder][gatsby-remark-embedder]  
 [coddingtonbear / python-myfitnesspal][python-myfitnesspal]  
 [Shopify / js-buy-sdk][shopify-sdk]  
 [wesbos / awesome-uses][awesome-uses]  
@@ -261,6 +274,8 @@ _7/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsby
 [infinite-scroll]: https://homeaway-infinite-scroll.netlify.com
 [dtxc-bot]: https://twitter.com/dailytxcountry
 [labman]: https://npmjs.com/package/labman
+[business-card]: https://npmjs.com/package/bradgarropy
+[gatsby-plugin-seo]: https://gatsbyjs.org/packages/@bradgarropy/gatsby-plugin-seo
 [eslint]: https://npmjs.com/package/eslint-config-bradgarropy
 [bg-snippets]: https://marketplace.visualstudio.com/items?itemName=bradgarropy.bg-snippets
 [gatsby]: https://github.com/gatsbyjs/gatsby/pulls?q=is%3Apr+author%3Abradgarropy
@@ -268,6 +283,7 @@ _7/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsby
 [styled-components]: https://github.com/styled-components/styled-components-website/pulls?q=is%3Apr+author%3Abradgarropy
 [magento-product-recommendations]: https://github.com/magento/magento-product-recommendations/pulls?q=is%3Apr+author%3Abradgarropy
 [magento-product-recommendations-admin]: https://github.com/magento/magento-product-recommendations-admin/pulls?q=is%3Apr+author%3Abradgarropy
+[gatsby-remark-embedder]: https://github.com/MichaelDeBoey/gatsby-remark-embedder/pulls?q=is%3Apr+author%3Abradgarropy
 [python-myfitnesspal]: https://github.com/coddingtonbear/python-myfitnesspal/pulls?q=is%3Apr+author%3Abradgarropy
 [shopify-sdk]: https://github.com/Shopify/js-buy-sdk/pulls?q=is%3Apr+author%3Abradgarropy
 [awesome-uses]: https://github.com/wesbos/awesome-uses/pulls?q=is%3Apr+author%3Abradgarropy
