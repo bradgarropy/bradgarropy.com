@@ -1,5 +1,5 @@
 ---
-title: "👨🏼‍🔬 labman"
+title: 👨🏼‍🔬 labman
 slug: labman
 date: 2020-02-10
 topic:

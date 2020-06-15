@@ -1,5 +1,5 @@
 ---
-title: "📂 headless vs. embedded cms livestream"
+title: 📂 headless vs. embedded cms livestream
 slug: headless-vs-embedded-cms-livestream
 date: 2020-04-23
 topic:

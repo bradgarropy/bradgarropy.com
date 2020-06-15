@@ -1,5 +1,5 @@
 ---
-title: "🏆 goals for 2020"
+title: 🏆 goals for 2020
 slug: goals-for-2020
 date: 2020-01-11
 topic:
