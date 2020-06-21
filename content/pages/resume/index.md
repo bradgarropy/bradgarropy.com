@@ -135,6 +135,7 @@ _CMC / Force 10 Switch Interface_
 
 ## Talks
 
+_6/13/2020_ | [Publishing NPM Packages][webinar] with James Quick  
 _4/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick  
 _9/05/2019_ | [React Context + Hooks: A Lightweight Redux Alternative][context-hooks]  
 _7/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsby-netlify]
@@ -261,6 +262,7 @@ _7/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsby
 [prex]: https://magento.com/products/product-recommendations
 [recommendations-js-sdk]: https://npmjs.com/package/@magento/recommendations-js-sdk
 [context-hooks]: https://docs.google.com/presentation/d/1M9-3Vp-GoiFFpos61Ttgaa2oPeqYLSE00DvluinWwZc
+[webinar]: https://youtu.be/xleL7v7yBmM
 [cms]: https://youtu.be/6hp-szqbQwg
 [gatsby-netlify]: https://github.com/bradgarropy/gatsby-plus-netlify
 [dtxc]: https://dailytexascountry.com
