@@ -263,7 +263,7 @@ _7/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsby
 [context-hooks]: https://docs.google.com/presentation/d/1M9-3Vp-GoiFFpos61Ttgaa2oPeqYLSE00DvluinWwZc
 [cms]: https://youtu.be/6hp-szqbQwg
 [gatsby-netlify]: https://github.com/bradgarropy/gatsby-plus-netlify
-[dtxc]: https://dev.dailytexascountry.com
+[dtxc]: https://dailytexascountry.com
 [bg]: https://bradgarropy.com
 [adobe-lunch]: https://adobe-lunch.netlify.app
 [iron-jimmy]: https://ironjimmy.com
