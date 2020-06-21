@@ -5,7 +5,7 @@ const slugify = require("slugify")
 const {format} = require("date-fns")
 
 const [title = "🆕 new post", topic = "coding"] = process.argv.slice(2)
-const slug = slugify(title)
+const slug = slugify(title, {lower: true})
 const date = format(Date.now(), "yyyy-MM-dd")
 let icon
 
