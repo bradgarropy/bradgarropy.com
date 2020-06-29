@@ -1,7 +1,7 @@
 ---
 title: 🤠 daily texas country
 slug: daily-texas-country
-date: 2020-06-27
+date: 2020-06-18
 topic:
     name: coding
     icon: 💻
