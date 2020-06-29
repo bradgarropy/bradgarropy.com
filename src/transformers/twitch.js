@@ -9,7 +9,7 @@ const getHTML = () => {
     const html = `
         <div class="twitch">
             <iframe
-                src="https://player.twitch.tv?${type}=${id}"
+                src="https://player.twitch.tv?${type}=${id}&parent=bradgarropy.com"
                 frameborder="0"
                 scrolling="no"
                 allowfullscreen=""
