@@ -1,27 +1,17 @@
 import React from "react"
-import PropTypes from "prop-types"
 import {graphql} from "gatsby"
+import PropTypes from "prop-types"
+import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Layout from "../components/Layout"
-import Meta from "../components/SEO/Meta"
-import Facebook from "../components/SEO/Facebook"
-import Twitter from "../components/SEO/Twitter"
 import Post from "../components/Post/Post"
 
 const PostTemplate = ({data}) => {
-    const meta = data.site.siteMetadata
     const post = data.markdownRemark
     const {frontmatter} = post
 
     return (
         <Layout>
-            <Meta title={frontmatter.title} />
-            <Facebook
-                url={`${meta.siteUrl}/blog/${frontmatter.slug}`}
-                type="article"
-                title={frontmatter.title}
-                description=""
-            />
-            <Twitter title={frontmatter.title} description="" />
+            <SEO title={frontmatter.title} description="" />
 
             <Post post={post} />
         </Layout>
@@ -34,11 +24,6 @@ PostTemplate.propTypes = {
 
 export const postTemplateQuery = graphql`
     query($slug: String!) {
-        site {
-            siteMetadata {
-                siteUrl
-            }
-        }
         markdownRemark(frontmatter: {slug: {eq: $slug}}) {
             html
             frontmatter {

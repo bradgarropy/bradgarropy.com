@@ -1,10 +1,8 @@
 import React from "react"
-import PropTypes from "prop-types"
 import {graphql} from "gatsby"
+import PropTypes from "prop-types"
+import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Layout from "../components/Layout"
-import Meta from "../components/SEO/Meta"
-import Facebook from "../components/SEO/Facebook"
-import Twitter from "../components/SEO/Twitter"
 import PostList from "../components/PostList"
 
 const BlogPage = ({data}) => {
@@ -12,9 +10,7 @@ const BlogPage = ({data}) => {
 
     return (
         <Layout>
-            <Meta title="blog" />
-            <Facebook title="✍🏼 blog" description="" />
-            <Twitter title="✍🏼 blog" description="" />
+            <SEO title="✍🏼 blog" description="" />
 
             <PostList posts={posts} />
         </Layout>

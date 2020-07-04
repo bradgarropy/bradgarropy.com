@@ -37,15 +37,17 @@ As for accessories, I love clicky mechanical keyboards and large palm grip mice.
 
 ### 📷 streaming
 
-I'm getting more serious about [streaming][streams] my coding sessions, and now I've got a pretty solid setup going.
+I'm getting more serious about [streaming][stream] my coding sessions, and now I've got a pretty solid setup going.
 
-[Shure SM58 Microphone][sm58]  
-[Focusrite Scarlett Solo Audio Interface][scarlett-solo]  
-[Rode PSA1 Boom Arm][psa1]  
+[Elgato Key Light][key-light]  
 [Sony a6000 Camera][a6000]  
-[Manfrotto Tripod][tripod]  
 [Elgato Cam Link 4K][camlink]  
-[Elgato Stream Deck Mini][stream-deck]
+[Elgato Multi Mount][multi-mount]  
+[Elgato Stream Deck Mini][stream-deck]  
+[dbx 286s][dbx]  
+[Rode PSA1 Boom Arm][psa1]  
+[Shure SM58 Microphone][sm58]  
+[Focusrite Scarlett Solo Audio Interface][scarlett-solo]
 
 ## 🏢 adobe office
 
@@ -66,7 +68,7 @@ Regardless of what computer I'm on, I use these applications. As you may guess, 
 [Google Chrome][chrome]  
 [Figma][figma]  
 [OBS Studio][obs]  
-[hub][hub] - integrated github cli  
+[gh][gh] - github cli  
 [carbon][carbon] - fancy code screenshots
 
 ## 🎧 electronics
@@ -74,6 +76,7 @@ Regardless of what computer I'm on, I use these applications. As you may guess, 
 These pieces of tech are always within reach.
 
 [Google Pixel 2][pixel]  
+[Google Nest Mini][google-nest]  
 [Google Pixel Buds][pixel-buds]  
 [Fossil Explorist HR Smartwatch][explorist]  
 [Sony WH-1000XM3 Headphones][wh-1000mx3]
@@ -97,14 +100,17 @@ These pieces of tech are always within reach.
 [propus]: https://amzn.to/2whwgoS
 [u2515h]: https://amzn.to/2MbuEYw
 [arms]: https://amzn.to/2Szyrym
-[streams]: https://bradgarropy.com/streams
+[google-nest]: https://store.google.com/product/google_nest_mini
+[stream]: https://bradgarropy.com/stream
 [sm58]: https://amzn.to/2W2z5cD
 [scarlett-solo]: https://amzn.to/2MbAcSW
 [psa1]: https://amzn.to/2Wgz8kH
 [a6000]: https://amzn.to/2LF4NHn
-[tripod]: https://amzn.to/2JOOplp
 [camlink]: https://amzn.to/2ybpXEc
 [stream-deck]: https://www.amazon.com/Elgato-Stream-Deck-Mini-customizable/dp/B07DYRS1WH
+[multi-mount]: https://www.elgato.com/en/gaming/multi-mount
+[key-light]: https://www.elgato.com/en/gaming/key-light
+[dbx]: https://www.amazon.com/dbx-286s-Microphone-Channel-Processor/dp/B004LWH79A
 [adobe-office]: images/adobe-office.jpg
 [macbook]: https://amzn.to/2JZlZFQ
 [magic-keyboard]: https://amzn.to/2M5Ge7y
@@ -114,7 +120,7 @@ These pieces of tech are always within reach.
 [chrome]: https://www.google.com/chrome
 [figma]: https://www.figma.com
 [obs]: https://obsproject.com
-[hub]: https://hub.github.com
+[gh]: https://cli.github.com
 [carbon]: https://carbon.now.sh
 [pixel]: https://amzn.to/2EwHsm6
 [pixel-buds]: https://store.google.com/product/google_pixel_buds

@@ -5,8 +5,9 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {
     faInstagram,
     faGithub,
-    faTwitterSquare,
+    faTwitter,
     faYoutube,
+    faTwitch,
 } from "@fortawesome/free-brands-svg-icons"
 
 const FontAwesomeIconWrapper = styled(FontAwesomeIcon)`
@@ -36,12 +37,17 @@ const SocialLink = ({platform}) => {
 
         case "twitter":
             label = "Twitter"
-            icon = faTwitterSquare
+            icon = faTwitter
             break
 
         case "youtube":
             label = "YouTube"
             icon = faYoutube
+            break
+
+        case "twitch":
+            label = "Twitch"
+            icon = faTwitch
             break
     }
 
@@ -58,7 +64,13 @@ const SocialLink = ({platform}) => {
 }
 
 SocialLink.propTypes = {
-    platform: PropTypes.oneOf(["instagram", "github", "twitter", "youtube"]),
+    platform: PropTypes.oneOf([
+        "instagram",
+        "github",
+        "twitter",
+        "youtube",
+        "twitch",
+    ]),
 }
 
 export default SocialLink

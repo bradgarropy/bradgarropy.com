@@ -5,26 +5,23 @@ import styled from "styled-components"
 
 const HeroWrapper = styled.div`
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     align-items: center;
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 const HeroImage = styled(Img)`
-    width: 25rem;
+    width: 100%;
+    max-width: 25rem;
 `
 
 const HeroText = styled.div`
     display: grid;
     font-size: 1.75rem;
-
-    @media (max-width: 500px) {
-        font-size: 1.25rem;
-    }
-
-    @media (max-width: 400px) {
-        font-size: 1rem;
-    }
 `
 
 const Hero = () => {
@@ -43,7 +40,7 @@ const Hero = () => {
 
     return (
         <HeroWrapper>
-            <HeroImage fluid={data.file.childImageSharp.fluid}/>
+            <HeroImage fluid={data.file.childImageSharp.fluid} />
 
             <HeroText>
                 <span>i use code</span>

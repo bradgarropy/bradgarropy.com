@@ -1,5 +1,5 @@
 ---
-title: "🥪 adobe lunch"
+title: 🥪 adobe lunch
 slug: adobe-lunch
 date: 2020-01-14
 topic:

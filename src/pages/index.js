@@ -1,10 +1,8 @@
 import React from "react"
 import {graphql, useStaticQuery} from "gatsby"
+import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
-import Meta from "../components/SEO/Meta"
-import Twitter from "../components/SEO/Twitter"
-import Facebook from "../components/SEO/Facebook"
 
 const IndexPage = () => {
     const data = useStaticQuery(graphql`
@@ -21,9 +19,7 @@ const IndexPage = () => {
 
     return (
         <Layout>
-            <Meta title="bradgarropy" />
-            <Facebook title={description} description="" />
-            <Twitter title={description} description="" />
+            <SEO title={description} description="" />
 
             <Hero />
         </Layout>

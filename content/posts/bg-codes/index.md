@@ -1,5 +1,5 @@
 ---
-title: "👨🏼‍💻 bg codes"
+title: 👨🏼‍💻 bg codes
 slug: bg-codes
 date: 2020-05-04
 topic:
