@@ -7,8 +7,6 @@ topic:
     icon: 💻
 ---
 
-## Hey, I'm testing Gatsby incremental builds again, and again.
-
 After doing a detailed comparison of [youtube vs twitch][versus] for streaming, I decided that [Twitch][twitch] was the right place for a developer like myself to set up shop. So here it is, my shiny new [Twitch channel][channel]!
 
 https://twitch.tv/bradgarropy
