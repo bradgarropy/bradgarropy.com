@@ -1,9 +1,9 @@
 const generators = plop => {
     plop.setDefaultInclude({generators: true})
 
+    plop.load("plop-helper-date")
+    plop.load("plop-helper-slugify")
     plop.load("plop-helper-bradgarropy")
-    plop.load("@bradgarropy/plop-pack-helpers")
-    plop.load("@bradgarropy/plop-pack-actions")
 
     plop.setGenerator("post", {
         prompts: [
