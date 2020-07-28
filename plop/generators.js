@@ -1,13 +1,9 @@
 const generators = plop => {
+    plop.setDefaultInclude({generators: true})
+
+    plop.load("plop-helper-bradgarropy")
     plop.load("@bradgarropy/plop-pack-helpers")
     plop.load("@bradgarropy/plop-pack-actions")
-
-    plop.setDefaultInclude({
-        actionTypes: false,
-        generators: true,
-        helpers: false,
-        partials: false,
-    })
 
     plop.setGenerator("post", {
         prompts: [
@@ -25,7 +21,7 @@ const generators = plop => {
         actions: [
             {
                 type: "add",
-                path: "content/posts/{{slug title}}/index.md",
+                path: "content/posts/{{slugify title}}/index.md",
                 templateFile: "templates/frontmatter.hbs",
             },
         ],
