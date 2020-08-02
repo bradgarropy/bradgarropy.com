@@ -22,5 +22,10 @@
     to = "https://twitch.tv/bradgarropy"
     status = 301
 
+[[redirects]]
+    from = "/codetunes"
+    to = "https://youtube.com/playlist?list=PL6Mu1AMmTL-vlrGehLTnA_MCjI4Bjx92r"
+    status = 301
+
 [[plugins]]
     package = "netlify-plugin-gatsby-cache"
