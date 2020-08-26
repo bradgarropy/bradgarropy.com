@@ -8,6 +8,7 @@ import {
     faTwitter,
     faYoutube,
     faTwitch,
+    faDiscord,
 } from "@fortawesome/free-brands-svg-icons"
 
 const FontAwesomeIconWrapper = styled(FontAwesomeIcon)`
@@ -21,39 +22,51 @@ const FontAwesomeIconWrapper = styled(FontAwesomeIcon)`
 `
 
 const SocialLink = ({platform}) => {
-    let label
+    let url
     let icon
+    let label
 
     switch (platform) {
         case "instagram":
-            label = "Instagram"
+            url = "https://instagram.com/bradgarropy"
             icon = faInstagram
+            label = "Instagram"
             break
 
         case "github":
-            label = "GitHub"
+            url = "https://github.com/bradgarropy"
             icon = faGithub
+            label = "GitHub"
             break
 
         case "twitter":
-            label = "Twitter"
+            url = "https://twitter.com/bradgarropy"
             icon = faTwitter
+            label = "Twitter"
             break
 
         case "youtube":
-            label = "YouTube"
+            url = "https://youtube.com/bradgarropy"
             icon = faYoutube
+            label = "YouTube"
             break
 
         case "twitch":
-            label = "Twitch"
+            url = "https://twitch.tv/bradgarropy"
             icon = faTwitch
+            label = "Twitch"
+            break
+
+        case "discord":
+            url = "https://bradgarropy.com/discord"
+            icon = faDiscord
+            label = "Discord"
             break
     }
 
     return (
         <a
-            href={`https://${platform}.com/bradgarropy`}
+            href={url}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
@@ -70,6 +83,7 @@ SocialLink.propTypes = {
         "twitter",
         "youtube",
         "twitch",
+        "discord",
     ]),
 }
 

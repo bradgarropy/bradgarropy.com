@@ -18,9 +18,9 @@ const Footer = () => {
             <SocialLink platform="youtube" />
             <SocialLink platform="twitter" />
             <SocialLink platform="instagram" />
+            <SocialLink platform="discord" />
         </FooterWrapper>
     )
 }
 
-// export
 export default Footer
