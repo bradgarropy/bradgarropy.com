@@ -27,5 +27,10 @@
     to = "https://youtube.com/playlist?list=PL6Mu1AMmTL-vlrGehLTnA_MCjI4Bjx92r"
     status = 301
 
+[[redirects]]
+    from = "/discord"
+    to = "https://discord.gg/SH9htJX"
+    status = 301
+
 [[plugins]]
     package = "netlify-plugin-gatsby-cache"
