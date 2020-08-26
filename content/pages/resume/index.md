@@ -21,7 +21,7 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 | --------------------- | ------------------------------------------------------------------------------------ |
 | _JavaScript (ES2020)_ | React, Gatsby, Next.js, Node.js, TypeScript, Svelte, GraphQL, Express, Jest, Cypress |
 | _Python 2.7_          | Paramiko, Beautiful Soup, JUnit, Selenium                                            |
-| _Others_              | HTML5, CSS3, Tailwind CSS, PWA, Bash, Groovy, JSON, Markdown, YAML, TOML, C          |
+| _Others_              | HTML5, CSS3, Tailwind CSS, PWA, Stripe, Bash, Groovy, JSON, Markdown, YAML, TOML, C  |
 
 ### Tools
 
@@ -31,7 +31,7 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 | _Continuous Integration_ | Jenkins, Travis CI, GitHub Actions                 |
 | _Cloud_                  | Amazon Web Services Lambda, Google Cloud Functions |
 | _Hosting_                | Netlify, Heroku, Github Pages, Firebase            |
-| _Databases_              | MongoDB, MySQL, Firestore                          |
+| _Databases_              | MongoDB, MySQL, Firestore, FaunaDB                 |
 | _Infrastructure_         | Puppet, Artifactory, vSphere                       |
 | _Monitoring_             | New Relic, Pager Duty                              |
 | _Development Lifecycle_  | JIRA, Rally, Code Collaborator                     |
@@ -135,6 +135,7 @@ _CMC / Force 10 Switch Interface_
 
 ## Talks
 
+_8/14/2020_ | [Working on Side Projects][side-projects] with James Quick  
 _6/24/2020_ | [Learning & Unlearning How To Code][whiskey-wednesday] with Scott Spence & Marc Backes  
 _6/13/2020_ | [Publishing NPM Packages][webinar] with James Quick  
 _4/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick  
@@ -263,6 +264,7 @@ _7/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsby
 [prex]: https://magento.com/products/product-recommendations
 [recommendations-js-sdk]: https://npmjs.com/package/@magento/recommendations-js-sdk
 [context-hooks]: https://docs.google.com/presentation/d/1M9-3Vp-GoiFFpos61Ttgaa2oPeqYLSE00DvluinWwZc
+[side-projects]: https://youtu.be/iIxk8ebUC_g
 [whiskey-wednesday]: https://youtu.be/5eJ2a9rn54U
 [webinar]: https://youtu.be/xleL7v7yBmM
 [cms]: https://youtu.be/6hp-szqbQwg
