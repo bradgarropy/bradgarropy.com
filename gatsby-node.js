@@ -22,43 +22,37 @@ const createTopic = (topic, createPage) => {
     createPage(options)
 }
 
-const createPages = ({graphql, actions}) => {
+const createPages = async ({graphql, actions}) => {
     const {createPage} = actions
 
-    const promise = new Promise(async resolve => {
-        const {data} = await graphql(`
-            {
-                posts: allMarkdownRemark(
-                    filter: {fileAbsolutePath: {regex: "/content/posts/"}}
-                ) {
-                    edges {
-                        node {
-                            frontmatter {
-                                slug
-                                topic {
-                                    name
-                                    icon
-                                }
+    const {data} = await graphql(`
+        {
+            posts: allMarkdownRemark(
+                filter: {fileAbsolutePath: {regex: "/content/posts/"}}
+            ) {
+                edges {
+                    node {
+                        frontmatter {
+                            slug
+                            topic {
+                                name
+                                icon
                             }
                         }
                     }
                 }
             }
-        `)
+        }
+    `)
 
-        const posts = data.posts.edges.map(edge => edge.node)
+    const posts = data.posts.edges.map(edge => edge.node)
 
-        posts.forEach(post => {
-            const {slug, topic} = post.frontmatter
+    posts.forEach(post => {
+        const {slug, topic} = post.frontmatter
 
-            createPost(slug, createPage)
-            createTopic(topic, createPage)
-        })
-
-        resolve()
+        createPost(slug, createPage)
+        createTopic(topic, createPage)
     })
-
-    return promise
 }
 
 module.exports = {
