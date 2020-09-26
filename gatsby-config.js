@@ -53,7 +53,14 @@ const config = {
             resolve: "gatsby-source-filesystem",
             options: {
                 name: "pages",
-                path: "content",
+                path: "content/pages",
+            },
+        },
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                name: "now",
+                path: "content/now",
             },
         },
         {
