@@ -1,6 +1,8 @@
 const path = require("path")
 
-const createPost = (slug, createPage) => {
+const createPost = (post, createPage) => {
+    const {slug} = post.frontmatter
+
     const options = {
         path: `/blog/${slug}`,
         component: path.resolve("src/templates/post.js"),
@@ -30,14 +32,12 @@ const createPages = async ({graphql, actions}) => {
             posts: allMarkdownRemark(
                 filter: {fileAbsolutePath: {regex: "/content/posts/"}}
             ) {
-                edges {
-                    node {
-                        frontmatter {
-                            slug
-                            topic {
-                                name
-                                icon
-                            }
+                nodes {
+                    frontmatter {
+                        slug
+                        topic {
+                            name
+                            icon
                         }
                     }
                 }
@@ -45,14 +45,20 @@ const createPages = async ({graphql, actions}) => {
         }
     `)
 
-    const posts = data.posts.edges.map(edge => edge.node)
+    // create posts
+    data.posts.nodes
+        .map(node => node)
+        .forEach(post => createPost(post, createPage))
 
-    posts.forEach(post => {
-        const {slug, topic} = post.frontmatter
-
-        createPost(slug, createPage)
-        createTopic(topic, createPage)
-    })
+    // create topics
+    data.posts.nodes
+        .map(node => node.frontmatter.topic)
+        .filter((topic, index, array) => (
+            array.findIndex(t => (
+                t.name === topic.name && t.icon === topic.icon
+            )) === index
+        ))
+        .forEach(topic => createTopic(topic, createPage))
 }
 
 module.exports = {
