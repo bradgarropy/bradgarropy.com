@@ -27,7 +27,7 @@ const createTopic = (topic, createPage) => {
 const createPages = async ({graphql, actions}) => {
     const {createPage} = actions
 
-    const {data} = await graphql(`
+    const {data: postsData} = await graphql(`
         {
             posts: allMarkdownRemark(
                 filter: {fileAbsolutePath: {regex: "/content/posts/"}}
@@ -46,18 +46,19 @@ const createPages = async ({graphql, actions}) => {
     `)
 
     // create posts
-    data.posts.nodes
+    postsData.posts.nodes
         .map(node => node)
         .forEach(post => createPost(post, createPage))
 
     // create topics
-    data.posts.nodes
+    postsData.posts.nodes
         .map(node => node.frontmatter.topic)
-        .filter((topic, index, array) => (
-            array.findIndex(t => (
-                t.name === topic.name && t.icon === topic.icon
-            )) === index
-        ))
+        .filter(
+            (topic, index, array) =>
+                array.findIndex(
+                    t => t.name === topic.name && t.icon === topic.icon,
+                ) === index,
+        )
         .forEach(topic => createTopic(topic, createPage))
 }
 

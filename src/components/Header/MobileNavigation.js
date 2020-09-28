@@ -49,10 +49,11 @@ const MobileNavigation = () => {
 
     return open ? (
         <MobileNavigationWrapper>
-            <CloseIcon icon={faTimes} onClick={onClick}/>
+            <CloseIcon icon={faTimes} onClick={onClick} />
 
             <MobileNavigationLinks>
                 <MobileNavigationLink to="/blog">blog</MobileNavigationLink>
+                <MobileNavigationLink to="/now">now</MobileNavigationLink>
                 <MobileNavigationLink to="/uses">uses</MobileNavigationLink>
                 <MobileNavigationLink to="/hire-me">
                     hire me
@@ -63,7 +64,7 @@ const MobileNavigation = () => {
             </MobileNavigationLinks>
         </MobileNavigationWrapper>
     ) : (
-        <Hamburger/>
+        <Hamburger />
     )
 }
 

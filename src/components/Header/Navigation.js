@@ -7,7 +7,7 @@ const NavigationWrapper = styled.nav`
     grid-auto-flow: column;
     column-gap: 1.25rem;
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         display: none;
     }
 `
@@ -24,6 +24,8 @@ const Navigation = () => {
     return (
         <NavigationWrapper>
             <NavigationLink to="/blog">blog</NavigationLink>
+            <span>|</span>
+            <NavigationLink to="/now">now</NavigationLink>
             <span>|</span>
             <NavigationLink to="/uses">uses</NavigationLink>
             <span>|</span>
