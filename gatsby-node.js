@@ -1,7 +1,8 @@
 const path = require("path")
 
 const createPost = (post, createPage) => {
-    const {slug} = post.frontmatter
+    const {date, slug} = post.frontmatter
+    console.log(date)
 
     const options = {
         path: `/blog/${slug}`,
@@ -26,13 +27,23 @@ const createTopic = (topic, createPage) => {
 
 const createNow = (now, createPage) => {
     const {date} = now.node.frontmatter
-    const newer = now.next && now.next.frontmatter.date
-    const older = now.previous && now.previous.frontmatter.date
+    const older = now.next && now.next.frontmatter.date
+    const newer = now.previous && now.previous.frontmatter.date
+
+    console.log(
+        `> ${now.previous && now.previous.frontmatter.date} == ${date} == ${
+            now.next && now.next.frontmatter.date
+        }`,
+    )
 
     const options = {
         path: `/now/${date}`,
         component: path.resolve("src/templates/now.js"),
-        context: {date, newer, older},
+        context: {
+            date: new Date(date).toISOString(),
+            newer,
+            older,
+        },
     }
 
     createPage(options)
@@ -45,9 +56,11 @@ const createPages = async ({graphql, actions}) => {
         {
             posts: allMarkdownRemark(
                 filter: {fileAbsolutePath: {regex: "/content/posts/"}}
+                sort: {fields: frontmatter___date, order: DESC}
             ) {
                 nodes {
                     frontmatter {
+                        date
                         slug
                         topic {
                             name
