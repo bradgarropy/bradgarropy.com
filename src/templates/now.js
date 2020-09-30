@@ -6,9 +6,6 @@ import Now from "../components/Now"
 import Layout from "../components/Layout"
 
 const NowTemplate = ({data, pageContext}) => {
-    console.log(data)
-    console.log(pageContext)
-
     const {now} = data
     const {newer, older} = pageContext
 
@@ -30,7 +27,7 @@ export const nowTemplateQuery = graphql`
         now: markdownRemark(frontmatter: {date: {eq: $date}}) {
             html
             frontmatter {
-                date(formatString: "YYYY-MM-DD")
+                date(formatString: "MMMM D, YYYY")
             }
         }
     }

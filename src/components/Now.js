@@ -47,7 +47,7 @@ const Now = ({now, newer, older}) => {
 
                 <div className="pagination">
                     <LinkButton to={`/now/${newer}`} gatsby disabled={!newer}>
-                        newer
+                        👈🏼 newer
                     </LinkButton>
 
                     <LinkButton
@@ -56,7 +56,7 @@ const Now = ({now, newer, older}) => {
                         reverse
                         disabled={!older}
                     >
-                        older
+                        older 👉🏼
                     </LinkButton>
                 </div>
 
