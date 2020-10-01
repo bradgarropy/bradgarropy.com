@@ -26,13 +26,17 @@ const createTopic = (topic, createPage) => {
 
 const createNow = (now, createPage) => {
     const {date} = now.node.frontmatter
-    const newer = now.next && now.next.frontmatter.date
-    const older = now.previous && now.previous.frontmatter.date
+    const older = now.next && now.next.frontmatter.date
+    const newer = now.previous && now.previous.frontmatter.date
 
     const options = {
         path: `/now/${date}`,
         component: path.resolve("src/templates/now.js"),
-        context: {date, newer, older},
+        context: {
+            date: new Date(date).toISOString(),
+            newer,
+            older,
+        },
     }
 
     createPage(options)
@@ -41,10 +45,11 @@ const createNow = (now, createPage) => {
 const createPages = async ({graphql, actions}) => {
     const {createPage} = actions
 
-    const {data: postsData} = await graphql(`
+    const {data} = await graphql(`
         {
             posts: allMarkdownRemark(
                 filter: {fileAbsolutePath: {regex: "/content/posts/"}}
+                sort: {fields: frontmatter___date, order: DESC}
             ) {
                 nodes {
                     frontmatter {
@@ -56,27 +61,6 @@ const createPages = async ({graphql, actions}) => {
                     }
                 }
             }
-        }
-    `)
-
-    // create posts
-    postsData.posts.nodes
-        .map(node => node)
-        .forEach(post => createPost(post, createPage))
-
-    // create topics
-    postsData.posts.nodes
-        .map(node => node.frontmatter.topic)
-        .filter(
-            (topic, index, array) =>
-                array.findIndex(
-                    t => t.name === topic.name && t.icon === topic.icon,
-                ) === index,
-        )
-        .forEach(topic => createTopic(topic, createPage))
-
-    const {data: nowData} = await graphql(`
-        {
             nows: allMarkdownRemark(
                 filter: {fileAbsolutePath: {regex: "/content/now/"}}
                 sort: {fields: frontmatter___date, order: DESC}
@@ -102,8 +86,24 @@ const createPages = async ({graphql, actions}) => {
         }
     `)
 
+    const {posts, nows} = data
+
+    // create posts
+    posts.nodes.map(node => node).forEach(post => createPost(post, createPage))
+
+    // create topics
+    posts.nodes
+        .map(node => node.frontmatter.topic)
+        .filter(
+            (topic, index, array) =>
+                array.findIndex(
+                    t => t.name === topic.name && t.icon === topic.icon,
+                ) === index,
+        )
+        .forEach(topic => createTopic(topic, createPage))
+
     // create nows
-    nowData.nows.edges.forEach(now => createNow(now, createPage))
+    nows.edges.forEach(now => createNow(now, createPage))
 }
 
 module.exports = {

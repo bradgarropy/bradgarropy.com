@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {graphql, useStaticQuery} from "gatsby"
-import Button from "../../styles/Button"
+import LinkButton from "../LinkButton"
 
 const PostComments = ({slug}) => {
     const data = useStaticQuery(graphql`
@@ -19,12 +19,12 @@ const PostComments = ({slug}) => {
     const discuss = `https://twitter.com/search?q=${query}`
 
     return (
-        <Button href={discuss} target="_blank" rel="noopener noreferrer">
+        <LinkButton to={discuss}>
             <span role="img" aria-label="discuss on twitter">
                 💬
             </span>
             <span> discuss on twitter</span>
-        </Button>
+        </LinkButton>
     )
 }
 

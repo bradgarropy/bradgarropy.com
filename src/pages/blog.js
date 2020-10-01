@@ -24,8 +24,8 @@ BlogPage.propTypes = {
 export const blogPageQuery = graphql`
     {
         posts: allMarkdownRemark(
-            sort: {fields: frontmatter___date, order: DESC}
             filter: {fileAbsolutePath: {regex: "/content/posts/"}}
+            sort: {fields: frontmatter___date, order: DESC}
         ) {
             edges {
                 node {

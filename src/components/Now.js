@@ -1,17 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import {Link} from "gatsby"
+import LinkButton from "./LinkButton"
+import {link} from "../styles/partials"
 
 const StyledNow = styled.div`
-    a:not(.anchor) {
-        color: rgba(0, 0, 0, 0.8);
-        box-shadow: inset 0 -2px ${({theme}) => theme.colors.primary};
-
-        &:hover {
-            box-shadow: inset 0 -25px 0 ${({theme}) => theme.colors.primary};
-        }
-    }
+    ${link}
 
     .headline {
         display: flex;
@@ -29,28 +23,6 @@ const StyledNow = styled.div`
         grid-template-columns: repeat(2, auto);
         justify-content: space-between;
         grid-template-areas: "next previous";
-
-        .disabled {
-            /* TODO: remove once multiple nows exist */
-            display: none;
-
-            text-decoration: line-through solid
-                ${({theme}) => theme.colors.black};
-            box-shadow: none;
-            opacity: 40%;
-
-            &:hover {
-                box-shadow: none;
-            }
-        }
-
-        .newer {
-            justify-self: start;
-        }
-
-        .older {
-            justify-self: end;
-        }
     }
 
     .inspiration {
@@ -74,27 +46,37 @@ const Now = ({now, newer, older}) => {
                 <div dangerouslySetInnerHTML={{__html: html}} />
 
                 <div className="pagination">
-                    {newer ? (
-                        <Link to={`/now/${newer}`} className="newer">
-                            newer
-                        </Link>
-                    ) : (
-                        <span className="newer disabled">newer</span>
-                    )}
+                    <LinkButton to={`/now/${newer}`} gatsby disabled={!newer}>
+                        👈🏼 newer
+                    </LinkButton>
 
-                    {older ? (
-                        <Link to={`/now/${older}`} className="older">
-                            older
-                        </Link>
-                    ) : (
-                        <span className="older disabled">older</span>
-                    )}
+                    <LinkButton
+                        to={`/now/${older}`}
+                        gatsby
+                        reverse
+                        disabled={!older}
+                    >
+                        older 👉🏼
+                    </LinkButton>
                 </div>
 
                 <p className="inspiration">
                     inspired by{" "}
-                    <a href="https://twitter.com/sivers">derek sivers</a> and{" "}
-                    <a href="https://nownownow.com/about">nownownow</a>
+                    <a
+                        href="https://twitter.com/sivers"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        derek sivers
+                    </a>{" "}
+                    and{" "}
+                    <a
+                        href="https://nownownow.com/about"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        nownownow
+                    </a>
                 </p>
             </StyledNow>
         </>
