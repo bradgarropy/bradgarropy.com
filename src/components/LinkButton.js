@@ -25,12 +25,12 @@ const button = css`
 
     &.disabled {
         cursor: default;
-        border: 2px solid #dddddd;
-        box-shadow: 3px 3px 0 #dddddd !important;
+        border: 2px solid ${({theme}) => theme.colors.grey};
+        box-shadow: 3px 3px 0 ${({theme}) => theme.colors.grey} !important;
     }
 
     &.disabled.reverse {
-        box-shadow: -3px 3px 0 #dddddd !important;
+        box-shadow: -3px 3px 0 ${({theme}) => theme.colors.grey} !important;
     }
 `
 
