@@ -13,7 +13,6 @@ const StyledNow = styled.div`
         justify-content: space-between;
 
         .date {
-            font-style: italic;
             text-transform: lowercase;
         }
     }

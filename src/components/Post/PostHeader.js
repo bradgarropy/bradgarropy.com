@@ -6,8 +6,8 @@ import PostTitle from "./PostTitle"
 const PostHeader = ({date, topic, title, slug}) => {
     return (
         <section>
-            <PostMeta date={date} topic={topic}/>
-            <PostTitle title={title} slug={slug}/>
+            <PostMeta date={date} topic={topic} />
+            <PostTitle title={title} slug={slug} />
         </section>
     )
 }

@@ -6,6 +6,7 @@ import styled from "styled-components"
 const PostMetaWrapper = styled.div`
     p {
         margin: 0rem;
+        text-transform: lowercase;
     }
 
     a {
