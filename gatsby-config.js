@@ -59,6 +59,13 @@ const config = {
         {
             resolve: "gatsby-source-filesystem",
             options: {
+                name: "now",
+                path: "content/now",
+            },
+        },
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
                 name: "images",
                 path: "static",
             },
