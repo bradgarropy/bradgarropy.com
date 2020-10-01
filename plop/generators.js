@@ -22,7 +22,18 @@ const generators = plop => {
             {
                 type: "add",
                 path: "content/posts/{{slugify title}}/index.md",
-                templateFile: "templates/frontmatter.hbs",
+                templateFile: "templates/post.hbs",
+            },
+        ],
+    })
+
+    plop.setGenerator("now", {
+        prompts: [],
+        actions: [
+            {
+                type: "add",
+                path: "content/now/{{date}}.md",
+                templateFile: "templates/now.hbs",
             },
         ],
     })
