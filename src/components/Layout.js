@@ -25,12 +25,12 @@ const Layout = ({children}) => {
     return (
         <ThemeProvider theme={theme}>
             <>
-                <GlobalStyles/>
+                <GlobalStyles />
 
                 <Container>
-                    <Header/>
+                    <Header />
                     <Content>{children}</Content>
-                    <Footer/>
+                    <Footer />
                 </Container>
             </>
         </ThemeProvider>
