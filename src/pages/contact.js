@@ -6,8 +6,13 @@ import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Layout from "../components/Layout"
 import {link} from "../styles/partials"
 
-const StyledContact = styled.div`
+const Contact = styled.div`
     ${link}
+
+    align-self: center;
+    justify-self: center;
+
+    font-size: 1rem;
 
     table {
         font-size: 1.5rem;
@@ -26,7 +31,7 @@ const ContactPage = ({data}) => {
         <Layout>
             <SEO title="👋🏼 say hi" description="" />
 
-            <StyledContact dangerouslySetInnerHTML={{__html: html}} />
+            <Contact dangerouslySetInnerHTML={{__html: html}} />
         </Layout>
     )
 }

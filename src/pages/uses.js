@@ -6,14 +6,8 @@ import SEO from "@bradgarropy/gatsby-plugin-seo"
 import {link} from "../styles/partials"
 import Layout from "../components/Layout"
 
-const PostBodyWrapper = styled.section`
-    margin: 2.25rem 0rem;
-
+const Uses = styled.div`
     ${link}
-
-    .twitter-tweet {
-        margin: 0 auto;
-    }
 `
 
 const UsesPage = ({data}) => {
@@ -23,11 +17,7 @@ const UsesPage = ({data}) => {
         <Layout>
             <SEO title="💠 uses" description="" />
 
-            <PostBodyWrapper
-                dangerouslySetInnerHTML={{
-                    __html: html,
-                }}
-            />
+            <Uses dangerouslySetInnerHTML={{__html: html}} />
         </Layout>
     )
 }

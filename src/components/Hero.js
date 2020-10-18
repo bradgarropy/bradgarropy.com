@@ -4,6 +4,8 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 const HeroWrapper = styled.div`
+    align-self: center;
+    justify-self: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;

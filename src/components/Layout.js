@@ -16,6 +16,8 @@ const Container = styled.div`
 `
 
 const Content = styled.main`
+    width: 100%;
+    display: grid;
     max-width: 700px;
     justify-self: center;
     padding: 0rem 1.25rem;

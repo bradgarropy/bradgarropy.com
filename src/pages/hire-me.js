@@ -8,6 +8,9 @@ import Layout from "../components/Layout"
 
 const HireMe = styled.div`
     ${link}
+
+    align-self: center;
+    justify-self: center;
 `
 
 const HireMePage = ({data}) => {
