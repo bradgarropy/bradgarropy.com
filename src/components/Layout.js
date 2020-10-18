@@ -17,7 +17,7 @@ const Container = styled.div`
 
 const Content = styled.main`
     max-width: 700px;
-    margin: auto;
+    justify-self: center;
     padding: 0rem 1.25rem;
 `
 

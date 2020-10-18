@@ -3,28 +3,25 @@ import React, {useState} from "react"
 import styled from "styled-components"
 
 const StyledSearch = styled.input`
+    width: 75%;
     margin-block-end: 2.25rem;
     padding: 1rem 2rem;
     font-size: 1rem;
     font-family: "Open Sans", sans-serif;
     border: 3px solid ${({theme}) => theme.colors.black};
     border-radius: 0.3rem;
-    width: 75%;
+    box-shadow: 3px 3px 0 ${({theme}) => theme.colors.black};
+    color: ${({theme}) => theme.colors.black};
+    transition: all 300ms;
+
+    ::placeholder {
+        color: ${({theme}) => theme.colors.darkGrey};
+    }
 
     :focus {
         outline: none;
-        border: 3px solid ${({theme}) => theme.colors.primary};
+        border-color: ${({theme}) => theme.colors.primary};
     }
-
-    /* color: ${({theme}) => theme.colors.black};
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.3rem;
-    transition: all 300ms;
-    border: 2px solid ${({theme}) => theme.colors.black};
-    box-shadow: 3px 3px 0 ${({theme}) => theme.colors.black}; */
-
-    /* border: 2px solid ${({theme}) => theme.colors.black};
-    box-shadow: 0 5px 0 ${({theme}) => theme.colors.black}; */
 `
 
 const Search = ({onSearch = () => {}}) => {
