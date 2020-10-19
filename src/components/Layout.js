@@ -16,6 +16,7 @@ const Container = styled.div`
 `
 
 const Content = styled.main`
+    box-sizing: border-box;
     width: 100%;
     display: grid;
     max-width: 700px;
