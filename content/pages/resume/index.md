@@ -158,6 +158,13 @@ _7/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsby
 -   Blog with embedded CMS.
 -   Developed with Gatsby and React, hosted on Netlify.
 
+[⏱ murphy][murphy]
+
+-   Specialized CrossFit Murph timer.
+-   Scales and saves workouts.
+-   Built with Svelte, Tailwind CSS, FaunaDB, and Netlify.
+-   Released on the [Google Play Store][murphy-app].
+
 [🥪 adobe lunch][adobe-lunch]
 
 -   Lunch spot picker for my coworkers.
@@ -271,6 +278,8 @@ _7/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsby
 [gatsby-netlify]: https://github.com/bradgarropy/gatsby-plus-netlify
 [dtxc]: https://dailytexascountry.com
 [bg]: https://bradgarropy.com
+[murphy]: https://murphy.bradgarropy.com
+[murphy-app]: https://play.google.com/store/apps/details?id=com.bradgarropy.murphy.twa
 [adobe-lunch]: https://adobe-lunch.netlify.app
 [iron-jimmy]: https://ironjimmy.com
 [photogarropy]: https://photogarropy.com
