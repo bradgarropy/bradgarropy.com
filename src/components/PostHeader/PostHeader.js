@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
-import PostMeta from "./PostMeta"
-import PostTitle from "./PostTitle"
+import PostMeta from "../PostMeta"
+import PostTitle from "../PostTitle"
 
 const PostHeader = ({date, topic, title, slug}) => {
     return (

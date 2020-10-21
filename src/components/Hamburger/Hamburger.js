@@ -22,7 +22,7 @@ const Hamburger = () => {
         setOpen(true)
     }
 
-    return <HamburgerWrapper icon={faBars} onClick={onClick}/>
+    return <HamburgerWrapper icon={faBars} onClick={onClick} />
 }
 
 export default Hamburger

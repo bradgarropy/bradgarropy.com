@@ -1,5 +1,5 @@
-import Navigation from "./Navigation"
-import MobileNavigation from "./MobileNavigation"
+import Navigation from "../Navigation/Navigation"
+import MobileNavigation from "../MobileNavigation/MobileNavigation"
 import {Link} from "gatsby"
 import styled from "styled-components"
 import Logo from "../Logo"
@@ -21,12 +21,12 @@ const Header = () => {
     return (
         <HeaderWrapper>
             <Link to="/" aria-label="bg">
-                <Logo/>
+                <Logo />
             </Link>
 
             <AppProvider>
-                <Navigation/>
-                <MobileNavigation/>
+                <Navigation />
+                <MobileNavigation />
             </AppProvider>
         </HeaderWrapper>
     )
