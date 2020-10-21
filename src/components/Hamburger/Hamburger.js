@@ -9,7 +9,7 @@ const HamburgerWrapper = styled(FontAwesomeIcon)`
     cursor: pointer;
     font-size: 1.5rem;
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         display: block;
     }
 `
@@ -22,7 +22,9 @@ const Hamburger = () => {
         setOpen(true)
     }
 
-    return <HamburgerWrapper icon={faBars} onClick={onClick} />
+    return (
+        <HamburgerWrapper aria-label="menu" icon={faBars} onClick={onClick} />
+    )
 }
 
 export default Hamburger
