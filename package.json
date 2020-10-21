@@ -27,7 +27,8 @@
     "scripts": {
         "start": "gatsby develop",
         "build": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
-        "test": "jest --passWithNoTests",
+        "test": "jest --passWithNoTests --silent",
+        "test:watch": "npm run test -- --watch",
         "new": "plop"
     },
     "dependencies": {
@@ -69,6 +70,7 @@
         "@babel/plugin-proposal-class-properties": "^7.12.1",
         "@babel/preset-env": "^7.12.1",
         "@babel/preset-react": "^7.12.1",
+        "@testing-library/jest-dom": "^5.11.4",
         "@testing-library/react": "^11.1.0",
         "babel-eslint": "^10.1.0",
         "babel-jest": "^26.6.0",

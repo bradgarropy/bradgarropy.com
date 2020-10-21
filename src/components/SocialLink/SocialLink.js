@@ -29,37 +29,37 @@ const SocialLink = ({platform}) => {
         case "instagram":
             url = "https://instagram.com/bradgarropy"
             icon = faInstagram
-            label = "Instagram"
+            label = "instagram"
             break
 
         case "github":
             url = "https://github.com/bradgarropy"
             icon = faGithub
-            label = "GitHub"
+            label = "github"
             break
 
         case "twitter":
             url = "https://twitter.com/bradgarropy"
             icon = faTwitter
-            label = "Twitter"
+            label = "twitter"
             break
 
         case "youtube":
             url = "https://youtube.com/bradgarropy"
             icon = faYoutube
-            label = "YouTube"
+            label = "youtube"
             break
 
         case "twitch":
             url = "https://twitch.tv/bradgarropy"
             icon = faTwitch
-            label = "Twitch"
+            label = "twitch"
             break
 
         case "discord":
             url = "https://bradgarropy.com/discord"
             icon = faDiscord
-            label = "Discord"
+            label = "discord"
             break
     }
 
