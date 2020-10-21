@@ -1,4 +1,3 @@
-import React from "react"
 import {graphql, useStaticQuery} from "gatsby"
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Hero from "../components/Hero"

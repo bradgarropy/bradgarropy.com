@@ -1,4 +1,3 @@
-import React from "react"
 import Layout from "../components/Layout"
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import FourOhFour from "../components/FourOhFour"

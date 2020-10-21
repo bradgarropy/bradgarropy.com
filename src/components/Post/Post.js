@@ -1,4 +1,3 @@
-import React from "react"
 import PropTypes from "prop-types"
 import PostHeader from "./PostHeader"
 import PostBody from "./PostBody"

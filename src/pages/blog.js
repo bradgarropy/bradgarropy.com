@@ -1,7 +1,7 @@
 import Fuse from "fuse.js"
 import {graphql} from "gatsby"
 import PropTypes from "prop-types"
-import React, {useState} from "react"
+import { useState } from "react";
 import styled from "styled-components"
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Layout from "../components/Layout"
