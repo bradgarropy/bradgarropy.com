@@ -1,4 +1,4 @@
-import {render, screen} from "../../test-utils/utils"
+import {render, screen} from "../../test-utils/render"
 import Footer from "./Footer"
 
 const labels = [

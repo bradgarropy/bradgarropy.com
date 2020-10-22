@@ -1,4 +1,4 @@
-import {render, screen} from "../../test-utils/utils"
+import {render, screen} from "../../test-utils/render"
 import SocialLink from "./SocialLink"
 
 test("instagram", () => {
