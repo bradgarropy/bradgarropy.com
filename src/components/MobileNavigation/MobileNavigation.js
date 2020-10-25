@@ -48,7 +48,7 @@ const MobileNavigation = () => {
 
     return open ? (
         <MobileNavigationWrapper>
-            <CloseIcon icon={faTimes} onClick={onClick} />
+            <CloseIcon icon={faTimes} onClick={onClick} aria-label="close" />
 
             <MobileNavigationLinks>
                 <MobileNavigationLink to="/blog">blog</MobileNavigationLink>
