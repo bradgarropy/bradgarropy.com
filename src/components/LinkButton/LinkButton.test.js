@@ -16,7 +16,7 @@ test("shows gatsby link", () => {
     )
 
     expect(screen.getByText("testing"))
-    expect(screen.getByText("testing")).toHaveAttribute("aria-current")
+    expect(screen.getByText("testing")).toHaveAttribute("gatsby")
 })
 
 test("shows reverse", () => {
