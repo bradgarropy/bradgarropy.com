@@ -28,12 +28,7 @@ useStaticQuery.mockReturnValue(mockQuery)
 test("shows post header", () => {
     render(<Post post={mockPost} />)
 
-    expect(
-        screen.getByText(mockPost.frontmatter.date.toLowerCase(), {
-            exact: false,
-        }),
-    )
-
+    expect(screen.getByText(mockPost.frontmatter.date, {exact: false}))
     expect(screen.getByText(`#${mockPost.frontmatter.topic.name}`))
     expect(screen.getByText(mockPost.frontmatter.title))
 })

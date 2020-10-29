@@ -21,7 +21,7 @@ test("shows meta", () => {
         />,
     )
 
-    expect(screen.getByText(mockFrontmatter.date.toLowerCase(), {exact: false}))
+    expect(screen.getByText(mockFrontmatter.date, {exact: false}))
     expect(screen.getByText(`#${mockFrontmatter.topic.name}`))
     expect(screen.getByText(mockFrontmatter.title))
 })
