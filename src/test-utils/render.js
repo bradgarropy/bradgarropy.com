@@ -1,6 +1,6 @@
+import theme from "styles/theme"
 import {render} from "@testing-library/react"
 import {ThemeProvider} from "styled-components"
-import theme from "../styles/theme"
 
 const Providers = ({children}) => {
     return <ThemeProvider theme={theme}>{children}</ThemeProvider>

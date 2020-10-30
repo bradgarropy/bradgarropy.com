@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import PostComments from "../PostComments/PostComments"
-import PostEdit from "../PostEdit/PostEdit"
+import PostEdit from "components/PostEdit"
+import PostComments from "components/PostComments"
 
 const PostFooterWrapper = styled.section`
     display: grid;

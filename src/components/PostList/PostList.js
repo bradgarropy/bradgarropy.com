@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import PostHeader from "../PostHeader"
+import PostHeader from "components/PostHeader"
 
 const NoPosts = styled.div`
     font-style: italic;

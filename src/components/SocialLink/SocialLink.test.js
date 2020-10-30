@@ -1,5 +1,5 @@
 import SocialLink from "./SocialLink"
-import {render, screen} from "../../test-utils/render"
+import {render, screen} from "test-utils/render"
 
 test("instagram", () => {
     render(<SocialLink platform="instagram" />)

@@ -1,7 +1,7 @@
-import {AppContext} from "../../context/App"
+import {AppContext} from "context/App"
+import {render, screen} from "test-utils/render"
 import MobileNavigation from "./MobileNavigation"
 import userEvent from "@testing-library/user-event"
-import {render, screen} from "../../test-utils/render"
 
 const mockAppCtxOpen = {
     open: true,

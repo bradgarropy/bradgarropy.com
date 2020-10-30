@@ -1,2 +1,2 @@
-import PostCommments from "./PostCommments"
-export default PostCommments
+import PostComments from "./PostComments"
+export default PostComments

@@ -1,10 +1,10 @@
-import {useContext} from "react"
 import {Link} from "gatsby"
+import {useContext} from "react"
+import {AppContext} from "context/App"
 import styled from "styled-components"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import Hamburger from "components/Hamburger"
 import {faTimes} from "@fortawesome/free-solid-svg-icons"
-import {AppContext} from "../../context/App"
-import Hamburger from "../Hamburger"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 
 const MobileNavigationWrapper = styled.div`
     background: ${({theme}) => theme.colors.white};

@@ -106,6 +106,15 @@ const createPages = async ({graphql, actions}) => {
     nows.edges.forEach(now => createNow(now, createPage))
 }
 
+const onCreateWebpackConfig = ({actions}) => {
+    actions.setWebpackConfig({
+        resolve: {
+            modules: [path.resolve(__dirname, "src"), "node_modules"],
+        },
+    })
+}
+
 module.exports = {
     createPages,
+    onCreateWebpackConfig,
 }

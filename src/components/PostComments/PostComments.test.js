@@ -1,6 +1,6 @@
 import {useStaticQuery} from "gatsby"
 import PostComments from "./PostComments"
-import {render, screen} from "../../test-utils/render"
+import {render, screen} from "test-utils/render"
 
 const mockQuery = {
     site: {

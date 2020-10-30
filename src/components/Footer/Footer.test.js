@@ -1,5 +1,5 @@
-import {render, screen} from "../../test-utils/render"
 import Footer from "./Footer"
+import {render, screen} from "test-utils/render"
 
 const labels = [
     "twitch",

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import {graphql, useStaticQuery} from "gatsby"
-import LinkButton from "../LinkButton"
+import LinkButton from "components/LinkButton"
 
 const PostComments = ({slug}) => {
     const data = useStaticQuery(graphql`

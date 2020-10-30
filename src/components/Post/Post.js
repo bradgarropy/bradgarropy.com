@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
-import PostHeader from "../PostHeader"
-import PostBody from "../PostBody"
-import PostFooter from "../PostFooter"
+import PostBody from "components/PostBody"
+import PostHeader from "components/PostHeader"
+import PostFooter from "components/PostFooter"
 
 const Post = ({post}) => {
     const {html, frontmatter} = post

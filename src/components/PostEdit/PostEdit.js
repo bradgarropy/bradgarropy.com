@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import LinkButton from "../LinkButton"
+import LinkButton from "components/LinkButton"
 
 const PostEdit = ({slug}) => {
     const edit = `https://github.com/bradgarropy/bradgarropy.com/edit/master/content/posts/${slug}/index.md`

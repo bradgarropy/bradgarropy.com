@@ -1,5 +1,5 @@
 import PostTitle from "./PostTitle"
-import {render, screen} from "../../test-utils/render"
+import {render, screen} from "test-utils/render"
 
 const mockTitle = "🧪 My Test Post"
 const mockSlug = "my-test-post"

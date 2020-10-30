@@ -1,5 +1,5 @@
 import PostMeta from "./PostMeta"
-import {render, screen} from "../../test-utils/render"
+import {render, screen} from "test-utils/render"
 
 const mockDate = "January 1, 2021"
 

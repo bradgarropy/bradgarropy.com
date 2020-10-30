@@ -1,9 +1,9 @@
 import {graphql} from "gatsby"
 import PropTypes from "prop-types"
+import Layout from "components/Layout"
+import PostList from "components/PostList"
+import TopicMeta from "components/TopicMeta"
 import SEO from "@bradgarropy/gatsby-plugin-seo"
-import Layout from "../components/Layout"
-import PostList from "../components/PostList"
-import TopicMeta from "../components/TopicMeta"
 
 const TopicTemplate = ({pageContext, data}) => {
     const {topic} = pageContext

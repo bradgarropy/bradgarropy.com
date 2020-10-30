@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
+import {link} from "styles/partials"
 import styled from "styled-components"
-import LinkButton from "../LinkButton"
-import {link} from "../../styles/partials"
+import LinkButton from "components/LinkButton"
 
 const StyledNow = styled.div`
     ${link}

@@ -1,5 +1,5 @@
 import Header from "./Header"
-import {render, screen} from "../../test-utils/render"
+import {render, screen} from "test-utils/render"
 
 test("shows logo", () => {
     render(<Header />)
