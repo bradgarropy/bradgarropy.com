@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import { useState } from "react";
+import {useState} from "react"
 import styled from "styled-components"
 
 const StyledSearch = styled.input`
@@ -24,7 +24,7 @@ const StyledSearch = styled.input`
     }
 `
 
-const Search = ({onSearch = () => {}}) => {
+const Search = ({onSearch}) => {
     const [query, setQuery] = useState("")
 
     const onChange = event => {
@@ -43,7 +43,7 @@ const Search = ({onSearch = () => {}}) => {
 }
 
 Search.propTypes = {
-    onSearch: PropTypes.func,
+    onSearch: PropTypes.func.isRequired,
 }
 
 export default Search
