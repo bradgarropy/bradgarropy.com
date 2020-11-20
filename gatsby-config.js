@@ -30,13 +30,15 @@ const config = {
             },
         },
         {
-            resolve: "gatsby-plugin-google-fonts",
+            resolve: "gatsby-plugin-web-font-loader",
             options: {
-                fonts: [
-                    "righteous: 400",
-                    "montserrat: 400,500,600,700,800,900",
-                    "open sans: 400,500,600,700,800,900",
-                ],
+                google: {
+                    families: [
+                        "Righteous:400",
+                        "Montserrat:400,500,600,700,800,900",
+                        "Open Sans:400,500,600,700,800,900",
+                    ],
+                },
             },
         },
         {
