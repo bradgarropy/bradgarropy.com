@@ -1,5 +1,5 @@
 [build]
-    command = "npm run build"
+    command = "npm run netlify"
     publish = "public"
 
 [[redirects]]
@@ -30,6 +30,11 @@
 [[redirects]]
     from = "/discord"
     to = "https://discord.gg/WxtUPSF"
+    status = 301
+
+[[redirects]]
+    from = "/donate"
+    to = "https://paypal.me/bradgarropy"
     status = 301
 
 [[plugins]]

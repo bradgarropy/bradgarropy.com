@@ -27,6 +27,7 @@
     "scripts": {
         "start": "gatsby develop",
         "build": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+        "netlify": "npm run test && npm run build",
         "test": "jest --passWithNoTests",
         "test:watch": "npm run test -- --watch",
         "new": "plop"
@@ -43,12 +44,12 @@
         "gatsby-image": "^2.4.21",
         "gatsby-plugin-catch-links": "^2.3.15",
         "gatsby-plugin-google-analytics": "^2.3.19",
-        "gatsby-plugin-google-fonts": "^1.0.1",
         "gatsby-plugin-react-helmet": "^3.3.14",
         "gatsby-plugin-sharp": "^2.6.43",
         "gatsby-plugin-sitemap": "^2.4.17",
         "gatsby-plugin-styled-components": "^3.3.14",
         "gatsby-plugin-twitter": "^2.3.12",
+        "gatsby-plugin-web-font-loader": "^1.0.4",
         "gatsby-remark-autolink-headers": "^2.3.15",
         "gatsby-remark-embedder": "^4.0.0",
         "gatsby-remark-external-links": "0.0.4",

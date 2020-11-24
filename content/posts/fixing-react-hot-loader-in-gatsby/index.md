@@ -19,7 +19,7 @@ To fix this, first install the latest version of `@hot-loader/react-dom`.
 npm install --save-dev @hot-loader/react-dom
 ```
 
-Then modify the `webpack` configuration in the `gatsby-config.js` file. The following code tells Gatsby to use the hot version of `react-dom` only while running in `development`.
+Then modify the `webpack` configuration in the `gatsby-node.js` file. The following code tells Gatsby to use the hot version of `react-dom` only while running in `development`.
 
 ```javascript
 const onCreateWebpackConfig = ({stage, actions}) => {

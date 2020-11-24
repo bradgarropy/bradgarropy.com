@@ -1,0 +1,7 @@
+import {{pascalCase name}} from "components/{{pascalCase name}}"
+import {render, screen} from "test-utils/render"
+
+test("renders", () => {
+    render(<{{pascalCase name}} />)
+    expect(screen.getByText("{{pascalCase name}}"))
+})
