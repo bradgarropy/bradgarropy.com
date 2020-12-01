@@ -37,5 +37,10 @@
     to = "https://paypal.me/bradgarropy"
     status = 301
 
+[[redirects]]
+    from = "/store"
+    to = "https://cottonbureau.com/people/brad-garropy"
+    status = 301
+
 [[plugins]]
     package = "netlify-plugin-gatsby-cache"
