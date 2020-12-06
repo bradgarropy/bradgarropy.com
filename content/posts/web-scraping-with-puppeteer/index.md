@@ -59,10 +59,13 @@ await browser.close()
 
 Screenshots will come in handy while developing your automation script, as running a headless browser doesn't provide much visibility.
 
+![web scraping with puppeteer][screenshot]
+
 The last tip I'll leave you with is to be considerate of where you are placing `console.log()` statements. Remember that much of [Puppeteer][puppeteer] is run in the context of the headless browser, so some of your log statements won't show up in the `node` console where your script is running.
 
 Now you can go script whatever you'd like! For instance, I automated the process of retrieving what user liked a particular tweet of mine. Share what you've automated with me on [Twitter][twitter].
 
+[screenshot]: images/screenshot.png
 [twitter]: https://twitter.com/bradgarropy
 [keyboard]: https://pptr.dev/#?product=Puppeteer&version=v5.5.0&show=api-class-keyboard
 [page]: https://pptr.dev/#?product=Puppeteer&version=v5.5.0&show=api-class-page
