@@ -1,7 +1,7 @@
 ---
 title: 🧶 web scraping with puppeteer
 slug: web-scraping-with-puppeteer
-date: 2020-12-04
+date: 2020-12-05
 topic:
     name: coding
     icon: 💻
