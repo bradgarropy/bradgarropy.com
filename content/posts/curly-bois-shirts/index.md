@@ -9,7 +9,7 @@ topic:
 
 There was a particularly hysterical moment on a recent episode of [Learn With Jason][learn-with-jason] where [Cassie Evans][cassie-evans] shared her nickname for parentheses with [Jason Lengstorf][jason-lengstorf].
 
-https://www.youtube.com/watch?v=SOp0e4tkXjI&start=1282
+https://youtu.be/SOp0e4tkXjI?t=1282
 
 Everyone in chat thought it was super funny, and so did the rest of the web development community. So I thought I would commemorate the moment by creating some tshirts.
 

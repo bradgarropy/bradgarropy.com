@@ -16,3 +16,6 @@ coverage
 
 # secrets
 .env
+
+# logs
+debug.log

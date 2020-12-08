@@ -11,7 +11,7 @@ My all time favorite web development podcast is [Syntax][podcast], hosted by [Sc
 
 And lucky me I got to go first! Scott remembered how to pronounce my name and I impressed Wes with my preparedness. So other than a minor audio glitch, things kicked off well. I chose to do three of the four segments: Potluck Question, Sick Pick, Shameless Plug.
 
-https://youtube.com/watch?v=W7y03fsqHJw&t=2503
+https://youtu.be/W7y03fsqHJw?t=2503
 
 ## 🥘 Potluck Question
 
