@@ -82,7 +82,7 @@ LinkButton.propTypes = {
     gatsby: PropTypes.bool,
     reverse: PropTypes.bool,
     disabled: PropTypes.bool,
-    children: PropTypes.arrayOf(PropTypes.node),
+    children: PropTypes.string,
 }
 
 export default LinkButton
