@@ -1,6 +1,6 @@
-import {graphql, useStaticQuery} from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import {graphql, useStaticQuery} from "gatsby"
 
 const HeroWrapper = styled.div`
     align-self: center;
