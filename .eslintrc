@@ -1,3 +1,6 @@
 {
-    "extends": ["@bradgarropy/eslint-config-react"]
+    "extends": [
+        "@bradgarropy/eslint-config",
+        "@bradgarropy/eslint-config-react"
+    ]
 }

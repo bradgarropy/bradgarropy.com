@@ -28,6 +28,8 @@
         "start": "gatsby develop",
         "build": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
         "netlify": "npm run test && npm run build",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
         "test": "jest --passWithNoTests",
         "test:watch": "npm run test -- --watch",
         "new": "plop"
@@ -40,7 +42,7 @@
         "@fortawesome/react-fontawesome": "^0.1.13",
         "dotenv": "^8.0.0",
         "fuse.js": "^6.4.3",
-        "gatsby": "^2.28.1",
+        "gatsby": "^2.28.2",
         "gatsby-image": "^2.7.0",
         "gatsby-plugin-catch-links": "^2.6.0",
         "gatsby-plugin-google-analytics": "^2.7.0",
@@ -53,13 +55,12 @@
         "gatsby-remark-autolink-headers": "^2.7.0",
         "gatsby-remark-embedder": "^4.1.0",
         "gatsby-remark-external-links": "0.0.4",
-        "gatsby-remark-images": "^3.7.0",
+        "gatsby-remark-images": "^3.7.1",
         "gatsby-remark-prismjs": "^3.9.0",
         "gatsby-remark-vscode": "^3.2.0",
         "gatsby-source-filesystem": "^2.7.0",
         "gatsby-transformer-remark": "^2.12.0",
         "gatsby-transformer-sharp": "^2.8.0",
-        "react": "^17.0.1",
         "react-dom": "^17.0.1",
         "react-helmet": "^6.0.0",
         "shades-of-purple": "^6.11.0",
@@ -68,10 +69,10 @@
     },
     "devDependencies": {
         "@babel/plugin-proposal-class-properties": "^7.12.1",
-        "@babel/preset-env": "^7.12.7",
-        "@babel/preset-react": "^7.12.7",
-        "@bradgarropy/eslint-config": "0.0.1",
-        "@bradgarropy/eslint-config-react": "0.0.3",
+        "@babel/preset-env": "^7.12.10",
+        "@babel/preset-react": "^7.12.10",
+        "@bradgarropy/eslint-config": "0.0.3",
+        "@bradgarropy/eslint-config-react": "0.0.6",
         "@hot-loader/react-dom": "^17.0.1",
         "@testing-library/jest-dom": "^5.11.6",
         "@testing-library/react": "^11.2.2",
@@ -90,6 +91,7 @@
         "plop-helper-bradgarropy": "^1.0.0",
         "plop-helper-date": "^1.0.0",
         "plop-helper-slugify": "^1.1.0",
-        "prettier": "^2.2.1"
+        "prettier": "^2.2.1",
+        "react": "^17.0.1"
     }
 }
