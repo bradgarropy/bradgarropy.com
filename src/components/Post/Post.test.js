@@ -40,6 +40,6 @@ test("shows post body", () => {
 
 test("shows post footer", () => {
     render(<Post post={mockPost} />)
-    expect(screen.getByText("discuss on twitter"))
-    expect(screen.getByText("edit on github"))
+    expect(screen.getByText("💬 discuss on twitter"))
+    expect(screen.getByText("💻 edit on github"))
 })
