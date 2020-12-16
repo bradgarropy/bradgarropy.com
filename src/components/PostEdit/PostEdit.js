@@ -6,10 +6,7 @@ const PostEdit = ({slug}) => {
 
     return (
         <LinkButton to={edit} reverse>
-            <span role="img" aria-label="edit on github">
-                💻
-            </span>
-            <span> edit on github</span>
+            💻 edit on github
         </LinkButton>
     )
 }

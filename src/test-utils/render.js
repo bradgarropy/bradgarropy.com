@@ -8,7 +8,7 @@ const Providers = ({children}) => {
 }
 
 Providers.propTypes = {
-    children: PropTypes.arrayOf(PropTypes.node),
+    children: PropTypes.node,
 }
 
 const customRender = (ui, options) =>

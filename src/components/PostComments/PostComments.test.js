@@ -15,9 +15,7 @@ useStaticQuery.mockReturnValue(mockQuery)
 test("shows comment button", () => {
     render(<PostComments slug={"my-test-post"} />)
 
-    const commentLink = screen.getByText("discuss on twitter").parentElement
-
-    expect(commentLink).toHaveAttribute(
+    expect(screen.getByText("💬 discuss on twitter")).toHaveAttribute(
         "href",
         expect.stringContaining("my-test-post"),
     )

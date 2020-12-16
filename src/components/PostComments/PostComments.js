@@ -17,14 +17,7 @@ const PostComments = ({slug}) => {
     const query = encodeURIComponent(`${siteUrl}/blog/${slug}`)
     const discuss = `https://twitter.com/search?q=${query}`
 
-    return (
-        <LinkButton to={discuss}>
-            <span role="img" aria-label="discuss on twitter">
-                💬
-            </span>
-            <span> discuss on twitter</span>
-        </LinkButton>
-    )
+    return <LinkButton to={discuss}>💬 discuss on twitter</LinkButton>
 }
 
 PostComments.propTypes = {

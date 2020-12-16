@@ -11,6 +11,7 @@ const button = css`
     transition: all 300ms;
     border: 2px solid ${({theme}) => theme.colors.black};
     box-shadow: 3px 3px 0 ${({theme}) => theme.colors.black} !important;
+    margin-bottom: 5px;
 
     &.reverse {
         box-shadow: -3px 3px 0 ${({theme}) => theme.colors.black} !important;
@@ -82,7 +83,7 @@ LinkButton.propTypes = {
     gatsby: PropTypes.bool,
     reverse: PropTypes.bool,
     disabled: PropTypes.bool,
-    children: PropTypes.arrayOf(PropTypes.node),
+    children: PropTypes.string,
 }
 
 export default LinkButton
