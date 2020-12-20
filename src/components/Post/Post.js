@@ -1,8 +1,8 @@
+import PostBody from "components/PostBody"
+import PostFooter from "components/PostFooter"
+import PostHeader from "components/PostHeader"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import PostBody from "components/PostBody"
-import PostHeader from "components/PostHeader"
-import PostFooter from "components/PostFooter"
 
 const PostWrapper = styled.article`
     overflow: auto;

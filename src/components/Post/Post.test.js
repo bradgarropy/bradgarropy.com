@@ -1,6 +1,7 @@
-import Post from "./Post"
 import {useStaticQuery} from "gatsby"
 import {render, screen} from "test-utils/render"
+
+import Post from "./Post"
 
 const mockPost = {
     html: "<p>testing</p>",

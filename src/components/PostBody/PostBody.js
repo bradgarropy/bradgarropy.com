@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
-import {link} from "styles/partials"
 import styled from "styled-components"
+import {link} from "styles/partials"
 
 const PostBodyWrapper = styled.section`
     margin: 2.25rem 0rem;

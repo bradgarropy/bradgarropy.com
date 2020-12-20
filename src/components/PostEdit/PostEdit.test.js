@@ -1,5 +1,6 @@
-import PostEdit from "./PostEdit"
 import {render, screen} from "test-utils/render"
+
+import PostEdit from "./PostEdit"
 
 test("shows edit button", () => {
     render(<PostEdit slug={"my-test-post"} />)

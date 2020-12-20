@@ -1,5 +1,6 @@
-import PostHeader from "./PostHeader"
 import {render, screen} from "test-utils/render"
+
+import PostHeader from "./PostHeader"
 
 const mockFrontmatter = {
     slug: "my-test-post",

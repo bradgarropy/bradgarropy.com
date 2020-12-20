@@ -1,7 +1,8 @@
-import Hamburger from "./Hamburger"
+import userEvent from "@testing-library/user-event"
 import {AppContext} from "context/App"
 import {render, screen} from "test-utils/render"
-import userEvent from "@testing-library/user-event"
+
+import Hamburger from "./Hamburger"
 
 const mockAppCtx = {
     open: false,

@@ -1,9 +1,9 @@
-import theme from "styles/theme"
-import PropTypes from "prop-types"
-import Header from "components/Header"
 import Footer from "components/Footer"
-import GlobalStyles from "styles/GlobalStyles"
+import Header from "components/Header"
+import PropTypes from "prop-types"
 import styled, {ThemeProvider} from "styled-components"
+import GlobalStyles from "styles/GlobalStyles"
+import theme from "styles/theme"
 
 const Container = styled.div`
     min-height: 100vh;

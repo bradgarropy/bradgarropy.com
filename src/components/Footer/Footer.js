@@ -1,5 +1,5 @@
-import styled from "styled-components"
 import SocialLink from "components/SocialLink"
+import styled from "styled-components"
 
 const FooterWrapper = styled.footer`
     display: grid;

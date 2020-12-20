@@ -1,9 +1,9 @@
+import SEO from "@bradgarropy/gatsby-plugin-seo"
+import Layout from "components/Layout"
 import {graphql} from "gatsby"
 import PropTypes from "prop-types"
-import {link} from "styles/partials"
 import styled from "styled-components"
-import Layout from "components/Layout"
-import SEO from "@bradgarropy/gatsby-plugin-seo"
+import {link} from "styles/partials"
 
 const Resume = styled.section`
     p:first-of-type {

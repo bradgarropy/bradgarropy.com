@@ -1,5 +1,6 @@
-import Navigation from "./Navigation"
 import {render, screen} from "test-utils/render"
+
+import Navigation from "./Navigation"
 
 const links = ["blog", "now", "uses", "hire me", "contact"]
 

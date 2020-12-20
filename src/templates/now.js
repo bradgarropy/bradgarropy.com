@@ -1,8 +1,8 @@
+import SEO from "@bradgarropy/gatsby-plugin-seo"
+import Layout from "components/Layout"
+import Now from "components/Now"
 import {graphql} from "gatsby"
 import PropTypes from "prop-types"
-import Now from "components/Now"
-import Layout from "components/Layout"
-import SEO from "@bradgarropy/gatsby-plugin-seo"
 
 const NowTemplate = ({data, pageContext}) => {
     const {now} = data

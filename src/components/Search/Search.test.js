@@ -1,6 +1,7 @@
-import Search from "./Search"
 import userEvent from "@testing-library/user-event"
 import {render, screen} from "test-utils/render"
+
+import Search from "./Search"
 
 const onSearchMock = jest.fn()
 const placeholder = "search blog"

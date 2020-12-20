@@ -1,5 +1,6 @@
-import LinkButton from "./LinkButton"
 import {render, screen} from "test-utils/render"
+
+import LinkButton from "./LinkButton"
 
 test("shows link", () => {
     render(<LinkButton to="/">testing</LinkButton>)
