@@ -1,8 +1,6 @@
-import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Layout from "components/Layout"
 import PostList from "components/PostList"
 import TopicMeta from "components/TopicMeta"
-import {graphql} from "gatsby"
 import PropTypes from "prop-types"
 
 const TopicTemplate = ({pageContext, data}) => {
@@ -12,7 +10,7 @@ const TopicTemplate = ({pageContext, data}) => {
 
     return (
         <Layout>
-            <SEO title={`${icon} ${name}`} description="" />
+            {/* <SEO title={`${icon} ${name}`} description="" /> */}
 
             <TopicMeta topic={topic} />
             <PostList posts={posts} />

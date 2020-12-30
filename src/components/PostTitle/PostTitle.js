@@ -1,4 +1,4 @@
-import {Link} from "gatsby"
+import Link from "next/link"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
@@ -26,7 +26,15 @@ const PostTitleWrapper = styled.div`
 const PostTitle = ({title, slug}) => {
     return (
         <PostTitleWrapper>
-            <h1>{slug ? <Link to={`/blog/${slug}`}>{title}</Link> : title}</h1>
+            <h1>
+                {slug ? (
+                    <Link href={`/blog/${slug}`}>
+                        <a>{title}</a>
+                    </Link>
+                ) : (
+                    title
+                )}
+            </h1>
         </PostTitleWrapper>
     )
 }

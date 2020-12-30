@@ -1,4 +1,4 @@
-import {Link} from "gatsby"
+import Link from "next/link"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
@@ -23,7 +23,10 @@ const PostMeta = ({date, topic}) => {
     return (
         <PostMetaWrapper>
             <p>
-                {date} in <Link to={`/topic/${name}`}>#{name}</Link>
+                {date} in{" "}
+                <Link href={`/topic/${name}`}>
+                    <a>#{name}</a>
+                </Link>
             </p>
         </PostMetaWrapper>
     )

@@ -1,10 +1,10 @@
 ---
-title: 🏆 goals for 2020
-slug: goals-for-2020
-date: 2020-01-11
-topic:
-    name: life
-    icon: 😎
+{
+    title: "🏆 goals for 2020",
+    slug: "goals-for-2020",
+    date: "2020-01-11",
+    topic: {name: "life", icon: "😎"},
+}
 ---
 
 Happy New Year! Welcome to **2020**, it's a new year and a new decade. That means we have a lot to accomplish, and I'm fired up to get started. In 2019 I wrote down my [resolutions][resolutions] for the first time. I'll be doing the same thing this year, here's what I've got.

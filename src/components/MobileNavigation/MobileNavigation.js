@@ -2,7 +2,7 @@ import {faTimes} from "@fortawesome/free-solid-svg-icons"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import Hamburger from "components/Hamburger"
 import {AppContext} from "context/App"
-import {Link} from "gatsby"
+import Link from "next/link"
 import {useContext} from "react"
 import styled from "styled-components"
 

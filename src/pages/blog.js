@@ -1,17 +1,16 @@
-import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Layout from "components/Layout"
 import PostList from "components/PostList"
 import Search from "components/Search"
 import Fuse from "fuse.js"
-import {graphql} from "gatsby"
+import {getPosts} from "lib/post"
 import PropTypes from "prop-types"
 import {useState} from "react"
 import styled from "styled-components"
 
 const Blog = styled.div``
 
-const BlogPage = ({data}) => {
-    const [posts, setPosts] = useState(data.posts.nodes)
+const BlogPage = ({posts}) => {
+    const [results, setResults] = useState(posts)
 
     const fuse = new Fuse(posts, {
         keys: ["frontmatter.title", "frontmatter.topic.name"],
@@ -19,49 +18,34 @@ const BlogPage = ({data}) => {
 
     const onSearch = query => {
         if (!query) {
-            setPosts(data.posts.nodes)
+            setResults(posts)
             return
         }
 
         const newPosts = fuse.search(query).map(result => result.item)
-        setPosts(newPosts)
+        setResults(newPosts)
     }
 
     return (
         <Layout>
-            <SEO title="✍🏼 blog" description="" />
+            {/* <SEO title="✍🏼 blog" description="" /> */}
 
             <Blog>
                 <Search onSearch={onSearch} />
-                <PostList posts={posts} />
+                <PostList posts={results} />
             </Blog>
         </Layout>
     )
 }
 
 BlogPage.propTypes = {
-    data: PropTypes.object.isRequired,
+    posts: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
-export const blogPageQuery = graphql`
-    {
-        posts: allMarkdownRemark(
-            filter: {fileAbsolutePath: {regex: "/content/posts/"}}
-            sort: {fields: frontmatter___date, order: DESC}
-        ) {
-            nodes {
-                frontmatter {
-                    slug
-                    title
-                    date(formatString: "MMMM D, YYYY")
-                    topic {
-                        name
-                        icon
-                    }
-                }
-            }
-        }
-    }
-`
+const getStaticProps = async () => {
+    const posts = await getPosts()
+    return {props: {posts}}
+}
 
 export default BlogPage
+export {getStaticProps}

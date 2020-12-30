@@ -1,6 +1,7 @@
 import PostHeader from "components/PostHeader"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import {formatDate} from "utils/date"
 
 const NoPosts = styled.div`
     font-style: italic;
@@ -28,7 +29,8 @@ const PostList = ({posts}) => {
     return (
         <PostListWrapper>
             {posts.map((post, index) => {
-                const {date, topic, title, slug} = post.frontmatter
+                const {topic, title, slug} = post.frontmatter
+                const date = formatDate(post.frontmatter.date)
 
                 return (
                     <PostHeader

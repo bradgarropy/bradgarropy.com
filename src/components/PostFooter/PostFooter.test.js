@@ -1,4 +1,3 @@
-import {useStaticQuery} from "gatsby"
 import {render, screen} from "test-utils/render"
 
 import PostFooter from "./PostFooter"

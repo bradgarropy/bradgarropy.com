@@ -3,27 +3,30 @@ import {render, screen} from "test-utils/render"
 import LinkButton from "./LinkButton"
 
 test("shows link", () => {
-    render(<LinkButton to="/">testing</LinkButton>)
+    render(
+        <LinkButton href="/">
+            <a>testing</a>
+        </LinkButton>,
+    )
 
     expect(screen.getByText("testing"))
     expect(screen.getByText("testing")).not.toHaveClass("reverse")
 })
 
-test("shows gatsby link", () => {
+test("shows next link", () => {
     render(
-        <LinkButton to="/" gatsby>
-            testing
+        <LinkButton href="/" next>
+            <a>testing</a>
         </LinkButton>,
     )
 
     expect(screen.getByText("testing"))
-    expect(screen.getByText("testing")).toHaveAttribute("gatsby")
 })
 
 test("shows reverse", () => {
     render(
-        <LinkButton to="/" reverse>
-            testing
+        <LinkButton href="/" reverse>
+            <a>testing</a>
         </LinkButton>,
     )
 
@@ -33,8 +36,8 @@ test("shows reverse", () => {
 
 test("shows disabled", () => {
     render(
-        <LinkButton to="/" disabled>
-            testing
+        <LinkButton href="/" disabled>
+            <a>testing</a>
         </LinkButton>,
     )
 

@@ -1,7 +1,5 @@
-import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Layout from "components/Layout"
 import Post from "components/Post"
-import {graphql} from "gatsby"
 import PropTypes from "prop-types"
 
 const PostTemplate = ({data}) => {
@@ -10,7 +8,7 @@ const PostTemplate = ({data}) => {
 
     return (
         <Layout>
-            <SEO title={frontmatter.title} description="" />
+            {/* <SEO title={frontmatter.title} description="" /> */}
 
             <Post post={post} />
         </Layout>

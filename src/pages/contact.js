@@ -1,6 +1,5 @@
-import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Layout from "components/Layout"
-import {graphql} from "gatsby"
+import {getPage} from "lib/page"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import {link} from "styles/partials"
@@ -23,30 +22,23 @@ const Contact = styled.div`
     }
 `
 
-const ContactPage = ({data}) => {
-    const {html} = data.contact
-
+const ContactPage = ({contact}) => {
     return (
         <Layout>
-            <SEO title="👋🏼 say hi" description="" />
-
-            <Contact dangerouslySetInnerHTML={{__html: html}} />
+            {/* <SEO title="👋🏼 say hi" description="" /> */}
+            <Contact dangerouslySetInnerHTML={{__html: contact.html}} />
         </Layout>
     )
 }
 
 ContactPage.propTypes = {
-    data: PropTypes.object.isRequired,
+    contact: PropTypes.object.isRequired,
 }
 
-export const query = graphql`
-    {
-        contact: markdownRemark(
-            fileAbsolutePath: {regex: "/content/pages/contact/"}
-        ) {
-            html
-        }
-    }
-`
+const getStaticProps = async () => {
+    const contact = await getPage("contact")
+    return {props: {contact}}
+}
 
 export default ContactPage
+export {getStaticProps}

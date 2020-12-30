@@ -3,14 +3,16 @@ import PostFooter from "components/PostFooter"
 import PostHeader from "components/PostHeader"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import {formatDate} from "utils/date"
 
 const PostWrapper = styled.article`
     overflow: auto;
 `
 
 const Post = ({post}) => {
-    const {html, frontmatter} = post
-    const {slug, title, date, topic} = frontmatter
+    const {frontmatter, html} = post
+    const {slug, title, topic} = frontmatter
+    const date = formatDate(frontmatter.date)
 
     return (
         <PostWrapper>

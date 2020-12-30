@@ -1,7 +1,5 @@
-import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Layout from "components/Layout"
 import Now from "components/Now"
-import {graphql} from "gatsby"
 import PropTypes from "prop-types"
 
 const NowTemplate = ({data, pageContext}) => {
@@ -10,7 +8,7 @@ const NowTemplate = ({data, pageContext}) => {
 
     return (
         <Layout>
-            <SEO title="🧭 now" description="" />
+            {/* <SEO title="🧭 now" description="" /> */}
             <Now now={now} newer={newer} older={older} />
         </Layout>
     )

@@ -1,6 +1,5 @@
-import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Layout from "components/Layout"
-import {graphql} from "gatsby"
+import {getPage} from "lib/page"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import {link} from "styles/partials"
@@ -12,30 +11,23 @@ const HireMe = styled.div`
     justify-self: center;
 `
 
-const HireMePage = ({data}) => {
-    const {html} = data.hireMe
-
+const HireMePage = ({hireMe}) => {
     return (
         <Layout>
-            <SEO title="🤝 let's work together" description="" />
-
-            <HireMe dangerouslySetInnerHTML={{__html: html}} />
+            {/* <SEO title="🤝 let's work together" description="" /> */}
+            <HireMe dangerouslySetInnerHTML={{__html: hireMe.html}} />
         </Layout>
     )
 }
 
 HireMePage.propTypes = {
-    data: PropTypes.object.isRequired,
+    hireMe: PropTypes.object.isRequired,
 }
 
-export const query = graphql`
-    {
-        hireMe: markdownRemark(
-            fileAbsolutePath: {regex: "/content/pages/hire-me/"}
-        ) {
-            html
-        }
-    }
-`
+const getStaticProps = async () => {
+    const hireMe = await getPage("hire-me")
+    return {props: {hireMe}}
+}
 
 export default HireMePage
+export {getStaticProps}

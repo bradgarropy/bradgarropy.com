@@ -1,56 +1,25 @@
-import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Layout from "components/Layout"
 import Now from "components/Now"
-import {graphql} from "gatsby"
+import {getNows} from "lib/now"
 import PropTypes from "prop-types"
 
-const NowPage = ({data}) => {
-    const {node, next, previous} = data.nows.edges[0]
-
+const NowPage = ({nows}) => {
     return (
         <Layout>
-            <SEO title="🧭 now" description="" />
-
-            <Now
-                now={node}
-                newer={previous?.frontmatter.date}
-                older={next?.frontmatter.date}
-            />
+            {/* <SEO title="🧭 now" description="" /> */}
+            <Now now={nows[0]} older={nows[1]} />
         </Layout>
     )
 }
 
 NowPage.propTypes = {
-    data: PropTypes.object.isRequired,
+    nows: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
-export const query = graphql`
-    {
-        nows: allMarkdownRemark(
-            filter: {fileAbsolutePath: {regex: "/content/now/"}}
-            sort: {fields: frontmatter___date, order: DESC}
-            limit: 2
-        ) {
-            edges {
-                node {
-                    html
-                    frontmatter {
-                        date(formatString: "MMMM D, YYYY")
-                    }
-                }
-                next {
-                    frontmatter {
-                        date(formatString: "YYYY-MM-DD")
-                    }
-                }
-                previous {
-                    frontmatter {
-                        date(formatString: "YYYY-MM-DD")
-                    }
-                }
-            }
-        }
-    }
-`
+const getStaticProps = async () => {
+    const nows = await getNows()
+    return {props: {nows}}
+}
 
 export default NowPage
+export {getStaticProps}

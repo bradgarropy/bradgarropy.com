@@ -1,10 +1,10 @@
 ---
-title: ⌨️ i am a developer
-slug: i-am-a-developer
-date: 2018-08-05
-topic:
-    name: coding
-    icon: 💻
+{
+    title: "⌨️ i am a developer",
+    slug: "i-am-a-developer",
+    date: "2018-08-05",
+    topic: {name: "coding", icon: "💻"},
+}
 ---
 
 First and foremost I consider myself a `developer`.

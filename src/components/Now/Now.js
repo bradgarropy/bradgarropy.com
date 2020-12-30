@@ -2,6 +2,7 @@ import LinkButton from "components/LinkButton"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import {link} from "styles/partials"
+import {formatDate} from "utils/date"
 
 const StyledNow = styled.div`
     ${link}
@@ -30,27 +31,32 @@ const StyledNow = styled.div`
     }
 `
 
-const Now = ({now, newer, older}) => {
+const Now = ({now, newer = null, older = null}) => {
     const {html, frontmatter} = now
+    const date = formatDate(frontmatter.date)
 
     return (
         <>
             <StyledNow>
                 <div className="headline">
                     <h1>🧭 now</h1>
-                    <span className="date">{`${frontmatter.date}`}</span>
+                    <span className="date">{`${date}`}</span>
                 </div>
 
                 <div dangerouslySetInnerHTML={{__html: html}} />
 
                 <div className="pagination">
-                    <LinkButton to={`/now/${newer}`} gatsby disabled={!newer}>
+                    <LinkButton
+                        href={`/now/${newer?.frontmatter.date}`}
+                        next
+                        disabled={!newer}
+                    >
                         👈🏼 newer
                     </LinkButton>
 
                     <LinkButton
-                        to={`/now/${older}`}
-                        gatsby
+                        href={`/now/${older?.frontmatter.date}`}
+                        next
                         reverse
                         disabled={!older}
                     >
@@ -83,8 +89,8 @@ const Now = ({now, newer, older}) => {
 
 Now.propTypes = {
     now: PropTypes.object.isRequired,
-    newer: PropTypes.string,
-    older: PropTypes.string,
+    newer: PropTypes.object,
+    older: PropTypes.object,
 }
 
 export default Now

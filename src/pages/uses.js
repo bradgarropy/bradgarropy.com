@@ -1,6 +1,5 @@
-import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Layout from "components/Layout"
-import {graphql} from "gatsby"
+import {getPage} from "lib/page"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import {link} from "styles/partials"
@@ -9,30 +8,23 @@ const Uses = styled.div`
     ${link}
 `
 
-const UsesPage = ({data}) => {
-    const {html} = data.uses
-
+const UsesPage = ({uses}) => {
     return (
         <Layout>
-            <SEO title="💠 uses" description="" />
-
-            <Uses dangerouslySetInnerHTML={{__html: html}} />
+            {/* <SEO title="💠 uses" description="" /> */}
+            <Uses dangerouslySetInnerHTML={{__html: uses.html}} />
         </Layout>
     )
 }
 
 UsesPage.propTypes = {
-    data: PropTypes.object.isRequired,
+    uses: PropTypes.object.isRequired,
 }
 
-export const usesPageQuery = graphql`
-    {
-        uses: markdownRemark(
-            fileAbsolutePath: {regex: "/content/pages/uses/"}
-        ) {
-            html
-        }
-    }
-`
+const getStaticProps = async () => {
+    const uses = await getPage("uses")
+    return {props: {uses}}
+}
 
 export default UsesPage
+export {getStaticProps}

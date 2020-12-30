@@ -1,10 +1,10 @@
 ---
-title: 📺 coding livestreams
-slug: coding-livestreams
-date: 2019-03-05
-topic:
-    name: coding
-    icon: 💻
+{
+    title: "📺 coding livestreams",
+    slug: "coding-livestreams",
+    date: "2019-03-05",
+    topic: {name: "coding", icon: "💻"},
+}
 ---
 
 Lately I've had the urge to share more of what I do regarding software development. So recently, I started [livestreaming][1] my coding sessions on [YouTube][2].

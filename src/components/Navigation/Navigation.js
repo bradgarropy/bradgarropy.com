@@ -1,4 +1,4 @@
-import {Link} from "gatsby"
+import Link from "next/link"
 import styled from "styled-components"
 
 const NavigationWrapper = styled.nav`
@@ -11,7 +11,7 @@ const NavigationWrapper = styled.nav`
     }
 `
 
-const NavigationLink = styled(Link)`
+const NavigationLink = styled.a`
     color: ${({theme}) => theme.colors.black};
 
     &:hover {
@@ -22,15 +22,33 @@ const NavigationLink = styled(Link)`
 const Navigation = () => {
     return (
         <NavigationWrapper>
-            <NavigationLink to="/blog">blog</NavigationLink>
+            <Link href="/blog" passHref>
+                <NavigationLink>blog</NavigationLink>
+            </Link>
+
             <span>|</span>
-            <NavigationLink to="/now">now</NavigationLink>
+
+            <Link href="/now" passHref>
+                <NavigationLink>now</NavigationLink>
+            </Link>
+
             <span>|</span>
-            <NavigationLink to="/uses">uses</NavigationLink>
+
+            <Link href="/uses" passHref>
+                <NavigationLink>uses</NavigationLink>
+            </Link>
+
             <span>|</span>
-            <NavigationLink to="/hire-me">hire me</NavigationLink>
+
+            <Link href="/hire-me" passHref>
+                <NavigationLink>hire me</NavigationLink>
+            </Link>
+
             <span>|</span>
-            <NavigationLink to="/contact">contact</NavigationLink>
+
+            <Link href="/contact" passHref>
+                <NavigationLink>contact</NavigationLink>
+            </Link>
         </NavigationWrapper>
     )
 }

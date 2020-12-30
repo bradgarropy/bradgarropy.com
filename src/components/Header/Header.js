@@ -2,7 +2,7 @@ import Logo from "components/Logo"
 import MobileNavigation from "components/MobileNavigation"
 import Navigation from "components/Navigation"
 import {AppProvider} from "context/App"
-import {Link} from "gatsby"
+import Link from "next/link"
 import styled from "styled-components"
 
 const HeaderWrapper = styled.header`
@@ -20,8 +20,10 @@ const HeaderWrapper = styled.header`
 const Header = () => {
     return (
         <HeaderWrapper>
-            <Link to="/" aria-label="bg">
-                <Logo />
+            <Link href="/" aria-label="bg">
+                <a>
+                    <Logo />
+                </a>
             </Link>
 
             <AppProvider>

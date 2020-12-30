@@ -1,10 +1,10 @@
 ---
-title: 🥇 communication comes first
-slug: communication-comes-first
-date: 2020-12-08
-topic:
-    name: life
-    icon: 😎
+{
+    title: "🥇 communication comes first",
+    slug: "communication-comes-first",
+    date: "2020-12-08",
+    topic: {name: "life", icon: "😎"},
+}
 ---
 
 During the process of marketing the [curly bois][curly-bois] shirts, I released the following tweet which got a lot of engagement. Most feedback was positive, but a few creators and community members offered their feedback.

@@ -1,14 +1,14 @@
 const config = {
-    presets: [
-        "@babel/preset-env",
+    presets: ["next/babel"],
+    plugins: [
         [
-            "@babel/preset-react",
+            "styled-components",
             {
-                runtime: "automatic",
+                displayName: true,
+                ssr: true,
             },
         ],
     ],
-    plugins: ["@babel/plugin-proposal-class-properties"],
 }
 
 module.exports = config

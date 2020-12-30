@@ -1,10 +1,10 @@
 ---
-title: 📅 2020 in review
-slug: 2020-in-review
-date: 2020-12-16
-topic:
-    name: life
-    icon: 😎
+{
+    title: "📅 2020 in review",
+    slug: "2020-in-review",
+    date: "2020-12-16",
+    topic: {name: "life", icon: "😎"},
+}
 ---
 
 It's that time of year again! Time to reflect on the past year and see how I measured up to my goals. This is the second year I've posted my [resolutions][resolutions], and I feel it really helps me stay on track throughout the year. Let's see how I did.

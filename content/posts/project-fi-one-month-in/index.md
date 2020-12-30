@@ -1,10 +1,10 @@
 ---
-title: 📅 project fi one month in
-slug: project-fi-one-month-in
-date: 2018-09-07
-topic:
-    name: tech
-    icon: 🔌
+{
+    title: "📅 project fi one month in",
+    slug: "project-fi-one-month-in",
+    date: "2018-09-07",
+    topic: {name: "tech", icon: "🔌"},
+}
 ---
 
 my bill was six dollars.

@@ -1,10 +1,10 @@
 ---
-title: 👨🏼‍💼 homeaway interview process - on site
-slug: homeaway-interview-process-on-site
-date: 2018-10-22
-topic:
-    name: coding
-    icon: 💻
+{
+    title: "👨🏼‍💼 homeaway interview process - on site",
+    slug: "homeaway-interview-process-on-site",
+    date: "2018-10-22",
+    topic: {name: "coding", icon: "💻"},
+}
 ---
 
 Following my phone interview with [HomeAway][1], I was invited on site for a more thorough technical interview. The interview took three hours, where I talked with four interviewers from four different teams.

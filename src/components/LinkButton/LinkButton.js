@@ -1,4 +1,4 @@
-import {Link} from "gatsby"
+import Link from "next/link"
 import PropTypes from "prop-types"
 import styled, {css} from "styled-components"
 
@@ -41,13 +41,10 @@ const StyledSpan = styled.span`
 const StyledA = styled.a`
     ${button}
 `
-const StyledLink = styled(Link)`
-    ${button}
-`
 
 const LinkButton = ({
-    to,
-    gatsby = false,
+    href,
+    next = false,
     reverse = false,
     disabled = false,
     ...props
@@ -58,17 +55,17 @@ const LinkButton = ({
         return <StyledSpan className={classes}>{props.children}</StyledSpan>
     }
 
-    if (gatsby) {
+    if (next) {
         return (
-            <StyledLink to={to} className={classes}>
-                {props.children}
-            </StyledLink>
+            <Link href={href} passHref>
+                <StyledA className={classes}>{props.children}</StyledA>
+            </Link>
         )
     }
 
     return (
         <StyledA
-            href={to}
+            href={href}
             className={classes}
             target="_blank"
             rel="noopener noreferrer"
@@ -79,8 +76,8 @@ const LinkButton = ({
 }
 
 LinkButton.propTypes = {
-    to: PropTypes.string.isRequired,
-    gatsby: PropTypes.bool,
+    href: PropTypes.string.isRequired,
+    next: PropTypes.bool,
     reverse: PropTypes.bool,
     disabled: PropTypes.bool,
     children: PropTypes.string,

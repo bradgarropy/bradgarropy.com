@@ -1,10 +1,10 @@
 ---
-title: 🟥 deprecate an npm package
-slug: deprecate-an-npm-package
-date: 2020-12-15
-topic:
-    name: coding
-    icon: 💻
+{
+    title: "🟥 deprecate an npm package",
+    slug: "deprecate-an-npm-package",
+    date: "2020-12-15",
+    topic: {name: "coding", icon: "💻"},
+}
 ---
 
 I recently restructured my [eslint configuration][eslint-config], which left my [original configuration][eslint-config-bradgarropy] completely unused. So in order to avoid confusion, I decided to [deprecate][blog] the old package. Here's how I did it.
@@ -14,6 +14,8 @@ I recently restructured my [eslint configuration][eslint-config], which left my 
 First I added a deprecation message to the `readme`. I put the message towards the top so visitors can easily see it. As a courtesy, I also linked to the [new package][npm-eslint-config] so users know what to use instead.
 
 ![deprecation message][readme]
+
+./images/readme.png
 
 Then I published the `readme` changes to `npm` as a new `patch` version. The two commands below came in handy to bump the version and publish the package, but your deployment setup may vary.
 
@@ -67,6 +69,6 @@ _Have you ever deprecated an `npm` package? If so, let me know your process on [
 [blog]: https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions
 [eslint-config-bradgarropy]: https://github.com/bradgarropy/eslint-config-bradgarropy
 [eslint-config]: https://github.com/bradgarropy/eslint-config
-[archive]: /images/archive.png
-[readme]: /images/readme.png
-[deprecated]: /images/deprecated.png
+[archive]: ./images/archive.png
+[readme]: ./images/readme.png
+[deprecated]: ./images/deprecated.png

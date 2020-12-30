@@ -1,6 +1,6 @@
 **Brad Garropy**  
 _817-266-5629_  
-[_bradgarropy@gmail.com_][email]  
+_[bradgarropy@gmail.com][email]_  
 _604 Autumn Sage Way_  
 _Pflugerville, Texas 78660_
 
@@ -50,7 +50,7 @@ _Magento Premium Search_
 -   Created a Magento extension to load the storefront and admin UI.
 -   Implemented testing and continuous integration and deployment for all projects.
 
-[_Magento Product Recommendations_][prex]
+_[Magento Product Recommendations][prex]_
 
 -   Lead frontend developer from start first proof of concept to release.
 -   Created a Chrome extension to test initial feasibility.

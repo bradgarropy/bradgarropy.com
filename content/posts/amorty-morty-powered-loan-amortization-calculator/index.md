@@ -1,10 +1,10 @@
 ---
-title: 💳 amorty - morty powered loan amortization calculator
-slug: amorty-morty-powered-loan-amortization-calculator
-date: 2018-09-14
-topic:
-    name: coding
-    icon: 💻
+{
+    title: "💳 amorty - morty powered loan amortization calculator",
+    slug: "amorty-morty-powered-loan-amortization-calculator",
+    date: "2018-09-14",
+    topic: {name: "coding", icon: "💻"},
+}
 ---
 
 A few weeks ago my wife and I bought a new family car, a grey Ford Expedition, which I call _the tank_. Buying a car is always super stressful, and the financial negotiations are high pressure and go by way too fast.

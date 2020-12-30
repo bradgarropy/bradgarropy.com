@@ -5,7 +5,7 @@ const PostEdit = ({slug}) => {
     const edit = `https://github.com/bradgarropy/bradgarropy.com/edit/master/content/posts/${slug}/index.md`
 
     return (
-        <LinkButton to={edit} reverse>
+        <LinkButton href={edit} reverse>
             💻 edit on github
         </LinkButton>
     )
