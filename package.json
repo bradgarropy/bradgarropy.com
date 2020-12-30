@@ -28,7 +28,7 @@
     "scripts": {
         "start": "next dev",
         "build": "next build",
-        "netlify": "npm run test && npm run build",
+        "vercel": "npm run test && npm run build",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "test": "jest --passWithNoTests",
