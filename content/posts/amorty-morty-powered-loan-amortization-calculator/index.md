@@ -35,7 +35,7 @@ While I'm happy with the basic functionality at this point and time, there's lot
 If you've got any other ideas you should [create an issue][13]!
 
 [1]: https://amorty.netlify.com/
-[2]: images/amorty.png
+[2]: /images/amorty-morty-powered-loan-amortization-calculator/amorty.png
 [3]: https://www.gatsbyjs.org/
 [4]: https://reactjs.org/
 [5]: https://github.com/eithanshavit/amortization

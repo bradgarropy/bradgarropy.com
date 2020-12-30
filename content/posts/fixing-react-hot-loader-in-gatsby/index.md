@@ -38,5 +38,5 @@ And that's it, no more annoying error message! Hopefully one day Gatsby will ado
 [refresh]: https://github.com/facebook/react/tree/master/packages/react-refresh
 [react]: https://reactjs.org
 [hot-loader]: https://github.com/gaearon/react-hot-loader
-[warning]: /images/warning.png
+[warning]: /images/fixing-react-hot-loader-in-gatsby/warning.png
 [gatsby]: http://gatsbyjs.com

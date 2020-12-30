@@ -48,9 +48,9 @@ This process coudn't have been easier, and now I'm looking for other automation 
 [2]: https://www.npmjs.com/package/eslint-config-bradgarropy
 [3]: https://github.com
 [4]: https://github.com/features/actions
-[5]: images/configure-workflow.png
+[5]: /images/npm-publish-with-github-actions/configure-workflow.png
 [6]: https://github.com/marketplace/actions/github-action-for-npm
-[7]: images/configure-action.png
-[8]: images/main-workflow.png
-[9]: images/actions.png
+[7]: /images/npm-publish-with-github-actions/configure-action.png
+[8]: /images/npm-publish-with-github-actions/main-workflow.png
+[9]: /images/npm-publish-with-github-actions/actions.png
 [10]: https://twitter.com/bradgarropy

@@ -54,5 +54,5 @@ Hopefully this goes to show you that all open source contributions are valued, e
 [4]: https://www.styled-components.com/docs/advanced#theming
 [5]: https://spectrum.chat/styled-components
 [6]: https://twitter.com/mxstbr
-[7]: images/theming-documentation.png
+[7]: /images/styled-components-open-source-contribution/theming-documentation.png
 [8]: https://github.com/styled-components/styled-components-website/pull/410

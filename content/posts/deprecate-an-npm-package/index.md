@@ -15,8 +15,6 @@ First I added a deprecation message to the `readme`. I put the message towards t
 
 ![deprecation message][readme]
 
-./images/readme.png
-
 Then I published the `readme` changes to `npm` as a new `patch` version. The two commands below came in handy to bump the version and publish the package, but your deployment setup may vary.
 
 ```
@@ -69,6 +67,6 @@ _Have you ever deprecated an `npm` package? If so, let me know your process on [
 [blog]: https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions
 [eslint-config-bradgarropy]: https://github.com/bradgarropy/eslint-config-bradgarropy
 [eslint-config]: https://github.com/bradgarropy/eslint-config
-[archive]: ./images/archive.png
-[readme]: ./images/readme.png
-[deprecated]: ./images/deprecated.png
+[archive]: /images/deprecate-an-npm-package/archive.png
+[readme]: /images/deprecate-an-npm-package/readme.png
+[deprecated]: /images/deprecate-an-npm-package/deprecated.png

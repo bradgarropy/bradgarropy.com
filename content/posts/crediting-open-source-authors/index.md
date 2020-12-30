@@ -39,7 +39,7 @@ If nothing else, show some love to the developers who are out there writing code
 
 [fork]: https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-forks
 [pr]: https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests
-[sourcerer]: images/open-sourcerer.png
+[sourcerer]: /images/crediting-open-source-authors/open-sourcerer.png
 [twitter]: https://twitter.com/bradgarropy
 [github]: https://github.com/bradgarropy
 [bg]: https://bradgarropy.com

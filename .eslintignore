@@ -2,11 +2,10 @@
 .vscode
 
 # dependencies
-.cache
 node_modules
 
 # build
-public
+.next
 
 # build
 coverage
