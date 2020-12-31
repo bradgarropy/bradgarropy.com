@@ -1,17 +1,19 @@
 import matter from "gray-matter"
 import remark from "remark"
-import remarkCopyLinkedFiles from "remark-copy-linked-files"
+import remarkAutolinkHeadings from "remark-autolink-headings"
 import remarkGFM from "remark-gfm"
 import remarkHTML from "remark-html"
 import remarkImages from "remark-images"
+import remarkSlug from "remark-slug"
 
 const parseMarkdown = async file => {
     const {data, content} = matter(file)
 
     const html = await remark()
         .use(remarkGFM)
+        .use(remarkSlug)
+        .use(remarkAutolinkHeadings)
         .use(remarkImages)
-        .use(remarkCopyLinkedFiles, {destinationDir: __dirname})
         .use(remarkHTML)
         .process(content)
 
