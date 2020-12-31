@@ -1,5 +1,6 @@
 import Layout from "components/Layout"
 import PostList from "components/PostList"
+import SEO from "components/SEO"
 import TopicMeta from "components/TopicMeta"
 import PropTypes from "prop-types"
 
@@ -10,7 +11,7 @@ const TopicTemplate = ({pageContext, data}) => {
 
     return (
         <Layout>
-            {/* <SEO title={`${icon} ${name}`} description="" /> */}
+            <SEO title={`${icon} ${name}`} description="" />
 
             <TopicMeta topic={topic} />
             <PostList posts={posts} />

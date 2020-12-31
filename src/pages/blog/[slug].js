@@ -1,12 +1,13 @@
 import Layout from "components/Layout"
 import Post from "components/Post"
+import SEO from "components/SEO"
 import {getPost, getPosts} from "lib/post"
 import PropTypes from "prop-types"
 
 const PostTemplate = ({post}) => {
     return (
         <Layout>
-            {/* <SEO title={post.frontmatter.title} description="" /> */}
+            <SEO title={post.frontmatter.title} description="" />
             <Post post={post} />
         </Layout>
     )

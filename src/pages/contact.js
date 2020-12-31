@@ -1,4 +1,5 @@
 import Layout from "components/Layout"
+import SEO from "components/SEO"
 import {getPage} from "lib/page"
 import PropTypes from "prop-types"
 import styled from "styled-components"
@@ -25,7 +26,7 @@ const Contact = styled.div`
 const ContactPage = ({contact}) => {
     return (
         <Layout>
-            {/* <SEO title="👋🏼 say hi" description="" /> */}
+            <SEO title="👋🏼 say hi" description="" />
             <Contact dangerouslySetInnerHTML={{__html: contact.html}} />
         </Layout>
     )

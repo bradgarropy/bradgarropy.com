@@ -1,12 +1,13 @@
 import Layout from "components/Layout"
 import Now from "components/Now"
+import SEO from "components/SEO"
 import {getNows} from "lib/now"
 import PropTypes from "prop-types"
 
 const NowPage = ({nows}) => {
     return (
         <Layout>
-            {/* <SEO title="🧭 now" description="" /> */}
+            <SEO title="🧭 now" description="" />
             <Now now={nows[0]} older={nows[1]} />
         </Layout>
     )

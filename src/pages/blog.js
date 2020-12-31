@@ -1,6 +1,7 @@
 import Layout from "components/Layout"
 import PostList from "components/PostList"
 import Search from "components/Search"
+import SEO from "components/SEO"
 import Fuse from "fuse.js"
 import {getPosts} from "lib/post"
 import PropTypes from "prop-types"
@@ -28,7 +29,7 @@ const BlogPage = ({posts}) => {
 
     return (
         <Layout>
-            {/* <SEO title="✍🏼 blog" description="" /> */}
+            <SEO title="✍🏼 blog" description="" />
 
             <Blog>
                 <Search onSearch={onSearch} />

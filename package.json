@@ -46,7 +46,6 @@
         "gray-matter": "^4.0.2",
         "next": "^10.0.4",
         "react-dom": "^17.0.1",
-        "react-helmet": "^6.0.0",
         "remark": "^13.0.0",
         "remark-copy-linked-files": "^1.2.0",
         "remark-gfm": "^1.0.0",

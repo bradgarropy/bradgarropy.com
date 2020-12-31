@@ -1,4 +1,5 @@
 import Layout from "components/Layout"
+import SEO from "components/SEO"
 import {getPage} from "lib/page"
 import PropTypes from "prop-types"
 import styled from "styled-components"
@@ -14,7 +15,7 @@ const HireMe = styled.div`
 const HireMePage = ({hireMe}) => {
     return (
         <Layout>
-            {/* <SEO title="🤝 let's work together" description="" /> */}
+            <SEO title="🤝 let's work together" description="" />
             <HireMe dangerouslySetInnerHTML={{__html: hireMe.html}} />
         </Layout>
     )

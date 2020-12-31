@@ -1,4 +1,5 @@
 import Layout from "components/Layout"
+import SEO from "components/SEO"
 import {getPage} from "lib/page"
 import PropTypes from "prop-types"
 import styled from "styled-components"
@@ -23,7 +24,7 @@ const Resume = styled.section`
 const ResumePage = ({resume}) => {
     return (
         <Layout>
-            {/* <SEO title="👔 resume" description="" /> */}
+            <SEO title="👔 resume" description="" />
             <Resume dangerouslySetInnerHTML={{__html: resume.html}} />
         </Layout>
     )
