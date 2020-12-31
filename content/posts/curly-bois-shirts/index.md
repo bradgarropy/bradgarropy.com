@@ -23,7 +23,7 @@ It's been five days since launch and I've sold 23 shirts. Definitely less that w
 
 _If you purchased a shirt, thank you so much! Don't forget to share a photo on [Twitter][twitter]!_
 
-[live]: /images/curly-bois-shirts/live.png
+[live]: /images/posts/curly-bois-shirts/live.png
 [promo-one]: https://twitter.com/bradgarropy/status/1331482232121389058
 [promo-two]: https://twitter.com/bradgarropy/status/1333612559144927233
 [twitter]: https://twitter.com/bradgarropy

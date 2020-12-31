@@ -85,7 +85,7 @@ These pieces of tech are always within reach.
 [tech]: https://bradgarropy.com/topic/tech
 [ama]: https://bradgarropy.com/ama
 [nzxt]: https://www.nzxt.com
-[home-office]: images/home-office.jpg
+[home-office]: /images/pages/uses/home-office.jpg
 [mobo]: https://www.amazon.com/NZXT-Z390-N7-Z39XT-W1-Motherboard-Wireless-AC/dp/B07ZGFPLK3
 [cpu]: https://www.amazon.com/Intel-i7-9700K-Desktop-Processor-Unlocked/dp/B07HHN6KBZ
 [cooler]: https://www.amazon.com/Kraken-280mm-Water-Cooling-Bracket/dp/B06XS9QNPS
@@ -111,7 +111,7 @@ These pieces of tech are always within reach.
 [multi-mount]: https://www.elgato.com/en/gaming/multi-mount
 [key-light]: https://www.elgato.com/en/gaming/key-light
 [dbx]: https://www.amazon.com/dbx-286s-Microphone-Channel-Processor/dp/B004LWH79A
-[adobe-office]: images/adobe-office.jpg
+[adobe-office]: /images/pages/uses/adobe-office.jpg
 [macbook]: https://amzn.to/2JZlZFQ
 [magic-keyboard]: https://amzn.to/2M5Ge7y
 [magic-trackpad]: https://amzn.to/2wg00Td
