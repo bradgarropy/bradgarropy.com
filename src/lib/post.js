@@ -27,4 +27,13 @@ const getPosts = async () => {
     return posts
 }
 
-export {getPost, getPosts}
+const getPostsByTopic = async topic => {
+    const posts = await getPosts()
+    const postsByTopic = posts.filter(
+        post => post.frontmatter.topic.name === topic,
+    )
+
+    return postsByTopic
+}
+
+export {getPost, getPosts, getPostsByTopic}
