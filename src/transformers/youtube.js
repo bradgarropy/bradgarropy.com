@@ -1,4 +1,4 @@
-const name = "custom youtube"
+const name = "YouTube"
 
 const shouldTransform = url => {
     return url.includes("youtu.be")
@@ -31,4 +31,4 @@ const getHTML = string => {
     return html
 }
 
-module.exports = {name, shouldTransform, getHTML}
+export default {name, shouldTransform, getHTML}

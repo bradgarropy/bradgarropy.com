@@ -1,3 +1,4 @@
+import remarkEmbedder from "@remark-embedder/core"
 import matter from "gray-matter"
 import remark from "remark"
 import remarkAutolinkHeadings from "remark-autolink-headings"
@@ -6,6 +7,8 @@ import remarkGFM from "remark-gfm"
 import remarkHTML from "remark-html"
 import remarkPrism from "remark-prism"
 import remarkSlug from "remark-slug"
+import twitch from "transformers/twitch"
+import youtube from "transformers/youtube"
 
 const parseMarkdown = async file => {
     const {data, content} = matter(file)
@@ -15,6 +18,9 @@ const parseMarkdown = async file => {
         .use(remarkSlug)
         .use(remarkAutolinkHeadings)
         .use(remarkExternalLinks)
+        .use(remarkEmbedder, {
+            transformers: [twitch, youtube],
+        })
         .use(remarkPrism, {transformInlineCode: true})
         .use(remarkHTML)
         .process(content)
