@@ -1,6 +1,7 @@
 import matter from "gray-matter"
 import remark from "remark"
 import remarkAutolinkHeadings from "remark-autolink-headings"
+import remarkExternalLinks from "remark-external-links"
 import remarkGFM from "remark-gfm"
 import remarkHTML from "remark-html"
 import remarkPrism from "remark-prism"
@@ -13,6 +14,7 @@ const parseMarkdown = async file => {
         .use(remarkGFM)
         .use(remarkSlug)
         .use(remarkAutolinkHeadings)
+        .use(remarkExternalLinks)
         .use(remarkPrism, {transformInlineCode: true})
         .use(remarkHTML)
         .process(content)
