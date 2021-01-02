@@ -1,6 +1,6 @@
 ---
 {
-    title: "🟥 deprecate an npm package",
+    title: "🔴 deprecate an npm package",
     slug: "deprecate-an-npm-package",
     date: "2020-12-15",
     topic: {name: "coding", icon: "💻"},
