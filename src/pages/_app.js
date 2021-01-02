@@ -1,3 +1,5 @@
+import "styles/shadesOfPurple.css"
+
 import PropTypes from "prop-types"
 import {ThemeProvider} from "styled-components"
 import GlobalStyles from "styles/GlobalStyles"

@@ -3,7 +3,7 @@ import remark from "remark"
 import remarkAutolinkHeadings from "remark-autolink-headings"
 import remarkGFM from "remark-gfm"
 import remarkHTML from "remark-html"
-import remarkImages from "remark-images"
+import remarkPrism from "remark-prism"
 import remarkSlug from "remark-slug"
 
 const parseMarkdown = async file => {
@@ -13,7 +13,7 @@ const parseMarkdown = async file => {
         .use(remarkGFM)
         .use(remarkSlug)
         .use(remarkAutolinkHeadings)
-        .use(remarkImages)
+        .use(remarkPrism, {transformInlineCode: true})
         .use(remarkHTML)
         .process(content)
 
