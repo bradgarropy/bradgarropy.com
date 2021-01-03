@@ -4,19 +4,26 @@ import path from "path"
 import {parseMarkdown} from "utils/markdown"
 
 const getPost = async slug => {
-    const postPath = path.join(process.cwd(), `content/posts/${slug}/index.md`)
+    const postPath = path.join(process.cwd(), `content/posts/${slug}.md`)
     const file = fs.readFileSync(postPath, "utf8")
-    const post = parseMarkdown(file)
+    const rawPost = await parseMarkdown(file)
+
+    const post = {
+        ...rawPost,
+        frontmatter: {
+            ...rawPost.frontmatter,
+            slug,
+        },
+    }
 
     return post
 }
 
 const getPosts = async () => {
     const postsPath = path.join(process.cwd(), "content/posts")
-
-    const posts = await Promise.all(
-        fs.readdirSync(postsPath).map(slug => getPost(slug)),
-    )
+    const files = fs.readdirSync(postsPath)
+    const slugs = files.map(file => path.parse(file).name)
+    const posts = await Promise.all(slugs.map(slug => getPost(slug)))
 
     posts.sort((a, b) => {
         const aDate = parse(a.frontmatter.date, "yyyy-MM-dd", new Date())
