@@ -7,7 +7,9 @@ import remarkGFM from "remark-gfm"
 import remarkHTML from "remark-html"
 import remarkPrism from "remark-prism"
 import remarkSlug from "remark-slug"
+import codesandbox from "transformers/codesandbox"
 import twitch from "transformers/twitch"
+import twitter from "transformers/twitter"
 import youtube from "transformers/youtube"
 
 const parseFrontmatter = file => {
@@ -24,7 +26,7 @@ const parseMarkdown = async file => {
         .use(remarkAutolinkHeadings)
         .use(remarkExternalLinks)
         .use(remarkEmbedder, {
-            transformers: [twitch, youtube],
+            transformers: [codesandbox, twitch, twitter, youtube],
         })
         .use(remarkPrism, {transformInlineCode: true})
         .use(remarkHTML)
