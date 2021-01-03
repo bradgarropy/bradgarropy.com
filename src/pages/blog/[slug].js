@@ -1,7 +1,7 @@
 import Layout from "components/Layout"
 import Post from "components/Post"
 import SEO from "components/SEO"
-import {getPost, getPosts} from "lib/post"
+import {getPost, getPostsFrontmatter} from "lib/post"
 import PropTypes from "prop-types"
 
 const PostTemplate = ({post}) => {
@@ -18,10 +18,10 @@ PostTemplate.propTypes = {
 }
 
 const getStaticPaths = async () => {
-    const posts = await getPosts()
+    const posts = getPostsFrontmatter()
 
     const paths = posts.map(post => {
-        const path = {params: {slug: post.frontmatter.slug}}
+        const path = {params: {slug: post.slug}}
         return path
     })
 

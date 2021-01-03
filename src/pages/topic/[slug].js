@@ -2,7 +2,7 @@ import Layout from "components/Layout"
 import PostList from "components/PostList"
 import SEO from "components/SEO"
 import TopicMeta from "components/TopicMeta"
-import {getPosts, getPostsByTopic} from "lib/post"
+import {getPostsByTopic, getPostsFrontmatter} from "lib/post"
 import PropTypes from "prop-types"
 
 const TopicTemplate = ({topic, posts}) => {
@@ -21,11 +21,11 @@ TopicTemplate.propTypes = {
     posts: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
-const getStaticPaths = async () => {
-    const posts = await getPosts()
+const getStaticPaths = () => {
+    const posts = getPostsFrontmatter()
 
     const paths = posts.map(post => {
-        const path = {params: {slug: post.frontmatter.topic.name}}
+        const path = {params: {slug: post.topic.name}}
         return path
     })
 
@@ -35,9 +35,9 @@ const getStaticPaths = async () => {
     }
 }
 
-const getStaticProps = async ({params}) => {
-    const posts = await getPostsByTopic(params.slug)
-    const props = {props: {topic: posts[0].frontmatter.topic, posts}}
+const getStaticProps = ({params}) => {
+    const posts = getPostsByTopic(params.slug)
+    const props = {props: {topic: posts[0].topic, posts}}
 
     return props
 }

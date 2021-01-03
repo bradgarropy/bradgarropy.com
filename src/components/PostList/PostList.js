@@ -29,8 +29,8 @@ const PostList = ({posts}) => {
     return (
         <PostListWrapper>
             {posts.map((post, index) => {
-                const {topic, title, slug} = post.frontmatter
-                const date = formatDate(post.frontmatter.date)
+                const {topic, title, slug} = post
+                const date = formatDate(post.date)
 
                 return (
                     <PostHeader

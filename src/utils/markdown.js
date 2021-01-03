@@ -10,6 +10,11 @@ import remarkSlug from "remark-slug"
 import twitch from "transformers/twitch"
 import youtube from "transformers/youtube"
 
+const parseFrontmatter = file => {
+    const {data} = matter(file)
+    return data
+}
+
 const parseMarkdown = async file => {
     const {data, content} = matter(file)
 
@@ -33,4 +38,4 @@ const parseMarkdown = async file => {
     return markdown
 }
 
-export {parseMarkdown}
+export {parseFrontmatter, parseMarkdown}

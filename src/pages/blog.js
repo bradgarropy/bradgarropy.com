@@ -3,7 +3,7 @@ import PostList from "components/PostList"
 import Search from "components/Search"
 import SEO from "components/SEO"
 import Fuse from "fuse.js"
-import {getPosts} from "lib/post"
+import {getPostsFrontmatter} from "lib/post"
 import PropTypes from "prop-types"
 import {useState} from "react"
 import styled from "styled-components"
@@ -14,7 +14,7 @@ const BlogPage = ({posts}) => {
     const [results, setResults] = useState(posts)
 
     const fuse = new Fuse(posts, {
-        keys: ["frontmatter.title", "frontmatter.topic.name"],
+        keys: ["title", "topic.name"],
     })
 
     const onSearch = query => {
@@ -44,7 +44,7 @@ BlogPage.propTypes = {
 }
 
 const getStaticProps = async () => {
-    const posts = await getPosts()
+    const posts = getPostsFrontmatter()
     return {props: {posts}}
 }
 
