@@ -14,7 +14,7 @@ const post = {
     actions: [
         {
             type: "add",
-            path: "content/posts/{{slugify title}}/index.md",
+            path: "content/posts/{{slugify title}}.md",
             templateFile: "../templates/post.hbs",
         },
     ],
