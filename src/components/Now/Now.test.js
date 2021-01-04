@@ -1,5 +1,6 @@
-import Now from "./Now"
 import {render, screen} from "test-utils/render"
+
+import Now from "./Now"
 
 const mockNow = {
     html: "<p>testing<p>",

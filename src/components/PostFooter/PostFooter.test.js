@@ -1,6 +1,7 @@
 import {useStaticQuery} from "gatsby"
-import PostFooter from "./PostFooter"
 import {render, screen} from "test-utils/render"
+
+import PostFooter from "./PostFooter"
 
 const mockQuery = {
     site: {

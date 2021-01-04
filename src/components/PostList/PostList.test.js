@@ -1,5 +1,6 @@
-import PostList from "./PostList"
 import {render, screen} from "test-utils/render"
+
+import PostList from "./PostList"
 
 const mockPosts = [
     {

@@ -1,5 +1,6 @@
-import Layout from "./Layout"
 import {render, screen} from "test-utils/render"
+
+import Layout from "./Layout"
 
 test("shows content", () => {
     render(

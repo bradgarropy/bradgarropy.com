@@ -1,7 +1,7 @@
+import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Hero from "components/Hero"
 import Layout from "components/Layout"
 import {graphql, useStaticQuery} from "gatsby"
-import SEO from "@bradgarropy/gatsby-plugin-seo"
 
 const IndexPage = () => {
     const data = useStaticQuery(graphql`

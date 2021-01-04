@@ -1,14 +1,14 @@
-import PropTypes from "prop-types"
-import styled from "styled-components"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {
-    faInstagram,
+    faDiscord,
     faGithub,
+    faInstagram,
+    faTwitch,
     faTwitter,
     faYoutube,
-    faTwitch,
-    faDiscord,
 } from "@fortawesome/free-brands-svg-icons"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import PropTypes from "prop-types"
+import styled from "styled-components"
 
 const FontAwesomeIconWrapper = styled(FontAwesomeIcon)`
     font-size: 2.5rem;

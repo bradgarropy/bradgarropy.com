@@ -1,9 +1,9 @@
-import {Link} from "gatsby"
 import Logo from "components/Logo"
-import styled from "styled-components"
-import {AppProvider} from "context/App"
-import Navigation from "components/Navigation"
 import MobileNavigation from "components/MobileNavigation"
+import Navigation from "components/Navigation"
+import {AppProvider} from "context/App"
+import {Link} from "gatsby"
+import styled from "styled-components"
 
 const HeaderWrapper = styled.header`
     display: grid;

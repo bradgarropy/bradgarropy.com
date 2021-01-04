@@ -1,5 +1,6 @@
-import TopicMeta from "./TopicMeta"
 import {render, screen} from "test-utils/render"
+
+import TopicMeta from "./TopicMeta"
 
 const mockTopic = {
     icon: "😎",

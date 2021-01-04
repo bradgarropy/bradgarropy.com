@@ -1,8 +1,8 @@
-import {graphql} from "gatsby"
-import Now from "components/Now"
-import PropTypes from "prop-types"
-import Layout from "components/Layout"
 import SEO from "@bradgarropy/gatsby-plugin-seo"
+import Layout from "components/Layout"
+import Now from "components/Now"
+import {graphql} from "gatsby"
+import PropTypes from "prop-types"
 
 const NowPage = ({data}) => {
     const {node, next, previous} = data.nows.edges[0]

@@ -1,6 +1,6 @@
-import Layout from "components/Layout"
-import FourOhFour from "components/FourOhFour"
 import SEO from "@bradgarropy/gatsby-plugin-seo"
+import FourOhFour from "components/FourOhFour"
+import Layout from "components/Layout"
 
 const NotFoundPage = () => {
     return (
