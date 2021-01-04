@@ -33,7 +33,7 @@ const StyledNow = styled.div`
 
 const Now = ({now, newer = null, older = null}) => {
     const {html, frontmatter} = now
-    const date = formatDate(frontmatter.date)
+    const date = formatDate(frontmatter.slug)
 
     return (
         <>
@@ -47,7 +47,7 @@ const Now = ({now, newer = null, older = null}) => {
 
                 <div className="pagination">
                     <LinkButton
-                        href={`/now/${newer?.frontmatter.date}`}
+                        href={`/now/${newer?.frontmatter.slug}`}
                         next
                         disabled={!newer}
                     >
@@ -55,7 +55,7 @@ const Now = ({now, newer = null, older = null}) => {
                     </LinkButton>
 
                     <LinkButton
-                        href={`/now/${older?.frontmatter.date}`}
+                        href={`/now/${older?.frontmatter.slug}`}
                         next
                         reverse
                         disabled={!older}

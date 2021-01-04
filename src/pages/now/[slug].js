@@ -23,7 +23,7 @@ const getStaticPaths = async () => {
     const nows = await getNows()
 
     const paths = nows.map(now => {
-        const path = {params: {slug: now.frontmatter.date}}
+        const path = {params: {slug: now.frontmatter.slug}}
         return path
     })
 
