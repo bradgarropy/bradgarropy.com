@@ -37,7 +37,6 @@ const getHTML = async url => {
         .map(s => s.replace(/\?ref_src=twsrc.*?fw/g, ""))
         .map(s => s.replace(/<br>/g, "<br />"))
         .join("")
-        .trim()
 
     return html
 }

@@ -26,7 +26,7 @@ const getHTML = string => {
             >
             </iframe>
         </div>
-    `.trim()
+    `
 
     return html
 }
