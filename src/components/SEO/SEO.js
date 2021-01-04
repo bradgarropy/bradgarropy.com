@@ -6,14 +6,14 @@ import {useRouter} from "next/router"
 import PropTypes from "prop-types"
 
 const SEO = ({title = "", description = "", image = ""}) => {
-    const {pathname} = useRouter()
+    const {asPath} = useRouter()
 
     const defaultTitle = config.title
     const defaultTwitterImage = `${config.url}/twitter.png`
     const defaultFacebookImage = `${config.url}/facebook.png`
 
     const seoImage = `${config.url}${image}`
-    const seoUrl = `${config.url}${pathname}`
+    const seoUrl = `${config.url}${asPath}`
 
     return (
         <>
