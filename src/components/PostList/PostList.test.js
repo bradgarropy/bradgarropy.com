@@ -4,27 +4,21 @@ import PostList from "./PostList"
 
 const mockPosts = [
     {
-        html: "<p>testing</p>",
-        frontmatter: {
-            slug: "my-first-post",
-            title: "🧪 My First Post",
-            date: "December 25, 2020",
-            topic: {
-                icon: "😎",
-                name: "life",
-            },
+        slug: "my-first-post",
+        title: "🧪 My First Post",
+        date: "2020-12-25",
+        topic: {
+            icon: "😎",
+            name: "life",
         },
     },
     {
-        html: "<p>testing</p>",
-        frontmatter: {
-            slug: "my-second-post",
-            title: "🧪 My Second Post",
-            date: "January 1, 2021",
-            topic: {
-                icon: "😎",
-                name: "life",
-            },
+        slug: "my-second-post",
+        title: "🧪 My Second Post",
+        date: "2021-01-01",
+        topic: {
+            icon: "😎",
+            name: "life",
         },
     },
 ]
@@ -33,7 +27,7 @@ test("shows posts", () => {
     render(<PostList posts={mockPosts} />)
 
     mockPosts.forEach(mockPost => {
-        expect(screen.getByText(mockPost.frontmatter.title))
+        expect(screen.getByText(mockPost.title))
     })
 })
 

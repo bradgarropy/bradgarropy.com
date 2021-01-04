@@ -7,7 +7,7 @@ const mockPost = {
     frontmatter: {
         slug: "my-test-post",
         title: "🧪 My Test Post",
-        date: "January 1, 2021",
+        date: "2021-01-01",
         topic: {
             icon: "😎",
             name: "life",
@@ -15,20 +15,10 @@ const mockPost = {
     },
 }
 
-const mockQuery = {
-    site: {
-        siteMetadata: {
-            siteUrl: "https://bradgarropy.com",
-        },
-    },
-}
-
-useStaticQuery.mockReturnValue(mockQuery)
-
 test("shows post header", () => {
     render(<Post post={mockPost} />)
 
-    expect(screen.getByText(mockPost.frontmatter.date, {exact: false}))
+    expect(screen.getByText("January 1, 2021", {exact: false}))
     expect(screen.getByText(`#${mockPost.frontmatter.topic.name}`))
     expect(screen.getByText(mockPost.frontmatter.title))
 })
