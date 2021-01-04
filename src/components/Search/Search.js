@@ -35,6 +35,7 @@ const Search = ({onSearch}) => {
     return (
         <StyledSearch
             type="text"
+            aria-label="search"
             placeholder="search blog"
             value={query}
             onChange={onChange}
