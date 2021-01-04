@@ -11,43 +11,35 @@ const NavigationWrapper = styled.nav`
     }
 `
 
-const NavigationLink = styled.a`
-    color: ${({theme}) => theme.colors.black};
-
-    &:hover {
-        color: ${({theme}) => theme.colors.primary};
-    }
-`
-
 const Navigation = () => {
     return (
         <NavigationWrapper>
             <Link href="/blog" passHref>
-                <NavigationLink>blog</NavigationLink>
+                <a>blog</a>
             </Link>
 
             <span>|</span>
 
             <Link href="/now" passHref>
-                <NavigationLink>now</NavigationLink>
+                <a>now</a>
             </Link>
 
             <span>|</span>
 
             <Link href="/uses" passHref>
-                <NavigationLink>uses</NavigationLink>
+                <a>uses</a>
             </Link>
 
             <span>|</span>
 
             <Link href="/hire-me" passHref>
-                <NavigationLink>hire me</NavigationLink>
+                <a>hire me</a>
             </Link>
 
             <span>|</span>
 
             <Link href="/contact" passHref>
-                <NavigationLink>contact</NavigationLink>
+                <a>contact</a>
             </Link>
         </NavigationWrapper>
     )

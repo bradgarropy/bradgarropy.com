@@ -32,14 +32,15 @@ const GlobalStyles = createGlobalStyle`
     }
 
     a {
-        color: ${({theme}) => theme.colors.primary};
+        color: ${({theme}) => theme.colors.black};
         text-decoration: none;
         transition: all 300ms;
 
         &:hover {
-            color: rgba(0, 0, 0, 0.8);
+            color: ${({theme}) => theme.colors.primary};
         }
     }
+
 
     img {
         display: block;

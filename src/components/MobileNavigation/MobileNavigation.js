@@ -34,10 +34,6 @@ const MobileNavigationLinks = styled.div`
     justify-content: center;
 `
 
-const MobileNavigationLink = styled(Link)`
-    color: ${({theme}) => theme.colors.black};
-`
-
 const MobileNavigation = () => {
     const appContext = useContext(AppContext)
     const {open, setOpen} = appContext
@@ -51,15 +47,25 @@ const MobileNavigation = () => {
             <CloseIcon icon={faTimes} onClick={onClick} aria-label="close" />
 
             <MobileNavigationLinks>
-                <MobileNavigationLink to="/blog">blog</MobileNavigationLink>
-                <MobileNavigationLink to="/now">now</MobileNavigationLink>
-                <MobileNavigationLink to="/uses">uses</MobileNavigationLink>
-                <MobileNavigationLink to="/hire-me">
-                    hire me
-                </MobileNavigationLink>
-                <MobileNavigationLink to="/contact">
-                    contact
-                </MobileNavigationLink>
+                <Link href="/blog" passHref>
+                    <a>blog</a>
+                </Link>
+
+                <Link href="/now" passHref>
+                    <a>now</a>
+                </Link>
+
+                <Link href="/uses" passHref>
+                    <a>uses</a>
+                </Link>
+
+                <Link href="/hire-me" passHref>
+                    <a>hire me</a>
+                </Link>
+
+                <Link href="/contact" passHref>
+                    <a>contact</a>
+                </Link>
             </MobileNavigationLinks>
         </MobileNavigationWrapper>
     ) : (
