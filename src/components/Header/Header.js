@@ -20,8 +20,8 @@ const HeaderWrapper = styled.header`
 const Header = () => {
     return (
         <HeaderWrapper>
-            <Link href="/" aria-label="bg">
-                <a>
+            <Link href="/">
+                <a aria-label="home">
                     <Logo />
                 </a>
             </Link>

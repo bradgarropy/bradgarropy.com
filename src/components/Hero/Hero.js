@@ -28,7 +28,7 @@ const Hero = () => {
     return (
         <HeroWrapper>
             <HeroImage>
-                <Image src="/bg-shadow.png" width={632} height={630} />
+                <Image src="/bg-shadow.png" alt="bg" width={632} height={630} />
             </HeroImage>
 
             <HeroText>
