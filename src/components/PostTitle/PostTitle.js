@@ -13,14 +13,6 @@ const PostTitleWrapper = styled.div`
             line-height: 1.3;
         }
     }
-
-    a {
-        color: ${({theme}) => theme.colors.black};
-
-        &:hover {
-            color: ${({theme}) => theme.colors.primary};
-        }
-    }
 `
 
 const PostTitle = ({title, slug}) => {
