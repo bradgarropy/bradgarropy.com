@@ -4,5 +4,5 @@ import Header from "./Header"
 
 test("shows logo", () => {
     render(<Header />)
-    expect(screen.getByLabelText("bg"))
+    expect(screen.getByLabelText("home"))
 })

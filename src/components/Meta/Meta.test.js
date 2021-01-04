@@ -1,7 +1,6 @@
 import Meta from "components/Meta"
-import {render, screen} from "test-utils/render"
+import {render} from "test-utils/render"
 
 test("renders", () => {
-    render(<Meta title={mockTitle} />)
-    expect(screen.getByText(mockTitle))
+    render(<Meta />)
 })

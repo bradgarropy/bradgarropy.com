@@ -1,7 +1,6 @@
 import SEO from "components/SEO"
-import {render, screen} from "test-utils/render"
+import {render} from "test-utils/render"
 
 test("renders", () => {
-    render(<SEO title={mockTitle} />)
-    expect(screen.getByText(mockTitle))
+    render(<SEO />)
 })

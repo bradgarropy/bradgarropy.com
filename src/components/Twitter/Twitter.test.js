@@ -1,7 +1,6 @@
 import Twitter from "components/Twitter"
-import {render, screen} from "test-utils/render"
+import {render} from "test-utils/render"
 
 test("renders", () => {
-    render(<Twitter title={mockTitle} />)
-    expect(screen.getByText(mockTitle))
+    render(<Twitter />)
 })
