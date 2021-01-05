@@ -41,12 +41,6 @@ I really fell in love with streaming last year, and I've got a lot of ideas to p
 
 There's also room for infrastructure improvements on my stream. I'd like to convert my overlays to `html`, which serves as a jumping off point for some great integrations. It also might be cool to add a `live` banner to [bradgarropy.com][website] which links over to [Twitch][twitch].
 
----
-
-<p align="center"><em>From here on out, the goals primarily focus on maintentance.</em></p>
-
----
-
 ## 📺 youtube
 
 I want to see continued growth on [YouTube][youtube]. Content here is the most fun to produce, so I'd like to do one video per month and reach 500 subscribers.
