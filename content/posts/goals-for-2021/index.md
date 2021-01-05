@@ -19,7 +19,7 @@ With my recent [achilles injury][achilles], my wife has really stepped up to tak
 
 ## 😁 positivity
 
-Given the [injury][achilles], there's I lot a could be salty about. But so far I've maintained a positive attitude about my healing and recovery. I want to carry that through the rest of the year. I believe a positive attitude will get me through tough times during the recovery.
+Given the [injury][achilles], there's a lot I could be salty about. But so far I've maintained a positive attitude about my healing and recovery. I want to carry that through the rest of the year. I believe a positive attitude will get me through tough times during the recovery.
 
 ## 🦶 recovery
 
