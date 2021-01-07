@@ -29,7 +29,7 @@ I use my home office as a place to stream, play games, and work on personal proj
 
 As for accessories, I love clicky mechanical keyboards and large palm grip mice. I also find that dual monitor setups on Windows machines help maximize my productivity.
 
-[Razer BlackWidow Ultimate Keyboard][blackwidow]  
+[Drop CTRL High Profile Keyboard][ctrl]  
 [Mionix Naos 8200 Mouse][naos]  
 [Mionix Propus 380 Mouse Pad][propus]  
 2x [Dell U2515H Monitors][u2515h]  
@@ -95,7 +95,7 @@ These pieces of tech are always within reach.
 [gpu]: https://www.amazon.com/NVIDIA-GeForce-Super-Founders-Graphics/dp/B07W3P4PC2
 [psu]: https://www.amazon.com/NP-1PM-E850A-Modular-Digital-Supply-Certified/dp/B07CGCFWJY
 [case]: https://www.amazon.com/NZXT-H510i-Mid-Tower-Integrated-Water-Cooling/dp/B07SB3B1Z5
-[blackwidow]: https://amzn.to/2QsPZeI
+[ctrl]: https://drop.com/buy/drop-ctrl-high-profile-mechanical-keyboard
 [naos]: https://amzn.to/2K3u3Fy
 [propus]: https://amzn.to/2whwgoS
 [u2515h]: https://amzn.to/2MbuEYw
