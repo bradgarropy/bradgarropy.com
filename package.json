@@ -93,6 +93,7 @@
         "plop-helper-date": "^1.0.0",
         "plop-helper-slugify": "^1.1.0",
         "prettier": "^2.2.1",
-        "react": "^17.0.1"
+        "react": "^17.0.1",
+        "regenerator-runtime": "^0.13.7"
     }
 }
