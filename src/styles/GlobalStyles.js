@@ -34,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
 
     p {
         color: rgba(0, 0, 0, 0.8);
-        line-height: 1.75;
+        line-height: 1.75rem;
         margin-top: 1.75rem;
         margin-bottom: 1.75rem;
     }
