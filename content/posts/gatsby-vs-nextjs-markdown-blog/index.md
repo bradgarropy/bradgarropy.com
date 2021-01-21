@@ -34,25 +34,52 @@ I much preferred Gatsby's slow start for a fast runtime, as I usually only start
 
 ## 🔻 markdown support
 
-markdown parsing more involved
+Markdown parsing and transformation is key when creating a blog. I was used to relying on Gatsby's [plugin ecosystem][gatsby-plugins] to handle all that for me, but with Next.js I was on my own. I had to become an expert at [remark][remark] and its plugins in order to get the transformations I wanted. I even had to [fix a bug][bug] in one of the libraries!
 
-code block line highlighting
+-   GitHub Flavored Markdown
+-   Linked headings
+-   Media embeds
+-   Code highlighting
+-   External links open in new tab
 
-syntax highlighting with vscode themes
+In order to accomplish this I dug deep into the list of [remark plugins][remark-plugins], and leveraged a few of them to create my own `parseMarkdown` function. Even though it's only twenty lines of code, this simple function took a lot of investment to create, and it's still not perfect.
 
-remark embedder custom transformers
+```javascript
+const parseMarkdown = async file => {
+    const {data, content} = matter(file)
 
-header link icon not showing up
+    const html = await remark()
+        .use(remarkGFM)
+        .use(remarkSlug)
+        .use(remarkAutolinkHeadings)
+        .use(remarkExternalLinks)
+        .use(remarkEmbedder, {
+            transformers: [codesandbox, twitch, twitter, youtube],
+        })
+        .use(remarkPrism, {transformInlineCode: true})
+        .use(remarkHTML)
+        .process(content)
 
-https://twitter.com/bradgarropy/status/1344375442959200257
-https://twitter.com/bradgarropy/status/1345370542845652997
-https://twitter.com/bradgarropy/status/1345903752314761218
+    const markdown = {
+        frontmatter: data,
+        html: html.toString(),
+    }
+
+    return markdown
+}
+```
+
+I still can't figure out how to highlight specific lines in code blocks. The link icon next to headers is not showing up. I had to write custom transformers for every media embed. I lost the ability to use `vscode` themes for syntax highlighting.
+
+These are the types of things that all of the `gatsby-remark-*` plugins provide for you.
 
 ## 🖼️ image component
 
-image component does not blur up
+What really sparked me to try Next.js was the announcement of their [Image component][next-image].
 
-image component in remark
+Just like their development server, Next.js optimizes images on the fly to prevent long build times. Although the Next.js `<Image/>` component does prevent [layout shift][cls], it still feels like the image just pops in. That's why I prefer the blur up effect of Gatsby images.
+
+But the worst thing about Next.js images is that they can't be used inside of `markdown` files without writing a custom `remark` transformer...... more stuff here...... This is yet another example how the Gatsby plugin ecosystem has an answer for everything.
 
 ## 📚 content location
 
@@ -62,6 +89,13 @@ content colocation
 
 chose gatsby
 
+[cls]: https://web.dev/cls
+[gatsby-image]: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-image
+[next-image]: https://nextjs.org/docs/basic-features/image-optimization
+[bug]: https://twitter.com/bradgarropy/status/1345903752314761218
+[remark-plugins]: https://github.com/remarkjs/remark/blob/main/doc/plugins.md
+[remark]: https://github.com/remarkjs/remark
+[gatsby-plugins]: https://www.gatsbyjs.com/plugins
 [conversion]: https://github.com/leerob/gatsby-to-nextjs
 [leerob]: https://twitter.com/leeerob
 [diff]: images/diff.png
