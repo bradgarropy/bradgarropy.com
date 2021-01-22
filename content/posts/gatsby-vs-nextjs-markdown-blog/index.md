@@ -75,11 +75,11 @@ These are the types of things that all of the `gatsby-remark-*` plugins provide 
 
 ## 🖼️ image component
 
-What really sparked me to try Next.js was the announcement of their [Image component][next-image].
+What really sparked me to try Next.js was the announcement of their [image component][next-image].
 
 Just like their development server, Next.js optimizes images on the fly to prevent long build times. Although the Next.js `<Image/>` component does prevent [layout shift][cls], it still feels like the image just pops in. That's why I prefer the blur up effect of Gatsby images.
 
-But the worst thing about Next.js images is that they can't be used inside of `markdown` files without writing a custom `remark` transformer...... more stuff here...... This is yet another example how the Gatsby plugin ecosystem has an answer for everything.
+But the worst thing about Next.js images is that they can't be used inside of Markdown files without writing a custom `remark` transformer. With Gatsby, getting optimized images from Markdown files is as simple as installing [gatsby-remark-images][gatsby-remark-images]. This is yet another example of how the Gatsby plugin ecosystem has an answer for everything, especially when it comes to Markdown.
 
 ## 📚 content location
 
@@ -89,6 +89,7 @@ content colocation
 
 chose gatsby
 
+[gatsby-remark-images]: https://www.gatsbyjs.com/plugins/gatsby-remark-images
 [cls]: https://web.dev/cls
 [gatsby-image]: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-image
 [next-image]: https://nextjs.org/docs/basic-features/image-optimization
