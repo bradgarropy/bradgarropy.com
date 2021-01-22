@@ -19,7 +19,7 @@ By the end of it all I was definitely net negative, but I also had to add my fai
 
 ## 👨🏼‍💻 development environment
 
-Once I had things up and running, I started to realize that the Next.js development server seemed very slow. I began to realize that Next.js operates in a very different way than Gatsby.
+Once I had things up and running, I started to notice that the Next.js development server seemed slow. I realized that Next.js operates in a very different way than Gatsby.
 
 | Platform | Operation | Time       |
 | :------- | :-------- | :--------- |
@@ -34,7 +34,7 @@ I much preferred Gatsby's slow start for a fast runtime, as I usually only start
 
 ## 🔻 markdown support
 
-Markdown parsing and transformation is key when creating a blog. I was used to relying on Gatsby's [plugin ecosystem][gatsby-plugins] to handle all that for me, but with Next.js I was on my own. I had to become an expert at [remark][remark] and its plugins in order to get the transformations I wanted. I even had to [fix a bug][bug] in one of the libraries!
+Markdown parsing and transformation is key when creating a blog. I usually rely on Gatsby's [plugin ecosystem][gatsby-plugins] to handle all that for me, but with Next.js I was on my own. I had to become an expert at [remark][remark] and its plugins in order to get the transformations I wanted. I even had to [fix a bug][bug] in one of the libraries!
 
 -   GitHub Flavored Markdown
 -   Linked headings
@@ -69,9 +69,9 @@ const parseMarkdown = async file => {
 }
 ```
 
-I still can't figure out how to highlight specific lines in code blocks. The link icon next to headers is not showing up. I had to write custom transformers for every media embed. I lost the ability to use `vscode` themes for syntax highlighting.
+I still can't figure out how to highlight specific lines in code blocks. The icon next to linked headers is not showing up. I had to write custom transformers for every media embed. I lost the ability to use `vscode` themes for syntax highlighting.
 
-These are the types of things that all of the `gatsby-remark-*` plugins provide for you.
+These are necessary features in a developer blog, and these are the types of things that the `gatsby-remark-*` plugins provide for you
 
 ## 🖼️ image component
 
@@ -79,16 +79,25 @@ What really sparked me to try Next.js was the announcement of their [image compo
 
 Just like their development server, Next.js optimizes images on the fly to prevent long build times. Although the Next.js `<Image/>` component does prevent [layout shift][cls], it still feels like the image just pops in. That's why I prefer the blur up effect of Gatsby images.
 
-But the worst thing about Next.js images is that they can't be used inside of Markdown files without writing a custom `remark` transformer. With Gatsby, getting optimized images from Markdown files is as simple as installing [gatsby-remark-images][gatsby-remark-images]. This is yet another example of how the Gatsby plugin ecosystem has an answer for everything, especially when it comes to Markdown.
+But the worst thing about Next.js images is that they can't be used inside of Markdown files without writing a custom `remark` transformer. With Gatsby, getting optimized images from Markdown files is as simple as installing [gatsby-remark-images][gatsby-remark-images].
+
+This is yet another example of how the Gatsby plugin ecosystem has an answer for everything, especially when it comes to Markdown.
 
 ## 📚 content location
 
-content colocation
+I really enjoy keeping my blog posts and their associated images in the same directory. With Next.js, all images referenced in Markdown must be stored in the `/public` directory. This provides more friction when authoring a blog post, and would make things more difficult if I ever wanted to move my content elsewhere in the future.
 
 ## 👨🏼‍⚖️ the verdict
 
-chose gatsby
+_Remember, I'm evaluating these two frameworks in the context of a Markdown blog. My criteria would change if I were evaluating them for a web application._
 
+I didn't talk about things like hosting, TypeScript support, MDX support, testing, redirects, or serverless functions. But I found that [Gatsby][gatsby] and [Next.js][nextjs] compare similarly on those fronts.
+
+Ultimately I chose the tool that felt like it was made specifically for Markdown blogging, the tool that offers plugins to do exactly what I want, and the tool that popularized static sites on the [Jamstack][jamstack].
+
+**I stuck with Gatsby.**
+
+[jamstack]: https://jamstack.org
 [gatsby-remark-images]: https://www.gatsbyjs.com/plugins/gatsby-remark-images
 [cls]: https://web.dev/cls
 [gatsby-image]: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-image
