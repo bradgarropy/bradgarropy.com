@@ -7,6 +7,10 @@ topic:
     icon: 😎
 ---
 
+[Chris Coyier][chris-coyier], [Dan Mall][dan-mall], and [Dave Rupert][dave-rupert].
+
+---
+
 ### **6:45AM**
 
 Wake Up
@@ -38,3 +42,13 @@ Kid's Bedtime
 ### **12:00AM**
 
 Bed
+
+---
+
+I'd like to tag [James Quick][james-quick] and [Brian Morrison][brian-morrison].
+
+[chris-coyier]: https://chriscoyier.net/2021/01/08/my-typical-day
+[dan-mall]: https://danmall.me/articles/my-typical-day
+[dave-rupert]: https://daverupert.com/2021/01/my-typical-day
+[james-quick]: https://www.jamesqquick.com
+[brian-morrison]: https://brianmorrison.me
