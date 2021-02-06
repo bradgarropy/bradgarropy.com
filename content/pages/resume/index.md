@@ -133,14 +133,17 @@ _CMC / Force 10 Switch Interface_
 -   Implemented the CMC side of the interface.
 -   Developed a test executable to run interface commands.
 
-## Talks
+## Talks & Appearances
 
-_8/14/2020_ | [Working on Side Projects][side-projects] with James Quick  
-_6/24/2020_ | [Learning & Unlearning How To Code][whiskey-wednesday] with Scott Spence & Marc Backes  
-_6/13/2020_ | [Publishing NPM Packages][webinar] with James Quick  
-_4/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick  
-_9/05/2019_ | [React Context + Hooks: A Lightweight Redux Alternative][context-hooks]  
-_7/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsby-netlify]
+_11/11/2020_ | [Syntax.fm][syntax] with Scott Tolinski and Wes Bos  
+_11/09/2020_ | [The Chau Codes Podcast][chau-codes] with Justin Chau  
+_10/06/2020_ | [That's My Jamstack][thats-my-jamstack] with Bryan Robinson  
+_08/14/2020_ | [Working on Side Projects][side-projects] with James Quick  
+_06/24/2020_ | [Learning & Unlearning How To Code][whiskey-wednesday] with Scott Spence & Marc Backes  
+_06/13/2020_ | [Publishing NPM Packages][webinar] with James Quick  
+_04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick  
+_09/05/2019_ | [React Context + Hooks: A Lightweight Redux Alternative][context-hooks]  
+_07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsby-netlify]
 
 ## Personal Projects
 
@@ -172,6 +175,13 @@ _7/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsby
 -   Leverages FourSquare for restaurant information.
 -   Tracks most and least popular restaurants with Airtable.
 -   Built with Gatsby and React, hosted on Netlify.
+
+[🎥 bg codes twitch overlay][bg-codes]
+
+-   Gatsby website used as a Twitch overlay.
+-   Supports solo and guest streaming.
+-   Includes a countdown screen.
+-   Stream data sourced through Firebase.
 
 [🏋🏼‍♂️ iron jimmy][iron-jimmy]
 
@@ -211,60 +221,70 @@ _7/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsby
 
 ### Packages / Extensions / Bots
 
+[💡 hue-sdk][hue-sdk]
+
+-   Philips Hue JavaScript SDK.
+-   Written in TypeScript.
+-   Powers functionality in my Twitch bot.
+-   Over 250 downloads!
+
+[👨🏼‍🔬 labman][labman]
+
+-   Command line tool for managing issue labels across GitHub repositories.
+-   Built with JavaScript and Node.js.
+-   Over 1,300 downloads!
+
+[🃏 business-card][business-card]
+
+-   Digital business card.
+-   Run `npx bradgarropy` to see for yourself.
+-   Interactive CLI to help users create their own business card.
+-   Over 1,200 downloads!
+
+[⏳ use-countdown][use-countdown]
+
+-   React hook countdown timer.
+-   Written in TypeScript.
+-   Powers my Twitch starting soon page.
+-   Over 400 downloads!
+
+[🤖 bg codes twitch bot][twitch-bot]
+
+-   Twitch bot that responds to chat commands and offers redemptions.
+-   Integrates with the Hue SDK to control lights.
+-   Modifies the vscode theme based on chat commands.
+
 [🤠 daily texas country twitter bot][dtxc-bot]
 
 -   Twitter bot that tweets a random song from a playlist daily.
 -   Leverages the Spotify API to retrieve the playlist, and the Twitter API to publish tweets.
 -   Executed by a serverless function triggered by a Google Cloud Scheduler event.
 
-[👨🏼‍🔬 labman][labman]
-
--   Command line tool for managing issue labels across GitHub repositories.
--   Built with JavaScript and Node.js.
--   Over 1,000 downloads!
-
-[🃏 business-card][business-card]
-
--   Digital business card.
--   Run `npx bradgarropy` to see for yourself.
-
 [🔎 gatsby-plugin-seo][gatsby-plugin-seo]
 
 -   SEO plugin for Gatsby.
 -   Supports Facebook, Twitter, Open Graph, and meta tags.
--   Over 250 downloads!
+-   Over 600 downloads!
 
-[💎 eslint-config-bradgarropy][eslint]
+[💎 eslint-config][eslint]
 
 -   Shareable version of my eslint configuration.
 -   Integrates accessibility, React, and React hooks plugins.
+-   Over 400 downloads!
 
 [✂ bg-snippets][bg-snippets]
 
 -   Visual Studio Code snippet library.
--   Includes JavaScript, serverless, Jest, React, Styled Components, Markdown, and Python snippets.
+-   Includes JavaScript, TypeScript, serverless, Jest, React, Styled Components, Markdown, and Python snippets.
+-   Over 500 downloads!
 
-## Open Source
-
-[gatsbyjs / gatsby][gatsby]  
-[zeit / next-plugins][next]  
-[styled-components / styled-components-website][styled-components]  
-[magento / magento-product-recommendations][magento-product-recommendations]  
-[magento / magento-product-recommendations-admin][magento-product-recommendations-admin]  
-[MichaelDeBoey / gatsby-remark-embedder][gatsby-remark-embedder]  
-[coddingtonbear / python-myfitnesspal][python-myfitnesspal]  
-[Shopify / js-buy-sdk][shopify-sdk]  
-[wesbos / awesome-uses][awesome-uses]  
-[emmabostian / developer-portfolios][developer-portfolios]  
-[luiscarlin / gifmeajoke.com][gifmeajoke]
-
-## Links
+## Platforms
 
 [Twitch][twitch]  
 [YouTube][youtube]  
 [Twitter][twitter]  
 [GitHub][github]  
-[NPM][npm]  
+[npm][npm]  
 [LinkedIn][linkedin]
 
 [email]: mailto:bradgarropy@gmail.com
@@ -291,22 +311,18 @@ _7/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsby
 [labman]: https://npmjs.com/package/labman
 [business-card]: https://npmjs.com/package/bradgarropy
 [gatsby-plugin-seo]: https://gatsbyjs.org/packages/@bradgarropy/gatsby-plugin-seo
-[eslint]: https://npmjs.com/package/eslint-config-bradgarropy
+[eslint]: https://npmjs.com/package/@bradgarropy/eslint-config
 [bg-snippets]: https://marketplace.visualstudio.com/items?itemName=bradgarropy.bg-snippets
-[gatsby]: https://github.com/gatsbyjs/gatsby/pulls?q=is%3Apr+author%3Abradgarropy
-[next]: https://github.com/zeit/next-plugins/pulls?q=is%3Apr+author%3Abradgarropy
-[styled-components]: https://github.com/styled-components/styled-components-website/pulls?q=is%3Apr+author%3Abradgarropy
-[magento-product-recommendations]: https://github.com/magento/magento-product-recommendations/pulls?q=is%3Apr+author%3Abradgarropy
-[magento-product-recommendations-admin]: https://github.com/magento/magento-product-recommendations-admin/pulls?q=is%3Apr+author%3Abradgarropy
-[gatsby-remark-embedder]: https://github.com/MichaelDeBoey/gatsby-remark-embedder/pulls?q=is%3Apr+author%3Abradgarropy
-[python-myfitnesspal]: https://github.com/coddingtonbear/python-myfitnesspal/pulls?q=is%3Apr+author%3Abradgarropy
-[shopify-sdk]: https://github.com/Shopify/js-buy-sdk/pulls?q=is%3Apr+author%3Abradgarropy
-[awesome-uses]: https://github.com/wesbos/awesome-uses/pulls?q=is%3Apr+author%3Abradgarropy
-[developer-portfolios]: https://github.com/emmabostian/developer-portfolios/pulls?q=is%3Apr+author%3Abradgarropy
-[gifmeajoke]: https://github.com/luiscarlin/gifmeajoke.com/pulls?q=is%3Apr+author%3Abradgarropy
 [twitch]: https://twitch.tv/bradgarropy
 [youtube]: https://youtube.com/bradgarropy
 [twitter]: https://twitter.com/bradgarropy
 [github]: https://github.com/bradgarropy
 [npm]: https://npmjs.com/~bradgarropy
 [linkedin]: https://linkedin.com/in/bradgarropy
+[syntax]: https://youtu.be/W7y03fsqHJw?t=2503
+[chau-codes]: https://youtu.be/A85MnRidA2A
+[thats-my-jamstack]: https://thatsmyjamstack.com/posts/brad-garropy
+[use-countdown]: https://www.npmjs.com/package/@bradgarropy/use-countdown
+[hue-sdk]: https://www.npmjs.com/package/@bradgarropy/hue-sdk
+[twitch-bot]: https://github.com/bradgarropy/twitch-bot
+[bg-codes]: https://bg-codes.netlify.app
