@@ -42,5 +42,10 @@
     to = "https://cottonbureau.com/people/brad-garropy"
     status = 301
 
+[[redirects]]
+    from = "/sponsor"
+    to = "https://github.com/sponsors/bradgarropy"
+    status = 301
+
 [[plugins]]
     package = "netlify-plugin-gatsby-cache"
