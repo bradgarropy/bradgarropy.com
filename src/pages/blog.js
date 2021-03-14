@@ -1,30 +1,19 @@
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Layout from "components/Layout"
 import PostList from "components/PostList"
-import Search from "components/Search"
-import Fuse from "fuse.js"
-import {graphql} from "gatsby"
-import PropTypes from "prop-types"
+import PostSearchBar from "components/PostSearchBar"
+import {usePosts} from "hooks"
 import {useState} from "react"
 import styled from "styled-components"
 
 const Blog = styled.div``
 
-const BlogPage = ({data}) => {
-    const [posts, setPosts] = useState(data.posts.nodes)
+const BlogPage = () => {
+    const allPosts = usePosts()
+    const [posts, setPosts] = useState(allPosts)
 
-    const fuse = new Fuse(posts, {
-        keys: ["frontmatter.title", "frontmatter.topic.name"],
-    })
-
-    const onSearch = query => {
-        if (!query) {
-            setPosts(data.posts.nodes)
-            return
-        }
-
-        const newPosts = fuse.search(query).map(result => result.item)
-        setPosts(newPosts)
+    const onSearch = filteredPosts => {
+        setPosts(filteredPosts)
     }
 
     return (
@@ -32,36 +21,13 @@ const BlogPage = ({data}) => {
             <SEO title="✍🏼 blog" description="" />
 
             <Blog>
-                <Search onSearch={onSearch} />
+                <PostSearchBar onSearch={onSearch} />
                 <PostList posts={posts} />
             </Blog>
         </Layout>
     )
 }
 
-BlogPage.propTypes = {
-    data: PropTypes.object.isRequired,
-}
-
-export const blogPageQuery = graphql`
-    {
-        posts: allMarkdownRemark(
-            filter: {fileAbsolutePath: {regex: "/content/posts/"}}
-            sort: {fields: frontmatter___date, order: DESC}
-        ) {
-            nodes {
-                frontmatter {
-                    slug
-                    title
-                    date(formatString: "MMMM D, YYYY")
-                    topic {
-                        name
-                        icon
-                    }
-                }
-            }
-        }
-    }
-`
+BlogPage.propTypes = {}
 
 export default BlogPage
