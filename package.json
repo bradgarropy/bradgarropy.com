@@ -27,13 +27,14 @@
     "scripts": {
         "start": "gatsby develop",
         "build": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
-        "netlify": "npm run test && npm run build",
+        "netlify": "npm run build",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
         "format": "prettier --check .",
         "format:fix": "prettier --write .",
         "test": "jest --passWithNoTests",
-        "test:watch": "npm run test -- --watch",
+        "test:watch": "jest --passWithNoTests --watch",
+        "contributors": "all-contributors generate",
         "new": "plop"
     },
     "dependencies": {
@@ -79,6 +80,7 @@
         "@testing-library/jest-dom": "^5.11.6",
         "@testing-library/react": "^11.2.2",
         "@testing-library/user-event": "^12.6.0",
+        "all-contributors-cli": "^6.20.0",
         "babel-eslint": "^10.1.0",
         "babel-jest": "^26.6.3",
         "cross-env": "^7.0.3",
