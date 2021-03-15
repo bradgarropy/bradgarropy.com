@@ -29,7 +29,9 @@
         "build": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
         "netlify": "npm run test && npm run build",
         "lint": "eslint .",
-        "lint:fix": "eslint . --fix",
+        "lint:fix": "eslint --fix .",
+        "format": "prettier --check .",
+        "format:fix": "prettier --write .",
         "test": "jest --passWithNoTests",
         "test:watch": "npm run test -- --watch",
         "new": "plop"
