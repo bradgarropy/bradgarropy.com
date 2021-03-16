@@ -115,6 +115,9 @@ const config = {
             resolve: "gatsby-plugin-twitter",
         },
         {
+            resolve: "gatsby-plugin-image",
+        },
+        {
             resolve: "gatsby-plugin-sharp",
         },
         {

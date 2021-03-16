@@ -6,7 +6,7 @@ jest.mock("gatsby", () => {
     const React = require("react")
     const gatsby = jest.requireActual("gatsby")
 
-    return {
+    const mockGatsby = {
         ...gatsby,
         graphql: jest.fn(),
         Link: jest
@@ -32,4 +32,6 @@ jest.mock("gatsby", () => {
         StaticQuery: jest.fn(),
         useStaticQuery: jest.fn(),
     }
+
+    return mockGatsby
 })

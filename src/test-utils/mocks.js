@@ -34,4 +34,10 @@ const mockPosts = [
     },
 ]
 
-export {mockPosts}
+const mockPostsQuery = {
+    posts: {
+        nodes: mockPosts,
+    },
+}
+
+export {mockPosts, mockPostsQuery}
