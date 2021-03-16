@@ -2,9 +2,8 @@ import {Router} from "@reach/router"
 import userEvent from "@testing-library/user-event"
 import PostSearchBar from "components/PostSearchBar"
 import {usePosts} from "hooks"
+import {mockPosts} from "test-utils/mocks"
 import {render, screen} from "test-utils/render"
-
-import {mockPosts} from "./mocks"
 
 jest.mock("hooks")
 usePosts.mockReturnValue(mockPosts)
