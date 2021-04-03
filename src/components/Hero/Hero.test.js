@@ -5,7 +5,8 @@ import Hero from "./Hero"
 test("shows hero", () => {
     render(<Hero />)
 
-    expect(screen.getByText("i use code"))
-    expect(screen.getByText("to create things"))
-    expect(screen.getByText("that benefit others"))
+    expect(screen.getByText("lead frontend developer"))
+    expect(screen.getByText("growing content creator"))
+    expect(screen.getByText("side project connoisseur"))
+    expect(screen.getByText("open source maintainer"))
 })
