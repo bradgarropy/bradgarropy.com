@@ -1,24 +1,15 @@
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Hero from "components/Hero"
 import Layout from "components/Layout"
-import {graphql, useStaticQuery} from "gatsby"
+import {useLatestPosts, useMeta} from "hooks"
 
 const IndexPage = () => {
-    const data = useStaticQuery(graphql`
-        {
-            site {
-                siteMetadata {
-                    description
-                }
-            }
-        }
-    `)
-
-    const {description} = data.site.siteMetadata
+    const meta = useMeta()
+    const latestPosts = useLatestPosts()
 
     return (
         <Layout>
-            <SEO title={description} description="" />
+            <SEO title={meta.description} description="" />
 
             <Hero />
         </Layout>
