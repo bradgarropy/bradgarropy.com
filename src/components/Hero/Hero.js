@@ -6,11 +6,7 @@ const HeroWrapper = styled.div`
     align-items: start;
     justify-self: center;
     display: grid;
-<<<<<<< HEAD
-    grid-template-columns: minmax(auto, 15rem) auto;
-=======
     grid-template-columns: minmax(auto, 15.625rem) auto;
->>>>>>> master
 
     @media (max-width: 700px) {
         grid-template-columns: 1fr;
