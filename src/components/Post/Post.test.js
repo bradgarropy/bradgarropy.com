@@ -1,4 +1,5 @@
-import {useStaticQuery} from "gatsby"
+import {useMeta} from "hooks"
+import {mockMeta} from "test-utils/mocks"
 import {render, screen} from "test-utils/render"
 
 import Post from "./Post"
@@ -16,15 +17,8 @@ const mockPost = {
     },
 }
 
-const mockQuery = {
-    site: {
-        siteMetadata: {
-            siteUrl: "https://bradgarropy.com",
-        },
-    },
-}
-
-useStaticQuery.mockReturnValue(mockQuery)
+jest.mock("hooks")
+useMeta.mockReturnValue(mockMeta)
 
 test("shows post header", () => {
     render(<Post post={mockPost} />)
