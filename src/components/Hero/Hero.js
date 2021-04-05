@@ -6,7 +6,11 @@ const HeroWrapper = styled.div`
     align-items: start;
     justify-self: center;
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: minmax(auto, 15rem) auto;
+=======
+    grid-template-columns: minmax(auto, 15.625rem) auto;
+>>>>>>> master
 
     @media (max-width: 700px) {
         grid-template-columns: 1fr;
@@ -14,16 +18,26 @@ const HeroWrapper = styled.div`
 `
 
 const HeroImage = styled.div`
+    .hero-image-container {
+        border-radius: 100%;
+    }
+
     .hero-image {
         box-sizing: border-box;
         border-radius: 100%;
+<<<<<<< HEAD
+=======
+        box-sizing: border-box;
+>>>>>>> master
         border: 7px solid ${({theme}) => theme.colors.black};
         background-color: ${({theme}) => theme.colors.black};
     }
 
     @media (max-width: 700px) {
-        .hero-image {
+        .hero-image-container {
             margin: auto;
+            width: 80%;
+            height: auto;
         }
     }
 `
@@ -74,6 +88,10 @@ const Hero = () => {
                     alt="bg"
                     placeholder="blurred"
                     layout="fullWidth"
+<<<<<<< HEAD
+=======
+                    className="hero-image-container"
+>>>>>>> master
                     imgClassName="hero-image"
                 />
             </HeroImage>
