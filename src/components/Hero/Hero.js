@@ -14,15 +14,19 @@ const HeroWrapper = styled.div`
 `
 
 const HeroImage = styled.div`
-    .hero-image {
-        box-sizing: border-box;
+    .hero-image-container {
         border-radius: 100%;
+    }
+
+    .hero-image {
+        border-radius: 100%;
+        box-sizing: border-box;
         border: 7px solid ${({theme}) => theme.colors.black};
         background-color: ${({theme}) => theme.colors.black};
     }
 
     @media (max-width: 700px) {
-        .hero-image {
+        .hero-image-container {
             margin: auto;
             width: 80%;
             height: auto;
@@ -76,6 +80,7 @@ const Hero = () => {
                     alt="bg"
                     placeholder="blurred"
                     layout="fullWidth"
+                    className="hero-image-container"
                     imgClassName="hero-image"
                 />
             </HeroImage>
