@@ -21,10 +21,7 @@ const HeroImage = styled.div`
     .hero-image {
         box-sizing: border-box;
         border-radius: 100%;
-<<<<<<< HEAD
-=======
         box-sizing: border-box;
->>>>>>> master
         border: 7px solid ${({theme}) => theme.colors.black};
         background-color: ${({theme}) => theme.colors.black};
     }
@@ -84,10 +81,7 @@ const Hero = () => {
                     alt="bg"
                     placeholder="blurred"
                     layout="fullWidth"
-<<<<<<< HEAD
-=======
                     className="hero-image-container"
->>>>>>> master
                     imgClassName="hero-image"
                 />
             </HeroImage>
