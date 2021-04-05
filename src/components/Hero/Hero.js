@@ -19,7 +19,6 @@ const HeroImage = styled.div`
     }
 
     .hero-image {
-        box-sizing: border-box;
         border-radius: 100%;
         box-sizing: border-box;
         border: 7px solid ${({theme}) => theme.colors.black};
