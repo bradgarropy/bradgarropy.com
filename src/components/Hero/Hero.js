@@ -6,8 +6,7 @@ const HeroWrapper = styled.div`
     align-items: start;
     justify-self: center;
     display: grid;
-    grid-template-columns: minmax(auto, 14rem) auto;
-    column-gap: 2rem;
+    grid-template-columns: minmax(auto, 15.625rem) auto;
 
     @media (max-width: 700px) {
         grid-template-columns: 1fr;
@@ -15,25 +14,28 @@ const HeroWrapper = styled.div`
 `
 
 const HeroImage = styled.div`
+    .hero-image-container {
+        border-radius: 100%;
+    }
+
     .hero-image {
         border-radius: 100%;
-        width: 100%;
-        max-width: 15.625rem;
+        box-sizing: border-box;
         border: 7px solid ${({theme}) => theme.colors.black};
         background-color: ${({theme}) => theme.colors.black};
     }
 
     @media (max-width: 700px) {
-        .hero-image {
+        .hero-image-container {
             margin: auto;
+            width: 80%;
+            height: auto;
         }
     }
 `
 
 const Headline = styled.h1`
     margin: 0;
-    position: relative;
-    left: -1.5rem;
     letter-spacing: -0.2rem;
     font-weight: 900;
     font-size: 3rem;
@@ -53,8 +55,7 @@ const Description = styled.div`
     justify-content: start;
     justify-items: center;
     column-gap: 0.75rem;
-    position: relative;
-    left: 1rem;
+    padding-left: 2.5rem;
     line-height: 1.5;
 
     h2,
@@ -79,7 +80,8 @@ const Hero = () => {
                     alt="bg"
                     placeholder="blurred"
                     layout="fullWidth"
-                    className="hero-image"
+                    className="hero-image-container"
+                    imgClassName="hero-image"
                 />
             </HeroImage>
 
