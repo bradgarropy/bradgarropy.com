@@ -1,17 +1,11 @@
-import {useStaticQuery} from "gatsby"
+import {useMeta} from "hooks"
+import {mockMeta} from "test-utils/mocks"
 import {render, screen} from "test-utils/render"
 
 import PostFooter from "./PostFooter"
 
-const mockQuery = {
-    site: {
-        siteMetadata: {
-            siteUrl: "https://bradgarropy.com",
-        },
-    },
-}
-
-useStaticQuery.mockReturnValue(mockQuery)
+jest.mock("hooks")
+useMeta.mockReturnValue(mockMeta)
 
 test("shows comment button", () => {
     render(<PostFooter slug={"my-test-post"} />)

@@ -1,20 +1,11 @@
 import LinkButton from "components/LinkButton"
-import {graphql, useStaticQuery} from "gatsby"
+import {useMeta} from "hooks"
 import PropTypes from "prop-types"
 
 const PostComments = ({slug}) => {
-    const data = useStaticQuery(graphql`
-        {
-            site {
-                siteMetadata {
-                    siteUrl
-                }
-            }
-        }
-    `)
+    const meta = useMeta()
 
-    const {siteUrl} = data.site.siteMetadata
-    const query = encodeURIComponent(`${siteUrl}/blog/${slug}`)
+    const query = encodeURIComponent(`${meta.siteUrl}/blog/${slug}`)
     const discuss = `https://twitter.com/search?q=${query}`
 
     return <LinkButton to={discuss}>💬 discuss on twitter</LinkButton>
