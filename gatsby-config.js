@@ -3,6 +3,8 @@ require("dotenv").config()
 const twitch = require("./src/transformers/twitch")
 const youtube = require("./src/transformers/youtube")
 
+const youtubeChannelId = "UCgbFhcZKt36Upo7oxWlLEig"
+
 const config = {
     siteMetadata: {
         siteUrl: "https://bradgarropy.com",
@@ -70,6 +72,13 @@ const config = {
             options: {
                 name: "images",
                 path: "static",
+            },
+        },
+        {
+            resolve: "gatsby-source-youtube-v3",
+            options: {
+                channelId: [youtubeChannelId],
+                apiKey: process.env.YOUTUBE_API_KEY,
             },
         },
         {

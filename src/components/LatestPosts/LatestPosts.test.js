@@ -10,7 +10,6 @@ test("shows latest posts", () => {
     render(<LatestPosts />)
 
     mockPosts.forEach(post => {
-        console.log(post)
         expect(screen.getByText(post.frontmatter.title))
     })
 })

@@ -1,6 +1,7 @@
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Hero from "components/Hero"
 import LatestPosts from "components/LatestPosts"
+import LatestVideos from "components/LatestVideos"
 import Layout from "components/Layout"
 import Section from "components/Section"
 import {useMeta} from "hooks"
@@ -24,6 +25,10 @@ const IndexPage = () => {
 
                 <Section title="blog">
                     <LatestPosts />
+                </Section>
+
+                <Section title="videos">
+                    <LatestVideos />
                 </Section>
             </Sections>
         </Layout>

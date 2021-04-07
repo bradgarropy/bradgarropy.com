@@ -1,6 +1,6 @@
 {
     "name": "bradgarropy.com",
-    "version": "3.11.0",
+    "version": "3.12.0",
     "description": "🏠 my home on the web",
     "keywords": [
         "gatsby",
@@ -63,6 +63,7 @@
         "gatsby-remark-prismjs": "^4.0.0",
         "gatsby-remark-vscode": "^3.2.0",
         "gatsby-source-filesystem": "^3.0.0",
+        "gatsby-source-youtube-v3": "^3.0.0",
         "gatsby-transformer-remark": "^3.0.0",
         "gatsby-transformer-sharp": "^3.0.0",
         "react-dom": "^17.0.1",
@@ -84,6 +85,7 @@
         "all-contributors-cli": "^6.20.0",
         "babel-eslint": "^10.1.0",
         "babel-jest": "^26.6.3",
+        "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
         "eslint": "^7.16.0",
         "eslint-config-prettier": "^8.1.0",
         "eslint-plugin-jsx-a11y": "^6.4.1",

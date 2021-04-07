@@ -7,6 +7,7 @@ useStaticQuery.mockReturnValue(mockPostsQuery)
 
 test("returns latest posts", () => {
     const {result} = renderHook(() => useLatestPosts())
+
     expect(result.current).toHaveLength(3)
     expect(result.current).toEqual(mockPosts)
 })

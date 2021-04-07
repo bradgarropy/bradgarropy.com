@@ -56,4 +56,28 @@ const mockMetaQuery = {
     },
 }
 
-export {mockMeta, mockMetaQuery, mockPosts, mockPostsQuery}
+const mockVideos = [
+    {
+        title: "first test video",
+        videoId: "abc123",
+    },
+    {
+        title: "second test video",
+        videoId: "def456",
+    },
+]
+
+const mockVideosQuery = {
+    videos: {
+        nodes: mockVideos,
+    },
+}
+
+export {
+    mockMeta,
+    mockMetaQuery,
+    mockPosts,
+    mockPostsQuery,
+    mockVideos,
+    mockVideosQuery,
+}
