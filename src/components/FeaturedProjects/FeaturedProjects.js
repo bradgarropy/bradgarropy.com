@@ -1,36 +1,6 @@
 import Project from "components/Project"
 import styled from "styled-components"
-
-const projects = [
-    {
-        title: "bradgarropy.com",
-        description: "🏡 my home on the web",
-        url: "https://github.com/bradgarropy/bradgarropy.com",
-        stars: 32,
-        tech: ["react", "gatsby", "styled-components"],
-    },
-    {
-        title: "bradgarropy.com",
-        description: "🏡 my home on the web",
-        url: "https://github.com/bradgarropy/bradgarropy.com",
-        stars: 32,
-        tech: ["react", "gatsby", "styled-components"],
-    },
-    {
-        title: "bradgarropy.com",
-        description: "🏡 my home on the web",
-        url: "https://github.com/bradgarropy/bradgarropy.com",
-        stars: 32,
-        tech: ["react", "gatsby", "styled-components"],
-    },
-    {
-        title: "bradgarropy.com",
-        description: "🏡 my home on the web",
-        url: "https://github.com/bradgarropy/bradgarropy.com",
-        stars: 32,
-        tech: ["react", "gatsby", "styled-components"],
-    },
-]
+import {mockProjects as projects} from "test-utils/mocks"
 
 const FeaturedProjectsWrapper = styled.div`
     display: grid;

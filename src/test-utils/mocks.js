@@ -73,11 +73,44 @@ const mockVideosQuery = {
     },
 }
 
+const mockProjects = [
+    {
+        title: "bradgarropy.com",
+        description: "🏡 my home on the web",
+        url: "https://github.com/bradgarropy/bradgarropy.com",
+        stars: 33,
+        tech: ["react", "gatsby", "styled-components"],
+    },
+    {
+        title: "dailytexascountry.com",
+        description:
+            "🤠 she tries to tell me that oklahoma's better, but I ain't got time for that",
+        url: "https://github.com/bradgarropy/dailytexascountry.com",
+        stars: 3,
+        tech: ["react", "gatsby", "styled-components"],
+    },
+    {
+        title: "murphy",
+        description: "⏱ the crossfit murph timer",
+        url: "https://github.com/bradgarropy/murphy",
+        stars: 9,
+        tech: ["svelte", "tailwind", "fauna"],
+    },
+    {
+        title: "labman-cli",
+        description: "👨🏼‍🔬 github label manager cli",
+        url: "https://github.com/bradgarropy/labman-cli",
+        stars: 12,
+        tech: ["node"],
+    },
+]
+
 export {
     mockMeta,
     mockMetaQuery,
     mockPosts,
     mockPostsQuery,
+    mockProjects,
     mockVideos,
     mockVideosQuery,
 }
