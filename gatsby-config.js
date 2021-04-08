@@ -91,6 +91,7 @@ const config = {
                             pinnedItems(types: REPOSITORY, first: 6) {
                                 nodes {
                                     ... on Repository {
+                                        url
                                         name
                                         description
                                         stargazerCount

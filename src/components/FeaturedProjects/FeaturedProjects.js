@@ -1,6 +1,6 @@
 import Project from "components/Project"
+import {useProjects} from "hooks"
 import styled from "styled-components"
-import {mockProjects as projects} from "test-utils/mocks"
 
 const FeaturedProjectsWrapper = styled.div`
     display: grid;
@@ -13,10 +13,12 @@ const FeaturedProjectsWrapper = styled.div`
 `
 
 const FeaturedProjects = () => {
+    const projects = useProjects()
+
     return (
         <FeaturedProjectsWrapper>
             {projects.map(project => {
-                return <Project key={project.title} project={project} />
+                return <Project key={project.name} project={project} />
             })}
         </FeaturedProjectsWrapper>
     )

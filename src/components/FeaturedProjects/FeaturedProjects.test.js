@@ -1,11 +1,14 @@
 import FeaturedProjects from "components/FeaturedProjects"
-import {mockProjects} from "test-utils/mocks"
+import {useStaticQuery} from "gatsby"
+import {mockProjects, mockProjectsQuery} from "test-utils/mocks"
 import {render, screen} from "test-utils/render"
+
+useStaticQuery.mockReturnValue(mockProjectsQuery)
 
 test("shows featured projects", () => {
     render(<FeaturedProjects />)
 
     mockProjects.forEach(project => {
-        expect(screen.getByText(project.title))
+        expect(screen.getByText(project.name))
     })
 })

@@ -44,7 +44,7 @@ const Project = ({project}) => {
             target="_blank"
             rel="noopener noreferrer"
         >
-            <Title>{project.title}</Title>
+            <Title>{project.name}</Title>
             <Description>{project.description}</Description>
 
             <Meta>
@@ -57,9 +57,9 @@ const Project = ({project}) => {
 
 Project.propTypes = {
     project: PropTypes.shape({
-        title: PropTypes.string,
-        description: PropTypes.string,
         url: PropTypes.string,
+        name: PropTypes.string,
+        description: PropTypes.string,
         stars: PropTypes.number,
         tech: PropTypes.arrayOf(PropTypes.string),
     }),

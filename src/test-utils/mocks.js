@@ -75,35 +75,364 @@ const mockVideosQuery = {
 
 const mockProjects = [
     {
-        title: "bradgarropy.com",
-        description: "🏡 my home on the web",
         url: "https://github.com/bradgarropy/bradgarropy.com",
-        stars: 33,
-        tech: ["react", "gatsby", "styled-components"],
+        name: "bradgarropy.com",
+        description: "🏠 my mansion on the web",
+        stars: 34,
     },
     {
-        title: "dailytexascountry.com",
+        url: "https://github.com/bradgarropy/dailytexascountry.com",
+        name: "dailytexascountry.com",
         description:
             "🤠 she tries to tell me that oklahoma's better, but I ain't got time for that",
-        url: "https://github.com/bradgarropy/dailytexascountry.com",
         stars: 3,
-        tech: ["react", "gatsby", "styled-components"],
     },
     {
-        title: "murphy",
-        description: "⏱ the crossfit murph timer",
         url: "https://github.com/bradgarropy/murphy",
+        name: "murphy",
+        description: "⏱ the crossfit murph timer",
         stars: 9,
-        tech: ["svelte", "tailwind", "fauna"],
     },
     {
-        title: "labman-cli",
-        description: "👨🏼‍🔬 github label manager cli",
         url: "https://github.com/bradgarropy/labman-cli",
+        name: "labman-cli",
+        description: "👨🏼‍🔬 github label manager cli",
         stars: 12,
-        tech: ["node"],
+    },
+    {
+        url: "https://github.com/bradgarropy/ama",
+        name: "ama",
+        description: "❔ ask me anything",
+        stars: 1,
+    },
+    {
+        url: "https://github.com/bradgarropy/dotfiles",
+        name: "dotfiles",
+        description: "🥃 just the way i like it",
+        stars: 3,
     },
 ]
+
+const mockProjectsQuery = {
+    githubData: {
+        data: {
+            user: {
+                pinnedItems: {
+                    nodes: [
+                        {
+                            url:
+                                "https://github.com/bradgarropy/bradgarropy.com",
+                            name: "bradgarropy.com",
+                            description: "🏠 my mansion on the web",
+                            stargazerCount: 34,
+                            repositoryTopics: {
+                                nodes: [
+                                    {
+                                        topic: {
+                                            name: "gatsby",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "react",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "eslint",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "blog",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "portfolio",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "styled-components",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "hacktoberfest",
+                                        },
+                                    },
+                                ],
+                            },
+                        },
+                        {
+                            url:
+                                "https://github.com/bradgarropy/dailytexascountry.com",
+                            name: "dailytexascountry.com",
+                            description:
+                                "🤠 she tries to tell me that oklahoma's better, but I ain't got time for that",
+                            stargazerCount: 3,
+                            repositoryTopics: {
+                                nodes: [
+                                    {
+                                        topic: {
+                                            name: "gatsby",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "react",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "styled-components",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "prettier",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "eslint",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "spotify",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "youtube",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "twitter",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "airtable",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "blog",
+                                        },
+                                    },
+                                ],
+                            },
+                        },
+                        {
+                            url: "https://github.com/bradgarropy/murphy",
+                            name: "murphy",
+                            description: "⏱ the crossfit murph timer",
+                            stargazerCount: 9,
+                            repositoryTopics: {
+                                nodes: [
+                                    {
+                                        topic: {
+                                            name: "svelte",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "tailwindcss",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "faunadb",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "netlify",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "netlify-identity",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "rollup",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "murph",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "murphy",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "crossfit",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "workout",
+                                        },
+                                    },
+                                ],
+                            },
+                        },
+                        {
+                            url: "https://github.com/bradgarropy/labman-cli",
+                            name: "labman-cli",
+                            description: "👨🏼‍🔬 github label manager cli",
+                            stargazerCount: 12,
+                            repositoryTopics: {
+                                nodes: [
+                                    {
+                                        topic: {
+                                            name: "github",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "issues",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "labels",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "octokit",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "javascript",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "nodejs",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "cli",
+                                        },
+                                    },
+                                ],
+                            },
+                        },
+                        {
+                            url: "https://github.com/bradgarropy/ama",
+                            name: "ama",
+                            description: "❔ ask me anything",
+                            stargazerCount: 1,
+                            repositoryTopics: {
+                                nodes: [
+                                    {
+                                        topic: {
+                                            name: "ama",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "ask-me-anything",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "question",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "answer",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "question-and-answer",
+                                        },
+                                    },
+                                ],
+                            },
+                        },
+                        {
+                            url: "https://github.com/bradgarropy/dotfiles",
+                            name: "dotfiles",
+                            description: "🥃 just the way i like it",
+                            stargazerCount: 3,
+                            repositoryTopics: {
+                                nodes: [
+                                    {
+                                        topic: {
+                                            name: "dotfiles",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "vscode",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "bash",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "eslint",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "hyper",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "prettier",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "create-react-app",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "gatsby",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "python",
+                                        },
+                                    },
+                                    {
+                                        topic: {
+                                            name: "gitignore",
+                                        },
+                                    },
+                                ],
+                            },
+                        },
+                    ],
+                },
+            },
+        },
+    },
+}
 
 export {
     mockMeta,
@@ -111,6 +440,7 @@ export {
     mockPosts,
     mockPostsQuery,
     mockProjects,
+    mockProjectsQuery,
     mockVideos,
     mockVideosQuery,
 }
