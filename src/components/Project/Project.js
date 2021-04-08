@@ -7,6 +7,8 @@ const ProjectWrapper = styled.a`
     border: 3px solid ${({theme}) => theme.colors.black};
     box-shadow: 3px 3px 0 ${({theme}) => theme.colors.black};
     display: grid;
+    row-gap: 2rem;
+    align-content: space-between;
     color: ${({theme}) => theme.colors.black};
 
     :hover {
@@ -14,20 +16,22 @@ const ProjectWrapper = styled.a`
     }
 `
 
-const Title = styled.p`
+const Name = styled.h3`
     margin: 0;
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
-    font-size: 2rem;
-    letter-spacing: -0.1rem;
+    font-size: 1.5rem;
+    letter-spacing: -0.075rem;
+    overflow-wrap: anywhere;
 `
 
 const Description = styled.p`
     margin: 0;
 `
 
-const Meta = styled.div`
-    margin-top: 2rem;
+const Top = styled.div``
+
+const Bottom = styled.div`
     display: grid;
     grid-auto-flow: column;
     justify-content: space-between;
@@ -44,13 +48,15 @@ const Project = ({project}) => {
             target="_blank"
             rel="noopener noreferrer"
         >
-            <Title>{project.name}</Title>
-            <Description>{project.description}</Description>
+            <Top>
+                <Name>{project.name}</Name>
+                <Description>{project.description}</Description>
+            </Top>
 
-            <Meta>
+            <Bottom>
                 <span>tech</span>
                 <Stars>{`${project.stars}⭐`}</Stars>
-            </Meta>
+            </Bottom>
         </ProjectWrapper>
     )
 }
