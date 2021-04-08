@@ -82,6 +82,34 @@ const config = {
             },
         },
         {
+            resolve: "gatsby-source-github-api",
+            options: {
+                token: process.env.GITHUB_TOKEN,
+                graphQLQuery: `
+                    query {
+                        user(login: "bradgarropy") {
+                            pinnedItems(types: REPOSITORY, first: 6) {
+                                nodes {
+                                    ... on Repository {
+                                        name
+                                        description
+                                        stargazerCount
+                                        repositoryTopics(first: 10) {
+                                            nodes {
+                                                topic {
+                                                name
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                `,
+            },
+        },
+        {
             resolve: "gatsby-transformer-remark",
             options: {
                 plugins: [
