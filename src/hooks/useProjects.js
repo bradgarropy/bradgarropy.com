@@ -12,13 +12,6 @@ const useProjects = () => {
                                 name
                                 description
                                 stargazerCount
-                                repositoryTopics {
-                                    nodes {
-                                        topic {
-                                            name
-                                        }
-                                    }
-                                }
                             }
                         }
                     }

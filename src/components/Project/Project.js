@@ -7,7 +7,7 @@ const ProjectWrapper = styled.a`
     border: 3px solid ${({theme}) => theme.colors.black};
     box-shadow: 3px 3px 0 ${({theme}) => theme.colors.black};
     display: grid;
-    row-gap: 2rem;
+    row-gap: 0.5rem;
     align-content: space-between;
     color: ${({theme}) => theme.colors.black};
 
@@ -34,7 +34,7 @@ const Top = styled.div``
 const Bottom = styled.div`
     display: grid;
     grid-auto-flow: column;
-    justify-content: space-between;
+    justify-content: end;
 `
 
 const Stars = styled.span`
@@ -54,7 +54,6 @@ const Project = ({project}) => {
             </Top>
 
             <Bottom>
-                <span>tech</span>
                 <Stars>{`${project.stars}⭐`}</Stars>
             </Bottom>
         </ProjectWrapper>
@@ -63,11 +62,10 @@ const Project = ({project}) => {
 
 Project.propTypes = {
     project: PropTypes.shape({
-        url: PropTypes.string,
-        name: PropTypes.string,
-        description: PropTypes.string,
-        stars: PropTypes.number,
-        tech: PropTypes.arrayOf(PropTypes.string),
+        url: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        stars: PropTypes.number.isRequired,
     }),
 }
 
