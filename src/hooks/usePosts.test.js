@@ -5,7 +5,7 @@ import {mockPosts, mockPostsQuery} from "test-utils/mocks"
 
 useStaticQuery.mockReturnValue(mockPostsQuery)
 
-test("transforms posts", () => {
+test("returns posts", () => {
     const {result} = renderHook(() => usePosts())
     expect(result.current).toEqual(mockPosts)
 })

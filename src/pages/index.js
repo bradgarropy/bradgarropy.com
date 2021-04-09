@@ -1,4 +1,5 @@
 import SEO from "@bradgarropy/gatsby-plugin-seo"
+import FeaturedProjects from "components/FeaturedProjects"
 import Hero from "components/Hero"
 import LatestPosts from "components/LatestPosts"
 import LatestVideos from "components/LatestVideos"
@@ -29,6 +30,10 @@ const IndexPage = () => {
 
                 <Section title="videos">
                     <LatestVideos />
+                </Section>
+
+                <Section title="projects">
+                    <FeaturedProjects />
                 </Section>
             </Sections>
         </Layout>

@@ -73,11 +73,105 @@ const mockVideosQuery = {
     },
 }
 
+const mockProjects = [
+    {
+        url: "https://github.com/bradgarropy/bradgarropy.com",
+        name: "bradgarropy.com",
+        description: "🏠 my mansion on the web",
+        stars: 34,
+    },
+    {
+        url: "https://github.com/bradgarropy/dailytexascountry.com",
+        name: "dailytexascountry.com",
+        description:
+            "🤠 she tries to tell me that oklahoma's better, but I ain't got time for that",
+        stars: 3,
+    },
+    {
+        url: "https://github.com/bradgarropy/murphy",
+        name: "murphy",
+        description: "⏱ the crossfit murph timer",
+        stars: 9,
+    },
+    {
+        url: "https://github.com/bradgarropy/labman-cli",
+        name: "labman-cli",
+        description: "👨🏼‍🔬 github label manager cli",
+        stars: 12,
+    },
+    {
+        url: "https://github.com/bradgarropy/ama",
+        name: "ama",
+        description: "❔ ask me anything",
+        stars: 1,
+    },
+    {
+        url: "https://github.com/bradgarropy/dotfiles",
+        name: "dotfiles",
+        description: "🥃 just the way i like it",
+        stars: 3,
+    },
+]
+
+const mockProjectsQuery = {
+    githubData: {
+        data: {
+            user: {
+                pinnedItems: {
+                    nodes: [
+                        {
+                            url:
+                                "https://github.com/bradgarropy/bradgarropy.com",
+                            name: "bradgarropy.com",
+                            description: "🏠 my mansion on the web",
+                            stargazerCount: 34,
+                        },
+                        {
+                            url:
+                                "https://github.com/bradgarropy/dailytexascountry.com",
+                            name: "dailytexascountry.com",
+                            description:
+                                "🤠 she tries to tell me that oklahoma's better, but I ain't got time for that",
+                            stargazerCount: 3,
+                        },
+                        {
+                            url: "https://github.com/bradgarropy/murphy",
+                            name: "murphy",
+                            description: "⏱ the crossfit murph timer",
+                            stargazerCount: 9,
+                        },
+                        {
+                            url: "https://github.com/bradgarropy/labman-cli",
+                            name: "labman-cli",
+                            description: "👨🏼‍🔬 github label manager cli",
+                            stargazerCount: 12,
+                        },
+                        {
+                            url: "https://github.com/bradgarropy/ama",
+                            name: "ama",
+                            description: "❔ ask me anything",
+                            stargazerCount: 1,
+                        },
+                        {
+                            url: "https://github.com/bradgarropy/dotfiles",
+                            name: "dotfiles",
+                            description: "🥃 just the way i like it",
+                            stargazerCount: 3,
+                        },
+                    ],
+                },
+            },
+        },
+    },
+}
+
 export {
     mockMeta,
     mockMetaQuery,
     mockPosts,
     mockPostsQuery,
+    mockProjects,
+    mockProjectsQuery,
     mockVideos,
     mockVideosQuery,
 }

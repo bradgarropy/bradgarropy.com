@@ -19,3 +19,6 @@ coverage
 
 # logs
 debug.log
+
+# templates
+*.hbs
