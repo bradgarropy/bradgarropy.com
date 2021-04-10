@@ -112,6 +112,20 @@ const config = {
                                     }
                                 }
                             }
+                            sponsorshipsAsMaintainer(first: 10) {
+                                nodes {
+                                    sponsorEntity {
+                                        ... on User {
+                                            url
+                                            avatarUrl
+                                        }
+                                    }
+                                    tier {
+                                        name
+                                        description
+                                    }
+                                }
+                            }
                         }
                     }
                 `,
