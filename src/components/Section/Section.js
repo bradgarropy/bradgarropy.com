@@ -20,13 +20,9 @@ const StyledLink = styled(Link)`
 const Section = ({title, link, children}) => {
     return (
         <section>
-            {link ? (
-                <StyledLink to={link}>
-                    <Title>{title}</Title>
-                </StyledLink>
-            ) : (
+            <StyledLink to={link}>
                 <Title>{title}</Title>
-            )}
+            </StyledLink>
 
             {children}
         </section>
@@ -35,7 +31,7 @@ const Section = ({title, link, children}) => {
 
 Section.propTypes = {
     title: PropTypes.string.isRequired,
-    link: PropTypes.string,
+    link: PropTypes.string.isRequired,
     children: PropTypes.node,
 }
 
