@@ -4,6 +4,7 @@ const twitch = require("./src/transformers/twitch")
 const youtube = require("./src/transformers/youtube")
 
 const youtubeChannelId = "UCgbFhcZKt36Upo7oxWlLEig"
+const anchorRssUrl = "https://anchor.fm/s/508f5e08/podcast/rss"
 
 const config = {
     siteMetadata: {
@@ -79,6 +80,12 @@ const config = {
             options: {
                 channelId: [youtubeChannelId],
                 apiKey: process.env.YOUTUBE_API_KEY,
+            },
+        },
+        {
+            resolve: "gatsby-source-anchor",
+            options: {
+                rss: anchorRssUrl,
             },
         },
         {

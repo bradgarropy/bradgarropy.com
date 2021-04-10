@@ -63,6 +63,7 @@
         "gatsby-remark-images": "^4.0.0",
         "gatsby-remark-prismjs": "^4.0.0",
         "gatsby-remark-vscode": "^3.2.0",
+        "gatsby-source-anchor": "^0.5.1",
         "gatsby-source-filesystem": "^3.0.0",
         "gatsby-source-youtube-v3": "^3.0.0",
         "gatsby-transformer-remark": "^3.0.0",
