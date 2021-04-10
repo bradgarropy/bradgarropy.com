@@ -23,7 +23,7 @@ const HeroImage = styled.a`
         box-sizing: border-box;
         border: 7px solid ${({theme}) => theme.colors.black};
         background-color: ${({theme}) => theme.colors.black};
-        transition: all 300ms;
+        transition: all 300ms !important;
 
         :hover {
             transform: rotate(-2deg);
