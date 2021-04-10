@@ -24,7 +24,7 @@ const Thumbnail = styled.div`
         border: 3px solid ${({theme}) => theme.colors.black};
         background-color: ${({theme}) => theme.colors.black};
         box-shadow: 3px 3px 0 ${({theme}) => theme.colors.black};
-        transition: all 300ms;
+        transition: all 300ms !important;
     }
 
     .thumbnail:hover {
