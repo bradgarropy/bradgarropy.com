@@ -16,6 +16,7 @@ const HeroWrapper = styled.div`
 const HeroImage = styled.a`
     .hero-image-container {
         border-radius: 100%;
+        transition: all 300ms;
     }
 
     .hero-image {
