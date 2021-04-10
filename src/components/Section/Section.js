@@ -1,3 +1,4 @@
+import Link from "components/Link"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
@@ -8,10 +9,25 @@ const Title = styled.h2`
     margin: 0rem 0rem 1.75rem 0rem;
 `
 
-const Section = ({title, children}) => {
+const StyledLink = styled(Link)`
+    display: inline-block;
+
+    :hover {
+        text-shadow: 3px 3px ${({theme}) => theme.colors.primary};
+    }
+`
+
+const Section = ({title, link, children}) => {
     return (
         <section>
-            <Title>{title}</Title>
+            {link ? (
+                <StyledLink to={link}>
+                    <Title>{title}</Title>
+                </StyledLink>
+            ) : (
+                <Title>{title}</Title>
+            )}
+
             {children}
         </section>
     )
@@ -19,6 +35,7 @@ const Section = ({title, children}) => {
 
 Section.propTypes = {
     title: PropTypes.string.isRequired,
+    link: PropTypes.string,
     children: PropTypes.node,
 }
 
