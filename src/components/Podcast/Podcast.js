@@ -4,17 +4,31 @@ import styled from "styled-components"
 
 const PodcastWrapper = styled.div`
     display: grid;
-    grid-auto-flow: column;
-    column-gap: 2rem;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    justify-content: start;
+    align-items: center;
+
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 const Description = styled.div`
     display: grid;
-    align-content: center;
+    justify-items: start;
+    color: ${({theme}) => theme.colors.black};
+`
 
-    p {
-        margin: 0rem;
-    }
+const Badge = styled.span`
+    margin: 0rem 0rem 0.75rem 0rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.075rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 3px solid ${({theme}) => theme.colors.black};
 `
 
 const Hosts = styled.div`
@@ -22,20 +36,27 @@ const Hosts = styled.div`
     column-gap: 0.75rem;
     grid-auto-flow: column;
     align-items: center;
-`
-
-const Host = styled.a`
+    font-size: 1.5rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
     font-size: 1.5rem;
+    letter-spacing: -0.075rem;
+    line-height: 1.6;
+
+    @media (max-width: 700px) {
+        font-size: 1.4rem;
+    }
 `
 
-const Divider = styled.span`
-    font-size: 3rem;
-    font-weight: 900;
+const Host = styled.a`
+    color: ${({theme}) => theme.colors.black};
+
+    :hover {
+        text-shadow: 2px 2px ${({theme}) => theme.colors.primary};
+    }
 `
 
-const CoverImage = styled.div`
+const CoverImage = styled.a`
     .cover-image-container {
         overflow: visible;
     }
@@ -52,20 +73,27 @@ const CoverImage = styled.div`
     .cover-image:hover {
         box-shadow: none;
     }
+
+    @media (max-width: 700px) {
+        width: 75%;
+    }
 `
 
 const Podcast = () => {
     const podcast = usePodcast()
-    console.log(podcast)
 
     return (
         <PodcastWrapper>
-            <CoverImage>
+            <CoverImage
+                href={podcast.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid={podcast.title}
+            >
                 <StaticImage
                     src="../../../static/web-dev-weekly.png"
                     alt={podcast.title}
-                    width={175}
-                    aspectRatio={1}
+                    layout="constrained"
                     placeholder="blurred"
                     formats={["auto", "webp", "avif"]}
                     quality={100}
@@ -75,7 +103,9 @@ const Podcast = () => {
             </CoverImage>
 
             <Description>
-                <p>a weekly podcast about web development hosted by</p>
+                <Badge>coming soon</Badge>
+
+                <span>a weekly podcast about web development hosted by</span>
 
                 <Hosts>
                     <Host
@@ -86,7 +116,7 @@ const Podcast = () => {
                         brad garropy
                     </Host>
 
-                    <Divider>/</Divider>
+                    <span>/</span>
 
                     <Host
                         href="https://twitter.com/RGottleber"
