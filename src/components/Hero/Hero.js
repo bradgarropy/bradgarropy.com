@@ -13,7 +13,7 @@ const HeroWrapper = styled.div`
     }
 `
 
-const HeroImage = styled.div`
+const HeroImage = styled.a`
     .hero-image-container {
         border-radius: 100%;
     }
@@ -23,6 +23,13 @@ const HeroImage = styled.div`
         box-sizing: border-box;
         border: 7px solid ${({theme}) => theme.colors.black};
         background-color: ${({theme}) => theme.colors.black};
+        transition: all 300ms;
+
+        :hover {
+            transform: rotate(-2deg);
+            border: 7px solid ${({theme}) => theme.colors.primary};
+            background-color: ${({theme}) => theme.colors.primary};
+        }
     }
 
     @media (max-width: 700px) {
@@ -74,7 +81,11 @@ const Description = styled.div`
 const Hero = () => {
     return (
         <HeroWrapper>
-            <HeroImage>
+            <HeroImage
+                href="https://instagram.com/bradgarropy"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 <StaticImage
                     src="https://github.com/bradgarropy.png"
                     alt="bg"
