@@ -13,6 +13,10 @@ const Sections = styled.div`
     display: grid;
     row-gap: 4rem;
     margin: 4rem 0rem;
+
+    @media (max-width: 700px) {
+        margin: 0rem;
+    }
 `
 
 const IndexPage = () => {
