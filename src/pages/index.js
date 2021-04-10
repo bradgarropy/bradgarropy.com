@@ -25,19 +25,19 @@ const IndexPage = () => {
             <Sections>
                 <Hero />
 
-                <Section title="blog">
+                <Section title="blog" link="/blog">
                     <LatestPosts />
                 </Section>
 
-                <Section title="videos">
+                <Section title="videos" link="https://youtube.com/bradgarropy">
                     <LatestVideos />
                 </Section>
 
-                <Section title="projects">
+                <Section title="projects" link="https://github.com/bradgarropy">
                     <FeaturedProjects />
                 </Section>
 
-                <Section title="podcast">
+                <Section title="podcast" link="https://anchor.fm/webdevweekly">
                     <Podcast />
                 </Section>
             </Sections>
