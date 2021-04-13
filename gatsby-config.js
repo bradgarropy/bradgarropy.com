@@ -116,6 +116,7 @@ const config = {
                                 nodes {
                                     sponsorEntity {
                                         ... on User {
+                                            login
                                             url
                                             avatarUrl
                                         }
