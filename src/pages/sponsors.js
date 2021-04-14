@@ -4,6 +4,10 @@ import Section from "components/Section"
 import {useSponsors} from "hooks"
 import styled from "styled-components"
 
+const Thanks = styled(Section)`
+    margin-bottom: 4rem;
+`
+
 const Tiers = styled.div`
     display: grid;
     row-gap: 5rem;
@@ -34,6 +38,15 @@ const SponsorsPage = () => {
     return (
         <Layout>
             <SEO title="💜 sponsors" description="" />
+
+            <Thanks title="💜 thank you">
+                <p>
+                    Each and every supporter I have incentivizes me to continue
+                    creating libraries, videos, blogs, and streams. All earnings
+                    will go directly towards improving the quality of my work,
+                    and encouraging more frequent updates.
+                </p>
+            </Thanks>
 
             <Tiers>
                 {Object.entries(tiers).map(([tier, sponsors]) => (

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const Title = styled.h2`
-    font-size: 4.5rem;
+    font-size: clamp(3rem, 10vw, 4.5rem);
     font-weight: 900;
     letter-spacing: -0.2rem;
     margin: 0rem 0rem 1.75rem 0rem;
@@ -17,9 +17,9 @@ const StyledLink = styled(Link)`
     }
 `
 
-const Section = ({title, link, children}) => {
+const Section = ({title, link, children, ...props}) => {
     return (
-        <section>
+        <section {...props}>
             {link ? (
                 <StyledLink to={link}>
                     <Title>{title}</Title>
