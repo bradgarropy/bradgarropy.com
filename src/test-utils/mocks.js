@@ -211,6 +211,95 @@ const mockPodcastQuery = {
     },
 }
 
+const mockSponsors = {
+    "🥉 bronze": [
+        {
+            username: "bradgarropy",
+            avatar: "https://github.com/bradgarropy.png",
+            profile: "https://github.com/bradgarropy",
+        },
+    ],
+    "🥈 silver": [
+        {
+            username: "gabygarropy",
+            avatar: "https://github.com/gabygarropy.png",
+            profile: "https://github.com/gabygarropy",
+        },
+    ],
+    "🥇 gold": [
+        {
+            username: "sofigarropy",
+            avatar: "https://github.com/sofigarropy.png",
+            profile: "https://github.com/sofigarropy",
+        },
+    ],
+    "💎 diamond": [
+        {
+            username: "justingarropy",
+            avatar: "https://github.com/justingarropy.png",
+            profile: "https://github.com/justingarropy",
+        },
+    ],
+}
+
+const mockSponsorsQuery = {
+    githubData: {
+        data: {
+            user: {
+                sponsorshipsAsMaintainer: {
+                    nodes: [
+                        {
+                            sponsorEntity: {
+                                login: "bradgarropy",
+                                url: "https://github.com/bradgarropy",
+                                avatarUrl: "https://github.com/bradgarropy.png",
+                            },
+                            tier: {
+                                name: "🥉 bronze",
+                                description: "### 🥉 bronze",
+                            },
+                        },
+                        {
+                            sponsorEntity: {
+                                login: "gabygarropy",
+                                url: "https://github.com/gabygarropy",
+                                avatarUrl: "https://github.com/gabygarropy.png",
+                            },
+                            tier: {
+                                name: "🥈 silver",
+                                description: "### 🥈 silver",
+                            },
+                        },
+                        {
+                            sponsorEntity: {
+                                login: "sofigarropy",
+                                url: "https://github.com/sofigarropy",
+                                avatarUrl: "https://github.com/sofigarropy.png",
+                            },
+                            tier: {
+                                name: "🥇 gold",
+                                description: "### 🥇 gold",
+                            },
+                        },
+                        {
+                            sponsorEntity: {
+                                login: "justingarropy",
+                                url: "https://github.com/justingarropy",
+                                avatarUrl:
+                                    "https://github.com/justingarropy.png",
+                            },
+                            tier: {
+                                name: "💎 diamond",
+                                description: "### 💎 diamond",
+                            },
+                        },
+                    ],
+                },
+            },
+        },
+    },
+}
+
 export {
     mockMeta,
     mockMetaQuery,
@@ -220,6 +309,8 @@ export {
     mockPostsQuery,
     mockProjects,
     mockProjectsQuery,
+    mockSponsors,
+    mockSponsorsQuery,
     mockVideos,
     mockVideosQuery,
 }

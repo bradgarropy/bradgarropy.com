@@ -9,3 +9,8 @@ test("shows section", () => {
         "https://example.com",
     )
 })
+
+test("shows section without link", () => {
+    render(<Section title="Test" />)
+    expect(screen.getByText("Test").parentElement).not.toHaveAttribute("href")
+})
