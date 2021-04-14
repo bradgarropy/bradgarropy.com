@@ -1,11 +1,15 @@
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Layout from "components/Layout"
+import Link from "components/Link"
 import Section from "components/Section"
 import {useSponsors} from "hooks"
 import styled from "styled-components"
+import {link} from "styles/partials"
 
 const Thanks = styled(Section)`
     margin-bottom: 4rem;
+
+    ${link}
 `
 
 const Tiers = styled.div`
@@ -13,7 +17,10 @@ const Tiers = styled.div`
     row-gap: 5rem;
 `
 
-const Sponsor = styled.a`
+const Empty = styled.p`
+    ${link}
+`
+const Sponsor = styled(Link)`
     display: inline-block;
 `
 
@@ -46,6 +53,11 @@ const SponsorsPage = () => {
                     will go directly towards improving the quality of my work,
                     and encouraging more frequent updates.
                 </p>
+                <p>
+                    If you want to support me and be featured on this page go{" "}
+                    <Link to="https://bradgarropy.com/sponsor">sponsor</Link>{" "}
+                    me!
+                </p>
             </Thanks>
 
             <Tiers>
@@ -55,9 +67,7 @@ const SponsorsPage = () => {
                             sponsors.map(sponsor => (
                                 <Sponsor
                                     key={sponsor.username}
-                                    href={sponsor.profile}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                    to={sponsor.profile}
                                 >
                                     <Avatar
                                         src={sponsor.avatar}
@@ -66,17 +76,13 @@ const SponsorsPage = () => {
                                 </Sponsor>
                             ))
                         ) : (
-                            <p>
+                            <Empty>
                                 Nobody yet,{" "}
-                                <a
-                                    href="https://bradgarropy.com/sponsor"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
+                                <Link to="https://bradgarropy.com/sponsor">
                                     be the first
-                                </a>
+                                </Link>
                                 !
-                            </p>
+                            </Empty>
                         )}
                     </Section>
                 ))}
