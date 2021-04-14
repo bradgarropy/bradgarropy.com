@@ -13,7 +13,7 @@ const StyledLink = styled(Link)`
     display: inline-block;
 
     :hover {
-        text-shadow: 3px 3px ${({theme}) => theme.colors.primary};
+        text-shadow: 3px 3px var(--primary);
     }
 `
 

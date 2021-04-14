@@ -1,9 +1,8 @@
 import Footer from "components/Footer"
 import Header from "components/Header"
 import PropTypes from "prop-types"
-import styled, {ThemeProvider} from "styled-components"
+import styled from "styled-components"
 import GlobalStyles from "styles/GlobalStyles"
-import theme from "styles/theme"
 
 const Container = styled.div`
     min-height: 100vh;
@@ -25,17 +24,15 @@ const Content = styled.main`
 
 const Layout = ({children}) => {
     return (
-        <ThemeProvider theme={theme}>
-            <>
-                <GlobalStyles />
+        <>
+            <GlobalStyles />
 
-                <Container>
-                    <Header />
-                    <Content>{children}</Content>
-                    <Footer />
-                </Container>
-            </>
-        </ThemeProvider>
+            <Container>
+                <Header />
+                <Content>{children}</Content>
+                <Footer />
+            </Container>
+        </>
     )
 }
 

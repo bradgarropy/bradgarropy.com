@@ -21,14 +21,14 @@ const HeroImage = styled.a`
     .hero-image {
         border-radius: 100%;
         box-sizing: border-box;
-        border: 7px solid ${({theme}) => theme.colors.black};
-        background-color: ${({theme}) => theme.colors.black};
+        border: 7px solid var(--black);
+        background-color: var(--black);
         transition: all 300ms !important;
 
         :hover {
             transform: rotate(-2deg);
-            border: 7px solid ${({theme}) => theme.colors.primary};
-            background-color: ${({theme}) => theme.colors.primary};
+            border: 7px solid var(--primary);
+            background-color: var(--primary);
         }
     }
 

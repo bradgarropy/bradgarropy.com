@@ -1,7 +1,7 @@
+import {render, screen} from "@testing-library/react"
 import LatestVideos from "components/LatestVideos"
 import {useLatestVideos} from "hooks"
 import {mockVideos} from "test-utils/mocks"
-import {render, screen} from "test-utils/render"
 
 jest.mock("hooks")
 useLatestVideos.mockReturnValue(mockVideos)

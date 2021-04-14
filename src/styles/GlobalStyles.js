@@ -2,10 +2,19 @@ import {createGlobalStyle} from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
     :root {
-        --grvsc-line-highlighted-background-color: ${({theme}) =>
-            `${theme.colors.primary}66`};
-        --grvsc-line-highlighted-border-color: ${({theme}) =>
-            theme.colors.primary};
+        /* colors */
+        --black: #000000;
+        --darkGrey: #aaaaaa;
+        --grey: #dddddd;
+        --white: #ffffff;
+        --purple: #c792ea;
+
+        /* palette */
+        --primary: var(--purple);
+
+        /* highlighting */
+        --grvsc-line-highlighted-background-color: #c792ea66;
+        --grvsc-line-highlighted-border-color: var(--primary);
         --grvsc-line-highlighted-border-width: 4px;
     }
 
@@ -26,7 +35,7 @@ const GlobalStyles = createGlobalStyle`
     h1, h2, h3, h4, h5, h6 {
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
-        color: ${({theme}) => theme.colors.black};
+        color: var(--black);
         margin-top: 1.75rem;
         margin-bottom: 1.75rem;
         line-height: 1.5;
@@ -51,11 +60,11 @@ const GlobalStyles = createGlobalStyle`
     }
 
     a {
-        color: ${({theme}) => theme.colors.primary};
+        color: var(--primary);
         text-decoration: none;
         transition: all 300ms;
 
-        &:hover {
+        :hover {
             color: rgba(0, 0, 0, 0.8);
         }
     }
@@ -67,7 +76,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     blockquote {
-        border-left: 3px solid ${({theme}) => theme.colors.primary};
+        border-left: 3px solid var(--primary);
         font-style: italic;
         padding-left: 1rem;
     }
@@ -90,7 +99,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     ::selection {
-        background-color: ${({theme}) => theme.colors.primary};
+        background-color: var(--primary);
     }
 
     /* responsive iframes */

@@ -28,14 +28,14 @@ const Avatar = styled.img`
     width: 6rem;
     margin: 0rem;
     border-radius: 50%;
-    border: 5px solid ${({theme}) => theme.colors.black};
-    background-color: ${({theme}) => theme.colors.black};
+    border: 5px solid var(--black);
+    background-color: var(--black);
     transition: all 300ms;
 
     :hover {
         transform: rotate(-2deg);
-        border: 5px solid ${({theme}) => theme.colors.primary};
-        background-color: ${({theme}) => theme.colors.primary};
+        border: 5px solid var(--primary);
+        background-color: var(--primary);
     }
 `
 

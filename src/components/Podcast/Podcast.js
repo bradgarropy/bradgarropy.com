@@ -17,7 +17,7 @@ const PodcastWrapper = styled.div`
 const Description = styled.div`
     display: grid;
     justify-items: start;
-    color: ${({theme}) => theme.colors.black};
+    color: var(--black);
 `
 
 const Badge = styled.span`
@@ -28,7 +28,7 @@ const Badge = styled.span`
     font-size: 1.5rem;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
-    border: 3px solid ${({theme}) => theme.colors.black};
+    border: 3px solid var(--black);
 `
 
 const Hosts = styled.div`
@@ -49,10 +49,10 @@ const Hosts = styled.div`
 `
 
 const Host = styled.a`
-    color: ${({theme}) => theme.colors.black};
+    color: var(--black);
 
     :hover {
-        text-shadow: 2px 2px ${({theme}) => theme.colors.primary};
+        text-shadow: 2px 2px var(--primary);
     }
 `
 
@@ -64,9 +64,9 @@ const CoverImage = styled.a`
     .cover-image {
         box-sizing: border-box;
         border-radius: 0.5rem;
-        border: 2px solid ${({theme}) => theme.colors.black};
-        background-color: ${({theme}) => theme.colors.black};
-        box-shadow: 3px 3px 0 ${({theme}) => theme.colors.black};
+        border: 2px solid var(--black);
+        background-color: var(--black);
+        box-shadow: 3px 3px 0 var(--black);
         transition: all 300ms !important;
     }
 

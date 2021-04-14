@@ -1,6 +1,6 @@
+import {render, screen} from "@testing-library/react"
 import {useMeta} from "hooks"
 import {mockMeta} from "test-utils/mocks"
-import {render, screen} from "test-utils/render"
 
 import Post from "./Post"
 

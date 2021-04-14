@@ -4,12 +4,12 @@ import styled from "styled-components"
 const ProjectWrapper = styled.a`
     padding: 1.125rem;
     border-radius: 0.3rem;
-    border: 3px solid ${({theme}) => theme.colors.black};
-    box-shadow: 3px 3px 0 ${({theme}) => theme.colors.black};
+    border: 3px solid var(--black);
+    box-shadow: 3px 3px 0 var(--black);
     display: grid;
     row-gap: 0.5rem;
     align-content: space-between;
-    color: ${({theme}) => theme.colors.black};
+    color: var(--black);
 
     :hover {
         box-shadow: none;
