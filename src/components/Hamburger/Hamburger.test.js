@@ -1,6 +1,6 @@
+import {render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import {AppContext} from "context/App"
-import {render, screen} from "test-utils/render"
 
 import Hamburger from "./Hamburger"
 

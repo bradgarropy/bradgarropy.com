@@ -4,33 +4,33 @@ import styled, {css} from "styled-components"
 
 const button = css`
     display: inline-block;
-    background: ${({theme}) => theme.colors.white};
-    color: ${({theme}) => theme.colors.black};
+    background: var(--white);
+    color: var(--black);
     padding: 0.5rem 0.75rem;
     border-radius: 0.3rem;
     transition: all 300ms;
-    border: 2px solid ${({theme}) => theme.colors.black};
-    box-shadow: 3px 3px 0 ${({theme}) => theme.colors.black} !important;
+    border: 2px solid var(--black);
+    box-shadow: 3px 3px 0 var(--black) !important;
     margin-bottom: 5px;
 
     &.reverse {
-        box-shadow: -3px 3px 0 ${({theme}) => theme.colors.black} !important;
+        box-shadow: -3px 3px 0 var(--black) !important;
     }
 
-    &:hover {
+    :hover {
         color: inherit;
-        border: 2px solid ${({theme}) => theme.colors.primary};
-        box-shadow: 0 5px 0 ${({theme}) => theme.colors.primary} !important;
+        border: 2px solid var(--primary);
+        box-shadow: 0 5px 0 var(--primary) !important;
     }
 
     &.disabled {
         cursor: default;
-        border: 2px solid ${({theme}) => theme.colors.grey};
-        box-shadow: 3px 3px 0 ${({theme}) => theme.colors.grey} !important;
+        border: 2px solid var(--grey);
+        box-shadow: 3px 3px 0 var(--grey) !important;
     }
 
     &.disabled.reverse {
-        box-shadow: -3px 3px 0 ${({theme}) => theme.colors.grey} !important;
+        box-shadow: -3px 3px 0 var(--grey) !important;
     }
 `
 

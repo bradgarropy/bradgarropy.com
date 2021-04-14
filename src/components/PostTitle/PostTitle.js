@@ -15,10 +15,10 @@ const PostTitleWrapper = styled.div`
     }
 
     a {
-        color: ${({theme}) => theme.colors.black};
+        color: var(--black);
 
         :hover {
-            color: ${({theme}) => theme.colors.primary};
+            color: var(--primary);
         }
     }
 `

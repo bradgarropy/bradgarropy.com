@@ -1,4 +1,4 @@
-import {render} from "test-utils/render"
+import {render} from "@testing-library/react"
 
 import Logo from "./Logo"
 

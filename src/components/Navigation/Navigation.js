@@ -12,10 +12,10 @@ const NavigationWrapper = styled.nav`
 `
 
 const NavigationLink = styled(Link)`
-    color: ${({theme}) => theme.colors.black};
+    color: var(--black);
 
-    &:hover {
-        color: ${({theme}) => theme.colors.primary};
+    :hover {
+        color: var(--primary);
     }
 `
 

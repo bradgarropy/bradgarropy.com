@@ -7,7 +7,7 @@ import {useContext} from "react"
 import styled from "styled-components"
 
 const MobileNavigationWrapper = styled.div`
-    background: ${({theme}) => theme.colors.white};
+    background: var(--white);
     position: fixed;
     top: 0;
     right: 0;
@@ -35,7 +35,7 @@ const MobileNavigationLinks = styled.div`
 `
 
 const MobileNavigationLink = styled(Link)`
-    color: ${({theme}) => theme.colors.black};
+    color: var(--black);
 `
 
 const MobileNavigation = () => {

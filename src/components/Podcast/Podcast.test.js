@@ -1,7 +1,7 @@
+import {render, screen} from "@testing-library/react"
 import Podcast from "components/Podcast"
 import {useStaticQuery} from "gatsby"
 import {mockPodcast, mockPodcastQuery} from "test-utils/mocks"
-import {render, screen} from "test-utils/render"
 
 useStaticQuery.mockReturnValue(mockPodcastQuery)
 
