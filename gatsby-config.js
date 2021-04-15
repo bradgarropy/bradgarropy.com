@@ -89,7 +89,7 @@ const config = {
             },
         },
         {
-            resolve: "@bellistic/gatsby-source-github-api",
+            resolve: "gatsby-source-github-api",
             options: {
                 token: process.env.GITHUB_TOKEN,
                 graphQLQuery: `
