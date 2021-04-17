@@ -1,3 +1,4 @@
+import Link from "components/Link"
 import {StaticImage} from "gatsby-plugin-image"
 import styled from "styled-components"
 
@@ -13,7 +14,7 @@ const HeroWrapper = styled.div`
     }
 `
 
-const HeroImage = styled.a`
+const HeroImage = styled(Link)`
     .hero-image-container {
         border-radius: 100%;
     }
@@ -81,11 +82,7 @@ const Description = styled.div`
 const Hero = () => {
     return (
         <HeroWrapper>
-            <HeroImage
-                href="https://instagram.com/bradgarropy"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+            <HeroImage to="https://instagram.com/bradgarropy">
                 <StaticImage
                     src="https://github.com/bradgarropy.png"
                     alt="bg"

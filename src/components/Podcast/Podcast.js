@@ -1,3 +1,4 @@
+import Link from "components/Link"
 import {StaticImage} from "gatsby-plugin-image"
 import {usePodcast} from "hooks"
 import styled from "styled-components"
@@ -48,7 +49,7 @@ const Hosts = styled.div`
     }
 `
 
-const Host = styled.a`
+const Host = styled(Link)`
     color: var(--black);
 
     :hover {
@@ -56,7 +57,7 @@ const Host = styled.a`
     }
 `
 
-const CoverImage = styled.a`
+const CoverImage = styled(Link)`
     .cover-image-container {
         overflow: visible;
     }
@@ -84,12 +85,7 @@ const Podcast = () => {
 
     return (
         <PodcastWrapper>
-            <CoverImage
-                href={podcast.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid={podcast.title}
-            >
+            <CoverImage to={podcast.link} data-testid={podcast.title}>
                 <StaticImage
                     src="../../../static/web-dev-weekly.png"
                     alt={podcast.title}
@@ -108,21 +104,13 @@ const Podcast = () => {
                 <span>a weekly podcast about web development hosted by</span>
 
                 <Hosts>
-                    <Host
-                        href="https://twitter.com/bradgarropy"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <Host to="https://twitter.com/bradgarropy">
                         brad garropy
                     </Host>
 
                     <span>/</span>
 
-                    <Host
-                        href="https://twitter.com/RGottleber"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <Host to="https://twitter.com/RGottleber">
                         richard gottleber
                     </Host>
                 </Hosts>

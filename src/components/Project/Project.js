@@ -1,7 +1,8 @@
+import Link from "components/Link"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-const ProjectWrapper = styled.a`
+const ProjectWrapper = styled(Link)`
     padding: 1.125rem;
     border-radius: 0.3rem;
     border: 3px solid var(--black);
@@ -43,11 +44,7 @@ const Stars = styled.span`
 
 const Project = ({project}) => {
     return (
-        <ProjectWrapper
-            href={`${project.url}#readme`}
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+        <ProjectWrapper to={`${project.url}#readme`}>
             <Top>
                 <Name>{project.name}</Name>
                 <Description>{project.description}</Description>
