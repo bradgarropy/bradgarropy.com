@@ -1,4 +1,4 @@
-import Link from "components/Link"
+import Link from "@bradgarropy/gatsby-link"
 import {StaticImage} from "gatsby-plugin-image"
 import {usePodcast} from "hooks"
 import styled from "styled-components"

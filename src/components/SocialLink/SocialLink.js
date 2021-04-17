@@ -1,3 +1,4 @@
+import Link from "@bradgarropy/gatsby-link"
 import {
     faDiscord,
     faGithub,
@@ -7,7 +8,6 @@ import {
     faYoutube,
 } from "@fortawesome/free-brands-svg-icons"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import Link from "components/Link"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 

@@ -1,4 +1,4 @@
-import Link from "components/Link"
+import Link from "@bradgarropy/gatsby-link"
 import {StaticImage} from "gatsby-plugin-image"
 import styled from "styled-components"
 

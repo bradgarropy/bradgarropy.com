@@ -1,4 +1,4 @@
-import Link from "components/Link"
+import Link from "@bradgarropy/gatsby-link"
 import {GatsbyImage, getImage} from "gatsby-plugin-image"
 import {useLatestVideos} from "hooks"
 import styled from "styled-components"

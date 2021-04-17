@@ -1,4 +1,4 @@
-import Link from "components/Link"
+import Link from "@bradgarropy/gatsby-link"
 import PropTypes from "prop-types"
 import styled, {css} from "styled-components"
 
