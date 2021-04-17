@@ -1,6 +1,6 @@
+import Link from "@bradgarropy/gatsby-link"
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Layout from "components/Layout"
-import Link from "components/Link"
 import Section from "components/Section"
 import {useSponsors} from "hooks"
 import styled from "styled-components"

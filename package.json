@@ -1,6 +1,6 @@
 {
     "name": "bradgarropy.com",
-    "version": "3.17.0",
+    "version": "3.18.0",
     "description": "🏠 my home on the web",
     "keywords": [
         "gatsby",
@@ -38,6 +38,7 @@
         "new": "plop"
     },
     "dependencies": {
+        "@bradgarropy/gatsby-link": "^0.0.1",
         "@bradgarropy/gatsby-plugin-seo": "^1.0.0",
         "@fortawesome/fontawesome-svg-core": "^1.2.32",
         "@fortawesome/free-brands-svg-icons": "^5.15.1",
