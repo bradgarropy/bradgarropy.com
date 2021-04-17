@@ -1,3 +1,4 @@
+import Link from "components/Link"
 import {GatsbyImage, getImage} from "gatsby-plugin-image"
 import {useLatestVideos} from "hooks"
 import styled from "styled-components"
@@ -41,11 +42,9 @@ const LatestVideos = () => {
                 const thumbnail = getImage(latestVideo.localThumbnail)
 
                 return (
-                    <a
+                    <Link
                         key={latestVideo.videoId}
-                        href={`https://www.youtube.com/watch?v=${latestVideo.videoId}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        to={`https://www.youtube.com/watch?v=${latestVideo.videoId}`}
                     >
                         <Thumbnail data-testid={latestVideo.videoId}>
                             <GatsbyImage
@@ -55,7 +54,7 @@ const LatestVideos = () => {
                                 imgClassName="thumbnail"
                             />
                         </Thumbnail>
-                    </a>
+                    </Link>
                 )
             })}
         </LatestVideosWrapper>

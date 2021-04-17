@@ -1,3 +1,4 @@
+import Link from "components/Link"
 import LinkButton from "components/LinkButton"
 import PropTypes from "prop-types"
 import styled from "styled-components"
@@ -44,7 +45,7 @@ const Now = ({now, newer, older}) => {
                 <div dangerouslySetInnerHTML={{__html: html}} />
 
                 <div className="pagination">
-                    <LinkButton to={`/now/${newer}`} gatsby disabled={!newer}>
+                    <LinkButton to={`/now/${newer}`} disabled={!newer}>
                         👈🏼 newer
                     </LinkButton>
 
@@ -60,21 +61,8 @@ const Now = ({now, newer, older}) => {
 
                 <p className="inspiration">
                     inspired by{" "}
-                    <a
-                        href="https://twitter.com/sivers"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        derek sivers
-                    </a>{" "}
-                    and{" "}
-                    <a
-                        href="https://nownownow.com/about"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        nownownow
-                    </a>
+                    <Link to="https://twitter.com/sivers">derek sivers</Link>{" "}
+                    and <Link to="https://nownownow.com/about">nownownow</Link>
                 </p>
             </StyledNow>
         </>
