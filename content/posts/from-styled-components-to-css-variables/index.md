@@ -1,7 +1,7 @@
 ---
 title: 💅🏼 from styled components to css variables
 slug: from-styled-components-to-css-variables
-date: 2021-04-15
+date: 2021-04-16
 topic:
     name: coding
     icon: 💻
