@@ -124,6 +124,7 @@ const config = {
                                     tier {
                                         name
                                         description
+                                        isOneTime
                                     }
                                 }
                             }

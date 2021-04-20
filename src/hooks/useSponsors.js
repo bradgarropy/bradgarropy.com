@@ -16,6 +16,7 @@ const useSponsors = () => {
                                 tier {
                                     name
                                     description
+                                    isOneTime
                                 }
                             }
                         }
@@ -30,29 +31,30 @@ const useSponsors = () => {
     const sponsorships =
         data.githubData.data.user.sponsorshipsAsMaintainer.nodes
 
-    const tiers = {
-        "🥉 bronze": [],
-        "🥈 silver": [],
-        "🥇 gold": [],
-        "💎 diamond": [],
+    const sponsors = {
+        "monthly": [],
+        "one-time": [],
     }
 
     sponsorships.forEach(sponsorship => {
-        const {tier} = sponsorship
-
         const re = new RegExp("### (.*)$", "m")
-        tier.name = re.exec(tier.description)[1].toLowerCase()
+        const tier = re.exec(sponsorship.tier.description)[1].split(" ")[0]
 
         const sponsor = {
             username: sponsorship.sponsorEntity.login,
             avatar: sponsorship.sponsorEntity.avatarUrl,
             profile: sponsorship.sponsorEntity.url,
+            tier,
         }
 
-        tiers[tier.name].push(sponsor)
+        if (sponsorship.tier.isOneTime) {
+            sponsors["one-time"].push(sponsor)
+        } else {
+            sponsors["monthly"].push(sponsor)
+        }
     })
 
-    return tiers
+    return sponsors
 }
 
 export default useSponsors

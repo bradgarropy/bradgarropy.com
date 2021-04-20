@@ -212,32 +212,32 @@ const mockPodcastQuery = {
 }
 
 const mockSponsors = {
-    "🥉 bronze": [
+    "monthly": [
         {
             username: "bradgarropy",
             avatar: "https://github.com/bradgarropy.png",
             profile: "https://github.com/bradgarropy",
+            tier: "💎",
         },
-    ],
-    "🥈 silver": [
         {
             username: "gabygarropy",
             avatar: "https://github.com/gabygarropy.png",
             profile: "https://github.com/gabygarropy",
+            tier: "🥇",
         },
     ],
-    "🥇 gold": [
+    "one-time": [
         {
             username: "sofigarropy",
             avatar: "https://github.com/sofigarropy.png",
             profile: "https://github.com/sofigarropy",
+            tier: "🤩",
         },
-    ],
-    "💎 diamond": [
         {
             username: "justingarropy",
             avatar: "https://github.com/justingarropy.png",
             profile: "https://github.com/justingarropy",
+            tier: "😍",
         },
     ],
 }
@@ -255,8 +255,9 @@ const mockSponsorsQuery = {
                                 avatarUrl: "https://github.com/bradgarropy.png",
                             },
                             tier: {
-                                name: "🥉 bronze",
-                                description: "### 🥉 bronze",
+                                name: "💎 diamond",
+                                description: "### 💎 diamond",
+                                isOneTime: false,
                             },
                         },
                         {
@@ -266,8 +267,9 @@ const mockSponsorsQuery = {
                                 avatarUrl: "https://github.com/gabygarropy.png",
                             },
                             tier: {
-                                name: "🥈 silver",
-                                description: "### 🥈 silver",
+                                name: "🥇 gold",
+                                description: "### 🥇 gold",
+                                isOneTime: false,
                             },
                         },
                         {
@@ -277,8 +279,9 @@ const mockSponsorsQuery = {
                                 avatarUrl: "https://github.com/sofigarropy.png",
                             },
                             tier: {
-                                name: "🥇 gold",
-                                description: "### 🥇 gold",
+                                name: "🤩",
+                                description: "### 🤩",
+                                isOneTime: true,
                             },
                         },
                         {
@@ -289,8 +292,9 @@ const mockSponsorsQuery = {
                                     "https://github.com/justingarropy.png",
                             },
                             tier: {
-                                name: "💎 diamond",
-                                description: "### 💎 diamond",
+                                name: "😍",
+                                description: "### 😍",
+                                isOneTime: true,
                             },
                         },
                     ],
