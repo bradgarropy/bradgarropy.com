@@ -22,6 +22,18 @@ const Empty = styled.p`
 `
 const Sponsor = styled(Link)`
     display: inline-block;
+    position: relative;
+
+    :hover {
+        color: inherit;
+    }
+`
+
+const Tier = styled.span`
+    font-size: 2.5rem;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
 `
 
 const Avatar = styled.img`
@@ -40,7 +52,7 @@ const Avatar = styled.img`
 `
 
 const SponsorsPage = () => {
-    const tiers = useSponsors()
+    const sponsors = useSponsors()
 
     return (
         <Layout>
@@ -61,8 +73,8 @@ const SponsorsPage = () => {
             </Thanks>
 
             <Tiers>
-                {Object.entries(tiers).map(([tier, sponsors]) => (
-                    <Section key={tier} title={tier}>
+                {Object.entries(sponsors).map(([frequency, sponsors]) => (
+                    <Section key={frequency} title={frequency}>
                         {sponsors.length ? (
                             sponsors.map(sponsor => (
                                 <Sponsor
@@ -73,6 +85,8 @@ const SponsorsPage = () => {
                                         src={sponsor.avatar}
                                         alt={sponsor.username}
                                     />
+
+                                    <Tier>{sponsor.tier}</Tier>
                                 </Sponsor>
                             ))
                         ) : (
