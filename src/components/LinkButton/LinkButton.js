@@ -10,27 +10,26 @@ const button = css`
     border-radius: 0.3rem;
     transition: all 300ms;
     border: 2px solid var(--black);
-    box-shadow: 3px 3px 0 var(--black) !important;
+    box-shadow: 3px 3px 0 var(--black);
     margin-bottom: 5px;
 
     &.reverse {
-        box-shadow: -3px 3px 0 var(--black) !important;
+        box-shadow: -3px 3px 0 var(--black);
     }
 
     :hover {
         color: inherit;
-        border: 2px solid var(--primary);
-        box-shadow: 0 5px 0 var(--primary) !important;
+        box-shadow: none;
     }
 
     &.disabled {
         cursor: default;
         border: 2px solid var(--grey);
-        box-shadow: 3px 3px 0 var(--grey) !important;
+        box-shadow: 3px 3px 0 var(--grey);
     }
 
     &.disabled.reverse {
-        box-shadow: -3px 3px 0 var(--grey) !important;
+        box-shadow: -3px 3px 0 var(--grey);
     }
 `
 
