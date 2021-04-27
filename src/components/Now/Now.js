@@ -4,31 +4,32 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import {link} from "styles/partials"
 
-const StyledNow = styled.div`
+const Header = styled.div`
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+`
+
+const Date = styled.span`
+    text-transform: lowercase;
+`
+
+const Body = styled.div`
+    ${link}
+`
+
+const Footer = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    grid-template-areas: "next previous";
+`
+const Inspiration = styled.p`
     ${link}
 
-    .headline {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-
-        .date {
-            text-transform: lowercase;
-        }
-    }
-
-    .pagination {
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        justify-content: space-between;
-        grid-template-areas: "next previous";
-    }
-
-    .inspiration {
-        margin-block-start: 5rem;
-        text-align: center;
-        font-style: italic;
-    }
+    margin-block-start: 5rem;
+    text-align: center;
+    font-style: italic;
 `
 
 const Now = ({now, newer, older}) => {
@@ -36,35 +37,33 @@ const Now = ({now, newer, older}) => {
 
     return (
         <>
-            <StyledNow>
-                <div className="headline">
-                    <h1>🧭 now</h1>
-                    <span className="date">{`${frontmatter.date}`}</span>
-                </div>
+            <Header>
+                <h1>🧭 now</h1>
+                <Date>{frontmatter.date}</Date>
+            </Header>
 
-                <div dangerouslySetInnerHTML={{__html: html}} />
+            <Body dangerouslySetInnerHTML={{__html: html}} />
 
-                <div className="pagination">
-                    <LinkButton to={`/now/${newer}`} disabled={!newer}>
-                        👈🏼 newer
-                    </LinkButton>
+            <Footer>
+                <LinkButton to={`/now/${newer}`} disabled={!newer}>
+                    👈🏼 newer
+                </LinkButton>
 
-                    <LinkButton
-                        to={`/now/${older}`}
-                        gatsby
-                        reverse
-                        disabled={!older}
-                    >
-                        older 👉🏼
-                    </LinkButton>
-                </div>
+                <LinkButton
+                    to={`/now/${older}`}
+                    gatsby
+                    reverse
+                    disabled={!older}
+                >
+                    older 👉🏼
+                </LinkButton>
+            </Footer>
 
-                <p className="inspiration">
-                    inspired by{" "}
-                    <Link to="https://twitter.com/sivers">derek sivers</Link>{" "}
-                    and <Link to="https://nownownow.com/about">nownownow</Link>
-                </p>
-            </StyledNow>
+            <Inspiration>
+                inspired by{" "}
+                <Link to="https://twitter.com/sivers">derek sivers</Link> and{" "}
+                <Link to="https://nownownow.com/about">nownownow</Link>
+            </Inspiration>
         </>
     )
 }
