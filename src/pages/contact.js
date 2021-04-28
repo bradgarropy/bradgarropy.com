@@ -1,5 +1,4 @@
 import SEO from "@bradgarropy/gatsby-plugin-seo"
-import Layout from "components/Layout"
 import {graphql} from "gatsby"
 import PropTypes from "prop-types"
 import styled from "styled-components"
@@ -27,11 +26,11 @@ const ContactPage = ({data}) => {
     const {html} = data.contact
 
     return (
-        <Layout>
+        <>
             <SEO title="👋🏼 say hi" description="" />
 
             <Contact dangerouslySetInnerHTML={{__html: html}} />
-        </Layout>
+        </>
     )
 }
 

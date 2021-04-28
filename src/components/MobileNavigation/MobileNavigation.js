@@ -1,13 +1,12 @@
 import {faTimes} from "@fortawesome/free-solid-svg-icons"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import Hamburger from "components/Hamburger"
-import {AppContext} from "context/App"
 import {Link} from "gatsby"
-import {useContext} from "react"
+import {useApp} from "hooks"
 import styled from "styled-components"
 
 const MobileNavigationWrapper = styled.div`
-    background: var(--white);
+    background: var(--background);
     position: fixed;
     top: 0;
     right: 0;
@@ -21,6 +20,7 @@ const MobileNavigationWrapper = styled.div`
 `
 
 const CloseIcon = styled(FontAwesomeIcon)`
+    color: var(--text);
     margin: 1.25rem;
     cursor: pointer;
     justify-self: end;
@@ -35,12 +35,15 @@ const MobileNavigationLinks = styled.div`
 `
 
 const MobileNavigationLink = styled(Link)`
-    color: var(--black);
+    color: var(--text);
+
+    :hover {
+        color: var(--primary);
+    }
 `
 
 const MobileNavigation = () => {
-    const appContext = useContext(AppContext)
-    const {open, setOpen} = appContext
+    const {open, setOpen} = useApp()
 
     const onClick = () => {
         setOpen(false)

@@ -5,6 +5,7 @@ const NavigationWrapper = styled.nav`
     display: grid;
     grid-auto-flow: column;
     column-gap: 1.25rem;
+    color: var(--text);
 
     @media (max-width: 600px) {
         display: none;
@@ -12,7 +13,7 @@ const NavigationWrapper = styled.nav`
 `
 
 const NavigationLink = styled(Link)`
-    color: var(--black);
+    color: var(--text);
 
     :hover {
         color: var(--primary);

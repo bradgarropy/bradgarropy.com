@@ -3,6 +3,7 @@ import styled from "styled-components"
 const LogoWrapper = styled.svg`
     display: inline-block;
     width: 50px;
+    fill: var(--text);
 `
 
 const Logo = () => (

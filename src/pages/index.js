@@ -3,7 +3,6 @@ import FeaturedProjects from "components/FeaturedProjects"
 import Hero from "components/Hero"
 import LatestPosts from "components/LatestPosts"
 import LatestVideos from "components/LatestVideos"
-import Layout from "components/Layout"
 import Podcast from "components/Podcast"
 import Section from "components/Section"
 import {useMeta} from "hooks"
@@ -23,7 +22,7 @@ const IndexPage = () => {
     const meta = useMeta()
 
     return (
-        <Layout>
+        <>
             <SEO title={meta.description} description="" />
 
             <Sections>
@@ -45,7 +44,7 @@ const IndexPage = () => {
                     <Podcast />
                 </Section>
             </Sections>
-        </Layout>
+        </>
     )
 }
 

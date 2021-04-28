@@ -1,5 +1,6 @@
 import Footer from "components/Footer"
 import Header from "components/Header"
+import {AppProvider} from "context"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import GlobalStyles from "styles/GlobalStyles"
@@ -24,7 +25,7 @@ const Content = styled.main`
 
 const Layout = ({children}) => {
     return (
-        <>
+        <AppProvider>
             <GlobalStyles />
 
             <Container>
@@ -32,7 +33,7 @@ const Layout = ({children}) => {
                 <Content>{children}</Content>
                 <Footer />
             </Container>
-        </>
+        </AppProvider>
     )
 }
 

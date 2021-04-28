@@ -8,9 +8,7 @@ const Header = styled.div`
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-`
-
-const Date = styled.span`
+    color: var(--text);
     text-transform: lowercase;
 `
 
@@ -39,7 +37,7 @@ const Now = ({now, newer, older}) => {
         <>
             <Header>
                 <h1>🧭 now</h1>
-                <Date>{frontmatter.date}</Date>
+                <span>{frontmatter.date}</span>
             </Header>
 
             <Body dangerouslySetInnerHTML={{__html: html}} />

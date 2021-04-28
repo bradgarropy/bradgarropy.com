@@ -190,6 +190,20 @@ const config = {
         {
             resolve: "@bradgarropy/gatsby-plugin-seo",
         },
+        {
+            resolve: "gatsby-plugin-react-svg",
+            options: {
+                rule: {
+                    include: /svg/,
+                },
+            },
+        },
+        {
+            resolve: "gatsby-plugin-layout",
+            options: {
+                component: require.resolve("./src/components/Layout/Layout.js"),
+            },
+        },
     ],
 }
 

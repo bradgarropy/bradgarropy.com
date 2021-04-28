@@ -1,3 +1,4 @@
+export {default as useApp} from "hooks/useApp"
 export {default as useLatestPosts} from "hooks/useLatestPosts"
 export {default as useLatestVideos} from "hooks/useLatestVideos"
 export {default as useMeta} from "hooks/useMeta"

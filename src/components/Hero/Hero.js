@@ -22,9 +22,8 @@ const HeroImage = styled(Link)`
     .hero-image {
         border-radius: 100%;
         box-sizing: border-box;
-        border: 7px solid var(--black);
-        background-color: var(--black);
-        transition: all 300ms !important;
+        border: 7px solid var(--text);
+        background-color: var(--text);
 
         :hover {
             transform: rotate(-2deg);

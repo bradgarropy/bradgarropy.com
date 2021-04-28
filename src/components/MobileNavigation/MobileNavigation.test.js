@@ -1,62 +1,53 @@
 import {render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
-import {AppContext} from "context/App"
+import {useApp} from "hooks"
+import {generateAppCtx} from "test-utils/generators"
 
 import MobileNavigation from "./MobileNavigation"
 
-const mockAppCtxOpen = {
-    open: true,
-    setOpen: jest.fn(),
-}
+const mockAppCtxOpen = generateAppCtx({open: true})
+const mockAppCtxClosed = generateAppCtx({open: false})
 
-const mockAppCtxClosed = {
-    open: false,
-    setOpen: jest.fn(),
-}
+jest.mock("hooks")
 
 const links = ["blog", "now", "uses", "hire me", "contact"]
 
-test("shows hamburger", () => {
-    render(
-        <AppContext.Provider value={mockAppCtxClosed}>
-            <MobileNavigation />
-        </AppContext.Provider>,
-    )
+describe("closed mobile navigation", () => {
+    beforeEach(() => {
+        useApp.mockReturnValue(mockAppCtxClosed)
+    })
 
-    expect(screen.getByLabelText("menu"))
+    test("shows hamburger", () => {
+        render(<MobileNavigation />)
+        expect(screen.getByLabelText("menu"))
+    })
+
+    test("opens navigation", () => {
+        render(<MobileNavigation />)
+
+        userEvent.click(screen.getByLabelText("menu"))
+        expect(mockAppCtxClosed.setOpen).toHaveBeenCalledTimes(1)
+        expect(mockAppCtxClosed.setOpen).toHaveBeenCalledWith(true)
+    })
 })
 
-test("shows menu", () => {
-    render(
-        <AppContext.Provider value={mockAppCtxOpen}>
-            <MobileNavigation />
-        </AppContext.Provider>,
-    )
+describe("open mobile navigation", () => {
+    beforeEach(() => {
+        useApp.mockReturnValue(mockAppCtxOpen)
+    })
 
-    expect(screen.getByLabelText("close"))
-    links.forEach(link => expect(screen.getByText(link)))
-})
+    test("shows menu", () => {
+        render(<MobileNavigation />)
 
-test("opens navigation", () => {
-    render(
-        <AppContext.Provider value={mockAppCtxClosed}>
-            <MobileNavigation />
-        </AppContext.Provider>,
-    )
+        expect(screen.getByLabelText("close"))
+        links.forEach(link => expect(screen.getByText(link)))
+    })
 
-    userEvent.click(screen.getByLabelText("menu"))
-    expect(mockAppCtxClosed.setOpen).toHaveBeenCalledTimes(1)
-    expect(mockAppCtxClosed.setOpen).toHaveBeenCalledWith(true)
-})
+    test("closes navigation", () => {
+        render(<MobileNavigation />)
 
-test("closes navigation", () => {
-    render(
-        <AppContext.Provider value={mockAppCtxOpen}>
-            <MobileNavigation />
-        </AppContext.Provider>,
-    )
-
-    userEvent.click(screen.getByLabelText("close"))
-    expect(mockAppCtxOpen.setOpen).toHaveBeenCalledTimes(1)
-    expect(mockAppCtxOpen.setOpen).toHaveBeenCalledWith(false)
+        userEvent.click(screen.getByLabelText("close"))
+        expect(mockAppCtxOpen.setOpen).toHaveBeenCalledTimes(1)
+        expect(mockAppCtxOpen.setOpen).toHaveBeenCalledWith(false)
+    })
 })

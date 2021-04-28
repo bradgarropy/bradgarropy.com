@@ -22,10 +22,9 @@ const Thumbnail = styled.div`
     .thumbnail {
         box-sizing: border-box;
         border-radius: 0.3rem;
-        border: 3px solid var(--black);
-        background-color: var(--black);
-        box-shadow: 3px 3px 0 var(--black);
-        transition: all 300ms !important;
+        border: 3px solid var(--text);
+        background-color: var(--text);
+        box-shadow: 3px 3px 0 var(--text);
     }
 
     .thumbnail:hover {

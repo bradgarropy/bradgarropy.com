@@ -14,9 +14,8 @@ const StyledSearch = styled.input`
     font-family: "Open Sans", sans-serif;
     border: 3px solid var(--black);
     border-radius: 0.3rem;
-    box-shadow: 3px 3px 0 var(--black);
+    box-shadow: 3px 3px 0 var(--text);
     color: var(--black);
-    transition: all 300ms;
 
     ::placeholder {
         color: var(--darkGrey);
