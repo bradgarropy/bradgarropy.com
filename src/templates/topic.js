@@ -1,5 +1,4 @@
 import SEO from "@bradgarropy/gatsby-plugin-seo"
-import Layout from "components/Layout"
 import PostList from "components/PostList"
 import TopicMeta from "components/TopicMeta"
 import {graphql} from "gatsby"
@@ -11,12 +10,12 @@ const TopicTemplate = ({pageContext, data}) => {
     const posts = data.allMarkdownRemark.edges.map(edge => edge.node)
 
     return (
-        <Layout>
+        <>
             <SEO title={`${icon} ${name}`} description="" />
 
             <TopicMeta topic={topic} />
             <PostList posts={posts} />
-        </Layout>
+        </>
     )
 }
 

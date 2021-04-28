@@ -1,5 +1,4 @@
 import SEO from "@bradgarropy/gatsby-plugin-seo"
-import Layout from "components/Layout"
 import {graphql} from "gatsby"
 import PropTypes from "prop-types"
 import styled from "styled-components"
@@ -25,11 +24,11 @@ const ResumePage = ({data}) => {
     const {html} = data.resume
 
     return (
-        <Layout>
+        <>
             <SEO title="👔 resume" description="" />
 
             <Resume dangerouslySetInnerHTML={{__html: html}} />
-        </Layout>
+        </>
     )
 }
 

@@ -15,7 +15,7 @@ const PostTitleWrapper = styled.div`
     }
 
     a {
-        color: var(--black);
+        color: var(--text);
 
         :hover {
             color: var(--primary);

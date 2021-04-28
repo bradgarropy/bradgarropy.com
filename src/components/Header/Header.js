@@ -1,7 +1,7 @@
+import ColorTheme from "components/ColorTheme"
 import Logo from "components/Logo"
 import MobileNavigation from "components/MobileNavigation"
 import Navigation from "components/Navigation"
-import {AppProvider} from "context/App"
 import {Link} from "gatsby"
 import styled from "styled-components"
 
@@ -17,6 +17,13 @@ const HeaderWrapper = styled.header`
     }
 `
 
+const Right = styled.div`
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 2rem;
+    align-items: center;
+`
+
 const Header = () => {
     return (
         <HeaderWrapper>
@@ -24,10 +31,11 @@ const Header = () => {
                 <Logo />
             </Link>
 
-            <AppProvider>
+            <Right>
                 <Navigation />
                 <MobileNavigation />
-            </AppProvider>
+                <ColorTheme />
+            </Right>
         </HeaderWrapper>
     )
 }

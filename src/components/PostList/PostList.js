@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const NoPosts = styled.div`
+    color: var(--text);
     font-style: italic;
     font-size: 1.25rem;
 

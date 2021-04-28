@@ -9,13 +9,19 @@ const GlobalStyles = createGlobalStyle`
         --white: #ffffff;
         --purple: #c792ea;
 
-        /* palette */
+        /* intentions */
         --primary: var(--purple);
+        --text: var(--black);
+        --background: var(--white);
 
         /* highlighting */
         --grvsc-line-highlighted-background-color: #c792ea66;
         --grvsc-line-highlighted-border-color: var(--primary);
         --grvsc-line-highlighted-border-width: 4px;
+    }
+
+    * {
+        transition: all 300ms !important;
     }
 
     html {
@@ -24,6 +30,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
+        background: var(--background);
         font-family: "Open Sans", sans-serif;
         font-weight: 400;
         font-size: 16px;
@@ -35,14 +42,14 @@ const GlobalStyles = createGlobalStyle`
     h1, h2, h3, h4, h5, h6 {
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
-        color: var(--black);
+        color: var(--text);
         margin-top: 1.75rem;
         margin-bottom: 1.75rem;
         line-height: 1.5;
     }
 
     p {
-        color: rgba(0, 0, 0, 0.8);
+        color: var(--text);
         line-height: 1.75;
         margin-top: 1.75rem;
         margin-bottom: 1.75rem;
@@ -62,11 +69,14 @@ const GlobalStyles = createGlobalStyle`
     a {
         color: var(--primary);
         text-decoration: none;
-        transition: all 300ms;
 
         :hover {
             color: rgba(0, 0, 0, 0.8);
         }
+    }
+
+    .anchor {
+        fill: var(--text);
     }
 
     img {
@@ -82,10 +92,11 @@ const GlobalStyles = createGlobalStyle`
     }
 
     ul {
-        color: rgba(0, 0, 0, 0.8);
+        color: var(--text);
     }
 
     table {
+        color: var(--text);
         margin: 1.75rem auto;
     }
 

@@ -1,20 +1,17 @@
 import {render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
-import {AppContext} from "context/App"
+import {useApp} from "hooks"
+import {generateAppCtx} from "test-utils/generators"
 
 import Hamburger from "./Hamburger"
 
-const mockAppCtx = {
-    open: false,
-    setOpen: jest.fn(),
-}
+const mockAppCtx = generateAppCtx()
+
+jest.mock("hooks")
+useApp.mockReturnValue(mockAppCtx)
 
 test("opens mobile menu", () => {
-    render(
-        <AppContext.Provider value={mockAppCtx}>
-            <Hamburger />
-        </AppContext.Provider>,
-    )
+    render(<Hamburger />)
 
     userEvent.click(screen.getByLabelText("menu"))
     expect(mockAppCtx.setOpen).toHaveBeenCalledTimes(1)

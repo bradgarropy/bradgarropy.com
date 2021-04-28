@@ -8,13 +8,12 @@ const button = css`
     color: var(--black);
     padding: 0.5rem 0.75rem;
     border-radius: 0.3rem;
-    transition: all 300ms;
     border: 2px solid var(--black);
-    box-shadow: 3px 3px 0 var(--black);
+    box-shadow: 3px 3px 0 var(--text);
     margin-bottom: 5px;
 
     &.reverse {
-        box-shadow: -3px 3px 0 var(--black);
+        box-shadow: -3px 3px 0 var(--text);
     }
 
     :hover {
@@ -23,6 +22,7 @@ const button = css`
     }
 
     &.disabled {
+        color: var(--grey);
         cursor: default;
         border: 2px solid var(--grey);
         box-shadow: 3px 3px 0 var(--grey);

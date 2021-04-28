@@ -1,6 +1,5 @@
 import Link from "@bradgarropy/gatsby-link"
 import SEO from "@bradgarropy/gatsby-plugin-seo"
-import Layout from "components/Layout"
 import Section from "components/Section"
 import {useSponsors} from "hooks"
 import styled from "styled-components"
@@ -40,9 +39,8 @@ const Avatar = styled.img`
     width: 6rem;
     margin: 0rem;
     border-radius: 50%;
-    border: 5px solid var(--black);
-    background-color: var(--black);
-    transition: all 300ms;
+    border: 5px solid var(--text);
+    background-color: var(--text);
 
     :hover {
         transform: rotate(-2deg);
@@ -55,7 +53,7 @@ const SponsorsPage = () => {
     const sponsors = useSponsors()
 
     return (
-        <Layout>
+        <>
             <SEO title="💜 sponsors" description="" />
 
             <Thanks title="💜 thank you">
@@ -101,7 +99,7 @@ const SponsorsPage = () => {
                     </Section>
                 ))}
             </Tiers>
-        </Layout>
+        </>
     )
 }
 

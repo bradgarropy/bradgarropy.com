@@ -1,5 +1,4 @@
 import SEO from "@bradgarropy/gatsby-plugin-seo"
-import Layout from "components/Layout"
 import PostList from "components/PostList"
 import PostSearchBar from "components/PostSearchBar"
 import {usePosts} from "hooks"
@@ -17,14 +16,14 @@ const BlogPage = () => {
     }
 
     return (
-        <Layout>
+        <>
             <SEO title="✍🏼 blog" description="" />
 
             <Blog>
                 <PostSearchBar onSearch={onSearch} />
                 <PostList posts={posts} />
             </Blog>
-        </Layout>
+        </>
     )
 }
 

@@ -5,14 +5,15 @@ import styled from "styled-components"
 const ProjectWrapper = styled(Link)`
     padding: 1.125rem;
     border-radius: 0.3rem;
-    border: 3px solid var(--black);
-    box-shadow: 3px 3px 0 var(--black);
+    border: 3px solid var(--text);
+    box-shadow: 3px 3px 0 var(--text);
     display: grid;
     row-gap: 0.5rem;
     align-content: space-between;
-    color: var(--black);
+    color: var(--text);
 
     :hover {
+        color: var(--text);
         box-shadow: none;
     }
 `

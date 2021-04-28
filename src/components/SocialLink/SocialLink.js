@@ -13,8 +13,7 @@ import styled from "styled-components"
 
 const FontAwesomeIconWrapper = styled(FontAwesomeIcon)`
     font-size: 2.5rem;
-    color: rgba(0, 0, 0, 0.8);
-    transition: all 300ms;
+    color: var(--text);
 
     :hover {
         color: var(--primary);
