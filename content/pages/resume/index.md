@@ -17,11 +17,11 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 
 ### Software
 
-|                       |                                                                                      |
-| --------------------- | ------------------------------------------------------------------------------------ |
-| _JavaScript (ES2020)_ | React, Gatsby, Next.js, Node.js, TypeScript, Svelte, GraphQL, Express, Jest, Cypress |
-| _Python 2.7_          | Paramiko, Beautiful Soup, JUnit, Selenium                                            |
-| _Others_              | HTML5, CSS3, Tailwind CSS, PWA, Stripe, Bash, Groovy, JSON, Markdown, YAML, TOML, C  |
+|              |                                                                                                 |
+| ------------ | ----------------------------------------------------------------------------------------------- |
+| _JavaScript_ | React, Gatsby, Next.js, Node.js, TypeScript, Svelte, GraphQL, Express, Jest, Cypress, Storybook |
+| _Python_     | Paramiko, Beautiful Soup, JUnit, Selenium                                                       |
+| _Others_     | HTML5, CSS3, Tailwind CSS, PWA, Stripe, Bash, Groovy, JSON, Markdown, YAML, TOML, C             |
 
 ### Tools
 
@@ -39,10 +39,20 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 
 ## Employment History
 
-**Adobe | Frontend Developer**  
-_April 2019 - Present_
+**Adobe | Senior Frontend Developer**  
+_July 2020 - Present_
 
-_Magento Premium Search_
+_Magento Storefront Eventing Platform_
+
+-   Platform which leverages a common data layer to collect storefront events.
+-   Led the effort to refactor storefront event gathering to an open source implementation.
+-   Collaborated with frontend, backend, core, and data engineers to architect the solution.
+-   Created two open source libraries.
+    -   [Magento Storefront Events SDK][events-sdk]
+    -   [Magento Storefront Event Collector][event-collector]
+-   Solution works across monolithic, PWA, and headless storefronts.
+
+[_Magento Live Search_][search]
 
 -   Lead frontend developer, joined just after proof of concept was started.
 -   Made React storefront UI components to display results in the search bar and on the search results page.
@@ -50,9 +60,12 @@ _Magento Premium Search_
 -   Created a Magento extension to load the storefront and admin UI.
 -   Implemented testing and continuous integration and deployment for all projects.
 
+**Adobe | Frontend Developer**  
+_April 2019 - July 2020_
+
 [_Magento Product Recommendations_][prex]
 
--   Lead frontend developer from start first proof of concept to release.
+-   Lead frontend developer from first proof of concept to release.
 -   Created a Chrome extension to test initial feasibility.
 -   Implemented a [JavaScript SDK][recommendations-js-sdk] for the backend API.
 -   Built a React admin UI for configuring recommendations.
@@ -123,7 +136,7 @@ _Topic Status_
 -   Links to each commit in each affected repository.
 -   Completely searchable, with button to contact the author.
 
-**Dell | Chassis Management Controller Firmware Engineer**  
+<!-- **Dell | Chassis Management Controller Firmware Engineer**
 _July 2010 - February 2014_
 
 _CMC / Force 10 Switch Interface_
@@ -131,10 +144,16 @@ _CMC / Force 10 Switch Interface_
 -   XML based interface enabling communication between Dell CMC and Force 10 switches.
 -   Co-author of the XML interface spec in collaboration with the Force 10 engineering team.
 -   Implemented the CMC side of the interface.
--   Developed a test executable to run interface commands.
+-   Developed a test executable to run interface commands. -->
+
+## Tutorials
+
+_03/24/2021_ | [Webpack][webpack-tutorial]  
+_03/04/2021_ | [Firebase][firebase-tutorial]
 
 ## Talks & Appearances
 
+_05/07/2021_ | [Web Dev Weekly][web-dev-weekly] with Brad Garropy and Richard Gottleber (_coming soon_)  
 _11/11/2020_ | [Syntax.fm][syntax] with Scott Tolinski and Wes Bos  
 _11/09/2020_ | [The Chau Codes Podcast][chau-codes] with Justin Chau  
 _10/06/2020_ | [That's My Jamstack][thats-my-jamstack] with Bryan Robinson  
@@ -149,16 +168,17 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 
 ### Websites
 
+[🏡 bradgarropy.com][bg]
+
+-   Blog with embedded CMS.
+-   Sourced data from YouTube and an embedded CMS.
+-   Developed with Gatsby and React, hosted on Netlify.
+
 [🤠 daily texas country][dtxc]
 
 -   Texas country music lifestyle website.
 -   Sourced data from Spotify, YouTube, and an embedded CMS.
 -   Email signup through ConvertKit.
--   Developed with Gatsby and React, hosted on Netlify.
-
-[🏡 bradgarropy.com][bg]
-
--   Blog with embedded CMS.
 -   Developed with Gatsby and React, hosted on Netlify.
 
 [⏱ murphy][murphy]
@@ -226,27 +246,27 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 -   Philips Hue JavaScript SDK.
 -   Written in TypeScript.
 -   Powers functionality in my Twitch bot.
--   Over 250 downloads!
+-   Over 1,500 downloads!
 
 [👨🏼‍🔬 labman][labman]
 
 -   Command line tool for managing issue labels across GitHub repositories.
 -   Built with JavaScript and Node.js.
--   Over 1,300 downloads!
+-   Over 1,500 downloads!
 
 [🃏 business-card][business-card]
 
 -   Digital business card.
 -   Run `npx bradgarropy` to see for yourself.
 -   Interactive CLI to help users create their own business card.
--   Over 1,200 downloads!
+-   Over 1,400 downloads!
 
 [⏳ use-countdown][use-countdown]
 
 -   React hook countdown timer.
 -   Written in TypeScript.
 -   Powers my Twitch starting soon page.
--   Over 400 downloads!
+-   Over 1,100 downloads!
 
 [🤖 bg codes twitch bot][twitch-bot]
 
@@ -264,13 +284,13 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 
 -   SEO plugin for Gatsby.
 -   Supports Facebook, Twitter, Open Graph, and meta tags.
--   Over 600 downloads!
+-   Almost 1,000 downloads!
 
 [💎 eslint-config][eslint]
 
 -   Shareable version of my eslint configuration.
 -   Integrates accessibility, React, and React hooks plugins.
--   Over 400 downloads!
+-   Over 1,000 downloads!
 
 [✂ bg-snippets][bg-snippets]
 
@@ -326,3 +346,9 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [hue-sdk]: https://www.npmjs.com/package/@bradgarropy/hue-sdk
 [twitch-bot]: https://github.com/bradgarropy/twitch-bot
 [bg-codes]: https://bg-codes.netlify.app
+[search]: https://magento.com/products/live-search
+[events-sdk]: https://github.com/adobe/magento-storefront-events-sdk
+[event-collector]: https://github.com/adobe/magento-storefront-event-collector
+[web-dev-weekly]: https://webdevweekly.captivate.fm
+[webpack-tutorial]: https://www.youtube.com/watch?v=cidA_qfiO0M&list=PL6Mu1AMmTL-vGQdj1-auEc12KM14OmjXH
+[firebase-tutorial]: https://www.youtube.com/watch?v=FArYmEBCMt0&list=PL6Mu1AMmTL-sSswsqShJ5fbIr9XjYHGFm
