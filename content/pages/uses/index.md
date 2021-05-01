@@ -44,10 +44,9 @@ I'm getting more serious about [streaming][stream] my coding sessions, and now I
 [Elgato Cam Link 4K][camlink]  
 [Elgato Multi Mount][multi-mount]  
 [Elgato Stream Deck Mini][stream-deck]  
-[dbx 286s][dbx]  
 [Rode PSA1 Boom Arm][psa1]  
 [Shure SM58 Microphone][sm58]  
-[Focusrite Scarlett Solo Audio Interface][scarlett-solo]
+[TC Helicon GoXLR][goxlr]
 
 ## 🏢 adobe office
 
@@ -103,14 +102,13 @@ These pieces of tech are always within reach.
 [google-nest]: https://store.google.com/product/google_nest_mini
 [stream]: https://bradgarropy.com/stream
 [sm58]: https://amzn.to/2W2z5cD
-[scarlett-solo]: https://amzn.to/2MbAcSW
+[goxlr]: https://www.amazon.com/GoXLR-Mixer-Sampler-Voice-Streamers/dp/B07JKNG4NV
 [psa1]: https://amzn.to/2Wgz8kH
 [a6000]: https://amzn.to/2LF4NHn
 [camlink]: https://amzn.to/2ybpXEc
 [stream-deck]: https://www.amazon.com/Elgato-Stream-Deck-Mini-customizable/dp/B07DYRS1WH
 [multi-mount]: https://www.elgato.com/en/gaming/multi-mount
 [key-light]: https://www.elgato.com/en/gaming/key-light
-[dbx]: https://www.amazon.com/dbx-286s-Microphone-Channel-Processor/dp/B004LWH79A
 [adobe-office]: images/adobe-office.jpg
 [macbook]: https://amzn.to/2JZlZFQ
 [magic-keyboard]: https://amzn.to/2M5Ge7y
