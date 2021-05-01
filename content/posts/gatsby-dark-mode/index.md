@@ -11,6 +11,8 @@ You're not one of the cool kids nowadays if you don't have a dark mode on your s
 
 _Here's the full [pull request][pull-request], but I gotta warn you, it's pretty messy._
 
+![dark mode][dark-mode]
+
 ## 🎨 color intentions
 
 The first step was to separate the colors from their intentions. You may have not heard the term _intention_ before, but it essentially means the intended use of a color. For example, you could have intentions like `heading-color`, `text-color`, or `background-color`. This gives us a layer of abstraction, so we can swap out light and dark values based on the color theme.
@@ -106,3 +108,4 @@ While this dark modes works very well, and persists through page navigation, it'
 [pull-request]: https://github.com/bradgarropy/bradgarropy.com/pull/205/files
 [gatsby-plugin-layout]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-layout
 [moon]: #
+[dark-mode]: images/dark-mode.png
