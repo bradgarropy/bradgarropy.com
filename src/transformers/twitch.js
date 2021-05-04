@@ -22,18 +22,7 @@ const getHTML = string => {
             break
     }
 
-    const html = `
-        <div class="twitch">
-            <iframe
-                src="${src}&parent=bradgarropy.com"
-                frameborder="0"
-                scrolling="no"
-                allowfullscreen=""
-            >
-            </iframe>
-        </div>
-    `
-
+    const html = `<div class="twitch"><iframe src="${src}&parent=bradgarropy.com" frameborder="0" scrolling="no" allowfullscreen=""></iframe></div>`
     return html
 }
 
