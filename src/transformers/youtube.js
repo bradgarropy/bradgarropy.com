@@ -15,19 +15,7 @@ const getHTML = string => {
         src = `${src}?start=${start}`
     }
 
-    const html = `
-        <div class="youtube">
-            <iframe
-                title=${id}
-                src=${src}
-                frameBorder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-            >
-            </iframe>
-        </div>
-    `
-
+    const html = `<div class="youtube"><iframe title=${id} src=${src} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>`
     return html
 }
 
