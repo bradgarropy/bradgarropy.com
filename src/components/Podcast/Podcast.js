@@ -27,7 +27,7 @@ const Badge = styled.span`
     font-weight: 900;
     letter-spacing: -0.075rem;
     font-size: 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
     padding: 0.5rem 1rem;
     color: var(--text);
     border: 3px solid var(--text);
@@ -66,7 +66,6 @@ const CoverImage = styled(Link)`
 
     .cover-image {
         box-sizing: border-box;
-        border-radius: 0.5rem;
         border: 2px solid var(--text);
         background-color: var(--text);
         box-shadow: 3px 3px 0 var(--text);
