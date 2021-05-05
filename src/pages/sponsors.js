@@ -38,7 +38,7 @@ const Tier = styled.span`
 const Avatar = styled.img`
     width: 6rem;
     margin: 0rem;
-    border-radius: 50%;
+    border-radius: 100%;
     border: 5px solid var(--text);
     background-color: var(--text);
 

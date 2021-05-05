@@ -83,6 +83,7 @@ const GlobalStyles = createGlobalStyle`
         display: block;
         max-width: 100%;
         margin: 0rem auto;
+        border-radius: 0.3rem;
     }
 
     blockquote {
