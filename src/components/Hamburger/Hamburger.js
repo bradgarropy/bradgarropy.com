@@ -9,7 +9,7 @@ const HamburgerWrapper = styled(FontAwesomeIcon)`
     cursor: pointer;
     font-size: 1.5rem;
 
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
         display: block;
     }
 `

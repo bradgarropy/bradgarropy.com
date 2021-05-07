@@ -309,6 +309,21 @@ const mockAppCtx = {
     setOpen: jest.fn(),
     theme: "light",
     setTheme: jest.fn(),
+    live: false,
+}
+
+const mockTwitchResponse = {
+    broadcaster_language: "en",
+    broadcaster_login: "bradgarropy",
+    display_name: "bradgarropy",
+    game_id: "509670",
+    game_name: "Science & Technology",
+    id: "126668872",
+    is_live: false,
+    started_at: "",
+    tag_ids: [],
+    thumbnail_url: "https://example.com/thumbnail.png",
+    title: "test title",
 }
 
 export {
@@ -323,6 +338,7 @@ export {
     mockProjectsQuery,
     mockSponsors,
     mockSponsorsQuery,
+    mockTwitchResponse,
     mockVideos,
     mockVideosQuery,
 }

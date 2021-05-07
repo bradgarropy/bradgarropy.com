@@ -2,7 +2,9 @@ import ColorTheme from "components/ColorTheme"
 import Logo from "components/Logo"
 import MobileNavigation from "components/MobileNavigation"
 import Navigation from "components/Navigation"
+import Streaming from "components/Streaming"
 import {Link} from "gatsby"
+import {useApp} from "hooks"
 import styled from "styled-components"
 
 const HeaderWrapper = styled.header`
@@ -17,6 +19,13 @@ const HeaderWrapper = styled.header`
     }
 `
 
+const Left = styled.div`
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 2rem;
+    align-items: center;
+`
+
 const Right = styled.div`
     display: grid;
     grid-auto-flow: column;
@@ -25,11 +34,17 @@ const Right = styled.div`
 `
 
 const Header = () => {
+    const {live} = useApp()
+
     return (
         <HeaderWrapper>
-            <Link to="/" aria-label="bg">
-                <Logo />
-            </Link>
+            <Left>
+                <Link to="/" aria-label="bg">
+                    <Logo />
+                </Link>
+
+                {live && <Streaming />}
+            </Left>
 
             <Right>
                 <Navigation />

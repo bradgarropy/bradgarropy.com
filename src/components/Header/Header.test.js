@@ -4,12 +4,30 @@ import {generateAppCtx} from "test-utils/generators"
 
 import Header from "./Header"
 
-const mockAppCtx = generateAppCtx()
+const mockAppCtxOnline = generateAppCtx({live: true})
+const mockAppCtxOffline = generateAppCtx({live: false})
 
 jest.mock("hooks")
-useApp.mockReturnValue(mockAppCtx)
 
-test("shows logo", () => {
-    render(<Header />)
-    expect(screen.getByLabelText("bg"))
+describe("streaming", () => {
+    useApp.mockReturnValue(mockAppCtxOnline)
+
+    test("shows logo", () => {
+        render(<Header />)
+        expect(screen.getByLabelText("bg"))
+    })
+
+    test("shows streaming", () => {
+        render(<Header />)
+        expect(screen.getByText("🎥 streaming"))
+    })
+})
+
+describe("not streaming", () => {
+    test("does not show streaming", () => {
+        useApp.mockReturnValue(mockAppCtxOffline)
+
+        render(<Header />)
+        expect(screen.queryByText("🎥 streaming")).toBeNull()
+    })
 })

@@ -1,4 +1,4 @@
-import {mockAppCtx} from "test-utils/mocks"
+import {mockAppCtx, mockTwitchResponse} from "test-utils/mocks"
 
 const generateAppCtx = overrides => {
     const appCtx = {
@@ -9,4 +9,17 @@ const generateAppCtx = overrides => {
     return appCtx
 }
 
-export {generateAppCtx}
+const generateTwitchResponse = overrides => {
+    const twitchResponse = {
+        data: [
+            {
+                ...mockTwitchResponse,
+                ...overrides,
+            },
+        ],
+    }
+
+    return twitchResponse
+}
+
+export {generateAppCtx, generateTwitchResponse}
