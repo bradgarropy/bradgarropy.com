@@ -1,16 +1,16 @@
 import {render, screen} from "@testing-library/react"
-import {useApp} from "hooks"
+import {useApp, useLive} from "hooks"
 import {generateAppCtx} from "test-utils/generators"
 
 import Header from "./Header"
 
-const mockAppCtxOnline = generateAppCtx({live: true})
-const mockAppCtxOffline = generateAppCtx({live: false})
-
 jest.mock("hooks")
 
+const mockAppCtx = generateAppCtx()
+useApp.mockReturnValue(mockAppCtx)
+
 describe("streaming", () => {
-    useApp.mockReturnValue(mockAppCtxOnline)
+    useLive.mockReturnValue(true)
 
     test("shows logo", () => {
         render(<Header />)
@@ -25,7 +25,7 @@ describe("streaming", () => {
 
 describe("not streaming", () => {
     test("does not show streaming", () => {
-        useApp.mockReturnValue(mockAppCtxOffline)
+        useLive.mockReturnValue(false)
 
         render(<Header />)
         expect(screen.queryByText("🎥 streaming")).toBeNull()

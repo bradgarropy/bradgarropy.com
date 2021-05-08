@@ -4,7 +4,7 @@ import MobileNavigation from "components/MobileNavigation"
 import Navigation from "components/Navigation"
 import Streaming from "components/Streaming"
 import {Link} from "gatsby"
-import {useApp} from "hooks"
+import {useLive} from "hooks"
 import styled from "styled-components"
 
 const HeaderWrapper = styled.header`
@@ -34,7 +34,7 @@ const Right = styled.div`
 `
 
 const Header = () => {
-    const {live} = useApp()
+    const live = useLive()
 
     return (
         <HeaderWrapper>
