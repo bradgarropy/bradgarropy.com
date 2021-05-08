@@ -311,8 +311,17 @@ const mockAppCtx = {
     setTheme: jest.fn(),
 }
 
+const mockChannelStatus = {
+    data: [
+        {
+            is_live: true,
+        },
+    ],
+}
+
 export {
     mockAppCtx,
+    mockChannelStatus,
     mockMeta,
     mockMetaQuery,
     mockPodcast,

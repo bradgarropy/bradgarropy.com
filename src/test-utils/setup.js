@@ -2,6 +2,10 @@ import "jest-styled-components"
 import "@testing-library/jest-dom"
 import "regenerator-runtime/runtime"
 
+import fetchMock from "jest-fetch-mock"
+
+fetchMock.enableMocks()
+
 jest.mock("gatsby", () => {
     const React = require("react")
     const gatsby = jest.requireActual("gatsby")

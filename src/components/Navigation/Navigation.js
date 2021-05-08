@@ -7,7 +7,7 @@ const NavigationWrapper = styled.nav`
     column-gap: 1.25rem;
     color: var(--text);
 
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
         display: none;
     }
 `
