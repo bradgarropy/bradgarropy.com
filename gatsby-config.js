@@ -7,6 +7,10 @@ const youtubeChannelId = "UCgbFhcZKt36Upo7oxWlLEig"
 const anchorRssUrl = "https://anchor.fm/s/508f5e08/podcast/rss"
 
 const config = {
+    flags: {
+        FAST_DEV: true,
+        PARALLEL_SOURCING: true,
+    },
     siteMetadata: {
         siteUrl: "https://bradgarropy.com",
         url: "https://bradgarropy.com",
