@@ -1,12 +1,12 @@
 import {renderHook} from "@testing-library/react-hooks"
+import {getChannelStatus} from "api/twitch"
 import {useLive} from "hooks"
-import {generateTwitchResponse} from "test-utils/generators"
 
-const mockOnlineResponse = generateTwitchResponse({is_live: true})
-const mockOfflineResponse = generateTwitchResponse({is_live: false})
+jest.mock("api/twitch")
+jest.useFakeTimers()
 
 test("returns online status", async () => {
-    fetch.mockResponseOnce(JSON.stringify(mockOnlineResponse))
+    getChannelStatus.mockReturnValue(true)
 
     const {result, waitForNextUpdate} = renderHook(() => useLive())
     await waitForNextUpdate()
@@ -15,8 +15,26 @@ test("returns online status", async () => {
 })
 
 test("returns offline status", () => {
-    fetch.mockResponseOnce(JSON.stringify(mockOfflineResponse))
+    getChannelStatus.mockReturnValue(false)
 
     const {result} = renderHook(() => useLive())
     expect(result.current).toEqual(false)
+})
+
+test("polls for changes", async () => {
+    getChannelStatus.mockReturnValue(false)
+
+    renderHook(() => useLive())
+
+    jest.advanceTimersByTime(60000)
+    expect(getChannelStatus).toHaveBeenCalledTimes(2)
+})
+
+test("stops polling", () => {
+    getChannelStatus.mockReturnValue(false)
+
+    const {unmount} = renderHook(() => useLive())
+
+    unmount()
+    expect(clearInterval).toHaveBeenCalledTimes(1)
 })

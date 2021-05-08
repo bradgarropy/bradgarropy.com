@@ -312,22 +312,11 @@ const mockAppCtx = {
     live: false,
 }
 
-const mockTwitchResponse = {
-    broadcaster_language: "en",
-    broadcaster_login: "bradgarropy",
-    display_name: "bradgarropy",
-    game_id: "509670",
-    game_name: "Science & Technology",
-    id: "126668872",
-    is_live: false,
-    started_at: "",
-    tag_ids: [],
-    thumbnail_url: "https://example.com/thumbnail.png",
-    title: "test title",
-}
+const mockChannelStatus = {data: [{is_live: true}]}
 
 export {
     mockAppCtx,
+    mockChannelStatus,
     mockMeta,
     mockMetaQuery,
     mockPodcast,
@@ -338,7 +327,6 @@ export {
     mockProjectsQuery,
     mockSponsors,
     mockSponsorsQuery,
-    mockTwitchResponse,
     mockVideos,
     mockVideosQuery,
 }
