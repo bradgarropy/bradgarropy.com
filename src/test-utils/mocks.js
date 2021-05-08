@@ -309,10 +309,15 @@ const mockAppCtx = {
     setOpen: jest.fn(),
     theme: "light",
     setTheme: jest.fn(),
-    live: false,
 }
 
-const mockChannelStatus = {data: [{is_live: true}]}
+const mockChannelStatus = {
+    data: [
+        {
+            is_live: true,
+        },
+    ],
+}
 
 export {
     mockAppCtx,
