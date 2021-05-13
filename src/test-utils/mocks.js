@@ -120,15 +120,13 @@ const mockProjectsQuery = {
                 pinnedItems: {
                     nodes: [
                         {
-                            url:
-                                "https://github.com/bradgarropy/bradgarropy.com",
+                            url: "https://github.com/bradgarropy/bradgarropy.com",
                             name: "bradgarropy.com",
                             description: "🏠 my mansion on the web",
                             stargazerCount: 34,
                         },
                         {
-                            url:
-                                "https://github.com/bradgarropy/dailytexascountry.com",
+                            url: "https://github.com/bradgarropy/dailytexascountry.com",
                             name: "dailytexascountry.com",
                             description:
                                 "🤠 she tries to tell me that oklahoma's better, but I ain't got time for that",
@@ -194,16 +192,14 @@ const mockPodcastQuery = {
             {
                 item: {
                     title: "First Episode",
-                    link:
-                        "https://anchor.fm/test-podcast/episodes/first-episode",
+                    link: "https://anchor.fm/test-podcast/episodes/first-episode",
                     isoDate: "2021-01-01T00:00:00.000Z",
                 },
             },
             {
                 item: {
                     title: "Second Episode",
-                    link:
-                        "https://anchor.fm/test-podcast/episodes/second-episode",
+                    link: "https://anchor.fm/test-podcast/episodes/second-episode",
                     isoDate: "2021-02-02T00:00:00.000Z",
                 },
             },

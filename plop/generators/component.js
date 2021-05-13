@@ -19,8 +19,7 @@ const component = {
         },
         {
             type: "add",
-            path:
-                "src/components/{{pascalCase name}}/{{pascalCase name}}.test.js",
+            path: "src/components/{{pascalCase name}}/{{pascalCase name}}.test.js",
             templateFile: "../templates/test.hbs",
         },
     ],
