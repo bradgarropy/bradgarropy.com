@@ -21,7 +21,7 @@ NowTemplate.propTypes = {
 }
 
 export const nowTemplateQuery = graphql`
-    query($date: Date!) {
+    query ($date: Date!) {
         now: markdownRemark(frontmatter: {date: {eq: $date}}) {
             html
             frontmatter {

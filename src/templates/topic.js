@@ -26,7 +26,7 @@ TopicTemplate.propTypes = {
 }
 
 export const topicTemplateQuery = graphql`
-    query($name: String!) {
+    query ($name: String!) {
         allMarkdownRemark(
             filter: {frontmatter: {topic: {name: {eq: $name}}}}
             sort: {fields: frontmatter___date, order: DESC}
