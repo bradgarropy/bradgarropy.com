@@ -21,18 +21,6 @@ const Description = styled.div`
     color: var(--text);
 `
 
-const Badge = styled.span`
-    margin: 0rem 0rem 0.75rem 0rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 900;
-    letter-spacing: -0.075rem;
-    font-size: 1.5rem;
-    border-radius: 0.3rem;
-    padding: 0.5rem 1rem;
-    color: var(--text);
-    border: 3px solid var(--text);
-`
-
 const Hosts = styled.div`
     display: grid;
     column-gap: 0.75rem;
@@ -99,8 +87,6 @@ const Podcast = () => {
             </CoverImage>
 
             <Description>
-                <Badge>coming soon</Badge>
-
                 <span>a weekly podcast about web development hosted by</span>
 
                 <Hosts>

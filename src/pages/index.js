@@ -40,7 +40,10 @@ const IndexPage = () => {
                     <FeaturedProjects />
                 </Section>
 
-                <Section title="podcast" link="https://anchor.fm/webdevweekly">
+                <Section
+                    title="podcast"
+                    link="https://webdevweekly.captivate.fm"
+                >
                     <Podcast />
                 </Section>
             </Sections>
