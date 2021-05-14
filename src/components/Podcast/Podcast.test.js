@@ -13,7 +13,6 @@ test("shows podcast", () => {
         mockPodcast.link,
     )
 
-    expect(screen.getByText("coming soon"))
     expect(screen.getByText("a weekly podcast about web development hosted by"))
 
     expect(screen.getByText("brad garropy")).toHaveAttribute(
