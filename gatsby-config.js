@@ -106,7 +106,7 @@ const config = {
                                         name
                                         description
                                         stargazerCount
-                                        repositoryTopics(first: 10) {
+                                        repositoryTopics(first: 20) {
                                             nodes {
                                                 topic {
                                                 name
