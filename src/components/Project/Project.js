@@ -1,4 +1,5 @@
 import Link from "@bradgarropy/gatsby-link"
+import ProjectTech from "components/ProjectTech"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
@@ -8,7 +9,7 @@ const ProjectWrapper = styled(Link)`
     border: 3px solid var(--text);
     box-shadow: 3px 3px 0 var(--text);
     display: grid;
-    row-gap: 0.5rem;
+    row-gap: 1rem;
     align-content: space-between;
     color: var(--text);
 
@@ -36,7 +37,8 @@ const Top = styled.div``
 const Bottom = styled.div`
     display: grid;
     grid-auto-flow: column;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
 `
 
 const Stars = styled.span`
@@ -52,6 +54,7 @@ const Project = ({project}) => {
             </Top>
 
             <Bottom>
+                <ProjectTech project={project} />
                 <Stars>{`${project.stars}⭐`}</Stars>
             </Bottom>
         </ProjectWrapper>
@@ -64,6 +67,7 @@ Project.propTypes = {
         name: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
         stars: PropTypes.number.isRequired,
+        topics: PropTypes.arrayOf(PropTypes.string),
     }),
 }
 
