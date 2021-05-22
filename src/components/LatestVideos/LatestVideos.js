@@ -1,5 +1,5 @@
 import Link from "@bradgarropy/gatsby-link"
-import {GatsbyImage, getImage} from "gatsby-plugin-image"
+import {GatsbyImage} from "gatsby-plugin-image"
 import {useLatestVideos} from "hooks"
 import styled from "styled-components"
 
@@ -38,16 +38,14 @@ const LatestVideos = () => {
     return (
         <LatestVideosWrapper>
             {latestVideos.map(latestVideo => {
-                const thumbnail = getImage(latestVideo.localThumbnail)
-
                 return (
                     <Link
-                        key={latestVideo.videoId}
-                        to={`https://www.youtube.com/watch?v=${latestVideo.videoId}`}
+                        key={latestVideo.id}
+                        to={`https://www.youtube.com/watch?v=${latestVideo.id}`}
                     >
-                        <Thumbnail data-testid={latestVideo.videoId}>
+                        <Thumbnail data-testid={latestVideo.id}>
                             <GatsbyImage
-                                image={thumbnail}
+                                image={latestVideo.thumbnail}
                                 alt={latestVideo.title}
                                 className="thumbnail-container"
                                 imgClassName="thumbnail"

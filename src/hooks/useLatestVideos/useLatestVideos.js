@@ -1,4 +1,5 @@
 import {graphql, useStaticQuery} from "gatsby"
+import {getImage} from "gatsby-plugin-image"
 
 const useLatestVideos = () => {
     const query = graphql`
@@ -26,7 +27,14 @@ const useLatestVideos = () => {
     `
 
     const data = useStaticQuery(query)
-    const videos = data.videos.nodes
+
+    const videos = data.videos.nodes.map(node => {
+        return {
+            id: node.videoId,
+            title: node.title,
+            thumbnail: getImage(node.localThumbnail),
+        }
+    })
 
     return videos
 }

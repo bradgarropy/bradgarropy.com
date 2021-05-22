@@ -6,6 +6,29 @@ import fetchMock from "jest-fetch-mock"
 
 fetchMock.enableMocks()
 
+jest.mock("gatsby-plugin-image", () => {
+    const React = require("react")
+    const gatsbyPluginImage = jest.requireActual("gatsby-plugin-image")
+
+    const mockGatsbyPluginImage = {
+        ...gatsbyPluginImage,
+        GatsbyImage: jest.fn().mockImplementation(({imgClassName, ...rest}) =>
+            React.createElement("img", {
+                ...rest,
+                className: imgClassName,
+            }),
+        ),
+        StaticImage: jest.fn().mockImplementation(({imgClassName, ...rest}) =>
+            React.createElement("img", {
+                ...rest,
+                className: imgClassName,
+            }),
+        ),
+    }
+
+    return mockGatsbyPluginImage
+})
+
 jest.mock("gatsby", () => {
     const React = require("react")
     const gatsby = jest.requireActual("gatsby")
@@ -30,7 +53,6 @@ jest.mock("gatsby", () => {
                     React.createElement("a", {
                         ...rest,
                         href: to,
-                        gatsby: "true",
                     }),
             ),
         StaticQuery: jest.fn(),
