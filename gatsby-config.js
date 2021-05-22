@@ -75,6 +75,13 @@ const config = {
         {
             resolve: "gatsby-source-filesystem",
             options: {
+                name: "testimonials",
+                path: "content/testimonials",
+            },
+        },
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
                 name: "images",
                 path: "static",
             },

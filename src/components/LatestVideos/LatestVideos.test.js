@@ -10,9 +10,9 @@ test("renders", () => {
     render(<LatestVideos />)
 
     mockVideos.forEach(video => {
-        expect(screen.getByTestId(video.videoId).parentElement).toHaveAttribute(
+        expect(screen.getByTestId(video.id).parentElement).toHaveAttribute(
             "href",
-            `https://www.youtube.com/watch?v=${video.videoId}`,
+            `https://www.youtube.com/watch?v=${video.id}`,
         )
     })
 })

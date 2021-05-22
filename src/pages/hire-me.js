@@ -1,6 +1,6 @@
 import SEO from "@bradgarropy/gatsby-plugin-seo"
-import {graphql} from "gatsby"
-import PropTypes from "prop-types"
+import Testimonials from "components/Testimonials"
+import {useHireMe, useTestimonials} from "hooks"
 import styled from "styled-components"
 import {link} from "styles/partials"
 
@@ -11,30 +11,20 @@ const HireMe = styled.div`
     justify-self: center;
 `
 
-const HireMePage = ({data}) => {
-    const {html} = data.hireMe
+const HireMePage = () => {
+    const hireMe = useHireMe()
+    const testimonials = useTestimonials()
 
     return (
         <>
             <SEO title="🤝 let's work together" description="" />
 
-            <HireMe dangerouslySetInnerHTML={{__html: html}} />
+            <HireMe dangerouslySetInnerHTML={{__html: hireMe}} />
+
+            <h1>💯 what people think of me</h1>
+            <Testimonials testimonials={testimonials} />
         </>
     )
 }
-
-HireMePage.propTypes = {
-    data: PropTypes.object.isRequired,
-}
-
-export const query = graphql`
-    {
-        hireMe: markdownRemark(
-            fileAbsolutePath: {regex: "/content/pages/hire-me/"}
-        ) {
-            html
-        }
-    }
-`
 
 export default HireMePage
