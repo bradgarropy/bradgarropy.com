@@ -10,7 +10,7 @@ const useTestimonials = () => {
                 nodes {
                     frontmatter {
                         name
-                        twitter
+                        profile
                         photo {
                             childImageSharp {
                                 gatsbyImageData(
@@ -33,7 +33,7 @@ const useTestimonials = () => {
     const testimonials = data.testimonials.nodes.map(node => {
         return {
             name: node.frontmatter.name,
-            twitter: node.frontmatter.twitter,
+            profile: node.frontmatter.profile,
             photo: getImage(node.frontmatter.photo),
             html: node.html,
         }

@@ -1,6 +1,6 @@
 ---
 name: Andrew Worcester
-twitter: https://twitter.com/amwmedia
+profile: https://twitter.com/amwmedia
 photo: images/andrew-worcester.jpg
 ---
 
