@@ -480,7 +480,7 @@ const mockTestimonialsQuery = {
             {
                 frontmatter: {
                     name: "First Test User",
-                    twitter: "https://twitter.com/first-test-user",
+                    profile: "https://twitter.com/first-test-user",
                     photo: {
                         childImageSharp: {
                             gatsbyImageData: {},
@@ -492,7 +492,7 @@ const mockTestimonialsQuery = {
             {
                 frontmatter: {
                     name: "Second Test User",
-                    twitter: "https://twitter.com/second-test-user",
+                    profile: "https://twitter.com/second-test-user",
                     photo: {
                         childImageSharp: {
                             gatsbyImageData: {},

@@ -1,6 +1,6 @@
 ---
 name: Scott Spence
-twitter: https://twitter.com/spences10
+profile: https://twitter.com/spences10
 photo: images/scott-spence.jpg
 ---
 

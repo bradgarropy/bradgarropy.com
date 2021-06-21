@@ -1,6 +1,6 @@
 ---
 name: Todd Austin
-twitter: https://twitter.com/austintoddj
+profile: https://twitter.com/austintoddj
 photo: images/todd-austin.png
 ---
 

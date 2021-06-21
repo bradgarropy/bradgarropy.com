@@ -1,6 +1,6 @@
 ---
 name: Todd Libby
-twitter: https://twitter.com/toddlibby
+profile: https://twitter.com/toddlibby
 photo: images/todd-libby.jpg
 ---
 

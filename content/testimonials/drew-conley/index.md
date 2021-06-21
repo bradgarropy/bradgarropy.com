@@ -1,6 +1,6 @@
 ---
 name: Drew Conley
-twitter: https://twitter.com/drewconley13
+profile: https://twitter.com/drewconley13
 photo: images/drew-conley.png
 ---
 

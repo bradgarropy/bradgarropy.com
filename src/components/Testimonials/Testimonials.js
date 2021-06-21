@@ -67,7 +67,7 @@ const Testimonials = ({testimonials}) => {
                 return (
                     <Testimonial
                         key={testimonial.name}
-                        to={testimonial.twitter}
+                        to={testimonial.profile}
                     >
                         <Header>
                             <Photo

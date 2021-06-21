@@ -1,6 +1,6 @@
 ---
 name: Steven Hofheins
-twitter: https://twitter.com/Steven__Creates
+profile: https://twitter.com/Steven__Creates
 photo: images/steven-hofheins.png
 ---
 

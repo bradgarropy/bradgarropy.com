@@ -1,6 +1,6 @@
 ---
 name: James Quick
-twitter: https://twitter.com/jamesqquick
+profile: https://twitter.com/jamesqquick
 photo: images/james-quick.jpg
 ---
 
