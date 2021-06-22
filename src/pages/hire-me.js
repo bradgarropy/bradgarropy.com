@@ -21,7 +21,7 @@ const HireMePage = () => {
 
             <HireMe dangerouslySetInnerHTML={{__html: hireMe}} />
 
-            <h1>💯 what people think of me</h1>
+            <h1 id="testimonials">💯 what people think of me</h1>
             <Testimonials testimonials={testimonials} />
         </>
     )
