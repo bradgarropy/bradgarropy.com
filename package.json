@@ -3,8 +3,8 @@
     "version": "3.20.0",
     "description": "🏠 my home on the web",
     "keywords": [
-        "react",
         "gatsby",
+        "react",
         "styled-components",
         "eslint",
         "blog",
