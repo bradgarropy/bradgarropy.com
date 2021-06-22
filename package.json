@@ -1,15 +1,12 @@
 {
     "name": "bradgarropy.com",
-    "version": "3.21.0",
+    "version": "3.20.0",
     "description": "🏠 my home on the web",
     "keywords": [
-        "javascript",
-        "eslint",
-        "prettier",
-        "react",
         "gatsby",
+        "react",
         "styled-components",
-        "jest",
+        "eslint",
         "blog",
         "portfolio"
     ],
