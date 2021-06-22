@@ -100,7 +100,8 @@ Testimonials.propTypes = {
     testimonials: PropTypes.arrayOf(
         PropTypes.shape({
             name: PropTypes.string.isRequired,
-            twitter: PropTypes.string.isRequired,
+            profile: PropTypes.string.isRequired,
+            photo: PropTypes.object.isRequired,
             html: PropTypes.string.isRequired,
         }),
     ).isRequired,
