@@ -1,6 +1,7 @@
 import Link from "@bradgarropy/gatsby-link"
 import {GatsbyImage} from "gatsby-plugin-image"
 import PropTypes from "prop-types"
+import slugify from "slugify"
 import styled from "styled-components"
 import {link} from "styles/partials"
 
@@ -64,8 +65,11 @@ const Testimonials = ({testimonials}) => {
     return (
         <TestimonialsWrapper>
             {testimonials.map(testimonial => {
+                const slug = slugify(testimonial.name.toLowerCase())
+
                 return (
                     <Testimonial
+                        id={slug}
                         key={testimonial.name}
                         to={testimonial.profile}
                     >
