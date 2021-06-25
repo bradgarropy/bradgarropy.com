@@ -1,4 +1,4 @@
-import {mockMeta, mockPosts} from "test-utils/mocks"
+import {mockMeta, mockPosts} from "./"
 
 const mockPostsQuery = {
     posts: {

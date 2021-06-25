@@ -8,8 +8,8 @@ const captivateRss = "https://feeds.captivate.fm/webdevweekly"
 
 const config = {
     flags: {
-        FAST_DEV: false,
-        PARALLEL_SOURCING: false,
+        FAST_DEV: true,
+        PARALLEL_SOURCING: true,
     },
     siteMetadata: {
         siteUrl: "https://bradgarropy.com",
