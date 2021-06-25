@@ -1,5 +1,5 @@
-import {getChannelStatus} from "api/twitch"
 import {useEffect, useState} from "react"
+import {getChannelStatus} from "utils/api/twitch"
 
 const useLive = () => {
     const [live, setLive] = useState(false)

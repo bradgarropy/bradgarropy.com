@@ -1,5 +1,5 @@
-import {mockChannelStatus} from "../../test-utils/mocks"
-import {getChannelStatus} from "./twitch"
+import {mockChannelStatus} from "test-utils/mocks"
+import {getChannelStatus} from "utils/api/twitch"
 
 fetch.mockResponseOnce(JSON.stringify(mockChannelStatus))
 
