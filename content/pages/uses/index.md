@@ -41,6 +41,7 @@ I'm getting more serious about [streaming][stream] my coding sessions, and now I
 
 [Elgato Key Light][key-light]  
 [Sony a6000 Camera][a6000]  
+[Sigma 16mm f1.4 Lens][sigma]  
 [Elgato Cam Link 4K][camlink]  
 [Elgato Multi Mount][multi-mount]  
 [Elgato Stream Deck Mini][stream-deck]  
@@ -105,6 +106,7 @@ These pieces of tech are always within reach.
 [goxlr]: https://www.amazon.com/GoXLR-Mixer-Sampler-Voice-Streamers/dp/B07JKNG4NV
 [psa1]: https://amzn.to/2Wgz8kH
 [a6000]: https://amzn.to/2LF4NHn
+[sigma]: https://www.amazon.com/Sigma-16mm-Contemporary-Lens-Sony/dp/B077BWD2BB
 [camlink]: https://amzn.to/2ybpXEc
 [stream-deck]: https://www.amazon.com/Elgato-Stream-Deck-Mini-customizable/dp/B07DYRS1WH
 [multi-mount]: https://www.elgato.com/en/gaming/multi-mount
