@@ -3,7 +3,7 @@ import {useLive} from "hooks"
 import {getChannelStatus} from "utils/api/twitch"
 
 jest.mock("utils/api/twitch")
-jest.useFakeTimers()
+jest.useFakeTimers("legacy")
 
 test("returns online status", async () => {
     getChannelStatus.mockReturnValue(true)

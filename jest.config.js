@@ -8,6 +8,7 @@ const config = {
         "\\.(css)$": "identity-obj-proxy",
         "@reach/router": "<rootDir>/node_modules/@gatsbyjs/reach-router",
     },
+    testEnvironment: "jsdom",
     testPathIgnorePatterns: ["<rootDir>/plop"],
 }
 
