@@ -8,25 +8,21 @@ fetchMock.enableMocks()
 
 jest.mock("gatsby-plugin-image", () => {
     const React = require("react")
-    const gatsbyPluginImage = jest.requireActual("gatsby-plugin-image")
+    const plugin = jest.requireActual("gatsby-plugin-image")
 
-    const mockGatsbyPluginImage = {
-        ...gatsbyPluginImage,
-        GatsbyImage: jest.fn().mockImplementation(({imgClassName, ...rest}) =>
-            React.createElement("img", {
-                ...rest,
-                className: imgClassName,
-            }),
-        ),
-        StaticImage: jest.fn().mockImplementation(({imgClassName, ...rest}) =>
-            React.createElement("img", {
-                ...rest,
-                className: imgClassName,
-            }),
-        ),
+    const mockImage = ({imgClassName, ...props}) =>
+        React.createElement("img", {
+            ...props,
+            className: imgClassName,
+        })
+
+    const mockPlugin = {
+        ...plugin,
+        GatsbyImage: jest.fn().mockImplementation(mockImage),
+        StaticImage: jest.fn().mockImplementation(mockImage),
     }
 
-    return mockGatsbyPluginImage
+    return mockPlugin
 })
 
 jest.mock("gatsby", () => {
