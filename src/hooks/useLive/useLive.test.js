@@ -2,7 +2,7 @@ import {renderHook} from "@testing-library/react-hooks"
 import {useLive} from "hooks"
 import {getChannelStatus} from "utils/api/twitch"
 
-jest.mock("api/twitch")
+jest.mock("utils/api/twitch")
 jest.useFakeTimers()
 
 test("returns online status", async () => {
