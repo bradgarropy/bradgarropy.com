@@ -17,6 +17,8 @@ I've heard a lot about [Cloudflare Workers][workers], but until recently I've ne
 
 The first worker I built was a clone of [linktree][linktree], but with a little added flare. I'll walk you through how to build a simpler version of this link tree.
 
+All of the code is located on [GitHub][github] in the [cloudflare-link-tree][repo] repository.
+
 ![link tree][finished]
 
 Our application will have two endpoints. `/links` will return raw `json` data for all of our links, and any other route will return a rendered HTML version of the link tree.
@@ -300,3 +302,5 @@ I'm definitely fascinated by [Cloudflare Workers][workers], and I'm still explor
 [htmlrewriter]: https://developers.cloudflare.com/workers/runtime-apis/html-rewriter
 [final]: images/final.png
 [twitter]: https://twitter.com/bradgarropy
+[repo]: https://github.com/bradgarropy/cloudflare-link-tree
+[github]: https://github.com/bradgarropy
