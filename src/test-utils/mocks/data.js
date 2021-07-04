@@ -207,13 +207,7 @@ const mockSponsors = {
     ],
 }
 
-const mockChannelStatus = {
-    data: [
-        {
-            is_live: true,
-        },
-    ],
-}
+const mockChannelStatus = true
 
 const mockHireMe = {
     html: "<p>hire me</p>",
