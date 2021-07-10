@@ -2,10 +2,6 @@ import "jest-styled-components"
 import "@testing-library/jest-dom"
 import "regenerator-runtime/runtime"
 
-import fetchMock from "jest-fetch-mock"
-
-fetchMock.enableMocks()
-
 jest.mock("gatsby-plugin-image", () => {
     const React = require("react")
     const plugin = jest.requireActual("gatsby-plugin-image")
