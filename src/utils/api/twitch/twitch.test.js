@@ -1,7 +1,9 @@
+import {get} from "@bradgarropy/http"
 import {mockChannelStatus} from "test-utils/mocks"
 import {getChannelStatus} from "utils/api/twitch"
 
-fetch.mockResponseOnce(JSON.stringify(mockChannelStatus))
+jest.mock("@bradgarropy/http")
+get.mockReturnValue(mockChannelStatus)
 
 test("gets channel status", async () => {
     const isLive = await getChannelStatus()

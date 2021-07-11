@@ -1,7 +1,7 @@
-const getChannelStatus = async () => {
-    const response = await fetch("/api/twitch")
-    const isLive = await response.json()
+import {get} from "@bradgarropy/http"
 
+const getChannelStatus = async () => {
+    const {isLive} = await get("/api/twitch")
     return isLive
 }
 
