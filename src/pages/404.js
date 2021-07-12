@@ -4,7 +4,7 @@ import FourOhFour from "components/FourOhFour"
 const NotFoundPage = () => {
     return (
         <>
-            <SEO title="not found" />
+            <SEO title="🤷🏼‍♂️ not found" description="" />
 
             <FourOhFour />
         </>
