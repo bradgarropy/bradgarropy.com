@@ -30,7 +30,7 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 | _Version Control_        | Git, SVN                                           |
 | _Continuous Integration_ | Jenkins, Travis CI, GitHub Actions                 |
 | _Cloud_                  | Amazon Web Services Lambda, Google Cloud Functions |
-| _Hosting_                | Netlify, Heroku, Github Pages, Firebase            |
+| _Hosting_                | Netlify, Vercel, Heroku, Github Pages, Firebase    |
 | _Databases_              | MongoDB, MySQL, Firestore, FaunaDB                 |
 | _Infrastructure_         | Puppet, Artifactory, vSphere                       |
 | _Monitoring_             | New Relic, Pager Duty                              |
@@ -153,7 +153,8 @@ _03/04/2021_ | [Firebase][firebase-tutorial]
 
 ## Talks & Appearances
 
-_05/07/2021_ | [Web Dev Weekly][web-dev-weekly] with Brad Garropy and Richard Gottleber (_coming soon_)  
+_06/25/2021_ | [Developers Hangout][developers-hangout] with James Perkins  
+_05/07/2021_ | [Web Dev Weekly][web-dev-weekly] with Brad Garropy and Richard Gottleber  
 _11/11/2020_ | [Syntax.fm][syntax] with Scott Tolinski and Wes Bos  
 _11/09/2020_ | [The Chau Codes Podcast][chau-codes] with Justin Chau  
 _10/06/2020_ | [That's My Jamstack][thats-my-jamstack] with Bryan Robinson  
@@ -280,6 +281,12 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 -   Leverages the Spotify API to retrieve the playlist, and the Twitter API to publish tweets.
 -   Executed by a serverless function triggered by a Google Cloud Scheduler event.
 
+[📻 http][http]
+
+-   Simplified HTTP request library.
+-   Replaces `fetch`, heavily inspired by `axios`.
+-   Over 200 downloads!
+
 [🔎 gatsby-plugin-seo][gatsby-plugin-seo]
 
 -   SEO plugin for Gatsby.
@@ -305,7 +312,8 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [Twitter][twitter]  
 [GitHub][github]  
 [npm][npm]  
-[LinkedIn][linkedin]
+[LinkedIn][linkedin]  
+[Polywork][polywork]
 
 [email]: mailto:bradgarropy@gmail.com
 [prex]: https://magento.com/products/product-recommendations
@@ -330,6 +338,7 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [dtxc-bot]: https://twitter.com/dailytxcountry
 [labman]: https://npmjs.com/package/labman
 [business-card]: https://npmjs.com/package/bradgarropy
+[http]: https://npmjs.com/package/@bradgarropy/http
 [gatsby-plugin-seo]: https://gatsbyjs.org/packages/@bradgarropy/gatsby-plugin-seo
 [eslint]: https://npmjs.com/package/@bradgarropy/eslint-config
 [bg-snippets]: https://marketplace.visualstudio.com/items?itemName=bradgarropy.bg-snippets
@@ -339,16 +348,18 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [github]: https://github.com/bradgarropy
 [npm]: https://npmjs.com/~bradgarropy
 [linkedin]: https://linkedin.com/in/bradgarropy
+[polywork]: https://polywork.com/bradgarropy
 [syntax]: https://youtu.be/W7y03fsqHJw?t=2503
 [chau-codes]: https://youtu.be/A85MnRidA2A
 [thats-my-jamstack]: https://thatsmyjamstack.com/posts/brad-garropy
-[use-countdown]: https://www.npmjs.com/package/@bradgarropy/use-countdown
-[hue-sdk]: https://www.npmjs.com/package/@bradgarropy/hue-sdk
+[use-countdown]: https://npmjs.com/package/@bradgarropy/use-countdown
+[hue-sdk]: https://npmjs.com/package/@bradgarropy/hue-sdk
 [twitch-bot]: https://github.com/bradgarropy/twitch-bot
 [bg-codes]: https://bg-codes.netlify.app
 [search]: https://magento.com/products/live-search
 [events-sdk]: https://github.com/adobe/magento-storefront-events-sdk
 [event-collector]: https://github.com/adobe/magento-storefront-event-collector
+[developers-hangout]: https://youtu.be/oRZNF38Z5Jg
 [web-dev-weekly]: https://webdevweekly.captivate.fm
-[webpack-tutorial]: https://www.youtube.com/watch?v=cidA_qfiO0M&list=PL6Mu1AMmTL-vGQdj1-auEc12KM14OmjXH
-[firebase-tutorial]: https://www.youtube.com/watch?v=FArYmEBCMt0&list=PL6Mu1AMmTL-sSswsqShJ5fbIr9XjYHGFm
+[webpack-tutorial]: https://youtube.com/watch?v=cidA_qfiO0M&list=PL6Mu1AMmTL-vGQdj1-auEc12KM14OmjXH
+[firebase-tutorial]: https://youtube.com/watch?v=FArYmEBCMt0&list=PL6Mu1AMmTL-sSswsqShJ5fbIr9XjYHGFm

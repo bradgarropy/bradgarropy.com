@@ -46,7 +46,7 @@ I'm getting more serious about [streaming][stream] my coding sessions, and now I
 [Elgato Multi Mount][multi-mount]  
 [Elgato Stream Deck Mini][stream-deck]  
 [Rode PSA1 Boom Arm][psa1]  
-[Shure SM58 Microphone][sm58]  
+[Shure SM7B Microphone][sm7b]  
 [TC Helicon GoXLR][goxlr]
 
 ## 🏢 adobe office
@@ -102,7 +102,7 @@ These pieces of tech are always within reach.
 [arms]: https://amzn.to/2Szyrym
 [google-nest]: https://store.google.com/product/google_nest_mini
 [stream]: https://bradgarropy.com/stream
-[sm58]: https://amzn.to/2W2z5cD
+[sm7b]: https://www.amazon.com/Shure-SM7B-Cardioid-Dynamic-Microphone/dp/B0002E4Z8M
 [goxlr]: https://www.amazon.com/GoXLR-Mixer-Sampler-Voice-Streamers/dp/B07JKNG4NV
 [psa1]: https://amzn.to/2Wgz8kH
 [a6000]: https://amzn.to/2LF4NHn
