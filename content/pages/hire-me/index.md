@@ -1,12 +1,17 @@
 # 🤝 let's work together
 
-I'm always open to discussing new opportunities for full time work or freelance clients.  
-Please check out my [resume][resume] and [contact][contact] me!
+I'm looking for a new full time position in one of the following roles.
 
-Right now, I'm [really][twitter] [enjoying][instagram] my job at [Adobe][adobe].
+-   **senior frontend developer**
+-   **developer experience engineer**
+
+I can bring a wealth of production experience, a customer focused mindset, a knack for architecting frontend solutions, and a passion for fostering both internal and external communities.
+
+I enjoy working in public, sharing what I create through written and video content, and collaborating with other developers to build new and exciting products.
+
+I'm based in **Austin, Texas**, but I'm open to local positions or **remote work**.
+
+Please check out my [**resume**][resume] and [**contact**][contact] me!
 
 [resume]: /resume
 [contact]: /contact
-[twitter]: https://twitter.com/bradgarropy/status/1160048090751148034
-[instagram]: https://www.instagram.com/stories/highlights/18018079972169140
-[adobe]: https://adobe.com
