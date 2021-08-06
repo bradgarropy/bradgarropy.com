@@ -36,12 +36,12 @@ const Layout = ({children}) => {
                 keywords={pkg.keywords}
                 icon="/favicon.png"
                 facebook={{
-                    image: "/facebook.png",
+                    image: "https://bradgarropy.com/facebook.png",
                     url: "https://bradgarropy.com",
                     type: "website",
                 }}
                 twitter={{
-                    image: "/twitter.png",
+                    image: "https://bradgarropy.com/twitter.png",
                     site: "@bradgarropy",
                     card: "summary",
                 }}

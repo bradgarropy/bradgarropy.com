@@ -20,10 +20,10 @@ const HireMePage = () => {
             <SEO
                 title="🤝 let's work together"
                 facebook={{
-                    image: "/hire-me.png",
+                    image: "https://bradgarropy.com/hire-me.png",
                 }}
                 twitter={{
-                    image: "/hire-me.png",
+                    image: "https://bradgarropy.com/hire-me.png",
                     card: "summary_large_image",
                 }}
             />
