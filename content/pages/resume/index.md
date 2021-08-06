@@ -153,6 +153,7 @@ _03/04/2021_ | [Firebase][firebase-tutorial]
 
 ## Talks & Appearances
 
+_08/04/2021_ | [Purrfect.dev][purrfect-dev] with Brittney Postma and Alex Patterson  
 _06/25/2021_ | [Developers Hangout][developers-hangout] with James Perkins  
 _05/07/2021_ | [Web Dev Weekly][web-dev-weekly] with Brad Garropy and Richard Gottleber  
 _11/11/2020_ | [Syntax.fm][syntax] with Scott Tolinski and Wes Bos  
@@ -363,3 +364,4 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [web-dev-weekly]: https://webdevweekly.captivate.fm
 [webpack-tutorial]: https://youtube.com/watch?v=cidA_qfiO0M&list=PL6Mu1AMmTL-vGQdj1-auEc12KM14OmjXH
 [firebase-tutorial]: https://youtube.com/watch?v=FArYmEBCMt0&list=PL6Mu1AMmTL-sSswsqShJ5fbIr9XjYHGFm
+[purrfect-dev]: https://youtu.be/Q-ELtpdIvzw
