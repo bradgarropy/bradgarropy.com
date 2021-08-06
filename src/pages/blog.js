@@ -17,7 +17,7 @@ const BlogPage = () => {
 
     return (
         <>
-            <SEO title="✍🏼 blog" description="" />
+            <SEO title="✍🏼 blog" />
 
             <Blog>
                 <PostSearchBar onSearch={onSearch} />

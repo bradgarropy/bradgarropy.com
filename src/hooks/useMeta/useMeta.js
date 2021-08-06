@@ -6,12 +6,6 @@ const useMeta = () => {
             site {
                 siteMetadata {
                     siteUrl
-                    url
-                    title
-                    description
-                    keywords
-                    email
-                    twitter
                 }
             }
         }

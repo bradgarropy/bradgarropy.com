@@ -9,7 +9,7 @@ const PostTemplate = ({data}) => {
 
     return (
         <>
-            <SEO title={frontmatter.title} description="" />
+            <SEO title={frontmatter.title} />
 
             <Post post={post} />
         </>

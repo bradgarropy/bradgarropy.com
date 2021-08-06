@@ -11,7 +11,7 @@ const TopicTemplate = ({pageContext, data}) => {
 
     return (
         <>
-            <SEO title={`${icon} ${name}`} description="" />
+            <SEO title={`${icon} ${name}`} />
 
             <TopicMeta topic={topic} />
             <PostList posts={posts} />

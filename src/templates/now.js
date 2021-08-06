@@ -9,7 +9,7 @@ const NowTemplate = ({data, pageContext}) => {
 
     return (
         <>
-            <SEO title="🧭 now" description="" />
+            <SEO title="🧭 now" />
             <Now now={now} newer={newer} older={older} />
         </>
     )

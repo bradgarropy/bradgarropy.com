@@ -27,7 +27,7 @@ const ContactPage = ({data}) => {
 
     return (
         <>
-            <SEO title="👋🏼 say hi" description="" />
+            <SEO title="👋🏼 say hi" />
 
             <Contact dangerouslySetInnerHTML={{__html: html}} />
         </>

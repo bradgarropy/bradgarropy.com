@@ -54,7 +54,7 @@ const SponsorsPage = () => {
 
     return (
         <>
-            <SEO title="💜 sponsors" description="" />
+            <SEO title="💜 sponsors" />
 
             <Thanks title="💜 thank you">
                 <p>

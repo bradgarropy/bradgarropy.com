@@ -8,7 +8,7 @@ const NowPage = ({data}) => {
 
     return (
         <>
-            <SEO title="🧭 now" description="" />
+            <SEO title="🧭 now" />
 
             <Now
                 now={node}
