@@ -13,7 +13,7 @@ const UsesPage = ({data}) => {
 
     return (
         <>
-            <SEO title="💠 uses" description="" />
+            <SEO title="💠 uses" />
 
             <Uses dangerouslySetInnerHTML={{__html: html}} />
         </>

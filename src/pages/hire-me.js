@@ -19,8 +19,13 @@ const HireMePage = () => {
         <>
             <SEO
                 title="🤝 let's work together"
-                description=""
-                image="/hire-me.png"
+                facebook={{
+                    image: "/hire-me.png",
+                }}
+                twitter={{
+                    image: "/hire-me.png",
+                    card: "summary_large_image",
+                }}
             />
 
             <HireMe dangerouslySetInnerHTML={{__html: hireMe}} />

@@ -25,7 +25,7 @@ const ResumePage = ({data}) => {
 
     return (
         <>
-            <SEO title="👔 resume" description="" />
+            <SEO title="👔 resume" />
 
             <Resume dangerouslySetInnerHTML={{__html: html}} />
         </>

@@ -1,9 +1,12 @@
+import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Footer from "components/Footer"
 import Header from "components/Header"
 import {AppProvider} from "context"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import GlobalStyles from "styles/GlobalStyles"
+
+import pkg from "../../../package.json"
 
 const Container = styled.div`
     min-height: 100vh;
@@ -27,6 +30,22 @@ const Layout = ({children}) => {
     return (
         <AppProvider>
             <GlobalStyles />
+
+            <SEO
+                title="🏠 my home on the web"
+                keywords={pkg.keywords}
+                icon="/favicon.png"
+                facebook={{
+                    image: "/facebook.png",
+                    url: "https://bradgarropy.com",
+                    type: "website",
+                }}
+                twitter={{
+                    image: "/twitter.png",
+                    site: "@bradgarropy",
+                    card: "summary",
+                }}
+            />
 
             <Container>
                 <Header />
