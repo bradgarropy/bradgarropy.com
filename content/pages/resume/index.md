@@ -39,8 +39,11 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 
 ## Employment History
 
+**Atlassian | Web Platform Engineer**  
+_September 2021 - Present_
+
 **Adobe | Senior Frontend Developer**  
-_July 2020 - Present_
+_July 2020 - September 2021_
 
 _Magento Storefront Eventing Platform_
 
