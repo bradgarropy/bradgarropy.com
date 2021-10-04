@@ -93,6 +93,7 @@ I appreciate any and all types of contributions to this project! Contributors ar
 <table>
   <tr>
     <td align="center"><a href="https://bradgarropy.com"><img src="https://avatars.githubusercontent.com/u/11336745?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brad Garropy</b></sub></a><br /><a href="#blog-bradgarropy" title="Blogposts">📝</a> <a href="https://github.com/bradgarropy/bradgarropy.com/commits?author=bradgarropy" title="Code">💻</a> <a href="#content-bradgarropy" title="Content">🖋</a> <a href="#design-bradgarropy" title="Design">🎨</a> <a href="https://github.com/bradgarropy/bradgarropy.com/commits?author=bradgarropy" title="Documentation">📖</a> <a href="#infra-bradgarropy" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/bradgarropy/bradgarropy.com/commits?author=bradgarropy" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://github.com/sleepyArpan"><img src="https://avatars.githubusercontent.com/u/50901152?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arpan Chattopadhyay</b></sub></a><br /><a href="#blog-sleepyArpan" title="Blogposts">📝</a> <a href="https://github.com/bradgarropy/bradgarropy.com/issues?q=author%3AsleepyArpan" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
