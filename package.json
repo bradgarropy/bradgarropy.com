@@ -11,7 +11,8 @@
         "prettier",
         "jest",
         "blog",
-        "portfolio"
+        "portfolio",
+        "hacktoberfest"
     ],
     "homepage": "https://bradgarropy.com",
     "bugs": {
