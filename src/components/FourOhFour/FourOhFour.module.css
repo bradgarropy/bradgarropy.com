@@ -1,0 +1,6 @@
+.fourOhFour {
+    display: grid;
+    justify-items: center;
+    font-family: "Righteous", cursive;
+    font-size: 5rem;
+}

@@ -1,0 +1,25 @@
+.header {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+.header > a {
+    display: inline-block;
+}
+
+.left {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 2rem;
+    align-items: center;
+}
+
+.right {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 2rem;
+    align-items: center;
+}

@@ -1,33 +1,19 @@
 import PostHeader from "components/PostHeader"
 import PropTypes from "prop-types"
-import styled from "styled-components"
 
-const NoPosts = styled.div`
-    color: var(--text);
-    font-style: italic;
-    font-size: 1.25rem;
-
-    span {
-        font-style: normal;
-    }
-`
-
-const PostListWrapper = styled.div`
-    display: grid;
-    row-gap: 2.25rem;
-`
+import * as styles from "./PostList.module.css"
 
 const PostList = ({posts}) => {
     if (!posts.length) {
         return (
-            <NoPosts>
+            <div className={styles.noPosts}>
                 <span>🤷🏼‍♂️</span> no posts found
-            </NoPosts>
+            </div>
         )
     }
 
     return (
-        <PostListWrapper>
+        <div className={styles.postList}>
             {posts.map((post, index) => {
                 const {date, topic, title, slug} = post.frontmatter
 
@@ -41,7 +27,7 @@ const PostList = ({posts}) => {
                     />
                 )
             })}
-        </PostListWrapper>
+        </div>
     )
 }
 

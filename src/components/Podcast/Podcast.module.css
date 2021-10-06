@@ -1,0 +1,68 @@
+.podcast {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    justify-content: start;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
+    .podcast {
+        grid-template-columns: 1fr;
+    }
+}
+
+.description {
+    display: grid;
+    justify-items: start;
+    color: var(--text);
+}
+
+.hosts {
+    display: grid;
+    column-gap: 0.75rem;
+    grid-auto-flow: column;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: -0.075rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+    .hosts {
+        font-size: 1.4rem;
+    }
+}
+
+.host {
+    color: var(--text);
+}
+
+.host :hover {
+    color: var(--text);
+    text-shadow: 2px 2px var(--primary);
+}
+
+.coverImageContainer {
+    overflow: visible;
+}
+
+@media (max-width: 700px) {
+    .coverImageContainer {
+        width: 75%;
+    }
+}
+
+.coverImage {
+    box-sizing: border-box;
+    border: 2px solid var(--text);
+    background-color: var(--text);
+    box-shadow: 3px 3px 0 var(--text);
+}
+
+.coverImage:hover {
+    box-shadow: none;
+}

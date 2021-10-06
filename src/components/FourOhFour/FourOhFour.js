@@ -1,17 +1,10 @@
-import styled from "styled-components"
-
-const FourOhFourWrapper = styled.div`
-    display: grid;
-    justify-items: center;
-    font-family: "Righteous", cursive;
-    font-size: 5rem;
-`
+import * as styles from "./FourOhFour.module.css"
 
 const FourOhFour = () => {
     return (
-        <FourOhFourWrapper>
+        <div className={styles.fourOhFour}>
             <h1>404</h1>
-        </FourOhFourWrapper>
+        </div>
     )
 }
 

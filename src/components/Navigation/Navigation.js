@@ -1,38 +1,38 @@
 import {Link} from "gatsby"
-import styled from "styled-components"
 
-const NavigationWrapper = styled.nav`
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 1.25rem;
-    color: var(--text);
-
-    @media (max-width: 800px) {
-        display: none;
-    }
-`
-
-const NavigationLink = styled(Link)`
-    color: var(--text);
-
-    :hover {
-        color: var(--primary);
-    }
-`
+import * as styles from "./Navigation.module.css"
 
 const Navigation = () => {
     return (
-        <NavigationWrapper>
-            <NavigationLink to="/blog">blog</NavigationLink>
+        <nav className={styles.navigation}>
+            <Link className={styles.link} to="/blog">
+                blog
+            </Link>
+
             <span>|</span>
-            <NavigationLink to="/now">now</NavigationLink>
+
+            <Link className={styles.link} to="/now">
+                now
+            </Link>
+
             <span>|</span>
-            <NavigationLink to="/uses">uses</NavigationLink>
+
+            <Link className={styles.link} to="/uses">
+                uses
+            </Link>
+
             <span>|</span>
-            <NavigationLink to="/hire-me">hire me</NavigationLink>
+
+            <Link className={styles.link} to="/hire-me">
+                hire me
+            </Link>
+
             <span>|</span>
-            <NavigationLink to="/contact">contact</NavigationLink>
-        </NavigationWrapper>
+
+            <Link className={styles.link} to="/contact">
+                contact
+            </Link>
+        </nav>
     )
 }
 

@@ -3,9 +3,6 @@ import PostList from "components/PostList"
 import PostSearchBar from "components/PostSearchBar"
 import {usePosts} from "hooks"
 import {useState} from "react"
-import styled from "styled-components"
-
-const Blog = styled.div``
 
 const BlogPage = () => {
     const allPosts = usePosts()
@@ -19,10 +16,10 @@ const BlogPage = () => {
         <>
             <SEO title="✍🏼 blog" />
 
-            <Blog>
+            <div>
                 <PostSearchBar onSearch={onSearch} />
                 <PostList posts={posts} />
-            </Blog>
+            </div>
         </>
     )
 }

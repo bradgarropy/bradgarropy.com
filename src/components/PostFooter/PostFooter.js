@@ -1,20 +1,15 @@
 import PostComments from "components/PostComments"
 import PostEdit from "components/PostEdit"
 import PropTypes from "prop-types"
-import styled from "styled-components"
 
-const PostFooterWrapper = styled.section`
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: space-between;
-`
+import * as styles from "./PostFooter.module.css"
 
 const PostFooter = ({slug}) => {
     return (
-        <PostFooterWrapper>
+        <section className={styles.postFooter}>
             <PostComments slug={slug} />
             <PostEdit slug={slug} />
-        </PostFooterWrapper>
+        </section>
     )
 }
 

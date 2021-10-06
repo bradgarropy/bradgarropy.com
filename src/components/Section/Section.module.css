@@ -1,0 +1,14 @@
+.title {
+    font-size: clamp(3rem, 10vw, 4.5rem);
+    font-weight: 900;
+    letter-spacing: -0.2rem;
+    margin: 0rem 0rem 1.75rem 0rem;
+}
+
+.link {
+    display: inline-block;
+}
+
+.link:hover {
+    text-shadow: 3px 3px var(--primary);
+}

@@ -4,24 +4,12 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import {link} from "styles/partials"
 
-const Header = styled.div`
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    color: var(--text);
-    text-transform: lowercase;
-`
+import * as styles from "./Now.module.css"
 
 const Body = styled.div`
     ${link}
 `
 
-const Footer = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    justify-content: space-between;
-    grid-template-areas: "next previous";
-`
 const Inspiration = styled.p`
     ${link}
 
@@ -35,14 +23,14 @@ const Now = ({now, newer, older}) => {
 
     return (
         <>
-            <Header>
+            <div className={styles.header}>
                 <h1>🧭 now</h1>
                 <span>{frontmatter.date}</span>
-            </Header>
+            </div>
 
             <Body dangerouslySetInnerHTML={{__html: html}} />
 
-            <Footer>
+            <div className={styles.footer}>
                 <LinkButton to={`/now/${newer}`} disabled={!newer}>
                     👈🏼 newer
                 </LinkButton>
@@ -55,7 +43,7 @@ const Now = ({now, newer, older}) => {
                 >
                     older 👉🏼
                 </LinkButton>
-            </Footer>
+            </div>
 
             <Inspiration>
                 inspired by{" "}

@@ -1,24 +1,18 @@
 import Icon from "components/Icon"
 import PropTypes from "prop-types"
-import styled from "styled-components"
 import {getTechnologies} from "utils"
 
-const Technologies = styled.div`
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 0.5rem;
-    align-items: center;
-`
+import * as styles from "./ProjectTech.module.css"
 
 const ProjectTech = ({project}) => {
     const technologies = getTechnologies(project.topics)
 
     return (
-        <Technologies>
+        <div className={styles.projectTech}>
             {technologies.map(tech => {
                 return <Icon key={tech} name={tech} />
             })}
-        </Technologies>
+        </div>
     )
 }
 

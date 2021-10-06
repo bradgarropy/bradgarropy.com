@@ -1,17 +1,13 @@
 import PostTitle from "components/PostTitle"
 import {useLatestPosts} from "hooks"
-import styled from "styled-components"
 
-const LatestPostsWrapper = styled.div`
-    display: grid;
-    row-gap: 1.5rem;
-`
+import * as styles from "./LatestPosts.module.css"
 
 const LatestPosts = () => {
     const latestPosts = useLatestPosts()
 
     return (
-        <LatestPostsWrapper>
+        <div className={styles.latestPosts}>
             {latestPosts.map(latestPost => {
                 const {frontmatter} = latestPost
 
@@ -23,7 +19,7 @@ const LatestPosts = () => {
                     />
                 )
             })}
-        </LatestPostsWrapper>
+        </div>
     )
 }
 

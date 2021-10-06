@@ -1,0 +1,14 @@
+.noPosts {
+    color: var(--text);
+    font-style: italic;
+    font-size: 1.25rem;
+}
+
+.noPosts > span {
+    font-style: normal;
+}
+
+.postList {
+    display: grid;
+    row-gap: 2.25rem;
+}

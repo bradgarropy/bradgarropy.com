@@ -1,0 +1,79 @@
+.hero {
+    align-self: center;
+    align-items: start;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: minmax(auto, 15.625rem) auto;
+}
+
+@media (max-width: 700px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+}
+
+.heroImageContainer {
+    border-radius: 100%;
+}
+
+@media (max-width: 700px) {
+    .heroImageContainer {
+        margin: auto;
+        width: 80%;
+        height: auto;
+    }
+}
+
+.heroImage {
+    border-radius: 100%;
+    box-sizing: border-box;
+    border: 7px solid var(--text);
+    background-color: var(--text);
+}
+
+.heroImage:hover {
+    transform: rotate(-2deg) !important;
+    border: 7px solid var(--primary);
+    background-color: var(--primary);
+}
+
+.headline {
+    margin: 0;
+    letter-spacing: -0.2rem;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+@media (max-width: 700px) {
+    .headline {
+        position: static;
+    }
+}
+
+@media (max-width: 500px) {
+    .headline {
+        font-size: 2.5rem;
+    }
+}
+
+.description {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: start;
+    justify-items: center;
+    column-gap: 0.75rem;
+    padding-left: 2.5rem;
+    line-height: 1.5;
+}
+
+.description > h2,
+.description > span {
+    font-size: 1.5rem;
+    margin: 0rem;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+}
+
+.description > h2 {
+    justify-self: start;
+}
