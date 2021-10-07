@@ -4,41 +4,8 @@ import Link from "@bradgarropy/gatsby-link"
 import {GatsbyImage} from "gatsby-plugin-image"
 import PropTypes from "prop-types"
 import slugify from "slugify"
-import styled from "styled-components"
 
 import * as styles from "./Testimonials.module.css"
-
-const Testimonial = styled(Link)`
-    padding: 2rem;
-    border-radius: 0.3rem;
-    border: 3px solid var(--text);
-    box-shadow: 3px 3px 0 var(--text);
-    display: grid;
-    color: var(--text);
-    max-width: 32rem;
-
-    :hover {
-        color: var(--text);
-        box-shadow: none;
-    }
-
-    .photo {
-        border-radius: 100%;
-    }
-`
-
-const Quote = styled.div`
-    p {
-        margin: 2rem 0rem 0rem 0rem;
-    }
-`
-
-const Photo = styled(GatsbyImage)`
-    width: 4rem;
-    margin: 0rem;
-    border: 3px solid var(--text);
-    background-color: var(--text);
-`
 
 const Testimonials = ({testimonials}) => {
     return (
@@ -47,29 +14,30 @@ const Testimonials = ({testimonials}) => {
                 const slug = slugify(testimonial.name.toLowerCase())
 
                 return (
-                    <Testimonial
+                    <Link
+                        className={styles.testimonial}
                         id={slug}
                         key={testimonial.name}
                         to={testimonial.profile}
                     >
                         <div className={styles.header}>
-                            <Photo
+                            <GatsbyImage
                                 image={testimonial.photo}
                                 alt={testimonial.name}
-                                className="photo"
-                                imgClassName="photo"
+                                className={styles.photoContainer}
+                                imgClassName={styles.photo}
                             />
 
                             <p className={styles.name}>{testimonial.name}</p>
                         </div>
 
-                        <Quote
-                            className="fancyLinks"
+                        <div
+                            className={`fancyLinks ${styles.quote}`}
                             dangerouslySetInnerHTML={{
                                 __html: testimonial.html,
                             }}
                         />
-                    </Testimonial>
+                    </Link>
                 )
             })}
         </div>
