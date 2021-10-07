@@ -1,9 +1,10 @@
+import "styles/fancyLinks.css"
+
 import Link from "@bradgarropy/gatsby-link"
 import {GatsbyImage} from "gatsby-plugin-image"
 import PropTypes from "prop-types"
 import slugify from "slugify"
 import styled from "styled-components"
-import {link} from "styles/partials"
 
 import * as styles from "./Testimonials.module.css"
 
@@ -27,8 +28,6 @@ const Testimonial = styled(Link)`
 `
 
 const Quote = styled.div`
-    ${link}
-
     p {
         margin: 2rem 0rem 0rem 0rem;
     }
@@ -65,6 +64,7 @@ const Testimonials = ({testimonials}) => {
                         </div>
 
                         <Quote
+                            className="fancyLinks"
                             dangerouslySetInnerHTML={{
                                 __html: testimonial.html,
                             }}

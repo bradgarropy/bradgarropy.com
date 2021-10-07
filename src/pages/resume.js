@@ -1,15 +1,14 @@
+import "styles/fancyLinks.css"
+
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import {graphql} from "gatsby"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import {link} from "styles/partials"
 
 const Resume = styled.section`
     p:first-of-type {
         margin-top: 0;
     }
-
-    ${link}
 
     li > p {
         margin: 0;
@@ -27,7 +26,10 @@ const ResumePage = ({data}) => {
         <>
             <SEO title="👔 resume" />
 
-            <Resume dangerouslySetInnerHTML={{__html: html}} />
+            <Resume
+                className="fancyLinks"
+                dangerouslySetInnerHTML={{__html: html}}
+            />
         </>
     )
 }

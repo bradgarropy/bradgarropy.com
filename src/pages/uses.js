@@ -1,12 +1,8 @@
+import "styles/fancyLinks.css"
+
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import {graphql} from "gatsby"
 import PropTypes from "prop-types"
-import styled from "styled-components"
-import {link} from "styles/partials"
-
-const Uses = styled.div`
-    ${link}
-`
 
 const UsesPage = ({data}) => {
     const {html} = data.uses
@@ -15,7 +11,10 @@ const UsesPage = ({data}) => {
         <>
             <SEO title="💠 uses" />
 
-            <Uses dangerouslySetInnerHTML={{__html: html}} />
+            <div
+                className="fancyLinks"
+                dangerouslySetInnerHTML={{__html: html}}
+            />
         </>
     )
 }

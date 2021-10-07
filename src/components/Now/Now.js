@@ -1,18 +1,13 @@
+import "styles/fancyLinks.css"
+
 import Link from "@bradgarropy/gatsby-link"
 import LinkButton from "components/LinkButton"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import {link} from "styles/partials"
 
 import * as styles from "./Now.module.css"
 
-const Body = styled.div`
-    ${link}
-`
-
 const Inspiration = styled.p`
-    ${link}
-
     margin-block-start: 5rem;
     text-align: center;
     font-style: italic;
@@ -28,7 +23,10 @@ const Now = ({now, newer, older}) => {
                 <span>{frontmatter.date}</span>
             </div>
 
-            <Body dangerouslySetInnerHTML={{__html: html}} />
+            <div
+                className="fancyLinks"
+                dangerouslySetInnerHTML={{__html: html}}
+            />
 
             <div className={styles.footer}>
                 <LinkButton to={`/now/${newer}`} disabled={!newer}>
@@ -45,7 +43,7 @@ const Now = ({now, newer, older}) => {
                 </LinkButton>
             </div>
 
-            <Inspiration>
+            <Inspiration className="fancyLinks">
                 inspired by{" "}
                 <Link to="https://twitter.com/sivers">derek sivers</Link> and{" "}
                 <Link to="https://nownownow.com/about">nownownow</Link>

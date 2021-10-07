@@ -1,14 +1,13 @@
+import "styles/fancyLinks.css"
+
 import Link from "@bradgarropy/gatsby-link"
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Section from "components/Section"
 import {useSponsors} from "hooks"
 import styled from "styled-components"
-import {link} from "styles/partials"
 
 const Thanks = styled(Section)`
     margin-bottom: 4rem;
-
-    ${link}
 `
 
 const Tiers = styled.div`
@@ -16,9 +15,6 @@ const Tiers = styled.div`
     row-gap: 5rem;
 `
 
-const Empty = styled.p`
-    ${link}
-`
 const Sponsor = styled(Link)`
     display: inline-block;
     position: relative;
@@ -56,7 +52,7 @@ const SponsorsPage = () => {
         <>
             <SEO title="💜 sponsors" />
 
-            <Thanks title="💜 thank you">
+            <Thanks title="💜 thank you" className="fancyLinks">
                 <p>
                     Each and every supporter I have incentivizes me to continue
                     creating libraries, videos, blogs, and streams. All earnings
@@ -88,13 +84,13 @@ const SponsorsPage = () => {
                                 </Sponsor>
                             ))
                         ) : (
-                            <Empty>
+                            <p className="fancyLinks">
                                 Nobody yet,{" "}
                                 <Link to="https://bradgarropy.com/sponsor">
                                     be the first
                                 </Link>
                                 !
-                            </Empty>
+                            </p>
                         )}
                     </Section>
                 ))}

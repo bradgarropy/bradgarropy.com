@@ -1,12 +1,11 @@
+import "styles/fancyLinks.css"
+
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import {graphql} from "gatsby"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import {link} from "styles/partials"
 
 const Contact = styled.div`
-    ${link}
-
     align-self: center;
     justify-self: center;
 
@@ -29,7 +28,10 @@ const ContactPage = ({data}) => {
         <>
             <SEO title="👋🏼 say hi" />
 
-            <Contact dangerouslySetInnerHTML={{__html: html}} />
+            <Contact
+                className="fancyLinks"
+                dangerouslySetInnerHTML={{__html: html}}
+            />
         </>
     )
 }
