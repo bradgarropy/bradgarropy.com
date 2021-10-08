@@ -1,0 +1,11 @@
+.sections {
+    display: grid;
+    row-gap: 4rem;
+    margin: 4rem 0rem;
+}
+
+@media (max-width: 700px) {
+    .sections {
+        margin: 0rem;
+    }
+}

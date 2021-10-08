@@ -1,25 +1,7 @@
-import "styles/fancyLinks.css"
-
 import SEO from "@bradgarropy/gatsby-plugin-seo"
+import Contact from "components/Contact"
 import {graphql} from "gatsby"
 import PropTypes from "prop-types"
-import styled from "styled-components"
-
-const Contact = styled.div`
-    align-self: center;
-    justify-self: center;
-
-    font-size: 1rem;
-
-    table {
-        font-size: 1.5rem;
-        margin-left: 0;
-    }
-
-    td {
-        padding: 0 1rem 0 0;
-    }
-`
 
 const ContactPage = ({data}) => {
     const {html} = data.contact
@@ -28,10 +10,7 @@ const ContactPage = ({data}) => {
         <>
             <SEO title="👋🏼 say hi" />
 
-            <Contact
-                className="fancyLinks"
-                dangerouslySetInnerHTML={{__html: html}}
-            />
+            <Contact html={html} />
         </>
     )
 }

@@ -1,14 +1,8 @@
 import "styles/fancyLinks.css"
 
 import SEO from "@bradgarropy/gatsby-plugin-seo"
-import Testimonials from "components/Testimonials"
+import HireMe from "components/HireMe"
 import {useHireMe, useTestimonials} from "hooks"
-import styled from "styled-components"
-
-const HireMe = styled.div`
-    align-self: center;
-    justify-self: center;
-`
 
 const HireMePage = () => {
     const hireMe = useHireMe()
@@ -27,13 +21,7 @@ const HireMePage = () => {
                 }}
             />
 
-            <HireMe
-                className="fancyLinks"
-                dangerouslySetInnerHTML={{__html: hireMe}}
-            />
-
-            <h1 id="testimonials">💯 what people think of me</h1>
-            <Testimonials testimonials={testimonials} />
+            <HireMe html={hireMe} testimonials={testimonials} />
         </>
     )
 }
