@@ -9,16 +9,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import PropTypes from "prop-types"
-import styled from "styled-components"
 
-const FontAwesomeIconWrapper = styled(FontAwesomeIcon)`
-    font-size: 2.5rem;
-    color: var(--text);
-
-    :hover {
-        color: var(--primary);
-    }
-`
+import * as styles from "./SocialLink.module.css"
 
 const SocialLink = ({platform}) => {
     let url
@@ -65,7 +57,7 @@ const SocialLink = ({platform}) => {
 
     return (
         <Link to={url} aria-label={label}>
-            <FontAwesomeIconWrapper icon={icon} />
+            <FontAwesomeIcon className={styles.icon} icon={icon} />
         </Link>
     )
 }

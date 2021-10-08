@@ -3,15 +3,8 @@ import "styles/fancyLinks.css"
 import Link from "@bradgarropy/gatsby-link"
 import LinkButton from "components/LinkButton"
 import PropTypes from "prop-types"
-import styled from "styled-components"
 
 import * as styles from "./Now.module.css"
-
-const Inspiration = styled.p`
-    margin-block-start: 5rem;
-    text-align: center;
-    font-style: italic;
-`
 
 const Now = ({now, newer, older}) => {
     const {html, frontmatter} = now
@@ -43,11 +36,11 @@ const Now = ({now, newer, older}) => {
                 </LinkButton>
             </div>
 
-            <Inspiration className="fancyLinks">
+            <p className={`fancyLinks ${styles.inspiration}`}>
                 inspired by{" "}
                 <Link to="https://twitter.com/sivers">derek sivers</Link> and{" "}
                 <Link to="https://nownownow.com/about">nownownow</Link>
-            </Inspiration>
+            </p>
         </>
     )
 }

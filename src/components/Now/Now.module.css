@@ -12,3 +12,9 @@
     justify-content: space-between;
     grid-template-areas: "next previous";
 }
+
+.inspiration {
+    margin-block-start: 5rem;
+    text-align: center;
+    font-style: italic;
+}

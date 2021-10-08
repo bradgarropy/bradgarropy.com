@@ -1,0 +1,8 @@
+.icon {
+    font-size: 2.5rem;
+    color: var(--text);
+}
+
+.icon:hover {
+    color: var(--primary);
+}

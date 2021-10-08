@@ -3,16 +3,8 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import Hamburger from "components/Hamburger"
 import {Link} from "gatsby"
 import {useApp} from "hooks"
-import styled from "styled-components"
 
 import * as styles from "./MobileNavigation.module.css"
-
-const CloseIcon = styled(FontAwesomeIcon)`
-    color: var(--text);
-    margin: 1.25rem;
-    cursor: pointer;
-    justify-self: end;
-`
 
 const MobileNavigation = () => {
     const {open, setOpen} = useApp()
@@ -23,7 +15,12 @@ const MobileNavigation = () => {
 
     return open ? (
         <div className={styles.mobileNavigation}>
-            <CloseIcon icon={faTimes} onClick={onClick} aria-label="close" />
+            <FontAwesomeIcon
+                className={styles.close}
+                icon={faTimes}
+                onClick={onClick}
+                aria-label="close"
+            />
 
             <div className={styles.links}>
                 <Link className={styles.link} to="/blog">
