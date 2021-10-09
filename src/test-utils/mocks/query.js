@@ -77,11 +77,6 @@ const mockProjectsQuery = {
                                     },
                                     {
                                         topic: {
-                                            name: "styled-components",
-                                        },
-                                    },
-                                    {
-                                        topic: {
                                             name: "hacktoberfest",
                                         },
                                     },

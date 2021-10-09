@@ -69,7 +69,6 @@ const mockProjects = [
             "eslint",
             "blog",
             "portfolio",
-            "styled-components",
             "hacktoberfest",
         ],
     },
