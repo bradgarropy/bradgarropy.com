@@ -1,20 +1,18 @@
 import "styles/fancyLinks.css"
 
-import PropTypes from "prop-types"
+import {useResume} from "hooks"
 
 import * as styles from "./Resume.module.css"
 
-const Resume = ({html}) => {
+const Resume = () => {
+    const resume = useResume()
+
     return (
         <section
             className={`fancyLinks ${styles.resume}`}
-            dangerouslySetInnerHTML={{__html: html}}
+            dangerouslySetInnerHTML={{__html: resume}}
         />
     )
-}
-
-Resume.propTypes = {
-    html: PropTypes.string.isRequired,
 }
 
 export default Resume

@@ -213,6 +213,14 @@ const mockHireMe = {
     html: "<p>hire me</p>",
 }
 
+const mockContact = {
+    html: "<p>contact</p>",
+}
+
+const mockResume = {
+    html: "<p>resume</p>",
+}
+
 const mockTestimonials = [
     {
         name: "First Test User",
@@ -230,11 +238,13 @@ const mockTestimonials = [
 
 export {
     mockChannelStatus,
+    mockContact,
     mockHireMe,
     mockMeta,
     mockPodcast,
     mockPosts,
     mockProjects,
+    mockResume,
     mockSponsors,
     mockTestimonials,
     mockVideos,

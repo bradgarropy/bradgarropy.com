@@ -1,20 +1,18 @@
 import "styles/fancyLinks.css"
 
-import PropTypes from "prop-types"
+import {useContact} from "hooks"
 
 import * as styles from "./Contact.module.css"
 
-const Contact = ({html}) => {
+const Contact = () => {
+    const contact = useContact()
+
     return (
         <div
             className={`fancyLinks ${styles.contact}`}
-            dangerouslySetInnerHTML={{__html: html}}
+            dangerouslySetInnerHTML={{__html: contact}}
         />
     )
-}
-
-Contact.propTypes = {
-    html: PropTypes.string.isRequired,
 }
 
 export default Contact
