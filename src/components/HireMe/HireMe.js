@@ -1,25 +1,23 @@
 import Testimonials from "components/Testimonials"
-import PropTypes from "prop-types"
+import {useHireMe, useTestimonials} from "hooks"
 
 import * as styles from "./HireMe.module.css"
 
-const HireMe = ({html, testimonials}) => {
+const HireMe = () => {
+    const hireMe = useHireMe()
+    const testimonials = useTestimonials()
+
     return (
         <>
             <div
                 className={`fancyLinks ${styles.hireMe}`}
-                dangerouslySetInnerHTML={{__html: html}}
+                dangerouslySetInnerHTML={{__html: hireMe}}
             />
 
             <h1 id="testimonials">💯 what people think of me</h1>
             <Testimonials testimonials={testimonials} />
         </>
     )
-}
-
-HireMe.propTypes = {
-    html: PropTypes.string.isRequired,
-    testimonials: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
 export default HireMe

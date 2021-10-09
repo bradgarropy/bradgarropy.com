@@ -2,12 +2,8 @@ import "styles/fancyLinks.css"
 
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import HireMe from "components/HireMe"
-import {useHireMe, useTestimonials} from "hooks"
 
 const HireMePage = () => {
-    const hireMe = useHireMe()
-    const testimonials = useTestimonials()
-
     return (
         <>
             <SEO
@@ -21,7 +17,7 @@ const HireMePage = () => {
                 }}
             />
 
-            <HireMe html={hireMe} testimonials={testimonials} />
+            <HireMe />
         </>
     )
 }
