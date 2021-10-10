@@ -49,17 +49,6 @@ I'm getting more serious about [streaming][stream] my coding sessions, and now I
 [Shure SM7B Microphone][sm7b]  
 [TC Helicon GoXLR][goxlr]
 
-## 🏢 adobe office
-
-At work everyone runs off of Apple laptops, so I joined the party. I decided to create a minimalist setup based around wireless peripherals. Space gray all day!
-
-![adobe office][adobe-office]
-
-[MacBook Pro][macbook]  
-[Magic Keyboard with Numeric Keypad][magic-keyboard]  
-[Magic Trackpad 2][magic-trackpad]  
-[Dell U3419W Monitor][u3419w]
-
 ## 👨🏼‍💻 software
 
 Regardless of what computer I'm on, I use these applications. As you may guess, cross platform compatibility is important to me.
@@ -111,11 +100,6 @@ These pieces of tech are always within reach.
 [stream-deck]: https://www.amazon.com/Elgato-Stream-Deck-Mini-customizable/dp/B07DYRS1WH
 [multi-mount]: https://www.elgato.com/en/gaming/multi-mount
 [key-light]: https://www.elgato.com/en/gaming/key-light
-[adobe-office]: images/adobe-office.jpg
-[macbook]: https://amzn.to/2JZlZFQ
-[magic-keyboard]: https://amzn.to/2M5Ge7y
-[magic-trackpad]: https://amzn.to/2wg00Td
-[u3419w]: https://amzn.to/2wk9Kfa
 [vscode]: https://code.visualstudio.com
 [chrome]: https://www.google.com/chrome
 [figma]: https://www.figma.com
