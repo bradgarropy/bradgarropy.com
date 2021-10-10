@@ -4,12 +4,12 @@ import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Footer from "components/Footer"
 import Header from "components/Header"
 import {AppProvider} from "context"
-import PropTypes from "prop-types"
+import {FC} from "react"
 
 import pkg from "../../../package.json"
 import * as styles from "./Layout.module.css"
 
-const Layout = ({children}) => {
+const Layout: FC = ({children}) => {
     return (
         <AppProvider>
             <SEO
@@ -35,10 +35,6 @@ const Layout = ({children}) => {
             </div>
         </AppProvider>
     )
-}
-
-Layout.propTypes = {
-    children: PropTypes.node,
 }
 
 export default Layout

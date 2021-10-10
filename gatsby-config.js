@@ -200,7 +200,9 @@ const config = {
         {
             resolve: "gatsby-plugin-layout",
             options: {
-                component: require.resolve("./src/components/Layout/Layout.js"),
+                component: require.resolve(
+                    "./src/components/Layout/Layout.tsx",
+                ),
             },
         },
     ],

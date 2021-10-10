@@ -1,8 +1,9 @@
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Sponsors from "components/Sponsors"
 import {useSponsors} from "hooks"
+import {FC} from "react"
 
-const SponsorsPage = () => {
+const SponsorsPage: FC = () => {
     const sponsors = useSponsors()
 
     return (

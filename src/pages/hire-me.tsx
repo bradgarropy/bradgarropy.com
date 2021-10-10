@@ -2,8 +2,9 @@ import "styles/fancyLinks.css"
 
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import HireMe from "components/HireMe"
+import {FC} from "react"
 
-const HireMePage = () => {
+const HireMePage: FC = () => {
     return (
         <>
             <SEO

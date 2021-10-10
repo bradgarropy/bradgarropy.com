@@ -2,9 +2,17 @@ import "styles/fancyLinks.css"
 
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import {graphql} from "gatsby"
-import PropTypes from "prop-types"
+import {FC} from "react"
 
-const UsesPage = ({data}) => {
+type UsesPageProps = {
+    data: {
+        uses: {
+            html: string
+        }
+    }
+}
+
+const UsesPage: FC<UsesPageProps> = ({data}) => {
     const {html} = data.uses
 
     return (
@@ -17,10 +25,6 @@ const UsesPage = ({data}) => {
             />
         </>
     )
-}
-
-UsesPage.propTypes = {
-    data: PropTypes.object.isRequired,
 }
 
 export const usesPageQuery = graphql`

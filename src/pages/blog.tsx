@@ -2,9 +2,9 @@ import SEO from "@bradgarropy/gatsby-plugin-seo"
 import PostList from "components/PostList"
 import PostSearchBar from "components/PostSearchBar"
 import {usePosts} from "hooks"
-import {useState} from "react"
+import {FC, useState} from "react"
 
-const BlogPage = () => {
+const BlogPage: FC = () => {
     const allPosts = usePosts()
     const [posts, setPosts] = useState(allPosts)
 
@@ -23,7 +23,5 @@ const BlogPage = () => {
         </>
     )
 }
-
-BlogPage.propTypes = {}
 
 export default BlogPage

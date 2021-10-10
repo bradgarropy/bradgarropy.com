@@ -1,9 +1,21 @@
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Now from "components/Now"
 import {graphql} from "gatsby"
-import PropTypes from "prop-types"
+import {FC} from "react"
 
-const NowPage = ({data}) => {
+type NowPageProps = {
+    data: {
+        nows: {
+            edges: Array<{
+                node: any
+                next: any
+                previous: any
+            }>
+        }
+    }
+}
+
+const NowPage: FC<NowPageProps> = ({data}) => {
     const {node, next, previous} = data.nows.edges[0]
 
     return (
@@ -17,10 +29,6 @@ const NowPage = ({data}) => {
             />
         </>
     )
-}
-
-NowPage.propTypes = {
-    data: PropTypes.object.isRequired,
 }
 
 export const query = graphql`

@@ -1,7 +1,8 @@
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Resume from "components/Resume"
+import {FC} from "react"
 
-const ResumePage = () => {
+const ResumePage: FC = () => {
     return (
         <>
             <SEO title="👔 resume" />
