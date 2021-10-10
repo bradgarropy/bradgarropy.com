@@ -1,20 +1,14 @@
+import "styles/fancyLinks.css"
+import "styles/twitter.css"
+
 import PropTypes from "prop-types"
-import styled from "styled-components"
-import {link} from "styles/partials"
 
-const PostBodyWrapper = styled.section`
-    margin: 2.25rem 0rem;
-
-    ${link}
-
-    .twitter-tweet {
-        margin: 0 auto;
-    }
-`
+import * as styles from "./PostBody.module.css"
 
 const PostBody = ({content}) => {
     return (
-        <PostBodyWrapper
+        <section
+            className={`fancyLinks ${styles.postBody}`}
             dangerouslySetInnerHTML={{
                 __html: content,
             }}

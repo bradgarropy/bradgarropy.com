@@ -1,48 +1,27 @@
+import "styles/fancyLinks.css"
+
 import Link from "@bradgarropy/gatsby-link"
 import LinkButton from "components/LinkButton"
 import PropTypes from "prop-types"
-import styled from "styled-components"
-import {link} from "styles/partials"
 
-const Header = styled.div`
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    color: var(--text);
-    text-transform: lowercase;
-`
-
-const Body = styled.div`
-    ${link}
-`
-
-const Footer = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    justify-content: space-between;
-    grid-template-areas: "next previous";
-`
-const Inspiration = styled.p`
-    ${link}
-
-    margin-block-start: 5rem;
-    text-align: center;
-    font-style: italic;
-`
+import * as styles from "./Now.module.css"
 
 const Now = ({now, newer, older}) => {
     const {html, frontmatter} = now
 
     return (
         <>
-            <Header>
+            <div className={styles.header}>
                 <h1>🧭 now</h1>
                 <span>{frontmatter.date}</span>
-            </Header>
+            </div>
 
-            <Body dangerouslySetInnerHTML={{__html: html}} />
+            <div
+                className="fancyLinks"
+                dangerouslySetInnerHTML={{__html: html}}
+            />
 
-            <Footer>
+            <div className={styles.footer}>
                 <LinkButton to={`/now/${newer}`} disabled={!newer}>
                     👈🏼 newer
                 </LinkButton>
@@ -55,13 +34,13 @@ const Now = ({now, newer, older}) => {
                 >
                     older 👉🏼
                 </LinkButton>
-            </Footer>
+            </div>
 
-            <Inspiration>
+            <p className={`fancyLinks ${styles.inspiration}`}>
                 inspired by{" "}
                 <Link to="https://twitter.com/sivers">derek sivers</Link> and{" "}
                 <Link to="https://nownownow.com/about">nownownow</Link>
-            </Inspiration>
+            </p>
         </>
     )
 }

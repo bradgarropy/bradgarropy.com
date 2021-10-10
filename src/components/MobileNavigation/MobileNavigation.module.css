@@ -1,0 +1,36 @@
+.mobileNavigation {
+    background: var(--background);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    z-index: 1;
+    font-size: 2rem;
+    overflow: hidden;
+}
+
+.links {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 1rem;
+    align-content: center;
+    justify-content: center;
+}
+
+.link {
+    color: var(--text);
+}
+
+.link:hover {
+    color: var(--primary);
+}
+
+.close {
+    color: var(--text);
+    margin: 1.25rem;
+    cursor: pointer;
+    justify-self: end;
+}

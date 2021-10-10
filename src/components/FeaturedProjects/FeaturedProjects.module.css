@@ -1,0 +1,11 @@
+.featuredProjects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+}
+
+@media (max-width: 700px) {
+    .featuredProjects {
+        grid-template-columns: 1fr;
+    }
+}

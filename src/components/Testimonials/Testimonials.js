@@ -1,98 +1,46 @@
+import "styles/fancyLinks.css"
+
 import Link from "@bradgarropy/gatsby-link"
 import {GatsbyImage} from "gatsby-plugin-image"
 import PropTypes from "prop-types"
 import slugify from "slugify"
-import styled from "styled-components"
-import {link} from "styles/partials"
 
-const TestimonialsWrapper = styled.div`
-    display: grid;
-    row-gap: 4rem;
-`
-
-const Testimonial = styled(Link)`
-    padding: 2rem;
-    border-radius: 0.3rem;
-    border: 3px solid var(--text);
-    box-shadow: 3px 3px 0 var(--text);
-    display: grid;
-    color: var(--text);
-    max-width: 32rem;
-
-    :hover {
-        color: var(--text);
-        box-shadow: none;
-    }
-
-    .photo {
-        border-radius: 100%;
-    }
-`
-
-const Name = styled.p`
-    margin: 0rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 900;
-    font-size: 1.5rem;
-    letter-spacing: -0.075rem;
-    color: var(--text);
-`
-
-const Quote = styled.div`
-    ${link}
-
-    p {
-        margin: 2rem 0rem 0rem 0rem;
-    }
-`
-
-const Header = styled.div`
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: start;
-    align-items: center;
-    column-gap: 1rem;
-`
-
-const Photo = styled(GatsbyImage)`
-    width: 4rem;
-    margin: 0rem;
-    border: 3px solid var(--text);
-    background-color: var(--text);
-`
+import * as styles from "./Testimonials.module.css"
 
 const Testimonials = ({testimonials}) => {
     return (
-        <TestimonialsWrapper>
+        <div className={styles.testimonials}>
             {testimonials.map(testimonial => {
                 const slug = slugify(testimonial.name.toLowerCase())
 
                 return (
-                    <Testimonial
+                    <Link
+                        className={styles.testimonial}
                         id={slug}
                         key={testimonial.name}
                         to={testimonial.profile}
                     >
-                        <Header>
-                            <Photo
+                        <div className={styles.header}>
+                            <GatsbyImage
                                 image={testimonial.photo}
                                 alt={testimonial.name}
-                                className="photo"
-                                imgClassName="photo"
+                                className={styles.photoContainer}
+                                imgClassName={styles.photo}
                             />
 
-                            <Name>{testimonial.name}</Name>
-                        </Header>
+                            <p className={styles.name}>{testimonial.name}</p>
+                        </div>
 
-                        <Quote
+                        <div
+                            className={`fancyLinks ${styles.quote}`}
                             dangerouslySetInnerHTML={{
                                 __html: testimonial.html,
                             }}
                         />
-                    </Testimonial>
+                    </Link>
                 )
             })}
-        </TestimonialsWrapper>
+        </div>
     )
 }
 

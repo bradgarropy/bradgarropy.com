@@ -1,16 +1,9 @@
 import {useApp} from "hooks"
 import {useEffect} from "react"
-import styled from "styled-components"
 import Moon from "svg/moon.svg"
 import Sun from "svg/sun.svg"
 
-const ThemeToggle = styled.button`
-    cursor: pointer;
-    border: none;
-    background: none;
-    padding: 0rem;
-    height: 1.5rem;
-`
+import * as styles from "./ColorTheme.module.css"
 
 const ColorTheme = () => {
     const {theme, setTheme} = useApp()
@@ -39,9 +32,13 @@ const ColorTheme = () => {
     }
 
     return (
-        <ThemeToggle onClick={onClick} aria-label={label}>
+        <button
+            className={styles.themeToggle}
+            onClick={onClick}
+            aria-label={label}
+        >
             {theme === "light" ? <Moon /> : <Sun />}
-        </ThemeToggle>
+        </button>
     )
 }
 

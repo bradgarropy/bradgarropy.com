@@ -1,0 +1,30 @@
+.linkButton {
+    display: inline-block;
+    background: var(--white);
+    color: var(--black);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.3rem;
+    border: 2px solid var(--black);
+    box-shadow: 3px 3px 0 var(--text);
+    margin-bottom: 5px;
+}
+
+.linkButton.reverse {
+    box-shadow: -3px 3px 0 var(--text);
+}
+
+.linkButton:hover {
+    color: inherit;
+    box-shadow: none;
+}
+
+.linkButton.disabled {
+    color: var(--grey);
+    cursor: default;
+    border: 2px solid var(--grey);
+    box-shadow: 3px 3px 0 var(--grey);
+}
+
+.linkButton.disabled.reverse {
+    box-shadow: -3px 3px 0 var(--grey);
+}

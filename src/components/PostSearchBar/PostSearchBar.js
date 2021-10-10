@@ -4,28 +4,8 @@ import {usePosts} from "hooks"
 import PropTypes from "prop-types"
 import {useEffect} from "react"
 import {useState} from "react"
-import styled from "styled-components"
 
-const StyledSearch = styled.input`
-    width: 75%;
-    margin-block-end: 2.25rem;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-family: "Open Sans", sans-serif;
-    border: 3px solid var(--black);
-    border-radius: 0.3rem;
-    box-shadow: 3px 3px 0 var(--text);
-    color: var(--black);
-
-    ::placeholder {
-        color: var(--darkGrey);
-    }
-
-    :focus {
-        outline: none;
-        border-color: var(--primary);
-    }
-`
+import * as styles from "./PostSearchBar.module.css"
 
 const PostSearchBar = ({onSearch}) => {
     const posts = usePosts()
@@ -65,7 +45,8 @@ const PostSearchBar = ({onSearch}) => {
     }
 
     return (
-        <StyledSearch
+        <input
+            className={styles.search}
             type="text"
             placeholder="search blog"
             value={query}

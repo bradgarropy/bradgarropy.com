@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    color: var(--text);
+    text-transform: lowercase;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    grid-template-areas: "next previous";
+}
+
+.inspiration {
+    margin-block-start: 5rem;
+    text-align: center;
+    font-style: italic;
+}

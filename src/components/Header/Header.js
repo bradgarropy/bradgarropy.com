@@ -5,53 +5,28 @@ import Navigation from "components/Navigation"
 import Streaming from "components/Streaming"
 import {Link} from "gatsby"
 import {useLive} from "hooks"
-import styled from "styled-components"
 
-const HeaderWrapper = styled.header`
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.25rem;
-
-    a {
-        display: inline-block;
-    }
-`
-
-const Left = styled.div`
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 2rem;
-    align-items: center;
-`
-
-const Right = styled.div`
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 2rem;
-    align-items: center;
-`
+import * as styles from "./Header.module.css"
 
 const Header = () => {
     const live = useLive()
 
     return (
-        <HeaderWrapper>
-            <Left>
+        <header className={styles.header}>
+            <div className={styles.left}>
                 <Link to="/" aria-label="bg">
                     <Logo />
                 </Link>
 
                 {live && <Streaming />}
-            </Left>
+            </div>
 
-            <Right>
+            <div className={styles.right}>
                 <Navigation />
                 <MobileNavigation />
                 <ColorTheme />
-            </Right>
-        </HeaderWrapper>
+            </div>
+        </header>
     )
 }
 

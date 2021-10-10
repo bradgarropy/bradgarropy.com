@@ -1,56 +1,23 @@
 import Link from "@bradgarropy/gatsby-link"
+import classnames from "classnames"
 import PropTypes from "prop-types"
-import styled, {css} from "styled-components"
 
-const button = css`
-    display: inline-block;
-    background: var(--white);
-    color: var(--black);
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.3rem;
-    border: 2px solid var(--black);
-    box-shadow: 3px 3px 0 var(--text);
-    margin-bottom: 5px;
-
-    &.reverse {
-        box-shadow: -3px 3px 0 var(--text);
-    }
-
-    :hover {
-        color: inherit;
-        box-shadow: none;
-    }
-
-    &.disabled {
-        color: var(--grey);
-        cursor: default;
-        border: 2px solid var(--grey);
-        box-shadow: 3px 3px 0 var(--grey);
-    }
-
-    &.disabled.reverse {
-        box-shadow: -3px 3px 0 var(--grey);
-    }
-`
-
-const StyledSpan = styled.span`
-    ${button}
-`
-const StyledLink = styled(Link)`
-    ${button}
-`
+import * as styles from "./LinkButton.module.css"
 
 const LinkButton = ({to, reverse = false, disabled = false, ...props}) => {
-    const classes = [reverse && "reverse", disabled && "disabled"]
+    const classes = classnames(styles.linkButton, {
+        [styles.reverse]: reverse,
+        [styles.disabled]: disabled,
+    })
 
     if (disabled) {
-        return <StyledSpan className={classes}>{props.children}</StyledSpan>
+        return <span className={classes}>{props.children}</span>
     }
 
     return (
-        <StyledLink to={to} className={classes}>
+        <Link to={to} className={classes}>
             {props.children}
-        </StyledLink>
+        </Link>
     )
 }
 

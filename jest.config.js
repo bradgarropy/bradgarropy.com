@@ -5,7 +5,7 @@ const config = {
     moduleDirectories: ["<rootDir>/src", "node_modules"],
     moduleNameMapper: {
         "\\.(svg)$": "<rootDir>/src/test-utils/svg.js",
-        "\\.(css)$": "identity-obj-proxy",
+        "\\.(css)$": "<rootDir>/src/test-utils/css.js",
         "@reach/router": "<rootDir>/node_modules/@gatsbyjs/reach-router",
     },
     testEnvironment: "jsdom",

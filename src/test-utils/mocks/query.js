@@ -77,11 +77,6 @@ const mockProjectsQuery = {
                                     },
                                     {
                                         topic: {
-                                            name: "styled-components",
-                                        },
-                                    },
-                                    {
-                                        topic: {
                                             name: "hacktoberfest",
                                         },
                                     },
@@ -474,6 +469,18 @@ const mockHireMeQuery = {
     },
 }
 
+const mockResumeQuery = {
+    resume: {
+        html: "<p>resume</p>",
+    },
+}
+
+const mockContactQuery = {
+    contact: {
+        html: "<p>contact</p>",
+    },
+}
+
 const mockTestimonialsQuery = {
     testimonials: {
         nodes: [
@@ -506,11 +513,13 @@ const mockTestimonialsQuery = {
 }
 
 export {
+    mockContactQuery,
     mockHireMeQuery,
     mockMetaQuery,
     mockPodcastQuery,
     mockPostsQuery,
     mockProjectsQuery,
+    mockResumeQuery,
     mockSponsorsQuery,
     mockTestimonialsQuery,
     mockVideosQuery,

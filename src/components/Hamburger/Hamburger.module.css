@@ -1,0 +1,12 @@
+.hamburger {
+    color: var(--text);
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 800px) {
+    .hamburger {
+        display: block;
+    }
+}

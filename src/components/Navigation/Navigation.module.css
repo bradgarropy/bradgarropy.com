@@ -1,0 +1,20 @@
+.navigation {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 1.25rem;
+    color: var(--text);
+}
+
+@media (max-width: 800px) {
+    .navigation {
+        display: none;
+    }
+}
+
+.link {
+    color: var(--text);
+}
+
+.link:hover {
+    color: var(--primary);
+}

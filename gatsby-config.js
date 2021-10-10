@@ -43,9 +43,6 @@ const config = {
             },
         },
         {
-            resolve: "gatsby-plugin-styled-components",
-        },
-        {
             resolve: "gatsby-source-filesystem",
             options: {
                 name: "posts",

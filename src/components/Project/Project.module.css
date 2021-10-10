@@ -1,0 +1,39 @@
+.project {
+    padding: 1.125rem;
+    border-radius: 0.3rem;
+    border: 3px solid var(--text);
+    box-shadow: 3px 3px 0 var(--text);
+    display: grid;
+    row-gap: 1rem;
+    align-content: space-between;
+    color: var(--text);
+}
+
+.project:hover {
+    color: var(--text);
+    box-shadow: none;
+}
+
+.name {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: -0.075rem;
+    overflow-wrap: anywhere;
+}
+
+.description {
+    margin: 0;
+}
+
+.bottom {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stars {
+    margin: 0;
+}
