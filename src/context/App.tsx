@@ -1,9 +1,9 @@
-import PropTypes from "prop-types"
-import {createContext, useState} from "react"
+import {createContext, FC, useState} from "react"
+import {AppCtx} from "types/context"
 
-const AppContext = createContext()
+const AppContext = createContext({} as AppCtx)
 
-const AppProvider = ({children}) => {
+const AppProvider: FC = ({children}) => {
     const [open, setOpen] = useState(false)
     const [theme, setTheme] = useState("light")
 
@@ -15,10 +15,6 @@ const AppProvider = ({children}) => {
     }
 
     return <AppContext.Provider value={context}>{children}</AppContext.Provider>
-}
-
-AppProvider.propTypes = {
-    children: PropTypes.node,
 }
 
 export {AppContext, AppProvider}
