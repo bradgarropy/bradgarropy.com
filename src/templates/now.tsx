@@ -1,9 +1,9 @@
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Now from "components/Now"
 import {graphql} from "gatsby"
-import PropTypes from "prop-types"
+import {FC} from "react"
 
-const NowTemplate = ({data, pageContext}) => {
+const NowTemplate: FC = ({data, pageContext}) => {
     const {now} = data
     const {newer, older} = pageContext
 
@@ -13,11 +13,6 @@ const NowTemplate = ({data, pageContext}) => {
             <Now now={now} newer={newer} older={older} />
         </>
     )
-}
-
-NowTemplate.propTypes = {
-    data: PropTypes.object.isRequired,
-    pageContext: PropTypes.object.isRequired,
 }
 
 export const nowTemplateQuery = graphql`

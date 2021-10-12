@@ -2,9 +2,9 @@ import SEO from "@bradgarropy/gatsby-plugin-seo"
 import PostList from "components/PostList"
 import TopicMeta from "components/TopicMeta"
 import {graphql} from "gatsby"
-import PropTypes from "prop-types"
+import {FC} from "react"
 
-const TopicTemplate = ({pageContext, data}) => {
+const TopicTemplate: FC = ({pageContext, data}) => {
     const {topic} = pageContext
     const {name, icon} = topic
     const posts = data.allMarkdownRemark.edges.map(edge => edge.node)
@@ -17,12 +17,6 @@ const TopicTemplate = ({pageContext, data}) => {
             <PostList posts={posts} />
         </>
     )
-}
-
-TopicTemplate.propTypes = {
-    location: PropTypes.object,
-    pageContext: PropTypes.object.isRequired,
-    data: PropTypes.object.isRequired,
 }
 
 export const topicTemplateQuery = graphql`

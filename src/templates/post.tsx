@@ -1,9 +1,9 @@
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Post from "components/Post"
 import {graphql} from "gatsby"
-import PropTypes from "prop-types"
+import {FC} from "react"
 
-const PostTemplate = ({data}) => {
+const PostTemplate: FC = ({data}) => {
     const post = data.markdownRemark
     const {frontmatter} = post
 
@@ -14,10 +14,6 @@ const PostTemplate = ({data}) => {
             <Post post={post} />
         </>
     )
-}
-
-PostTemplate.propTypes = {
-    data: PropTypes.object.isRequired,
 }
 
 export const postTemplateQuery = graphql`
