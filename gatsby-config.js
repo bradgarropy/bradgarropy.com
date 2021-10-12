@@ -7,10 +7,6 @@ const youtubeChannelId = "UCgbFhcZKt36Upo7oxWlLEig"
 const captivateRss = "https://feeds.captivate.fm/webdevweekly"
 
 const config = {
-    flags: {
-        FAST_DEV: true,
-        PARALLEL_SOURCING: true,
-    },
     siteMetadata: {
         siteUrl: "https://bradgarropy.com",
     },
