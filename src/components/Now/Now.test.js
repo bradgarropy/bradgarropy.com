@@ -1,14 +1,7 @@
 import {render, screen} from "@testing-library/react"
+import {mockNewerNow, mockNow, mockOlderNow} from "test-utils/mocks/data"
 
 import Now from "./Now"
-
-const mockNow = {
-    html: "<p>testing<p>",
-    frontmatter: {date: "December 31, 2020"},
-}
-
-const mockNewer = "2021-01-01"
-const mockOlder = "2020-12-25"
 
 test("shows now", () => {
     render(<Now now={mockNow} />)
@@ -21,18 +14,18 @@ test("shows now", () => {
 })
 
 test("navigates nows", () => {
-    render(<Now now={mockNow} newer={mockNewer} older={mockOlder} />)
+    render(<Now now={mockNow} newer={mockNewerNow} older={mockOlderNow} />)
 
     expect(screen.getByText("👈🏼 newer")).not.toHaveClass("disabled")
     expect(screen.getByText("👈🏼 newer")).toHaveAttribute(
         "href",
-        `/now/${mockNewer}`,
+        `/now/${mockNewerNow}`,
     )
 
     expect(screen.getByText("older 👉🏼")).not.toHaveClass("disabled")
     expect(screen.getByText("older 👉🏼")).toHaveAttribute(
         "href",
-        `/now/${mockOlder}`,
+        `/now/${mockOlderNow}`,
     )
 })
 

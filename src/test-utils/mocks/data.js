@@ -235,11 +235,22 @@ const mockTestimonials = [
     },
 ]
 
+const mockNow = {
+    html: "<p>testing<p>",
+    frontmatter: {date: "December 31, 2020"},
+}
+
+const mockNewerNow = "2021-01-01"
+const mockOlderNow = "2020-12-25"
+
 export {
     mockChannelStatus,
     mockContact,
     mockHireMe,
     mockMeta,
+    mockNewerNow,
+    mockNow,
+    mockOlderNow,
     mockPodcast,
     mockPosts,
     mockProjects,
