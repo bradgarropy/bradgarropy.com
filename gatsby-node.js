@@ -5,7 +5,7 @@ const createPost = (post, createPage) => {
 
     const options = {
         path: `/blog/${slug}`,
-        component: path.resolve("src/templates/post.js"),
+        component: path.resolve("src/templates/post.tsx"),
         context: {slug},
     }
 
@@ -17,7 +17,7 @@ const createTopic = (topic, createPage) => {
 
     const options = {
         path: `/topic/${name}`,
-        component: path.resolve("src/templates/topic.js"),
+        component: path.resolve("src/templates/topic.tsx"),
         context: {name, topic},
     }
 
@@ -31,7 +31,7 @@ const createNow = (now, createPage) => {
 
     const options = {
         path: `/now/${date}`,
-        component: path.resolve("src/templates/now.js"),
+        component: path.resolve("src/templates/now.tsx"),
         context: {
             date: new Date(date).toISOString(),
             newer,

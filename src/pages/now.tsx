@@ -1,32 +1,17 @@
 import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Now from "components/Now"
 import {graphql} from "gatsby"
+import useNow from "hooks/useNow"
 import {FC} from "react"
 
-type NowPageProps = {
-    data: {
-        nows: {
-            edges: Array<{
-                node: any
-                next: any
-                previous: any
-            }>
-        }
-    }
-}
-
-const NowPage: FC<NowPageProps> = ({data}) => {
-    const {node, next, previous} = data.nows.edges[0]
+const NowPage: FC = () => {
+    const now = useNow()
 
     return (
         <>
             <SEO title="🧭 now" />
 
-            <Now
-                now={node}
-                newer={previous?.frontmatter.date}
-                older={next?.frontmatter.date}
-            />
+            <Now now={now} newer={now.previous} older={now.next} />
         </>
     )
 }

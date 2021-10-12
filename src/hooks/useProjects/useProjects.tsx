@@ -1,6 +1,7 @@
 import {graphql, useStaticQuery} from "gatsby"
+import {Project} from "types/project"
 
-const useProjects = () => {
+const useProjects = (): Project[] => {
     const query = graphql`
         {
             githubData {

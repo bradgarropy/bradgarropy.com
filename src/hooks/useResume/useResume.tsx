@@ -1,6 +1,6 @@
 import {graphql, useStaticQuery} from "gatsby"
 
-const useResume = () => {
+const useResume = (): string => {
     const query = graphql`
         {
             resume: markdownRemark(

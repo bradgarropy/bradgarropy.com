@@ -1,6 +1,6 @@
 import {graphql, useStaticQuery} from "gatsby"
 
-const useHireMe = () => {
+const useHireMe = (): string => {
     const query = graphql`
         {
             hireMe: markdownRemark(

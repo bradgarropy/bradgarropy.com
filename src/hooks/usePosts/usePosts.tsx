@@ -1,6 +1,7 @@
 import {graphql, useStaticQuery} from "gatsby"
+import {Post} from "types/post"
 
-const usePosts = () => {
+const usePosts = (): Post[] => {
     const query = graphql`
         {
             posts: allMarkdownRemark(

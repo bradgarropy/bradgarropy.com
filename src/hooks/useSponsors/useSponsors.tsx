@@ -1,6 +1,7 @@
 import {graphql, useStaticQuery} from "gatsby"
+import {Sponsors} from "types/sponsor"
 
-const useSponsors = () => {
+const useSponsors = (): Sponsors => {
     const query = graphql`
         {
             githubData {

@@ -1,6 +1,6 @@
 import {graphql, useStaticQuery} from "gatsby"
 
-const useContact = () => {
+const useContact = (): string => {
     const query = graphql`
         {
             contact: markdownRemark(

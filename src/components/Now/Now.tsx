@@ -3,14 +3,14 @@ import "styles/fancyLinks.css"
 import Link from "@bradgarropy/gatsby-link"
 import LinkButton from "components/LinkButton"
 import {FC} from "react"
-import {Now} from "types/now"
+import {Now as NowType} from "types/now"
 
 import * as styles from "./Now.module.css"
 
 type NowProps = {
-    now: Now
-    newer?: string
-    older?: string
+    now: Pick<NowType, "html" | "frontmatter">
+    newer?: NowType["previous"]
+    older?: NowType["next"]
 }
 
 const Now: FC<NowProps> = ({now, newer, older}) => {

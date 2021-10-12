@@ -1,7 +1,8 @@
 import {graphql, useStaticQuery} from "gatsby"
 import {getImage} from "gatsby-plugin-image"
+import {Testimonial} from "types/testimonial"
 
-const useTestimonials = () => {
+const useTestimonials = (): Testimonial[] => {
     const query = graphql`
         {
             testimonials: allMarkdownRemark(

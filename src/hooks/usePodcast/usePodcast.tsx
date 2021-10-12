@@ -1,6 +1,7 @@
 import {graphql, useStaticQuery} from "gatsby"
+import {Podcast} from "types/podcast"
 
-const usePodcast = () => {
+const usePodcast = (): Podcast => {
     const query = graphql`
         {
             podcast: anchorPodcast(title: {eq: "Web Dev Weekly"}) {

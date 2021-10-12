@@ -1,7 +1,8 @@
 import {graphql, useStaticQuery} from "gatsby"
 import {getImage} from "gatsby-plugin-image"
+import {Video} from "types/video"
 
-const useLatestVideos = () => {
+const useLatestVideos = (): Video[] => {
     const query = graphql`
         {
             videos: allYoutubeVideo(
