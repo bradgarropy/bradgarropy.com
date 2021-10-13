@@ -7,10 +7,6 @@ const youtubeChannelId = "UCgbFhcZKt36Upo7oxWlLEig"
 const captivateRss = "https://feeds.captivate.fm/webdevweekly"
 
 const config = {
-    flags: {
-        FAST_DEV: true,
-        PARALLEL_SOURCING: true,
-    },
     siteMetadata: {
         siteUrl: "https://bradgarropy.com",
     },
@@ -200,7 +196,9 @@ const config = {
         {
             resolve: "gatsby-plugin-layout",
             options: {
-                component: require.resolve("./src/components/Layout/Layout.js"),
+                component: require.resolve(
+                    "./src/components/Layout/Layout.tsx",
+                ),
             },
         },
     ],
