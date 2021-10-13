@@ -4,7 +4,10 @@ import {Post} from "types/post"
 
 import * as styles from "./PostTitle.module.css"
 
-type PostTitleProps = Pick<Post["frontmatter"], "title" | "slug">
+type PostTitleProps = {
+    title: Post["frontmatter"]["title"]
+    slug?: Post["frontmatter"]["slug"]
+}
 
 const PostTitle: FC<PostTitleProps> = ({title, slug}) => {
     return (

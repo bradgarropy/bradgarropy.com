@@ -7,7 +7,7 @@ type Sponsor = {
     username: string
     avatar: string
     profile: string
-    tier: "monthly" | "one-time"
+    tier: string
 }
 
 export type {Sponsor, Sponsors}

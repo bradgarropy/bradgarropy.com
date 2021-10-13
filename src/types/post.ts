@@ -2,13 +2,15 @@ type Post = {
     html: string
     frontmatter: {
         date: string
-        topic: {
-            icon: string
-            name: string
-        }
+        topic: Topic
         title: string
         slug: string
     }
 }
 
-export type {Post}
+type Topic = {
+    icon: string
+    name: string
+}
+
+export type {Post, Topic}
