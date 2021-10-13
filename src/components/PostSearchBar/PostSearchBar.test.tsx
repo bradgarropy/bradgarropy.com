@@ -1,9 +1,8 @@
-import {RouteComponentProps, Router} from "@reach/router"
+import {Router} from "@reach/router"
 import {render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import PostSearchBar from "components/PostSearchBar"
 import {usePosts} from "hooks"
-import {FC} from "react"
 import {mockPosts} from "test-utils/mocks"
 
 jest.mock("hooks")
