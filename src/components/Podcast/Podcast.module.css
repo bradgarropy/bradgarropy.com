@@ -41,7 +41,7 @@
     color: var(--text);
 }
 
-.host :hover {
+.host:hover {
     color: var(--text);
     text-shadow: 2px 2px var(--primary);
 }
