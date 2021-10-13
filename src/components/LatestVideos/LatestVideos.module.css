@@ -12,7 +12,7 @@
 }
 
 .thumbnailContainer {
-    overflow: visible;
+    overflow: visible !important;
 }
 
 .thumbnail {
