@@ -1,7 +1,9 @@
+import {IGatsbyImageData} from "gatsby-plugin-image"
+
 type Video = {
     id: string
     title: string
-    thumbnail: unknown
+    thumbnail: IGatsbyImageData
 }
 
 export type {Video}
