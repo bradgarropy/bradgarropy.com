@@ -52,6 +52,3 @@
     from = "/sponsor"
     to = "https://github.com/sponsors/bradgarropy"
     status = 301
-
-[[plugins]]
-    package = "netlify-plugin-gatsby-cache"
