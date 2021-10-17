@@ -7,7 +7,7 @@ topic:
     icon: 💻
 ---
 
-When building my wife's photography website, [photogarropy][1], I knew I wanted the home page to prominently feature her work, so I made an image slider and placed it on the landing page of the site. I'll walk you through how to build it below.
+When building my wife's photography website, [photogarropy][photogarropy], I knew I wanted the home page to prominently feature her work, so I made an image slider and placed it on the landing page of the site. I'll walk you through how to build it below.
 
 First thing's first, our component will accept a list of images as props, and track the currently displayed image as state. If the snippet below looks a little odd to you, note that I'm using [class properties][2], which I highly recommend.
 
@@ -90,7 +90,7 @@ And that's it! Check out the full slider [source code][3] and see it in action o
 
 Tweet me your sliders [@bradgarropy][4]!
 
-[1]: https://photogarropy.com/
+[photogarropy]: https://photogarropy.netlify.app
 [2]: https://codeburst.io/use-class-properties-to-clean-up-your-classes-and-react-components-93185879f688
 [3]: https://github.com/bradgarropy/photogarropy.com/blob/master/src/components/Carousel.js
 [4]: https://twitter.com/bradgarropy
