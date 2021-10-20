@@ -18,7 +18,7 @@ For example, when I began learning backend web development, I started from _abso
 3. [node-express-pug-server][4]
 4. [node-express-pug-mongo-server][5]
 
-Although these initial projects were a great learning experience, they lacked any real substance. I went on to create a [weight tracking app][6] and my wife's [photography website][7]. I'm currently working on a fitness application I call [Build Greatness][8] as well as this site.
+Although these initial projects were a great learning experience, they lacked any real substance. I went on to create a [weight tracking app][6] and my wife's [photography website][photogarropy]. I'm currently working on a fitness application I call [Build Greatness][8] as well as this site.
 
 ## not quite a designer
 
@@ -46,6 +46,6 @@ Suffice it to say, this site is my new home on the web. It'll go through many it
 [4]: https://github.com/bradgarropy/node-express-pug-server
 [5]: https://github.com/bradgarropy/node-express-pug-mongodb-server
 [6]: https://weighter-react.herokuapp.com/
-[7]: https://photogarropy.com/
+[photogarropy]: https://photogarropy.netlify.app
 [8]: https://buildgreatness.herokuapp.com/
 [9]: https://www.youtube.com/user/bradgarropy

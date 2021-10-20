@@ -334,7 +334,7 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [murphy-app]: https://play.google.com/store/apps/details?id=com.bradgarropy.murphy.twa
 [adobe-lunch]: https://adobe-lunch.netlify.app
 [iron-jimmy]: https://ironjimmy.com
-[photogarropy]: https://photogarropy.com
+[photogarropy]: https://photogarropy.netlify.app
 [amorty]: https://amorty.netlify.com
 [slider]: https://snap-kitchen-slider.netlify.com
 [typeahead]: https://homeaway-typeahead.netlify.com
