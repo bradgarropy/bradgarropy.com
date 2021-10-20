@@ -52,3 +52,18 @@
     from = "/sponsor"
     to = "https://github.com/sponsors/bradgarropy"
     status = 301
+
+[[redirects]]
+    from = "/podcast"
+    to = "https://webdevweekly.captivate.fm"
+    status = 301
+
+[[redirects]]
+    from = "/wdw"
+    to = "https://webdevweekly.captivate.fm"
+    status = 301
+
+[[redirects]]
+    from = "/webdevweekly"
+    to = "https://webdevweekly.captivate.fm"
+    status = 301
