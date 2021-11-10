@@ -56,18 +56,20 @@ Regardless of what computer I'm on, I use these applications. As you may guess, 
 [Visual Studio Code][vscode]  
 [Google Chrome][chrome]  
 [Figma][figma]  
+[Discord][discord]  
+[Insomnia][insomnia]  
 [OBS Studio][obs]  
-[gh][gh] - github cli  
-[carbon][carbon] - fancy code screenshots
+[GitHub CLI][github-cli]  
+[carbon][carbon]
 
 ## 🎧 electronics
 
 These pieces of tech are always within reach.
 
-[Google Pixel 2][pixel]  
+[Google Pixel 6][pixel]  
 [Google Nest Mini][google-nest]  
-[Google Pixel Buds][pixel-buds]  
-[Fossil Explorist HR Smartwatch][explorist]  
+[Google Pixel Buds A-Series][pixel-buds]  
+[Fossil Gen 6 Smartwatch][gen-6]  
 [Sony WH-1000XM3 Headphones][wh-1000mx3]
 
 [developer]: https://bradgarropy.com/topic/coding
@@ -104,9 +106,11 @@ These pieces of tech are always within reach.
 [chrome]: https://www.google.com/chrome
 [figma]: https://www.figma.com
 [obs]: https://obsproject.com
-[gh]: https://cli.github.com
+[github-cli]: https://cli.github.com
 [carbon]: https://carbon.now.sh
-[pixel]: https://amzn.to/2EwHsm6
-[pixel-buds]: https://store.google.com/product/google_pixel_buds
-[explorist]: https://amzn.to/2SBvFc3
+[pixel]: https://store.google.com/product/pixel_6
+[pixel-buds]: https://store.google.com/product/pixel_buds_a_series
+[gen-6]: https://www.fossil.com/en-us/products/gen-6-smartwatch-brown-leather/FTW4062V.html
 [wh-1000mx3]: https://amzn.to/2W3fAAT
+[discord]: https://discord.com
+[insomnia]: https://insomnia.rest
