@@ -9,7 +9,7 @@ If you want to know more details or have any questions, ask me in my [AMA][ama].
 
 ## 🏠 home office
 
-I use my home office as a place to stream, play games, and work on personal projects. This setup is based around a custom built [NZXT][nzxt] themed Windows PC!
+I use my home office as a place to stream, play games, and work on personal projects. This setup is based around a custom built [NZXT][nzxt] themed Windows PC sitting under an [UPLIFT Desk][uplift].
 
 ![home office][home-office]
 
@@ -114,3 +114,4 @@ These pieces of tech are always within reach.
 [wh-1000mx3]: https://amzn.to/2W3fAAT
 [discord]: https://discord.com
 [insomnia]: https://insomnia.rest
+[uplift]: https://www.upliftdesk.com/uplift-4-leg-standing-desk-v2-v2-commercial
