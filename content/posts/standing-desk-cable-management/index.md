@@ -49,6 +49,8 @@ The only real problem I encountered while doing this was the audio cable. I got 
 
 ![audio][audio]
 
+If you're curious about how everything is actually wired up, I created a [wiring diagram][wiring] of the entire setup if you want to check it out.
+
 ## 🤩 finished
 
 Overall, everything worked according to plan! Now I have a picturesque workspace that I can use sitting or standing. Now it's time for you to share your setups! Post a photo of your desk and tag me on [Twitter][twitter] or in [Discord][discord], I'd love to see what your workspace looks like!
@@ -70,3 +72,4 @@ Overall, everything worked according to plan! Now I have a picturesque workspace
 [velcro-strips]: https://amazon.com/gp/product/B001E1Y5O6
 [twitter]: https://twitter.com/bradgarropy
 [discord]: https://bradgarropy.com/discord
+[wiring]: https://figma.com/file/zZRndHhjo3waexZliYR9Yt/desk
