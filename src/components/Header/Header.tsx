@@ -1,9 +1,9 @@
+import Link from "@bradgarropy/gatsby-link"
 import ColorTheme from "components/ColorTheme"
 import Logo from "components/Logo"
 import MobileNavigation from "components/MobileNavigation"
 import Navigation from "components/Navigation"
 import Streaming from "components/Streaming"
-import {Link} from "gatsby"
 import {useLive} from "hooks"
 import {FC} from "react"
 

@@ -1,7 +1,7 @@
+import Link from "@bradgarropy/gatsby-link"
 import {faTimes} from "@fortawesome/free-solid-svg-icons"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import Hamburger from "components/Hamburger"
-import {Link} from "gatsby"
 import {useApp} from "hooks"
 import {FC} from "react"
 
