@@ -1,4 +1,4 @@
-import {Link} from "gatsby"
+import Link from "@bradgarropy/gatsby-link"
 import {FC} from "react"
 import {Post} from "types/post"
 
