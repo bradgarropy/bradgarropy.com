@@ -1,11 +1,13 @@
 import {navigate, useLocation} from "@reach/router"
+import classNames from "classnames"
 import Fuse from "fuse.js"
 import {usePosts} from "hooks"
 import {FC, useEffect} from "react"
 import {useState} from "react"
+import * as InputStyles from "styles/Input.module.css"
 import {Post} from "types/post"
 
-import * as styles from "./PostSearchBar.module.css"
+import * as PostSearchBarStyles from "./PostSearchBar.module.css"
 
 type PostSearchBarProps = {
     onSearch?: (posts: Post[]) => void
@@ -50,7 +52,10 @@ const PostSearchBar: FC<PostSearchBarProps> = ({onSearch}) => {
 
     return (
         <input
-            className={styles.search}
+            className={classNames(
+                InputStyles.input,
+                PostSearchBarStyles.search,
+            )}
             type="text"
             placeholder="search blog"
             value={query}

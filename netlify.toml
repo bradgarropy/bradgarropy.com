@@ -67,3 +67,13 @@
     from = "/webdevweekly"
     to = "https://webdevweekly.captivate.fm"
     status = 301
+
+[[redirects]]
+    from = "/subscribe"
+    to = "https://www.getrevue.co/profile/bradgarropy"
+    status = 301
+
+[[redirects]]
+    from = "/newsletter"
+    to = "https://www.getrevue.co/profile/bradgarropy"
+    status = 301
