@@ -2,6 +2,7 @@ import FeaturedProjects from "components/FeaturedProjects"
 import Hero from "components/Hero"
 import LatestPosts from "components/LatestPosts"
 import LatestVideos from "components/LatestVideos"
+import Newsletter from "components/Newsletter"
 import Podcast from "components/Podcast"
 import Section from "components/Section"
 import {FC} from "react"
@@ -27,6 +28,10 @@ const Home: FC = () => {
 
             <Section title="podcast" link="https://webdevweekly.captivate.fm">
                 <Podcast />
+            </Section>
+
+            <Section title="newsletter" link="/newsletter">
+                <Newsletter />
             </Section>
         </div>
     )
