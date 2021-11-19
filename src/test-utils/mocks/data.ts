@@ -4,7 +4,6 @@ import {Podcast} from "types/podcast"
 import {Post, Topic} from "types/post"
 import {Project} from "types/project"
 import {Sponsors} from "types/sponsor"
-import {Subscriber} from "types/subscriber"
 import {Testimonial} from "types/testimonial"
 import {Video} from "types/video"
 
@@ -254,15 +253,6 @@ const mockTopic: Topic = {
     name: "life",
 }
 
-const mockSubscriber: Subscriber = {
-    id: 1234,
-    list_id: 5678,
-    email: "bradgarropy@gmail.com",
-    first_name: null,
-    last_name: null,
-    last_changed: "2021-11-19",
-}
-
 export {
     mockChannelStatus,
     mockContact,
@@ -274,7 +264,6 @@ export {
     mockProjects,
     mockResume,
     mockSponsors,
-    mockSubscriber,
     mockTestimonials,
     mockTopic,
     mockVideos,
