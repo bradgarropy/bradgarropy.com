@@ -1,6 +1,6 @@
 {
     "name": "bradgarropy.com",
-    "version": "4.3.1",
+    "version": "4.4.0",
     "description": "🏠 my home on the web",
     "keywords": [
         "javascript",
@@ -52,6 +52,7 @@
         "@sentry/gatsby": "^6.14.3",
         "classnames": "^2.3.1",
         "dotenv": "^10.0.0",
+        "form-data": "^4.0.0",
         "fuse.js": "^6.4.3",
         "gatsby": "^4.1.6",
         "gatsby-image": "^3.11.0",
@@ -77,6 +78,7 @@
         "gatsby-source-youtube-v3": "^3.0.2",
         "gatsby-transformer-remark": "^5.1.4",
         "gatsby-transformer-sharp": "^4.1.0",
+        "node-fetch": "^2.6.6",
         "react-dom": "^17.0.1",
         "react-helmet": "^6.0.0",
         "shades-of-purple": "^6.11.0",

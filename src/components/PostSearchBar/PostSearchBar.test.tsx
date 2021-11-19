@@ -21,8 +21,6 @@ describe("search bar", () => {
                 <PostSearchBar onSearch={onSearchMock} default />
             </Router>,
         )
-
-        screen.debug()
     })
 
     test("shows search bar", () => {
