@@ -18,11 +18,13 @@ const handler = async () => {
         },
     )
 
-    const isLive = channelResponse.data[0].is_live
+    const channel = channelResponse.data.find(
+        channel => channel["broadcaster_login"] === "bradgarropy",
+    )
 
     const res = {
         statusCode: 200,
-        body: JSON.stringify({isLive}),
+        body: JSON.stringify({isLive: channel.is_live}),
     }
 
     return res
