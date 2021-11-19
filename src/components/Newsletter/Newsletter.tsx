@@ -1,32 +1,56 @@
-import {FC} from "react"
+import {post} from "@bradgarropy/http"
+import classnames from "classnames"
+import {FC, useState} from "react"
 import * as ButtonStyles from "styles/Button.module.css"
 import * as InputStyles from "styles/Input.module.css"
 
 import * as styles from "./Newsletter.module.css"
 
 const Newsletter: FC = () => {
+    const [email, setEmail] = useState("")
+    const [subscribed, setSubscribed] = useState(false)
+
+    const onChange = event => {
+        setEmail(event.target.value)
+    }
+
+    const onSubmit = async event => {
+        event.preventDefault()
+
+        await post("/api/subscribe", {
+            body: {
+                email,
+            },
+        })
+
+        setSubscribed(true)
+    }
+
     return (
         <div>
             <p className={styles.description}>
                 💻 side projects | 📰 web dev news | ⚡ tech opinions
             </p>
 
-            <form
-                className={styles.newsletter}
-                action="https://www.getrevue.co/profile/bradgarropy/add_subscriber"
-                method="post"
-                name="revue-form"
-                target="_blank"
-            >
+            <form className={styles.newsletter} onSubmit={onSubmit}>
                 <input
                     className={InputStyles.input}
                     placeholder="email@example.com"
                     type="email"
-                    name="member[email]"
+                    name="email"
+                    value={email}
+                    onChange={onChange}
                 />
 
-                <button className={ButtonStyles.button} type="submit">
-                    📧 subscribe
+                <button
+                    className={classnames(
+                        ButtonStyles.button,
+                        ButtonStyles.disabled,
+                    )}
+                    type="submit"
+                    disabled={subscribed}
+                >
+                    {subscribed ? "💜 subscribed" : "📧 subscribe"}
                 </button>
             </form>
         </div>

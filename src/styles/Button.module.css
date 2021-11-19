@@ -18,9 +18,10 @@
     box-shadow: none;
 }
 
-.button.disabled {
-    color: var(--grey);
+.button[disabled] {
     cursor: default;
-    border: 2px solid var(--grey);
-    box-shadow: 3px 3px 0 var(--grey);
+}
+
+.button[disabled]:hover {
+    box-shadow: 3px 3px 0 var(--text);
 }
