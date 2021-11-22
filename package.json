@@ -44,7 +44,7 @@
         "@babel/runtime": "^7.16.3",
         "@bradgarropy/gatsby-link": "^1.0.1",
         "@bradgarropy/gatsby-plugin-seo": "^2.2.0",
-        "@bradgarropy/http": "^1.0.1",
+        "@bradgarropy/http": "^1.1.0",
         "@fortawesome/fontawesome-svg-core": "^1.2.36",
         "@fortawesome/free-brands-svg-icons": "^5.15.4",
         "@fortawesome/free-solid-svg-icons": "^5.15.4",
