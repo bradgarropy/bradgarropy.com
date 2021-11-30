@@ -10,6 +10,7 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-content: space-between;
+    align-self: center;
     grid-template-areas: "next previous";
 }
 
