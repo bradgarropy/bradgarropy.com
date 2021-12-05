@@ -1,7 +1,7 @@
 ---
 title: 💡 think bigger
 slug: think-bigger
-date: 2021-12-04
+date: 2021-12-05
 topic:
     name: life
     icon: 😎
