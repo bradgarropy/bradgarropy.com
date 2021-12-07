@@ -21,6 +21,11 @@ const ColorTheme: FC = () => {
             "--text",
             theme === "light" ? "var(--black)" : "var(--white)",
         )
+
+        root.style.setProperty(
+            "--snow",
+            theme === "light" ? "var(--darkGrey)" : "var(--white)",
+        )
     }, [theme])
 
     const onClick = () => {

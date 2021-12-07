@@ -11,6 +11,7 @@
     --primary: var(--purple);
     --text: var(--black);
     --background: var(--white);
+    --snow: var(--grey);
 
     /* highlighting */
     --grvsc-line-highlighted-background-color: #c792ea66;
