@@ -16,8 +16,12 @@ jobs:
                   registry-url: https://registry.npmjs.org/
             - name: "📦 install"
               run: npm ci
-            - name: "🏭 build"
-              run: npm run build
+            - name: Waiting for 200 from the Netlify Preview
+              uses: jakepartusch/wait-for-netlify-action@v1.3
+              id: waitFor200
+              with:
+                  site_name: "bradgarropy"
+                  max_timeout: 60
             - name: "🛳️ lhci"
               env:
                   LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
