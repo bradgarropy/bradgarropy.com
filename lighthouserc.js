@@ -3,9 +3,6 @@ const config = {
         assert: {
             preset: "lighthouse:recommended",
         },
-        collect: {
-            staticDistDir: "./public",
-        },
         upload: {
             target: "temporary-public-storage",
         },
