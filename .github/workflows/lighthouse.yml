@@ -34,8 +34,3 @@ jobs:
                   urls: ${{steps.netlify.outputs.url}}
                   uploadArtifacts: true
                   temporaryPublicStorage: true
-            - name: "🛳️ lighthouse-check-action"
-              uses: foo-software/lighthouse-check-action@master
-              with:
-                  urls: ${{steps.netlify.outputs.url}}
-                  gitHubAccessToken: ${{secrets.LIGHTHOUSE_CHECK_ACTION_ACCESS_TOKEN}}
