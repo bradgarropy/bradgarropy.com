@@ -5,8 +5,6 @@ const youtube = require("./src/transformers/youtube")
 
 const youtubeChannelId = "UCgbFhcZKt36Upo7oxWlLEig"
 const captivateRss = "https://feeds.captivate.fm/webdevweekly"
-const sentryUrl =
-    "https://4d31bd282c17443b9ea608d763b71f79@o1037846.ingest.sentry.io/6005986"
 
 const config = {
     siteMetadata: {
@@ -205,13 +203,6 @@ const config = {
                 component: require.resolve(
                     "./src/components/Layout/Layout.tsx",
                 ),
-            },
-        },
-        {
-            resolve: "@sentry/gatsby",
-            options: {
-                dsn: sentryUrl,
-                sampleRate: 0.7,
             },
         },
         {
