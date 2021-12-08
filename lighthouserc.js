@@ -9,12 +9,12 @@ const config = {
                 "categories:pwa": "off",
             },
         },
-        collect: {
-            numberOfRuns: 3,
-        },
-        upload: {
-            target: "temporary-public-storage",
-        },
+        // collect: {
+        //     numberOfRuns: 3,
+        // },
+        // upload: {
+        //     target: "temporary-public-storage",
+        // },
     },
 }
 

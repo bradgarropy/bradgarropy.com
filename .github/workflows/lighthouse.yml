@@ -25,5 +25,8 @@ jobs:
               env:
                   LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
               with:
-                  urls: ${{steps.netlify.outputs.url}}
                   configPath: "./lighthouserc.js"
+                  runs: 3
+                  temporaryPublicStorage: true
+                  uploadArtifacts: true
+                  urls: ${{steps.netlify.outputs.url}}
