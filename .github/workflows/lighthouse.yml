@@ -30,6 +30,8 @@ jobs:
             #       lhci autorun --collect.url=${{steps.netlify.outputs.url}}
             - name: "🛳️ lighthouse-ci-action"
               uses: treosh/lighthouse-ci-action@v8
+              env:
+                  LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
               with:
                   urls: ${{steps.netlify.outputs.url}}
                   budgetPath: ./budget.json
