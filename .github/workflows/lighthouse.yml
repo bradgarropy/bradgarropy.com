@@ -18,22 +18,19 @@ jobs:
               run: npm ci
             - name: Waiting for 200 from the Netlify Preview
               uses: jakepartusch/wait-for-netlify-action@v1.3
-              id: waitFor200
+              id: netlify
               with:
                   site_name: "bradgarropy"
                   max_timeout: 60
             - name: "🛳️ lhci"
               env:
                   LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
-              run: |
-                  npm install --global @lhci/cli@0.8.2
-                  lhci autorun
+              run: npm install --global @lhci/cli@0.8.2
+              run: lhci autorun --url=${{steps.netlify.outputs.url}}
             - name: "🛳️ lighthouse-ci-action"
               uses: treosh/lighthouse-ci-action@v8
               with:
-                  urls: |
-                      https://example.com/
-                      https://example.com/blog
+                  urls: ${{steps.netlify.outputs.url}}
                   budgetPath: ./budget.json
                   uploadArtifacts: true
                   temporaryPublicStorage: true
