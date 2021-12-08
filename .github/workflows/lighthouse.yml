@@ -22,12 +22,12 @@ jobs:
               with:
                   site_name: "bradgarropy"
                   max_timeout: 60
-            - name: "🛳️ lhci"
-              env:
-                  LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
-              run: |
-                  npm install --global @lhci/cli@0.8.2
-                  lhci autorun --collect.url=${{steps.netlify.outputs.url}}
+            # - name: "🛳️ lhci"
+            #   env:
+            #       LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
+            #   run: |
+            #       npm install --global @lhci/cli@0.8.2
+            #       lhci autorun --collect.url=${{steps.netlify.outputs.url}}
             - name: "🛳️ lighthouse-ci-action"
               uses: treosh/lighthouse-ci-action@v8
               with:
