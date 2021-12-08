@@ -24,3 +24,16 @@ jobs:
               run: |
                   npm install --global @lhci/cli@0.8.2
                   lhci autorun
+            - name: "🛳️ lighthouse"
+              uses: treosh/lighthouse-ci-action@v8
+              with:
+                  urls: |
+                      https://example.com/
+                      https://example.com/blog
+                  budgetPath: ./budget.json
+                  uploadArtifacts: true
+                  temporaryPublicStorage: true
+            - name: "🛳️ lighthouse"
+              uses: foo-software/lighthouse-check-action@master
+              with:
+                  urls: "https://www.foo.software,https://www.google.com"
