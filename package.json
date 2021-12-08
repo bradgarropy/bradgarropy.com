@@ -1,6 +1,6 @@
 {
     "name": "bradgarropy.com",
-    "version": "4.4.1",
+    "version": "4.5.0",
     "description": "🏠 my home on the web",
     "keywords": [
         "javascript",
@@ -49,6 +49,7 @@
         "@fortawesome/free-brands-svg-icons": "^5.15.4",
         "@fortawesome/free-solid-svg-icons": "^5.15.4",
         "@fortawesome/react-fontawesome": "^0.1.16",
+        "@raae/gatsby-plugin-let-it-snow": "^0.6.0",
         "@sentry/gatsby": "^6.14.3",
         "classnames": "^2.3.1",
         "dotenv": "^10.0.0",
