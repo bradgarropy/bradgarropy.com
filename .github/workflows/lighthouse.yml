@@ -27,7 +27,7 @@ jobs:
                   LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
               run: |
                   npm install --global @lhci/cli@0.8.2
-                  lhci autorun --url=${{steps.netlify.outputs.url}}
+                  lhci autorun --collect.url=${{steps.netlify.outputs.url}}
             - name: "🛳️ lighthouse-ci-action"
               uses: treosh/lighthouse-ci-action@v8
               with:
