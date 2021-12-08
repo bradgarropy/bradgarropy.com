@@ -20,7 +20,7 @@ jobs:
               with:
                   site_name: "bradgarropy"
                   max_timeout: 60
-            - name: "🛳️ lighthouse-ci-action"
+            - name: "🛳️ lighthouse"
               uses: treosh/lighthouse-ci-action@v8
               env:
                   LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
