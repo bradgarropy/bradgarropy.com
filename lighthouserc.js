@@ -1,8 +1,9 @@
 const config = {
     ci: {
         assert: {
-            preset: "lighthouse:recommended",
+            // preset: "lighthouse:recommended",
         },
+        collect: {},
         upload: {
             target: "temporary-public-storage",
         },
