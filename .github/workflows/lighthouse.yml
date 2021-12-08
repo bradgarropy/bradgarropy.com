@@ -18,13 +18,13 @@ jobs:
               run: npm ci
             - name: "🏭 build"
               run: npm run build
-            - name: "🛳️ lighthouse"
+            - name: "🛳️ lhci"
               env:
                   LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
               run: |
                   npm install --global @lhci/cli@0.8.2
                   lhci autorun
-            - name: "🛳️ lighthouse"
+            - name: "🛳️ lighthouse-ci-action"
               uses: treosh/lighthouse-ci-action@v8
               with:
                   urls: |
@@ -33,7 +33,7 @@ jobs:
                   budgetPath: ./budget.json
                   uploadArtifacts: true
                   temporaryPublicStorage: true
-            - name: "🛳️ lighthouse"
+            - name: "🛳️ lighthouse-check-action"
               uses: foo-software/lighthouse-check-action@master
               with:
                   urls: "https://www.foo.software,https://www.google.com"
