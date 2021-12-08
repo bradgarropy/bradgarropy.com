@@ -9,7 +9,9 @@ const config = {
                 "categories:pwa": "off",
             },
         },
-        collect: {},
+        collect: {
+            numberOfRuns: 3,
+        },
         upload: {
             target: "temporary-public-storage",
         },
