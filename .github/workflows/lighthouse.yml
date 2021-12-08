@@ -12,7 +12,7 @@ jobs:
               with:
                   node-version: 14
                   registry-url: https://registry.npmjs.org/
-            - name: Waiting for 200 from the Netlify Preview
+            - name: "⏳ wait for netlify"
               uses: jakepartusch/wait-for-netlify-action@v1.3
               id: netlify
               with:
