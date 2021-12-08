@@ -20,12 +20,16 @@ const config = {
             resolve: "gatsby-plugin-sitemap",
         },
         {
-            resolve: "gatsby-plugin-google-analytics",
+            resolve: "gatsby-plugin-google-gtag",
             options: {
-                trackingId: process.env.TRACKING_ID,
-                head: true,
-                anonymize: true,
-                respectDNT: false,
+                trackingIds: [process.env.TRACKING_ID],
+                gtagConfig: {
+                    anonymize_ip: true,
+                },
+                pluginConfig: {
+                    head: true,
+                    respectDNT: false,
+                },
             },
         },
         {
