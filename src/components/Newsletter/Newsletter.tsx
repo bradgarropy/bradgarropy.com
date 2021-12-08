@@ -1,5 +1,4 @@
 import {post} from "@bradgarropy/http"
-import classnames from "classnames"
 import {FC, useState} from "react"
 import * as ButtonStyles from "styles/Button.module.css"
 import * as InputStyles from "styles/Input.module.css"
@@ -43,10 +42,7 @@ const Newsletter: FC = () => {
                 />
 
                 <button
-                    className={classnames(
-                        ButtonStyles.button,
-                        ButtonStyles.disabled,
-                    )}
+                    className={ButtonStyles.button}
                     type="submit"
                     disabled={subscribed}
                 >
