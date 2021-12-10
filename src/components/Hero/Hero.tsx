@@ -9,7 +9,7 @@ const Hero: FC = () => {
         <div className={styles.hero}>
             <Link to="https://instagram.com/bradgarropy">
                 <StaticImage
-                    src="https://github.com/bradgarropy.png"
+                    src="../../../static/profile.jpg"
                     alt="bg"
                     placeholder="blurred"
                     layout="fullWidth"
