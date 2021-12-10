@@ -5,8 +5,6 @@ const youtube = require("./src/transformers/youtube")
 
 const youtubeChannelId = "UCgbFhcZKt36Upo7oxWlLEig"
 const captivateRss = "https://feeds.captivate.fm/webdevweekly"
-const sentryUrl =
-    "https://4d31bd282c17443b9ea608d763b71f79@o1037846.ingest.sentry.io/6005986"
 
 const config = {
     siteMetadata: {
@@ -20,12 +18,16 @@ const config = {
             resolve: "gatsby-plugin-sitemap",
         },
         {
-            resolve: "gatsby-plugin-google-analytics",
+            resolve: "gatsby-plugin-google-gtag",
             options: {
-                trackingId: process.env.TRACKING_ID,
-                head: true,
-                anonymize: true,
-                respectDNT: false,
+                trackingIds: [process.env.TRACKING_ID],
+                gtagConfig: {
+                    anonymize_ip: true,
+                },
+                pluginConfig: {
+                    head: true,
+                    respectDNT: false,
+                },
             },
         },
         {
@@ -204,10 +206,15 @@ const config = {
             },
         },
         {
-            resolve: "@sentry/gatsby",
+            resolve: "@raae/gatsby-plugin-let-it-snow",
             options: {
-                dsn: sentryUrl,
-                sampleRate: 0.7,
+                colors: ["--snow"],
+                duration: 86400,
+                intensity: "regular",
+                season: {
+                    start: new Date("December 1"),
+                    end: new Date("January 1"),
+                },
             },
         },
     ],

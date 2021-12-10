@@ -1,0 +1,32 @@
+name: "🛳️ lighthouse"
+
+on: pull_request
+
+jobs:
+    lighthouse:
+        name: "🛳️ lighthouse"
+        runs-on: ubuntu-latest
+        steps:
+            - name: "📚 checkout"
+              uses: actions/checkout@v2.3.4
+            - name: "🟢 node"
+              uses: actions/setup-node@v2.1.4
+              with:
+                  node-version: 14
+                  registry-url: https://registry.npmjs.org/
+            - name: "⏳ wait for netlify"
+              uses: jakepartusch/wait-for-netlify-action@v1.3
+              id: netlify
+              with:
+                  site_name: "bradgarropy"
+                  max_timeout: 600
+            - name: "🛳️ lighthouse"
+              uses: treosh/lighthouse-ci-action@v8
+              env:
+                  LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
+              with:
+                  configPath: "./lighthouserc.js"
+                  runs: 3
+                  temporaryPublicStorage: true
+                  uploadArtifacts: true
+                  urls: ${{steps.netlify.outputs.url}}
