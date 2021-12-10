@@ -51,6 +51,8 @@ This site got a lot of love over the last year, with a total redesign of the hom
 
 I've attempted to convert the site to [Next.js][next] three different times now, and each time I've convinced myself not to halfway though the project. The first half of the migration goes very smoothly, but it's the `markdown` rendering chain that trips me up every time. Despite the advice of other developers, I'm still not ready to let go of the idea just yet.
 
+As far as content goes, I published `14` blog posts this year, and my very first [newsletter issue][issue]! It's definitely tough choosing where to create content, but I find the blog better for technical deep dives.
+
 ## 🤠 daily texas country
 
 After I started the podcast, committing to both [Whiskey Wednesday][whiskey-wednesday] and the [podcast][web-dev-weekly] on a weekly cadence became a bit stressful. So I decided to stop content creation for [Daily Texas Country][dtxc]. That doesn't mean I'll never pick it up again, I really enjoyed making the videos and keeping up with Texas country music! So it's not dead, just on hiatus.
@@ -85,3 +87,4 @@ As planned, I focused on lot on strengthening my foundations in 2021. Things lik
 [dtxc]: https://www.dailytexascountry.com
 [twitch]: https://www.twitch.tv/bradgarropy
 [twitch-bot]: https://github.com/bradgarropy/twitch-bot
+[issue]: https://www.getrevue.co/profile/bradgarropy/issues/so-i-started-a-newsletter-436283
