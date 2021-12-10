@@ -15,6 +15,10 @@ Here's the [pull request][pr].
 
 ## git ignore
 
+## environment variables
+
+## vercel dev
+
 ## misc
 
 [pr]: https://github.com/bradgarropy/bradgarropy.com/pull/258
