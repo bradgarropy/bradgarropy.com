@@ -19,7 +19,7 @@ jobs:
               id: netlify
               with:
                   site_name: "bradgarropy"
-                  max_timeout: 60
+                  max_timeout: 600
             - name: "🛳️ lighthouse"
               uses: treosh/lighthouse-ci-action@v8
               env:
