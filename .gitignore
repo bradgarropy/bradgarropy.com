@@ -13,9 +13,10 @@ coverage
 
 # host
 .netlify
+.vercel
 
 # secrets
-.env
+.env*
 
 # logs
 debug.log
