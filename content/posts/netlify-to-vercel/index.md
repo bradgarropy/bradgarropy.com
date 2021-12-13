@@ -11,7 +11,7 @@ After running out of build minutes on [Netlify][netlify], and considering moving
 
 Here's the merged [pull request][pr], but I'll describe each step, then compare the two hosts at the end.
 
-## 💻🖥 serverless functions
+## ⚡ serverless functions
 
 The biggest change was to my serverless functions. Netlify expected them to be in the `functions` directory, and Vercel wants them to be in the `api` directory with a `default` export.
 
@@ -47,7 +47,7 @@ I never liked Netlify's options for [configuring redirects][netlify-redirects]. 
 
 All of my redirects are considered `permanent`, except for the rewrite I had to use for Netlify's serverless functions. But it is no longer needed on Vercel because their functions are already served at the sensible `/api` endpoint.
 
-## 🌲🌳 environment variables
+## 🌳 environment variables
 
 The last piece of the puzzle was moving my environment variables over to Vercel. The UI was easy to find and was almost identical to the Netlify UI.
 
