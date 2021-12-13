@@ -15,7 +15,7 @@ Here's the merged [pull request][pr], but I'll describe each step, then compare 
 
 The biggest change was to my serverless functions. Netlify expected them to be in the `functions` directory, and Vercel wants them to be in the `api` directory with a `default` export.
 
-The function signature is also a bit different. Vercel uses the standard `request` and `response` objects as inputs. I prefer this to Netlify's non-standard `event` input. Vercel also provides some really nice [helper methods][helpers] for dealing with the `request` body and sending different types of responses.
+The function signature is also a bit different. Vercel uses `request` and `response` objects as inputs, which mirror the [Express][express] API. I prefer this to Netlify's `event` input, which is the same as AWS Lambda functions. Vercel also provides some really nice [helper methods][helpers] for dealing with the `request` body and sending different types of responses.
 
 ```typescript
 import {VercelRequest, VercelResponse} from "@vercel/node"
@@ -88,3 +88,4 @@ Where do you host your websites? Let me know on [Twitter][twitter]!
 [github]: https://github.com
 [web-vitals]: https://vercel.com/bradgarropy/bradgarropy/analytics
 [twitter]: https://twitter.com/bradgarropy
+[express]: https://expressjs.com
