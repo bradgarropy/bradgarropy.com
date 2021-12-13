@@ -1,10 +1,11 @@
-const http = require("@bradgarropy/http")
+import {post} from "@bradgarropy/http"
+import {VercelRequest, VercelResponse} from "@vercel/node"
 
-const handler = async (req, res) => {
+const handler = async (req: VercelRequest, res: VercelResponse) => {
     const apiKey = process.env.REVUE_API_KEY
     const body = JSON.parse(req.body)
 
-    const subscriber = await http.post(
+    const subscriber = await post(
         "https://www.getrevue.co/api/v2/subscribers",
         {
             headers: {
@@ -17,7 +18,7 @@ const handler = async (req, res) => {
         },
     )
 
-    res.status(200).send(subscriber)
+    res.status(200).json(subscriber)
 }
 
-module.exports = handler
+export default handler

@@ -1,14 +1,20 @@
-const http = require("@bradgarropy/http")
+import {get, post} from "@bradgarropy/http"
+import {VercelRequest, VercelResponse} from "@vercel/node"
 
-const handler = async (req, res) => {
+type ChannelStatus = {
+    isLive: boolean
+}
+
+const handler = async (req: VercelRequest, res: VercelResponse) => {
     const clientId = process.env.TWITCH_CLIENT_ID
     const clientSecret = process.env.TWITCH_CLIENT_SECRET
 
-    const {access_token} = await http.post(
+    const {access_token} = await post(
         `https://id.twitch.tv/oauth2/token?client_id=${clientId}&client_secret=${clientSecret}&grant_type=client_credentials`,
     )
 
-    const channelResponse = await http.get(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const channelResponse: any = await get(
         "https://api.twitch.tv/helix/search/channels?query=bradgarropy",
         {
             headers: {
@@ -22,8 +28,8 @@ const handler = async (req, res) => {
         channel => channel["broadcaster_login"] === "bradgarropy",
     )
 
-    const channelStatus = {isLive: channel.is_live}
+    const channelStatus: ChannelStatus = {isLive: channel.is_live}
     res.status(200).json(channelStatus)
 }
 
-module.exports = handler
+export default handler
