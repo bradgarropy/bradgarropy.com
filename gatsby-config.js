@@ -205,18 +205,6 @@ const config = {
                 ),
             },
         },
-        {
-            resolve: "@raae/gatsby-plugin-let-it-snow",
-            options: {
-                colors: ["--snow"],
-                duration: 86400,
-                intensity: "regular",
-                season: {
-                    start: new Date("December 1"),
-                    end: new Date("January 1"),
-                },
-            },
-        },
     ],
 }
 
