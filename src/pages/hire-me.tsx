@@ -1,6 +1,6 @@
 import "styles/fancyLinks.css"
 
-import SEO from "@bradgarropy/gatsby-plugin-seo"
+import SEO from "@bradgarropy/next-seo"
 import HireMe from "components/HireMe"
 import {FC} from "react"
 

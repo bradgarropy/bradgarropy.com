@@ -1,6 +1,6 @@
 import "styles/global.css"
 
-import SEO from "@bradgarropy/gatsby-plugin-seo"
+import SEO from "@bradgarropy/next-seo"
 import Footer from "components/Footer"
 import Header from "components/Header"
 import {AppProvider} from "context"

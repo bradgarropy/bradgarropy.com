@@ -1,4 +1,4 @@
-import SEO from "@bradgarropy/gatsby-plugin-seo"
+import SEO from "@bradgarropy/next-seo"
 import Contact from "components/Contact"
 import {FC} from "react"
 

@@ -1,4 +1,4 @@
-import SEO from "@bradgarropy/gatsby-plugin-seo"
+import SEO from "@bradgarropy/next-seo"
 import PostList from "components/PostList"
 import TopicMeta from "components/TopicMeta"
 import {graphql} from "gatsby"

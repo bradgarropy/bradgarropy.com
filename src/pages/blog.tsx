@@ -1,4 +1,4 @@
-import SEO from "@bradgarropy/gatsby-plugin-seo"
+import SEO from "@bradgarropy/next-seo"
 import PostList from "components/PostList"
 import PostSearchBar from "components/PostSearchBar"
 import {usePosts} from "hooks"

@@ -1,4 +1,4 @@
-import SEO from "@bradgarropy/gatsby-plugin-seo"
+import SEO from "@bradgarropy/next-seo"
 import Now from "components/Now"
 import {graphql} from "gatsby"
 import useNow from "hooks/useNow"

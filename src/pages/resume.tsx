@@ -1,4 +1,4 @@
-import SEO from "@bradgarropy/gatsby-plugin-seo"
+import SEO from "@bradgarropy/next-seo"
 import Resume from "components/Resume"
 import {FC} from "react"
 

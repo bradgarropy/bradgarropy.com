@@ -1,4 +1,4 @@
-import SEO from "@bradgarropy/gatsby-plugin-seo"
+import SEO from "@bradgarropy/next-seo"
 import FourOhFour from "components/FourOhFour"
 import {FC} from "react"
 

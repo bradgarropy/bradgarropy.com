@@ -1,4 +1,4 @@
-import SEO from "@bradgarropy/gatsby-plugin-seo"
+import SEO from "@bradgarropy/next-seo"
 import Sponsors from "components/Sponsors"
 import {useSponsors} from "hooks"
 import {FC} from "react"

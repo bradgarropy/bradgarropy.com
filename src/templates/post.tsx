@@ -1,4 +1,4 @@
-import SEO from "@bradgarropy/gatsby-plugin-seo"
+import SEO from "@bradgarropy/next-seo"
 import Post from "components/Post"
 import {graphql} from "gatsby"
 import {FC} from "react"
