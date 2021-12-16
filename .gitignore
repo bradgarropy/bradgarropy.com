@@ -2,13 +2,12 @@
 .vscode
 
 # dependencies
-.cache
 node_modules
 
 # build
-public
+.next
 
-# build
+# test
 coverage
 
 # host
