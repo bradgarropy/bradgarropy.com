@@ -8,9 +8,11 @@ type Post = {
     }
 }
 
+type LatestPost = Pick<Post["frontmatter"], "date" | "title" | "slug">
+
 type Topic = {
     icon: string
     name: string
 }
 
-export type {Post, Topic}
+export type {LatestPost, Post, Topic}

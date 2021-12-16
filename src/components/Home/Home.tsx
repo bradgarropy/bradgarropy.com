@@ -6,16 +6,21 @@ import Newsletter from "components/Newsletter"
 import Podcast from "components/Podcast"
 import Section from "components/Section"
 import {FC} from "react"
+import {LatestPost} from "types/post"
 
 import styles from "./Home.module.css"
 
-const Home: FC = () => {
+type HomeProps = {
+    latestPosts: LatestPost[]
+}
+
+const Home: FC<HomeProps> = ({latestPosts}) => {
     return (
         <div className={styles.sections}>
             <Hero />
 
             <Section title="blog" link="/blog">
-                <LatestPosts />
+                <LatestPosts latestPosts={latestPosts} />
             </Section>
 
             <Section title="videos" link="https://youtube.com/bradgarropy">
