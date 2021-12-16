@@ -1,4 +1,4 @@
-import Link from "@bradgarropy/gatsby-link"
+import Link from "@bradgarropy/next-link"
 import {FC, HTMLAttributes} from "react"
 
 import * as styles from "./Section.module.css"

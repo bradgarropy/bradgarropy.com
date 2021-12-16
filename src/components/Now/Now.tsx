@@ -1,6 +1,6 @@
 import "styles/fancyLinks.css"
 
-import Link from "@bradgarropy/gatsby-link"
+import Link from "@bradgarropy/next-link"
 import LinkButton from "components/LinkButton"
 import {FC} from "react"
 import {Now as NowType} from "types/now"

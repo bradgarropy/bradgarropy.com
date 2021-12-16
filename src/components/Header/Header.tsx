@@ -1,4 +1,4 @@
-import Link from "@bradgarropy/gatsby-link"
+import Link from "@bradgarropy/next-link"
 import ColorTheme from "components/ColorTheme"
 import Logo from "components/Logo"
 import MobileNavigation from "components/MobileNavigation"

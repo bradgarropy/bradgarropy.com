@@ -1,4 +1,4 @@
-import Link from "@bradgarropy/gatsby-link"
+import Link from "@bradgarropy/next-link"
 import {StaticImage} from "gatsby-plugin-image"
 import {FC} from "react"
 

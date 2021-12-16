@@ -1,4 +1,4 @@
-import Link from "@bradgarropy/gatsby-link"
+import Link from "@bradgarropy/next-link"
 import ProjectTech from "components/ProjectTech"
 import {FC} from "react"
 import {Project as ProjectType} from "types/project"

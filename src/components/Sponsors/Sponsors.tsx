@@ -1,6 +1,6 @@
 import "styles/fancyLinks.css"
 
-import Link from "@bradgarropy/gatsby-link"
+import Link from "@bradgarropy/next-link"
 import Section from "components/Section"
 import {FC} from "react"
 import {Sponsors as SponsorsType} from "types/sponsor"
