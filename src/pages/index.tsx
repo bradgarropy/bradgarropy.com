@@ -3,19 +3,30 @@ import Layout from "components/Layout"
 import {GetStaticProps} from "next"
 import {FC} from "react"
 import {LatestPost} from "types/post"
+import {Project} from "types/project"
 import {Video} from "types/video"
-import {getLatestPosts} from "utils/post"
+import {getLatestPosts} from "utils/posts"
+import {getFeaturedProjects} from "utils/projects"
 import {getLatestVideos} from "utils/videos"
 
 type IndexPageProps = {
     latestPosts: LatestPost[]
     latestVideos: Video[]
+    featuredProjects: Project[]
 }
 
-const IndexPage: FC<IndexPageProps> = ({latestPosts, latestVideos}) => {
+const IndexPage: FC<IndexPageProps> = ({
+    latestPosts,
+    latestVideos,
+    featuredProjects,
+}) => {
     return (
         <Layout>
-            <Home latestPosts={latestPosts} latestVideos={latestVideos} />
+            <Home
+                latestPosts={latestPosts}
+                latestVideos={latestVideos}
+                featuredProjects={featuredProjects}
+            />
         </Layout>
     )
 }
@@ -23,11 +34,13 @@ const IndexPage: FC<IndexPageProps> = ({latestPosts, latestVideos}) => {
 const getStaticProps: GetStaticProps = async () => {
     const latestPosts = getLatestPosts()
     const latestVideos = await getLatestVideos()
+    const featuredProjects = await getFeaturedProjects()
 
     return {
         props: {
             latestPosts,
             latestVideos,
+            featuredProjects,
         },
     }
 }
