@@ -1,8 +1,6 @@
 export {default as useApp} from "hooks/useApp"
 export {default as useContact} from "hooks/useContact"
 export {default as useHireMe} from "hooks/useHireMe"
-export {default as useLatestPosts} from "hooks/useLatestPosts"
-export {default as useLatestVideos} from "hooks/useLatestVideos"
 export {default as useLive} from "hooks/useLive"
 export {default as useMeta} from "hooks/useMeta"
 export {default as useNow} from "hooks/useNow"

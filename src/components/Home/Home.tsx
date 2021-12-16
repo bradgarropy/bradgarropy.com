@@ -7,14 +7,16 @@ import Podcast from "components/Podcast"
 import Section from "components/Section"
 import {FC} from "react"
 import {LatestPost} from "types/post"
+import {Video} from "types/video"
 
 import styles from "./Home.module.css"
 
 type HomeProps = {
     latestPosts: LatestPost[]
+    latestVideos: Video[]
 }
 
-const Home: FC<HomeProps> = ({latestPosts}) => {
+const Home: FC<HomeProps> = ({latestPosts, latestVideos}) => {
     return (
         <div className={styles.sections}>
             <Hero />
@@ -24,7 +26,7 @@ const Home: FC<HomeProps> = ({latestPosts}) => {
             </Section>
 
             <Section title="videos" link="https://youtube.com/bradgarropy">
-                <LatestVideos />
+                <LatestVideos latestVideos={latestVideos} />
             </Section>
 
             <Section title="projects" link="https://github.com/bradgarropy">

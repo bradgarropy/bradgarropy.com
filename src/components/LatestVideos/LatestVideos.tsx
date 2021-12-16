@@ -1,13 +1,15 @@
 import Link from "@bradgarropy/next-link"
-import {useLatestVideos} from "hooks"
 import Image from "next/image"
 import {FC} from "react"
+import {Video} from "types/video"
 
 import styles from "./LatestVideos.module.css"
 
-const LatestVideos: FC = () => {
-    const latestVideos = useLatestVideos()
+type LatestVideosProps = {
+    latestVideos: Video[]
+}
 
+const LatestVideos: FC<LatestVideosProps> = ({latestVideos}) => {
     return (
         <div className={styles.latestVideos}>
             {latestVideos.map(latestVideo => {
@@ -20,7 +22,8 @@ const LatestVideos: FC = () => {
                             <Image
                                 src={latestVideo.thumbnail}
                                 alt={latestVideo.title}
-                                placeholder="blur"
+                                width="1280"
+                                height="720"
                                 className={styles.thumbnailContainer}
                                 imgClassName={styles.thumbnail}
                             />
