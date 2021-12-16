@@ -1,7 +1,7 @@
 ---
 title: 👀 contentful preview api with gatsby + netlify
 slug: contentful-preview-api-with-gatsby-netlify
-date: 2018-09-04
+date: "2018-09-04"
 topic:
     name: coding
     icon: 💻

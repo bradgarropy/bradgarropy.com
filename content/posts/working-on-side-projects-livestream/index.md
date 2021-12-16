@@ -1,7 +1,7 @@
 ---
 title: 🌃 working on side projects livestream
 slug: working-on-side-projects-livestream
-date: 2020-08-20
+date: "2020-08-20"
 topic:
     name: coding
     icon: 💻

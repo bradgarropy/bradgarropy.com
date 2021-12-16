@@ -1,7 +1,7 @@
 ---
 title: 📺 coding livestreams
 slug: coding-livestreams
-date: 2019-03-05
+date: "2019-03-05"
 topic:
     name: coding
     icon: 💻

@@ -1,7 +1,7 @@
 ---
 title: ⏰ my atypical day
 slug: my-atypical-day
-date: 2021-01-23
+date: "2021-01-23"
 topic:
     name: life
     icon: 😎

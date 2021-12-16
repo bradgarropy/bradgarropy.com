@@ -1,7 +1,7 @@
 ---
 title: 📧 google's inbox is going away
 slug: googles-inbox-is-going-away
-date: 2018-09-12
+date: "2018-09-12"
 topic:
     name: tech
     icon: 🔌

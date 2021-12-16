@@ -1,7 +1,7 @@
 ---
 title: 😜 mocking nextjs
 slug: mocking-nextjs
-date: 2021-06-28
+date: "2021-06-28"
 topic:
     name: coding
     icon: 💻

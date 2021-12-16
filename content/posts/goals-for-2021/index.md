@@ -1,7 +1,7 @@
 ---
 title: 🏆 goals for 2021
 slug: goals-for-2021
-date: 2021-01-04
+date: "2021-01-04"
 topic:
     name: life
     icon: 😎

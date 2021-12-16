@@ -1,7 +1,7 @@
 ---
 title: 🎥 syntax live
 slug: syntax-live
-date: 2020-11-11
+date: "2020-11-11"
 topic:
     name: coding
     icon: 💻

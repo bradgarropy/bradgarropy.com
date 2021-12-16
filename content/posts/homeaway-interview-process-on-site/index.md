@@ -1,7 +1,7 @@
 ---
 title: 👨🏼‍💼 homeaway interview process - on site
 slug: homeaway-interview-process-on-site
-date: 2018-10-22
+date: "2018-10-22"
 topic:
     name: coding
     icon: 💻

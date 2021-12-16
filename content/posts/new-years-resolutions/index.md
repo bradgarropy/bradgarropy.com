@@ -1,7 +1,7 @@
 ---
 title: 🍾 new year's resolutions
 slug: new-years-resolutions
-date: 2019-01-01
+date: "2019-01-01"
 topic:
     name: life
     icon: 😎

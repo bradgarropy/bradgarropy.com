@@ -1,7 +1,7 @@
 ---
 title: 💅🏼 styled-components open source contribution
 slug: styled-components-open-source-contribution
-date: 2018-12-28
+date: "2018-12-28"
 topic:
     name: coding
     icon: 💻

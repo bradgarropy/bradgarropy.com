@@ -1,7 +1,7 @@
 ---
 title: 🔌 standing desk cable management
 slug: standing-desk-cable-management
-date: 2021-11-10
+date: "2021-11-10"
 topic:
     name: tech
     icon: 🔌

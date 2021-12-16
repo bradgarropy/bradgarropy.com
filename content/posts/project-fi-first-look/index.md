@@ -1,7 +1,7 @@
 ---
 title: 📱 project fi first look
 slug: project-fi-first-look
-date: 2018-08-07
+date: "2018-08-07"
 topic:
     name: tech
     icon: 🔌

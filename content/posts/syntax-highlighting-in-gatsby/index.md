@@ -1,7 +1,7 @@
 ---
 title: 💄 syntax highlighting in gatsby
 slug: syntax-highlighting-in-gatsby
-date: 2018-10-08
+date: "2018-10-08"
 topic:
     name: coding
     icon: 💻

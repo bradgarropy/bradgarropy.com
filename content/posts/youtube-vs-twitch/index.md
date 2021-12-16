@@ -1,7 +1,7 @@
 ---
 title: 📺 youtube vs. twitch
 slug: youtube-vs-twitch
-date: 2020-04-29
+date: "2020-04-29"
 topic:
     name: tech
     icon: 🔌

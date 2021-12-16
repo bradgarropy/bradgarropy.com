@@ -1,7 +1,7 @@
 ---
 title: 🎤 chau codes podcast
 slug: chau-codes-podcast
-date: 2020-11-09
+date: "2020-11-09"
 topic:
     name: coding
     icon: 💻

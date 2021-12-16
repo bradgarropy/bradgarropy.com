@@ -1,7 +1,7 @@
 ---
 title: 🌲 cloudflare worker link tree
 slug: cloudflare-worker-link-tree
-date: 2021-06-28
+date: "2021-06-28"
 topic:
     name: coding
     icon: 💻

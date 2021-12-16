@@ -1,7 +1,7 @@
 ---
 title: 💳 amorty - morty powered loan amortization calculator
 slug: amorty-morty-powered-loan-amortization-calculator
-date: 2018-09-14
+date: "2018-09-14"
 topic:
     name: coding
     icon: 💻

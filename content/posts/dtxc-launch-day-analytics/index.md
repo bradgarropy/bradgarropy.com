@@ -1,7 +1,7 @@
 ---
 title: 📈 dtxc launch day analytics
 slug: dtxc-launch-day-analytics
-date: 2020-06-29
+date: "2020-06-29"
 topic:
     name: coding
     icon: 💻

@@ -1,7 +1,7 @@
 ---
 title: 🎥 react image slider
 slug: react-image-slider
-date: 2018-12-15
+date: "2018-12-15"
 topic:
     name: coding
     icon: 💻

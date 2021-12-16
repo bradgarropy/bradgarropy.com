@@ -1,7 +1,7 @@
 ---
 title: 🌑 gatsby dark mode
 slug: gatsby-dark-mode
-date: 2021-04-30
+date: "2021-04-30"
 topic:
     name: coding
     icon: 💻

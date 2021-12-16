@@ -1,7 +1,7 @@
 ---
 title: ❔ ask me anything
 slug: ask-me-anything
-date: 2019-02-13
+date: "2019-02-13"
 topic:
     name: life
     icon: 😎

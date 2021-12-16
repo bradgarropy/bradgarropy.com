@@ -1,7 +1,7 @@
 ---
 title: 👕 curly bois shirts
 slug: curly-bois-shirts
-date: 2020-12-07
+date: "2020-12-07"
 topic:
     name: life
     icon: 😎

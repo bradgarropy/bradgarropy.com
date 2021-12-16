@@ -1,7 +1,7 @@
 ---
 title: ⏱ murphy
 slug: murphy
-date: 2020-10-13
+date: "2020-10-13"
 topic:
     name: coding
     icon: 💻

@@ -1,7 +1,7 @@
 ---
 title: ☎️ homeaway interview process - phone screens
 slug: homeaway-interview-process-phone-screens
-date: 2018-10-10
+date: "2018-10-10"
 topic:
     name: coding
     icon: 💻

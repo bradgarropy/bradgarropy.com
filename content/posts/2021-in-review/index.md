@@ -1,7 +1,7 @@
 ---
 title: 📅 2021 in review
 slug: 2021-in-review
-date: 2021-12-10
+date: "2021-12-10"
 topic:
     name: life
     icon: 😎

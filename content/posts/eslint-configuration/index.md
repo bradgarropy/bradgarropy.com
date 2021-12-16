@@ -1,7 +1,7 @@
 ---
 title: 💎 eslint configuration
 slug: eslint-configuration
-date: 2019-04-16
+date: "2019-04-16"
 topic:
     name: coding
     icon: 💻

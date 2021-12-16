@@ -1,7 +1,7 @@
 ---
 title: 📦 publishing npm packages webinar
 slug: publishing-npm-packages-webinar
-date: 2020-06-13
+date: "2020-06-13"
 topic:
     name: coding
     icon: 💻

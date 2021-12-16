@@ -1,7 +1,7 @@
 ---
 title: 🔥 fixing react-hot-loader in gatsby
 slug: fixing-react-hot-loader-in-gatsby
-date: 2020-11-10
+date: "2020-11-10"
 topic:
     name: coding
     icon: 💻

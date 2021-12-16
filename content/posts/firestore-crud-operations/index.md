@@ -1,7 +1,7 @@
 ---
 title: 💩 firestore crud operations
 slug: firestore-crud-operations
-date: 2021-04-26
+date: "2021-04-26"
 topic:
     name: coding
     icon: 💻

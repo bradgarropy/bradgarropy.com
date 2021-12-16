@@ -1,7 +1,7 @@
 ---
 title: ⚡ serverless functions with netlify cli
 slug: serverless-functions-with-netlify-cli
-date: 2020-04-28
+date: "2020-04-28"
 topic:
     name: coding
     icon: 💻

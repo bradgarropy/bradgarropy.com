@@ -1,7 +1,7 @@
 ---
 title: 😜 mocking gatsby image
 slug: mocking-gatsby-image
-date: 2021-06-25
+date: "2021-06-25"
 topic:
     name: coding
     icon: 💻

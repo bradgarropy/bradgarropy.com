@@ -1,7 +1,7 @@
 ---
 title: "🥊 gatsby vs nextjs: markdown blog"
 slug: gatsby-vs-nextjs-markdown-blog
-date: 2021-01-21
+date: "2021-01-21"
 topic:
     name: coding
     icon: 💻

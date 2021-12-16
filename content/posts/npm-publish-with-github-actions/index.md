@@ -1,7 +1,7 @@
 ---
 title: 📦 npm publish with github actions
 slug: npm-publish-with-github-actions
-date: 2019-04-27
+date: "2019-04-27"
 topic:
     name: coding
     icon: 💻

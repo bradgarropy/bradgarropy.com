@@ -1,7 +1,7 @@
 ---
 title: 🍓 that's my jamstack podcast
 slug: thats-my-jamstack-podcast
-date: 2020-10-06
+date: "2020-10-06"
 topic:
     name: coding
     icon: 💻

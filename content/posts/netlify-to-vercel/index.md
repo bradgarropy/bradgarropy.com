@@ -1,7 +1,7 @@
 ---
 title: ▲ netlify to vercel
 slug: netlify-to-vercel
-date: 2021-12-13
+date: "2021-12-13"
 topic:
     name: coding
     icon: 💻

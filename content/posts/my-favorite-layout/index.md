@@ -1,7 +1,7 @@
 ---
 title: 👙 my favorite layout
 slug: my-favorite-layout
-date: 2019-05-29
+date: "2019-05-29"
 topic:
     name: coding
     icon: 💻

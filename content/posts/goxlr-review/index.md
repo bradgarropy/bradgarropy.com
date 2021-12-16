@@ -1,7 +1,7 @@
 ---
 title: 🔊 goxlr review
 slug: goxlr-review
-date: 2021-05-05
+date: "2021-05-05"
 topic:
     name: tech
     icon: 🔌

@@ -1,7 +1,7 @@
 ---
 title: 👨🏼‍💻 bg codes
 slug: bg-codes
-date: 2020-05-04
+date: "2020-05-04"
 topic:
     name: coding
     icon: 💻

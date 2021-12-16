@@ -1,7 +1,7 @@
 ---
 title: 💎 modular eslint configuration
 slug: modular-eslint-configuration
-date: 2020-12-16
+date: "2020-12-16"
 topic:
     name: coding
     icon: 💻

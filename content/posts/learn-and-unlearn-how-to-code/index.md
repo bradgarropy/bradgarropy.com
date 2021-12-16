@@ -1,7 +1,7 @@
 ---
 title: 🧠 learn and unlearn how to code
 slug: learn-and-unlearn-how-to-code
-date: 2020-06-24
+date: "2020-06-24"
 topic:
     name: coding
     icon: 💻
