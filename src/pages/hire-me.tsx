@@ -2,11 +2,12 @@ import "styles/fancyLinks.css"
 
 import SEO from "@bradgarropy/next-seo"
 import HireMe from "components/HireMe"
+import Layout from "components/Layout"
 import {FC} from "react"
 
 const HireMePage: FC = () => {
     return (
-        <>
+        <Layout>
             <SEO
                 title="🤝 let's work together"
                 facebook={{
@@ -19,7 +20,7 @@ const HireMePage: FC = () => {
             />
 
             <HireMe />
-        </>
+        </Layout>
     )
 }
 

@@ -1,4 +1,5 @@
 import SEO from "@bradgarropy/next-seo"
+import Layout from "components/Layout"
 import PostList from "components/PostList"
 import PostSearchBar from "components/PostSearchBar"
 import {usePosts} from "hooks"
@@ -13,14 +14,14 @@ const BlogPage: FC = () => {
     }
 
     return (
-        <>
+        <Layout>
             <SEO title="✍🏼 blog" />
 
             <div>
                 <PostSearchBar onSearch={onSearch} />
                 <PostList posts={posts} />
             </div>
-        </>
+        </Layout>
     )
 }
 

@@ -1,5 +1,3 @@
-import "styles/global.css"
-
 import SEO from "@bradgarropy/next-seo"
 import Footer from "components/Footer"
 import Header from "components/Header"
