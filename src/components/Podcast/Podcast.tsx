@@ -3,6 +3,7 @@ import {usePodcast} from "hooks"
 import Image from "next/image"
 import {FC} from "react"
 
+import webDevWeekly from "../../../public/web-dev-weekly.png"
 import * as styles from "./Podcast.module.css"
 
 const Podcast: FC = () => {
@@ -12,7 +13,7 @@ const Podcast: FC = () => {
         <div className={styles.podcast}>
             <Link to={podcast.link} data-testid={podcast.title}>
                 <Image
-                    src="../../../static/web-dev-weekly.png"
+                    src={webDevWeekly}
                     alt={podcast.title}
                     placeholder="blur"
                     className={styles.coverImageContainer}
