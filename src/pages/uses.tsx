@@ -1,7 +1,6 @@
 import "styles/fancyLinks.css"
 
 import SEO from "@bradgarropy/next-seo"
-import {graphql} from "gatsby"
 import {FC} from "react"
 
 type UsesPageProps = {
@@ -26,15 +25,5 @@ const UsesPage: FC<UsesPageProps> = ({data}) => {
         </>
     )
 }
-
-export const usesPageQuery = graphql`
-    {
-        uses: markdownRemark(
-            fileAbsolutePath: {regex: "/content/pages/uses/"}
-        ) {
-            html
-        }
-    }
-`
 
 export default UsesPage

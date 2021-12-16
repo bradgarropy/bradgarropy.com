@@ -1,18 +1,5 @@
-import {graphql, useStaticQuery} from "gatsby"
-
 const useHireMe = (): string => {
-    const query = graphql`
-        {
-            hireMe: markdownRemark(
-                fileAbsolutePath: {regex: "/content/pages/hire-me/"}
-            ) {
-                html
-            }
-        }
-    `
-
-    const {hireMe} = useStaticQuery(query)
-    return hireMe.html
+    return "<p>hire me</>"
 }
 
 export default useHireMe

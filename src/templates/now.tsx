@@ -1,6 +1,5 @@
 import SEO from "@bradgarropy/next-seo"
 import Now from "components/Now"
-import {graphql} from "gatsby"
 import {FC} from "react"
 
 const NowTemplate: FC = ({data, pageContext}) => {
@@ -14,16 +13,5 @@ const NowTemplate: FC = ({data, pageContext}) => {
         </>
     )
 }
-
-export const nowTemplateQuery = graphql`
-    query ($date: Date!) {
-        now: markdownRemark(frontmatter: {date: {eq: $date}}) {
-            html
-            frontmatter {
-                date(formatString: "MMMM D, YYYY")
-            }
-        }
-    }
-`
 
 export default NowTemplate

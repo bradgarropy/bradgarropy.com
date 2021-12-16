@@ -1,6 +1,5 @@
 import SEO from "@bradgarropy/next-seo"
 import Now from "components/Now"
-import {graphql} from "gatsby"
 import useNow from "hooks/useNow"
 import {FC} from "react"
 
@@ -15,34 +14,5 @@ const NowPage: FC = () => {
         </>
     )
 }
-
-export const query = graphql`
-    {
-        nows: allMarkdownRemark(
-            filter: {fileAbsolutePath: {regex: "/content/now/"}}
-            sort: {fields: frontmatter___date, order: DESC}
-            limit: 2
-        ) {
-            edges {
-                node {
-                    html
-                    frontmatter {
-                        date(formatString: "MMMM D, YYYY")
-                    }
-                }
-                next {
-                    frontmatter {
-                        date(formatString: "YYYY-MM-DD")
-                    }
-                }
-                previous {
-                    frontmatter {
-                        date(formatString: "YYYY-MM-DD")
-                    }
-                }
-            }
-        }
-    }
-`
 
 export default NowPage

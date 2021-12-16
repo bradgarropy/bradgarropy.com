@@ -1,6 +1,5 @@
 import SEO from "@bradgarropy/next-seo"
 import Post from "components/Post"
-import {graphql} from "gatsby"
 import {FC} from "react"
 
 const PostTemplate: FC = ({data}) => {
@@ -15,22 +14,5 @@ const PostTemplate: FC = ({data}) => {
         </>
     )
 }
-
-export const postTemplateQuery = graphql`
-    query ($slug: String!) {
-        markdownRemark(frontmatter: {slug: {eq: $slug}}) {
-            html
-            frontmatter {
-                slug
-                title
-                date(formatString: "MMMM D, YYYY")
-                topic {
-                    name
-                    icon
-                }
-            }
-        }
-    }
-`
 
 export default PostTemplate
