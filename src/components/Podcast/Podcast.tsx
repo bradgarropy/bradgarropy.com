@@ -1,6 +1,6 @@
 import Link from "@bradgarropy/next-link"
-import {StaticImage} from "gatsby-plugin-image"
 import {usePodcast} from "hooks"
+import Image from "next/image"
 import {FC} from "react"
 
 import * as styles from "./Podcast.module.css"
@@ -11,13 +11,10 @@ const Podcast: FC = () => {
     return (
         <div className={styles.podcast}>
             <Link to={podcast.link} data-testid={podcast.title}>
-                <StaticImage
+                <Image
                     src="../../../static/web-dev-weekly.png"
                     alt={podcast.title}
-                    layout="constrained"
-                    placeholder="blurred"
-                    formats={["auto", "webp", "avif"]}
-                    quality={100}
+                    placeholder="blur"
                     className={styles.coverImageContainer}
                     imgClassName={styles.coverImage}
                 />

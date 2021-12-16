@@ -1,6 +1,6 @@
 import Link from "@bradgarropy/next-link"
-import {GatsbyImage} from "gatsby-plugin-image"
 import {useLatestVideos} from "hooks"
+import Image from "next/image"
 import {FC} from "react"
 
 import * as styles from "./LatestVideos.module.css"
@@ -17,9 +17,10 @@ const LatestVideos: FC = () => {
                         to={`https://www.youtube.com/watch?v=${latestVideo.id}`}
                     >
                         <div data-testid={latestVideo.id}>
-                            <GatsbyImage
-                                image={latestVideo.thumbnail}
+                            <Image
+                                src={latestVideo.thumbnail}
                                 alt={latestVideo.title}
+                                placeholder="blur"
                                 className={styles.thumbnailContainer}
                                 imgClassName={styles.thumbnail}
                             />

@@ -1,7 +1,7 @@
 import "styles/fancyLinks.css"
 
 import Link from "@bradgarropy/next-link"
-import {GatsbyImage} from "gatsby-plugin-image"
+import Image from "next/image"
 import {FC} from "react"
 import slugify from "slugify"
 import {Testimonial} from "types/testimonial"
@@ -26,9 +26,10 @@ const Testimonials: FC<TestimonialsProps> = ({testimonials}) => {
                         to={testimonial.profile}
                     >
                         <div className={styles.header}>
-                            <GatsbyImage
-                                image={testimonial.photo}
+                            <Image
+                                src={testimonial.photo}
                                 alt={testimonial.name}
+                                placeholder="blur"
                                 className={styles.photoContainer}
                                 imgClassName={styles.photo}
                             />

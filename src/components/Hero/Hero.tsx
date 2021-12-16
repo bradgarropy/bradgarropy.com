@@ -1,5 +1,5 @@
 import Link from "@bradgarropy/next-link"
-import {StaticImage} from "gatsby-plugin-image"
+import Image from "next/image"
 import {FC} from "react"
 
 import * as styles from "./Hero.module.css"
@@ -8,11 +8,10 @@ const Hero: FC = () => {
     return (
         <div className={styles.hero}>
             <Link to="https://instagram.com/bradgarropy">
-                <StaticImage
+                <Image
                     src="../../../static/profile.jpg"
                     alt="bg"
-                    placeholder="blurred"
-                    layout="fullWidth"
+                    placeholder="blur"
                     className={styles.heroImageContainer}
                     imgClassName={styles.heroImage}
                 />
