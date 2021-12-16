@@ -71,6 +71,7 @@
         "@bradgarropy/plop-generator-react-component": "^1.0.1",
         "@bradgarropy/plop-generator-react-context": "^1.0.0",
         "@bradgarropy/plop-generator-react-hook": "^1.0.0",
+        "@svgr/webpack": "^6.1.2",
         "@testing-library/jest-dom": "^5.15.0",
         "@testing-library/react": "^12.1.2",
         "@testing-library/react-hooks": "^7.0.2",
