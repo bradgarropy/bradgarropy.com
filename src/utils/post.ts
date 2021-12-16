@@ -19,7 +19,6 @@ const getLatestPosts = (): LatestPost[] => {
             )
 
             const file = matter.read(postPath)
-            console.log(file.data)
 
             const post: LatestPost = {
                 date: file.data.date,

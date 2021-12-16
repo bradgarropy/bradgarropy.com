@@ -3,7 +3,7 @@ import Layout from "components/Layout"
 import {GetStaticProps} from "next"
 import {FC} from "react"
 import {LatestPost} from "types/post"
-import {getLatestPosts} from "utils/blog"
+import {getLatestPosts} from "utils/post"
 
 type IndexPageProps = {
     latestPosts: LatestPost[]
