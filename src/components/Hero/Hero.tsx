@@ -3,7 +3,7 @@ import Image from "next/image"
 import {FC} from "react"
 
 import profile from "../../../public/profile.jpg"
-import * as styles from "./Hero.module.css"
+import styles from "./Hero.module.css"
 
 const Hero: FC = () => {
     return (

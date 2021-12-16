@@ -3,7 +3,7 @@ import {FC, useEffect} from "react"
 import Moon from "svg/moon.svg"
 import Sun from "svg/sun.svg"
 
-import * as styles from "./ColorTheme.module.css"
+import styles from "./ColorTheme.module.css"
 
 const ColorTheme: FC = () => {
     const {theme, setTheme} = useApp()

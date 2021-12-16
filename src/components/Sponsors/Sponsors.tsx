@@ -5,7 +5,7 @@ import Section from "components/Section"
 import {FC} from "react"
 import {Sponsors as SponsorsType} from "types/sponsor"
 
-import * as styles from "./Sponsors.module.css"
+import styles from "./Sponsors.module.css"
 
 type SponsorsProps = {
     sponsors: SponsorsType

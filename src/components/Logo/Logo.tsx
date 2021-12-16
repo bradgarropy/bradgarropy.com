@@ -1,6 +1,6 @@
 import {FC} from "react"
 
-import * as styles from "./Logo.module.css"
+import styles from "./Logo.module.css"
 
 const Logo: FC = () => (
     <svg

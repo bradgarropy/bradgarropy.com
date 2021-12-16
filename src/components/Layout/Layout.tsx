@@ -5,7 +5,7 @@ import {AppProvider} from "context"
 import {FC} from "react"
 
 import pkg from "../../../package.json"
-import * as styles from "./Layout.module.css"
+import styles from "./Layout.module.css"
 
 const Layout: FC = ({children}) => {
     return (

@@ -2,7 +2,7 @@ import Testimonials from "components/Testimonials"
 import {useHireMe, useTestimonials} from "hooks"
 import {FC} from "react"
 
-import * as styles from "./HireMe.module.css"
+import styles from "./HireMe.module.css"
 
 const HireMe: FC = () => {
     const hireMe = useHireMe()

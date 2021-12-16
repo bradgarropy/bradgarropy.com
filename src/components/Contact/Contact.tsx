@@ -3,7 +3,7 @@ import "styles/fancyLinks.css"
 import {useContact} from "hooks"
 import {FC} from "react"
 
-import * as styles from "./Contact.module.css"
+import styles from "./Contact.module.css"
 
 const Contact: FC = () => {
     const contact = useContact()

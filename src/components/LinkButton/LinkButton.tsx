@@ -2,7 +2,7 @@ import Link from "@bradgarropy/next-link"
 import classnames from "classnames"
 import {FC} from "react"
 
-import * as styles from "./LinkButton.module.css"
+import styles from "./LinkButton.module.css"
 
 type LinkButtonProps = {
     to: string

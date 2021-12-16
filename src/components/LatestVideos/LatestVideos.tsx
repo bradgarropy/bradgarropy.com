@@ -3,7 +3,7 @@ import {useLatestVideos} from "hooks"
 import Image from "next/image"
 import {FC} from "react"
 
-import * as styles from "./LatestVideos.module.css"
+import styles from "./LatestVideos.module.css"
 
 const LatestVideos: FC = () => {
     const latestVideos = useLatestVideos()

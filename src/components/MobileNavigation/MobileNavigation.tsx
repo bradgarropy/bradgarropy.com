@@ -5,7 +5,7 @@ import Hamburger from "components/Hamburger"
 import {useApp} from "hooks"
 import {FC} from "react"
 
-import * as styles from "./MobileNavigation.module.css"
+import styles from "./MobileNavigation.module.css"
 
 const MobileNavigation: FC = () => {
     const {open, setOpen} = useApp()

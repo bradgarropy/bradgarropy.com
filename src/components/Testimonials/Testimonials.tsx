@@ -6,7 +6,7 @@ import {FC} from "react"
 import slugify from "slugify"
 import {Testimonial} from "types/testimonial"
 
-import * as styles from "./Testimonials.module.css"
+import styles from "./Testimonials.module.css"
 
 type TestimonialsProps = {
     testimonials: Testimonial[]

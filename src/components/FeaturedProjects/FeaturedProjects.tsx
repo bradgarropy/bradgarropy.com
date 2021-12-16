@@ -2,7 +2,7 @@ import Project from "components/Project"
 import {useProjects} from "hooks"
 import {FC} from "react"
 
-import * as styles from "./FeaturedProjects.module.css"
+import styles from "./FeaturedProjects.module.css"
 
 const FeaturedProjects: FC = () => {
     const projects = useProjects()

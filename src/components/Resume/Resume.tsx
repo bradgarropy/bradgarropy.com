@@ -3,7 +3,7 @@ import "styles/fancyLinks.css"
 import {useResume} from "hooks"
 import {FC} from "react"
 
-import * as styles from "./Resume.module.css"
+import styles from "./Resume.module.css"
 
 const Resume: FC = () => {
     const resume = useResume()

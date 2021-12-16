@@ -7,7 +7,7 @@ import Streaming from "components/Streaming"
 import {useLive} from "hooks"
 import {FC} from "react"
 
-import * as styles from "./Header.module.css"
+import styles from "./Header.module.css"
 
 const Header: FC = () => {
     const live = useLive()

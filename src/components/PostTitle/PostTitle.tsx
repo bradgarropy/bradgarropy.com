@@ -2,7 +2,7 @@ import Link from "@bradgarropy/next-link"
 import {FC} from "react"
 import {Post} from "types/post"
 
-import * as styles from "./PostTitle.module.css"
+import styles from "./PostTitle.module.css"
 
 type PostTitleProps = {
     title: Post["frontmatter"]["title"]

@@ -2,7 +2,7 @@ import PostHeader from "components/PostHeader"
 import {FC} from "react"
 import {Post} from "types/post"
 
-import * as styles from "./PostList.module.css"
+import styles from "./PostList.module.css"
 
 type PostListProps = {
     posts: Post[]

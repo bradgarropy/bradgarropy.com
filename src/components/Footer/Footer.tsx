@@ -1,7 +1,7 @@
 import SocialLink from "components/SocialLink"
 import {FC} from "react"
 
-import * as styles from "./Footer.module.css"
+import styles from "./Footer.module.css"
 
 const Footer: FC = () => {
     return (

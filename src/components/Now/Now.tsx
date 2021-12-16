@@ -5,7 +5,7 @@ import LinkButton from "components/LinkButton"
 import {FC} from "react"
 import {Now as NowType} from "types/now"
 
-import * as styles from "./Now.module.css"
+import styles from "./Now.module.css"
 
 type NowProps = {
     now: Pick<NowType, "html" | "frontmatter">

@@ -3,7 +3,7 @@ import "styles/twitter.css"
 
 import {FC} from "react"
 
-import * as styles from "./PostBody.module.css"
+import styles from "./PostBody.module.css"
 
 type PostBodyProps = {
     content: string

@@ -2,7 +2,7 @@ import Link from "@bradgarropy/next-link"
 import {FC} from "react"
 import {Post} from "types/post"
 
-import * as styles from "./PostMeta.module.css"
+import styles from "./PostMeta.module.css"
 
 type PostMetaProps = Pick<Post["frontmatter"], "date" | "topic">
 

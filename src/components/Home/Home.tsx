@@ -7,7 +7,7 @@ import Podcast from "components/Podcast"
 import Section from "components/Section"
 import {FC} from "react"
 
-import * as styles from "./Home.module.css"
+import styles from "./Home.module.css"
 
 const Home: FC = () => {
     return (

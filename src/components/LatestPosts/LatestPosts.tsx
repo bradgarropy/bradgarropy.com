@@ -2,7 +2,7 @@ import PostTitle from "components/PostTitle"
 import {useLatestPosts} from "hooks"
 import {FC} from "react"
 
-import * as styles from "./LatestPosts.module.css"
+import styles from "./LatestPosts.module.css"
 
 const LatestPosts: FC = () => {
     const latestPosts = useLatestPosts()

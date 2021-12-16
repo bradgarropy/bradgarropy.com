@@ -4,7 +4,7 @@ import Image from "next/image"
 import {FC} from "react"
 
 import webDevWeekly from "../../../public/web-dev-weekly.png"
-import * as styles from "./Podcast.module.css"
+import styles from "./Podcast.module.css"
 
 const Podcast: FC = () => {
     const podcast = usePodcast()
