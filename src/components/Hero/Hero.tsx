@@ -8,13 +8,15 @@ import styles from "./Hero.module.css"
 const Hero: FC = () => {
     return (
         <div className={styles.hero}>
-            <Link to="https://instagram.com/bradgarropy">
+            <Link
+                to="https://instagram.com/bradgarropy"
+                className={styles.heroLink}
+            >
                 <Image
                     src={profile}
                     alt="bg"
                     placeholder="blur"
-                    className={styles.heroImageContainer}
-                    imgClassName={styles.heroImage}
+                    className={styles.heroImage}
                 />
             </Link>
 

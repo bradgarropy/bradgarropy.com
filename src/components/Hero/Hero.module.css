@@ -12,29 +12,28 @@
     }
 }
 
-.heroImageContainer {
-    border-radius: 100%;
-}
-
 @media (max-width: 700px) {
-    .heroImageContainer {
+    .heroLink {
         margin: auto;
         width: 80%;
         height: auto;
     }
 }
 
+.heroLink > span {
+    border-radius: 100%;
+    display: block !important;
+}
+
 .heroImage {
     border-radius: 100%;
-    box-sizing: border-box;
-    border: 7px solid var(--text);
+    border: 7px solid var(--text) !important;
     background-color: var(--text);
 }
 
 .heroImage:hover {
-    transform: rotate(-2deg) !important;
-    border: 7px solid var(--primary);
-    background-color: var(--primary);
+    transform: rotate(-2deg);
+    border: 7px solid var(--primary) !important;
 }
 
 .headline {
