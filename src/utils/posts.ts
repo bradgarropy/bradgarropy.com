@@ -1,7 +1,7 @@
 import fs from "fs"
 import matter from "gray-matter"
 import path from "path"
-import {PostFrontmatter, Topic} from "types/post"
+import {Post, PostFrontmatter, Topic} from "types/post"
 
 const getLatestPosts = (): PostFrontmatter[] => {
     const postsPath = path.join(process.cwd(), "content/posts")
@@ -51,6 +51,19 @@ const getAllPosts = (): PostFrontmatter[] => {
 
     const allPosts = sortByDate(posts)
     return allPosts
+}
+
+const getPostBySlug = (slug: PostFrontmatter["slug"]): Post => {
+    const postPath = path.join(process.cwd(), `content/posts/${slug}/index.md`)
+
+    const file = matter.read(postPath)
+
+    const post: Post = {
+        html: file.content,
+        frontmatter: file.data as PostFrontmatter,
+    }
+
+    return post
 }
 
 const getTopic = (name: Topic["name"]): Topic => {
@@ -134,4 +147,11 @@ const sortByDate = (posts: PostFrontmatter[]): PostFrontmatter[] => {
     return sortedPosts
 }
 
-export {getAllPosts, getLatestPosts, getPostsByTopic, getTopic, getTopics}
+export {
+    getAllPosts,
+    getLatestPosts,
+    getPostBySlug,
+    getPostsByTopic,
+    getTopic,
+    getTopics,
+}

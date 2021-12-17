@@ -10,7 +10,6 @@ type PodcastProps = {
 }
 
 const Podcast: FC<PodcastProps> = ({podcast}) => {
-    console.log(podcast)
     return (
         <div className={styles.podcast}>
             <Link
