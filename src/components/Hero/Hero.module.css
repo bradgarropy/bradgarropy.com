@@ -34,6 +34,7 @@
 .heroImage:hover {
     transform: rotate(-2deg);
     border: 7px solid var(--primary) !important;
+    background-color: var(--primary);
 }
 
 .headline {
