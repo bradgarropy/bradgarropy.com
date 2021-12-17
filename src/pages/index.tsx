@@ -2,7 +2,7 @@ import Home from "components/Home"
 import Layout from "components/Layout"
 import {GetStaticProps} from "next"
 import {FC} from "react"
-import {LatestPost} from "types/post"
+import {PostFrontmatter} from "types/post"
 import {Project} from "types/project"
 import {Video} from "types/video"
 import {getLatestPosts} from "utils/posts"
@@ -10,7 +10,7 @@ import {getFeaturedProjects} from "utils/projects"
 import {getLatestVideos} from "utils/videos"
 
 type IndexPageProps = {
-    latestPosts: LatestPost[]
+    latestPosts: PostFrontmatter[]
     latestVideos: Video[]
     featuredProjects: Project[]
 }
