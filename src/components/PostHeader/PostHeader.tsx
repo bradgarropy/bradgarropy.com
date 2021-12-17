@@ -1,10 +1,10 @@
 import PostMeta from "components/PostMeta"
 import PostTitle from "components/PostTitle"
 import {FC} from "react"
-import {Post} from "types/post"
+import {PostFrontmatter} from "types/post"
 
 type PostHeaderProps = Pick<
-    Post["frontmatter"],
+    PostFrontmatter,
     "date" | "topic" | "title" | "slug"
 >
 

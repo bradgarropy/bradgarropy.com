@@ -1,6 +1,7 @@
 import Link from "@bradgarropy/next-link"
 import {FC} from "react"
 import {Post} from "types/post"
+import {formatDate} from "utils/date"
 
 import styles from "./PostMeta.module.css"
 
@@ -12,7 +13,7 @@ const PostMeta: FC<PostMetaProps> = ({date, topic}) => {
     return (
         <div className={styles.postMeta}>
             <p>
-                {date} in <Link to={`/topic/${name}`}>#{name}</Link>
+                {formatDate(date)} in <Link to={`/topic/${name}`}>#{name}</Link>
             </p>
         </div>
     )

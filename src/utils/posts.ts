@@ -1,9 +1,9 @@
 import fs from "fs"
 import matter from "gray-matter"
 import path from "path"
-import {LatestPost} from "types/post"
+import {PostFrontmatter} from "types/post"
 
-const getLatestPosts = (): LatestPost[] => {
+const getLatestPosts = (): PostFrontmatter[] => {
     const postsPath = path.join(process.cwd(), "content/posts")
 
     const posts = fs
@@ -12,19 +12,14 @@ const getLatestPosts = (): LatestPost[] => {
 
         // create path to each markdown file
         // read frontmatter from each post
-        .reduce((posts, slug) => {
+        .reduce<PostFrontmatter[]>((posts, slug) => {
             const postPath = path.join(
                 process.cwd(),
                 `content/posts/${slug}/index.md`,
             )
 
             const file = matter.read(postPath)
-
-            const post: LatestPost = {
-                date: file.data.date,
-                title: file.data.title,
-                slug: slug,
-            }
+            const post = file.data as PostFrontmatter
 
             return [...posts, post]
         }, [])
@@ -49,4 +44,43 @@ const getLatestPosts = (): LatestPost[] => {
     return latestPosts
 }
 
-export {getLatestPosts}
+const getAllPosts = (): PostFrontmatter[] => {
+    const postsPath = path.join(process.cwd(), "content/posts")
+
+    const posts = fs
+        // read directory of posts
+        .readdirSync(postsPath)
+
+        // create path to each markdown file
+        // read frontmatter from each post
+        .reduce<PostFrontmatter[]>((posts, slug) => {
+            const postPath = path.join(
+                process.cwd(),
+                `content/posts/${slug}/index.md`,
+            )
+
+            const file = matter.read(postPath)
+            const post = file.data as PostFrontmatter
+
+            return [...posts, post]
+        }, [])
+
+    const allPosts = posts
+        // sort posts by date
+        .sort((a, b) => {
+            const aDate = new Date(a.date)
+            const bDate = new Date(b.date)
+
+            if (aDate < bDate) {
+                return 1
+            } else if (aDate > bDate) {
+                return -1
+            } else {
+                return 0
+            }
+        })
+
+    return allPosts
+}
+
+export {getAllPosts, getLatestPosts}

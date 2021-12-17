@@ -1,18 +1,18 @@
 type Post = {
     html: string
-    frontmatter: {
-        date: string
-        topic: Topic
-        title: string
-        slug: string
-    }
+    frontmatter: PostFrontmatter
 }
 
-type LatestPost = Pick<Post["frontmatter"], "date" | "title" | "slug">
+type PostFrontmatter = {
+    date: string
+    topic: Topic
+    title: string
+    slug: string
+}
 
 type Topic = {
     icon: string
     name: string
 }
 
-export type {LatestPost, Post, Topic}
+export type {Post, PostFrontmatter, Topic}

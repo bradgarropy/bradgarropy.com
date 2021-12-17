@@ -1,30 +1,28 @@
-import {navigate, useLocation} from "@reach/router"
 import classNames from "classnames"
 import Fuse from "fuse.js"
-import {usePosts} from "hooks"
+import {useRouter} from "next/router"
 import {FC, useEffect} from "react"
 import {useState} from "react"
-import * as InputStyles from "styles/Input.module.css"
-import {Post} from "types/post"
+import InputStyles from "styles/Input.module.css"
+import {PostFrontmatter} from "types/post"
 
-import * as PostSearchBarStyles from "./PostSearchBar.module.css"
+import PostSearchBarStyles from "./PostSearchBar.module.css"
 
 type PostSearchBarProps = {
-    onSearch?: (posts: Post[]) => void
+    posts: PostFrontmatter[]
+    onSearch?: (posts: PostFrontmatter[]) => void
 }
 
-const PostSearchBar: FC<PostSearchBarProps> = ({onSearch}) => {
-    const posts = usePosts()
-    const location = useLocation()
-    const params = new URLSearchParams(location.search)
-    const defaultQuery = params.get("search") || ""
+const PostSearchBar: FC<PostSearchBarProps> = ({posts, onSearch}) => {
+    const router = useRouter()
+    const defaultQuery = (router.query.search as string) || ""
     const [query, setQuery] = useState(defaultQuery)
 
     const fuse = new Fuse(posts, {
-        keys: ["frontmatter.title", "frontmatter.topic.name"],
+        keys: ["title", "topic.name"],
     })
 
-    const filterPosts = query => {
+    const filterPosts = (query: string): PostFrontmatter[] => {
         if (!query) {
             return posts
         }
@@ -35,8 +33,11 @@ const PostSearchBar: FC<PostSearchBarProps> = ({onSearch}) => {
 
     useEffect(
         () => {
-            const queryString = query ? `/blog?search=${query}` : "/blog"
-            navigate(queryString, {replace: true})
+            const url = query
+                ? `${router.pathname}?search=${query}`
+                : router.pathname
+
+            router.push(url, undefined, {shallow: true})
 
             const newPosts = filterPosts(query)
             onSearch?.(newPosts)
