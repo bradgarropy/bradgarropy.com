@@ -11,13 +11,16 @@ const Podcast: FC = () => {
 
     return (
         <div className={styles.podcast}>
-            <Link to={podcast.link} data-testid={podcast.title}>
+            <Link
+                to={podcast.link}
+                className={styles.podcastLink}
+                data-testid={podcast.title}
+            >
                 <Image
                     src={webDevWeekly}
                     alt={podcast.title}
                     placeholder="blur"
-                    className={styles.coverImageContainer}
-                    imgClassName={styles.coverImage}
+                    className={styles.coverImage}
                 />
             </Link>
 
