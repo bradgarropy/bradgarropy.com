@@ -1,6 +1,6 @@
 module.exports = {
     images: {
-        domains: ["i.ytimg.com"],
+        domains: ["artwork.captivate.fm", "i.ytimg.com"],
     },
     webpack: config => {
         config.module.rules.push({

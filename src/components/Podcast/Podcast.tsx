@@ -1,14 +1,16 @@
 import Link from "@bradgarropy/next-link"
-import {usePodcast} from "hooks"
 import Image from "next/image"
 import {FC} from "react"
+import {Podcast as PodcastType} from "types/podcast"
 
-import webDevWeekly from "../../../public/web-dev-weekly.png"
 import styles from "./Podcast.module.css"
 
-const Podcast: FC = () => {
-    const podcast = usePodcast()
+type PodcastProps = {
+    podcast: PodcastType
+}
 
+const Podcast: FC<PodcastProps> = ({podcast}) => {
+    console.log(podcast)
     return (
         <div className={styles.podcast}>
             <Link
@@ -17,9 +19,10 @@ const Podcast: FC = () => {
                 data-testid={podcast.title}
             >
                 <Image
-                    src={webDevWeekly}
+                    src={podcast.image}
                     alt={podcast.title}
-                    placeholder="blur"
+                    width={3000}
+                    height={3000}
                     className={styles.coverImage}
                 />
             </Link>

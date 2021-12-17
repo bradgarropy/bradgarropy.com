@@ -42,6 +42,7 @@
     },
     "dependencies": {
         "@babel/runtime": "^7.16.3",
+        "@bradgarropy/captivate-sdk": "^0.4.0",
         "@bradgarropy/http": "^1.1.0",
         "@bradgarropy/next-link": "^1.0.2",
         "@bradgarropy/next-seo": "^1.2.0",
