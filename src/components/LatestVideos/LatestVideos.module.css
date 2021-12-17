@@ -11,14 +11,15 @@
     }
 }
 
-.thumbnailContainer {
+.thumbnailLink > span {
     overflow: visible !important;
+    display: block !important;
 }
 
 .thumbnail {
     box-sizing: border-box;
     border-radius: 0.3rem;
-    border: 3px solid var(--text);
+    border: 3px solid var(--text) !important;
     background-color: var(--text);
     box-shadow: 3px 3px 0 var(--text);
 }

@@ -17,17 +17,15 @@ const LatestVideos: FC<LatestVideosProps> = ({latestVideos}) => {
                     <Link
                         key={latestVideo.id}
                         to={`https://www.youtube.com/watch?v=${latestVideo.id}`}
+                        className={styles.thumbnailLink}
                     >
-                        <div data-testid={latestVideo.id}>
-                            <Image
-                                src={latestVideo.thumbnail}
-                                alt={latestVideo.title}
-                                width="1280"
-                                height="720"
-                                className={styles.thumbnailContainer}
-                                imgClassName={styles.thumbnail}
-                            />
-                        </div>
+                        <Image
+                            src={latestVideo.thumbnail}
+                            alt={latestVideo.title}
+                            width="1280"
+                            height="720"
+                            className={styles.thumbnail}
+                        />
                     </Link>
                 )
             })}
