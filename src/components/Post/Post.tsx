@@ -27,7 +27,7 @@ const Post: FC<PostProps> = ({post}) => {
     return (
         <article className={styles.post}>
             <PostHeader date={date} topic={topic} title={title} />
-            <PostBody content={html} />
+            <PostBody html={html} />
             <PostFooter slug={slug} />
         </article>
     )

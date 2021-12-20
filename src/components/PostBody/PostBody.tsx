@@ -1,20 +1,21 @@
-import "styles/fancyLinks.css"
-import "styles/twitter.css"
+// import "styles/twitter.css"
 
+import classnames from "classnames"
 import {FC} from "react"
+import LinkStyles from "styles/Link.module.css"
 
-import styles from "./PostBody.module.css"
+import PostBodyStyles from "./PostBody.module.css"
 
 type PostBodyProps = {
-    content: string
+    html: string
 }
 
-const PostBody: FC<PostBodyProps> = ({content}) => {
+const PostBody: FC<PostBodyProps> = ({html}) => {
     return (
         <section
-            className={`fancyLinks ${styles.postBody}`}
+            className={classnames(PostBodyStyles.postBody, LinkStyles.fancy)}
             dangerouslySetInnerHTML={{
-                __html: content,
+                __html: html,
             }}
         />
     )

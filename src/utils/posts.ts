@@ -2,6 +2,7 @@ import fs from "fs"
 import matter from "gray-matter"
 import path from "path"
 import {Post, PostFrontmatter, Topic} from "types/post"
+import {transformMarkdown} from "utils/markdown"
 
 const getLatestPosts = (): PostFrontmatter[] => {
     const postsPath = path.join(process.cwd(), "content/posts")
@@ -53,13 +54,14 @@ const getAllPosts = (): PostFrontmatter[] => {
     return allPosts
 }
 
-const getPostBySlug = (slug: PostFrontmatter["slug"]): Post => {
+const getPostBySlug = async (slug: PostFrontmatter["slug"]): Promise<Post> => {
     const postPath = path.join(process.cwd(), `content/posts/${slug}/index.md`)
 
     const file = matter.read(postPath)
+    const html = await transformMarkdown(file.content)
 
     const post: Post = {
-        html: file.content,
+        html,
         frontmatter: file.data as PostFrontmatter,
     }
 

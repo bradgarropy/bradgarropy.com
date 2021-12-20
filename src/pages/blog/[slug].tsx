@@ -19,9 +19,9 @@ const PostPage: FC<PostPageProps> = ({post}) => {
     )
 }
 
-const getStaticProps: GetStaticProps = context => {
+const getStaticProps: GetStaticProps = async context => {
     const slug = context.params.slug as PostFrontmatter["slug"]
-    const post = getPostBySlug(slug)
+    const post = await getPostBySlug(slug)
 
     return {
         props: {
