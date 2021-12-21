@@ -8,10 +8,12 @@ import remarkRehype from "remark-rehype"
 import * as shiki from "shiki"
 import {unified} from "unified"
 
+const shadesOfPurple =
+    "../../node_modules/shades-of-purple/themes/shades-of-purple-color-theme.json"
+
 const transformMarkdown = async (markdown: string): Promise<string> => {
-    const highlighter = await shiki.getHighlighter({
-        theme: "material-palenight",
-    })
+    const theme = await shiki.loadTheme(shadesOfPurple)
+    const highlighter = await shiki.getHighlighter({theme})
 
     const html = unified()
         .use(remarkParse)

@@ -54,6 +54,12 @@ p {
     margin-bottom: 1.75rem;
 }
 
+pre {
+    padding: 1rem 1.5rem;
+    margin: 1.75rem 0rem;
+    border-radius: 0.5rem;
+}
+
 code {
     line-height: 1.5;
 }
