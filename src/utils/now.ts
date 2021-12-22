@@ -28,12 +28,40 @@ const getLatestNow = async (): Promise<Now> => {
     return latestNow
 }
 
-const getNewerNow = (currentNow: Now): Now => {
-    return null
+const getNewerNow = async (currentNow: Now): Promise<Now | null> => {
+    const nowsPath = path.join(process.cwd(), "content/now")
+    const nows = fs.readdirSync(nowsPath).map(now => now.replace(".md", ""))
+
+    const currentNowIndex = nows.findIndex(
+        now => now === currentNow.frontmatter.date,
+    )
+
+    const slug = nows[currentNowIndex + 1]
+
+    if (!slug) {
+        return null
+    }
+
+    const newerNow = await getNowBySlug(slug)
+    return newerNow
 }
 
-const getOlderNow = (currentNow: Now): Now => {
-    return null
+const getOlderNow = async (currentNow: Now): Promise<Now | null> => {
+    const nowsPath = path.join(process.cwd(), "content/now")
+    const nows = fs.readdirSync(nowsPath).map(now => now.replace(".md", ""))
+
+    const currentNowIndex = nows.findIndex(
+        now => now === currentNow.frontmatter.date,
+    )
+
+    const slug = nows[currentNowIndex - 1]
+
+    if (!slug) {
+        return null
+    }
+
+    const olderNow = await getNowBySlug(slug)
+    return olderNow
 }
 
 export {getLatestNow, getNewerNow, getNowBySlug, getOlderNow}

@@ -23,8 +23,8 @@ const NowPage: FC<NowPageProps> = ({latestNow, newerNow, olderNow}) => {
 
 const getStaticProps: GetStaticProps = async () => {
     const latestNow = await getLatestNow()
-    const newerNow = getNewerNow(latestNow)
-    const olderNow = getOlderNow(latestNow)
+    const newerNow = await getNewerNow(latestNow)
+    const olderNow = await getOlderNow(latestNow)
 
     return {
         props: {
