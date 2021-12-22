@@ -1,18 +1,39 @@
 import SEO from "@bradgarropy/next-seo"
 import Layout from "components/Layout"
 import Now from "components/Now"
-import useNow from "hooks/useNow"
+import {GetStaticProps} from "next"
 import {FC} from "react"
+import {Now as NowType} from "types/now"
+import {getLatestNow, getNewerNow, getOlderNow} from "utils/now"
 
-const NowPage: FC = () => {
-    const now = useNow()
+type NowPageProps = {
+    latestNow: NowType
+    newerNow: NowType
+    olderNow: NowType
+}
 
+const NowPage: FC<NowPageProps> = ({latestNow, newerNow, olderNow}) => {
     return (
         <Layout>
             <SEO title="🧭 now" />
-            <Now now={now} newer={now.previous} older={now.next} />
+            <Now now={latestNow} newer={newerNow} older={olderNow} />
         </Layout>
     )
 }
 
+const getStaticProps: GetStaticProps = async () => {
+    const latestNow = await getLatestNow()
+    const newerNow = getNewerNow(latestNow)
+    const olderNow = getOlderNow(latestNow)
+
+    return {
+        props: {
+            latestNow,
+            newerNow,
+            olderNow,
+        },
+    }
+}
+
 export default NowPage
+export {getStaticProps}

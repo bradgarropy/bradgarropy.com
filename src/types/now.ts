@@ -1,10 +1,10 @@
 type Now = {
     html: string
-    frontmatter: {
-        date: string
-    }
-    previous?: string
-    next?: string
+    frontmatter: NowFrontmatter
 }
 
-export type {Now}
+type NowFrontmatter = {
+    date: string
+}
+
+export type {Now, NowFrontmatter}

@@ -1,16 +1,16 @@
-import "styles/fancyLinks.css"
-
 import Link from "@bradgarropy/next-link"
 import LinkButton from "components/LinkButton"
 import {FC} from "react"
+import LinkStyles from "styles/Link.module.css"
 import {Now as NowType} from "types/now"
+import {formatDate} from "utils/date"
 
 import styles from "./Now.module.css"
 
 type NowProps = {
-    now: Pick<NowType, "html" | "frontmatter">
-    newer?: NowType["previous"]
-    older?: NowType["next"]
+    now: NowType
+    newer: NowType
+    older: NowType
 }
 
 const Now: FC<NowProps> = ({now, newer, older}) => {
@@ -20,20 +20,27 @@ const Now: FC<NowProps> = ({now, newer, older}) => {
         <>
             <div className={styles.header}>
                 <h1>🧭 now</h1>
-                <span>{frontmatter.date}</span>
+                <span>{formatDate(frontmatter.date)}</span>
             </div>
 
             <div
-                className="fancyLinks"
+                className={LinkStyles.fancy}
                 dangerouslySetInnerHTML={{__html: html}}
             />
 
             <div className={styles.footer}>
-                <LinkButton to={`/now/${newer}`} disabled={!newer}>
+                <LinkButton
+                    to={`/now/${newer?.frontmatter.date}`}
+                    disabled={!newer}
+                >
                     👈🏼 newer
                 </LinkButton>
 
-                <LinkButton to={`/now/${older}`} reverse disabled={!older}>
+                <LinkButton
+                    to={`/now/${older?.frontmatter.date}`}
+                    reverse
+                    disabled={!older}
+                >
                     older 👉🏼
                 </LinkButton>
             </div>
