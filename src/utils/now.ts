@@ -4,6 +4,13 @@ import path from "path"
 import {Now, NowFrontmatter} from "types/now"
 import {transformMarkdown} from "utils/markdown"
 
+const getAllNows = (): NowFrontmatter["date"][] => {
+    const nowsPath = path.join(process.cwd(), "content/now")
+    const nows = fs.readdirSync(nowsPath).map(now => now.replace(".md", ""))
+
+    return nows
+}
+
 const getNowBySlug = async (slug: NowFrontmatter["date"]): Promise<Now> => {
     const nowPath = path.join(process.cwd(), `content/now/${slug}.md`)
 
@@ -64,4 +71,4 @@ const getOlderNow = async (currentNow: Now): Promise<Now | null> => {
     return olderNow
 }
 
-export {getLatestNow, getNewerNow, getNowBySlug, getOlderNow}
+export {getAllNows, getLatestNow, getNewerNow, getNowBySlug, getOlderNow}
