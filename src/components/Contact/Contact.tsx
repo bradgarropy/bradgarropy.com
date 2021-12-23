@@ -1,17 +1,19 @@
-import "styles/fancyLinks.css"
-
-import {useContact} from "hooks"
+import classnames from "classnames"
 import {FC} from "react"
+import LinkStyles from "styles/Link.module.css"
+import {Markdown} from "types/markdown"
 
 import styles from "./Contact.module.css"
 
-const Contact: FC = () => {
-    const contact = useContact()
+type ContactProps = {
+    contact: Markdown
+}
 
+const Contact: FC<ContactProps> = ({contact}) => {
     return (
         <div
-            className={`fancyLinks ${styles.contact}`}
-            dangerouslySetInnerHTML={{__html: contact}}
+            className={classnames(LinkStyles.fancy, styles.contact)}
+            dangerouslySetInnerHTML={{__html: contact.html}}
         />
     )
 }

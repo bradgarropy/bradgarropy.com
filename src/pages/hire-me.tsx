@@ -1,11 +1,16 @@
-import "styles/fancyLinks.css"
-
 import SEO from "@bradgarropy/next-seo"
 import HireMe from "components/HireMe"
 import Layout from "components/Layout"
+import {GetStaticProps} from "next"
 import {FC} from "react"
+import {Markdown} from "types/markdown"
+import {getMarkdownBySlug} from "utils/markdown"
 
-const HireMePage: FC = () => {
+type HireMePageProps = {
+    hireMe: Markdown
+}
+
+const HireMePage: FC<HireMePageProps> = ({hireMe}) => {
     return (
         <Layout>
             <SEO
@@ -19,9 +24,20 @@ const HireMePage: FC = () => {
                 }}
             />
 
-            <HireMe />
+            <HireMe hireMe={hireMe} testimonials={[]} />
         </Layout>
     )
 }
 
+const getStaticProps: GetStaticProps = async () => {
+    const hireMe = await getMarkdownBySlug("hire-me")
+
+    return {
+        props: {
+            hireMe,
+        },
+    }
+}
+
 export default HireMePage
+export {getStaticProps}

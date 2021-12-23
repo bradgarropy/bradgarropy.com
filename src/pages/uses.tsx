@@ -1,30 +1,37 @@
-import "styles/fancyLinks.css"
-
 import SEO from "@bradgarropy/next-seo"
 import Layout from "components/Layout"
+import {GetStaticProps} from "next"
 import {FC} from "react"
+import LinkStyles from "styles/Link.module.css"
+import {Markdown} from "types/markdown"
+import {getMarkdownBySlug} from "utils/markdown"
 
 type UsesPageProps = {
-    data: {
-        uses: {
-            html: string
-        }
-    }
+    uses: Markdown
 }
 
-const UsesPage: FC<UsesPageProps> = ({data}) => {
-    const {html} = data.uses
-
+const UsesPage: FC<UsesPageProps> = ({uses}) => {
     return (
         <Layout>
             <SEO title="💠 uses" />
 
             <div
-                className="fancyLinks"
-                dangerouslySetInnerHTML={{__html: html}}
+                className={LinkStyles.fancy}
+                dangerouslySetInnerHTML={{__html: uses.html}}
             />
         </Layout>
     )
 }
 
+const getStaticProps: GetStaticProps = async () => {
+    const uses = await getMarkdownBySlug("uses")
+
+    return {
+        props: {
+            uses,
+        },
+    }
+}
+
 export default UsesPage
+export {getStaticProps}

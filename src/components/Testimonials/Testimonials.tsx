@@ -1,9 +1,9 @@
-import "styles/fancyLinks.css"
-
 import Link from "@bradgarropy/next-link"
+import classNames from "classnames"
 import Image from "next/image"
 import {FC} from "react"
 import slugify from "slugify"
+import LinkStyles from "styles/Link.module.css"
 import {Testimonial} from "types/testimonial"
 
 import styles from "./Testimonials.module.css"
@@ -38,7 +38,10 @@ const Testimonials: FC<TestimonialsProps> = ({testimonials}) => {
                         </div>
 
                         <div
-                            className={`fancyLinks ${styles.quote}`}
+                            className={classNames(
+                                LinkStyles.fancy,
+                                styles.quote,
+                            )}
                             dangerouslySetInnerHTML={{
                                 __html: testimonial.html,
                             }}

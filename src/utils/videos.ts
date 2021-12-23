@@ -26,6 +26,7 @@ const getLatestVideos = async (): Promise<Video[]> => {
             ),
             title: item.snippet.title,
         }
+
         return video
     })
 
