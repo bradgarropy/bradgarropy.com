@@ -11,8 +11,9 @@ const getTestimonials = async (): Promise<Testimonial[]> => {
     const testimonialPaths = fs.readdirSync(testimonialsPath).map(slug => {
         const testimonialPath = path.join(
             process.cwd(),
-            `content/testimonials/${slug}/index.md`,
+            `content/testimonials/${slug}`,
         )
+
         return testimonialPath
     })
 
