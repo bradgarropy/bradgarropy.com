@@ -1,8 +1,8 @@
-import "styles/fancyLinks.css"
-
 import Link from "@bradgarropy/next-link"
+import classnames from "classnames"
 import Section from "components/Section"
 import {FC} from "react"
+import LinkStyles from "styles/Link.module.css"
 import {Sponsors as SponsorsType} from "types/sponsor"
 
 import styles from "./Sponsors.module.css"
@@ -15,7 +15,7 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
     return (
         <>
             <Section
-                className={`fancyLinks ${styles.thanks}`}
+                className={classnames(styles.thanks, LinkStyles.fancy)}
                 title="💜 thank you"
             >
                 <p>
@@ -24,6 +24,7 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                     will go directly towards improving the quality of my work,
                     and encouraging more frequent updates.
                 </p>
+
                 <p>
                     If you want to support me and be featured on this page go{" "}
                     <Link to="https://bradgarropy.com/sponsor">sponsor</Link>{" "}
@@ -53,7 +54,7 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                                 </Link>
                             ))
                         ) : (
-                            <p className="fancyLinks">
+                            <p className={LinkStyles.fancy}>
                                 Nobody yet,{" "}
                                 <Link to="https://bradgarropy.com/sponsor">
                                     be the first

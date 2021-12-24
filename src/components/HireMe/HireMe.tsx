@@ -3,12 +3,13 @@ import Testimonials from "components/Testimonials"
 import {FC} from "react"
 import LinkStyles from "styles/Link.module.css"
 import {Markdown} from "types/markdown"
+import {Testimonial} from "types/testimonial"
 
 import styles from "./HireMe.module.css"
 
 type HireMeProps = {
     hireMe: Markdown
-    testimonials
+    testimonials: Testimonial[]
 }
 
 const HireMe: FC<HireMeProps> = ({hireMe, testimonials}) => {

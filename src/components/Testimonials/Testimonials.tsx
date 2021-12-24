@@ -1,5 +1,5 @@
 import Link from "@bradgarropy/next-link"
-import classNames from "classnames"
+import classnames from "classnames"
 import Image from "next/image"
 import {FC} from "react"
 import slugify from "slugify"
@@ -16,29 +16,31 @@ const Testimonials: FC<TestimonialsProps> = ({testimonials}) => {
     return (
         <div className={styles.testimonials}>
             {testimonials.map(testimonial => {
-                const slug = slugify(testimonial.name.toLowerCase())
+                const slug = slugify(testimonial.frontmatter.name.toLowerCase())
 
                 return (
                     <Link
                         className={styles.testimonial}
                         id={slug}
-                        key={testimonial.name}
-                        to={testimonial.profile}
+                        key={testimonial.frontmatter.name}
+                        to={testimonial.frontmatter.profile}
                     >
                         <div className={styles.header}>
                             <Image
-                                src={testimonial.photo}
-                                alt={testimonial.name}
-                                placeholder="blur"
-                                className={styles.photoContainer}
-                                imgClassName={styles.photo}
+                                src={testimonial.frontmatter.photo}
+                                width="460"
+                                height="460"
+                                alt={testimonial.frontmatter.name}
+                                className={styles.photo}
                             />
 
-                            <p className={styles.name}>{testimonial.name}</p>
+                            <p className={styles.name}>
+                                {testimonial.frontmatter.name}
+                            </p>
                         </div>
 
                         <div
-                            className={classNames(
+                            className={classnames(
                                 LinkStyles.fancy,
                                 styles.quote,
                             )}

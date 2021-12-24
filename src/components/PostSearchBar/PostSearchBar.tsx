@@ -1,4 +1,4 @@
-import classNames from "classnames"
+import classnames from "classnames"
 import Fuse from "fuse.js"
 import {useRouter} from "next/router"
 import {FC, useEffect} from "react"
@@ -53,7 +53,7 @@ const PostSearchBar: FC<PostSearchBarProps> = ({posts, onSearch}) => {
 
     return (
         <input
-            className={classNames(
+            className={classnames(
                 InputStyles.input,
                 PostSearchBarStyles.search,
             )}

@@ -1,8 +1,12 @@
 type Testimonial = {
-    name: string
-    profile: string
-    photo: unknown
     html: string
+    frontmatter: TestimonialFrontmatter
 }
 
-export type {Testimonial}
+type TestimonialFrontmatter = {
+    name: string
+    profile: string
+    photo: string
+}
+
+export type {Testimonial, TestimonialFrontmatter}
