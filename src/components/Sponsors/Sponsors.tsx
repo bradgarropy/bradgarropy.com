@@ -36,23 +36,25 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                 {Object.entries(sponsors).map(([frequency, sponsors]) => (
                     <Section key={frequency} title={frequency}>
                         {sponsors.length ? (
-                            sponsors.map(sponsor => (
-                                <Link
-                                    className={styles.sponsor}
-                                    key={sponsor.username}
-                                    to={sponsor.profile}
-                                >
-                                    <img
-                                        className={styles.avatar}
-                                        src={sponsor.avatar}
-                                        alt={sponsor.username}
-                                    />
+                            <div className={styles.sponsors}>
+                                {sponsors.map(sponsor => (
+                                    <Link
+                                        className={styles.sponsor}
+                                        key={sponsor.username}
+                                        to={sponsor.profile}
+                                    >
+                                        <img
+                                            className={styles.avatar}
+                                            src={sponsor.avatar}
+                                            alt={sponsor.username}
+                                        />
 
-                                    <span className={styles.tier}>
-                                        {sponsor.tier}
-                                    </span>
-                                </Link>
-                            ))
+                                        <span className={styles.tier}>
+                                            {sponsor.tier}
+                                        </span>
+                                    </Link>
+                                ))}
+                            </div>
                         ) : (
                             <p className={LinkStyles.fancy}>
                                 Nobody yet,{" "}
