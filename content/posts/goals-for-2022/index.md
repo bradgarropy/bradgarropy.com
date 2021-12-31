@@ -1,7 +1,7 @@
 ---
 title: 🏆 goals for 2022
 slug: goals-for-2022
-date: 2021-12-29
+date: 2021-12-30
 topic:
     name: life
     icon: 😎
@@ -59,7 +59,7 @@ Additionally, I want my channel to become monetized. So I also need 4000 watch h
 
 ## 💰 side income
 
-In order to create a sustainable stream of side income, I need to create as many different streams of income as possible. To that end, I want to reintroduce Amazon affiliate links into my content. The first time I tried I didn't have enough traffic to my website or YouTube channel to generate revenue.
+In order to create sustainable side income, I need to create as many different streams of income as possible. To that end, I want to reintroduce Amazon affiliate links into my content. The first time I tried I didn't have enough traffic to my website or YouTube channel to generate any revenue.
 
 I want to meticulously track all these different streams of income, and my goal is to earn a total of $1000 in 2022 from side hustles.
 
