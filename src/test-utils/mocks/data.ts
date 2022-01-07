@@ -60,12 +60,12 @@ const mockVideos: Video[] = [
     {
         id: "abc123",
         title: "first test video",
-        thumbnail: expect.any(Object),
+        thumbnail: "https://example.com/first.jpg",
     },
     {
         id: "def456",
         title: "second test video",
-        thumbnail: expect.any(Object),
+        thumbnail: "https://example.com/second.jpg",
     },
 ]
 
