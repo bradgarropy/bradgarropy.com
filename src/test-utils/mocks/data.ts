@@ -9,9 +9,9 @@ import {Video} from "types/video"
 
 const mockPosts: Post[] = [
     {
-        html: "<p>first test post</p>",
+        html: "<p>This is the first test post.</p>",
         frontmatter: {
-            date: "January 1, 2021",
+            date: "2021-01-01",
             slug: "first-test-post",
             title: "first test post",
             topic: {
@@ -21,9 +21,9 @@ const mockPosts: Post[] = [
         },
     },
     {
-        html: "<p>second test post</p>",
+        html: "<p>This is the second test post.</p>",
         frontmatter: {
-            date: "February 1, 2021",
+            date: "2021-02-01",
             slug: "second-test-post",
             title: "second test post",
             topic: {
@@ -33,9 +33,9 @@ const mockPosts: Post[] = [
         },
     },
     {
-        html: "<p>third test post</p>",
+        html: "<p>This is the third test post.</p>",
         frontmatter: {
-            date: "March 1, 2021",
+            date: "2021-03-01",
             slug: "third-test-post",
             title: "third test post",
             topic: {
@@ -255,9 +255,23 @@ const mockTestimonials: Testimonial[] = [
 ]
 
 const mockNow: Now = {
-    html: "<p>testing<p>",
+    html: "<p>This is a now.<p>",
     frontmatter: {
-        date: "December 31, 2020",
+        date: "2020-12-31",
+    },
+}
+
+const mockNewerNow: Now = {
+    html: "<p>This is a newer now.<p>",
+    frontmatter: {
+        date: "2021-01-01",
+    },
+}
+
+const mockOlderNow: Now = {
+    html: "<p>This is an older now.<p>",
+    frontmatter: {
+        date: "2020-12-30",
     },
 }
 
@@ -271,7 +285,9 @@ export {
     mockContact,
     mockHireMe,
     mockMeta,
+    mockNewerNow,
     mockNow,
+    mockOlderNow,
     mockPodcast,
     mockPost,
     mockPosts,

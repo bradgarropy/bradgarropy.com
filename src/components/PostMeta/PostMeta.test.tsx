@@ -1,26 +1,29 @@
 import {render, screen} from "@testing-library/react"
+import {mockPost} from "test-utils/mocks"
 
 import PostMeta from "./PostMeta"
 
-const mockDate = "January 1, 2021"
-
-const mockTopic = {
-    icon: "😎",
-    name: "life",
-}
-
 test("shows meta", () => {
-    render(<PostMeta date={mockDate} topic={mockTopic} />)
+    render(
+        <PostMeta
+            date={mockPost.frontmatter.date}
+            topic={mockPost.frontmatter.topic}
+        />,
+    )
 
-    expect(screen.getByText(mockDate, {exact: false}))
-    expect(screen.getByText(`#${mockTopic.name}`))
+    expect(screen.getByText("January 1, 2021", {exact: false}))
+    expect(screen.getByText(`#${mockPost.frontmatter.topic.name}`))
 })
 
 test("links to topic", () => {
-    render(<PostMeta date={mockDate} topic={mockTopic} />)
-
-    expect(screen.getByText(`#${mockTopic.name}`)).toHaveAttribute(
-        "href",
-        `/topic/${mockTopic.name}`,
+    render(
+        <PostMeta
+            date={mockPost.frontmatter.date}
+            topic={mockPost.frontmatter.topic}
+        />,
     )
+
+    expect(
+        screen.getByText(`#${mockPost.frontmatter.topic.name}`),
+    ).toHaveAttribute("href", `/topic/${mockPost.frontmatter.topic.name}`)
 })

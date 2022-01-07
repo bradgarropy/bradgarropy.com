@@ -6,7 +6,7 @@ test("shows name", () => {
     render(<Testimonials testimonials={mockTestimonials} />)
 
     mockTestimonials.forEach(testimonial => [
-        expect(screen.getByText(testimonial.name)),
+        expect(screen.getByText(testimonial.frontmatter.name)),
     ])
 })
 
@@ -14,7 +14,7 @@ test("shows photo", () => {
     render(<Testimonials testimonials={mockTestimonials} />)
 
     mockTestimonials.forEach(testimonial => [
-        expect(screen.getByAltText(testimonial.name)),
+        expect(screen.getByAltText(testimonial.frontmatter.name)),
     ])
 })
 
@@ -30,7 +30,7 @@ test("links to profile", () => {
 
     mockTestimonials.forEach(testimonial => [
         expect(
-            screen.getByText(testimonial.name).parentElement.parentElement,
-        ).toHaveAttribute("href", testimonial.profile),
+            screen.getByText(testimonial.frontmatter.name).parentElement.parentElement,
+        ).toHaveAttribute("href", testimonial.frontmatter.profile),
     ])
 })

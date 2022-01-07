@@ -5,5 +5,5 @@ import PostBody from "./PostBody"
 
 test("shows post body", () => {
     render(<PostBody html={mockPost.html} />)
-    expect(screen.getByText("first test post"))
+    expect(screen.getByText("This is the first test post."))
 })

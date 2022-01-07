@@ -1,44 +1,34 @@
 import {render, screen} from "@testing-library/react"
+import {mockPost} from "test-utils/mocks"
 
 import PostHeader from "./PostHeader"
-
-const mockFrontmatter = {
-    slug: "my-test-post",
-    title: "🧪 My Test Post",
-    date: "January 1, 2021",
-    topic: {
-        icon: "😎",
-        name: "life",
-    },
-}
 
 test("shows meta", () => {
     render(
         <PostHeader
-            date={mockFrontmatter.date}
-            topic={mockFrontmatter.topic}
-            title={mockFrontmatter.title}
-            slug={mockFrontmatter.slug}
+            date={mockPost.frontmatter.date}
+            topic={mockPost.frontmatter.topic}
+            title={mockPost.frontmatter.title}
+            slug={mockPost.frontmatter.slug}
         />,
     )
 
-    expect(screen.getByText(mockFrontmatter.date, {exact: false}))
-    expect(screen.getByText(`#${mockFrontmatter.topic.name}`))
-    expect(screen.getByText(mockFrontmatter.title))
+    expect(screen.getByText("January 1, 2021", {exact: false}))
+    expect(screen.getByText(`#${mockPost.frontmatter.topic.name}`))
+    expect(screen.getByText(mockPost.frontmatter.title))
 })
 
 test("links to topic", () => {
     render(
         <PostHeader
-            date={mockFrontmatter.date}
-            topic={mockFrontmatter.topic}
-            title={mockFrontmatter.title}
-            slug={mockFrontmatter.slug}
+            date={mockPost.frontmatter.date}
+            topic={mockPost.frontmatter.topic}
+            title={mockPost.frontmatter.title}
+            slug={mockPost.frontmatter.slug}
         />,
     )
 
-    expect(screen.getByText(`#${mockFrontmatter.topic.name}`)).toHaveAttribute(
-        "href",
-        `/topic/${mockFrontmatter.topic.name}`,
-    )
+    expect(
+        screen.getByText(`#${mockPost.frontmatter.topic.name}`),
+    ).toHaveAttribute("href", `/topic/${mockPost.frontmatter.topic.name}`)
 })
