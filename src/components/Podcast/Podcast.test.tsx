@@ -5,11 +5,10 @@ import {mockPodcast} from "test-utils/mocks"
 test("shows podcast", () => {
     render(<Podcast podcast={mockPodcast} />)
 
-    expect(screen.getByTestId(mockPodcast.title)).toHaveAttribute(
-        "href",
-        mockPodcast.link,
-    )
+    const podcastCover = screen.getByAltText(mockPodcast.title)
+    const podcastLink = podcastCover.parentElement.parentElement
 
+    expect(podcastLink).toHaveAttribute("href", mockPodcast.link)
     expect(screen.getByText("a weekly podcast about web development hosted by"))
 
     expect(screen.getByText("brad garropy")).toHaveAttribute(

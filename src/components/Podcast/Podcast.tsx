@@ -12,11 +12,7 @@ type PodcastProps = {
 const Podcast: FC<PodcastProps> = ({podcast}) => {
     return (
         <div className={styles.podcast}>
-            <Link
-                to={podcast.link}
-                className={styles.podcastLink}
-                data-testid={podcast.title}
-            >
+            <Link to={podcast.link} className={styles.podcastLink}>
                 <Image
                     src={podcast.image}
                     alt={podcast.title}
