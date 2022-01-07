@@ -1,10 +1,6 @@
 import {renderHook} from "@testing-library/react-hooks"
-import {useStaticQuery} from "gatsby"
 import {useMeta} from "hooks"
-import {mockMeta, mockMetaQuery} from "test-utils/mocks"
-
-const mockUseStaticQuery = useStaticQuery as jest.Mock
-mockUseStaticQuery.mockReturnValue(mockMetaQuery)
+import {mockMeta} from "test-utils/mocks"
 
 test("returns metadata", () => {
     const {result} = renderHook(() => useMeta())

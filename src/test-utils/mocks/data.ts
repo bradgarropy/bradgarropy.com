@@ -1,7 +1,7 @@
 import {Meta} from "types/meta"
 import {Now} from "types/now"
 import {Podcast} from "types/podcast"
-import {Post, Topic} from "types/post"
+import {Post, PostFrontmatter, Topic} from "types/post"
 import {Project} from "types/project"
 import {Sponsors} from "types/sponsor"
 import {Testimonial} from "types/testimonial"
@@ -45,6 +45,12 @@ const mockPosts: Post[] = [
         },
     },
 ]
+
+const mockPostsFrontmatter: PostFrontmatter[] = mockPosts.map(
+    mockPost => mockPost.frontmatter,
+)
+
+const mockPost: Post = mockPosts[0]
 
 const mockMeta: Meta = {
     siteUrl: "https://bradgarropy.com",
@@ -216,36 +222,43 @@ const mockChannelStatus = {isLive: true}
 
 const mockHireMe = {
     html: "<p>hire me</p>",
+    frontmatter: {},
 }
 
 const mockContact = {
     html: "<p>contact</p>",
+    frontmatter: {},
 }
 
 const mockResume = {
     html: "<p>resume</p>",
+    frontmatter: {},
 }
 
 const mockTestimonials: Testimonial[] = [
     {
-        name: "First Test User",
-        profile: "https://twitter.com/first-test-user",
-        photo: {},
         html: "<p>First test review.</p>",
+        frontmatter: {
+            name: "First Test User",
+            profile: "https://twitter.com/first-test-user",
+            photo: "https://twitter.com/first-test-user.jpg",
+        },
     },
     {
-        name: "Second Test User",
-        profile: "https://twitter.com/second-test-user",
-        photo: {},
         html: "<p>Second test review.</p>",
+        frontmatter: {
+            name: "Second Test User",
+            profile: "https://twitter.com/second-test-user",
+            photo: "https://twitter.com/second-test-user.jpg",
+        },
     },
 ]
 
 const mockNow: Now = {
     html: "<p>testing<p>",
-    frontmatter: {date: "December 31, 2020"},
-    previous: "2020-12-25",
-    next: "2021-01-01",
+    frontmatter: {
+        date: "December 31, 2020",
+    },
 }
 
 const mockTopic: Topic = {
@@ -260,7 +273,9 @@ export {
     mockMeta,
     mockNow,
     mockPodcast,
+    mockPost,
     mockPosts,
+    mockPostsFrontmatter,
     mockProjects,
     mockResume,
     mockSponsors,

@@ -1,13 +1,9 @@
 import {render, screen} from "@testing-library/react"
 import Podcast from "components/Podcast"
-import {useStaticQuery} from "gatsby"
-import {mockPodcast, mockPodcastQuery} from "test-utils/mocks"
-
-const mockStaticQuery = useStaticQuery as jest.Mock
-mockStaticQuery.mockReturnValue(mockPodcastQuery)
+import {mockPodcast} from "test-utils/mocks"
 
 test("shows podcast", () => {
-    render(<Podcast />)
+    render(<Podcast podcast={mockPodcast} />)
 
     expect(screen.getByTestId(mockPodcast.title)).toHaveAttribute(
         "href",

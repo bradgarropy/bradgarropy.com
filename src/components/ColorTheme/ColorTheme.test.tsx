@@ -4,14 +4,23 @@ import ColorTheme from "components/ColorTheme"
 import {useApp} from "hooks"
 import {generateAppCtx} from "test-utils/generators"
 
+console.log(useApp)
+
 const mockAppCtxLight = generateAppCtx({theme: "light"})
 const mockAppCtxDark = generateAppCtx({theme: "dark"})
 
+console.log(mockAppCtxLight)
+console.log(mockAppCtxDark)
+
 jest.mock("hooks")
 
+console.log(useApp)
+
 const mockUseApp = useApp as jest.Mock
+console.log(mockUseApp)
 
 test("toggles dark mode", () => {
+    console.log(mockUseApp)
     mockUseApp.mockReturnValue(mockAppCtxLight)
 
     render(<ColorTheme />)

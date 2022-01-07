@@ -1,11 +1,11 @@
 import PostTitle from "components/PostTitle"
 import {FC} from "react"
-import {LatestPost} from "types/post"
+import {PostFrontmatter} from "types/post"
 
 import styles from "./LatestPosts.module.css"
 
 type LatestPostsProps = {
-    latestPosts: LatestPost[]
+    latestPosts: PostFrontmatter[]
 }
 
 const LatestPosts: FC<LatestPostsProps> = ({latestPosts}) => {
