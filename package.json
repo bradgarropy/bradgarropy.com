@@ -30,7 +30,6 @@
     "scripts": {
         "start": "next",
         "build": "next build",
-        "netlify": "npm run build",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
         "format": "prettier --check .",
