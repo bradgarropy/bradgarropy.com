@@ -13,7 +13,7 @@ After I posted about how I set up the [👀 contentful preview api with gatsby +
 
 I really had no clue where to start. So a quick search for gatsby syntax highlighting pulled up [Prism][2]. It turned out [Gatsby][3] already had a [plugin][4] for that! I installed the package with `npm i gatsby-remark-prismjs`, then added an option under the [remark][5] plugin that I already had installed.
 
-```javascript{5-11}
+```javascript {5-11}
 // gatsby-config.js
 
 {
@@ -30,7 +30,7 @@ I really had no clue where to start. So a quick search for gatsby syntax highlig
 
 Next I had to actually style the code. So I browsed Prism's [themes][6] and picked out [prism-funky][7]. I copied the file into my project and made some [modifications][8] to the colors and background. In order for Prism to pick up the styles, I had to import the CSS file anywhere code would be displayed, like in my `<PostBody/>` component.
 
-```javascript{5}
+```javascript {5}
 // components/PostBody.jsx
 
 // styles

@@ -15,7 +15,7 @@ https://codesandbox.io/s/my-favorite-layout-h3fpz?fontsize=14&hidenavigation=1&m
 
 I start by scaffolding out the `App` component into the three main sections: `Header`, `Content`, and `Footer`.
 
-```javascript{5-7}
+```javascript {5-7}
 const App = () => {
     return (
         <BrowserRouter>
@@ -31,7 +31,7 @@ const App = () => {
 
 Then I define a row based grid, where the `Header` and `Footer` take up only the space they need with `auto`, and the `Content` takes up the rest of the space with `1fr`. It's also very important to specify `min-height: 100vh`. This ensures that no matter how short the content is, the grid will take up the entire height of the viewport, keeping the `Footer` at the bottom.
 
-```css{3-5}
+```css {3-5}
 .app {
     font-family: sans-serif;
     display: grid;

@@ -1,4 +1,4 @@
-import remarkShiki from "@stefanprobst/remark-shiki"
+import {remarkPlugin as remarkVscode} from "gatsby-remark-vscode"
 import matter from "gray-matter"
 import path from "path"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
@@ -8,12 +8,8 @@ import rehypeStringify from "rehype-stringify"
 import remarkGfm from "remark-gfm"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
-import * as shiki from "shiki"
 import {Markdown} from "types/markdown"
 import {unified} from "unified"
-
-const shadesOfPurple =
-    "../../node_modules/shades-of-purple/themes/shades-of-purple-color-theme.json"
 
 const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
     const nowPath = path.join(process.cwd(), `content/pages/${slug}/index.md`)
@@ -30,20 +26,21 @@ const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
 }
 
 const transformMarkdown = async (markdown: string): Promise<string> => {
-    const theme = await shiki.loadTheme(shadesOfPurple)
-    const highlighter = await shiki.getHighlighter({theme})
-
-    const html = unified()
+    const processor = unified()
         .use(remarkParse)
         .use(remarkGfm)
-        .use(remarkShiki, {highlighter})
+        .use(remarkVscode, {
+            theme: "Shades of Purple",
+            extensions: ["shades-of-purple"],
+        })
         .use(remarkRehype, {allowDangerousHtml: true})
         .use(rehypeSlug)
         .use(rehypeAutolinkHeadings)
         .use(rehypeRaw)
         .use(rehypeStringify)
-        .processSync(markdown)
-        .toString()
+
+    const file = await processor.process(markdown)
+    const html = file.toString()
 
     return html
 }

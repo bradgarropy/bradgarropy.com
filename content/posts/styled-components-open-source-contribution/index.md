@@ -13,7 +13,7 @@ It's been a while since I've contributed to open source, but recently I was goin
 
 Even after reading the [documentation][4], it took me too long to figure out that `<ThemeProvider>` is required to return a single child node.
 
-```jsx{2,9}
+```jsx {2,9}
 <ThemeProvider theme={theme}>
     <React.Fragment>
         <GlobalStyle />

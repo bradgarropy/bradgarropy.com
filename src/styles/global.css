@@ -12,6 +12,11 @@
     --text: var(--black);
     --background: var(--white);
     --snow: var(--grey);
+
+    /* highlighting */
+    --grvsc-line-highlighted-background-color: #c792ea66;
+    --grvsc-line-highlighted-border-color: var(--primary);
+    --grvsc-line-highlighted-border-width: 4px;
 }
 
 * {
@@ -54,21 +59,8 @@ p {
     margin-bottom: 1.75rem;
 }
 
-pre {
-    padding: 1rem 1.5rem;
-    margin: 1.75rem 0rem;
-    border-radius: 0.5rem;
-}
-
 code {
     line-height: 1.5;
-}
-
-code:not(pre.shiki > code) {
-    background: #2d2b55;
-    color: #fad000;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.3rem;
 }
 
 a {

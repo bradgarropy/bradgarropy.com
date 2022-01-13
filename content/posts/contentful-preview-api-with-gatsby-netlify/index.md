@@ -62,7 +62,7 @@ Boom, I pushed this code and I had [dev.bradgarropy.com][4] up and running with 
 
 I wasn't done yet, beacuse I still needed support for the Content Preview API in my local development environment. [Gatsby][8] accepts [environment variables][9] from `.env` files, which are loaded based on the `NODE_ENV`. So I created these files.
 
-```ini{3}
+```ini {3}
 ; .env.production
 
 CONTEXT=production
@@ -73,7 +73,7 @@ CONTENTFUL_PREVIEW_HOST=preview.contentful.com
 CONTENTFUL_PREVIEW_TOKEN=<preview token>
 ```
 
-```ini{3}
+```ini {3}
 ; .env.development
 
 CONTEXT=branch-deploy
