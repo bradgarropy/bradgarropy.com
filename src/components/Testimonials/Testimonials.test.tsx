@@ -30,7 +30,8 @@ test("links to profile", () => {
 
     mockTestimonials.forEach(testimonial => [
         expect(
-            screen.getByText(testimonial.frontmatter.name).parentElement.parentElement,
+            screen.getByText(testimonial.frontmatter.name).parentElement
+                .parentElement,
         ).toHaveAttribute("href", testimonial.frontmatter.profile),
     ])
 })
