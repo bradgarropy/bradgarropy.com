@@ -44,12 +44,6 @@ const config = {
                             customTransformers: [twitch, youtube],
                         },
                     },
-                    {
-                        resolve: "gatsby-remark-external-links",
-                        options: {
-                            rel: "noopener noreferrer",
-                        },
-                    },
                 ],
             },
         },
