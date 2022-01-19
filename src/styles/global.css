@@ -112,7 +112,17 @@ td:last-child {
     background-color: var(--primary);
 }
 
-/* responsive iframes */
+/* embeds */
+.codesandbox > iframe {
+    display: grid;
+    width: 100%;
+    height: 500px;
+    border: none;
+    margin: 1.75rem auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
 .twitch,
 .youtube {
     overflow: hidden;
