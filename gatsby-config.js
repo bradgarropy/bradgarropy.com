@@ -1,8 +1,3 @@
-require("dotenv").config()
-
-const twitch = require("./src/transformers/twitch")
-const youtube = require("./src/transformers/youtube")
-
 const config = {
     plugins: [
         {
@@ -38,17 +33,8 @@ const config = {
                             removeAccents: true,
                         },
                     },
-                    {
-                        resolve: "gatsby-remark-embedder",
-                        options: {
-                            customTransformers: [twitch, youtube],
-                        },
-                    },
                 ],
             },
-        },
-        {
-            resolve: "gatsby-plugin-twitter",
         },
         {
             resolve: "gatsby-plugin-image",
