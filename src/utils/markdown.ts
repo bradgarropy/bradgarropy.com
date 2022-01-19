@@ -1,4 +1,5 @@
 import remarkEmbedder from "@remark-embedder/core"
+import codeSandboxTransformer from "@remark-embedder/transformer-codesandbox"
 import {remarkPlugin as remarkVscode} from "gatsby-remark-vscode"
 import matter from "gray-matter"
 import path from "path"
@@ -35,7 +36,11 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         .use(remarkEmbedder, {
-            transformers: [twitchTransformer, youtubeTransformer],
+            transformers: [
+                codeSandboxTransformer,
+                twitchTransformer,
+                youtubeTransformer,
+            ],
         })
         .use(remarkVscode, {
             theme: "Shades of Purple",
