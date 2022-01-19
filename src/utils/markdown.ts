@@ -1,3 +1,4 @@
+import remarkEmbedder from "@remark-embedder/core"
 import {remarkPlugin as remarkVscode} from "gatsby-remark-vscode"
 import matter from "gray-matter"
 import path from "path"
@@ -9,6 +10,7 @@ import rehypeStringify from "rehype-stringify"
 import remarkGfm from "remark-gfm"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
+import {twitchTransformer} from "transformers"
 import {Markdown} from "types/markdown"
 import {unified} from "unified"
 
@@ -30,6 +32,11 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
     const processor = unified()
         .use(remarkParse)
         .use(remarkGfm)
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        .use(remarkEmbedder, {
+            transformers: [twitchTransformer],
+        })
         .use(remarkVscode, {
             theme: "Shades of Purple",
             extensions: ["shades-of-purple"],

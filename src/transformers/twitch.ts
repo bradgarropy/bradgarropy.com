@@ -1,5 +1,3 @@
-const name = "custom twitch"
-
 const shouldTransform = url => url.includes("twitch.tv")
 
 const getHTML = string => {
@@ -26,4 +24,10 @@ const getHTML = string => {
     return html
 }
 
-module.exports = {name, shouldTransform, getHTML}
+const twitchTransformer = {
+    name: "twitchTransformer",
+    shouldTransform,
+    getHTML,
+}
+
+export {twitchTransformer}
