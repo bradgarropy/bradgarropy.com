@@ -10,7 +10,7 @@ import rehypeStringify from "rehype-stringify"
 import remarkGfm from "remark-gfm"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
-import {twitchTransformer} from "transformers"
+import {twitchTransformer, youtubeTransformer} from "transformers"
 import {Markdown} from "types/markdown"
 import {unified} from "unified"
 
@@ -35,7 +35,7 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         .use(remarkEmbedder, {
-            transformers: [twitchTransformer],
+            transformers: [twitchTransformer, youtubeTransformer],
         })
         .use(remarkVscode, {
             theme: "Shades of Purple",

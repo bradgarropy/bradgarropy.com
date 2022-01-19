@@ -1,10 +1,8 @@
-const name = "custom youtube"
-
-const shouldTransform = url => {
+const shouldTransform = (url: string): boolean => {
     return url.includes("youtu.be")
 }
 
-const getHTML = string => {
+const getHTML = (string: string): string => {
     const {pathname, searchParams} = new URL(string)
     const id = pathname.slice(1)
     const start = searchParams.get("t")
@@ -19,4 +17,10 @@ const getHTML = string => {
     return html
 }
 
-module.exports = {name, shouldTransform, getHTML}
+const youtubeTransformer = {
+    name: "youtubeTransformer",
+    shouldTransform,
+    getHTML,
+}
+
+export {youtubeTransformer}

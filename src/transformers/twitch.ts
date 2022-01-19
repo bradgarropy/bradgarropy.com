@@ -1,6 +1,6 @@
-const shouldTransform = url => url.includes("twitch.tv")
+const shouldTransform = (url: string): boolean => url.includes("twitch.tv")
 
-const getHTML = string => {
+const getHTML = (string: string): string => {
     const {pathname} = new URL(string)
     const paths = pathname.split("/").filter(e => e)
     const length = paths.length
