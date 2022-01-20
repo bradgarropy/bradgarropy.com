@@ -1,1 +1,3 @@
-export default {}
+const css = {}
+
+export default css

@@ -1,5 +1,4 @@
 import classnames from "classnames"
-import Script from "next/script"
 import {FC, useEffect} from "react"
 import CodeStyles from "styles/Code.module.css"
 import LinkStyles from "styles/Link.module.css"

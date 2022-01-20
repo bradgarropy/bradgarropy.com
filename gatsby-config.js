@@ -1,9 +1,6 @@
 const config = {
     plugins: [
         {
-            resolve: "gatsby-plugin-sitemap",
-        },
-        {
             resolve: "gatsby-plugin-google-gtag",
             options: {
                 trackingIds: [process.env.TRACKING_ID],
