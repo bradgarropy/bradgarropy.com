@@ -16,20 +16,16 @@ const PostBody: FC<PostBodyProps> = ({html}) => {
     }, [])
 
     return (
-        <>
-            <Script src="https://platform.twitter.com/widgets.js" />
-
-            <section
-                className={classnames(
-                    PostBodyStyles.postBody,
-                    LinkStyles.fancy,
-                    CodeStyles.code,
-                )}
-                dangerouslySetInnerHTML={{
-                    __html: html,
-                }}
-            />
-        </>
+        <section
+            className={classnames(
+                PostBodyStyles.postBody,
+                LinkStyles.fancy,
+                CodeStyles.code,
+            )}
+            dangerouslySetInnerHTML={{
+                __html: html,
+            }}
+        />
     )
 }
 
