@@ -113,6 +113,10 @@ td:last-child {
 }
 
 /* embeds */
+.twitter > .twitter-tweet {
+    margin: 1.75rem auto !important;
+}
+
 .codesandbox > iframe {
     display: grid;
     width: 100%;

@@ -1,5 +1,4 @@
 import remarkEmbedder from "@remark-embedder/core"
-import oembedTransformer from "@remark-embedder/transformer-oembed"
 import {remarkPlugin as remarkVscode} from "gatsby-remark-vscode"
 import matter from "gray-matter"
 import path from "path"
@@ -14,6 +13,7 @@ import remarkRehype from "remark-rehype"
 import {
     codesandboxTransformer,
     twitchTransformer,
+    twitterTransformer,
     youtubeTransformer,
 } from "transformers"
 import {Markdown} from "types/markdown"
@@ -43,8 +43,8 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
             transformers: [
                 codesandboxTransformer,
                 twitchTransformer,
+                twitterTransformer,
                 youtubeTransformer,
-                [oembedTransformer, {params: {align: "center"}}],
             ],
         })
         .use(remarkVscode, {
