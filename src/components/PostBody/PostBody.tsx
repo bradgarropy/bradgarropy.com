@@ -1,4 +1,5 @@
 import classnames from "classnames"
+import {useMarkdown} from "hooks"
 import {FC, useEffect} from "react"
 import CodeStyles from "styles/Code.module.css"
 import LinkStyles from "styles/Link.module.css"
@@ -14,6 +15,8 @@ const PostBody: FC<PostBodyProps> = ({html}) => {
         window.twttr?.widgets.load()
     }, [])
 
+    const Markdown = useMarkdown(html)
+
     return (
         <section
             className={classnames(
@@ -21,10 +24,9 @@ const PostBody: FC<PostBodyProps> = ({html}) => {
                 LinkStyles.fancy,
                 CodeStyles.code,
             )}
-            dangerouslySetInnerHTML={{
-                __html: html,
-            }}
-        />
+        >
+            {Markdown}
+        </section>
     )
 }
 
