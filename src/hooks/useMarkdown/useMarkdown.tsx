@@ -7,10 +7,6 @@ import rehypeReact from "rehype-react"
 import FigureStyles from "styles/Figure.module.css"
 import {unified} from "unified"
 
-const PassThrough: FC = ({children}) => {
-    return <>{children}</>
-}
-
 const useMarkdown = (html: string) => {
     const processor = unified()
         .use(rehypeParse)
@@ -18,9 +14,9 @@ const useMarkdown = (html: string) => {
             createElement,
             Fragment,
             components: {
-                html: PassThrough,
+                html: ({children}) => children,
                 head: ({children}) => <Head>{children}</Head>,
-                body: PassThrough,
+                body: ({children}) => children,
                 a: ({href, children, ...props}) => {
                     return (
                         <Link to={href} {...props}>

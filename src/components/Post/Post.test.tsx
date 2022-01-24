@@ -4,7 +4,7 @@ import {mockMeta, mockPost} from "test-utils/mocks"
 
 import Post from "./Post"
 
-jest.mock("hooks")
+jest.mock("hooks/useMeta")
 
 const mockUseMeta = useMeta as jest.Mock
 mockUseMeta.mockReturnValue(mockMeta)
