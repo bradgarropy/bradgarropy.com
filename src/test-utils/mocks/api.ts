@@ -50,4 +50,66 @@ const mockTestimonialsResponse = [
     },
 ]
 
-export {mockTestimonialsPaths, mockTestimonialsResponse, mockYoutubeResponse}
+const mockGitHubResponse = {
+    user: {
+        sponsorshipsAsMaintainer: {
+            nodes: [
+                {
+                    sponsorEntity: {
+                        login: "bradgarropy",
+                        url: "https://github.com/bradgarropy",
+                        avatarUrl: "https://github.com/bradgarropy.png",
+                    },
+                    tier: {
+                        name: "$10 a month",
+                        description: "### 💎 DIAMOND",
+                        isOneTime: false,
+                    },
+                },
+                {
+                    sponsorEntity: {
+                        login: "gabygarropy",
+                        url: "https://github.com/gabygarropy",
+                        avatarUrl: "https://github.com/gabygarropy.png",
+                    },
+                    tier: {
+                        name: "$5 a month",
+                        description: "### 🥇 GOLD",
+                        isOneTime: false,
+                    },
+                },
+                {
+                    sponsorEntity: {
+                        login: "sofigarropy",
+                        url: "https://github.com/sofigarropy",
+                        avatarUrl: "https://github.com/sofigarropy.png",
+                    },
+                    tier: {
+                        name: "$50 one time",
+                        description: "### 🤩",
+                        isOneTime: true,
+                    },
+                },
+                {
+                    sponsorEntity: {
+                        login: "justingarropy",
+                        url: "https://github.com/justingarropy",
+                        avatarUrl: "https://github.com/justingarropy.png",
+                    },
+                    tier: {
+                        name: "$25 one time",
+                        description: "### 😍",
+                        isOneTime: true,
+                    },
+                },
+            ],
+        },
+    },
+}
+
+export {
+    mockGitHubResponse,
+    mockTestimonialsPaths,
+    mockTestimonialsResponse,
+    mockYoutubeResponse,
+}
