@@ -5,12 +5,6 @@ const config = {
             options: {
                 plugins: [
                     {
-                        resolve: "gatsby-remark-images",
-                        options: {
-                            maxWidth: 700,
-                        },
-                    },
-                    {
                         resolve: "gatsby-remark-autolink-headers",
                         options: {
                             maintainCase: false,
