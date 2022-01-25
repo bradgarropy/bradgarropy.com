@@ -52,7 +52,6 @@
         "@remark-embedder/core": "^2.0.0",
         "classnames": "^2.3.1",
         "date-fns": "^2.27.0",
-        "dotenv": "^10.0.0",
         "form-data": "^4.0.0",
         "fuse.js": "^6.4.3",
         "gatsby-remark-vscode": "^3.3.0",
