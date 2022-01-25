@@ -29,4 +29,25 @@ const mockYoutubeResponse = {
     ],
 }
 
-export {mockYoutubeResponse}
+const mockTestimonialsPaths = ["first.md", "second.md"]
+
+const mockTestimonialsResponse = [
+    {
+        data: {
+            name: "First Test User",
+            profile: "https://twitter.com/first-test-user",
+            photo: "https://twitter.com/first-test-user.jpg",
+        },
+        content: "First test review.",
+    },
+    {
+        data: {
+            name: "Second Test User",
+            profile: "https://twitter.com/second-test-user",
+            photo: "https://twitter.com/second-test-user.jpg",
+        },
+        content: "Second test review.",
+    },
+]
+
+export {mockTestimonialsPaths, mockTestimonialsResponse, mockYoutubeResponse}
