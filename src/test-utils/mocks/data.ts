@@ -60,12 +60,12 @@ const mockVideos: Video[] = [
     {
         id: "abc123",
         title: "first test video",
-        thumbnail: "https://example.com/first.jpg",
+        thumbnail: "https://youtube.com/first.jpg",
     },
     {
         id: "def456",
         title: "second test video",
-        thumbnail: "https://example.com/second.jpg",
+        thumbnail: "https://youtube.com/second.jpg",
     },
 ]
 

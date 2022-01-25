@@ -19,8 +19,6 @@ test("transforms twitter links", async () => {
         "https://twitter.com/bradgarropy/status/1458449938157801490",
     )
 
-    console.log(html)
-
     // eslint-disable-next-line quotes
     expect(html).toEqual(expect.stringContaining('<div class="twitter">'))
 
