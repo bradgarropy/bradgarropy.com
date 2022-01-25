@@ -280,6 +280,19 @@ const mockTopic: Topic = {
     name: "life",
 }
 
+const mockRepositoryTopics = [
+    "gatsby",
+    "javascript",
+    "next",
+    "node",
+    "react",
+    "svelte",
+    "tailwind",
+    "typescript",
+    "blog",
+    "portfolio",
+]
+
 export {
     mockChannelStatus,
     mockContact,
@@ -293,6 +306,7 @@ export {
     mockPosts,
     mockPostsFrontmatter,
     mockProjects,
+    mockRepositoryTopics,
     mockResume,
     mockSponsors,
     mockTestimonials,
