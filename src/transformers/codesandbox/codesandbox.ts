@@ -6,7 +6,7 @@ const getHTML = (string: string): string => {
     const src = string.replace("/s/", "/embed/")
 
     const html = `
-        <div className="codesandbox">
+        <div class="codesandbox">
             <iframe
                 src="${src}"
                 frameBorder="0"
