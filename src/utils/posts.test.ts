@@ -22,6 +22,7 @@ import {
 
 jest.mock("fs")
 jest.mock("gray-matter")
+
 jest.mock("gatsby-remark-vscode", () => {
     return {
         remarkPlugin: tree => tree,

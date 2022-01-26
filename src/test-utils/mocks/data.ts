@@ -1,5 +1,6 @@
+import {Markdown} from "types/markdown"
 import {Meta} from "types/meta"
-import {Now} from "types/now"
+import {Now, NowFrontmatter} from "types/now"
 import {Podcast} from "types/podcast"
 import {Post, PostFrontmatter, Topic} from "types/post"
 import {Project} from "types/project"
@@ -233,17 +234,17 @@ const mockSponsors: Sponsors = {
 
 const mockChannelStatus = {isLive: true}
 
-const mockHireMe = {
+const mockHireMe: Markdown = {
     html: "<p>hire me</p>",
     frontmatter: {},
 }
 
-const mockContact = {
+const mockContact: Markdown = {
     html: "<p>contact</p>",
     frontmatter: {},
 }
 
-const mockResume = {
+const mockResume: Markdown = {
     html: "<p>resume</p>",
     frontmatter: {},
 }
@@ -267,26 +268,36 @@ const mockTestimonials: Testimonial[] = [
     },
 ]
 
-const mockNow: Now = {
-    html: "<p>This is a now.<p>",
-    frontmatter: {
-        date: "2020-12-31",
+const mockNows: Now[] = [
+    {
+        html: "<p>This is a newer now.</p>",
+        frontmatter: {
+            date: "2021-01-01",
+        },
     },
-}
+    {
+        html: "<p>This is a now.</p>",
+        frontmatter: {
+            date: "2020-12-31",
+        },
+    },
+    {
+        html: "<p>This is an older now.</p>",
+        frontmatter: {
+            date: "2020-12-30",
+        },
+    },
+]
 
-const mockNewerNow: Now = {
-    html: "<p>This is a newer now.<p>",
-    frontmatter: {
-        date: "2021-01-01",
-    },
-}
+const mockNowsFrontmatter: NowFrontmatter[] = mockNows.map(
+    mockNow => mockNow.frontmatter,
+)
 
-const mockOlderNow: Now = {
-    html: "<p>This is an older now.<p>",
-    frontmatter: {
-        date: "2020-12-30",
-    },
-}
+const mockNow: Now = mockNows[1]
+
+const mockNewerNow: Now = mockNows[0]
+
+const mockOlderNow: Now = mockNows[2]
 
 const mockTopics: Topic[] = [
     {
@@ -325,6 +336,8 @@ export {
     mockMeta,
     mockNewerNow,
     mockNow,
+    mockNows,
+    mockNowsFrontmatter,
     mockOlderNow,
     mockPodcast,
     mockPost,
