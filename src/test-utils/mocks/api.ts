@@ -499,7 +499,14 @@ const mockPostsResponse = [
     },
 ]
 
+const mockCaptivateResponse = {
+    title: "Test Podcast",
+    link: "https://anchor.fm/test-podcast",
+    artwork: "https://anchor.fm/test-podcast.jpg",
+}
+
 export {
+    mockCaptivateResponse,
     mockGitHubPinnedResponse,
     mockGitHubSponsorsResponse,
     mockPostsPaths,

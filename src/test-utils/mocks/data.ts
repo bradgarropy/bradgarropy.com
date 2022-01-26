@@ -197,18 +197,7 @@ const mockPodcast: Podcast = {
     title: "Test Podcast",
     link: "https://anchor.fm/test-podcast",
     image: "https://anchor.fm/test-podcast.jpg",
-    episodes: [
-        {
-            title: "First Episode",
-            link: "https://anchor.fm/test-podcast/episodes/first-episode",
-            date: "2021-01-01T00:00:00.000Z",
-        },
-        {
-            title: "Second Episode",
-            link: "https://anchor.fm/test-podcast/episodes/second-episode",
-            date: "2021-02-02T00:00:00.000Z",
-        },
-    ],
+    episodes: [],
 }
 
 const mockSponsors: Sponsors = {
