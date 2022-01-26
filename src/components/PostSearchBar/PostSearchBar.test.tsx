@@ -2,11 +2,11 @@ import {render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import PostSearchBar from "components/PostSearchBar"
 import {useRouter} from "next/router"
-import {mockPost, mockPostsFrontmatter} from "test-utils/mocks"
+import {mockPosts, mockPostsFrontmatter} from "test-utils/mocks"
 
 const onSearchMock = jest.fn()
 const mockPlaceholder = "search blog"
-const mockQuery = "first"
+const mockQuery = "fourth"
 
 jest.mock("next/router")
 const mockUseRouter = useRouter as jest.Mock
@@ -39,9 +39,13 @@ describe("search bar", () => {
             mockQuery,
         )
 
-        expect(onSearchMock).toHaveBeenCalledTimes(6)
-        expect(onSearchMock).toHaveBeenLastCalledWith([mockPost.frontmatter])
-        expect(mockPush).toHaveBeenCalledTimes(6)
+        expect(onSearchMock).toHaveBeenCalledTimes(7)
+
+        expect(onSearchMock).toHaveBeenLastCalledWith([
+            mockPosts[3].frontmatter,
+        ])
+
+        expect(mockPush).toHaveBeenCalledTimes(7)
 
         expect(mockPush).toHaveBeenLastCalledWith(
             `/blog?search=${mockQuery}`,

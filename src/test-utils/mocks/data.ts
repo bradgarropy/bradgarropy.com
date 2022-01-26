@@ -44,13 +44,38 @@ const mockPosts: Post[] = [
             },
         },
     },
+    {
+        html: "<p>This is the fourth test post.</p>",
+        frontmatter: {
+            date: "2021-03-01",
+            slug: "fourth-test-post",
+            title: "fourth test post",
+            topic: {
+                icon: "💻",
+                name: "coding",
+            },
+        },
+    },
+]
+
+const mockSortedPosts: Post[] = [
+    mockPosts[2],
+    mockPosts[3],
+    mockPosts[1],
+    mockPosts[0],
 ]
 
 const mockPostsFrontmatter: PostFrontmatter[] = mockPosts.map(
     mockPost => mockPost.frontmatter,
 )
 
+const mockSortedPostsFrontmatter: PostFrontmatter[] = mockSortedPosts.map(
+    mockPost => mockPost.frontmatter,
+)
+
 const mockPost: Post = mockPosts[0]
+
+const mockPostFrontmatter: PostFrontmatter = mockPost.frontmatter
 
 const mockMeta: Meta = {
     siteUrl: "https://bradgarropy.com",
@@ -274,10 +299,22 @@ const mockOlderNow: Now = {
     },
 }
 
-const mockTopic: Topic = {
-    icon: "😎",
-    name: "life",
-}
+const mockTopics: Topic[] = [
+    {
+        icon: "😎",
+        name: "life",
+    },
+    {
+        icon: "🔌",
+        name: "tech",
+    },
+    {
+        icon: "💻",
+        name: "coding",
+    },
+]
+
+const mockTopic: Topic = mockTopics[0]
 
 const mockRepositoryTopics = [
     "gatsby",
@@ -302,13 +339,17 @@ export {
     mockOlderNow,
     mockPodcast,
     mockPost,
+    mockPostFrontmatter,
     mockPosts,
     mockPostsFrontmatter,
     mockProjects,
     mockRepositoryTopics,
     mockResume,
+    mockSortedPosts,
+    mockSortedPostsFrontmatter,
     mockSponsors,
     mockTestimonials,
     mockTopic,
+    mockTopics,
     mockVideos,
 }

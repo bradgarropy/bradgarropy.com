@@ -21,7 +21,7 @@ const getLatestPosts = (): PostFrontmatter[] => {
             return [...posts, post]
         }, [])
 
-    const latestPosts = sortByDate(posts).slice(0, 3)
+    const latestPosts = sortPostsByDate(posts).slice(0, 3)
     return latestPosts
 }
 
@@ -42,7 +42,7 @@ const getAllPosts = (): PostFrontmatter[] => {
             return [...posts, post]
         }, [])
 
-    const allPosts = sortByDate(posts)
+    const allPosts = sortPostsByDate(posts)
     return allPosts
 }
 
@@ -109,12 +109,12 @@ const getPostsByTopic = (topic: Topic["name"]): PostFrontmatter[] => {
         }, [])
 
     const topicPosts = posts.filter(post => post.topic.name === topic)
-    const sortedTopicPosts = sortByDate(topicPosts)
+    const sortedTopicPosts = sortPostsByDate(topicPosts)
 
     return sortedTopicPosts
 }
 
-const sortByDate = (posts: PostFrontmatter[]): PostFrontmatter[] => {
+const sortPostsByDate = (posts: PostFrontmatter[]): PostFrontmatter[] => {
     const sortedPosts = [...posts]
 
     sortedPosts.sort((a, b) => {
@@ -140,4 +140,5 @@ export {
     getPostsByTopic,
     getTopic,
     getTopics,
+    sortPostsByDate,
 }

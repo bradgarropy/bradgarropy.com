@@ -441,9 +441,69 @@ const mockGitHubPinnedResponse = {
     },
 }
 
+const mockPostsPaths = [
+    "first-test-post.md",
+    "second-test-post.md",
+    "third-test-post.md",
+    "fourth-test-post.md",
+]
+
+const mockPostsResponse = [
+    {
+        data: {
+            date: "2021-01-01",
+            slug: "first-test-post",
+            title: "first test post",
+            topic: {
+                icon: "😎",
+                name: "life",
+            },
+        },
+        content: "This is the first test post.",
+    },
+    {
+        data: {
+            date: "2021-02-01",
+            slug: "second-test-post",
+            title: "second test post",
+            topic: {
+                icon: "🔌",
+                name: "tech",
+            },
+        },
+        content: "This is the second test post.",
+    },
+    {
+        data: {
+            date: "2021-03-01",
+            slug: "third-test-post",
+            title: "third test post",
+            topic: {
+                icon: "💻",
+                name: "coding",
+            },
+        },
+        content: "This is the third test post.",
+    },
+    {
+        data: {
+            date: "2021-03-01",
+            slug: "fourth-test-post",
+            title: "fourth test post",
+            topic: {
+                icon: "💻",
+                name: "coding",
+            },
+        },
+        content: "This is the fourth test post.",
+    },
+]
+
 export {
     mockGitHubPinnedResponse,
     mockGitHubSponsorsResponse,
+    mockPostsPaths,
+    mockPostsResponse,
     mockTestimonialsPaths,
     mockTestimonialsResponse,
     mockYoutubeResponse,
