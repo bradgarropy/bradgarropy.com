@@ -109,7 +109,6 @@ const mockProjects: Project[] = [
             "country",
         ],
     },
-
     {
         url: "https://github.com/bradgarropy/hue-sdk",
         name: "hue-sdk",

@@ -50,7 +50,7 @@ const mockTestimonialsResponse = [
     },
 ]
 
-const mockGitHubResponse = {
+const mockGitHubSponsorsResponse = {
     user: {
         sponsorshipsAsMaintainer: {
             nodes: [
@@ -107,8 +107,343 @@ const mockGitHubResponse = {
     },
 }
 
+const mockGitHubPinnedResponse = {
+    user: {
+        pinnedItems: {
+            nodes: [
+                {
+                    url: "https://github.com/bradgarropy/bradgarropy.com",
+                    name: "bradgarropy.com",
+                    description: "🏠 my home on the web",
+                    stargazerCount: 35,
+                    repositoryTopics: {
+                        nodes: [
+                            {
+                                topic: {
+                                    name: "gatsby",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "react",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "eslint",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "blog",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "portfolio",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "hacktoberfest",
+                                },
+                            },
+                        ],
+                    },
+                },
+                {
+                    url: "https://github.com/bradgarropy/dailytexascountry.com",
+                    name: "dailytexascountry.com",
+                    description: "🤠 texas country music community",
+                    stargazerCount: 3,
+                    repositoryTopics: {
+                        nodes: [
+                            {
+                                topic: {
+                                    name: "gatsby",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "react",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "styled-components",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "prettier",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "eslint",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "spotify",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "youtube",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "twitter",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "airtable",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "blog",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "playlists",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "episodes",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "store",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "dtxc",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "daily-texas-country",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "texas-country",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "country",
+                                },
+                            },
+                        ],
+                    },
+                },
+                {
+                    url: "https://github.com/bradgarropy/hue-sdk",
+                    name: "hue-sdk",
+                    description: "💡 philips hue sdk",
+                    stargazerCount: 35,
+                    repositoryTopics: {
+                        nodes: [
+                            {
+                                topic: {
+                                    name: "node",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "eslint",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "prettier",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "philips",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "hue",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "sdk",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "typescript",
+                                },
+                            },
+                        ],
+                    },
+                },
+                {
+                    url: "https://github.com/bradgarropy/use-countdown",
+                    name: "use-countdown",
+                    description: "⏳ useCountdown hook",
+                    stargazerCount: 47,
+                    repositoryTopics: {
+                        nodes: [
+                            {
+                                topic: {
+                                    name: "typescript",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "react",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "react-hook",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "countdown",
+                                },
+                            },
+                        ],
+                    },
+                },
+                {
+                    url: "https://github.com/bradgarropy/labman-cli",
+                    name: "labman-cli",
+                    description: "👨🏼‍🔬 github label manager cli",
+                    stargazerCount: 12,
+                    repositoryTopics: {
+                        nodes: [
+                            {
+                                topic: {
+                                    name: "github",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "issues",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "labels",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "octokit",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "javascript",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "nodejs",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "cli",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "node",
+                                },
+                            },
+                        ],
+                    },
+                },
+                {
+                    url: "https://github.com/bradgarropy/murphy",
+                    name: "murphy",
+                    description: "⏱ the crossfit murph timer",
+                    stargazerCount: 9,
+                    repositoryTopics: {
+                        nodes: [
+                            {
+                                topic: {
+                                    name: "svelte",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "faunadb",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "netlify",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "netlify-identity",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "rollup",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "murph",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "murphy",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "crossfit",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "workout",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "timer",
+                                },
+                            },
+                            {
+                                topic: {
+                                    name: "tailwind",
+                                },
+                            },
+                        ],
+                    },
+                },
+            ],
+        },
+    },
+}
+
 export {
-    mockGitHubResponse,
+    mockGitHubPinnedResponse,
+    mockGitHubSponsorsResponse,
     mockTestimonialsPaths,
     mockTestimonialsResponse,
     mockYoutubeResponse,
