@@ -20,9 +20,9 @@ test("transforms youtube links", () => {
             <iframe
                 title="9zcU6oUOHVc"
                 src="https://www.youtube-nocookie.com/embed/9zcU6oUOHVc"
-                frameBorder="0"
+                frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+                allowfullscreen
             >
             </iframe>
         </div>
@@ -37,9 +37,9 @@ test("transforms youtube links with start", () => {
             <iframe
                 title="9zcU6oUOHVc"
                 src="https://www.youtube-nocookie.com/embed/9zcU6oUOHVc?start=3"
-                frameBorder="0"
+                frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+                allowfullscreen
             >
             </iframe>
         </div>

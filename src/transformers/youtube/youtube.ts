@@ -18,9 +18,9 @@ const getHTML = (string: string): string => {
             <iframe
                 title="${id}"
                 src="${src}"
-                frameBorder="0"
+                frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+                allowfullscreen
             >
             </iframe>
         </div>

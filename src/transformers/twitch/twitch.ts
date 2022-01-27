@@ -28,7 +28,7 @@ const getHTML = (string: string): string => {
                 src="${src}&parent=bradgarropy.com"
                 frameborder="0"
                 scrolling="no"
-                allowfullscreen=""
+                allowfullscreen
             >
             </iframe>
         </div>

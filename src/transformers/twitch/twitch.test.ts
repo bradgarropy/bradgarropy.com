@@ -19,7 +19,7 @@ test("transforms twitch channels", () => {
                 src="https://player.twitch.tv?channel=bradgarropy&parent=bradgarropy.com"
                 frameborder="0"
                 scrolling="no"
-                allowfullscreen=""
+                allowfullscreen
             >
             </iframe>
         </div>
@@ -37,7 +37,7 @@ test("transforms twitch videos", () => {
                 src="https://player.twitch.tv?video=1272889918&parent=bradgarropy.com"
                 frameborder="0"
                 scrolling="no"
-                allowfullscreen=""
+                allowfullscreen
             >
             </iframe>
         </div>
@@ -55,7 +55,7 @@ test("transforms twitch clips", () => {
                 src="https://clips.twitch.tv/embed?clip=ZealousSpeedyStingrayUnSane&parent=bradgarropy.com"
                 frameborder="0"
                 scrolling="no"
-                allowfullscreen=""
+                allowfullscreen
             >
             </iframe>
         </div>
@@ -71,7 +71,7 @@ test("transforms twitch clips", () => {
                 src="https://clips.twitch.tv/embed?clip=ZealousSpeedyStingrayUnSane&parent=bradgarropy.com"
                 frameborder="0"
                 scrolling="no"
-                allowfullscreen=""
+                allowfullscreen
             >
             </iframe>
         </div>
