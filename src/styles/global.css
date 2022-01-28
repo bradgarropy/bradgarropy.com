@@ -72,10 +72,6 @@ a:hover {
     color: rgba(0, 0, 0, 0.8);
 }
 
-.anchor {
-    fill: var(--text);
-}
-
 img {
     display: block;
     max-width: 100%;

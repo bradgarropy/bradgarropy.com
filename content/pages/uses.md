@@ -1,5 +1,3 @@
-# 💠 uses
-
 As a [developer][developer] and [tech][tech] lover in general, I use a lot of physical and digital stuff on a daily basis.
 These things serve many purposes. They bring me enjoyment, connect me to other people, and serve as tools that help me create software.
 

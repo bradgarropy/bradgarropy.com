@@ -1,5 +1,6 @@
 import SEO from "@bradgarropy/next-seo"
 import Layout from "components/Layout"
+import {useMarkdown} from "hooks"
 import {GetStaticProps} from "next"
 import {FC} from "react"
 import LinkStyles from "styles/Link.module.css"
@@ -11,14 +12,14 @@ type UsesPageProps = {
 }
 
 const UsesPage: FC<UsesPageProps> = ({uses}) => {
+    const Markdown = useMarkdown(uses.html)
+
     return (
         <Layout>
             <SEO title="💠 uses" />
 
-            <div
-                className={LinkStyles.fancy}
-                dangerouslySetInnerHTML={{__html: uses.html}}
-            />
+            <h1>💠 uses</h1>
+            <div className={LinkStyles.fancy}>{Markdown}</div>
         </Layout>
     )
 }

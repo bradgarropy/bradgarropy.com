@@ -1,4 +1,5 @@
 import classnames from "classnames"
+import {useMarkdown} from "hooks"
 import {FC} from "react"
 import LinkStyles from "styles/Link.module.css"
 import {Markdown} from "types/markdown"
@@ -10,11 +11,12 @@ type ResumeProps = {
 }
 
 const Resume: FC<ResumeProps> = ({resume}) => {
+    const Markdown = useMarkdown(resume.html)
+
     return (
-        <section
-            className={classnames(LinkStyles.fancy, styles.resume)}
-            dangerouslySetInnerHTML={{__html: resume.html}}
-        />
+        <section className={classnames(LinkStyles.fancy, styles.resume)}>
+            {Markdown}
+        </section>
     )
 }
 

@@ -1,7 +1,8 @@
 import Link from "@bradgarropy/next-link"
+import Heading from "components/Heading"
 import Head from "next/head"
 import Image from "next/image"
-import React, {createElement, FC, Fragment} from "react"
+import React, {createElement, Fragment} from "react"
 import rehypeParse from "rehype-parse"
 import rehypeReact from "rehype-react"
 import FigureStyles from "styles/Figure.module.css"
@@ -36,6 +37,15 @@ const useMarkdown = (html: string) => {
                             />
                         </figure>
                     )
+                },
+                h1: ({children}) => {
+                    return <Heading level={1}>{children}</Heading>
+                },
+                h2: ({children}) => {
+                    return <Heading level={2}>{children}</Heading>
+                },
+                h3: ({children}) => {
+                    return <Heading level={3}>{children}</Heading>
                 },
             },
         })

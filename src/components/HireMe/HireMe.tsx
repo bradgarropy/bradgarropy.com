@@ -1,4 +1,5 @@
 import classnames from "classnames"
+import Heading from "components/Heading"
 import Testimonials from "components/Testimonials"
 import {FC} from "react"
 import LinkStyles from "styles/Link.module.css"
@@ -20,7 +21,10 @@ const HireMe: FC<HireMeProps> = ({hireMe, testimonials}) => {
                 dangerouslySetInnerHTML={{__html: hireMe.html}}
             />
 
-            <h1 id="testimonials">💯 what people think of me</h1>
+            <Heading level={1} id="testimonials">
+                💯 what people think of me
+            </Heading>
+
             <Testimonials testimonials={testimonials} />
         </>
     )
