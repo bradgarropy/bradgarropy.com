@@ -43,9 +43,7 @@ If I'm able to create content and help other developers, my name will come to mi
 
 ## 🎁 wrapping up
 
-I must be getting better at this writing thing, because what I thought was going to be a short post turned into a long one. But here's the bottom line.
-
-## [watch my streams!][1]
+I must be getting better at this writing thing, because what I thought was going to be a short post turned into a long one. But here's the bottom line, [watch my streams][1]!
 
 [1]: https://www.youtube.com/playlist?list=PL6Mu1AMmTL-uMkwOvZ5_Ytbu9qQ5SQSrc
 [2]: https://www.youtube.com/bradgarropy

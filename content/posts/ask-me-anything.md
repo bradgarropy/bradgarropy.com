@@ -11,9 +11,7 @@ I've been inspired by [Kent C. Dodds][1] lately to grow my online presence as a 
 
 So I created an AMA platform on [Github][2] similar to his to answer your questions. This idea originated from [Sindre Sorhus][3] (whose website I love 💜), who also curates an [awesome][4] list of [AMAs][5].
 
-So what are you waiting for?
-
-# [ask me anything][6]
+So what are you waiting for, [ask me anything][6]!
 
 [1]: https://kentcdodds.com
 [2]: https://github.com
