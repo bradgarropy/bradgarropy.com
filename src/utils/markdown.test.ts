@@ -122,28 +122,6 @@ describe("transforms markdown", () => {
         )
     })
 
-    test.skip("syntax highlights", async () => {
-        expect(true).toBeTruthy()
-    })
-
-    test("slugifies headings", async () => {
-        const html = await transformMarkdown("# Heading one")
-
-        // eslint-disable-next-line quotes
-        expect(html).toEqual(expect.stringContaining('<h1 id="heading-one">'))
-    })
-
-    test("links headings", async () => {
-        const html = await transformMarkdown("# Heading one")
-
-        expect(html).toEqual(
-            expect.stringContaining(
-                // eslint-disable-next-line quotes
-                '<a aria-hidden="true" tabindex="-1" href="#heading-one">',
-            ),
-        )
-    })
-
     test("includes image sizes", async () => {
         const html = await transformMarkdown("![brad garropy](/profile.jpg)")
 
