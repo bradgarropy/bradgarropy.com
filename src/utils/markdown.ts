@@ -51,6 +51,12 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
         .use(remarkVscode, {
             theme: "Shades of Purple",
             extensions: ["shades-of-purple"],
+            inlineCode: {
+                marker: "|",
+                theme: {
+                    default: "Shades of Purple",
+                },
+            },
         })
         .use(remarkRehype, {allowDangerousHtml: true})
         .use(rehypeImageSize, {dir: "public"})
