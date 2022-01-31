@@ -2,7 +2,7 @@ import PostComments from "components/PostComments"
 import PostEdit from "components/PostEdit"
 import {FC} from "react"
 
-import * as styles from "./PostFooter.module.css"
+import styles from "./PostFooter.module.css"
 
 type PostFooterProps = {
     slug: string

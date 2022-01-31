@@ -1,25 +1,24 @@
-import Link from "@bradgarropy/gatsby-link"
-import {StaticImage} from "gatsby-plugin-image"
-import {usePodcast} from "hooks"
+import Link from "@bradgarropy/next-link"
+import Image from "next/image"
 import {FC} from "react"
+import {Podcast as PodcastType} from "types/podcast"
 
-import * as styles from "./Podcast.module.css"
+import styles from "./Podcast.module.css"
 
-const Podcast: FC = () => {
-    const podcast = usePodcast()
+type PodcastProps = {
+    podcast: PodcastType
+}
 
+const Podcast: FC<PodcastProps> = ({podcast}) => {
     return (
         <div className={styles.podcast}>
-            <Link to={podcast.link} data-testid={podcast.title}>
-                <StaticImage
-                    src="../../../static/web-dev-weekly.png"
+            <Link to={podcast.link} className={styles.podcastLink}>
+                <Image
+                    src={podcast.image}
                     alt={podcast.title}
-                    layout="constrained"
-                    placeholder="blurred"
-                    formats={["auto", "webp", "avif"]}
-                    quality={100}
-                    className={styles.coverImageContainer}
-                    imgClassName={styles.coverImage}
+                    width={3000}
+                    height={3000}
+                    className={styles.coverImage}
                 />
             </Link>
 

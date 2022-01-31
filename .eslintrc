@@ -2,6 +2,7 @@
     "extends": [
         "@bradgarropy/eslint-config",
         "@bradgarropy/eslint-config-react",
-        "@bradgarropy/eslint-config-typescript"
+        "@bradgarropy/eslint-config-typescript",
+        "next"
     ]
 }

@@ -1,11 +1,11 @@
 import PostHeader from "components/PostHeader"
 import {FC} from "react"
-import {Post} from "types/post"
+import {PostFrontmatter} from "types/post"
 
-import * as styles from "./PostList.module.css"
+import styles from "./PostList.module.css"
 
 type PostListProps = {
-    posts: Post[]
+    posts: PostFrontmatter[]
 }
 
 const PostList: FC<PostListProps> = ({posts}) => {
@@ -20,15 +20,13 @@ const PostList: FC<PostListProps> = ({posts}) => {
     return (
         <div className={styles.postList}>
             {posts.map((post, index) => {
-                const {date, topic, title, slug} = post.frontmatter
-
                 return (
                     <PostHeader
                         key={index}
-                        date={date}
-                        topic={topic}
-                        title={title}
-                        slug={slug}
+                        date={post.date}
+                        topic={post.topic}
+                        title={post.title}
+                        slug={post.slug}
                     />
                 )
             })}

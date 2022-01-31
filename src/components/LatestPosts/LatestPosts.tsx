@@ -1,22 +1,22 @@
 import PostTitle from "components/PostTitle"
-import {useLatestPosts} from "hooks"
 import {FC} from "react"
+import {PostFrontmatter} from "types/post"
 
-import * as styles from "./LatestPosts.module.css"
+import styles from "./LatestPosts.module.css"
 
-const LatestPosts: FC = () => {
-    const latestPosts = useLatestPosts()
+type LatestPostsProps = {
+    latestPosts: PostFrontmatter[]
+}
 
+const LatestPosts: FC<LatestPostsProps> = ({latestPosts}) => {
     return (
         <div className={styles.latestPosts}>
             {latestPosts.map(latestPost => {
-                const {frontmatter} = latestPost
-
                 return (
                     <PostTitle
-                        key={frontmatter.slug}
-                        title={frontmatter.title}
-                        slug={frontmatter.slug}
+                        key={latestPost.slug}
+                        title={latestPost.title}
+                        slug={latestPost.slug}
                     />
                 )
             })}

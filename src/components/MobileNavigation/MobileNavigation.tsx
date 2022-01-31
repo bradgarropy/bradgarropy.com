@@ -1,11 +1,11 @@
-import Link from "@bradgarropy/gatsby-link"
+import Link from "@bradgarropy/next-link"
 import {faTimes} from "@fortawesome/free-solid-svg-icons"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import Hamburger from "components/Hamburger"
 import {useApp} from "hooks"
 import {FC} from "react"
 
-import * as styles from "./MobileNavigation.module.css"
+import styles from "./MobileNavigation.module.css"
 
 const MobileNavigation: FC = () => {
     const {open, setOpen} = useApp()

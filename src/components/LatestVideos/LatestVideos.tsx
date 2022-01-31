@@ -1,13 +1,15 @@
-import Link from "@bradgarropy/gatsby-link"
-import {GatsbyImage} from "gatsby-plugin-image"
-import {useLatestVideos} from "hooks"
+import Link from "@bradgarropy/next-link"
+import Image from "next/image"
 import {FC} from "react"
+import {Video} from "types/video"
 
-import * as styles from "./LatestVideos.module.css"
+import styles from "./LatestVideos.module.css"
 
-const LatestVideos: FC = () => {
-    const latestVideos = useLatestVideos()
+type LatestVideosProps = {
+    latestVideos: Video[]
+}
 
+const LatestVideos: FC<LatestVideosProps> = ({latestVideos}) => {
     return (
         <div className={styles.latestVideos}>
             {latestVideos.map(latestVideo => {
@@ -15,15 +17,15 @@ const LatestVideos: FC = () => {
                     <Link
                         key={latestVideo.id}
                         to={`https://www.youtube.com/watch?v=${latestVideo.id}`}
+                        className={styles.thumbnailLink}
                     >
-                        <div data-testid={latestVideo.id}>
-                            <GatsbyImage
-                                image={latestVideo.thumbnail}
-                                alt={latestVideo.title}
-                                className={styles.thumbnailContainer}
-                                imgClassName={styles.thumbnail}
-                            />
-                        </div>
+                        <Image
+                            src={latestVideo.thumbnail}
+                            alt={latestVideo.title}
+                            width="1280"
+                            height="720"
+                            className={styles.thumbnail}
+                        />
                     </Link>
                 )
             })}

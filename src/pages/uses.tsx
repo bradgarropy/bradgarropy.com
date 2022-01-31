@@ -1,40 +1,38 @@
-import "styles/fancyLinks.css"
-
-import SEO from "@bradgarropy/gatsby-plugin-seo"
-import {graphql} from "gatsby"
+import SEO from "@bradgarropy/next-seo"
+import Layout from "components/Layout"
+import {useMarkdown} from "hooks"
+import {GetStaticProps} from "next"
 import {FC} from "react"
+import LinkStyles from "styles/Link.module.css"
+import {Markdown} from "types/markdown"
+import {getMarkdownBySlug} from "utils/markdown"
 
 type UsesPageProps = {
-    data: {
-        uses: {
-            html: string
-        }
-    }
+    uses: Markdown
 }
 
-const UsesPage: FC<UsesPageProps> = ({data}) => {
-    const {html} = data.uses
+const UsesPage: FC<UsesPageProps> = ({uses}) => {
+    const Markdown = useMarkdown(uses.html)
 
     return (
-        <>
+        <Layout>
             <SEO title="💠 uses" />
 
-            <div
-                className="fancyLinks"
-                dangerouslySetInnerHTML={{__html: html}}
-            />
-        </>
+            <h1>💠 uses</h1>
+            <div className={LinkStyles.fancy}>{Markdown}</div>
+        </Layout>
     )
 }
 
-export const usesPageQuery = graphql`
-    {
-        uses: markdownRemark(
-            fileAbsolutePath: {regex: "/content/pages/uses/"}
-        ) {
-            html
-        }
+const getStaticProps: GetStaticProps = async () => {
+    const uses = await getMarkdownBySlug("uses")
+
+    return {
+        props: {
+            uses,
+        },
     }
-`
+}
 
 export default UsesPage
+export {getStaticProps}

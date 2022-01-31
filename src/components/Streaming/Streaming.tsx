@@ -1,7 +1,7 @@
-import Link from "@bradgarropy/gatsby-link"
+import Link from "@bradgarropy/next-link"
 import {FC} from "react"
 
-import * as styles from "./Streaming.module.css"
+import styles from "./Streaming.module.css"
 
 const Streaming: FC = () => {
     return (

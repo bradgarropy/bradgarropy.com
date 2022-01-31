@@ -1,9 +1,9 @@
 import {post} from "@bradgarropy/http"
 import {FC, useState} from "react"
-import * as ButtonStyles from "styles/Button.module.css"
-import * as InputStyles from "styles/Input.module.css"
+import ButtonStyles from "styles/Button.module.css"
+import InputStyles from "styles/Input.module.css"
 
-import * as styles from "./Newsletter.module.css"
+import styles from "./Newsletter.module.css"
 
 const Newsletter: FC = () => {
     const [email, setEmail] = useState("")

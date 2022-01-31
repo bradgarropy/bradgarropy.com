@@ -46,19 +46,20 @@
     text-shadow: 2px 2px var(--primary);
 }
 
-.coverImageContainer {
-    overflow: visible !important;
-}
-
 @media (max-width: 700px) {
-    .coverImageContainer {
+    .podcastLink {
         width: 75%;
     }
 }
 
+.podcastLink > span {
+    overflow: visible !important;
+    display: block !important;
+}
+
 .coverImage {
     box-sizing: border-box;
-    border: 2px solid var(--text);
+    border: 2px solid var(--text) !important;
     background-color: var(--text);
     box-shadow: 3px 3px 0 var(--text);
 }

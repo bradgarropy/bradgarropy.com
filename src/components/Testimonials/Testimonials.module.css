@@ -18,15 +18,9 @@
     box-shadow: none;
 }
 
-.photoContainer {
-    width: 4rem;
-    margin: 0rem;
-    border: 3px solid var(--text);
-    background-color: var(--text);
-    border-radius: 100%;
-}
-
 .photo {
+    border: 3px solid var(--text) !important;
+    background-color: var(--text);
     border-radius: 100%;
 }
 
@@ -45,7 +39,7 @@
 
 .header {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: 4.375rem auto;
     justify-content: start;
     align-items: center;
     column-gap: 1rem;

@@ -1,22 +1,32 @@
-import "styles/fancyLinks.css"
-import "styles/twitter.css"
+import classnames from "classnames"
+import {useMarkdown} from "hooks"
+import {FC, useEffect} from "react"
+import CodeStyles from "styles/Code.module.css"
+import LinkStyles from "styles/Link.module.css"
 
-import {FC} from "react"
-
-import * as styles from "./PostBody.module.css"
+import PostBodyStyles from "./PostBody.module.css"
 
 type PostBodyProps = {
-    content: string
+    html: string
 }
 
-const PostBody: FC<PostBodyProps> = ({content}) => {
+const PostBody: FC<PostBodyProps> = ({html}) => {
+    useEffect(() => {
+        window.twttr?.widgets.load()
+    }, [])
+
+    const Markdown = useMarkdown(html)
+
     return (
         <section
-            className={`fancyLinks ${styles.postBody}`}
-            dangerouslySetInnerHTML={{
-                __html: content,
-            }}
-        />
+            className={classnames(
+                PostBodyStyles.postBody,
+                LinkStyles.fancy,
+                CodeStyles.code,
+            )}
+        >
+            {Markdown}
+        </section>
     )
 }
 

@@ -3,7 +3,7 @@ import {FC} from "react"
 import {Project} from "types/project"
 import {getTechnologies} from "utils"
 
-import * as styles from "./ProjectTech.module.css"
+import styles from "./ProjectTech.module.css"
 
 type ProjectTechProps = {
     project: Project

@@ -1,8 +1,9 @@
 import {render, screen} from "@testing-library/react"
+import {mockPost} from "test-utils/mocks"
 
 import PostBody from "./PostBody"
 
 test("shows post body", () => {
-    render(<PostBody content={"<p>testing<p>"} />)
-    expect(screen.getByText("testing"))
+    render(<PostBody html={mockPost.html} />)
+    expect(screen.getByText("This is the first test post."))
 })

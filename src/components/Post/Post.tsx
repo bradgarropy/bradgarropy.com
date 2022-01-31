@@ -3,7 +3,7 @@ import PostFooter from "components/PostFooter"
 import PostHeader from "components/PostHeader"
 import {FC} from "react"
 
-import * as styles from "./Post.module.css"
+import styles from "./Post.module.css"
 
 type PostProps = {
     post: {
@@ -27,7 +27,7 @@ const Post: FC<PostProps> = ({post}) => {
     return (
         <article className={styles.post}>
             <PostHeader date={date} topic={topic} title={title} />
-            <PostBody content={html} />
+            <PostBody html={html} />
             <PostFooter slug={slug} />
         </article>
     )

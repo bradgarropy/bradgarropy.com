@@ -1,16 +1,23 @@
 import Project from "components/Project"
-import {useProjects} from "hooks"
 import {FC} from "react"
+import {Project as ProjectType} from "types/project"
 
-import * as styles from "./FeaturedProjects.module.css"
+import styles from "./FeaturedProjects.module.css"
 
-const FeaturedProjects: FC = () => {
-    const projects = useProjects()
+type FeaturedProjectsProps = {
+    featuredProjects: ProjectType[]
+}
 
+const FeaturedProjects: FC<FeaturedProjectsProps> = ({featuredProjects}) => {
     return (
         <div className={styles.featuredProjects}>
-            {projects.map(project => {
-                return <Project key={project.name} project={project} />
+            {featuredProjects.map(featuredProject => {
+                return (
+                    <Project
+                        key={featuredProject.name}
+                        project={featuredProject}
+                    />
+                )
             })}
         </div>
     )

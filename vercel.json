@@ -13,11 +13,6 @@
             "permanent": true
         },
         {
-            "source": "/netlify",
-            "destination": "https://app.netlify.com",
-            "permanent": true
-        },
-        {
             "source": "/stream",
             "destination": "https://twitch.tv/bradgarropy",
             "permanent": true

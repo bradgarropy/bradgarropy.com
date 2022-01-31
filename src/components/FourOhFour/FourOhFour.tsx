@@ -1,6 +1,6 @@
 import {FC} from "react"
 
-import * as styles from "./FourOhFour.module.css"
+import styles from "./FourOhFour.module.css"
 
 const FourOhFour: FC = () => {
     return (

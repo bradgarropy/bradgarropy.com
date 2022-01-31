@@ -1,41 +1,83 @@
-import {Router} from "@reach/router"
 import {render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import PostSearchBar from "components/PostSearchBar"
-import {usePosts} from "hooks"
-import {mockPosts} from "test-utils/mocks"
-
-jest.mock("hooks")
-
-const mockUsePosts = usePosts as jest.Mock
-mockUsePosts.mockReturnValue(mockPosts)
+import {useRouter} from "next/router"
+import {mockPosts, mockPostsFrontmatter} from "test-utils/mocks"
 
 const onSearchMock = jest.fn()
-const placeholder = "search blog"
-const query = "first"
+const mockPlaceholder = "search blog"
+const mockQuery = "fourth"
+
+jest.mock("next/router")
+const mockUseRouter = useRouter as jest.Mock
+const mockPush = jest.fn()
 
 describe("search bar", () => {
     beforeEach(() => {
+        mockUseRouter.mockReturnValue({
+            pathname: "/blog",
+            query: {},
+            push: mockPush,
+        })
+
         render(
-            <Router>
-                <PostSearchBar onSearch={onSearchMock} default />
-            </Router>,
+            <PostSearchBar
+                onSearch={onSearchMock}
+                posts={mockPostsFrontmatter}
+            />,
         )
     })
 
     test("shows search bar", () => {
-        expect(screen.getByPlaceholderText(placeholder))
+        expect(screen.getByPlaceholderText(mockPlaceholder))
     })
 
     test("searches", () => {
-        userEvent.type(screen.getByPlaceholderText(placeholder), query)
+        userEvent.type(screen.getByPlaceholderText(mockPlaceholder), mockQuery)
 
-        expect(screen.getByPlaceholderText(placeholder)).toHaveDisplayValue(
-            query,
+        expect(screen.getByPlaceholderText(mockPlaceholder)).toHaveDisplayValue(
+            mockQuery,
         )
 
-        expect(onSearchMock).toHaveBeenCalledTimes(6)
-        expect(onSearchMock).toHaveBeenLastCalledWith([mockPosts[0]])
-        expect(window.location.search).toEqual(`?search=${query}`)
+        expect(onSearchMock).toHaveBeenCalledTimes(7)
+
+        expect(onSearchMock).toHaveBeenLastCalledWith([
+            mockPosts[3].frontmatter,
+        ])
+
+        expect(mockPush).toHaveBeenCalledTimes(7)
+
+        expect(mockPush).toHaveBeenLastCalledWith(
+            `/blog?search=${mockQuery}`,
+            undefined,
+            {
+                shallow: true,
+            },
+        )
+    })
+})
+
+describe("search bar with input", () => {
+    beforeEach(() => {
+        mockUseRouter.mockReturnValue({
+            pathname: "/blog",
+            query: {
+                search: mockQuery,
+            },
+            push: mockPush,
+        })
+
+        render(
+            <PostSearchBar
+                onSearch={onSearchMock}
+                posts={mockPostsFrontmatter}
+            />,
+        )
+    })
+
+    test("shows search bar with input", () => {
+        expect(screen.getByPlaceholderText(mockPlaceholder)).toHaveDisplayValue(
+            mockQuery,
+        )
     })
 })

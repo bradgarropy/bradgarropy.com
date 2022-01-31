@@ -1,9 +1,11 @@
 import {FC} from "react"
-import {Post} from "types/post"
+import {Topic} from "types/post"
 
-import * as styles from "./TopicMeta.module.css"
+import styles from "./TopicMeta.module.css"
 
-type TopicMetaProps = Pick<Post["frontmatter"], "topic">
+type TopicMetaProps = {
+    topic: Topic
+}
 
 const TopicMeta: FC<TopicMetaProps> = ({topic}) => {
     const {name, icon} = topic

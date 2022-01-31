@@ -1,11 +1,11 @@
-import "styles/fancyLinks.css"
-
-import Link from "@bradgarropy/gatsby-link"
+import Link from "@bradgarropy/next-link"
+import classnames from "classnames"
 import Section from "components/Section"
 import {FC} from "react"
+import LinkStyles from "styles/Link.module.css"
 import {Sponsors as SponsorsType} from "types/sponsor"
 
-import * as styles from "./Sponsors.module.css"
+import styles from "./Sponsors.module.css"
 
 type SponsorsProps = {
     sponsors: SponsorsType
@@ -15,7 +15,7 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
     return (
         <>
             <Section
-                className={`fancyLinks ${styles.thanks}`}
+                className={classnames(styles.thanks, LinkStyles.fancy)}
                 title="💜 thank you"
             >
                 <p>
@@ -24,6 +24,7 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                     will go directly towards improving the quality of my work,
                     and encouraging more frequent updates.
                 </p>
+
                 <p>
                     If you want to support me and be featured on this page go{" "}
                     <Link to="https://bradgarropy.com/sponsor">sponsor</Link>{" "}
@@ -35,25 +36,27 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                 {Object.entries(sponsors).map(([frequency, sponsors]) => (
                     <Section key={frequency} title={frequency}>
                         {sponsors.length ? (
-                            sponsors.map(sponsor => (
-                                <Link
-                                    className={styles.sponsor}
-                                    key={sponsor.username}
-                                    to={sponsor.profile}
-                                >
-                                    <img
-                                        className={styles.avatar}
-                                        src={sponsor.avatar}
-                                        alt={sponsor.username}
-                                    />
+                            <div className={styles.sponsors}>
+                                {sponsors.map(sponsor => (
+                                    <Link
+                                        className={styles.sponsor}
+                                        key={sponsor.username}
+                                        to={sponsor.profile}
+                                    >
+                                        <img
+                                            className={styles.avatar}
+                                            src={sponsor.avatar}
+                                            alt={sponsor.username}
+                                        />
 
-                                    <span className={styles.tier}>
-                                        {sponsor.tier}
-                                    </span>
-                                </Link>
-                            ))
+                                        <span className={styles.tier}>
+                                            {sponsor.tier}
+                                        </span>
+                                    </Link>
+                                ))}
+                            </div>
                         ) : (
-                            <p className="fancyLinks">
+                            <p className={LinkStyles.fancy}>
                                 Nobody yet,{" "}
                                 <Link to="https://bradgarropy.com/sponsor">
                                     be the first

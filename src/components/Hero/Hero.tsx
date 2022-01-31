@@ -1,20 +1,22 @@
-import Link from "@bradgarropy/gatsby-link"
-import {StaticImage} from "gatsby-plugin-image"
+import Link from "@bradgarropy/next-link"
+import Image from "next/image"
 import {FC} from "react"
 
-import * as styles from "./Hero.module.css"
+import profile from "../../../public/profile.jpg"
+import styles from "./Hero.module.css"
 
 const Hero: FC = () => {
     return (
         <div className={styles.hero}>
-            <Link to="https://instagram.com/bradgarropy">
-                <StaticImage
-                    src="../../../static/profile.jpg"
+            <Link
+                to="https://instagram.com/bradgarropy"
+                className={styles.heroLink}
+            >
+                <Image
+                    src={profile}
                     alt="bg"
-                    placeholder="blurred"
-                    layout="fullWidth"
-                    className={styles.heroImageContainer}
-                    imgClassName={styles.heroImage}
+                    placeholder="blur"
+                    className={styles.heroImage}
                 />
             </Link>
 

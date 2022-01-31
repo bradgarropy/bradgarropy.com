@@ -1,13 +1,9 @@
 import {render, screen} from "@testing-library/react"
 import FeaturedProjects from "components/FeaturedProjects"
-import {useStaticQuery} from "gatsby"
-import {mockProjects, mockProjectsQuery} from "test-utils/mocks"
-
-const mockUseStaticQuery = useStaticQuery as jest.Mock
-mockUseStaticQuery.mockReturnValue(mockProjectsQuery)
+import {mockProjects} from "test-utils/mocks"
 
 test("shows featured projects", () => {
-    render(<FeaturedProjects />)
+    render(<FeaturedProjects featuredProjects={mockProjects} />)
 
     mockProjects.forEach(project => {
         expect(screen.getByText(project.name))

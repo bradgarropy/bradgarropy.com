@@ -1,4 +1,4 @@
-import Link from "@bradgarropy/gatsby-link"
+import Link from "@bradgarropy/next-link"
 import ColorTheme from "components/ColorTheme"
 import Logo from "components/Logo"
 import MobileNavigation from "components/MobileNavigation"
@@ -7,7 +7,7 @@ import Streaming from "components/Streaming"
 import {useLive} from "hooks"
 import {FC} from "react"
 
-import * as styles from "./Header.module.css"
+import styles from "./Header.module.css"
 
 const Header: FC = () => {
     const live = useLive()

@@ -2,17 +2,16 @@
 .vscode
 
 # dependencies
-.cache
 node_modules
 
 # build
-public
+.cache
+.next
 
-# build
+# test
 coverage
 
 # host
-.netlify
 .vercel
 
 # secrets

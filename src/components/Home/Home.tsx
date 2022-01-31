@@ -6,28 +6,44 @@ import Newsletter from "components/Newsletter"
 import Podcast from "components/Podcast"
 import Section from "components/Section"
 import {FC} from "react"
+import {Podcast as PodcastType} from "types/podcast"
+import {PostFrontmatter} from "types/post"
+import {Project} from "types/project"
+import {Video} from "types/video"
 
-import * as styles from "./Home.module.css"
+import styles from "./Home.module.css"
 
-const Home: FC = () => {
+type HomeProps = {
+    latestPosts: PostFrontmatter[]
+    latestVideos: Video[]
+    featuredProjects: Project[]
+    podcast: PodcastType
+}
+
+const Home: FC<HomeProps> = ({
+    latestPosts,
+    latestVideos,
+    featuredProjects,
+    podcast,
+}) => {
     return (
         <div className={styles.sections}>
             <Hero />
 
             <Section title="blog" link="/blog">
-                <LatestPosts />
+                <LatestPosts latestPosts={latestPosts} />
             </Section>
 
             <Section title="videos" link="https://youtube.com/bradgarropy">
-                <LatestVideos />
+                <LatestVideos latestVideos={latestVideos} />
             </Section>
 
             <Section title="projects" link="https://github.com/bradgarropy">
-                <FeaturedProjects />
+                <FeaturedProjects featuredProjects={featuredProjects} />
             </Section>
 
             <Section title="podcast" link="https://webdevweekly.captivate.fm">
-                <Podcast />
+                <Podcast podcast={podcast} />
             </Section>
 
             <Section title="newsletter" link="/newsletter">

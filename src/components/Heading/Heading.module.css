@@ -1,0 +1,27 @@
+.heading {
+    position: relative;
+}
+
+.heading:hover .link {
+    visibility: visible;
+}
+
+.link {
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    display: flex;
+    box-shadow: none !important;
+    height: 100%;
+    padding-right: 1.25rem;
+    visibility: hidden;
+    color: var(--text);
+}
+
+.icon {
+    width: 1.25rem;
+}
+
+.icon:hover {
+    color: var(--primary);
+}
