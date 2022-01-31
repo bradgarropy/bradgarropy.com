@@ -14,12 +14,39 @@ jobs:
               with:
                   node-version: 14
                   registry-url: https://registry.npmjs.org/
-            - name: "⏳ wait for netlify"
-              uses: jakepartusch/wait-for-netlify-action@v1.3
-              id: netlify
+
+            # option one
+            - uses: UnlyEd/github-action-await-vercel@v1.2.14
+              id: option-one
+              env:
+                  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
               with:
-                  site_name: "bradgarropy"
-                  max_timeout: 600
+                  deployment-url: bradgarropy-next.vercel.app
+                  timeout: 10
+            - name: Display deployment status
+              run: "echo The deployment at ${{ fromJson(steps.option-one.outputs.deploymentDetails).url }} is ${{ fromJson(steps.await-vercel.outputs.deploymentDetails).readyState }}"
+
+            # option two
+            - run: sleep 30
+            - name: vercel-preview-url
+              uses: zentered/vercel-preview-url@v1.0.0
+              id: option-two
+              env:
+                  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+              with:
+                  vercel_team_id: "bradgarropy"
+                  vercel_project_id: "bradgarropy-next"
+            - name: Get URL
+              run: echo "https://${{ steps.option-two.outputs.preview_url }}"
+
+            # option three
+            - uses: aaimio/vercel-preview-url-action@v1
+              id: option-three
+              with:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: preview url
+              run: "echo The preview URL is: ${{ steps.option-three.outputs.vercel_preview_url }}."
+
             - name: "🛳️ lighthouse"
               uses: treosh/lighthouse-ci-action@v8
               env:
