@@ -27,6 +27,7 @@ const getLatestPosts = (): PostFrontmatter[] => {
 
 const getAllPosts = (): PostFrontmatter[] => {
     console.log("getAllPosts")
+    console.log(fs.readdirSync(process.cwd()))
     console.log(process.cwd())
     const postsPath = path.join(process.cwd(), "content/posts")
     console.log(postsPath)
@@ -72,6 +73,7 @@ const getTopic = (name: Topic["name"]): Topic => {
 
 const getTopics = (): Topic[] => {
     console.log("getTopics")
+    console.log(fs.readdirSync(process.cwd()))
     console.log(process.cwd())
     const postsPath = path.join(process.cwd(), "content/posts")
     console.log(postsPath)
