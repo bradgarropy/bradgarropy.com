@@ -26,7 +26,10 @@ const getLatestPosts = (): PostFrontmatter[] => {
 }
 
 const getAllPosts = (): PostFrontmatter[] => {
+    console.log("getAllPosts")
+    console.log(process.cwd())
     const postsPath = path.join(process.cwd(), "content/posts")
+    console.log(postsPath)
 
     const posts = fs
         // read directory of posts
