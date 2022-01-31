@@ -268,6 +268,8 @@ const mockTestimonials: Testimonial[] = [
     },
 ]
 
+const mockTestimonial: Testimonial = mockTestimonials[0]
+
 const mockNows: Now[] = [
     {
         html: "<p>This is a newer now.</p>",
@@ -355,6 +357,7 @@ export {
     mockSortedPosts,
     mockSortedPostsFrontmatter,
     mockSponsors,
+    mockTestimonial,
     mockTestimonials,
     mockTopic,
     mockTopics,

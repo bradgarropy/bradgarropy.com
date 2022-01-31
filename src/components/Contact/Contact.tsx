@@ -1,20 +1,23 @@
 import classnames from "classnames"
+import {useMarkdown} from "hooks"
 import {FC} from "react"
 import LinkStyles from "styles/Link.module.css"
 import {Markdown} from "types/markdown"
 
-import styles from "./Contact.module.css"
+import ContactStyles from "./Contact.module.css"
 
 type ContactProps = {
     contact: Markdown
 }
 
 const Contact: FC<ContactProps> = ({contact}) => {
+    const Markdown = useMarkdown(contact.html)
+
     return (
-        <div
-            className={classnames(LinkStyles.fancy, styles.contact)}
-            dangerouslySetInnerHTML={{__html: contact.html}}
-        />
+        <div className={classnames(LinkStyles.fancy, ContactStyles.contact)}>
+            <h1>👋🏼 say hi</h1>
+            {Markdown}
+        </div>
     )
 }
 

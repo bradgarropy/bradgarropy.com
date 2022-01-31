@@ -1,6 +1,7 @@
 import classnames from "classnames"
 import Heading from "components/Heading"
 import Testimonials from "components/Testimonials"
+import {useMarkdown} from "hooks"
 import {FC} from "react"
 import LinkStyles from "styles/Link.module.css"
 import {Markdown} from "types/markdown"
@@ -14,12 +15,13 @@ type HireMeProps = {
 }
 
 const HireMe: FC<HireMeProps> = ({hireMe, testimonials}) => {
+    const Markdown = useMarkdown(hireMe.html)
+
     return (
         <>
-            <div
-                className={classnames(LinkStyles.fancy, styles.hireMe)}
-                dangerouslySetInnerHTML={{__html: hireMe.html}}
-            />
+            <div className={classnames(LinkStyles.fancy, styles.hireMe)}>
+                {Markdown}
+            </div>
 
             <Heading level={1} id="testimonials">
                 💯 what people think of me

@@ -1,5 +1,3 @@
-# 👋🏼 say hi
-
 I enjoy connecting with other developers, drop me a message and let's talk!
 
 Social media is great for informal chats.  
