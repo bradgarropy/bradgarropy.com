@@ -24,8 +24,7 @@ jobs:
                   deployment-url: bradgarropy-next.vercel.app
                   timeout: 10
             - name: Display deployment status
-              # run: echo The deployment at ${{ fromJson(steps.option-one.outputs.deploymentDetails).url }} is ${{ fromJson(steps.await-vercel.outputs.deploymentDetails).readyState }}
-              run: echo The deployment at ${{ fromJSON(steps.option-one.outputs.deploymentDetails) }}
+              run: echo The deployment at ${{ fromJSON(steps.option-one.outputs.deploymentDetails).url }} is ${{ fromJSON(steps.await-vercel.outputs.deploymentDetails).readyState }}
 
             # option two
             - run: sleep 30
