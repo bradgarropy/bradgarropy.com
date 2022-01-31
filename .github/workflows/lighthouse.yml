@@ -24,7 +24,7 @@ jobs:
                   deployment-url: bradgarropy-next.vercel.app
                   timeout: 10
             - name: Display deployment status
-              run: echo "The deployment at ${{ fromJson(steps.option-one.outputs.deploymentDetails).url }} is ${{ fromJson(steps.await-vercel.outputs.deploymentDetails).readyState }}"
+              run: echo The deployment at ${{ fromJson(steps.option-one.outputs.deploymentDetails).url }} is ${{ fromJson(steps.await-vercel.outputs.deploymentDetails).readyState }}
 
             # option two
             - run: sleep 30
@@ -37,7 +37,7 @@ jobs:
                   vercel_team_id: "bradgarropy"
                   vercel_project_id: "bradgarropy-next"
             - name: Get URL
-              run: echo "https://${{ steps.option-two.outputs.preview_url }}"
+              run: echo https://${{ steps.option-two.outputs.preview_url }}
 
             # option three
             - uses: aaimio/vercel-preview-url-action@v1
@@ -45,7 +45,7 @@ jobs:
               with:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             - name: preview url
-              run: echo "The preview URL is: ${{ steps.option-three.outputs.vercel_preview_url }}."
+              run: echo The preview URL is: ${{ steps.option-three.outputs.vercel_preview_url }}.
 
             - name: "🛳️ lighthouse"
               uses: treosh/lighthouse-ci-action@v8
