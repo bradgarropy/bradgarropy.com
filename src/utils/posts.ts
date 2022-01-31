@@ -68,7 +68,9 @@ const getTopic = (name: Topic["name"]): Topic => {
 }
 
 const getTopics = (): Topic[] => {
+    console.log(process.cwd())
     const postsPath = path.join(process.cwd(), "content/posts")
+    console.log(postsPath)
 
     const topics = fs
         // read directory of posts
