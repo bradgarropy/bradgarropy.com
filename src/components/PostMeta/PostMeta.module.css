@@ -4,6 +4,8 @@
 }
 
 .postMeta a {
+    transition-property: color;
+    transition-duration: 300ms;
     color: var(--text);
 }
 

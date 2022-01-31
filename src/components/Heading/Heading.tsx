@@ -1,8 +1,7 @@
+import HeadingStyles from "components/Heading/Heading.module.css"
 import Icon from "components/Icon"
 import {FC} from "react"
 import slugify from "slugify"
-
-import HeadingStyles from "./Heading.module.css"
 
 type HeadingProps = {
     level: 1 | 2 | 3

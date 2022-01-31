@@ -1,9 +1,8 @@
 import Link from "@bradgarropy/next-link"
+import PodcastStyles from "components/Podcast/Podcast.module.css"
 import Image from "next/image"
 import {FC} from "react"
 import {Podcast as PodcastType} from "types/podcast"
-
-import styles from "./Podcast.module.css"
 
 type PodcastProps = {
     podcast: PodcastType
@@ -11,23 +10,23 @@ type PodcastProps = {
 
 const Podcast: FC<PodcastProps> = ({podcast}) => {
     return (
-        <div className={styles.podcast}>
-            <Link to={podcast.link} className={styles.podcastLink}>
+        <div className={PodcastStyles.podcast}>
+            <Link to={podcast.link} className={PodcastStyles.podcastLink}>
                 <Image
                     src={podcast.image}
                     alt={podcast.title}
                     width={3000}
                     height={3000}
-                    className={styles.coverImage}
+                    className={PodcastStyles.coverImage}
                 />
             </Link>
 
-            <div className={styles.description}>
+            <div className={PodcastStyles.description}>
                 <span>a weekly podcast about web development hosted by</span>
 
-                <div className={styles.hosts}>
+                <div className={PodcastStyles.hosts}>
                     <Link
-                        className={styles.host}
+                        className={PodcastStyles.host}
                         to="https://twitter.com/bradgarropy"
                     >
                         brad garropy
@@ -36,7 +35,7 @@ const Podcast: FC<PodcastProps> = ({podcast}) => {
                     <span>/</span>
 
                     <Link
-                        className={styles.host}
+                        className={PodcastStyles.host}
                         to="https://twitter.com/RGottleber"
                     >
                         richard gottleber

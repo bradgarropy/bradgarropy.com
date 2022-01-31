@@ -1,9 +1,8 @@
 import {post} from "@bradgarropy/http"
+import NewsletterStyles from "components/Newsletter/Newsletter.module.css"
 import {FC, useState} from "react"
 import ButtonStyles from "styles/Button.module.css"
 import InputStyles from "styles/Input.module.css"
-
-import styles from "./Newsletter.module.css"
 
 const Newsletter: FC = () => {
     const [email, setEmail] = useState("")
@@ -27,11 +26,11 @@ const Newsletter: FC = () => {
 
     return (
         <div>
-            <p className={styles.description}>
+            <p className={NewsletterStyles.description}>
                 💻 side projects | 📰 web dev news | ⚡ tech opinions
             </p>
 
-            <form className={styles.newsletter} onSubmit={onSubmit}>
+            <form className={NewsletterStyles.newsletter} onSubmit={onSubmit}>
                 <input
                     className={InputStyles.input}
                     placeholder="email@example.com"

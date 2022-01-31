@@ -3,7 +3,7 @@ import Image from "next/image"
 import {FC} from "react"
 import {Video} from "types/video"
 
-import styles from "./LatestVideos.module.css"
+import LatestVideosStyles from "./LatestVideos.module.css"
 
 type LatestVideosProps = {
     latestVideos: Video[]
@@ -11,20 +11,20 @@ type LatestVideosProps = {
 
 const LatestVideos: FC<LatestVideosProps> = ({latestVideos}) => {
     return (
-        <div className={styles.latestVideos}>
+        <div className={LatestVideosStyles.latestVideos}>
             {latestVideos.map(latestVideo => {
                 return (
                     <Link
                         key={latestVideo.id}
                         to={`https://www.youtube.com/watch?v=${latestVideo.id}`}
-                        className={styles.thumbnailLink}
+                        className={LatestVideosStyles.thumbnailLink}
                     >
                         <Image
                             src={latestVideo.thumbnail}
                             alt={latestVideo.title}
                             width="1280"
                             height="720"
-                            className={styles.thumbnail}
+                            className={LatestVideosStyles.thumbnail}
                         />
                     </Link>
                 )

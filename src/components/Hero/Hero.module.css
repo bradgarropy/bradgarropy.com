@@ -26,6 +26,8 @@
 }
 
 .heroImage {
+    transition-property: transform, border, background-color;
+    transition-duration: 300ms;
     border-radius: 100%;
     border: 7px solid var(--text) !important;
     background-color: var(--text);

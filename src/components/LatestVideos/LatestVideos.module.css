@@ -17,6 +17,8 @@
 }
 
 .thumbnail {
+    transition-property: box-shadow;
+    transition-duration: 300ms;
     box-sizing: border-box;
     border-radius: 0.3rem;
     border: 3px solid var(--text) !important;

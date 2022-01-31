@@ -1,4 +1,6 @@
 .icon {
+    transition-property: color;
+    transition-duration: 300ms;
     font-size: 2.5rem;
     color: var(--text);
 }
