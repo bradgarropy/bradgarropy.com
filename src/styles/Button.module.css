@@ -1,4 +1,6 @@
 .button {
+    transition-property: box-shadow;
+    transition-duration: 300ms;
     display: inline-block;
     background: var(--darkPurple);
     color: var(--white);

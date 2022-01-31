@@ -38,6 +38,8 @@
 }
 
 .host {
+    transition-property: color, text-shadow;
+    transition-duration: 300ms;
     color: var(--text);
 }
 
@@ -58,6 +60,8 @@
 }
 
 .coverImage {
+    transition-property: box-shadow;
+    transition-duration: 300ms;
     box-sizing: border-box;
     border: 2px solid var(--text) !important;
     background-color: var(--text);

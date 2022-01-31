@@ -1,8 +1,7 @@
 import Link from "@bradgarropy/next-link"
 import classnames from "classnames"
+import LinkButtonStyles from "components/LinkButton/LinkButton.module.css"
 import {FC} from "react"
-
-import styles from "./LinkButton.module.css"
 
 type LinkButtonProps = {
     to: string
@@ -16,9 +15,9 @@ const LinkButton: FC<LinkButtonProps> = ({
     disabled = false,
     ...props
 }) => {
-    const classes = classnames(styles.linkButton, {
-        [styles.reverse]: reverse,
-        [styles.disabled]: disabled,
+    const classes = classnames(LinkButtonStyles.linkButton, {
+        [LinkButtonStyles.reverse]: reverse,
+        [LinkButtonStyles.disabled]: disabled,
     })
 
     if (disabled) {

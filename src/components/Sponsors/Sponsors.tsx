@@ -1,11 +1,10 @@
 import Link from "@bradgarropy/next-link"
 import classnames from "classnames"
 import Section from "components/Section"
+import SponsorsStyles from "components/Sponsors/Sponsors.module.css"
 import {FC} from "react"
 import LinkStyles from "styles/Link.module.css"
 import {Sponsors as SponsorsType} from "types/sponsor"
-
-import styles from "./Sponsors.module.css"
 
 type SponsorsProps = {
     sponsors: SponsorsType
@@ -15,7 +14,7 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
     return (
         <>
             <Section
-                className={classnames(styles.thanks, LinkStyles.fancy)}
+                className={classnames(SponsorsStyles.thanks, LinkStyles.fancy)}
                 title="💜 thank you"
             >
                 <p>
@@ -32,24 +31,24 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                 </p>
             </Section>
 
-            <div className={styles.tiers}>
+            <div className={SponsorsStyles.tiers}>
                 {Object.entries(sponsors).map(([frequency, sponsors]) => (
                     <Section key={frequency} title={frequency}>
                         {sponsors.length ? (
-                            <div className={styles.sponsors}>
+                            <div className={SponsorsStyles.sponsors}>
                                 {sponsors.map(sponsor => (
                                     <Link
-                                        className={styles.sponsor}
+                                        className={SponsorsStyles.sponsor}
                                         key={sponsor.username}
                                         to={sponsor.profile}
                                     >
                                         <img
-                                            className={styles.avatar}
+                                            className={SponsorsStyles.avatar}
                                             src={sponsor.avatar}
                                             alt={sponsor.username}
                                         />
 
-                                        <span className={styles.tier}>
+                                        <span className={SponsorsStyles.tier}>
                                             {sponsor.tier}
                                         </span>
                                     </Link>

@@ -8,9 +8,8 @@ import {
     faYoutube,
 } from "@fortawesome/free-brands-svg-icons"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import SocialLinkStyles from "components/SocialLink/SocialLink.module.css"
 import {FC} from "react"
-
-import styles from "./SocialLink.module.css"
 
 type SocialLinkProps = {
     platform:
@@ -67,7 +66,7 @@ const SocialLink: FC<SocialLinkProps> = ({platform}) => {
 
     return (
         <Link to={url} aria-label={label}>
-            <FontAwesomeIcon className={styles.icon} icon={icon} />
+            <FontAwesomeIcon className={SocialLinkStyles.icon} icon={icon} />
         </Link>
     )
 }

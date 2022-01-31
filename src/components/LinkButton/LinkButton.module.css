@@ -1,4 +1,6 @@
 .linkButton {
+    transition-property: color, box-shadow;
+    transition-duration: 300ms;
     display: inline-block;
     background: var(--white);
     color: var(--black);

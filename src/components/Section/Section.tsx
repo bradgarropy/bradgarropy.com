@@ -1,7 +1,7 @@
 import Link from "@bradgarropy/next-link"
 import {FC, HTMLAttributes} from "react"
 
-import styles from "./Section.module.css"
+import SectionStyles from "./Section.module.css"
 
 type SectionProps = {
     title: string
@@ -12,11 +12,11 @@ const Section: FC<SectionProps> = ({title, link, children, ...props}) => {
     return (
         <section {...props}>
             {link ? (
-                <Link className={styles.link} to={link}>
-                    <h2 className={styles.title}>{title}</h2>
+                <Link className={SectionStyles.link} to={link}>
+                    <h2 className={SectionStyles.title}>{title}</h2>
                 </Link>
             ) : (
-                <h2 className={styles.title}>{title}</h2>
+                <h2 className={SectionStyles.title}>{title}</h2>
             )}
 
             {children}

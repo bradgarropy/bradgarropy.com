@@ -1,7 +1,3 @@
-.thanks {
-    margin-bottom: 4rem;
-}
-
 .tiers {
     display: grid;
     row-gap: 5rem;
@@ -31,6 +27,8 @@
 }
 
 .avatar {
+    transition-property: transform, border, background-color;
+    transition-duration: 300ms;
     width: 6rem;
     margin: 0rem;
     border-radius: 100%;

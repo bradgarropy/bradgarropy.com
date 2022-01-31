@@ -1,4 +1,6 @@
 .title {
+    transition-property: text-shadow;
+    transition-duration: 300ms;
     font-size: clamp(3rem, 10vw, 4.5rem);
     font-weight: 900;
     letter-spacing: -0.2rem;

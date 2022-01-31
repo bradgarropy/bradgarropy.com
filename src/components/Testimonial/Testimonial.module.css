@@ -1,4 +1,6 @@
 .testimonial {
+    transition-property: color, box-shadow;
+    transition-duration: 300ms;
     padding: 2rem;
     border-radius: 0.3rem;
     border: 3px solid var(--text);
