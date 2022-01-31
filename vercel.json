@@ -5,8 +5,7 @@
         {
             "source": "/ama",
             "destination": "https://github.com/bradgarropy/ama#readme",
-            "permanent": true,
-            "basePath": false
+            "permanent": true
         },
         {
             "source": "/dotfiles",
