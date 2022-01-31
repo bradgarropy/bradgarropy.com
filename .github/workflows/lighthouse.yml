@@ -27,7 +27,7 @@ jobs:
               run: echo The deployment at ${{ fromJSON(steps.option-one.outputs.deploymentDetails).url }} is ${{ fromJSON(steps.option-one.outputs.deploymentDetails).readyState }}
 
             # option two
-            - run: sleep 30
+            - run: sleep 200
             - name: vercel-preview-url
               uses: zentered/vercel-preview-url@v1.0.0
               id: option-two
