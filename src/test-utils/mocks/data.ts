@@ -316,7 +316,7 @@ const mockTopics: Topic[] = [
 
 const mockTopic: Topic = mockTopics[0]
 
-const mockRepositoryTopics = [
+const mockRepositoryTopics: string[] = [
     "gatsby",
     "javascript",
     "next",
@@ -328,6 +328,11 @@ const mockRepositoryTopics = [
     "blog",
     "portfolio",
 ]
+
+const mockUses: Markdown = {
+    html: "<p>uses</p>",
+    frontmatter: {},
+}
 
 export {
     mockChannelStatus,
@@ -353,5 +358,6 @@ export {
     mockTestimonials,
     mockTopic,
     mockTopics,
+    mockUses,
     mockVideos,
 }

@@ -6,6 +6,10 @@
     text-transform: lowercase;
 }
 
+.content > p:first-of-type {
+    margin-top: 0;
+}
+
 .footer {
     display: grid;
     grid-template-columns: repeat(2, auto);
