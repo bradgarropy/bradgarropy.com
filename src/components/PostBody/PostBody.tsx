@@ -2,6 +2,7 @@ import classnames from "classnames"
 import {useMarkdown} from "hooks"
 import {FC, useEffect} from "react"
 import CodeStyles from "styles/Code.module.css"
+import EmbedsStyles from "styles/Embeds.module.css"
 import LinkStyles from "styles/Link.module.css"
 
 import PostBodyStyles from "./PostBody.module.css"
@@ -23,6 +24,7 @@ const PostBody: FC<PostBodyProps> = ({html}) => {
                 PostBodyStyles.postBody,
                 LinkStyles.fancy,
                 CodeStyles.code,
+                EmbedsStyles.embeds,
             )}
         >
             {Markdown}
