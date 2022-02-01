@@ -3,6 +3,7 @@ import classnames from "classnames"
 import LinkButton from "components/LinkButton"
 import {useMarkdown} from "hooks"
 import {FC} from "react"
+import CodeStyles from "styles/Code.module.css"
 import LinkStyles from "styles/Link.module.css"
 import {Now as NowType} from "types/now"
 import {formatDate} from "utils/date"
@@ -26,7 +27,13 @@ const Now: FC<NowProps> = ({now, newer, older}) => {
                 <span>{formatDate(frontmatter.date)}</span>
             </div>
 
-            <div className={classnames(LinkStyles.fancy, NowStyles.content)}>
+            <div
+                className={classnames(
+                    LinkStyles.fancy,
+                    NowStyles.content,
+                    CodeStyles.code,
+                )}
+            >
                 {Markdown}
             </div>
 
