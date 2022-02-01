@@ -14,8 +14,12 @@ coverage
 # host
 .vercel
 
+# reporting
+.sentryclirc
+
 # secrets
 .env*
 
 # logs
 debug.log
+

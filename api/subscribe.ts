@@ -1,7 +1,8 @@
 import {post} from "@bradgarropy/http"
-import {VercelRequest, VercelResponse} from "@vercel/node"
+import {withSentry} from "@sentry/nextjs"
+import {NextApiHandler} from "next"
 
-const handler = async (req: VercelRequest, res: VercelResponse) => {
+const handler: NextApiHandler = async (req, res) => {
     const apiKey = process.env.REVUE_API_KEY
 
     const subscriber = await post(
@@ -20,4 +21,4 @@ const handler = async (req: VercelRequest, res: VercelResponse) => {
     res.status(200).json(subscriber)
 }
 
-export default handler
+export default withSentry(handler)

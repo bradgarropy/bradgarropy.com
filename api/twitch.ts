@@ -1,11 +1,12 @@
 import {get, post} from "@bradgarropy/http"
-import {VercelRequest, VercelResponse} from "@vercel/node"
+import {withSentry} from "@sentry/nextjs"
+import {NextApiHandler, NextApiRequest, NextApiResponse} from "next"
 
 type ChannelStatus = {
     isLive: boolean
 }
 
-const handler = async (req: VercelRequest, res: VercelResponse) => {
+const handler: NextApiHandler = async (req, res) => {
     const clientId = process.env.TWITCH_CLIENT_ID
     const clientSecret = process.env.TWITCH_CLIENT_SECRET
 
@@ -32,4 +33,4 @@ const handler = async (req: VercelRequest, res: VercelResponse) => {
     res.status(200).json(channelStatus)
 }
 
-export default handler
+export default withSentry(handler)
