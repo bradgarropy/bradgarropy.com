@@ -3,6 +3,8 @@ import {withSentry} from "@sentry/nextjs"
 import {NextApiHandler} from "next"
 
 const handler: NextApiHandler = async (req, res) => {
+    throw new Error("Sentry Backend Error | Subscribe")
+
     const apiKey = process.env.REVUE_API_KEY
 
     const subscriber = await post(

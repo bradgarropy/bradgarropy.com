@@ -7,6 +7,8 @@ type ChannelStatus = {
 }
 
 const handler: NextApiHandler = async (req, res) => {
+    throw new Error("Sentry Backend Error | Twitch")
+
     const clientId = process.env.TWITCH_CLIENT_ID
     const clientSecret = process.env.TWITCH_CLIENT_SECRET
 
