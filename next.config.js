@@ -1,4 +1,6 @@
-module.exports = {
+const {withSentryConfig} = require("@sentry/nextjs")
+
+const config = {
     i18n: {
         locales: ["en-US"],
         defaultLocale: "en-US",
@@ -94,3 +96,9 @@ module.exports = {
         return config
     },
 }
+
+const sentryWebpackPluginOptions = {
+    silent: true,
+}
+
+module.exports = withSentryConfig(config, sentryWebpackPluginOptions)
