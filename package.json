@@ -50,6 +50,7 @@
         "@fortawesome/react-fontawesome": "^0.1.16",
         "@octokit/graphql": "^4.8.0",
         "@remark-embedder/core": "^2.0.0",
+        "@sentry/nextjs": "^6.17.3",
         "classnames": "^2.3.1",
         "date-fns": "^2.27.0",
         "form-data": "^4.0.0",
