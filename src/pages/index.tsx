@@ -32,15 +32,6 @@ const IndexPage: FC<IndexPageProps> = ({
                 featuredProjects={featuredProjects}
                 podcast={podcast}
             />
-
-            <button
-                type="button"
-                onClick={() => {
-                    throw new Error("Sentry Frontend Error")
-                }}
-            >
-                Throw error
-            </button>
         </Layout>
     )
 }
