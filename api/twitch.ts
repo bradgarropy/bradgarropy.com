@@ -2,13 +2,12 @@ import {get, post} from "@bradgarropy/http"
 import {withSentry} from "@sentry/nextjs"
 import {NextApiHandler, NextApiRequest, NextApiResponse} from "next"
 
-console.log(process.env.NEXT_PUBLIC_SENTRY_DSN)
-
 type ChannelStatus = {
     isLive: boolean
 }
 
 const handler: NextApiHandler = async (req, res) => {
+    console.log(process.env.NEXT_PUBLIC_SENTRY_DSN)
     throw new Error("Sentry Backend Error | Twitch")
 
     // const clientId = process.env.TWITCH_CLIENT_ID

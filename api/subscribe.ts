@@ -2,9 +2,8 @@ import {post} from "@bradgarropy/http"
 import {withSentry} from "@sentry/nextjs"
 import {NextApiHandler} from "next"
 
-console.log(process.env.NEXT_PUBLIC_SENTRY_DSN)
-
 const handler: NextApiHandler = async (req, res) => {
+    console.log(process.env.NEXT_PUBLIC_SENTRY_DSN)
     throw new Error("Sentry Backend Error | Subscribe")
 
     // const apiKey = process.env.REVUE_API_KEY
