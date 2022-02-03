@@ -9,7 +9,7 @@ topic:
 
 I've attempted to migrate this site from [Gatsby][gatsby] to [Next.js][next] three times now, and have always called it quits for [one reason or another][gatsby-vs-nextjs]. Some reasons were legitimate, like how the Next.js development server just feels slower than the Gatsby development server. Other reasons were more personal, like how difficult the Markdown parsing was. But at the end of the day, on the fourth attempt, I said _screw it_ and merged the `nextjs` branch into `master` and didn't look back.
 
-YOUTUBE VIDEO HERE
+https://youtu.be/IvubvZ9XUAo
 
 I made this decision so abruptly because I feel like Next.js just is the right way to go. It provides more control over my codebase because it doesn't rely so heavily on plugins like Gatsby. Anytime I ran into a problem with Gatsby, I felt like I had to bug a plugin maintainer instead of fixing it myself. With Next.js, I was forced to write all of the functionality myself from the start. So I learned a lot during the migration, especially around Markdown parsing.
 
