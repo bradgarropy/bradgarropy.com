@@ -1,6 +1,6 @@
 import "styles/global.css"
 
-import GoogleAnalytics from "components/GoogleAnalytics"
+import GoogleAnalytics from "@bradgarropy/next-google-analytics"
 import type {AppProps} from "next/app"
 
 const App = ({Component, pageProps}: AppProps) => {
