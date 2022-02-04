@@ -1,6 +1,6 @@
 {
     "name": "bradgarropy.com",
-    "version": "5.0.3",
+    "version": "5.1.0",
     "description": "🏠 my home on the web",
     "keywords": [
         "javascript",
@@ -42,6 +42,7 @@
     "dependencies": {
         "@bradgarropy/captivate-sdk": "^0.4.0",
         "@bradgarropy/http": "^1.1.0",
+        "@bradgarropy/next-google-analytics": "^1.0.0",
         "@bradgarropy/next-link": "^1.0.2",
         "@bradgarropy/next-seo": "^1.2.0",
         "@fortawesome/fontawesome-svg-core": "^1.2.36",
