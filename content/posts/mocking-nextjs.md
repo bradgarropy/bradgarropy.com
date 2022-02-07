@@ -1,5 +1,5 @@
 ---
-title: 😜 mocking nextjs
+title: 😜 mocking next.js
 slug: mocking-nextjs
 date: "2021-06-28"
 topic:

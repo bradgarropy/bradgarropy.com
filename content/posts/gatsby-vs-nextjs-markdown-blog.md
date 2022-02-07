@@ -1,5 +1,5 @@
 ---
-title: "🥊 gatsby vs nextjs: markdown blog"
+title: "🥊 gatsby vs next.js: markdown blog"
 slug: gatsby-vs-nextjs-markdown-blog
 date: "2021-01-21"
 topic:
