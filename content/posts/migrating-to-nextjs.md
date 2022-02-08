@@ -78,6 +78,10 @@ But one area that was much easier was [TypeScript support][next-typescript] in N
 
 Another thing that became super simple was my [Jest][jest] setup. Because Next.js is less involved in your application code than Gatsby, I had no reason to mock out the framework. My setup file went from fifty lines of mocking Gatsby and its components down to just one line.
 
+```typescript
+import "@testing-library/jest-dom"
+```
+
 While working in Gatsby, I had a bunch of hooks for data fetching that relied on `useStaticQuery`. To test these hooks I had to mock out the complex GraphQL responses for each piece of data. Because Next.js allows me to use regular file system and network APIs, I was able to remove all of those complex mocks and replace them with simpler mocks that return plain JSON objects.
 
 ## 👨🏼‍💻 development server
@@ -89,6 +93,8 @@ But normally I'm not clicking around my site, I'm usually sitting on one page wr
 ## 🛠 build times
 
 On the upside, my production builds have gotten much faster. Building my Gatsby site on [Netlify][netlify] was averaging 3-4 minutes, while building Next.js on [Vercel][vercel] is only taking _60-90 seconds_. Not to mention, hosting on Vercel gives me other cool stuff like [Web Vitals][web-vitals] analytics and _6000 build minutes_ for free.
+
+![build times][build-times]
 
 ## 🙏🏼 thank you
 
@@ -125,3 +131,4 @@ Like I said at the beginning, this migration is a tradeoff, but I think I'm maki
 [web-vitals]: https://vercel.com/docs/concepts/analytics/web-vitals
 [twitch]: https://twitch.tv/bradgarropy
 [jest]: https://jestjs.io
+[build-times]: /images/posts/vercel-build-times.png
