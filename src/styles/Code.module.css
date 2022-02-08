@@ -1,4 +1,4 @@
-.code > p > code {
+.code :global(code:not(.grvsc-code)) {
     background: #2d2b55;
     color: #fad000;
     padding: 0.25rem 0.5rem;
