@@ -1,3 +1,4 @@
 .post {
-    overflow: hidden;
+    min-width: 0rem;
+    overflow: visible;
 }
