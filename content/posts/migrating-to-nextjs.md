@@ -1,5 +1,5 @@
 ---
-title: ⏭ migrating to nextjs
+title: 🦆 migrating to nextjs
 slug: migrating-to-nextjs
 date: "2022-02-08"
 topic:
