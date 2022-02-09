@@ -28,7 +28,7 @@
         "url": "https://github.com/bradgarropy/bradgarropy.com"
     },
     "scripts": {
-        "start": "next-remote-watch",
+        "start": "next-remote-watch ./content",
         "build": "next build",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
