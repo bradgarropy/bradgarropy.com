@@ -1,7 +1,7 @@
 ---
 title: ⏭ migrating to nextjs
 slug: migrating-to-nextjs
-date: "2022-02-07"
+date: "2022-02-08"
 topic:
     name: coding
     icon: 💻
