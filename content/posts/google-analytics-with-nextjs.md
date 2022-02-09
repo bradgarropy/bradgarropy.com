@@ -1,7 +1,7 @@
 ---
 title: 📊 google analytics with next.js
 slug: google-analytics-with-nextjs
-date: "2022-02-04"
+date: "2022-02-09"
 topic:
     name: coding
     icon: 💻
