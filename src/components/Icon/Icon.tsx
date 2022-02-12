@@ -1,4 +1,5 @@
 import {FC, HTMLAttributes} from "react"
+import CloseIcon from "svg/close.svg"
 import GatsbyIcon from "svg/gatsby.svg"
 import JavascriptIcon from "svg/javascript.svg"
 import LinkIcon from "svg/link.svg"
@@ -16,6 +17,8 @@ type IconProps = {
 
 const Icon: FC<IconProps> = ({name, ...props}) => {
     switch (name) {
+        case "close":
+            return <CloseIcon aria-label={name} {...props} />
         case "gatsby":
             return <GatsbyIcon aria-label={name} {...props} />
         case "javascript":
