@@ -2,6 +2,7 @@ import {FC, HTMLAttributes} from "react"
 import GatsbyIcon from "svg/gatsby.svg"
 import JavascriptIcon from "svg/javascript.svg"
 import LinkIcon from "svg/link.svg"
+import MenuIcon from "svg/menu.svg"
 import NextIcon from "svg/next.svg"
 import NodeIcon from "svg/node.svg"
 import ReactIcon from "svg/reacticon.svg"
@@ -21,6 +22,8 @@ const Icon: FC<IconProps> = ({name, ...props}) => {
             return <JavascriptIcon aria-label={name} {...props} />
         case "link":
             return <LinkIcon aria-label={name} {...props} />
+        case "menu":
+            return <MenuIcon aria-label={name} {...props} />
         case "next":
             return <NextIcon aria-label={name} {...props} />
         case "node":
