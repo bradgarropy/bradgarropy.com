@@ -3,6 +3,8 @@
     grid-auto-flow: column;
     column-gap: 1.25rem;
     color: var(--text);
+    transition-property: color;
+    transition-duration: var(--transitionDuration);
 }
 
 @media (max-width: 800px) {
@@ -13,7 +15,7 @@
 
 .link {
     transition-property: color;
-    transition-duration: 300ms;
+    transition-duration: var(--transitionDuration);
     color: var(--text);
 }
 

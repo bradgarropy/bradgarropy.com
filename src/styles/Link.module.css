@@ -1,6 +1,6 @@
 .fancy a:not(.heading) {
     transition-property: color, box-shadow;
-    transition-duration: 300ms;
+    transition-duration: var(--transitionDuration);
     color: var(--text);
     box-shadow: inset 0 -2px var(--primary);
 }

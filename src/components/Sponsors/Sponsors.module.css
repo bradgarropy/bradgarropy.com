@@ -28,7 +28,7 @@
 
 .avatar {
     transition-property: transform, border, background-color;
-    transition-duration: 300ms;
+    transition-duration: var(--transitionDuration);
     width: 6rem;
     margin: 0rem;
     border-radius: 100%;

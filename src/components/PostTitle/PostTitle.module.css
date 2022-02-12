@@ -13,7 +13,7 @@
 
 .postTitle a {
     transition-property: color;
-    transition-duration: 300ms;
+    transition-duration: var(--transitionDuration);
     color: var(--text);
 }
 
