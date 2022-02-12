@@ -1,5 +1,4 @@
-import {faBars} from "@fortawesome/free-solid-svg-icons"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import Icon from "components/Icon"
 import {useApp} from "hooks"
 import {FC} from "react"
 
@@ -12,14 +11,7 @@ const Hamburger: FC = () => {
         setOpen(true)
     }
 
-    return (
-        <FontAwesomeIcon
-            className={styles.hamburger}
-            aria-label="menu"
-            icon={faBars}
-            onClick={onClick}
-        />
-    )
+    return <Icon name="menu" className={styles.hamburger} onClick={onClick} />
 }
 
 export default Hamburger

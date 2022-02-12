@@ -1,7 +1,6 @@
 import Link from "@bradgarropy/next-link"
-import {faTimes} from "@fortawesome/free-solid-svg-icons"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import Hamburger from "components/Hamburger"
+import Icon from "components/Icon"
 import {useApp} from "hooks"
 import {FC} from "react"
 
@@ -16,12 +15,7 @@ const MobileNavigation: FC = () => {
 
     return open ? (
         <div className={styles.mobileNavigation}>
-            <FontAwesomeIcon
-                className={styles.close}
-                icon={faTimes}
-                onClick={onClick}
-                aria-label="close"
-            />
+            <Icon name="close" className={styles.close} onClick={onClick} />
 
             <div className={styles.links}>
                 <Link className={styles.link} to="/blog">
