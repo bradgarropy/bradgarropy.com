@@ -1,6 +1,10 @@
 const {withSentryConfig} = require("@sentry/nextjs")
 
 const config = {
+    i18n: {
+        locales: ["en-US"],
+        defaultLocale: "en-US",
+    },
     images: {
         domains: ["artwork.captivate.fm", "i.ytimg.com"],
     },
