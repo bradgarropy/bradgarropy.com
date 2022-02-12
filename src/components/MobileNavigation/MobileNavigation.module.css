@@ -1,5 +1,5 @@
 .mobileNavigation {
-    background: var(--background);
+    background-color: var(--background);
     position: fixed;
     top: 0;
     right: 0;

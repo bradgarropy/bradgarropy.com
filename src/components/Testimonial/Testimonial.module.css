@@ -1,8 +1,8 @@
 .testimonial {
     transition-property: color, box-shadow;
-    transition-duration: 300ms;
+    transition-duration: var(--transitionDuration);
     padding: 2rem;
-    border-radius: 0.3rem;
+    border-radius: var(--borderRadius);
     border: 3px solid var(--text);
     box-shadow: 3px 3px 0 var(--text);
     display: grid;

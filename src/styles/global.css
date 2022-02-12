@@ -17,6 +17,10 @@
     --grvsc-line-highlighted-background-color: #c792ea66;
     --grvsc-line-highlighted-border-color: var(--primary);
     --grvsc-line-highlighted-border-width: 4px;
+
+    /* design tokens */
+    --transitionDuration: 300ms;
+    --borderRadius: 0.3rem;
 }
 
 html {
@@ -25,13 +29,15 @@ html {
 }
 
 body {
-    background: var(--background);
+    background-color: var(--background);
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 16px;
     overflow-y: scroll;
     margin: 0rem;
     padding: 0rem;
+    transition-property: background-color;
+    transition-duration: var(--transitionDuration);
 }
 
 h1,
@@ -72,7 +78,7 @@ img {
     display: block;
     max-width: 100%;
     margin: 0rem auto;
-    border-radius: 0.3rem;
+    border-radius: var(--borderRadius);
 }
 
 blockquote {
