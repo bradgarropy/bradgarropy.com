@@ -1,13 +1,5 @@
 import Link from "@bradgarropy/next-link"
-import {
-    faDiscord,
-    faGithub,
-    faInstagram,
-    faTwitch,
-    faTwitter,
-    faYoutube,
-} from "@fortawesome/free-brands-svg-icons"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import Icon from "components/Icon"
 import SocialLinkStyles from "components/SocialLink/SocialLink.module.css"
 import {FC} from "react"
 
@@ -23,50 +15,43 @@ type SocialLinkProps = {
 
 const SocialLink: FC<SocialLinkProps> = ({platform}) => {
     let url
-    let icon
-    let label
+    let name
 
     switch (platform) {
         case "instagram":
             url = "https://instagram.com/bradgarropy"
-            icon = faInstagram
-            label = "instagram"
+            name = "instagram"
             break
 
         case "github":
             url = "https://github.com/bradgarropy"
-            icon = faGithub
-            label = "github"
+            name = "github"
             break
 
         case "twitter":
             url = "https://twitter.com/bradgarropy"
-            icon = faTwitter
-            label = "twitter"
+            name = "twitter"
             break
 
         case "youtube":
             url = "https://youtube.com/bradgarropy"
-            icon = faYoutube
-            label = "youtube"
+            name = "youtube"
             break
 
         case "twitch":
             url = "https://twitch.tv/bradgarropy"
-            icon = faTwitch
-            label = "twitch"
+            name = "twitch"
             break
 
         case "discord":
             url = "https://bradgarropy.com/discord"
-            icon = faDiscord
-            label = "discord"
+            name = "discord"
             break
     }
 
     return (
-        <Link to={url} aria-label={label}>
-            <FontAwesomeIcon className={SocialLinkStyles.icon} icon={icon} />
+        <Link to={url}>
+            <Icon className={SocialLinkStyles.icon} name={name} />
         </Link>
     )
 }
