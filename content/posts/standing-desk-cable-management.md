@@ -65,11 +65,11 @@ Overall, everything worked according to plan! Now I have a picturesque workspace
 [chair]: /images/posts/chair.jpg
 [uplift]: https://upliftdesk.com
 [uses]: https://bradgarropy.com/uses
-[tripp-lite]: https://amazon.com/gp/product/B00006B83A
-[rack-mount]: https://amazon.com/gp/product/B0822MJRT9
-[anker]: https://amazon.com/gp/product/B005NGQWL2
-[zip-ties]: https://amazon.com/Adhesive-Management-Anchors-Organizer-Holders/dp/B08F77YVYB
-[velcro-strips]: https://amazon.com/gp/product/B001E1Y5O6
+[tripp-lite]: https://amazon.com/gp/product/B00006B83A?tag=bradgarropy00-20
+[rack-mount]: https://amazon.com/gp/product/B0822MJRT9?tag=bradgarropy00-20
+[anker]: https://amazon.com/gp/product/B005NGQWL2?tag=bradgarropy00-20
+[zip-ties]: https://amazon.com/Adhesive-Management-Anchors-Organizer-Holders/dp/B08F77YVYB?tag=bradgarropy00-20
+[velcro-strips]: https://amazon.com/gp/product/B001E1Y5O6?tag=bradgarropy00-20
 [twitter]: https://twitter.com/bradgarropy
 [discord]: https://bradgarropy.com/discord
 [wiring]: https://figma.com/file/zZRndHhjo3waexZliYR9Yt/desk

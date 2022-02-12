@@ -57,11 +57,11 @@ _That being said, I'm looking to sell my [Focusrite Scarlett Solo][scarlett-solo
 
 [stream]: https://bradgarropy.com/stream
 [voicemeeter]: https://vb-audio.com/Voicemeeter
-[goxlr]: https://www.amazon.com/GoXLR-Mini-Interface-Streamers-Podcasters/dp/B07JKNG4NV
-[dbx]: https://www.amazon.com/dbx-286s-Microphone-Channel-Processor/dp/B004LWH79A
-[scarlett-solo]: https://www.amazon.com/Focusrite-Scarlett-Audio-Interface-Tools/dp/B07QR6Z1JB
+[goxlr]: https://www.amazon.com/GoXLR-Mini-Interface-Streamers-Podcasters/dp/B07JKNG4NV?tag=bradgarropy00-20
+[dbx]: https://www.amazon.com/dbx-286s-Microphone-Channel-Processor/dp/B004LWH79A?tag=bradgarropy00-20
+[scarlett-solo]: https://www.amazon.com/Focusrite-Scarlett-Audio-Interface-Tools/dp/B07QR6Z1JB?tag=bradgarropy00-20
 [routing]: /images/posts/routing.png
-[streamdeck]: https://www.amazon.com/Elgato-Stream-Deck-Controller-customizable/dp/B07DYRS1WH
+[streamdeck]: https://www.amazon.com/Elgato-Stream-Deck-Controller-customizable/dp/B07DYRS1WH?tag=bradgarropy00-20
 [youtube]: https://www.youtube.com/watch?v=6hzHGp4HpV4&list=PLB-XE8Gvu0g4S3ofFJlhbYbaHrO8QGjik
 [twitter]: https://twitter.com/bradgarropy
 [photo]: /images/posts/goxlr.jpg
