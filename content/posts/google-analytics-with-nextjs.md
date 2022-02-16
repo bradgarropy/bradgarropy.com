@@ -9,6 +9,8 @@ topic:
 
 As I [migrated][migrating-to-nextjs] this site to [Next.js][nextjs], I upgraded Google Analytics from Universal Analytics to [Google Analytics 4][ga4]. Along the way, the resources I found for handling this upgrade were a little outdated. So here's my take on how to integrate Google Analytics 4 with Next.js.
 
+https://youtu.be/m7oQSA3c31Q
+
 ## 🏡 create a property
 
 First, go to your Google Analytics dashboard and click on the _Admin_ cog in the bottom left. From there, click the blue _Create Property_ button. By default, this will create a Google Analytics 4 property. Then answer a few more questions about your business, and click _Create_.
