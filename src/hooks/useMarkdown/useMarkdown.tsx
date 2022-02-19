@@ -5,7 +5,7 @@ import Image from "next/image"
 import React, {createElement, Fragment} from "react"
 import rehypeParse from "rehype-parse"
 import rehypeReact from "rehype-react"
-import FigureStyles from "styles/Figure.module.css"
+import LinkStyles from "styles/Link.module.css"
 import {unified} from "unified"
 
 const useMarkdown = (html: string) => {
@@ -27,7 +27,12 @@ const useMarkdown = (html: string) => {
                 },
                 img: ({src, alt, width, height, ...props}) => {
                     return (
-                        <figure className={FigureStyles.figure}>
+                        <a
+                            href={src}
+                            className={LinkStyles.image}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <Image
                                 src={src}
                                 alt={alt}
@@ -35,7 +40,7 @@ const useMarkdown = (html: string) => {
                                 height={height}
                                 {...props}
                             />
-                        </figure>
+                        </a>
                     )
                 },
                 h1: ({children}) => {
