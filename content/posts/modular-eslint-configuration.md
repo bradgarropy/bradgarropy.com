@@ -2,9 +2,7 @@
 title: 💎 modular eslint configuration
 slug: modular-eslint-configuration
 date: "2020-12-16"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 I feel like I revamp my [eslint][eslint] configuration almost annually nowadays. This year the focus was on modularizing the configuration to support different technologies. Here's what I currently support.

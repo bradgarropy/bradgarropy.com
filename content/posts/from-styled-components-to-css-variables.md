@@ -2,9 +2,7 @@
 title: 💅🏼 from styled components to css variables
 slug: from-styled-components-to-css-variables
 date: "2021-04-16"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 I read that if a [tweet thread][thread] is more than three tweets long it should have been a blog post. Well, then so be it! Let me tell you about the time I converted my website from a [styled-components][styled-components] theme to [css variables][css-variables] on a whim.

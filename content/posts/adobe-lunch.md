@@ -2,9 +2,7 @@
 title: 🥪 adobe lunch
 slug: adobe-lunch
 date: "2020-01-14"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 You're sitting at your desk around 11:45AM when a coworker strolls by. He tells you that some of the team is going to lunch and asks if you want to join. Of course! Everyone is walking out the door when someone asks the dreaded question.

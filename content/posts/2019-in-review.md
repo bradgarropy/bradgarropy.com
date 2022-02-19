@@ -2,9 +2,7 @@
 title: 📅 2019 in review
 slug: 2019-in-review
 date: "2020-01-07"
-topic:
-    name: life
-    icon: 😎
+topic: life
 ---
 
 As **2019** was the first year I've ever written down any [resolutions][resolutions], it would be prudent to review how I did. Some of these resolutions didn't come with a measurable goal. So I'll summarize how I did in that area over the course of the year.

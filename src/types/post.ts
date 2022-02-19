@@ -5,7 +5,7 @@ type Post = {
 
 type PostFrontmatter = {
     date: string
-    topic: Topic
+    topic: string
     title: string
     slug: string
 }

@@ -2,9 +2,7 @@
 title: 💩 firestore crud operations
 slug: firestore-crud-operations
 date: "2021-04-26"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 I recently added a few videos to my [Firebase series][firebase-playlist] which cover [CRUD operations in Firestore][firestore-crud]. But watching a video can get tiresome if you're looking for a snippet of code. These methods are something I'll come back to time and time again, so here's a quick copy and paste reference for CRUD operations in [Firestore][firestore].

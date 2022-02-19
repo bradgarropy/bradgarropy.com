@@ -2,9 +2,7 @@
 title: 💎 eslint configuration
 slug: eslint-configuration
 date: "2019-04-16"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 Previously I kept my [ESLint][1] configuration in my [dotfiles][2] repository. But I'm a lazy developer, and I got tired of opening up [GitHub][3], navigating to the repository, finding the file, and copy / pasting it to each new project I started. So I made my entire ESLint configuration an [npm][4] package and [published it][5]!

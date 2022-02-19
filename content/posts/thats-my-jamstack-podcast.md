@@ -2,9 +2,7 @@
 title: 🍓 that's my jamstack podcast
 slug: thats-my-jamstack-podcast
 date: "2020-10-06"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 A few months ago, myself and [Bryan Robinson][twitter] were both interviewing for a developer relations position at [Sanity][sanity]. After Bryan deservingly got the job, I asked him to chat about his interview process, and his past experiences in developer relations.

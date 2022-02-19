@@ -13,7 +13,7 @@ test("shows post header", () => {
     render(<Post post={mockPost} />)
 
     expect(screen.getByText("January 1, 2021", {exact: false}))
-    expect(screen.getByText(`#${mockPost.frontmatter.topic.name}`))
+    expect(screen.getByText(`#${mockPost.frontmatter.topic}`))
     expect(screen.getByText(mockPost.frontmatter.title))
 })
 

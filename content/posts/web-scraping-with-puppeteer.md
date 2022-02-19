@@ -2,9 +2,7 @@
 title: 🧶 web scraping with puppeteer
 slug: web-scraping-with-puppeteer
 date: "2020-12-05"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 [Puppeteer][puppeteer] is a great way to automate tasks on the web if an API isn't available or doesn't provide what you're looking for. Puppeteer runs on `node`, and can be started in full or headless mode. Let's go through an example where we search for this article on [bradgarropy.com][website].

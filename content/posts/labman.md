@@ -2,9 +2,7 @@
 title: 👨🏼‍🔬 labman
 slug: labman
 date: "2020-02-10"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 Nowadays I use [GitHub][github] quite a bit. I'm always making new [repositories][repos], improving my project management skills, and open sourcing more [packages][packages]. One crucial part of my project management strategy is tracking work through [issues][issues] and organizing them with labels.

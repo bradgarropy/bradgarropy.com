@@ -2,9 +2,7 @@
 title: 🔌 standing desk cable management
 slug: standing-desk-cable-management
 date: "2021-11-10"
-topic:
-    name: tech
-    icon: 🔌
+topic: tech
 ---
 
 During the midst of COVID while I was working from home, I decided to purchase an [UPLIFT][uplift] standing desk. As you probably know, I have a lot of [equipment][uses] on my desk because I create content. Due to the insane amount of cables, I wasn't able to use the desk in the standing position. Months later, I finally got around to managing the mess, and I think the final result looks beautiful.

@@ -2,9 +2,7 @@
 title: 🔥 fixing react-hot-loader in gatsby
 slug: fixing-react-hot-loader-in-gatsby
 date: "2020-11-10"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 Have you ever cloned a fresh copy of [Gatsby][gatsby], installed the dependencies, and booted up the development server only to be greeted by this ugly warning in your console?

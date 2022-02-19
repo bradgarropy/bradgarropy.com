@@ -2,9 +2,7 @@
 title: 🍾 new year's resolutions
 slug: new-years-resolutions
 date: "2019-01-01"
-topic:
-    name: life
-    icon: 😎
+topic: life
 ---
 
 Welcome to **2019** ya'll! Another year means another set of goals to focus on. While I don't advise setting specific goals for a year out, I do suggest picking some areas in life to improve upon over the course of the year. Here are mine.
