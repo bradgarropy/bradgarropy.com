@@ -2,9 +2,7 @@
 title: 📱 project fi first look
 slug: project-fi-first-look
 date: "2018-08-07"
-topic:
-    name: tech
-    icon: 🔌
+topic: tech
 ---
 
 After making the big switch from an [Apple iPhone 7][1] to the [Google Pixel 2][2], I was downright pissed when I realized that AT&T does not support WiFi calling on the Pixel 2. This was just one more reason to leave AT&T, as we get terrible cell reception at our house. So I went searching for a new cell provider and [Project Fi][3] naturally seemed like a good fit.

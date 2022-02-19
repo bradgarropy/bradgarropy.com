@@ -2,9 +2,7 @@
 title: 📦 publishing npm packages webinar
 slug: publishing-npm-packages-webinar
 date: "2020-06-13"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 [James Quick][jqq] invited me back to his stream to talk about how to publish packages to [npm][npm]. In about an hour I give a walkthrough on the basics of creating a package, how to test it locally, and how to deploy it to npm.

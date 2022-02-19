@@ -2,9 +2,7 @@
 title: 💅🏼 styled-components open source contribution
 slug: styled-components-open-source-contribution
 date: "2018-12-28"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 It's been a while since I've contributed to open source, but recently I was going through the [Advanced React][1] course by [Wes Bos][2] and I hit a snag while writing a [styled-components][3] theme.

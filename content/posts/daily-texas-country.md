@@ -2,9 +2,7 @@
 title: 🤠 daily texas country
 slug: daily-texas-country
 date: "2020-06-18"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 Ever since I first stepped into a dance hall I've loved Texas country music. I started building a [playlist][playlist] back in 2013 that now has over 1100 songs. I met tons of friends out at the shows and the bars, but I've always wanted a larger community around the music that shaped my life.

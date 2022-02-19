@@ -2,9 +2,7 @@
 title: 😜 mocking gatsby
 slug: mocking-gatsby
 date: "2020-11-16"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 I recently started adding [Jest][jest] tests to all of my [Gatsby][gatsby] projects. Right off the bat I didn't know how to mock `gatsby` so that I could test components that performed `graphql` calls with `useStaticQuery`.

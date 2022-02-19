@@ -2,9 +2,7 @@
 title: ⏱ murphy
 slug: murphy
 date: "2020-10-13"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 Recently my buddy [Todd Austin][todd] challenged me to do half a [murph][murph] every day for a week. I accepted, and quickly learned that counting reps and rounds while you're sweating and breathing heavy is not easy. So I did what every developer would do, I built an app.

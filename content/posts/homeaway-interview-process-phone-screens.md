@@ -2,9 +2,7 @@
 title: ☎️ homeaway interview process - phone screens
 slug: homeaway-interview-process-phone-screens
 date: "2018-10-10"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 After learning web development independently for the past two years, I decided it was finally time to see what was available. I've been at [Dell][1] for eight years, so I had to start from scratch. I created a solid portfolio on [Github][2], wrote up my [resume][3], and even made a [LinkedIn][4]. Luckily I have friends at some great Austin based companies, so I started with referrals and got a response from [HomeAway][5] first.

@@ -2,9 +2,7 @@
 title: "🥊 gatsby vs next.js: markdown blog"
 slug: gatsby-vs-nextjs-markdown-blog
 date: "2021-01-21"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 Lately [Next.js][nextjs] has been gaining a lot of steam, and I've been looking for an opportunity to give it a real shot. This website has been a [Gatsby][gatsby] website since its inception, so I created a [branch][branch] and began the conversion process. The conversion is now finished, and it's time to reflect, evaluate, and make up my mind.

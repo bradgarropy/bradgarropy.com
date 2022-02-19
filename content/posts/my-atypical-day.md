@@ -2,9 +2,7 @@
 title: ⏰ my atypical day
 slug: my-atypical-day
 date: "2021-01-23"
-topic:
-    name: life
-    icon: 😎
+topic: life
 ---
 
 Lately folks like [Chris Coyier][chris-coyier], [Dan Mall][dan-mall], and [Dave Rupert][dave-rupert] have been sharing what their typical day looks like. I figured I'd do the same, although this is not my typical day. With the pandemic and my [torn achilles][achilles], things are a bit different for me. But here it is nonethless.
