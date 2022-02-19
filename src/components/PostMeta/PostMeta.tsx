@@ -7,12 +7,11 @@ import {formatDate} from "utils/date"
 type PostMetaProps = Pick<Post["frontmatter"], "date" | "topic">
 
 const PostMeta: FC<PostMetaProps> = ({date, topic}) => {
-    const {name} = topic
-
     return (
         <div className={PostMetaStyles.postMeta}>
             <p>
-                {formatDate(date)} in <Link to={`/topic/${name}`}>#{name}</Link>
+                {formatDate(date)} in{" "}
+                <Link to={`/topic/${topic}`}>#{topic}</Link>
             </p>
         </div>
     )

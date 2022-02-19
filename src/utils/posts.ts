@@ -4,6 +4,12 @@ import path from "path"
 import {Post, PostFrontmatter, Topic} from "types/post"
 import {transformMarkdown} from "utils/markdown"
 
+const icons = {
+    coding: "💻",
+    tech: "🔌",
+    life: "😎",
+}
+
 const getLatestPosts = (): PostFrontmatter[] => {
     const postsPath = path.join(process.cwd(), "content/posts")
 
@@ -61,8 +67,10 @@ const getPostBySlug = async (slug: PostFrontmatter["slug"]): Promise<Post> => {
 }
 
 const getTopic = (name: Topic["name"]): Topic => {
-    const topics = getTopics()
-    const topic = topics.find(topic => topic.name === name)
+    const topic: Topic = {
+        name,
+        icon: icons[name],
+    }
 
     return topic
 }
@@ -81,8 +89,8 @@ const getTopics = (): Topic[] => {
             const file = matter.read(postPath)
             const post = file.data as PostFrontmatter
 
-            if (!topics.some(topic => topic.name === post.topic.name)) {
-                return [...topics, post.topic]
+            if (!topics.some(topic => topic.name === post.topic)) {
+                return [...topics, getTopic(post.topic)]
             } else {
                 return topics
             }
@@ -108,7 +116,7 @@ const getPostsByTopic = (topic: Topic["name"]): PostFrontmatter[] => {
             return [...posts, post]
         }, [])
 
-    const topicPosts = posts.filter(post => post.topic.name === topic)
+    const topicPosts = posts.filter(post => post.topic === topic)
     const sortedTopicPosts = sortPostsByDate(topicPosts)
 
     return sortedTopicPosts
