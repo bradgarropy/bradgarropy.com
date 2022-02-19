@@ -2,22 +2,12 @@ import PostBody from "components/PostBody"
 import PostFooter from "components/PostFooter"
 import PostHeader from "components/PostHeader"
 import {FC} from "react"
+import {Post as PostType} from "types/post"
 
 import styles from "./Post.module.css"
 
 type PostProps = {
-    post: {
-        html: string
-        frontmatter: {
-            slug: string
-            title: string
-            date: string
-            topic: {
-                icon: string
-                name: string
-            }
-        }
-    }
+    post: PostType
 }
 
 const Post: FC<PostProps> = ({post}) => {
