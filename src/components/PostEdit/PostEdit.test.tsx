@@ -7,6 +7,6 @@ test("shows edit button", () => {
 
     expect(screen.getByText("💻 edit on github")).toHaveAttribute(
         "href",
-        expect.stringContaining("my-test-post"),
+        "https://github.com/bradgarropy/bradgarropy.com/edit/master/content/posts/my-test-post.md",
     )
 })
