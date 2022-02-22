@@ -1,11 +1,17 @@
-.fancy a:not(.heading) {
+.fancy a:not(.heading, .image) {
     transition-property: color, box-shadow;
     transition-duration: var(--transitionDuration);
     color: var(--text);
     box-shadow: inset 0 -2px var(--primary);
 }
 
-.fancy a:not(.heading):hover {
+.fancy a:not(.heading, .image):hover {
     color: var(--text);
     box-shadow: inset 0 -25px 0 var(--primary);
+}
+
+.image {
+    margin: 1.75rem 0rem;
+    display: grid;
+    justify-content: center;
 }

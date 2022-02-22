@@ -2,9 +2,7 @@
 title: 🎥 react image slider
 slug: react-image-slider
 date: "2018-12-15"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 When building my wife's photography website, [photogarropy][photogarropy], I knew I wanted the home page to prominently feature her work, so I made an image slider and placed it on the landing page of the site. I'll walk you through how to build it below.

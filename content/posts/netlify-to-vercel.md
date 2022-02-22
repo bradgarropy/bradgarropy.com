@@ -2,9 +2,7 @@
 title: ▲ netlify to vercel
 slug: netlify-to-vercel
 date: "2021-12-13"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 After running out of build minutes on [Netlify][netlify], and considering moving this site to [Next.js][next] for so long, I decided to give [Vercel][vercel] a shot for hosting my portfolio. The process turned out to be very simple, and now I've got this [Gatsby][gatsby] site deployed on both Netlify and Vercel.

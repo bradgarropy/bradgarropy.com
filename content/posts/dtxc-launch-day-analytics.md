@@ -2,9 +2,7 @@
 title: 📈 dtxc launch day analytics
 slug: dtxc-launch-day-analytics
 date: "2020-06-29"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 I did it, I successfully built and launched [Daily Texas Country][dtxc]! But how do I determine success? I'm still not totally sure how to answer that question, but a good first step would be to track and understand our analytics. All of the statistics you see below are numbers from launch day, June 18.

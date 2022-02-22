@@ -2,9 +2,7 @@
 title: 👕 curly bois shirts
 slug: curly-bois-shirts
 date: "2020-12-07"
-topic:
-    name: life
-    icon: 😎
+topic: life
 ---
 
 There was a particularly hysterical moment on a recent episode of [Learn With Jason][learn-with-jason] where [Cassie Evans][cassie-evans] shared her nickname for parentheses with [Jason Lengstorf][jason-lengstorf].

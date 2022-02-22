@@ -2,9 +2,7 @@
 title: 🏆 goals for 2021
 slug: goals-for-2021
 date: "2021-01-04"
-topic:
-    name: life
-    icon: 😎
+topic: life
 ---
 
 Despite the pandemic, 2020 was my most productive year for personal branding, side projects, and passive income. I want to carry on that momentum in 2021, but I've got lots of projects in flight. So my focus for this year will be building on my strong foundations.

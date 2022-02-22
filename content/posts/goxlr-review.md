@@ -2,9 +2,7 @@
 title: 🔊 goxlr review
 slug: goxlr-review
 date: "2021-05-05"
-topic:
-    name: tech
-    icon: 🔌
+topic: tech
 ---
 
 As my [stream][stream] setup has gotten more complicated, I needed a mixer to control audio levels. I started out with a free software mixer called [Voicemeeter][voicemeeter]. But after using it for a year, I experienced issues with Bluetooth connectivity and audio crackling. I got fed up with it, so I spent all the money I earned from my side projects on a hardware mixer, the [TC Helicon GoXLR][goxlr].

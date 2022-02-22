@@ -2,9 +2,7 @@
 title: 📧 google's inbox is going away
 slug: googles-inbox-is-going-away
 date: "2018-09-12"
-topic:
-    name: tech
-    icon: 🔌
+topic: tech
 ---
 
 Today, [Google][1] dropped this bomb. As with thousands of others, I'm sad to see [Inbox][2] go. It was a fresh take on email, which offered some great features.

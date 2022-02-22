@@ -44,7 +44,11 @@ test("renders images", () => {
     render(result.current)
 
     const image = screen.getByAltText(name)
-    expect(image.parentElement.parentElement).toHaveClass("figure")
+
+    expect(image.parentElement.parentElement).toHaveAttribute(
+        "href",
+        `/${name}.jpg`,
+    )
 })
 
 describe("renders headers", () => {

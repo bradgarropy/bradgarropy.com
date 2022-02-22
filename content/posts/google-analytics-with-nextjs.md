@@ -2,9 +2,7 @@
 title: 📊 google analytics with next.js
 slug: google-analytics-with-nextjs
 date: "2022-02-11"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 As I [migrated][migrating-to-nextjs] this site to [Next.js][nextjs], I upgraded Google Analytics from Universal Analytics to [Google Analytics 4][ga4]. Along the way, the resources I found for handling this upgrade were a little outdated. So here's my take on how to integrate Google Analytics 4 with Next.js.

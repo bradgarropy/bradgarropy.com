@@ -2,9 +2,7 @@
 title: 🤩 crediting open source authors
 slug: crediting-open-source-authors
 date: "2020-06-15"
-topic:
-    name: coding
-    icon: 💻
+topic: coding
 ---
 
 You just found an awesome repository, and it works _almost_ exactly how you want. You clone it, tweak it until it's _juuust right_ for you, then begin pushing that code up to your very own repository.
