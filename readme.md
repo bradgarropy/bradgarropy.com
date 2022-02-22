@@ -2,7 +2,7 @@
 
 _My home on the web._
 
-[![netlify][netlify-badge]][netlify]
+[![vercel][vercel-badge]][vercel]
 [![github actions][github-actions-badge]][github-actions]
 [![codecov][codecov-badge]][codecov]
 [![contributing][contributing-badge]][contributing]
@@ -32,8 +32,8 @@ _My home on the web._
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-[netlify]: https://app.netlify.com/sites/bradgarropy/deploys
-[netlify-badge]: https://img.shields.io/netlify/e8759e98-cc7d-443a-968e-f1b2419273fe?style=flat-square
+[vercel]: https://vercel.com/bradgarropy/bradgarropy
+[vercel-badge]: https://img.shields.io/github/deployments/bradgarropy/bradgarropy.com/production?label=vercel&style=flat-square
 [github-actions]: https://github.com/bradgarropy/bradgarropy.com/actions
 [github-actions-badge]: https://img.shields.io/github/workflow/status/bradgarropy/bradgarropy.com/%F0%9F%A7%AA%20test?style=flat-square
 [codecov]: https://app.codecov.io/gh/bradgarropy/bradgarropy.com
