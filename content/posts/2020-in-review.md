@@ -67,4 +67,4 @@ _Share them with me on [Twitter][twitter]!_
 [dtxc-youtube]: https://dailytexascountry.com/youtube
 [dtxc-instagram]: https://dailytexascountry.com/instagram
 [dtxc-facebook]: https://dailytexascountry.com/facebook
-[resolutions]: /blog/goals-for-2020
+[resolutions]: https://bradgarropy.com/blog/goals-for-2020

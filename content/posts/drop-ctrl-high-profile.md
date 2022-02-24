@@ -39,4 +39,4 @@ _You can find this keyboard and all my other gear on the [uses][uses] page._
 [black-widow]: https://www.razer.com/gaming-keyboards/Razer-BlackWidow/RZ03-02860100-R3M1
 [ctrl]: https://drop.com/buy/drop-ctrl-high-profile-mechanical-keyboard
 [keycaps]: https://drop.com/buy/drop-mito-gmk-pixel-custom-keycap-set
-[uses]: /uses
+[uses]: https://bradgarropy.com/uses

@@ -63,7 +63,7 @@ After my achilles injury, I found it very difficult to create marketing material
 
 As planned, I focused on lot on strengthening my foundations in 2021. Things like my [website][site], my [podcast][web-dev-weekly], my [YouTube][youtube] channel, my fitness, and of course my marriage. Next year I plan to take calculated steps to building real products online, and sharing my progress through my social platforms. It will be my first steps towards solo entrepreneurship.
 
-[2021-goals]: /blog/goals-for-2021
+[2021-goals]: https://bradgarropy.com/blog/goals-for-2021
 [anniversary]: https://www.instagram.com/p/CXJhi3qFE_j
 [5k]: https://www.instagram.com/p/CVLcJ-UlihU
 [web-dev-weekly]: https://webdevweekly.captivate.fm

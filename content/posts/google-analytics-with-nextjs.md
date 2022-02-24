@@ -84,7 +84,7 @@ If you're like me, and you never want to think about setting this up again, you 
 [ga-data-stream]: /images/posts/ga-data-stream.png
 [ga-website]: /images/posts/ga-website.png
 [ga-measurement-id]: /images/posts/ga-measurement-id.png
-[migrating-to-nextjs]: /blog/migrating-to-nextjs
+[migrating-to-nextjs]: https://bradgarropy.com/blog/migrating-to-nextjs
 [ga4]: https://developers.google.com/analytics/devguides/collection/ga4
 [nextjs]: https://nextjs.org
 [vercel-env]: https://vercel.com/docs/concepts/projects/environment-variables

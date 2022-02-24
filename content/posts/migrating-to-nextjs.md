@@ -104,7 +104,7 @@ Like I said at the beginning, this migration is a tradeoff, but I think I'm maki
 
 [gatsby]: https://gatsbyjs.com
 [next]: https://nextjs.org
-[gatsby-vs-nextjs]: /blog/gatsby-vs-nextjs-markdown-blog
+[gatsby-vs-nextjs]: https://bradgarropy.com/blog/gatsby-vs-nextjs-markdown-blog
 [crutchcorn]: https://twitter.com/crutchcorn
 [unicorn-utterances]: https://unicorn-utterances.com
 [pr]: https://github.com/bradgarropy/bradgarropy.com/pull/265
@@ -112,7 +112,7 @@ Like I said at the beginning, this migration is a tradeoff, but I think I'm maki
 [typescript]: https://typescriptlang.org
 [diff]: /images/posts/pr-diff.png
 [sentry]: https://sentry.io
-[saas]: /blog/goals-for-2022#products
+[saas]: https://bradgarropy.com/blog/goals-for-2022#products
 [repo]: https://github.com/bradgarropy/bradgarropy.com
 [use-markdown]: https://github.com/bradgarropy/bradgarropy.com/blob/master/src/hooks/useMarkdown/useMarkdown.tsx
 [transform-markdown]: https://github.com/bradgarropy/bradgarropy.com/blob/master/src/utils/markdown.ts#L36

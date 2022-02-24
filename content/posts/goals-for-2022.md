@@ -69,7 +69,7 @@ I won't be able to get any of my goals accomplished if I can't stay organized an
 
 So stay tuned to see how I progress towards each one of these goals in 2022. Now I'd like to know what your goals are for the New Year! Share them with me on [Twitter][twitter]!
 
-[2021]: /blog/goals-for-2021
+[2021]: https://bradgarropy.com/blog/goals-for-2021
 [twitter]: https://twitter.com/bradgarropy
 [youtube]: https://youtube.com/bradgarropy
 [twitch]: https://twitch.tv/bradgarropy

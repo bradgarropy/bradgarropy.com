@@ -44,7 +44,7 @@ Usually I work out from **`7:00PM`** to **`8:30PM`** and then start the rest of 
 _I'd like to see what a typical day looks like for [James Quick][james-quick] and [Brian Morrison][brian-morrison]._
 
 [github]: https://github.com/bradgarropy
-[website]: /blog
+[website]: https://bradgarropy.com/blog
 [twitch]: https://twitch.tv/bradgarropy
 [youtube]: https://youtube.com/bradgarropy
 [thps]: https://www.tonyhawkthegame.com

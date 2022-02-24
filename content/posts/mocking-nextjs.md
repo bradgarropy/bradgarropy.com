@@ -36,8 +36,8 @@ jest.mock(
 
 If you find these mocks useful, let me know and I can publish them as an `npm` package. What kind of mocks do you use when testing [Next.js][next]? Let me know on [Twitter][twitter]!
 
-[mock-gatsby]: /blog/mocking-gatsby
-[mock-gatsby-image]: /blog/mocking-gatsby-image
+[mock-gatsby]: https://bradgarropy.com/blog/mocking-gatsby
+[mock-gatsby-image]: https://bradgarropy.com/blog/mocking-gatsby-image
 [next]: https://nextjs.org
 [gatsby]: https://gatsbyjs.com
 [gatsby-plugin-seo]: https://github.com/bradgarropy/gatsby-plugin-seo

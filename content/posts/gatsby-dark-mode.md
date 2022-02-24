@@ -100,7 +100,7 @@ While this dark modes works very well, and persists through page navigation, it'
 
 **Give dark mode a try, [click the moon][moon] at the top of the page!**
 
-[sc-to-cv]: /blog/from-styled-components-to-css-variables
+[sc-to-cv]: https://bradgarropy.com/blog/from-styled-components-to-css-variables
 [josh-comeau]: https://twitter.com/joshwcomeau
 [perfect-dark-mode]: https://www.joshwcomeau.com/react/dark-mode
 [pull-request]: https://github.com/bradgarropy/bradgarropy.com/pull/205/files
