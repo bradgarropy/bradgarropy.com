@@ -1,7 +1,7 @@
 import Icon from "components/Icon"
 import {FC} from "react"
 import {Project} from "types/project"
-import {getTechnologies} from "utils"
+import {getTechnologies} from "utils/tech"
 
 import styles from "./ProjectTech.module.css"
 
