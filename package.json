@@ -1,6 +1,6 @@
 {
     "name": "bradgarropy.com",
-    "version": "5.1.4",
+    "version": "5.2.0",
     "description": "🏠 my home on the web",
     "keywords": [
         "javascript",
@@ -100,6 +100,7 @@
         "eslint-plugin-react": "^7.27.0",
         "eslint-plugin-react-hooks": "^4.3.0",
         "eslint-plugin-simple-import-sort": "^7.0.0",
+        "feed": "^4.2.2",
         "identity-obj-proxy": "^3.0.0",
         "jest": "^27.3.1",
         "next-remote-watch": "^1.0.0",
