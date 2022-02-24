@@ -8,6 +8,9 @@ node_modules
 .cache
 .next
 
+# feed
+public/feeds
+
 # test
 coverage
 
