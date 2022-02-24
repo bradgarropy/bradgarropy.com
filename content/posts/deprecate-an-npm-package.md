@@ -65,6 +65,6 @@ _Have you ever deprecated an `npm` package? If so, let me know your process on [
 [blog]: https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions
 [eslint-config-bradgarropy]: https://github.com/bradgarropy/eslint-config-bradgarropy
 [eslint-config]: https://github.com/bradgarropy/eslint-config
-[archive]: /images/archive.png
-[readme]: /images/readme.png
-[deprecated]: /images/deprecated.png
+[archive]: /images/posts/archive.png
+[readme]: /images/posts/readme.png
+[deprecated]: /images/posts/deprecated.png
