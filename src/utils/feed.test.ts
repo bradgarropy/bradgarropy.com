@@ -1,3 +1,4 @@
+import {parseISO} from "date-fns"
 import {existsSync, readFileSync, writeFileSync} from "fs"
 import {mockPostsFrontmatter} from "test-utils/mocks"
 import {generateFeed} from "utils/feed"
@@ -48,6 +49,19 @@ describe("generates feeds", () => {
         matchingRegexes.forEach(regex => {
             expect(rssFeed).toEqual(expect.stringMatching(regex))
         })
+
+        mockPostsFrontmatter.forEach(post => {
+            const containingStrings = [
+                `<title><![CDATA[${post.title}]]></title>`,
+                `<link>https://bradgarropy.com/blog/${post.slug}</link>`,
+                "<author>bradgarropy@gmail.com (Brad Garropy)</author>",
+                `<pubDate>${parseISO(post.date).toUTCString()}</pubDate>`,
+            ]
+
+            containingStrings.forEach(string => {
+                expect(rssFeed).toEqual(expect.stringContaining(string))
+            })
+        })
     })
 
     test("generates atom feed", () => {
@@ -79,6 +93,29 @@ describe("generates feeds", () => {
         matchingRegexes.forEach(regex => {
             expect(atomFeed).toEqual(expect.stringMatching(regex))
         })
+
+        mockPostsFrontmatter.forEach(post => {
+            const containingStrings = [
+                `<title type="html"><![CDATA[${post.title}]]></title>`,
+                `<link href="https://bradgarropy.com/blog/${post.slug}"/>`,
+                "<name>Brad Garropy</name>",
+                "<email>bradgarropy@gmail.com</email>",
+                "<uri>https://twitter.com/bradgarropy</uri>",
+                `<published>${parseISO(post.date).toISOString()}</published>`,
+            ]
+
+            containingStrings.forEach(string => {
+                expect(atomFeed).toEqual(expect.stringContaining(string))
+            })
+
+            const matchingRegexes = [
+                new RegExp(/<rights>© \d{4} Brad Garropy<\/rights>/),
+            ]
+
+            matchingRegexes.forEach(regex => {
+                expect(atomFeed).toEqual(expect.stringMatching(regex))
+            })
+        })
     })
 
     test("generates json feed", () => {
@@ -98,6 +135,21 @@ describe("generates feeds", () => {
                     name: "Brad Garropy",
                     url: "https://twitter.com/bradgarropy",
                 },
+                items: expect.arrayContaining(
+                    mockPostsFrontmatter.map(post => {
+                        const item = {
+                            url: `https://bradgarropy.com/blog/${post.slug}`,
+                            title: post.title,
+                            date_published: parseISO(post.date).toISOString(),
+                            author: {
+                                name: "Brad Garropy",
+                                url: "https://twitter.com/bradgarropy",
+                            },
+                        }
+
+                        return expect.objectContaining(item)
+                    }),
+                ),
             }),
         )
     })
