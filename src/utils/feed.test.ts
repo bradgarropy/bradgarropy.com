@@ -1,5 +1,5 @@
 import {parseISO} from "date-fns"
-import {existsSync, readFileSync, writeFileSync} from "fs"
+import {existsSync, mkdirSync, readFileSync, rmSync, writeFileSync} from "fs"
 import {mockPostsFrontmatter} from "test-utils/mocks"
 import {generateFeed} from "utils/feed"
 import {getAllPosts} from "utils/posts"
@@ -15,14 +15,32 @@ jest.mock("gatsby-remark-vscode", () => {
 const mockGetAllPosts = getAllPosts as jest.Mock
 mockGetAllPosts.mockReturnValue(mockPostsFrontmatter)
 
-describe("generates feeds", () => {
+describe("feeds directory", () => {
     beforeAll(() => {
+        if (existsSync("./public/feeds")) {
+            rmSync("./public/feeds", {recursive: true})
+        }
+
+        mkdirSync("./public/feeds", {recursive: true})
         writeFileSync("./public/feeds/junk.xml", "junk")
         generateFeed()
     })
 
     test("removes junk files", () => {
         expect(existsSync("./public/feeds/junk.xml")).toBeFalsy()
+        expect(existsSync("./public/feeds/rss.xml")).toBeTruthy()
+        expect(existsSync("./public/feeds/atom.xml")).toBeTruthy()
+        expect(existsSync("./public/feeds/feed.json")).toBeTruthy()
+    })
+})
+
+describe("generates feeds", () => {
+    beforeAll(() => {
+        if (existsSync("./public/feeds")) {
+            rmSync("./public/feeds", {recursive: true})
+        }
+
+        generateFeed()
     })
 
     test("generates rss feed", () => {

@@ -1,6 +1,6 @@
 import {parseISO} from "date-fns"
 import {Feed} from "feed"
-import {mkdirSync, rmSync, writeFileSync} from "fs"
+import {existsSync, mkdirSync, rmSync, writeFileSync} from "fs"
 import {getAllPosts} from "utils/posts"
 
 const generateFeed = () => {
@@ -48,9 +48,11 @@ const generateFeed = () => {
         })
     })
 
-    rmSync("./public/feeds", {recursive: true})
-    mkdirSync("./public/feeds", {recursive: true})
+    if (existsSync("./public/feeds")) {
+        rmSync("./public/feeds", {recursive: true})
+    }
 
+    mkdirSync("./public/feeds", {recursive: true})
     writeFileSync("./public/feeds/rss.xml", feed.rss2())
     writeFileSync("./public/feeds/feed.json", feed.json1())
     writeFileSync("./public/feeds/atom.xml", feed.atom1())
