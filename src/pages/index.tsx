@@ -6,10 +6,10 @@ import {Podcast} from "types/podcast"
 import {PostFrontmatter} from "types/post"
 import {Project} from "types/project"
 import {Video} from "types/video"
+import {generateFeed} from "utils/feed"
 import {getPodcast} from "utils/podcast"
 import {getLatestPosts} from "utils/posts"
 import {getFeaturedProjects} from "utils/projects"
-import {generateRss} from "utils/rss"
 import {getLatestVideos} from "utils/videos"
 
 type IndexPageProps = {
@@ -43,7 +43,7 @@ const getStaticProps: GetStaticProps = async () => {
     const featuredProjects = await getFeaturedProjects()
     const podcast = await getPodcast()
 
-    generateRss()
+    generateFeed()
 
     return {
         props: {

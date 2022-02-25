@@ -3,15 +3,14 @@ import {Feed} from "feed"
 import {mkdirSync, rmSync, writeFileSync} from "fs"
 import {getAllPosts} from "utils/posts"
 
-const generateRss = () => {
+const generateFeed = () => {
     const feed = new Feed({
-        title: "Feed Title",
-        description: "This is my personal feed!",
-        id: "http://bradgarropy.com/",
-        link: "http://bradgarropy.com/",
+        title: "bradgarropy.com",
+        id: "https://bradgarropy.com",
+        link: "https://bradgarropy.com",
         language: "en",
-        image: "http://bradgarropy.com/image.png",
-        favicon: "http://bradgarropy.com/favicon.ico",
+        image: "https://bradgarropy.com/facebook.png",
+        favicon: "https://bradgarropy.com/favicon.png",
         copyright: `© ${new Date().getFullYear()} Brad Garropy`,
         feedLinks: {
             atom: "https://bradgarropy.com/feeds/atom.xml",
@@ -57,4 +56,4 @@ const generateRss = () => {
     writeFileSync("./public/feeds/atom.xml", feed.atom1())
 }
 
-export {generateRss}
+export {generateFeed}
