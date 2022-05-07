@@ -1,7 +1,6 @@
 import {Markdown} from "types/markdown"
 import {Meta} from "types/meta"
 import {Now, NowFrontmatter} from "types/now"
-import {Podcast} from "types/podcast"
 import {Post, PostFrontmatter, Topic} from "types/post"
 import {Project} from "types/project"
 import {Sponsors} from "types/sponsor"
@@ -182,13 +181,6 @@ const mockProjects: Project[] = [
     },
 ]
 
-const mockPodcast: Podcast = {
-    title: "Test Podcast",
-    link: "https://anchor.fm/test-podcast",
-    image: "https://anchor.fm/test-podcast.jpg",
-    episodes: [],
-}
-
 const mockSponsors: Sponsors = {
     "monthly": [
         {
@@ -334,7 +326,6 @@ export {
     mockNows,
     mockNowsFrontmatter,
     mockOlderNow,
-    mockPodcast,
     mockPost,
     mockPostFrontmatter,
     mockPosts,
