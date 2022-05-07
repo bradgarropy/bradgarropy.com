@@ -6,7 +6,6 @@ import {Podcast} from "types/podcast"
 import {PostFrontmatter} from "types/post"
 import {Project} from "types/project"
 import {Video} from "types/video"
-import {getPodcast} from "utils/podcast"
 import {getLatestPosts} from "utils/posts"
 import {getFeaturedProjects} from "utils/projects"
 import {getLatestVideos} from "utils/videos"
@@ -40,7 +39,13 @@ const getStaticProps: GetStaticProps = async () => {
     const latestPosts = getLatestPosts()
     const latestVideos = await getLatestVideos()
     const featuredProjects = await getFeaturedProjects()
-    const podcast = await getPodcast()
+
+    const podcast: Podcast = {
+        title: "Web Dev Weekly",
+        link: "https://open.spotify.com/show/3TAuVah0Q9BOV5PbwPDGfs",
+        image: "/images/pages/home/web-dev-weekly.png",
+        episodes: [],
+    }
 
     return {
         props: {
