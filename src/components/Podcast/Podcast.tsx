@@ -15,8 +15,7 @@ const Podcast: FC<PodcastProps> = ({podcast}) => {
                 <Image
                     src={podcast.image}
                     alt={podcast.title}
-                    width={3000}
-                    height={3000}
+                    placeholder="blur"
                     className={PodcastStyles.coverImage}
                 />
             </Link>
