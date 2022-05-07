@@ -15,7 +15,7 @@ const Podcast: FC<PodcastProps> = ({podcast}) => {
         <div className={PodcastStyles.podcast}>
             <Link to={podcast.link} className={PodcastStyles.podcastLink}>
                 <Image
-                    src={podcast.image}
+                    src={podcastImage}
                     alt={podcast.title}
                     placeholder="blur"
                     className={PodcastStyles.coverImage}
