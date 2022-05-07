@@ -185,7 +185,12 @@ const mockProjects: Project[] = [
 const mockPodcast: Podcast = {
     title: "Test Podcast",
     link: "https://anchor.fm/test-podcast",
-    image: "https://anchor.fm/test-podcast.jpg",
+    image: {
+        src: "/images/test-podcast.jpg",
+        width: 500,
+        height: 500,
+        blurDataURL: "/images/test-podcast-blur.jpg",
+    },
     episodes: [],
 }
 
