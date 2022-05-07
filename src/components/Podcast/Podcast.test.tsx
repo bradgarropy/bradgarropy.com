@@ -1,14 +1,17 @@
 import {render, screen} from "@testing-library/react"
 import Podcast from "components/Podcast"
-import {mockPodcast} from "test-utils/mocks"
 
 test("shows podcast", () => {
-    render(<Podcast podcast={mockPodcast} />)
+    render(<Podcast />)
 
-    const podcastCover = screen.getByAltText(mockPodcast.title)
+    const podcastCover = screen.getByAltText("Web Dev Weekly")
     const podcastLink = podcastCover.parentElement.parentElement
 
-    expect(podcastLink).toHaveAttribute("href", mockPodcast.link)
+    expect(podcastLink).toHaveAttribute(
+        "href",
+        "https://open.spotify.com/show/3TAuVah0Q9BOV5PbwPDGfs",
+    )
+
     expect(screen.getByText("a weekly podcast about web development hosted by"))
 
     expect(screen.getByText("brad garropy")).toHaveAttribute(

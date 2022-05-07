@@ -2,21 +2,19 @@ import Link from "@bradgarropy/next-link"
 import PodcastStyles from "components/Podcast/Podcast.module.css"
 import Image from "next/image"
 import {FC} from "react"
-import {Podcast as PodcastType} from "types/podcast"
 
 import podcastImage from "../../../public/images/pages/home/web-dev-weekly.jpg"
 
-type PodcastProps = {
-    podcast: PodcastType
-}
-
-const Podcast: FC<PodcastProps> = ({podcast}) => {
+const Podcast: FC = () => {
     return (
         <div className={PodcastStyles.podcast}>
-            <Link to={podcast.link} className={PodcastStyles.podcastLink}>
+            <Link
+                to="https://open.spotify.com/show/3TAuVah0Q9BOV5PbwPDGfs"
+                className={PodcastStyles.podcastLink}
+            >
                 <Image
                     src={podcastImage}
-                    alt={podcast.title}
+                    alt="Web Dev Weekly"
                     placeholder="blur"
                     className={PodcastStyles.coverImage}
                 />
