@@ -10,6 +10,8 @@ import {getLatestPosts} from "utils/posts"
 import {getFeaturedProjects} from "utils/projects"
 import {getLatestVideos} from "utils/videos"
 
+import podcastImage from "../../public/images/pages/home/web-dev-weekly.jpg"
+
 type IndexPageProps = {
     latestPosts: PostFrontmatter[]
     latestVideos: Video[]
@@ -43,7 +45,7 @@ const getStaticProps: GetStaticProps = async () => {
     const podcast: Podcast = {
         title: "Web Dev Weekly",
         link: "https://open.spotify.com/show/3TAuVah0Q9BOV5PbwPDGfs",
-        image: "/images/pages/home/web-dev-weekly.png",
+        image: podcastImage,
         episodes: [],
     }
 

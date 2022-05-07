@@ -1,7 +1,7 @@
 type Podcast = {
     title: string
     link: string
-    image: string
+    image: string | StaticImageData
     episodes: PodcastEpisode[]
 }
 

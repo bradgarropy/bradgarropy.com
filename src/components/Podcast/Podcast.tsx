@@ -4,8 +4,6 @@ import Image from "next/image"
 import {FC} from "react"
 import {Podcast as PodcastType} from "types/podcast"
 
-import thumbnail from "../../../public/images/pages/home/web-dev-weekly.jpg"
-
 type PodcastProps = {
     podcast: PodcastType
 }
@@ -15,7 +13,7 @@ const Podcast: FC<PodcastProps> = ({podcast}) => {
         <div className={PodcastStyles.podcast}>
             <Link to={podcast.link} className={PodcastStyles.podcastLink}>
                 <Image
-                    src={thumbnail}
+                    src={podcast.image}
                     alt={podcast.title}
                     width={3000}
                     height={3000}
