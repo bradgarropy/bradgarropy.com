@@ -4,16 +4,21 @@ import Image from "next/image"
 import {FC} from "react"
 import {Podcast as PodcastType} from "types/podcast"
 
+import podcastImage from "../../../public/images/pages/home/web-dev-weekly.jpg"
+
 type PodcastProps = {
     podcast: PodcastType
 }
 
 const Podcast: FC<PodcastProps> = ({podcast}) => {
+    console.log(podcastImage)
+    console.log(podcast.image)
+
     return (
         <div className={PodcastStyles.podcast}>
             <Link to={podcast.link} className={PodcastStyles.podcastLink}>
                 <Image
-                    src={podcast.image}
+                    src={podcastImage}
                     alt={podcast.title}
                     placeholder="blur"
                     className={PodcastStyles.coverImage}
