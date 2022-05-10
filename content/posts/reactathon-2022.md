@@ -23,9 +23,9 @@ Over the past few days I was lucky enough to attend [Reactathon][reactathon] tha
 
 ![reactathon syntax][reactathon-syntax]
 
-Finally, the conference finished up with a live episode of [Syntax.fm][syntax] where they answered some audience questions and [Scott Tolinski][scott-tolinski] showed us his break dancing skills.
+Finally, the conference finished up with a live episode of [Syntax.fm][syntax] where [Scott Tolinski][scott-tolinski] and [Wes Bos][wes-bos] answered some audience questions and Scott showed off his break dancing skills.
 
-From a networking perspective the conference was great. I got to meet all of the speakers, and even went out to dinner with Scott and Wes. These were all folks I’ve talked to online, but there’s nothing like cementing those relationships in person. Of course, there was tons of swag. I think I carried home a couple coffee mugs, more than ten shirts, and about a million stickers!
+From a networking perspective the conference was great. I got to meet all of the speakers, and even went out to dinner with [Scott][reactathon-scott] and [Wes][reactathon-wes]. These were all folks I’ve talked to online, but there’s nothing like cementing those relationships in person. Of course, there was tons of swag. I think I carried home a couple coffee mugs, more than ten shirts, and about a million stickers!
 
 ![reactathon lee][reactathon-lee]
 
@@ -35,6 +35,8 @@ If you haven’t been to a conference, or have been missing them since the pande
 
 [reactathon-stage]: /images/posts/reactathon-stage.jpg
 [reactathon-lee]: /images/posts/reactathon-lee.jpg
+[reactathon-scott]: https://twitter.com/bradgarropy/status/1522277230809808904
+[reactathon-wes]: https://twitter.com/bradgarropy/status/1522277417695412235
 [reactathon-syntax]: /images/posts/reactathon-syntax.jpg
 [reactathon-vercel]: /images/posts/reactathon-vercel.jpg
 [reactathon]: https://www.reactathon.com
@@ -58,6 +60,7 @@ If you haven’t been to a conference, or have been missing them since the pande
 [shawn-wang]: https://twitter.com/swyx
 [syntax]: https://syntax.fm
 [scott-tolinski]: https://twitter.com/stolinski
+[wes-bos]: https://twitter.com/wesbos
 [reactathon-youtube]: https://www.youtube.com/c/RealWorldReact
 [reactathon-notes]: https://bradgarropy.notion.site/reactathon-8628d6eb7f2348e99b9b7a27883170b9
 [smashing-conf]: https://smashingconf.com/austin-2022
