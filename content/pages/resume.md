@@ -17,30 +17,32 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 
 ### Software
 
-|              |                                                                                                 |
-| ------------ | ----------------------------------------------------------------------------------------------- |
-| _JavaScript_ | React, Gatsby, Next.js, Node.js, TypeScript, Svelte, GraphQL, Express, Jest, Cypress, Storybook |
-| _Python_     | Paramiko, Beautiful Soup, JUnit, Selenium                                                       |
-| _Others_     | HTML5, CSS3, Tailwind CSS, PWA, Stripe, Bash, Groovy, JSON, Markdown, YAML, TOML, C             |
+|              |                                                                                                        |
+| ------------ | ------------------------------------------------------------------------------------------------------ |
+| _JavaScript_ | React, Gatsby, Next.js, Remix, Node.js, TypeScript, Svelte, GraphQL, Express, Jest, Cypress, Storybook |
+| _Python_     | Paramiko, Beautiful Soup, JUnit, Selenium                                                              |
+| _Others_     | HTML5, CSS3, Tailwind CSS, PWA, Stripe, Bash, Groovy, JSON, Markdown, YAML, TOML, C                    |
 
 ### Tools
 
-|                          |                                                    |
-| ------------------------ | -------------------------------------------------- |
-| _Version Control_        | Git, SVN                                           |
-| _Continuous Integration_ | Jenkins, Travis CI, GitHub Actions                 |
-| _Cloud_                  | Amazon Web Services Lambda, Google Cloud Functions |
-| _Hosting_                | Netlify, Vercel, Heroku, Github Pages, Firebase    |
-| _Databases_              | MongoDB, MySQL, Firestore, FaunaDB                 |
-| _Infrastructure_         | Puppet, Artifactory, vSphere                       |
-| _Monitoring_             | New Relic, Pager Duty                              |
-| _Development Lifecycle_  | JIRA, Rally, Code Collaborator                     |
-| _Design_                 | Figma                                              |
+|                          |                                                              |
+| ------------------------ | ------------------------------------------------------------ |
+| _Version Control_        | GitHub, Bitbucket, GitLab, SVN                               |
+| _Continuous Integration_ | Jenkins, Travis CI, GitHub Actions                           |
+| _Cloud_                  | Amazon Web Services Lambda, Google Cloud Functions           |
+| _Hosting_                | Netlify, Vercel, Heroku, Github Pages, Firebase, Fly, Render |
+| _Databases_              | MongoDB, MySQL, Firestore, FaunaDB, Supabase, PlanetScale    |
+| _Infrastructure_         | Puppet, Artifactory, vSphere                                 |
+| _Monitoring_             | New Relic, Pager Duty, OpsGenie, Sentry, Splunk              |
+| _Development Lifecycle_  | JIRA, Rally, Code Collaborator                               |
+| _Design_                 | Figma                                                        |
 
 ## Employment History
 
-**Atlassian | Web Platform Engineer**  
+**Atlassian | Frontend Platform Engineer**  
 _October 2021 - Present_
+
+[_Trello Web Platform_][trello]
 
 **Adobe | Senior Frontend Developer**  
 _July 2020 - October 2021_
@@ -156,6 +158,7 @@ _03/04/2021_ | [Firebase][firebase-tutorial]
 
 ## Talks & Appearances
 
+_04/28/2022_ | [Compressed.fm][compressed-fm] with James Quick and Amy Dutton  
 _08/04/2021_ | [Purrfect.dev][purrfect-dev] with Brittney Postma and Alex Patterson  
 _06/25/2021_ | [Developers Hangout][developers-hangout] with James Perkins  
 _05/07/2021_ | [Web Dev Weekly][web-dev-weekly] with Brad Garropy and Richard Gottleber  
@@ -177,7 +180,7 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 
 -   Blog with embedded CMS.
 -   Sourced data from YouTube and an embedded CMS.
--   Developed with Gatsby and React, hosted on Netlify.
+-   Developed with Next.js and React, hosted on Netlify.
 
 [🤠 daily texas country][dtxc]
 
@@ -251,27 +254,35 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 -   Philips Hue JavaScript SDK.
 -   Written in TypeScript.
 -   Powers functionality in my Twitch bot.
--   Over 1,500 downloads!
+-   Over 2,500 downloads!
 
 [👨🏼‍🔬 labman][labman]
 
 -   Command line tool for managing issue labels across GitHub repositories.
 -   Built with JavaScript and Node.js.
--   Over 1,500 downloads!
+-   Over 800 downloads!
 
 [🃏 business-card][business-card]
 
 -   Digital business card.
 -   Run `npx bradgarropy` to see for yourself.
 -   Interactive CLI to help users create their own business card.
--   Over 1,400 downloads!
+-   Over 1,100 downloads!
 
 [⏳ use-countdown][use-countdown]
 
 -   React hook countdown timer.
 -   Written in TypeScript.
 -   Powers my Twitch starting soon page.
--   Over 1,100 downloads!
+-   Over 20,000 downloads!
+
+[⏱ use-timer][use-timer]
+
+-   Over 400 downloads!
+
+[🎤 captivate-sdk][captivate-sdk]
+
+-   Over 800 downloads!
 
 [🤖 bg codes twitch bot][twitch-bot]
 
@@ -289,25 +300,33 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 
 -   Simplified HTTP request library.
 -   Replaces `fetch`, heavily inspired by `axios`.
--   Over 200 downloads!
+-   Over 1,500 downloads!
 
-[🔎 gatsby-plugin-seo][gatsby-plugin-seo]
+[🔗 next-link][next-link]
 
--   SEO plugin for Gatsby.
+-   Over 1,600 downloads!
+
+[🔎 next-seo][next-seo]
+
+-   SEO component for Next.js.
 -   Supports Facebook, Twitter, Open Graph, and meta tags.
--   Almost 1,000 downloads!
+-   Over 3,800 downloads!
+
+[📊 next-google-analytics][next-google-analytics]
+
+-   Over 600 downloads!
 
 [💎 eslint-config][eslint]
 
 -   Shareable version of my eslint configuration.
 -   Integrates accessibility, React, and React hooks plugins.
--   Over 1,000 downloads!
+-   Over 4,200 downloads!
 
 [✂ bg-snippets][bg-snippets]
 
 -   Visual Studio Code snippet library.
 -   Includes JavaScript, TypeScript, serverless, Jest, React, Styled Components, Markdown, and Python snippets.
--   Over 500 downloads!
+-   Over 700 installs!
 
 ## Platforms
 
@@ -343,7 +362,9 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [labman]: https://npmjs.com/package/labman
 [business-card]: https://npmjs.com/package/bradgarropy
 [http]: https://npmjs.com/package/@bradgarropy/http
-[gatsby-plugin-seo]: https://gatsbyjs.org/packages/@bradgarropy/gatsby-plugin-seo
+[next-link]: https://npmjs.com/package/@bradgarropy/next-link
+[next-seo]: https://npmjs.com/package/@bradgarropy/next-seo
+[next-google-analytics]: https://npmjs.com/package/@bradgarropy/next-google-analytics
 [eslint]: https://npmjs.com/package/@bradgarropy/eslint-config
 [bg-snippets]: https://marketplace.visualstudio.com/items?itemName=bradgarropy.bg-snippets
 [twitch]: https://twitch.tv/bradgarropy
@@ -357,6 +378,8 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [chau-codes]: https://youtu.be/A85MnRidA2A
 [thats-my-jamstack]: https://thatsmyjamstack.com/posts/brad-garropy
 [use-countdown]: https://npmjs.com/package/@bradgarropy/use-countdown
+[use-timer]: https://npmjs.com/package/@bradgarropy/use-timer
+[captivate-sdk]: https://npmjs.com/package/@bradgarropy/captivate-sdk
 [hue-sdk]: https://npmjs.com/package/@bradgarropy/hue-sdk
 [twitch-bot]: https://github.com/bradgarropy/twitch-bot
 [bg-codes]: https://bg-codes.netlify.app
@@ -368,3 +391,5 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [webpack-tutorial]: https://youtube.com/watch?v=cidA_qfiO0M&list=PL6Mu1AMmTL-vGQdj1-auEc12KM14OmjXH
 [firebase-tutorial]: https://youtube.com/watch?v=FArYmEBCMt0&list=PL6Mu1AMmTL-sSswsqShJ5fbIr9XjYHGFm
 [purrfect-dev]: https://youtu.be/Q-ELtpdIvzw
+[compressed-fm]: https://compressed.fm
+[trello]: https://trello.com
