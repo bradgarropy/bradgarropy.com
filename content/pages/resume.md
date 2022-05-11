@@ -409,5 +409,5 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [webpack-tutorial]: https://youtube.com/watch?v=cidA_qfiO0M&list=PL6Mu1AMmTL-vGQdj1-auEc12KM14OmjXH
 [firebase-tutorial]: https://youtube.com/watch?v=FArYmEBCMt0&list=PL6Mu1AMmTL-sSswsqShJ5fbIr9XjYHGFm
 [purrfect-dev]: https://youtu.be/Q-ELtpdIvzw
-[compressed-fm]: https://compressed.fm
+[compressed-fm]: https://www.compressed.fm/episode/68
 [trello]: https://trello.com
