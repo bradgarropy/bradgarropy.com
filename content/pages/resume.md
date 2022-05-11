@@ -44,6 +44,11 @@ _October 2021 - Present_
 
 [_Trello Web Platform_][trello]
 
+-   Implement custom `eslint` rules to enforce best practices.
+-   Lead effort to remove Redux from the code base.
+-   Major contributions in converting JavaScript to TypeScript.
+-   Write documentation and guides for frontend contributors.
+
 **Adobe | Senior Frontend Developer**  
 _July 2020 - October 2021_
 
@@ -260,6 +265,7 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 
 -   Command line tool for managing issue labels across GitHub repositories.
 -   Built with JavaScript and Node.js.
+-   Integrated into the offical GitHub CLI in [v2.9.0][github-cli].
 -   Over 800 downloads!
 
 [🃏 business-card][business-card]
@@ -278,10 +284,16 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 
 [⏱ use-timer][use-timer]
 
+-   React hook stopwatch.
+-   Written in TypeScript.
+-   Used in the [Murphy][murphy] application.
 -   Over 400 downloads!
 
 [🎤 captivate-sdk][captivate-sdk]
 
+-   JavaScript SDK for the [Captivate][captivate] podcast host.
+-   Written in TypeScript.
+-   Worked with the Captivate team.
 -   Over 800 downloads!
 
 [🤖 bg codes twitch bot][twitch-bot]
@@ -294,7 +306,7 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 
 -   Twitter bot that tweets a random song from a playlist daily.
 -   Leverages the Spotify API to retrieve the playlist, and the Twitter API to publish tweets.
--   Executed by a serverless function triggered by a Google Cloud Scheduler event.
+-   Executed by a serverless function triggered by a GitHub Action.
 
 [📻 http][http]
 
@@ -304,6 +316,8 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 
 [🔗 next-link][next-link]
 
+-   Next.js link component.
+-   Accepts internal and external links.
 -   Over 1,600 downloads!
 
 [🔎 next-seo][next-seo]
@@ -314,6 +328,8 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 
 [📊 next-google-analytics][next-google-analytics]
 
+-   Google Analytics component for Next.js.
+-   Handles all setup out of the box.
 -   Over 600 downloads!
 
 [💎 eslint-config][eslint]
@@ -360,6 +376,7 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [infinite-scroll]: https://homeaway-infinite-scroll.netlify.com
 [dtxc-bot]: https://twitter.com/dailytxcountry
 [labman]: https://npmjs.com/package/labman
+[github-cli]: https://github.com/cli/cli/releases/tag/v2.9.0
 [business-card]: https://npmjs.com/package/bradgarropy
 [http]: https://npmjs.com/package/@bradgarropy/http
 [next-link]: https://npmjs.com/package/@bradgarropy/next-link
@@ -380,6 +397,7 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [use-countdown]: https://npmjs.com/package/@bradgarropy/use-countdown
 [use-timer]: https://npmjs.com/package/@bradgarropy/use-timer
 [captivate-sdk]: https://npmjs.com/package/@bradgarropy/captivate-sdk
+[captivate]: https://captivate.fm
 [hue-sdk]: https://npmjs.com/package/@bradgarropy/hue-sdk
 [twitch-bot]: https://github.com/bradgarropy/twitch-bot
 [bg-codes]: https://bg-codes.netlify.app
