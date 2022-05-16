@@ -1,6 +1,6 @@
 ---
-title: ⚛️ reactathon 2022
-slug: reactathon-2022
+title: ⚛️ reactathon 2022 recap
+slug: reactathon-2022-recap
 date: "2022-05-10"
 topic: coding
 ---
