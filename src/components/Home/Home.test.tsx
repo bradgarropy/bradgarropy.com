@@ -1,11 +1,6 @@
 import {render, screen} from "@testing-library/react"
 import Home from "components/Home"
-import {
-    mockPodcast,
-    mockPostsFrontmatter,
-    mockProjects,
-    mockVideos,
-} from "test-utils/mocks"
+import {mockPostsFrontmatter, mockProjects, mockVideos} from "test-utils/mocks"
 
 test("shows home page", () => {
     render(
@@ -13,7 +8,6 @@ test("shows home page", () => {
             latestPosts={mockPostsFrontmatter}
             latestVideos={mockVideos}
             featuredProjects={mockProjects}
-            podcast={mockPodcast}
         />,
     )
 

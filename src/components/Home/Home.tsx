@@ -6,7 +6,6 @@ import Newsletter from "components/Newsletter"
 import Podcast from "components/Podcast"
 import Section from "components/Section"
 import {FC} from "react"
-import {Podcast as PodcastType} from "types/podcast"
 import {PostFrontmatter} from "types/post"
 import {Project} from "types/project"
 import {Video} from "types/video"
@@ -17,15 +16,9 @@ type HomeProps = {
     latestPosts: PostFrontmatter[]
     latestVideos: Video[]
     featuredProjects: Project[]
-    podcast: PodcastType
 }
 
-const Home: FC<HomeProps> = ({
-    latestPosts,
-    latestVideos,
-    featuredProjects,
-    podcast,
-}) => {
+const Home: FC<HomeProps> = ({latestPosts, latestVideos, featuredProjects}) => {
     return (
         <div className={styles.sections}>
             <Hero />
@@ -43,7 +36,7 @@ const Home: FC<HomeProps> = ({
             </Section>
 
             <Section title="podcast" link="https://webdevweekly.captivate.fm">
-                <Podcast podcast={podcast} />
+                <Podcast />
             </Section>
 
             <Section title="newsletter" link="/newsletter">
