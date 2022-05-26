@@ -1,7 +1,7 @@
 ---
 title: 🥱 the boredom / motivation correlation
 slug: the-boredom-motivation-correlation
-date: "2022-05-25"
+date: "2022-05-26"
 topic: life
 ---
 
