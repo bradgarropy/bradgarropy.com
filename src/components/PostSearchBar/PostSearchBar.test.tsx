@@ -1,23 +1,39 @@
 import {render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import PostSearchBar from "components/PostSearchBar"
-import {useRouter} from "next/router"
+import * as nextRouter from "next/router"
 import {mockPosts, mockPostsFrontmatter} from "test-utils/mocks"
 
 const onSearchMock = jest.fn()
 const mockPlaceholder = "search blog"
 const mockQuery = "fourth"
 
-jest.mock("next/router")
-const mockUseRouter = useRouter as jest.Mock
+const mockUseRouter = jest.spyOn(nextRouter, "useRouter")
 const mockPush = jest.fn()
 
 describe("search bar", () => {
     beforeEach(() => {
         mockUseRouter.mockReturnValue({
+            asPath: "",
+            back: jest.fn(),
+            basePath: "",
+            beforePopState: jest.fn(),
+            events: {
+                on: jest.fn(),
+                off: jest.fn(),
+                emit: jest.fn(),
+            },
+            isFallback: false,
+            isLocaleDomain: false,
+            isPreview: false,
+            isReady: true,
             pathname: "/blog",
-            query: {},
+            prefetch: jest.fn(),
             push: mockPush,
+            replace: jest.fn(),
+            reload: jest.fn(),
+            route: "",
+            query: {},
         })
 
         render(
@@ -60,11 +76,28 @@ describe("search bar", () => {
 describe("search bar with input", () => {
     beforeEach(() => {
         mockUseRouter.mockReturnValue({
+            asPath: "",
+            back: jest.fn(),
+            basePath: "",
+            beforePopState: jest.fn(),
+            events: {
+                on: jest.fn(),
+                off: jest.fn(),
+                emit: jest.fn(),
+            },
+            isFallback: false,
+            isLocaleDomain: false,
+            isPreview: false,
+            isReady: true,
             pathname: "/blog",
+            prefetch: jest.fn(),
+            push: mockPush,
+            replace: jest.fn(),
+            reload: jest.fn(),
+            route: "",
             query: {
                 search: mockQuery,
             },
-            push: mockPush,
         })
 
         render(
