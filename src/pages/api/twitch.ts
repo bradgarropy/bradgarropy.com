@@ -1,4 +1,4 @@
-import {get, post} from "@bradgarropy/http"
+import {http} from "@bradgarropy/http"
 import {withSentry} from "@sentry/nextjs"
 import {NextApiHandler} from "next"
 
@@ -10,12 +10,12 @@ const handler: NextApiHandler = async (req, res) => {
     const clientId = process.env.TWITCH_CLIENT_ID
     const clientSecret = process.env.TWITCH_CLIENT_SECRET
 
-    const {access_token} = await post(
+    const {access_token} = await http.post(
         `https://id.twitch.tv/oauth2/token?client_id=${clientId}&client_secret=${clientSecret}&grant_type=client_credentials`,
     )
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const channelResponse: any = await get(
+    const channelResponse: any = await http.get(
         "https://api.twitch.tv/helix/search/channels?query=bradgarropy",
         {
             headers: {

@@ -1,4 +1,4 @@
-import {post} from "@bradgarropy/http"
+import {http} from "@bradgarropy/http"
 import {render, screen, waitFor} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import Newsletter from "components/Newsletter"
@@ -27,9 +27,9 @@ test("subscribes", () => {
     const subscribeButton = screen.getByText("📧 subscribe")
     userEvent.click(subscribeButton)
 
-    expect(post).toHaveBeenCalledTimes(1)
+    expect(http.post).toHaveBeenCalledTimes(1)
 
-    expect(post).toHaveBeenCalledWith("/api/subscribe", {
+    expect(http.post).toHaveBeenCalledWith("/api/subscribe", {
         body: {
             email: "bradgarropy@gmail.com",
         },

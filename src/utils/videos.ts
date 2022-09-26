@@ -1,9 +1,9 @@
-import {get} from "@bradgarropy/http"
+import {http} from "@bradgarropy/http"
 import {Video} from "types/video"
 
 const getLatestVideos = async (): Promise<Video[]> => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const response: any = await get(
+    const response: any = await http.get(
         "https://www.googleapis.com/youtube/v3/search",
         {
             params: {

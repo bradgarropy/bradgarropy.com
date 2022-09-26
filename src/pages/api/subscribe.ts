@@ -1,11 +1,11 @@
-import {post} from "@bradgarropy/http"
+import {http} from "@bradgarropy/http"
 import {withSentry} from "@sentry/nextjs"
 import {NextApiHandler} from "next"
 
 const handler: NextApiHandler = async (req, res) => {
     const apiKey = process.env.REVUE_API_KEY
 
-    const subscriber = await post(
+    const subscriber = await http.post(
         "https://www.getrevue.co/api/v2/subscribers",
         {
             headers: {
