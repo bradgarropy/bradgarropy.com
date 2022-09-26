@@ -101,7 +101,7 @@
         "eslint-plugin-simple-import-sort": "^7.0.0",
         "identity-obj-proxy": "^3.0.0",
         "jest": "^27.3.1",
-        "next-remote-watch": "^1.0.0",
+        "next-remote-watch": "^2.0.0",
         "plop": "^2.7.6",
         "plop-helper-bradgarropy": "^1.0.0",
         "plop-helper-date": "^1.0.0",
