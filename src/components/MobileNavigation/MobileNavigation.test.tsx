@@ -24,10 +24,10 @@ describe("closed mobile navigation", () => {
         expect(screen.getByLabelText("menu"))
     })
 
-    test("opens navigation", () => {
+    test("opens navigation", async () => {
         render(<MobileNavigation />)
 
-        userEvent.click(screen.getByLabelText("menu"))
+        await userEvent.click(screen.getByLabelText("menu"))
         expect(mockAppCtxClosed.setOpen).toHaveBeenCalledTimes(1)
         expect(mockAppCtxClosed.setOpen).toHaveBeenCalledWith(true)
     })
@@ -45,10 +45,10 @@ describe("open mobile navigation", () => {
         links.forEach(link => expect(screen.getByText(link)))
     })
 
-    test("closes navigation", () => {
+    test("closes navigation", async () => {
         render(<MobileNavigation />)
 
-        userEvent.click(screen.getByLabelText("close"))
+        await userEvent.click(screen.getByLabelText("close"))
         expect(mockAppCtxOpen.setOpen).toHaveBeenCalledTimes(1)
         expect(mockAppCtxOpen.setOpen).toHaveBeenCalledWith(false)
     })

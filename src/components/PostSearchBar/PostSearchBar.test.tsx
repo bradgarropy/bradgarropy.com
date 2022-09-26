@@ -48,8 +48,11 @@ describe("search bar", () => {
         expect(screen.getByPlaceholderText(mockPlaceholder))
     })
 
-    test("searches", () => {
-        userEvent.type(screen.getByPlaceholderText(mockPlaceholder), mockQuery)
+    test("searches", async () => {
+        await userEvent.type(
+            screen.getByPlaceholderText(mockPlaceholder),
+            mockQuery,
+        )
 
         expect(screen.getByPlaceholderText(mockPlaceholder)).toHaveDisplayValue(
             mockQuery,
