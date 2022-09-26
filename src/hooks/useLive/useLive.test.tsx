@@ -1,4 +1,4 @@
-import {renderHook} from "@testing-library/react-hooks"
+import {renderHook, waitFor} from "@testing-library/react"
 import {useLive} from "hooks"
 import {getChannelStatus} from "utils/api/twitch"
 
@@ -10,10 +10,11 @@ const mockGetChannelStatus = getChannelStatus as jest.Mock
 test("returns online status", async () => {
     mockGetChannelStatus.mockReturnValue(true)
 
-    const {result, waitForNextUpdate} = renderHook(() => useLive())
-    await waitForNextUpdate()
+    const {result} = renderHook(() => useLive())
 
-    expect(result.current).toEqual(true)
+    await waitFor(() => {
+        expect(result.current).toEqual(true)
+    })
 })
 
 test("returns offline status", () => {

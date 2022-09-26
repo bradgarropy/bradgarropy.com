@@ -82,7 +82,6 @@
         "@svgr/webpack": "^6.1.2",
         "@testing-library/jest-dom": "^5.15.0",
         "@testing-library/react": "^13.4.0",
-        "@testing-library/react-hooks": "^8.0.1",
         "@testing-library/user-event": "^14.4.3",
         "@types/jest": "^29.0.3",
         "@types/node": "^18.7.21",

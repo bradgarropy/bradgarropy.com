@@ -1,9 +1,13 @@
-import {createContext, FC, useState} from "react"
+import {createContext, FC, ReactNode, useState} from "react"
 import {AppCtx} from "types/context"
 
 const AppContext = createContext({} as AppCtx)
 
-const AppProvider: FC = ({children}) => {
+type AppProviderProps = {
+    children: ReactNode
+}
+
+const AppProvider: FC<AppProviderProps> = ({children}) => {
     const [open, setOpen] = useState(false)
     const [theme, setTheme] = useState("light")
 
