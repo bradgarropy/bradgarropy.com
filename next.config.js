@@ -1,4 +1,6 @@
-const {withSentryConfig} = require("@sentry/nextjs")
+/**
+ * @type {import('next').NextConfig}
+ */
 
 const config = {
     i18n: {
@@ -97,8 +99,4 @@ const config = {
     },
 }
 
-const sentryWebpackPluginOptions = {
-    silent: true,
-}
-
-module.exports = withSentryConfig(config, sentryWebpackPluginOptions)
+module.exports = config
