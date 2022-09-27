@@ -1,5 +1,4 @@
 import {http} from "@bradgarropy/http"
-import {withSentry} from "@sentry/nextjs"
 import {NextApiHandler} from "next"
 
 const handler: NextApiHandler = async (req, res) => {
@@ -21,4 +20,4 @@ const handler: NextApiHandler = async (req, res) => {
     res.status(200).json(subscriber)
 }
 
-export default withSentry(handler)
+export default handler

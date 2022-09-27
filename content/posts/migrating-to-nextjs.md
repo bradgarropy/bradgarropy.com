@@ -111,7 +111,6 @@ Like I said at the beginning, this migration is a tradeoff, but I think I'm maki
 [ga4]: https://analytics.google.com
 [typescript]: https://typescriptlang.org
 [diff]: /images/posts/pr-diff.png
-[sentry]: https://sentry.io
 [saas]: https://bradgarropy.com/blog/goals-for-2022#products
 [repo]: https://github.com/bradgarropy/bradgarropy.com
 [use-markdown]: https://github.com/bradgarropy/bradgarropy.com/blob/master/src/hooks/useMarkdown/useMarkdown.tsx
