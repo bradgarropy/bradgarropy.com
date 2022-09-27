@@ -5,4 +5,8 @@ date: "2022-09-26"
 topic: coding
 ---
 
-TODO
+-   amazing tutorials
+-   loading and mutations
+-   don't really need react components
+-   css concerns
+-   loader types
