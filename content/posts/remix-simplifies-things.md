@@ -39,7 +39,21 @@ This URL based separation of concerns felt very natural, and caused me to jump b
 
 ## 🤔 interesting css methodology
 
+This router based system does lead to some oddities though, particularly around styling. If you do wind up creating components that need styles that cross route boundaries, surfacing those styles is not very straightforward.
+
+The simplest way that Remix suggests is to create a `shared.css` file that is loaded at the root for every page. However, I typically like to keep any styles colocated with the component. If that's the case, for every use of the component you have to trace the CSS up to the parent route and include the component styles in the `links`. This becomes confusing very quickly, as it gets hard to keep track of what route uses what component.
+
+Ultimately I decided on using [Tailwind][tailwind] for styling. This allows me to load a single CSS file at the root that contains all the utility classes I need for every route. It's low mental overhead, and I still get all the great benefits of developing with Tailwind.
+
 ## 🗃️ typescript inconsistencies
+
+One last thing that bugged me was typing the `loader` data. When sending data over HTTP, everything is serialized into a string. Knowing that, Remix wraps whatever data type you have with a `SerializeObject` type, making every field in your data type optional.
+
+While I know they did this with the best of intentions in order to account for real life failures, it made me want to cast the `useLoader` response to my desired type. It may not be the safest route, but it was so much easier to work with.
+
+## 🤓 onward with remix
+
+Overall I'm very happy working in Remix, and I plan to build all of my future applications with it. Instead of integrating services, installing JavaScript libraries, and writing client code, Remix shifts backs to the traditional client / server model. This shift simplifies the process of building applications on the web, and improves the user experience by doing most of the work on the server.
 
 [nextjs]: https://nextjs.org
 [remix]: https://remix.run
@@ -49,3 +63,4 @@ This URL based separation of concerns felt very natural, and caused me to jump b
 [blog-tutorial]: https://remix.run/docs/en/v1/tutorials/blog
 [jokes-tutorial]: https://remix.run/docs/en/v1/tutorials/jokes
 [remix-stacks]: https://remix.run/docs/en/v1/pages/stacks
+[tailwind]: https://tailwindcss.com
