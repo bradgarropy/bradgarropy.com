@@ -10,7 +10,7 @@ const handler: NextApiHandler = async (req, res) => {
     const clientId = process.env.TWITCH_CLIENT_ID
     const clientSecret = process.env.TWITCH_CLIENT_SECRET
 
-    const {access_token} = await http.post(
+    const {access_token} = await http.post<any>(
         `https://id.twitch.tv/oauth2/token?client_id=${clientId}&client_secret=${clientSecret}&grant_type=client_credentials`,
     )
 

@@ -1,7 +1,7 @@
 import {http} from "@bradgarropy/http"
 
 const getChannelStatus = async (): Promise<boolean> => {
-    const {isLive} = await http.get("/api/twitch")
+    const {isLive} = await http.get<any>("/api/twitch")
     return isLive
 }
 

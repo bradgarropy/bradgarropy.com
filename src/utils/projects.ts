@@ -8,7 +8,7 @@ const getFeaturedProjects = async (): Promise<Project[]> => {
         },
     })
 
-    const {user} = await octokit(
+    const {user} = (await octokit(
         `
             {
                 user(login: "bradgarropy") {
@@ -32,7 +32,7 @@ const getFeaturedProjects = async (): Promise<Project[]> => {
                 }
             }
         `,
-    )
+    )) as any
 
     const projects = user.pinnedItems.nodes.map(node => {
         const project: Project = {
