@@ -20,6 +20,8 @@ jobs:
                   registry-url: https://registry.npmjs.org/
             - name: "📦 install"
               run: npm ci
+            - name: "🟦 types"
+              run: npm run typecheck
             - name: "🧪 test"
               run: npm run test
             - name: "☂️ coverage"
