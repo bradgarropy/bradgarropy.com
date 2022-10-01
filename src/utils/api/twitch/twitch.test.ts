@@ -1,10 +1,10 @@
-import {get} from "@bradgarropy/http"
+import {http} from "@bradgarropy/http"
 import {mockChannelStatus} from "test-utils/mocks"
 import {getChannelStatus} from "utils/api/twitch"
 
 jest.mock("@bradgarropy/http")
 
-const mockGet = get as jest.Mock
+const mockGet = http.get as jest.Mock
 mockGet.mockReturnValue(mockChannelStatus)
 
 test("gets channel status", async () => {

@@ -1,11 +1,12 @@
 import HeadingStyles from "components/Heading/Heading.module.css"
 import Icon from "components/Icon"
-import {FC} from "react"
+import {FC, ReactNode} from "react"
 import slugify from "slugify"
 
 type HeadingProps = {
     level: 1 | 2 | 3
     id?: string
+    children?: ReactNode
 }
 
 const Heading: FC<HeadingProps> = ({level, id, children}) => {

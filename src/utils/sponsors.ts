@@ -8,7 +8,7 @@ const getSponsors = async (): Promise<Sponsors> => {
         },
     })
 
-    const {user} = await octokit(
+    const {user} = (await octokit(
         `
             {
                 user(login: "bradgarropy") {
@@ -31,7 +31,7 @@ const getSponsors = async (): Promise<Sponsors> => {
                 }
             }
         `,
-    )
+    )) as any
 
     const sponsors: Sponsors = {
         "monthly": [],

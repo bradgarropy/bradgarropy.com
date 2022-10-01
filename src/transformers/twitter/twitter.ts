@@ -1,4 +1,4 @@
-import {get} from "@bradgarropy/http"
+import {http} from "@bradgarropy/http"
 import {TwitterOembed} from "types/oembed"
 
 const shouldTransform = (url: string): boolean => {
@@ -6,7 +6,7 @@ const shouldTransform = (url: string): boolean => {
 }
 
 const getHTML = async (string: string): Promise<string> => {
-    const response: TwitterOembed = await get(
+    const response: TwitterOembed = await http.get(
         `https://publish.twitter.com/oembed?url=${string}`,
     )
 

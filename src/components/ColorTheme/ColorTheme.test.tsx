@@ -11,22 +11,22 @@ jest.mock("hooks")
 
 const mockUseApp = useApp as jest.Mock
 
-test("toggles dark mode", () => {
+test("toggles dark mode", async () => {
     mockUseApp.mockReturnValue(mockAppCtxLight)
 
     render(<ColorTheme />)
 
-    userEvent.click(screen.getByLabelText("dark"))
+    await userEvent.click(screen.getByLabelText("dark"))
     expect(mockAppCtxLight.setTheme).toHaveBeenCalledTimes(1)
     expect(mockAppCtxLight.setTheme).toHaveBeenCalledWith("dark")
 })
 
-test("toggles light mode", () => {
+test("toggles light mode", async () => {
     mockUseApp.mockReturnValue(mockAppCtxDark)
 
     render(<ColorTheme />)
 
-    userEvent.click(screen.getByLabelText("light"))
+    await userEvent.click(screen.getByLabelText("light"))
     expect(mockAppCtxDark.setTheme).toHaveBeenCalledTimes(1)
     expect(mockAppCtxDark.setTheme).toHaveBeenCalledWith("light")
 })

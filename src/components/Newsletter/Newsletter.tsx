@@ -1,4 +1,4 @@
-import {post} from "@bradgarropy/http"
+import {http} from "@bradgarropy/http"
 import NewsletterStyles from "components/Newsletter/Newsletter.module.css"
 import {FC, useState} from "react"
 import ButtonStyles from "styles/Button.module.css"
@@ -15,7 +15,7 @@ const Newsletter: FC = () => {
     const onSubmit = async event => {
         event.preventDefault()
 
-        await post("/api/subscribe", {
+        await http.post("/api/subscribe", {
             body: {
                 email,
             },

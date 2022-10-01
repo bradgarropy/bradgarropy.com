@@ -12,9 +12,9 @@ jest.mock("hooks")
 const mockUseApp = useApp as jest.Mock
 mockUseApp.mockReturnValue(mockAppCtx)
 
-test("opens mobile menu", () => {
+test("opens mobile menu", async () => {
     render(<Hamburger />)
 
-    userEvent.click(screen.getByLabelText("menu"))
+    await userEvent.click(screen.getByLabelText("menu"))
     expect(mockAppCtx.setOpen).toHaveBeenCalledTimes(1)
 })
