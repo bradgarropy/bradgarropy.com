@@ -1,12 +1,13 @@
 import Link from "@bradgarropy/next-link"
 import classnames from "classnames"
 import LinkButtonStyles from "components/LinkButton/LinkButton.module.css"
-import {FC} from "react"
+import {FC, ReactNode} from "react"
 
 type LinkButtonProps = {
     to: string
     reverse?: boolean
     disabled?: boolean
+    children?: ReactNode
 }
 
 const LinkButton: FC<LinkButtonProps> = ({
