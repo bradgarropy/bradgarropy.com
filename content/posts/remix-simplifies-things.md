@@ -117,6 +117,8 @@ type SerializedTodo = SerializeObject<
 
 While I know they did this with the best of intentions in order to account for real life failures, it made me want to cast the `useLoader` response to my desired type. It may not be the safest option, but it was so much easier to work with.
 
+_After [talking][tweet] with some Remix contributors, this was actually caused by a configuration in my `tsconfig.json` file. Setting `"strict": true` generated the correct types!_
+
 ## 🤓 onward with remix
 
 Overall I'm very happy working in [Remix][remix], and I plan to build all of my future applications with it. Instead of integrating services, installing JavaScript libraries, and writing client code, Remix shifts backs to the traditional client / server model. This shift simplifies the process of building applications on the web, and improves the user experience by doing most of the work on the server.
@@ -138,3 +140,4 @@ Overall I'm very happy working in [Remix][remix], and I plan to build all of my 
 [action]: https://remix.run/docs/en/v1/api/conventions#action
 [usefetcher]: https://remix.run/docs/en/v1/api/remix#usefetcher
 [usetransition]: https://remix.run/docs/en/v1/api/remix#usetransition
+[tweet]: https://twitter.com/bradgarropy/status/1576294073958248448
