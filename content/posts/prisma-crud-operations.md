@@ -10,7 +10,7 @@ Lately I've been working with [PostgreSQL][postgres] databases, using [Prisma][p
 ## 🆕 create
 
 ```typescript
-const createTodo = async (userId: User["id"], content: Todo["content"]) => {
+const createTodo = async (userId: string, content: string) => {
     const todo = await db.todo.create({
         data: {
             content,
@@ -25,7 +25,7 @@ const createTodo = async (userId: User["id"], content: Todo["content"]) => {
 ## 📚 read
 
 ```typescript
-const getTodos = async (userId: User["id"]) => {
+const getTodos = async (userId: string) => {
     const todos = await db.todo.findMany({
         where: {
             userId: {
@@ -41,7 +41,7 @@ const getTodos = async (userId: User["id"]) => {
 ## ☝🏼 update
 
 ```typescript
-const updateTodo = async (id: Todo["id"], data: Partial<Todo>) => {
+const updateTodo = async (id: string, data: Partial<Todo>) => {
     const todo = await db.todo.update({
         where: {
             id,
@@ -56,7 +56,7 @@ const updateTodo = async (id: Todo["id"], data: Partial<Todo>) => {
 ## ⛔ delete
 
 ```typescript
-const deleteTodo = async (id: Todo["id"]) => {
+const deleteTodo = async (id: string) => {
     const todo = await db.todo.delete({
         where: {
             id,
