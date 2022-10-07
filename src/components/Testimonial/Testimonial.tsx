@@ -1,7 +1,6 @@
 import Link from "@bradgarropy/next-link"
 import classnames from "classnames"
 import {useMarkdown} from "hooks"
-import Image from "next/image"
 import {FC} from "react"
 import slugify from "slugify"
 import LinkStyles from "styles/Link.module.css"
@@ -25,7 +24,7 @@ const Testimonial: FC<TestimonialProps> = ({testimonial}) => {
             to={testimonial.frontmatter.profile}
         >
             <div className={TestimonialStyles.header}>
-                <Image
+                <img
                     src={testimonial.frontmatter.photo}
                     width="460"
                     height="460"

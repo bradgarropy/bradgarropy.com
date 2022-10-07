@@ -4,5 +4,8 @@
         "@bradgarropy/eslint-config-react",
         "@bradgarropy/eslint-config-typescript",
         "next"
-    ]
+    ],
+    "rules": {
+        "@next/next/no-img-element": "off"
+    }
 }

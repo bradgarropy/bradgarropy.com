@@ -1,6 +1,31 @@
 import {graphql} from "@octokit/graphql"
 import {Sponsor, Sponsors} from "types/sponsor"
 
+type SponsorshipsResponse = {
+    user: {
+        sponsorshipsAsMaintainer: {
+            nodes: SponsorshipAsMaintainer[]
+        }
+    }
+}
+
+type SponsorshipAsMaintainer = {
+    sponsorEntity: SponsorEntity
+    tier: Tier
+}
+
+type SponsorEntity = {
+    login: string
+    url: string
+    avatarUrl: string
+}
+
+type Tier = {
+    name: string
+    description: string
+    isOneTime: boolean
+}
+
 const getSponsors = async (): Promise<Sponsors> => {
     const octokit = graphql.defaults({
         headers: {
@@ -8,7 +33,7 @@ const getSponsors = async (): Promise<Sponsors> => {
         },
     })
 
-    const {user} = (await octokit(
+    const {user} = await octokit<SponsorshipsResponse>(
         `
             {
                 user(login: "bradgarropy") {
@@ -31,7 +56,7 @@ const getSponsors = async (): Promise<Sponsors> => {
                 }
             }
         `,
-    )) as any
+    )
 
     const sponsors: Sponsors = {
         "monthly": [],

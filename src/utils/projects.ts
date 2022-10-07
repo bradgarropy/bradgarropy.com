@@ -1,6 +1,30 @@
 import {graphql} from "@octokit/graphql"
 import {Project} from "types/project"
 
+type FeaturedProjectsResponse = {
+    user: {
+        pinnedItems: {
+            nodes: PinnedItem[]
+        }
+    }
+}
+
+type PinnedItem = {
+    url: string
+    name: string
+    description: string
+    stargazerCount: number
+    repositoryTopics: {
+        nodes: RepositoryTopic[]
+    }
+}
+
+type RepositoryTopic = {
+    topic: {
+        name: string
+    }
+}
+
 const getFeaturedProjects = async (): Promise<Project[]> => {
     const octokit = graphql.defaults({
         headers: {
@@ -8,7 +32,7 @@ const getFeaturedProjects = async (): Promise<Project[]> => {
         },
     })
 
-    const {user} = (await octokit(
+    const {user} = await octokit<FeaturedProjectsResponse>(
         `
             {
                 user(login: "bradgarropy") {
@@ -32,7 +56,7 @@ const getFeaturedProjects = async (): Promise<Project[]> => {
                 }
             }
         `,
-    )) as any
+    )
 
     const projects = user.pinnedItems.nodes.map(node => {
         const project: Project = {

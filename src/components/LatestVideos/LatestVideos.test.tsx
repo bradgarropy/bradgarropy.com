@@ -7,7 +7,7 @@ test("shows latest videos", () => {
 
     mockVideos.forEach(video => {
         const videoThumbnail = screen.getByAltText(video.title)
-        const videoLink = videoThumbnail.parentElement.parentElement
+        const videoLink = videoThumbnail.parentElement
 
         expect(videoLink).toHaveAttribute(
             "href",

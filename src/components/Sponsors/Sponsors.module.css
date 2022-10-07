@@ -29,7 +29,7 @@
 .avatar {
     transition-property: transform, border, background-color;
     transition-duration: var(--transitionDuration);
-    width: 6rem;
+    width: 6.625rem;
     margin: 0rem;
     border-radius: 100%;
     border: 5px solid var(--text);
