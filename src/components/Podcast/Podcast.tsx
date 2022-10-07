@@ -1,9 +1,6 @@
 import Link from "@bradgarropy/next-link"
 import PodcastStyles from "components/Podcast/Podcast.module.css"
-import Image from "next/image"
 import {FC} from "react"
-
-import podcastImage from "../../../public/images/pages/home/web-dev-weekly.jpg"
 
 const Podcast: FC = () => {
     return (
@@ -12,11 +9,12 @@ const Podcast: FC = () => {
                 to="https://open.spotify.com/show/3TAuVah0Q9BOV5PbwPDGfs"
                 className={PodcastStyles.podcastLink}
             >
-                <Image
-                    src={podcastImage}
+                <img
+                    src="/images/pages/home/web-dev-weekly.jpg"
                     alt="Web Dev Weekly"
-                    placeholder="blur"
                     className={PodcastStyles.coverImage}
+                    width="500"
+                    height="500"
                 />
             </Link>
 

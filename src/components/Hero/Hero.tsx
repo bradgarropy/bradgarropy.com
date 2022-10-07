@@ -1,8 +1,6 @@
 import Link from "@bradgarropy/next-link"
-import Image from "next/image"
 import {FC} from "react"
 
-import profile from "../../../public/profile.jpg"
 import styles from "./Hero.module.css"
 
 const Hero: FC = () => {
@@ -12,11 +10,12 @@ const Hero: FC = () => {
                 to="https://instagram.com/bradgarropy"
                 className={styles.heroLink}
             >
-                <Image
-                    src={profile}
+                <img
+                    src="/profile.jpg"
                     alt="bg"
-                    placeholder="blur"
                     className={styles.heroImage}
+                    width="460"
+                    height="460"
                 />
             </Link>
 

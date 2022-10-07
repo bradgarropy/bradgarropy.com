@@ -5,7 +5,7 @@ test("shows podcast", () => {
     render(<Podcast />)
 
     const podcastCover = screen.getByAltText("Web Dev Weekly")
-    const podcastLink = podcastCover.parentElement.parentElement
+    const podcastLink = podcastCover.parentElement
 
     expect(podcastLink).toHaveAttribute(
         "href",

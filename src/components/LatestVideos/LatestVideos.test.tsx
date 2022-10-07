@@ -5,9 +5,11 @@ import {mockVideos} from "test-utils/mocks"
 test("shows latest videos", () => {
     render(<LatestVideos latestVideos={mockVideos} />)
 
+    screen.debug()
+
     mockVideos.forEach(video => {
         const videoThumbnail = screen.getByAltText(video.title)
-        const videoLink = videoThumbnail.parentElement.parentElement
+        const videoLink = videoThumbnail.parentElement
 
         expect(videoLink).toHaveAttribute(
             "href",

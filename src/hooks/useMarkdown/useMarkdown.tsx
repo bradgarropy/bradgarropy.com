@@ -1,7 +1,6 @@
 import Link from "@bradgarropy/next-link"
 import Heading from "components/Heading"
 import Head from "next/head"
-import Image from "next/image"
 import React, {createElement, Fragment} from "react"
 import rehypeParse from "rehype-parse"
 import rehypeReact from "rehype-react"
@@ -33,7 +32,7 @@ const useMarkdown = (html: string) => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <Image
+                            <img
                                 src={src}
                                 alt={alt}
                                 width={width}

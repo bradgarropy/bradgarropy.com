@@ -5,6 +5,14 @@ import Hero from "./Hero"
 test("shows hero", () => {
     render(<Hero />)
 
+    const heroImage = screen.getByAltText("bg")
+    const heroLink = heroImage.parentElement
+
+    expect(heroLink).toHaveAttribute(
+        "href",
+        "https://instagram.com/bradgarropy",
+    )
+
     expect(screen.getByText("lead frontend developer"))
     expect(screen.getByText("growing content creator"))
     expect(screen.getByText("side project connoisseur"))

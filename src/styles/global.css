@@ -77,8 +77,10 @@ a:hover {
 img {
     display: block;
     max-width: 100%;
+    height: auto;
     margin: 0rem auto;
     border-radius: var(--borderRadius);
+    box-sizing: border-box;
 }
 
 blockquote {

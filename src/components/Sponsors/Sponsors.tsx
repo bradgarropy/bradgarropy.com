@@ -42,11 +42,12 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                                         key={sponsor.username}
                                         to={sponsor.profile}
                                     >
-                                        {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img
                                             className={SponsorsStyles.avatar}
                                             src={sponsor.avatar}
                                             alt={sponsor.username}
+                                            width="460"
+                                            height="460"
                                         />
 
                                         <span className={SponsorsStyles.tier}>

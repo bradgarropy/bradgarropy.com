@@ -1,5 +1,4 @@
 import Link from "@bradgarropy/next-link"
-import Image from "next/image"
 import {FC} from "react"
 import {Video} from "types/video"
 
@@ -19,7 +18,7 @@ const LatestVideos: FC<LatestVideosProps> = ({latestVideos}) => {
                         to={`https://www.youtube.com/watch?v=${latestVideo.id}`}
                         className={LatestVideosStyles.thumbnailLink}
                     >
-                        <Image
+                        <img
                             src={latestVideo.thumbnail}
                             alt={latestVideo.title}
                             width="1280"
