@@ -1,9 +1,51 @@
 import {http} from "@bradgarropy/http"
 import {Video} from "types/video"
 
+type YouTubeSearchResponse = {
+    kind: string
+    etag: string
+    nextPageToken: string
+    regionCode: string
+    pageInfo: PageInfo
+    items: {
+        kind: string
+        etag: string
+        id: {
+            kind: string
+            videoId: string
+        }
+        snippet: Snippet
+    }[]
+}
+
+type PageInfo = {
+    totalResults: number
+    resultsPerPage: number
+}
+
+type Snippet = {
+    publishedAt: string
+    channelId: string
+    title: string
+    description: string
+    thumbnails: {
+        default: Thumbnail
+        medium: Thumbnail
+        high: Thumbnail
+    }
+    channelTitle: string
+    liveBroadcastContent: string
+    publishTime: string
+}
+
+type Thumbnail = {
+    url: string
+    width: number
+    height: number
+}
+
 const getLatestVideos = async (): Promise<Video[]> => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const response: any = await http.get(
+    const response = await http.get<YouTubeSearchResponse>(
         "https://www.googleapis.com/youtube/v3/search",
         {
             params: {
