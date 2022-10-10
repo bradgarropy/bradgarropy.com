@@ -33,6 +33,6 @@ While I found the restart process to be a little inconvenient, it was the most r
 
 [node]: https://nodejs.org
 [flamegraph]: https://brendangregg.com/flamegraphs.html
-[node-devtools]: /images/posts/node-devtools.png
-[profiler]: /images/posts/profiler.png
-[flamegraph-chart]: /images/posts/flamegraph-chart.png
+[node-devtools]: /posts/node-devtools.png
+[profiler]: /posts/profiler.png
+[flamegraph-chart]: /posts/flamegraph-chart.png

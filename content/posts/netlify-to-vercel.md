@@ -80,9 +80,9 @@ Where do you host your websites? Let me know on [Twitter][twitter]!
 [typescript]: https://www.typescriptlang.org
 [netlify-redirects]: https://docs.netlify.com/routing/redirects
 [vercel-redirects]: https://vercel.com/docs/cli#project-configuration/redirects
-[environment-variables]: /images/posts/environment-variables.png
-[pr-comments]: /images/posts/pr-comments.png
-[analytics]: /images/posts/analytics.png
+[environment-variables]: /posts/environment-variables.png
+[pr-comments]: /posts/pr-comments.png
+[analytics]: /posts/analytics.png
 [github]: https://github.com
 [web-vitals]: https://vercel.com/bradgarropy/bradgarropy/analytics
 [twitter]: https://twitter.com/bradgarropy

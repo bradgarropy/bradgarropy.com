@@ -33,12 +33,12 @@ If you want to learn more about the talks and topics at [Reactathon][reactathon]
 
 If you haven’t been to a conference, or have been missing them since the pandemic started, I highly recommend going to one as soon as you can. You should consider [Smashing Conf][smashing-conf] in Austin, I’ll be attending as well!
 
-[reactathon-stage]: /images/posts/reactathon-stage.jpg
-[reactathon-lee]: /images/posts/reactathon-lee.jpg
+[reactathon-stage]: /posts/reactathon-stage.jpg
+[reactathon-lee]: /posts/reactathon-lee.jpg
 [reactathon-scott]: https://twitter.com/bradgarropy/status/1522277230809808904
 [reactathon-wes]: https://twitter.com/bradgarropy/status/1522277417695412235
-[reactathon-syntax]: /images/posts/reactathon-syntax.jpg
-[reactathon-vercel]: /images/posts/reactathon-vercel.jpg
+[reactathon-syntax]: /posts/reactathon-syntax.jpg
+[reactathon-vercel]: /posts/reactathon-vercel.jpg
 [reactathon]: https://www.reactathon.com
 [atlassian]: https://www.atlassian.com
 [bruns-ampitheater]: https://calshakes.org/experience/welcome-to-the-bruns

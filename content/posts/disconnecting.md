@@ -61,16 +61,16 @@ I'm not sure what it was, but I felt compelled to start coding again about a mon
 
 When I [tweeted][tweet] about my break, it seemed to resonate with a lot of people. Some are disconnecting right now, and others want to take time off in the future. I can tell it did me good, and I recommend taking time away from the keyboard as often as possible!
 
-[contribution-graph]: /images/posts/github-contribution-graph.png
+[contribution-graph]: /posts/github-contribution-graph.png
 [github]: https://github.com/bradgarropy
 [tweet]: https://twitter.com/bradgarropy/status/1564802254187761667
-[books]: /images/posts/books.jpg
-[cable-machine]: /images/posts/cable-machine.jpg
-[delaney-family]: /images/posts/delaney-family.jpg
-[grill]: /images/posts/grill.jpg
-[onewheel]: /images/posts/onewheel.jpg
-[sayulita]: /images/posts/sayulita.jpg
-[trello-nyc]: /images/posts/trello-nyc.jpg
+[books]: /posts/books.jpg
+[cable-machine]: /posts/cable-machine.jpg
+[delaney-family]: /posts/delaney-family.jpg
+[grill]: /posts/grill.jpg
+[onewheel]: /posts/onewheel.jpg
+[sayulita]: /posts/sayulita.jpg
+[trello-nyc]: /posts/trello-nyc.jpg
 [boredom]: /blog/the-boredom-motivation-correlation
 [reactathon]: https://reactathon.com
 [wow]: https://worldofwarcraft.com

@@ -48,9 +48,9 @@ For more information about manually triggering workflows, check the [documentati
 
 [actions]: https://github.com/features/actions
 [input-context]: https://docs.github.com/en/actions/learn-github-actions/contexts#inputs-context
-[manual]: /images/posts/manual.png
-[manual-inputs]: /images/posts/manual-inputs.png
+[manual]: /posts/manual.png
+[manual-inputs]: /posts/manual-inputs.png
 [workflow-dispatch]: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
-[workflow-cli]: /images/posts/workflow-cli.png
+[workflow-cli]: /posts/workflow-cli.png
 [cli]: https://cli.github.com
 [twitter]: https://twitter.com/bradgarropy
