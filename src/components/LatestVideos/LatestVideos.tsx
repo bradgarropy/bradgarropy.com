@@ -1,6 +1,7 @@
 import Link from "@bradgarropy/next-link"
 import {FC} from "react"
 import {Video} from "types/video"
+import {createYouTubeUrl} from "utils/cloudinary"
 
 import LatestVideosStyles from "./LatestVideos.module.css"
 
@@ -19,7 +20,7 @@ const LatestVideos: FC<LatestVideosProps> = ({latestVideos}) => {
                         className={LatestVideosStyles.thumbnailLink}
                     >
                         <img
-                            src={latestVideo.thumbnail}
+                            src={createYouTubeUrl(latestVideo.id)}
                             alt={latestVideo.title}
                             width="1280"
                             height="720"

@@ -5,6 +5,7 @@ import {FC} from "react"
 import slugify from "slugify"
 import LinkStyles from "styles/Link.module.css"
 import {Testimonial as TestimonialType} from "types/testimonial"
+import {createImageUrl} from "utils/cloudinary"
 
 import TestimonialStyles from "./Testimonial.module.css"
 
@@ -25,7 +26,7 @@ const Testimonial: FC<TestimonialProps> = ({testimonial}) => {
         >
             <div className={TestimonialStyles.header}>
                 <img
-                    src={testimonial.frontmatter.photo}
+                    src={createImageUrl(testimonial.frontmatter.photo)}
                     width="460"
                     height="460"
                     alt={testimonial.frontmatter.name}

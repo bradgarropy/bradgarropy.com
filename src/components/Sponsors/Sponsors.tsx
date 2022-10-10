@@ -5,6 +5,7 @@ import SponsorsStyles from "components/Sponsors/Sponsors.module.css"
 import {FC} from "react"
 import LinkStyles from "styles/Link.module.css"
 import {Sponsors as SponsorsType} from "types/sponsor"
+import {createExternalImageUrl} from "utils/cloudinary"
 
 type SponsorsProps = {
     sponsors: SponsorsType
@@ -44,7 +45,9 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                                     >
                                         <img
                                             className={SponsorsStyles.avatar}
-                                            src={sponsor.avatar}
+                                            src={createExternalImageUrl(
+                                                sponsor.avatar,
+                                            )}
                                             alt={sponsor.username}
                                             width="460"
                                             height="460"

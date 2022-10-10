@@ -1,5 +1,6 @@
 import Link from "@bradgarropy/next-link"
 import {FC} from "react"
+import {createImageUrl} from "utils/cloudinary"
 
 import styles from "./Hero.module.css"
 
@@ -11,7 +12,7 @@ const Hero: FC = () => {
                 className={styles.heroLink}
             >
                 <img
-                    src="/profile.jpg"
+                    src={createImageUrl("/profile.jpg")}
                     alt="bg"
                     className={styles.heroImage}
                     width="460"
