@@ -71,11 +71,11 @@ When I [tweeted][tweet] about my break, it seemed to resonate with a lot of peop
 [onewheel]: /posts/onewheel.jpg
 [sayulita]: /posts/sayulita.jpg
 [trello-nyc]: /posts/trello-nyc.jpg
-[boredom]: /blog/the-boredom-motivation-correlation
+[boredom]: https://bradgarropy.com/blog/the-boredom-motivation-correlation
 [reactathon]: https://reactathon.com
 [wow]: https://worldofwarcraft.com
 [duolingo]: https://duolingo.com
-[goal-books]: /blog/goals-for-2022#books
+[goal-books]: https://bradgarropy.com/blog/goals-for-2022#books
 [trello]: https://trello.com
 [onewheel-site]: https://onewheel.com
 [office]: https://twitter.com/bradgarropy/status/1551624211898241026
