@@ -3,6 +3,7 @@ import Footer from "components/Footer"
 import Header from "components/Header"
 import {AppProvider} from "context"
 import {FC, ReactNode} from "react"
+import {createImageUrl} from "utils/cloudinary"
 
 import pkg from "../../../package.json"
 import styles from "./Layout.module.css"
@@ -17,14 +18,14 @@ const Layout: FC<LayoutProps> = ({children}) => {
             <SEO
                 title="🏠 my home on the web"
                 keywords={pkg.keywords}
-                icon="/favicon.png"
+                icon={createImageUrl("/site/favicon.ico")}
                 facebook={{
-                    image: "https://bradgarropy.com/facebook.png",
+                    image: createImageUrl("/social/facebook.png"),
                     url: "https://bradgarropy.com",
                     type: "website",
                 }}
                 twitter={{
-                    image: "https://bradgarropy.com/twitter.png",
+                    image: createImageUrl("/social/twitter.png"),
                     site: "@bradgarropy",
                     card: "summary",
                 }}
