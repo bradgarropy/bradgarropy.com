@@ -1,6 +1,6 @@
 {
     "name": "bradgarropy.com",
-    "version": "5.1.4",
+    "version": "5.2.0",
     "description": "🏠 my home on the web",
     "keywords": [
         "javascript",
@@ -12,7 +12,8 @@
         "blog",
         "portfolio",
         "hacktoberfest",
-        "vercel"
+        "vercel",
+        "cloudinary"
     ],
     "homepage": "https://bradgarropy.com",
     "bugs": {
