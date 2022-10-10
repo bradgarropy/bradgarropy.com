@@ -11,7 +11,7 @@ const Podcast: FC = () => {
                 className={PodcastStyles.podcastLink}
             >
                 <img
-                    src={createImageUrl("/web-dev-weekly.jpg")}
+                    src={createImageUrl("/pages/home/web-dev-weekly.jpg")}
                     alt="Web Dev Weekly"
                     className={PodcastStyles.coverImage}
                     width="500"

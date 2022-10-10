@@ -12,7 +12,7 @@ const Hero: FC = () => {
                 className={styles.heroLink}
             >
                 <img
-                    src={createImageUrl("/profile.jpg")}
+                    src={createImageUrl("/pages/home/profile.jpg")}
                     alt="bg"
                     className={styles.heroImage}
                     width="460"
