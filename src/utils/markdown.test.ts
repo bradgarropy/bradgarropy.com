@@ -122,15 +122,6 @@ describe("transforms markdown", () => {
         )
     })
 
-    test("includes image sizes", async () => {
-        const html = await transformMarkdown("![brad garropy](/profile.jpg)")
-
-        expect(html).toEqual(
-            // eslint-disable-next-line quotes
-            '<img src="/profile.jpg" alt="brad garropy" width="460" height="460">',
-        )
-    })
-
     test("opens external links in new tabs", async () => {
         const html = await transformMarkdown(
             "This is an [external link](https://example.com).",
