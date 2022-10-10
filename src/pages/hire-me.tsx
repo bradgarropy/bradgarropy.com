@@ -5,6 +5,7 @@ import {GetStaticProps} from "next"
 import {FC} from "react"
 import {Markdown} from "types/markdown"
 import {Testimonial} from "types/testimonial"
+import {createImageUrl} from "utils/cloudinary"
 import {getMarkdownBySlug} from "utils/markdown"
 import {getTestimonials} from "utils/testimonials"
 
@@ -19,10 +20,10 @@ const HireMePage: FC<HireMePageProps> = ({hireMe, testimonials}) => {
             <SEO
                 title="🤝 let's work together"
                 facebook={{
-                    image: "https://bradgarropy.com/hire-me.png",
+                    image: createImageUrl("/pages/hire-me/hire-me.png"),
                 }}
                 twitter={{
-                    image: "https://bradgarropy.com/hire-me.png",
+                    image: createImageUrl("/pages/hire-me/hire-me.png"),
                     card: "summary_large_image",
                 }}
             />

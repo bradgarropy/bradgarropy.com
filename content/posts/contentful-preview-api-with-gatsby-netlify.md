@@ -107,7 +107,7 @@ But for now, just know that you can catch a sneak peak of content I'm working on
 [3]: https://bradgarropy.com/
 [4]: https://dev.bradgarropy.com/
 [5]: https://app.contentful.com/
-[6]: /images/posts/netlify-environment.png
+[6]: /posts/netlify-environment.png
 [7]: https://www.netlify.com/docs/continuous-deployment/#deploy-contexts
 [8]: https://www.gatsbyjs.org/
 [9]: https://www.gatsbyjs.org/docs/environment-variables/

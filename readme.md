@@ -11,7 +11,7 @@ _My home on the web._
 
 <p align="center">
     <a href="https://bradgarropy.com">
-        <img alt="bg" src="/public/bg-shadow.png" width="300">
+        <img alt="bg" src="https://res.cloudinary.com/bradgarropy/image/upload/c_scale,f_auto,q_auto,w_300/bradgarropy.com/readme/bg-shadow.png" width="300">
     </a>
 </p>
 

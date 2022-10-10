@@ -47,5 +47,5 @@ I'm interested to hear your responses, let me know [@bradgarropy][9].
 [5]: http://keep.google.com/
 [6]: https://calendar.google.com
 [7]: https://play.google.com/store/apps/details?id=com.google.android.apps.tasks
-[8]: /images/posts/inbox-gmail.png
+[8]: /posts/inbox-gmail.png
 [9]: https://twitter.com/bradgarropy

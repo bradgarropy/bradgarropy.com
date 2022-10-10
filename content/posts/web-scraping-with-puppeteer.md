@@ -63,7 +63,7 @@ The last tip I'll leave you with is to be considerate of where you are placing `
 
 Now you can go script whatever you'd like! For instance, I automated the process of retrieving what user liked a particular tweet of mine. Share what you've automated with me on [Twitter][twitter].
 
-[screenshot]: /images/posts/screenshot.png
+[screenshot]: /posts/screenshot.png
 [twitter]: https://twitter.com/bradgarropy
 [keyboard]: https://pptr.dev/#?product=Puppeteer&version=v5.5.0&show=api-class-keyboard
 [page]: https://pptr.dev/#?product=Puppeteer&version=v5.5.0&show=api-class-page

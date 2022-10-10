@@ -1,6 +1,7 @@
 import Link from "@bradgarropy/next-link"
 import PodcastStyles from "components/Podcast/Podcast.module.css"
 import {FC} from "react"
+import {createImageUrl} from "utils/cloudinary"
 
 const Podcast: FC = () => {
     return (
@@ -10,7 +11,7 @@ const Podcast: FC = () => {
                 className={PodcastStyles.podcastLink}
             >
                 <img
-                    src="/images/pages/home/web-dev-weekly.jpg"
+                    src={createImageUrl("/pages/home/web-dev-weekly.jpg")}
                     alt="Web Dev Weekly"
                     className={PodcastStyles.coverImage}
                     width="500"

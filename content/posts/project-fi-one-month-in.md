@@ -39,7 +39,7 @@ On that note, I highly recommend Project Fi, and if you want to try it out, use 
 
 [1]: https://fi.google.com/about/
 [2]: https://twitter.com/BrandonHassler
-[3]: /images/posts/project-fi-ice-cream.jpg
+[3]: /posts/project-fi-ice-cream.jpg
 [4]: https://store.google.com/us/product/pixel_2
 [5]: https://play.google.com/store/apps/details?id=com.att.mobile.android.vvm
 [6]: https://play.google.com/store/apps/details?id=com.google.android.dialer

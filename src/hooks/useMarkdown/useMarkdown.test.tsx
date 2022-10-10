@@ -1,6 +1,7 @@
 import {render, screen} from "@testing-library/react"
 import {renderHook} from "@testing-library/react"
 import {useMarkdown} from "hooks"
+import {createImageUrl} from "utils/cloudinary"
 
 describe("renders links", () => {
     test("local links", () => {
@@ -45,7 +46,10 @@ test("renders images", () => {
 
     const image = screen.getByAltText(name)
 
-    expect(image.parentElement).toHaveAttribute("href", `/${name}.jpg`)
+    expect(image.parentElement).toHaveAttribute(
+        "href",
+        createImageUrl(`/${name}.jpg`),
+    )
 })
 
 describe("renders headers", () => {

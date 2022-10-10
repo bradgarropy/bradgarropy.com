@@ -3,7 +3,6 @@ import {remarkPlugin as remarkVscode} from "gatsby-remark-vscode"
 import matter from "gray-matter"
 import path from "path"
 import rehypeExternalLinks from "rehype-external-links"
-import rehypeImageSize from "rehype-img-size"
 import rehypeRaw from "rehype-raw"
 import rehypeStringify from "rehype-stringify"
 import remarkGfm from "remark-gfm"
@@ -59,7 +58,6 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
             },
         })
         .use(remarkRehype, {allowDangerousHtml: true})
-        .use(rehypeImageSize, {dir: "public"})
         .use(rehypeExternalLinks, {
             target: "_blank",
             rel: ["noopener", "noreferrer"],

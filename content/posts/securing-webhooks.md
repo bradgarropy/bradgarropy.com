@@ -40,8 +40,8 @@ Now you can deploy webhooks without worrying about unauthorized access!
 [vercel-functions]: https://vercel.com/docs/concepts/functions/serverless-functions
 [authorization-header]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization
 [password-generator]: https://www.lastpass.com/features/password-generator
-[vercel-environment-variables]: /images/posts/vercel-environment-variables.png
-[authorized-webhook]: /images/posts/authorized-webhook.png
-[unauthorized-webhook]: /images/posts/unauthorized-webhook.png
+[vercel-environment-variables]: /posts/vercel-environment-variables.png
+[authorized-webhook]: /posts/authorized-webhook.png
+[unauthorized-webhook]: /posts/unauthorized-webhook.png
 [insomnia]: https://insomnia.rest
 [vercel]: https://vercel.com

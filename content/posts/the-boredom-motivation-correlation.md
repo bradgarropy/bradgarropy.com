@@ -28,10 +28,10 @@ My motivation can also be affected by being too busy at work, which would be the
 
 Ideally, boredom and busyness would not have any effect on motivation, and the graph would look something like the one above. If you have mastered your motivation levels and broken the correlation, [tweet at me][twitter] and share your tips on how you did it!
 
-[boredom-constant]: /images/posts/boredom-constant.jpg
-[boredom-full]: /images/posts/boredom-full.jpg
-[boredom-linear]: /images/posts/boredom-linear.jpg
-[boredom-spike]: /images/posts/boredom-spike.jpg
+[boredom-constant]: /posts/boredom-constant.jpg
+[boredom-full]: /posts/boredom-full.jpg
+[boredom-linear]: /posts/boredom-linear.jpg
+[boredom-spike]: /posts/boredom-spike.jpg
 [james-clear]: https://twitter.com/JamesClear
 [atomic-habits]: https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299?tag=bradgarropy00-20
 [twitter]: https://twitter.com/bradgarropy

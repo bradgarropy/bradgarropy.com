@@ -55,12 +55,12 @@ Overall, everything worked according to plan! Now I have a picturesque workspace
 
 ![chair][chair]
 
-[desk]: /images/posts/desk.jpg
-[audio]: /images/posts/audio.jpg
-[cables]: /images/posts/cables.jpg
-[power]: /images/posts/power.jpg
-[usb]: /images/posts/usb.jpg
-[chair]: /images/posts/chair.jpg
+[desk]: /posts/desk.jpg
+[audio]: /posts/audio.jpg
+[cables]: /posts/cables.jpg
+[power]: /posts/power.jpg
+[usb]: /posts/usb.jpg
+[chair]: /posts/chair.jpg
 [uplift]: https://upliftdesk.com
 [uses]: https://bradgarropy.com/uses
 [tripp-lite]: https://amazon.com/gp/product/B00006B83A?tag=bradgarropy00-20

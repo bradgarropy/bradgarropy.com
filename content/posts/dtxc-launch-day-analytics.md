@@ -25,16 +25,16 @@ And finally, a list of the most popular pages. Obviously the home page came out 
 While these numbers didn't blow my mind, I'm very happy with the launch day statistics. My marketing efforts caused me to reach more people than just my own social network, and proved that [Daily Texas Country][dtxc] is something people want! Keep your eyes on the site for more to come!
 
 [dtxc]: https://dailytexascountry.com
-[views]: /images/posts/views.png
+[views]: /posts/views.png
 [reddit]: https://www.reddit.com/r/texascountry/comments/hbfusn/daily_texas_country_is_now_live_come_on_in_yall
 [twitter]: https://twitter.com/dailytxcountry/status/1273623540181471240
 [instagram]: https://www.instagram.com/stories/highlights/17930631190385569
 [facebook]: https://www.facebook.com/dailytexascountry
 [texascountry]: https://www.reddit.com/r/texascountry
-[traffic]: /images/posts/traffic.png
-[users]: /images/posts/users.png
-[device]: /images/posts/device.png
-[pages]: /images/posts/pages.png
+[traffic]: /posts/traffic.png
+[users]: /posts/users.png
+[device]: /posts/device.png
+[pages]: /posts/pages.png
 [playlists]: https://dailytexascountry.com/playlists
 [episodes]: https://dailytexascountry.com/episodes
 [posts]: https://dailytexascountry.com/posts
