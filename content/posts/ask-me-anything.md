@@ -5,15 +5,15 @@ date: "2019-02-13"
 topic: life
 ---
 
-I've been inspired by [Kent C. Dodds][1] lately to grow my online presence as a developer. My favorite thing about him is how he makes himself available to folks who are looking for advice or help.
+I've been inspired by [Kent C. Dodds][kcd] lately to grow my online presence as a developer. My favorite thing about him is how he makes himself available to folks who are looking for advice or help.
 
-So I created an AMA platform on [Github][2] similar to his to answer your questions. This idea originated from [Sindre Sorhus][3] (whose website I love 💜), who also curates an [awesome][4] list of [AMAs][5].
+So I created an AMA platform on [Github][github] similar to his to answer your questions. This idea originated from [Sindre Sorhus][sindre] (whose website I love 💜), who also curates an [awesome][awesome] list of [AMAs][amas].
 
-So what are you waiting for, [ask me anything][6]!
+So what are you waiting for, [ask me anything][ama]!
 
-[1]: https://kentcdodds.com
-[2]: https://github.com
-[3]: https://sindresorhus.com
-[4]: https://github.com/sindresorhus/awesome#readme
-[5]: https://github.com/sindresorhus/amas#readme
-[6]: https://github.com/bradgarropy/ama#readme
+[kcd]: https://kentcdodds.com
+[github]: https://github.com
+[sindre]: https://sindresorhus.com
+[awesome]: https://github.com/sindresorhus/awesome#readme
+[amas]: https://github.com/sindresorhus/amas#readme
+[ama]: https://github.com/bradgarropy/ama#readme
