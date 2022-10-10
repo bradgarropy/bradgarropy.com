@@ -7,9 +7,6 @@ const config = {
         locales: ["en-US"],
         defaultLocale: "en-US",
     },
-    images: {
-        domains: ["artwork.captivate.fm", "i.ytimg.com"],
-    },
     redirects: () => {
         const redirects = [
             {
