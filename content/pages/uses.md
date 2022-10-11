@@ -74,7 +74,7 @@ These pieces of tech are always within reach.
 [tech]: https://bradgarropy.com/topic/tech
 [ama]: https://bradgarropy.com/ama
 [nzxt]: https://www.nzxt.com
-[home-office]: /pages/uses/home-office.jpg
+[home-office]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/pages/uses/home-office.jpg
 [mobo]: https://www.amazon.com/NZXT-Z390-N7-Z39XT-W1-Motherboard-Wireless-AC/dp/B07ZGFPLK3?tag=bradgarropy00-20
 [cpu]: https://www.amazon.com/Intel-i7-9700K-Desktop-Processor-Unlocked/dp/B07HHN6KBZ?tag=bradgarropy00-20
 [cooler]: https://www.amazon.com/Kraken-280mm-Water-Cooling-Bracket/dp/B06XS9QNPS?tag=bradgarropy00-20

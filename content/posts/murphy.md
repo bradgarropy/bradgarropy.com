@@ -31,7 +31,7 @@ If you want to improve your health, consider supporting me and purchasing [MURPH
 [grid]: https://tailwindcss.com/docs/release-notes#tailwind-css-v1-8
 [todd]: https://twitter.com/austintoddj
 [murph]: https://themurphchallenge.com/pages/the-workout
-[ad]: /posts/murphy.png
+[ad]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/murphy.png
 [store]: https://play.google.com/store/apps/details?id=com.bradgarropy.murphy.twa
 [svelte]: https://svelte.dev
 [tailwind]: http://tailwindcss.com

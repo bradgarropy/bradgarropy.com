@@ -38,7 +38,7 @@ It may seem like I'm gushing about Project Fi even though I just signed up, but 
 [iphone]: https://www.apple.com/shop/buy-iphone/iphone-7
 [pixel]: https://store.google.com/us/product/pixel_2
 [project-fi]: https://fi.google.com/about/
-[furry]: /posts/project-fi-furry.jpg
+[furry]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/project-fi-furry.jpg
 [calculator]: https://fi.google.com/about/plan/#calculator
 [att]: https://www.att.com/plans/unlimited-data-plans.html/#dmgUnlimited--packages
 [tmobile]: https://www.t-mobile.com/cell-phone-plans/#plans
