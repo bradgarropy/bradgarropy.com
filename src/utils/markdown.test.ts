@@ -9,6 +9,13 @@ jest.mock("gatsby-remark-vscode", () => {
     }
 })
 
+const mockFetch = jest.fn()
+global.fetch = mockFetch
+
+mockFetch.mockResolvedValue({
+    json: () => Promise.resolve({output: {width: 100, height: 100}}),
+})
+
 test("gets markdown by slug", async () => {
     const mockMatter = matter.read as jest.Mock
     mockMatter.mockReturnValue({data: {}, content: "This is the uses page."})
@@ -34,7 +41,18 @@ describe("transforms markdown", () => {
 
         expect(html).toEqual(
             // eslint-disable-next-line quotes
-            '<img src="https://bradgarropy.com/profile.jpg" alt="brad garropy">',
+            '<img src="https://bradgarropy.com/profile.jpg" alt="brad garropy" width="100" height="100">',
+        )
+    })
+
+    test("adds dimensions to images", async () => {
+        const html = await transformMarkdown(
+            "![brad garropy](https://bradgarropy.com/profile.jpg)",
+        )
+
+        expect(html).toEqual(
+            // eslint-disable-next-line quotes
+            '<img src="https://bradgarropy.com/profile.jpg" alt="brad garropy" width="100" height="100">',
         )
     })
 

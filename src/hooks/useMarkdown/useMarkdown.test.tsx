@@ -1,7 +1,6 @@
 import {render, screen} from "@testing-library/react"
 import {renderHook} from "@testing-library/react"
 import {useMarkdown} from "hooks"
-import {createImageUrl} from "utils/cloudinary"
 
 describe("renders links", () => {
     test("local links", () => {
@@ -38,7 +37,8 @@ test("renders images", () => {
 
     const {result} = renderHook(() =>
         useMarkdown(
-            `<img src="/${name}.jpg" alt="${name}" width="100" height="100"/>`,
+            // eslint-disable-next-line quotes
+            '<img src="https://bradgarropy.com/profile.jpg" alt="profile" width="100" height="100"/>',
         ),
     )
 
@@ -48,7 +48,7 @@ test("renders images", () => {
 
     expect(image.parentElement).toHaveAttribute(
         "href",
-        createImageUrl(`/${name}.jpg`),
+        "https://bradgarropy.com/profile.jpg",
     )
 })
 
