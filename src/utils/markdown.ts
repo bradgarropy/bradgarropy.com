@@ -17,6 +17,7 @@ import {
 } from "transformers"
 import {Markdown} from "types/markdown"
 import {unified} from "unified"
+import {rehypeCloudinaryImageSize} from "utils/rehype"
 
 const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
     const nowPath = path.join(process.cwd(), `content/pages/${slug}.md`)
@@ -62,6 +63,7 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
             target: "_blank",
             rel: ["noopener", "noreferrer"],
         })
+        .use(rehypeCloudinaryImageSize)
         .use(rehypeRaw)
         .use(rehypeStringify)
 
