@@ -6,7 +6,6 @@ import rehypeParse from "rehype-parse"
 import rehypeReact from "rehype-react"
 import LinkStyles from "styles/Link.module.css"
 import {unified} from "unified"
-import {createImageUrl} from "utils/cloudinary"
 
 const useMarkdown = (html: string) => {
     const processor = unified()
@@ -28,13 +27,13 @@ const useMarkdown = (html: string) => {
                 img: ({src, alt, width, height, ...props}) => {
                     return (
                         <a
-                            href={createImageUrl(src)}
+                            href={src}
                             className={LinkStyles.image}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <img
-                                src={createImageUrl(src)}
+                                src={src}
                                 alt={alt}
                                 width={width}
                                 height={height}
