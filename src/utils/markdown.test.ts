@@ -41,7 +41,7 @@ describe("transforms markdown", () => {
 
         expect(html).toEqual(
             // eslint-disable-next-line quotes
-            '<img src="https://bradgarropy.com/profile.jpg" alt="brad garropy">',
+            '<a class="image" href="https://bradgarropy.com/profile.jpg"><img src="https://bradgarropy.com/profile.jpg" alt="brad garropy"></a>',
         )
     })
 
@@ -54,7 +54,7 @@ describe("transforms markdown", () => {
 
         expect(html).toEqual(
             // eslint-disable-next-line quotes
-            '<img src="http://res.cloudinary.com/profile.jpg" alt="brad garropy" width="100" height="100">',
+            '<a class="image" href="http://res.cloudinary.com/profile.jpg"><img src="http://res.cloudinary.com/profile.jpg" alt="brad garropy" width="100" height="100"></a>',
         )
 
         html = await transformMarkdown(
@@ -63,7 +63,7 @@ describe("transforms markdown", () => {
 
         expect(html).toEqual(
             // eslint-disable-next-line quotes
-            '<img src="https://res.cloudinary.com/profile.jpg" alt="brad garropy" width="100" height="100">',
+            '<a class="image" href="https://res.cloudinary.com/profile.jpg"><img src="https://res.cloudinary.com/profile.jpg" alt="brad garropy" width="100" height="100"></a>',
         )
     })
 
@@ -74,7 +74,7 @@ describe("transforms markdown", () => {
 
         expect(html).toEqual(
             // eslint-disable-next-line quotes
-            '<img src="https://bradgarropy.com/profile.jpg" alt="brad garropy">',
+            '<a class="image" href="https://bradgarropy.com/profile.jpg"><img src="https://bradgarropy.com/profile.jpg" alt="brad garropy"></a>',
         )
     })
 
