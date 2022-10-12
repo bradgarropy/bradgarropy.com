@@ -4,7 +4,6 @@ import Head from "next/head"
 import React, {createElement, Fragment} from "react"
 import rehypeParse from "rehype-parse"
 import rehypeReact from "rehype-react"
-import LinkStyles from "styles/Link.module.css"
 import {unified} from "unified"
 
 const useMarkdown = (html: string) => {
@@ -22,24 +21,6 @@ const useMarkdown = (html: string) => {
                         <Link to={href} {...props}>
                             {children}
                         </Link>
-                    )
-                },
-                img: ({src, alt, width, height, ...props}) => {
-                    return (
-                        <a
-                            href={src}
-                            className={LinkStyles.image}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                src={src}
-                                alt={alt}
-                                width={width}
-                                height={height}
-                                {...props}
-                            />
-                        </a>
                     )
                 },
                 h1: ({children}) => {
