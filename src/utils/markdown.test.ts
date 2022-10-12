@@ -41,18 +41,40 @@ describe("transforms markdown", () => {
 
         expect(html).toEqual(
             // eslint-disable-next-line quotes
-            '<img src="https://bradgarropy.com/profile.jpg" alt="brad garropy" width="100" height="100">',
+            '<img src="https://bradgarropy.com/profile.jpg" alt="brad garropy">',
         )
     })
 
-    test("adds dimensions to images", async () => {
+    test("adds dimensions to cloudinary images", async () => {
+        let html
+
+        html = await transformMarkdown(
+            "![brad garropy](http://res.cloudinary.com/profile.jpg)",
+        )
+
+        expect(html).toEqual(
+            // eslint-disable-next-line quotes
+            '<img src="http://res.cloudinary.com/profile.jpg" alt="brad garropy" width="100" height="100">',
+        )
+
+        html = await transformMarkdown(
+            "![brad garropy](https://res.cloudinary.com/profile.jpg)",
+        )
+
+        expect(html).toEqual(
+            // eslint-disable-next-line quotes
+            '<img src="https://res.cloudinary.com/profile.jpg" alt="brad garropy" width="100" height="100">',
+        )
+    })
+
+    test("does not add dimensions to other images", async () => {
         const html = await transformMarkdown(
             "![brad garropy](https://bradgarropy.com/profile.jpg)",
         )
 
         expect(html).toEqual(
             // eslint-disable-next-line quotes
-            '<img src="https://bradgarropy.com/profile.jpg" alt="brad garropy" width="100" height="100">',
+            '<img src="https://bradgarropy.com/profile.jpg" alt="brad garropy">',
         )
     })
 

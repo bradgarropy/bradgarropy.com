@@ -1,13 +1,16 @@
 import type {Element} from "hast"
 import {isElement} from "hast-util-is-element"
 import {Node, visit, Visitor} from "unist-util-visit"
-import {getImageDimensions} from "utils/cloudinary"
+import {getImageDimensions, isCloudinaryImage} from "utils/cloudinary"
 
 const rehypeCloudinaryImageSize = () => {
     const images: Element[] = []
 
     const visitor: Visitor = (node: Element) => {
-        if (isElement(node, "img")) {
+        if (
+            isElement(node, "img") &&
+            isCloudinaryImage(node.properties.src as string)
+        ) {
             images.push(node)
         }
     }

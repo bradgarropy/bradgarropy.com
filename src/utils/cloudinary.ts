@@ -53,11 +53,24 @@ const getImageDimensions = async (imageUrl: string): Promise<Dimensions> => {
     return dimensions
 }
 
+const isCloudinaryImage = (url: string) => {
+    if (url.startsWith("http://res.cloudinary.com")) {
+        return true
+    }
+
+    if (url.startsWith("https://res.cloudinary.com")) {
+        return true
+    }
+
+    return false
+}
+
 export {
     createExternalImageUrl,
     createImageUrl,
     createInternalImageUrl,
     createYouTubeUrl,
     getImageDimensions,
+    isCloudinaryImage,
 }
 export type {Dimensions}
