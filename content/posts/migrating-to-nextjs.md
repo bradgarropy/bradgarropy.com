@@ -110,7 +110,7 @@ Like I said at the beginning, this migration is a tradeoff, but I think I'm maki
 [pr]: https://github.com/bradgarropy/bradgarropy.com/pull/265
 [ga4]: https://analytics.google.com
 [typescript]: https://typescriptlang.org
-[diff]: /posts/pr-diff.png
+[diff]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/pr-diff.png
 [saas]: https://bradgarropy.com/blog/goals-for-2022#products
 [repo]: https://github.com/bradgarropy/bradgarropy.com
 [use-markdown]: https://github.com/bradgarropy/bradgarropy.com/blob/master/src/hooks/useMarkdown/useMarkdown.tsx
@@ -128,4 +128,4 @@ Like I said at the beginning, this migration is a tradeoff, but I think I'm maki
 [web-vitals]: https://vercel.com/docs/concepts/analytics/web-vitals
 [twitch]: https://twitch.tv/bradgarropy
 [jest]: https://jestjs.io
-[build-times]: /posts/vercel-build-times.png
+[build-times]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/vercel-build-times.png

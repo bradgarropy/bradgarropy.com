@@ -9,6 +9,13 @@ jest.mock("gatsby-remark-vscode", () => {
     }
 })
 
+const mockFetch = jest.fn()
+global.fetch = mockFetch
+
+mockFetch.mockResolvedValue({
+    json: () => Promise.resolve({output: {width: 100, height: 100}}),
+})
+
 test("gets markdown by slug", async () => {
     const mockMatter = matter.read as jest.Mock
     mockMatter.mockReturnValue({data: {}, content: "This is the uses page."})
@@ -28,6 +35,39 @@ describe("transforms markdown", () => {
     })
 
     test("unwraps images", async () => {
+        const html = await transformMarkdown(
+            "![brad garropy](https://bradgarropy.com/profile.jpg)",
+        )
+
+        expect(html).toEqual(
+            // eslint-disable-next-line quotes
+            '<img src="https://bradgarropy.com/profile.jpg" alt="brad garropy">',
+        )
+    })
+
+    test("adds dimensions to cloudinary images", async () => {
+        let html
+
+        html = await transformMarkdown(
+            "![brad garropy](http://res.cloudinary.com/profile.jpg)",
+        )
+
+        expect(html).toEqual(
+            // eslint-disable-next-line quotes
+            '<img src="http://res.cloudinary.com/profile.jpg" alt="brad garropy" width="100" height="100">',
+        )
+
+        html = await transformMarkdown(
+            "![brad garropy](https://res.cloudinary.com/profile.jpg)",
+        )
+
+        expect(html).toEqual(
+            // eslint-disable-next-line quotes
+            '<img src="https://res.cloudinary.com/profile.jpg" alt="brad garropy" width="100" height="100">',
+        )
+    })
+
+    test("does not add dimensions to other images", async () => {
         const html = await transformMarkdown(
             "![brad garropy](https://bradgarropy.com/profile.jpg)",
         )

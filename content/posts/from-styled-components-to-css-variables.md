@@ -75,7 +75,7 @@ What about you, what's your preferred method of authoring styles?
 
 [thread]: https://twitter.com/bradgarropy/status/1382187648547115008
 [pr]: https://github.com/bradgarropy/bradgarropy.com/pull/197
-[pr-stats]: /posts/pr-stats.png
+[pr-stats]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/pr-stats.png
 [css-variables]: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 [styled-components]: https://styled-components.com
 [css-modules]: https://github.com/css-modules/css-modules

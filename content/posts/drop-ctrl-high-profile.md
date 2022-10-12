@@ -29,9 +29,9 @@ Between the keymap, the lights, the switches, the keycaps, and even the cable, I
 
 _You can find this keyboard and all my other gear on the [uses][uses] page._
 
-[front]: /posts/front.jpg
-[tkl]: /posts/tkl.jpg
-[leds]: /posts/leds.jpg
+[front]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/front.jpg
+[tkl]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/tkl.jpg
+[leds]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/leds.jpg
 [swift-cables]: https://swiftcables.net/products/dracula
 [configurator]: https://drop.com/mechanical-keyboards/configurator
 [razer-green]: https://www.razer.com/razer-mechanical-switches
