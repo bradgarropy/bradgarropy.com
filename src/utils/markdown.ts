@@ -6,9 +6,11 @@ import rehypeExternalLinks from "rehype-external-links"
 import rehypeRaw from "rehype-raw"
 import rehypeStringify from "rehype-stringify"
 import remarkGfm from "remark-gfm"
+import remarkInlineLinks from "remark-inline-links"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
 import remarkUnwrapImages from "remark-unwrap-images"
+import LinkStyles from "styles/Link.module.css"
 import {
     codesandboxTransformer,
     twitchTransformer,
@@ -17,7 +19,7 @@ import {
 } from "transformers"
 import {Markdown} from "types/markdown"
 import {unified} from "unified"
-import {rehypeCloudinaryImageSize} from "utils/rehype"
+import {rehypeCloudinaryImageSize, rehypeImageLinks} from "utils/rehype"
 
 const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
     const nowPath = path.join(process.cwd(), `content/pages/${slug}.md`)
@@ -38,6 +40,7 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
         .use(remarkParse)
         .use(remarkGfm)
         .use(remarkUnwrapImages)
+        .use(remarkInlineLinks)
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         .use(remarkEmbedder, {
@@ -64,6 +67,7 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
             rel: ["noopener", "noreferrer"],
         })
         .use(rehypeCloudinaryImageSize)
+        .use(rehypeImageLinks, {classes: [LinkStyles.image]})
         .use(rehypeRaw)
         .use(rehypeStringify)
 
