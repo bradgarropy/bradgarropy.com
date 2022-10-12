@@ -1,7 +1,36 @@
 import type {Element} from "hast"
 import {isElement} from "hast-util-is-element"
-import {Node, visit, Visitor} from "unist-util-visit"
+import {Node, SKIP, visit, Visitor} from "unist-util-visit"
 import {getImageDimensions, isCloudinaryImage} from "utils/cloudinary"
+
+type RehypeImageLinksOptions = {
+    classes?: string[]
+}
+
+const rehypeImageLinks = (options: RehypeImageLinksOptions) => {
+    const visitor: Visitor = (node: Element) => {
+        if (isElement(node, "img")) {
+            const linkNode: Element = {
+                type: "element",
+                tagName: "a",
+                properties: {
+                    class: options.classes.join(" "),
+                    href: node.properties.src,
+                },
+                children: [{...node}],
+            }
+
+            Object.assign(node, linkNode)
+            return SKIP
+        }
+    }
+
+    const transformer = async (tree: Node) => {
+        visit(tree, "element", visitor)
+    }
+
+    return transformer
+}
 
 const rehypeCloudinaryImageSize = () => {
     const images: Element[] = []
@@ -33,4 +62,4 @@ const rehypeCloudinaryImageSize = () => {
     return transformer
 }
 
-export {rehypeCloudinaryImageSize}
+export {rehypeCloudinaryImageSize, rehypeImageLinks}
