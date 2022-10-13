@@ -1,4 +1,5 @@
 import {youtubeTransformer} from "transformers/youtube"
+import {expect, test} from "vitest"
 
 test("detects youtube links", () => {
     expect(

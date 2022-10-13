@@ -1,6 +1,7 @@
 import {render, screen} from "@testing-library/react"
 import Contact from "components/Contact"
 import {mockContact} from "test-utils/mocks"
+import {expect, test} from "vitest"
 
 test("shows contact page", () => {
     render(<Contact contact={mockContact} />)

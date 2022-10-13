@@ -1,6 +1,6 @@
 import {render, screen} from "@testing-library/react"
-
-import LinkButton from "./LinkButton"
+import LinkButton from "components/LinkButton"
+import {expect, test} from "vitest"
 
 test("shows link", () => {
     render(<LinkButton to="/">testing</LinkButton>)

@@ -1,4 +1,5 @@
 import {twitchTransformer} from "transformers/twitch"
+import {expect, test} from "vitest"
 
 test("detects twitch links", () => {
     expect(

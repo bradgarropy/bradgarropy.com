@@ -1,6 +1,6 @@
 import {render, screen} from "@testing-library/react"
-
-import PostEdit from "./PostEdit"
+import PostEdit from "components/PostEdit"
+import {expect, test} from "vitest"
 
 test("shows edit button", () => {
     render(<PostEdit slug={"my-test-post"} />)

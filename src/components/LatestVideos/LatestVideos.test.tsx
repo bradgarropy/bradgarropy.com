@@ -1,6 +1,7 @@
 import {render, screen} from "@testing-library/react"
 import LatestVideos from "components/LatestVideos"
 import {mockVideos} from "test-utils/mocks"
+import {expect, test} from "vitest"
 
 test("shows latest videos", () => {
     render(<LatestVideos latestVideos={mockVideos} />)

@@ -3,35 +3,36 @@ import userEvent from "@testing-library/user-event"
 import PostSearchBar from "components/PostSearchBar"
 import * as nextRouter from "next/router"
 import {mockPosts, mockPostsFrontmatter} from "test-utils/mocks"
+import {expect, test, vi} from "vitest"
 
-const onSearchMock = jest.fn()
+const onSearchMock = vi.fn()
 const mockPlaceholder = "search blog"
 const mockQuery = "fourth"
 
-const mockUseRouter = jest.spyOn(nextRouter, "useRouter")
-const mockPush = jest.fn()
+const mockUseRouter = vi.spyOn(nextRouter, "useRouter")
+const mockPush = vi.fn()
 
 describe("search bar", () => {
     beforeEach(() => {
         mockUseRouter.mockReturnValue({
             asPath: "",
-            back: jest.fn(),
+            back: vi.fn(),
             basePath: "",
-            beforePopState: jest.fn(),
+            beforePopState: vi.fn(),
             events: {
-                on: jest.fn(),
-                off: jest.fn(),
-                emit: jest.fn(),
+                on: vi.fn(),
+                off: vi.fn(),
+                emit: vi.fn(),
             },
             isFallback: false,
             isLocaleDomain: false,
             isPreview: false,
             isReady: true,
             pathname: "/blog",
-            prefetch: jest.fn(),
+            prefetch: vi.fn(),
             push: mockPush,
-            replace: jest.fn(),
-            reload: jest.fn(),
+            replace: vi.fn(),
+            reload: vi.fn(),
             route: "",
             query: {},
         })
@@ -80,23 +81,23 @@ describe("search bar with input", () => {
     beforeEach(() => {
         mockUseRouter.mockReturnValue({
             asPath: "",
-            back: jest.fn(),
+            back: vi.fn(),
             basePath: "",
-            beforePopState: jest.fn(),
+            beforePopState: vi.fn(),
             events: {
-                on: jest.fn(),
-                off: jest.fn(),
-                emit: jest.fn(),
+                on: vi.fn(),
+                off: vi.fn(),
+                emit: vi.fn(),
             },
             isFallback: false,
             isLocaleDomain: false,
             isPreview: false,
             isReady: true,
             pathname: "/blog",
-            prefetch: jest.fn(),
+            prefetch: vi.fn(),
             push: mockPush,
-            replace: jest.fn(),
-            reload: jest.fn(),
+            replace: vi.fn(),
+            reload: vi.fn(),
             route: "",
             query: {
                 search: mockQuery,

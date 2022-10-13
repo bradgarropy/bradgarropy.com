@@ -6,20 +6,21 @@ import {
     mockTestimonialsResponse,
 } from "test-utils/mocks"
 import {getTestimonials} from "utils/testimonials"
+import {expect, Mock, test, vi} from "vitest"
 
-jest.mock("fs")
-jest.mock("gray-matter")
+vi.mock("fs")
+vi.mock("gray-matter")
 
-jest.mock("gatsby-remark-vscode", () => {
+vi.mock("gatsby-remark-vscode", () => {
     return {
         remarkPlugin: tree => tree,
     }
 })
 
-const mockReadDirSync = readdirSync as jest.Mock
+const mockReadDirSync = readdirSync as Mock
 mockReadDirSync.mockReturnValue(mockTestimonialsPaths)
 
-const mockMatterRead = matter.read as jest.Mock
+const mockMatterRead = matter.read as Mock
 mockMatterRead
     .mockReturnValueOnce(mockTestimonialsResponse[0])
     .mockReturnValueOnce(mockTestimonialsResponse[1])

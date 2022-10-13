@@ -1,6 +1,6 @@
 {
     "name": "bradgarropy.com",
-    "version": "5.2.0",
+    "version": "5.3.0",
     "description": "🏠 my home on the web",
     "keywords": [
         "javascript",
@@ -8,7 +8,7 @@
         "next",
         "eslint",
         "prettier",
-        "jest",
+        "vitest",
         "blog",
         "portfolio",
         "hacktoberfest",
@@ -37,8 +37,8 @@
         "format": "prettier --check .",
         "format:fix": "prettier --write .",
         "typecheck": "tsc",
-        "test": "jest --passWithNoTests",
-        "test:watch": "jest --passWithNoTests --watch",
+        "test": "vitest --coverage",
+        "test:watch": "vitest --coverage --watch",
         "contributors": "all-contributors generate",
         "new": "plop"
     },
@@ -94,6 +94,8 @@
         "@typescript-eslint/eslint-plugin": "^5.4.0",
         "@typescript-eslint/parser": "^5.4.0",
         "@vercel/node": "^2.5.18",
+        "@vitejs/plugin-react": "^2.1.0",
+        "@vitest/coverage-istanbul": "^0.24.1",
         "all-contributors-cli": "^6.20.0",
         "babel-jest": "^27.3.1",
         "eslint": "^8.2.0",
@@ -103,6 +105,7 @@
         "eslint-plugin-react": "^7.27.0",
         "eslint-plugin-react-hooks": "^4.3.0",
         "eslint-plugin-simple-import-sort": "^7.0.0",
+        "happy-dom": "^7.5.10",
         "identity-obj-proxy": "^3.0.0",
         "jest": "^27.3.1",
         "next-remote-watch": "^2.0.0",
@@ -112,6 +115,8 @@
         "plop-helper-slugify": "^1.1.0",
         "prettier": "^2.4.1",
         "react": "^18.2.0",
-        "typescript": "^4.1.2"
+        "typescript": "^4.1.2",
+        "vite-tsconfig-paths": "^3.5.1",
+        "vitest": "^0.24.1"
     }
 }

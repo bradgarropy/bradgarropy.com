@@ -1,6 +1,7 @@
 import {render, screen} from "@testing-library/react"
 import Testimonial from "components/Testimonial"
 import {mockTestimonial} from "test-utils/mocks"
+import {expect, test} from "vitest"
 
 test("shows name", () => {
     render(<Testimonial testimonial={mockTestimonial} />)

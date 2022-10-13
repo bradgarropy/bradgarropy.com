@@ -1,12 +1,12 @@
 import {render, screen} from "@testing-library/react"
+import Post from "components/Post"
 import {useMeta} from "hooks"
 import {mockMeta, mockPost} from "test-utils/mocks"
+import {expect, Mock, test, vi} from "vitest"
 
-import Post from "./Post"
+vi.mock("hooks/useMeta")
 
-jest.mock("hooks/useMeta")
-
-const mockUseMeta = useMeta as jest.Mock
+const mockUseMeta = useMeta as Mock
 mockUseMeta.mockReturnValue(mockMeta)
 
 test("shows post header", () => {

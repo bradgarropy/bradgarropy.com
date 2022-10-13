@@ -1,5 +1,6 @@
 import {render, screen} from "@testing-library/react"
 import Section from "components/Section"
+import {expect, test} from "vitest"
 
 test("shows section", () => {
     render(<Section title="Test" link="https://example.com" />)

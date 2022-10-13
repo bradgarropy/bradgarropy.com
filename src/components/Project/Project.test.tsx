@@ -1,6 +1,7 @@
 import {render, screen} from "@testing-library/react"
 import Project from "components/Project"
 import {mockProjects} from "test-utils/mocks"
+import {expect, test} from "vitest"
 
 test("shows project", () => {
     render(<Project project={mockProjects[0]} />)

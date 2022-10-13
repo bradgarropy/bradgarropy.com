@@ -1,6 +1,7 @@
 import {render, screen} from "@testing-library/react"
 import Icon from "components/Icon"
 import {technologies} from "utils"
+import {expect, test} from "vitest"
 
 test("shows icons", () => {
     technologies.forEach(technology => {

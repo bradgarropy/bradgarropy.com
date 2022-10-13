@@ -3,13 +3,14 @@ import userEvent from "@testing-library/user-event"
 import ColorTheme from "components/ColorTheme"
 import {useApp} from "hooks"
 import {generateAppCtx} from "test-utils/generators"
+import {expect, Mock, test, vi} from "vitest"
 
 const mockAppCtxLight = generateAppCtx({theme: "light"})
 const mockAppCtxDark = generateAppCtx({theme: "dark"})
 
-jest.mock("hooks")
+vi.mock("hooks")
 
-const mockUseApp = useApp as jest.Mock
+const mockUseApp = useApp as Mock
 
 test("toggles dark mode", async () => {
     mockUseApp.mockReturnValue(mockAppCtxLight)

@@ -15,18 +15,19 @@ import {
     getNowBySlug,
     getOlderNow,
 } from "utils/now"
+import {expect, Mock, test, vi} from "vitest"
 
-jest.mock("fs")
-jest.mock("gray-matter")
+vi.mock("fs")
+vi.mock("gray-matter")
 
-jest.mock("gatsby-remark-vscode", () => {
+vi.mock("gatsby-remark-vscode", () => {
     return {
         remarkPlugin: tree => tree,
     }
 })
 
 test("gets all nows", () => {
-    const mockReadDirSync = readdirSync as jest.Mock
+    const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockNowPaths)
 
     const nows = getAllNows()
@@ -34,7 +35,7 @@ test("gets all nows", () => {
 })
 
 test("gets now by slug", async () => {
-    const mockMatterRead = matter.read as jest.Mock
+    const mockMatterRead = matter.read as Mock
     mockMatterRead.mockReturnValue(mockNowsResponse[1])
 
     const now = await getNowBySlug("2021-12-31")
@@ -42,10 +43,10 @@ test("gets now by slug", async () => {
 })
 
 test("gets latest now", async () => {
-    const mockReadDirSync = readdirSync as jest.Mock
+    const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockNowPaths)
 
-    const mockMatterRead = matter.read as jest.Mock
+    const mockMatterRead = matter.read as Mock
     mockMatterRead.mockReturnValue(mockNowsResponse[0])
 
     const now = await getLatestNow()
@@ -53,8 +54,8 @@ test("gets latest now", async () => {
 })
 
 test("gets newer now", async () => {
-    const mockReadDirSync = readdirSync as jest.Mock
-    const mockMatterRead = matter.read as jest.Mock
+    const mockReadDirSync = readdirSync as Mock
+    const mockMatterRead = matter.read as Mock
 
     mockReadDirSync.mockReturnValue(mockNowPaths)
     mockMatterRead.mockReturnValue(mockNowsResponse[0])
@@ -70,8 +71,8 @@ test("gets newer now", async () => {
 })
 
 test("gets older now", async () => {
-    const mockReadDirSync = readdirSync as jest.Mock
-    const mockMatterRead = matter.read as jest.Mock
+    const mockReadDirSync = readdirSync as Mock
+    const mockMatterRead = matter.read as Mock
 
     mockReadDirSync.mockReturnValue(mockNowPaths)
     mockMatterRead.mockReturnValue(mockNowsResponse[2])

@@ -1,7 +1,7 @@
 import {render, screen} from "@testing-library/react"
+import Now from "components/Now"
 import {mockNewerNow, mockNow, mockOlderNow} from "test-utils/mocks"
-
-import Now from "./Now"
+import {expect, test} from "vitest"
 
 test("shows now", () => {
     render(<Now now={mockNow} newer={mockNewerNow} older={mockOlderNow} />)

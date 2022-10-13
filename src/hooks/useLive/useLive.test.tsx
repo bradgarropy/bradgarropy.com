@@ -1,14 +1,15 @@
 import {renderHook, waitFor} from "@testing-library/react"
 import {useLive} from "hooks"
 import {getChannelStatus} from "utils/api/twitch"
+import {expect, test, vi} from "vitest"
 
-jest.mock("utils/api/twitch")
-jest.useFakeTimers("legacy")
+vi.mock("utils/api/twitch")
+vi.useFakeTimers()
 
-const mockGetChannelStatus = getChannelStatus as jest.Mock
+const mockGetChannelStatus = vi.mocked(getChannelStatus)
 
 test("returns online status", async () => {
-    mockGetChannelStatus.mockReturnValue(true)
+    mockGetChannelStatus.mockResolvedValue(true)
 
     const {result} = renderHook(() => useLive())
 
@@ -18,23 +19,23 @@ test("returns online status", async () => {
 })
 
 test("returns offline status", () => {
-    mockGetChannelStatus.mockReturnValue(false)
+    mockGetChannelStatus.mockResolvedValue(false)
 
     const {result} = renderHook(() => useLive())
     expect(result.current).toEqual(false)
 })
 
 test("polls for changes", async () => {
-    mockGetChannelStatus.mockReturnValue(false)
+    mockGetChannelStatus.mockResolvedValue(false)
 
     renderHook(() => useLive())
 
-    jest.advanceTimersByTime(60000)
+    vi.advanceTimersByTime(60000)
     expect(mockGetChannelStatus).toHaveBeenCalledTimes(2)
 })
 
 test("stops polling", () => {
-    mockGetChannelStatus.mockReturnValue(false)
+    mockGetChannelStatus.mockResolvedValue(false)
 
     const {unmount} = renderHook(() => useLive())
 

@@ -1,15 +1,16 @@
 import matter from "gray-matter"
 import {getMarkdownBySlug, transformMarkdown} from "utils/markdown"
+import {describe, expect, Mock, test, vi} from "vitest"
 
-jest.mock("gray-matter")
+vi.mock("gray-matter")
 
-jest.mock("gatsby-remark-vscode", () => {
+vi.mock("gatsby-remark-vscode", () => {
     return {
         remarkPlugin: tree => tree,
     }
 })
 
-const mockFetch = jest.fn()
+const mockFetch = vi.fn()
 global.fetch = mockFetch
 
 mockFetch.mockResolvedValue({
@@ -17,7 +18,7 @@ mockFetch.mockResolvedValue({
 })
 
 test("gets markdown by slug", async () => {
-    const mockMatter = matter.read as jest.Mock
+    const mockMatter = matter.read as Mock
     mockMatter.mockReturnValue({data: {}, content: "This is the uses page."})
 
     const markdown = await getMarkdownBySlug("uses")

@@ -1,16 +1,17 @@
 import {render, screen} from "@testing-library/react"
 import {useApp, useLive} from "hooks"
 import {generateAppCtx} from "test-utils/generators"
+import {describe, expect, Mock, test, vi} from "vitest"
 
 import Header from "./Header"
 
-jest.mock("hooks")
+vi.mock("hooks")
 
 const mockAppCtx = generateAppCtx()
 
-const mockUseLive = useLive as jest.Mock
+const mockUseLive = useLive as Mock
 
-const mockUseApp = useApp as jest.Mock
+const mockUseApp = useApp as Mock
 mockUseApp.mockReturnValue(mockAppCtx)
 
 describe("streaming", () => {

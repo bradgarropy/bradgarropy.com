@@ -1,4 +1,5 @@
 import {twitterTransformer} from "transformers/twitter"
+import {expect, test} from "vitest"
 
 test("detects twitter links", () => {
     expect(

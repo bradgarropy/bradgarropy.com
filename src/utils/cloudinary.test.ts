@@ -1,4 +1,5 @@
 import {createImageUrl, createYouTubeUrl} from "utils/cloudinary"
+import {expect, test} from "vitest"
 
 test("creates internal image url", () => {
     const url = createImageUrl("/photo.jpg")

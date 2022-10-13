@@ -2,6 +2,7 @@ import {renderHook} from "@testing-library/react"
 import {AppProvider} from "context"
 import {useApp} from "hooks"
 import {mockAppCtx} from "test-utils/mocks"
+import {expect, test} from "vitest"
 
 const mockAppContext = {
     ...mockAppCtx,
