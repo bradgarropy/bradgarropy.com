@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event"
 import PostSearchBar from "components/PostSearchBar"
 import * as nextRouter from "next/router"
 import {mockPosts, mockPostsFrontmatter} from "test-utils/mocks"
-import {expect, test, vi} from "vitest"
+import {beforeEach, describe, expect, test, vi} from "vitest"
 
 const onSearchMock = vi.fn()
 const mockPlaceholder = "search blog"
