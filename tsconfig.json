@@ -14,7 +14,8 @@
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "strict": false,
-        "target": "es5"
+        "target": "es5",
+        "types": ["@honkhonk/vite-plugin-svgr/client"]
     },
     "exclude": ["node_modules"],
     "include": ["**/*.ts", "**/*.tsx"]

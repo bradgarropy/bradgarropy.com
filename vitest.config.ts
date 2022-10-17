@@ -1,9 +1,10 @@
+import svgr from "@honkhonk/vite-plugin-svgr"
 import react from "@vitejs/plugin-react"
 import tsconfigPaths from "vite-tsconfig-paths"
 import {defineConfig} from "vitest/config"
 
 const config = defineConfig({
-    plugins: [tsconfigPaths(), react()],
+    plugins: [tsconfigPaths(), svgr(), react()],
     test: {
         coverage: {
             provider: "istanbul",

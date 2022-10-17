@@ -1,7 +1,7 @@
 import {useApp} from "hooks"
 import {FC, useEffect} from "react"
-import Moon from "svg/moon.svg"
-import Sun from "svg/sun.svg"
+import Moon from "svg/moon.svg?component"
+import Sun from "svg/sun.svg?component"
 
 import styles from "./ColorTheme.module.css"
 
