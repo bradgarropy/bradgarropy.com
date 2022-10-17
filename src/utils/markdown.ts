@@ -1,3 +1,4 @@
+import {rehypeCloudinaryImageSize} from "@bradgarropy/rehype-cloudinary-image-size"
 import {rehypeImageLinks} from "@bradgarropy/rehype-image-links"
 import remarkEmbedder from "@remark-embedder/core"
 import {remarkPlugin as remarkVscode} from "gatsby-remark-vscode"
@@ -20,7 +21,6 @@ import {
 } from "transformers"
 import {Markdown} from "types/markdown"
 import {unified} from "unified"
-import {rehypeCloudinaryImageSize} from "utils/rehype"
 
 const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
     const nowPath = path.join(process.cwd(), `content/pages/${slug}.md`)
