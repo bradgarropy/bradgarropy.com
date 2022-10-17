@@ -43,6 +43,7 @@ const Newsletter: FC = () => {
                 <button
                     className={ButtonStyles.button}
                     type="submit"
+                    onClick={onSubmit}
                     disabled={subscribed}
                 >
                     {subscribed ? "💜 subscribed" : "📧 subscribe"}
