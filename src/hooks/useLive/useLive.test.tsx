@@ -1,17 +1,21 @@
-import {renderHook, waitFor} from "@testing-library/react"
+import {act, renderHook, waitFor} from "@testing-library/react"
 import {useLive} from "hooks"
-import {getChannelStatus} from "utils/api/twitch"
+import * as twitch from "utils/api/twitch"
 import {expect, test, vi} from "vitest"
 
-vi.mock("utils/api/twitch")
 vi.useFakeTimers()
+vi.stubGlobal("clearInterval", vi.fn())
 
-const mockGetChannelStatus = vi.mocked(getChannelStatus)
+const mockGetChannelStatus = vi.spyOn(twitch, "getChannelStatus")
 
 test("returns online status", async () => {
     mockGetChannelStatus.mockResolvedValue(true)
 
     const {result} = renderHook(() => useLive())
+
+    await act(() => {
+        vi.advanceTimersToNextTimer()
+    })
 
     await waitFor(() => {
         expect(result.current).toEqual(true)
@@ -34,11 +38,14 @@ test("polls for changes", async () => {
     expect(mockGetChannelStatus).toHaveBeenCalledTimes(2)
 })
 
-test("stops polling", () => {
+test("stops polling", async () => {
     mockGetChannelStatus.mockResolvedValue(false)
 
     const {unmount} = renderHook(() => useLive())
 
     unmount()
-    expect(clearInterval).toHaveBeenCalledTimes(1)
+
+    await waitFor(() => {
+        expect(clearInterval).toHaveBeenCalledTimes(1)
+    })
 })
