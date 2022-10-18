@@ -1,5 +1,4 @@
-import {render, screen} from "@testing-library/react"
-import userEvent from "@testing-library/user-event"
+import {fireEvent, render, screen} from "@testing-library/react"
 import Hamburger from "components/Hamburger"
 import {useApp} from "hooks"
 import {generateAppCtx} from "test-utils/generators"
@@ -15,6 +14,10 @@ mockUseApp.mockReturnValue(mockAppCtx)
 test("opens mobile menu", async () => {
     render(<Hamburger />)
 
-    await userEvent.click(screen.getByLabelText("menu"))
+    fireEvent(
+        screen.getByLabelText("menu"),
+        new MouseEvent("click", {bubbles: true}),
+    )
+
     expect(mockAppCtx.setOpen).toHaveBeenCalledTimes(1)
 })

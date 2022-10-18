@@ -1,5 +1,4 @@
-import {render, screen} from "@testing-library/react"
-import userEvent from "@testing-library/user-event"
+import {fireEvent, render, screen} from "@testing-library/react"
 import MobileNavigation from "components/MobileNavigation"
 import {useApp} from "hooks"
 import {generateAppCtx} from "test-utils/generators"
@@ -27,7 +26,11 @@ describe("closed mobile navigation", () => {
     test("opens navigation", async () => {
         render(<MobileNavigation />)
 
-        await userEvent.click(screen.getByLabelText("menu"))
+        fireEvent(
+            screen.getByLabelText("menu"),
+            new MouseEvent("click", {bubbles: true}),
+        )
+
         expect(mockAppCtxClosed.setOpen).toHaveBeenCalledTimes(1)
         expect(mockAppCtxClosed.setOpen).toHaveBeenCalledWith(true)
     })
@@ -48,7 +51,11 @@ describe("open mobile navigation", () => {
     test("closes navigation", async () => {
         render(<MobileNavigation />)
 
-        await userEvent.click(screen.getByLabelText("close"))
+        fireEvent(
+            screen.getByLabelText("close"),
+            new MouseEvent("click", {bubbles: true}),
+        )
+
         expect(mockAppCtxOpen.setOpen).toHaveBeenCalledTimes(1)
         expect(mockAppCtxOpen.setOpen).toHaveBeenCalledWith(false)
     })
