@@ -8,7 +8,7 @@ const config = defineConfig({
     test: {
         coverage: {
             provider: "istanbul",
-            reporter: ["text"],
+            reporter: ["text", "json"],
         },
         css: {
             modules: {
