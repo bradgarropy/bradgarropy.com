@@ -1,16 +1,27 @@
 import {render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import PostSearchBar from "components/PostSearchBar"
-import * as nextRouter from "next/router"
+import {useRouter} from "next/router"
 import {mockPosts, mockPostsFrontmatter} from "test-utils/mocks"
 import {beforeEach, describe, expect, test, vi} from "vitest"
 
 const onSearchMock = vi.fn()
 const mockPlaceholder = "search blog"
 const mockQuery = "fourth"
-
-const mockUseRouter = vi.spyOn(nextRouter, "useRouter")
 const mockPush = vi.fn()
+
+vi.mock("next/router", async () => {
+    const nextRouter = await vi.importActual<typeof import("next/router")>(
+        "next/router",
+    )
+
+    return {
+        ...nextRouter,
+        useRouter: vi.fn(),
+    }
+})
+
+const mockUseRouter = vi.mocked(useRouter)
 
 describe("search bar", () => {
     beforeEach(() => {
