@@ -8,7 +8,7 @@ vi.mock("hooks/useLive")
 const mockUseLive = useLive as Mock
 mockUseLive.mockReturnValue(false)
 
-test("shows content", () => {
+test.concurrent("shows content", () => {
     render(
         <Layout>
             <p>testing</p>

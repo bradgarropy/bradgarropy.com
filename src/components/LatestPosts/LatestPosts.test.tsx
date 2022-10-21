@@ -3,7 +3,7 @@ import LatestPosts from "components/LatestPosts"
 import {mockPostsFrontmatter} from "test-utils/mocks"
 import {expect, test} from "vitest"
 
-test("shows latest posts", () => {
+test.concurrent("shows latest posts", () => {
     render(<LatestPosts latestPosts={mockPostsFrontmatter} />)
 
     mockPostsFrontmatter.forEach(post => {

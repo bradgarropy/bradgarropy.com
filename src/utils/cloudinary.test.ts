@@ -1,7 +1,7 @@
 import {createImageUrl, createYouTubeUrl} from "utils/cloudinary"
 import {expect, test} from "vitest"
 
-test("creates internal image url", () => {
+test.concurrent("creates internal image url", () => {
     const url = createImageUrl("/photo.jpg")
 
     expect(url).toEqual(
@@ -9,7 +9,7 @@ test("creates internal image url", () => {
     )
 })
 
-test("creates external image url", () => {
+test.concurrent("creates external image url", () => {
     const url = createImageUrl("https://example.com/photo.jpg")
 
     expect(url).toEqual(
@@ -17,13 +17,13 @@ test("creates external image url", () => {
     )
 })
 
-test("throws on invalid url", () => {
+test.concurrent("throws on invalid url", () => {
     expect(() => createImageUrl("file://photo.jpg")).toThrow(
         "Image location is not an internal path or an external url: file://photo.jpg",
     )
 })
 
-test("creates youtube url", () => {
+test.concurrent("creates youtube url", () => {
     const url = createYouTubeUrl("abc123")
 
     expect(url).toEqual(

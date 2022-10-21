@@ -3,7 +3,7 @@ import Contact from "components/Contact"
 import {mockContact} from "test-utils/mocks"
 import {expect, test} from "vitest"
 
-test("shows contact page", () => {
+test.concurrent("shows contact page", () => {
     render(<Contact contact={mockContact} />)
     expect(screen.getByText("contact"))
 })

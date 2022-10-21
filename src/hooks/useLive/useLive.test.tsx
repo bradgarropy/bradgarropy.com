@@ -8,7 +8,7 @@ vi.stubGlobal("clearInterval", vi.fn())
 
 const mockGetChannelStatus = vi.spyOn(twitch, "getChannelStatus")
 
-test("returns online status", async () => {
+test.concurrent("returns online status", async () => {
     mockGetChannelStatus.mockResolvedValue(true)
 
     const {result} = renderHook(() => useLive())
@@ -22,14 +22,14 @@ test("returns online status", async () => {
     })
 })
 
-test("returns offline status", () => {
+test.concurrent("returns offline status", () => {
     mockGetChannelStatus.mockResolvedValue(false)
 
     const {result} = renderHook(() => useLive())
     expect(result.current).toEqual(false)
 })
 
-test("polls for changes", async () => {
+test.concurrent("polls for changes", async () => {
     mockGetChannelStatus.mockResolvedValue(false)
 
     renderHook(() => useLive())
@@ -38,7 +38,7 @@ test("polls for changes", async () => {
     expect(mockGetChannelStatus).toHaveBeenCalledTimes(2)
 })
 
-test("stops polling", async () => {
+test.concurrent("stops polling", async () => {
     mockGetChannelStatus.mockResolvedValue(false)
 
     const {unmount} = renderHook(() => useLive())

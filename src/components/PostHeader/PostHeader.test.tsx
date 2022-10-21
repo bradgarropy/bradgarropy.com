@@ -3,7 +3,7 @@ import PostHeader from "components/PostHeader"
 import {mockPost} from "test-utils/mocks"
 import {expect, test} from "vitest"
 
-test("shows meta", () => {
+test.concurrent("shows meta", () => {
     render(
         <PostHeader
             date={mockPost.frontmatter.date}
@@ -18,7 +18,7 @@ test("shows meta", () => {
     expect(screen.getByText(mockPost.frontmatter.title))
 })
 
-test("links to topic", () => {
+test.concurrent("links to topic", () => {
     render(
         <PostHeader
             date={mockPost.frontmatter.date}

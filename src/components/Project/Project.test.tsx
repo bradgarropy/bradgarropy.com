@@ -3,7 +3,7 @@ import Project from "components/Project"
 import {mockProjects} from "test-utils/mocks"
 import {expect, test} from "vitest"
 
-test("shows project", () => {
+test.concurrent("shows project", () => {
     render(<Project project={mockProjects[0]} />)
 
     expect(screen.getByText(mockProjects[0].name))

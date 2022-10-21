@@ -18,12 +18,12 @@ describe("closed mobile navigation", () => {
         mockUseApp.mockReturnValue(mockAppCtxClosed)
     })
 
-    test("shows hamburger", () => {
+    test.concurrent("shows hamburger", () => {
         render(<MobileNavigation />)
         expect(screen.getByLabelText("menu"))
     })
 
-    test("opens navigation", async () => {
+    test.concurrent("opens navigation", async () => {
         render(<MobileNavigation />)
 
         fireEvent(
@@ -41,14 +41,14 @@ describe("open mobile navigation", () => {
         mockUseApp.mockReturnValue(mockAppCtxOpen)
     })
 
-    test("shows menu", () => {
+    test.concurrent("shows menu", () => {
         render(<MobileNavigation />)
 
         expect(screen.getByLabelText("close"))
         links.forEach(link => expect(screen.getByText(link)))
     })
 
-    test("closes navigation", async () => {
+    test.concurrent("closes navigation", async () => {
         render(<MobileNavigation />)
 
         fireEvent(

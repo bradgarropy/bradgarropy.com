@@ -3,7 +3,7 @@ import ProjectTech from "components/ProjectTech"
 import {mockProjects} from "test-utils/mocks"
 import {expect, test} from "vitest"
 
-test("shows technologies", () => {
+test.concurrent("shows technologies", () => {
     render(<ProjectTech project={mockProjects[0]} />)
 
     expect(screen.getByLabelText("gatsby"))

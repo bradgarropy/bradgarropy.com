@@ -17,7 +17,7 @@ mockFetch.mockResolvedValue({
     json: () => Promise.resolve({output: {width: 100, height: 100}}),
 })
 
-test("gets markdown by slug", async () => {
+test.concurrent("gets markdown by slug", async () => {
     const mockMatter = matter.read as Mock
     mockMatter.mockReturnValue({data: {}, content: "This is the uses page."})
 
@@ -30,12 +30,12 @@ test("gets markdown by slug", async () => {
 })
 
 describe("transforms markdown", () => {
-    test("supports gfm", async () => {
+    test.concurrent("supports gfm", async () => {
         const html = await transformMarkdown("~~nope~~")
         expect(html).toEqual("<p><del>nope</del></p>")
     })
 
-    test("unwraps images", async () => {
+    test.concurrent("unwraps images", async () => {
         const html = await transformMarkdown(
             "![brad garropy](https://bradgarropy.com/profile.jpg)",
         )
@@ -46,7 +46,7 @@ describe("transforms markdown", () => {
         )
     })
 
-    test("adds dimensions to cloudinary images", async () => {
+    test.concurrent("adds dimensions to cloudinary images", async () => {
         let html
 
         html = await transformMarkdown(
@@ -68,7 +68,7 @@ describe("transforms markdown", () => {
         )
     })
 
-    test("does not add dimensions to other images", async () => {
+    test.concurrent("does not add dimensions to other images", async () => {
         const html = await transformMarkdown(
             "![brad garropy](https://bradgarropy.com/profile.jpg)",
         )
@@ -79,7 +79,7 @@ describe("transforms markdown", () => {
         )
     })
 
-    test("embeds codesandbox", async () => {
+    test.concurrent("embeds codesandbox", async () => {
         const html = await transformMarkdown(
             "https://codesandbox.io/s/exciting-pascal-j5hwu",
         )
@@ -99,7 +99,7 @@ describe("transforms markdown", () => {
         )
     })
 
-    test("embeds twitch", async () => {
+    test.concurrent("embeds twitch", async () => {
         const html = await transformMarkdown("https://twitch.tv/bradgarropy")
 
         expect(html).toEqual(
@@ -120,7 +120,7 @@ describe("transforms markdown", () => {
         )
     })
 
-    test("embeds twitter", async () => {
+    test.concurrent("embeds twitter", async () => {
         const html = await transformMarkdown(
             "https://twitter.com/bradgarropy/status/1458449938157801490",
         )
@@ -141,7 +141,7 @@ describe("transforms markdown", () => {
         )
     })
 
-    test("embeds youtube", async () => {
+    test.concurrent("embeds youtube", async () => {
         const html = await transformMarkdown("https://youtu.be/9zcU6oUOHVc")
 
         // eslint-disable-next-line quotes
@@ -163,7 +163,7 @@ describe("transforms markdown", () => {
         )
     })
 
-    test("opens external links in new tabs", async () => {
+    test.concurrent("opens external links in new tabs", async () => {
         const html = await transformMarkdown(
             "This is an [external link](https://example.com).",
         )

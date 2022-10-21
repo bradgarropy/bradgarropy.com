@@ -26,7 +26,7 @@ vi.mock("gatsby-remark-vscode", () => {
     }
 })
 
-test("gets all nows", () => {
+test.concurrent("gets all nows", () => {
     const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockNowPaths)
 
@@ -34,7 +34,7 @@ test("gets all nows", () => {
     expect(nows).toEqual(["2020-12-30", "2020-12-31", "2021-01-01"])
 })
 
-test("gets now by slug", async () => {
+test.concurrent("gets now by slug", async () => {
     const mockMatterRead = matter.read as Mock
     mockMatterRead.mockReturnValue(mockNowsResponse[1])
 
@@ -42,7 +42,7 @@ test("gets now by slug", async () => {
     expect(now).toEqual(mockNow)
 })
 
-test("gets latest now", async () => {
+test.concurrent("gets latest now", async () => {
     const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockNowPaths)
 
@@ -53,7 +53,7 @@ test("gets latest now", async () => {
     expect(now).toEqual(mockNows[0])
 })
 
-test("gets newer now", async () => {
+test.concurrent("gets newer now", async () => {
     const mockReadDirSync = readdirSync as Mock
     const mockMatterRead = matter.read as Mock
 
@@ -70,7 +70,7 @@ test("gets newer now", async () => {
     expect(emptyNow).toBeNull()
 })
 
-test("gets older now", async () => {
+test.concurrent("gets older now", async () => {
     const mockReadDirSync = readdirSync as Mock
     const mockMatterRead = matter.read as Mock
 

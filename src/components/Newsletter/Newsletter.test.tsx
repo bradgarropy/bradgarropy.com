@@ -6,7 +6,7 @@ import {expect, test, vi} from "vitest"
 
 vi.mock("@bradgarropy/http")
 
-test("shows newsletter", () => {
+test.concurrent("shows newsletter", () => {
     render(<Newsletter />)
 
     expect(screen.getByText("💻 side projects", {exact: false}))
@@ -17,7 +17,7 @@ test("shows newsletter", () => {
     expect(screen.getByText("📧 subscribe"))
 })
 
-test("subscribes", async () => {
+test.concurrent("subscribes", async () => {
     render(<Newsletter />)
 
     const form = screen.getByPlaceholderText("email@example.com")

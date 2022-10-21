@@ -3,7 +3,7 @@ import Testimonials from "components/Testimonials"
 import {mockTestimonials} from "test-utils/mocks"
 import {expect, test} from "vitest"
 
-test("shows name", () => {
+test.concurrent("shows name", () => {
     render(<Testimonials testimonials={mockTestimonials} />)
 
     mockTestimonials.forEach(testimonial => [

@@ -3,7 +3,7 @@ import Uses from "components/Uses"
 import {mockUses} from "test-utils/mocks"
 import {expect, test} from "vitest"
 
-test("shows uses", () => {
+test.concurrent("shows uses", () => {
     render(<Uses uses={mockUses} />)
 
     expect(screen.getByText("💠 uses"))

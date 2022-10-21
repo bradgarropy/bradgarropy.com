@@ -9,7 +9,7 @@ vi.mock("hooks")
 const mockUseMeta = useMeta as Mock
 mockUseMeta.mockReturnValue(mockMeta)
 
-test("shows comment button", () => {
+test.concurrent("shows comment button", () => {
     render(<PostComments slug={"my-test-post"} />)
 
     expect(screen.getByText("💬 discuss on twitter")).toHaveAttribute(

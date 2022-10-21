@@ -1,19 +1,19 @@
 import {youtubeTransformer} from "transformers/youtube"
 import {expect, test} from "vitest"
 
-test("detects youtube links", () => {
+test.concurrent("detects youtube links", () => {
     expect(
         youtubeTransformer.shouldTransform("https://youtu.be/9zcU6oUOHVc"),
     ).toBeTruthy()
 })
 
-test("ignores non-youtube links", () => {
+test.concurrent("ignores non-youtube links", () => {
     expect(
         youtubeTransformer.shouldTransform("https://example.com"),
     ).toBeFalsy()
 })
 
-test("transforms youtube links", () => {
+test.concurrent("transforms youtube links", () => {
     const html = youtubeTransformer.getHTML("https://youtu.be/9zcU6oUOHVc")
 
     expect(html).toEqual(`
@@ -30,7 +30,7 @@ test("transforms youtube links", () => {
     `)
 })
 
-test("transforms youtube links with start", () => {
+test.concurrent("transforms youtube links with start", () => {
     const html = youtubeTransformer.getHTML("https://youtu.be/9zcU6oUOHVc?t=3")
 
     expect(html).toEqual(`

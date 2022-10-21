@@ -3,7 +3,7 @@ import Home from "components/Home"
 import {mockPostsFrontmatter, mockProjects, mockVideos} from "test-utils/mocks"
 import {expect, test} from "vitest"
 
-test("shows home page", () => {
+test.concurrent("shows home page", () => {
     render(
         <Home
             latestPosts={mockPostsFrontmatter}

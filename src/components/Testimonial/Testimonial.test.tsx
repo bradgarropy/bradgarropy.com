@@ -3,22 +3,22 @@ import Testimonial from "components/Testimonial"
 import {mockTestimonial} from "test-utils/mocks"
 import {expect, test} from "vitest"
 
-test("shows name", () => {
+test.concurrent("shows name", () => {
     render(<Testimonial testimonial={mockTestimonial} />)
     expect(screen.getByText(mockTestimonial.frontmatter.name))
 })
 
-test("shows photo", () => {
+test.concurrent("shows photo", () => {
     render(<Testimonial testimonial={mockTestimonial} />)
     expect(screen.getByAltText(mockTestimonial.frontmatter.name))
 })
 
-test("shows testimonial", () => {
+test.concurrent("shows testimonial", () => {
     render(<Testimonial testimonial={mockTestimonial} />)
     expect(screen.getByText("First test review."))
 })
 
-test("links to profile", () => {
+test.concurrent("links to profile", () => {
     render(<Testimonial testimonial={mockTestimonial} />)
 
     expect(

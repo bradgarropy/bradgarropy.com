@@ -4,7 +4,7 @@ import {expect, test} from "vitest"
 
 const links = ["blog", "now", "uses", "hire me", "contact"]
 
-test("shows links", () => {
+test.concurrent("shows links", () => {
     render(<Navigation />)
 
     links.forEach(link => expect(screen.getByText(link)))

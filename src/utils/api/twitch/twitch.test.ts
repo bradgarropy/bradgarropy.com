@@ -8,7 +8,7 @@ vi.mock("@bradgarropy/http")
 const mockGet = http.get as Mock
 mockGet.mockReturnValue(mockChannelStatus)
 
-test("gets channel status", async () => {
+test.concurrent("gets channel status", async () => {
     const isLive = await getChannelStatus()
     expect(isLive).toEqual(true)
 })

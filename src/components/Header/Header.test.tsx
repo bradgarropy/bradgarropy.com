@@ -17,19 +17,19 @@ mockUseApp.mockReturnValue(mockAppCtx)
 describe("streaming", () => {
     mockUseLive.mockReturnValue(true)
 
-    test("shows logo", () => {
+    test.concurrent("shows logo", () => {
         render(<Header />)
         expect(screen.getByLabelText("bg"))
     })
 
-    test("shows streaming", () => {
+    test.concurrent("shows streaming", () => {
         render(<Header />)
         expect(screen.getByText("🎥 streaming"))
     })
 })
 
 describe("not streaming", () => {
-    test("does not show streaming", () => {
+    test.concurrent("does not show streaming", () => {
         mockUseLive.mockReturnValue(false)
 
         render(<Header />)

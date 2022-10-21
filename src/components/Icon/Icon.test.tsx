@@ -3,14 +3,14 @@ import Icon from "components/Icon"
 import {technologies} from "utils"
 import {expect, test} from "vitest"
 
-test("shows icons", () => {
+test.concurrent("shows icons", () => {
     technologies.forEach(technology => {
         render(<Icon name={technology} />)
         expect(screen.getByLabelText(technology))
     })
 })
 
-test("shows default", () => {
+test.concurrent("shows default", () => {
     render(<Icon name="test" />)
     expect(screen.queryByLabelText("text")).toBeNull()
 })

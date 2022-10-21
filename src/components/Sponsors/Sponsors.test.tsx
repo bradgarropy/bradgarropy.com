@@ -3,7 +3,7 @@ import Sponsors from "components/Sponsors"
 import {mockSponsors} from "test-utils/mocks"
 import {expect, test} from "vitest"
 
-test("shows sponsors page", () => {
+test.concurrent("shows sponsors page", () => {
     render(<Sponsors sponsors={mockSponsors} />)
     expect(screen.getByText("💜 thank you"))
 
@@ -12,7 +12,7 @@ test("shows sponsors page", () => {
     })
 })
 
-test("shows sponsor tier", () => {
+test.concurrent("shows sponsor tier", () => {
     render(<Sponsors sponsors={mockSponsors} />)
 
     Object.entries(mockSponsors).forEach(([tier, sponsors]) => {
@@ -26,7 +26,7 @@ test("shows sponsor tier", () => {
     })
 })
 
-test("shows empty sponsor tier", () => {
+test.concurrent("shows empty sponsor tier", () => {
     mockSponsors["one-time"] = []
 
     render(<Sponsors sponsors={mockSponsors} />)
