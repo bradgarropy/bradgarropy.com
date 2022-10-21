@@ -10,7 +10,7 @@ const mockAppContext = {
     setTheme: expect.any(Function),
 }
 
-test.concurrent("returns app context", () => {
+test("returns app context", () => {
     const wrapper = ({children}) => <AppProvider>{children}</AppProvider>
     const {result} = renderHook(() => useApp(), {wrapper})
 

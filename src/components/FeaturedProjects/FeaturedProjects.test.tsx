@@ -3,7 +3,7 @@ import FeaturedProjects from "components/FeaturedProjects"
 import {mockProjects} from "test-utils/mocks"
 import {expect, test} from "vitest"
 
-test.concurrent("shows featured projects", () => {
+test("shows featured projects", () => {
     render(<FeaturedProjects featuredProjects={mockProjects} />)
 
     mockProjects.forEach(project => {

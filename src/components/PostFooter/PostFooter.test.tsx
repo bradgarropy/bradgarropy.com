@@ -9,12 +9,12 @@ vi.mock("hooks")
 const mockUseMeta = useMeta as Mock
 mockUseMeta.mockReturnValue(mockMeta)
 
-test.concurrent("shows comment button", () => {
+test("shows comment button", () => {
     render(<PostFooter slug={"my-test-post"} />)
     expect(screen.getByText("💬 discuss on twitter"))
 })
 
-test.concurrent("shows edit button", () => {
+test("shows edit button", () => {
     render(<PostFooter slug={"my-test-post"} />)
     expect(screen.getByText("💻 edit on github"))
 })

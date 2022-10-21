@@ -3,6 +3,6 @@ import {test} from "vitest"
 
 import Logo from "./Logo"
 
-test.concurrent("shows logo", () => {
+test("shows logo", () => {
     render(<Logo />)
 })

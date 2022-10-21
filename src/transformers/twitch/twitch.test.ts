@@ -1,17 +1,17 @@
 import {twitchTransformer} from "transformers/twitch"
 import {expect, test} from "vitest"
 
-test.concurrent("detects twitch links", () => {
+test("detects twitch links", () => {
     expect(
         twitchTransformer.shouldTransform("https://twitch.tv/bradgarropy"),
     ).toBeTruthy()
 })
 
-test.concurrent("ignores non-twitch links", () => {
+test("ignores non-twitch links", () => {
     expect(twitchTransformer.shouldTransform("https://example.com")).toBeFalsy()
 })
 
-test.concurrent("transforms twitch channels", () => {
+test("transforms twitch channels", () => {
     const html = twitchTransformer.getHTML("https://twitch.tv/bradgarropy")
 
     expect(html).toEqual(`
@@ -27,7 +27,7 @@ test.concurrent("transforms twitch channels", () => {
     `)
 })
 
-test.concurrent("transforms twitch videos", () => {
+test("transforms twitch videos", () => {
     const html = twitchTransformer.getHTML(
         "https://twitch.tv/videos/1272889918",
     )
@@ -45,7 +45,7 @@ test.concurrent("transforms twitch videos", () => {
     `)
 })
 
-test.concurrent("transforms twitch clips", () => {
+test("transforms twitch clips", () => {
     const domainHtml = twitchTransformer.getHTML(
         "https://twitch.tv/bradgarropy/clip/ZealousSpeedyStingrayUnSane",
     )

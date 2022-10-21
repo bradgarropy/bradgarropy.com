@@ -5,14 +5,14 @@ import {expect, test} from "vitest"
 const mockTitle = "🧪 My Test Post"
 const mockSlug = "my-test-post"
 
-test.concurrent("shows title", () => {
+test("shows title", () => {
     render(<PostTitle title={mockTitle} />)
 
     expect(screen.getByText(mockTitle))
     expect(screen.getByText(mockTitle)).not.toHaveAttribute("href")
 })
 
-test.concurrent("links to title", () => {
+test("links to title", () => {
     render(<PostTitle title={mockTitle} slug={mockSlug} />)
 
     expect(screen.getByText(mockTitle))

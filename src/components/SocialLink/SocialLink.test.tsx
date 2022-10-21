@@ -2,32 +2,32 @@ import {render, screen} from "@testing-library/react"
 import SocialLink from "components/SocialLink"
 import {expect, test} from "vitest"
 
-test.concurrent("instagram", () => {
+test("instagram", () => {
     render(<SocialLink platform="instagram" />)
     expect(screen.getByLabelText("instagram"))
 })
 
-test.concurrent("github", () => {
+test("github", () => {
     render(<SocialLink platform="github" />)
     expect(screen.getByLabelText("github"))
 })
 
-test.concurrent("twitter", () => {
+test("twitter", () => {
     render(<SocialLink platform="twitter" />)
     expect(screen.getByLabelText("twitter"))
 })
 
-test.concurrent("youtube", () => {
+test("youtube", () => {
     render(<SocialLink platform="youtube" />)
     expect(screen.getByLabelText("youtube"))
 })
 
-test.concurrent("twitch", () => {
+test("twitch", () => {
     render(<SocialLink platform="twitch" />)
     expect(screen.getByLabelText("twitch"))
 })
 
-test.concurrent("discord", () => {
+test("discord", () => {
     render(<SocialLink platform="discord" />)
     expect(screen.getByLabelText("discord"))
 })

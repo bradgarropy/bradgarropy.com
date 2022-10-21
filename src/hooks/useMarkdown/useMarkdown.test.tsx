@@ -4,7 +4,7 @@ import {useMarkdown} from "hooks"
 import {describe, expect, test} from "vitest"
 
 describe("renders links", () => {
-    test.concurrent("local links", () => {
+    test("local links", () => {
         const name = "blog"
 
         const {result} = renderHook(() =>
@@ -17,7 +17,7 @@ describe("renders links", () => {
         expect(link).toHaveAttribute("href", `/${name}`)
     })
 
-    test.concurrent("external links", () => {
+    test("external links", () => {
         const name = "example"
 
         const {result} = renderHook(() =>
@@ -33,7 +33,7 @@ describe("renders links", () => {
     })
 })
 
-test.concurrent("renders images", () => {
+test("renders images", () => {
     const name = "profile"
 
     const {result} = renderHook(() =>
@@ -48,7 +48,7 @@ test.concurrent("renders images", () => {
 })
 
 describe("renders headers", () => {
-    test.concurrent("level one", () => {
+    test("level one", () => {
         const {result} = renderHook(() => useMarkdown("<h1>Heading one</h1>"))
         render(result.current)
 
@@ -60,7 +60,7 @@ describe("renders headers", () => {
         expect(heading).toHaveAttribute("id", "heading-one")
     })
 
-    test.concurrent("level two", () => {
+    test("level two", () => {
         const {result} = renderHook(() => useMarkdown("<h2>Heading two</h2>"))
         render(result.current)
 
@@ -72,7 +72,7 @@ describe("renders headers", () => {
         expect(heading).toHaveAttribute("id", "heading-two")
     })
 
-    test.concurrent("level three", () => {
+    test("level three", () => {
         const {result} = renderHook(() => useMarkdown("<h3>Heading three</h3>"))
         render(result.current)
 

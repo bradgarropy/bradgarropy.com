@@ -8,7 +8,7 @@ vi.mock("@octokit/graphql")
 const mockOctokit = graphql.defaults as Mock
 mockOctokit.mockReturnValue(() => mockGitHubPinnedResponse)
 
-test.concurrent("gets featured projects", async () => {
+test("gets featured projects", async () => {
     const projects = await getFeaturedProjects()
     expect(projects).toEqual(mockProjects)
 })

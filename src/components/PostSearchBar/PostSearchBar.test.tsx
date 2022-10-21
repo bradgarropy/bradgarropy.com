@@ -56,11 +56,11 @@ describe("search bar", () => {
         )
     })
 
-    test.concurrent("shows search bar", () => {
+    test("shows search bar", () => {
         expect(screen.getByPlaceholderText(mockPlaceholder))
     })
 
-    test.concurrent("searches", async () => {
+    test("searches", async () => {
         await userEvent.type(
             screen.getByPlaceholderText(mockPlaceholder),
             mockQuery,
@@ -123,7 +123,7 @@ describe("search bar with input", () => {
         )
     })
 
-    test.concurrent("shows search bar with input", () => {
+    test("shows search bar with input", () => {
         expect(screen.getByPlaceholderText(mockPlaceholder)).toHaveDisplayValue(
             mockQuery,
         )

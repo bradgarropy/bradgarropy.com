@@ -11,7 +11,7 @@ const labels = [
     "discord",
 ]
 
-test.concurrent("shows social links", () => {
+test("shows social links", () => {
     render(<Footer />)
     labels.forEach(label => expect(screen.getByLabelText(label)))
 })

@@ -3,7 +3,7 @@ import PostList from "components/PostList"
 import {mockPostsFrontmatter} from "test-utils/mocks"
 import {expect, test} from "vitest"
 
-test.concurrent("shows posts", () => {
+test("shows posts", () => {
     render(<PostList posts={mockPostsFrontmatter} />)
 
     mockPostsFrontmatter.forEach(post => {
@@ -11,7 +11,7 @@ test.concurrent("shows posts", () => {
     })
 })
 
-test.concurrent("shows no posts", () => {
+test("shows no posts", () => {
     render(<PostList posts={[]} />)
     expect(screen.getByText("no posts found"))
 })

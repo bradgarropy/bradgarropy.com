@@ -25,7 +25,7 @@ mockMatterRead
     .mockReturnValueOnce(mockTestimonialsResponse[0])
     .mockReturnValueOnce(mockTestimonialsResponse[1])
 
-test.concurrent("gets testimonials", async () => {
+test("gets testimonials", async () => {
     const testimonials = await getTestimonials()
     expect(testimonials).toEqual(mockTestimonials)
 })

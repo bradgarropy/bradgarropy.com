@@ -30,7 +30,7 @@ vi.mock("gatsby-remark-vscode", () => {
     }
 })
 
-test.concurrent("gets latest posts", () => {
+test("gets latest posts", () => {
     const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockPostsPaths)
 
@@ -45,7 +45,7 @@ test.concurrent("gets latest posts", () => {
     expect(posts).toEqual(mockSortedPostsFrontmatter.slice(0, 3))
 })
 
-test.concurrent("gets all posts", () => {
+test("gets all posts", () => {
     const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockPostsPaths)
 
@@ -60,7 +60,7 @@ test.concurrent("gets all posts", () => {
     expect(posts).toEqual(mockSortedPostsFrontmatter)
 })
 
-test.concurrent("gets post by slug", async () => {
+test("gets post by slug", async () => {
     const mockMatterRead = matter.read as Mock
     mockMatterRead.mockReturnValue(mockPostsResponse[0])
 
@@ -68,7 +68,7 @@ test.concurrent("gets post by slug", async () => {
     expect(post).toEqual(mockPost)
 })
 
-test.concurrent("gets topic", () => {
+test("gets topic", () => {
     const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockPostsPaths)
 
@@ -83,7 +83,7 @@ test.concurrent("gets topic", () => {
     expect(topic).toEqual(mockTopic)
 })
 
-test.concurrent("gets topics", () => {
+test("gets topics", () => {
     const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockPostsPaths)
 
@@ -98,7 +98,7 @@ test.concurrent("gets topics", () => {
     expect(topics).toEqual(mockTopics)
 })
 
-test.concurrent("gets posts by topic", () => {
+test("gets posts by topic", () => {
     const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockPostsPaths)
 
@@ -113,7 +113,7 @@ test.concurrent("gets posts by topic", () => {
     expect(post).toEqual([mockPostFrontmatter])
 })
 
-test.concurrent("sorts posts by date", () => {
+test("sorts posts by date", () => {
     const unsortedPosts = [
         mockPostsFrontmatter[1],
         mockPostsFrontmatter[0],

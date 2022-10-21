@@ -1,7 +1,7 @@
 import {codesandboxTransformer} from "transformers/codesandbox"
 import {expect, test} from "vitest"
 
-test.concurrent("detects codesandbox links", () => {
+test("detects codesandbox links", () => {
     expect(
         codesandboxTransformer.shouldTransform(
             "https://codesandbox.io/s/exciting-pascal-j5hwu",
@@ -9,13 +9,13 @@ test.concurrent("detects codesandbox links", () => {
     ).toBeTruthy()
 })
 
-test.concurrent("ignores non-codesandbox links", () => {
+test("ignores non-codesandbox links", () => {
     expect(
         codesandboxTransformer.shouldTransform("https://example.com"),
     ).toBeFalsy()
 })
 
-test.concurrent("transforms codesandbox links", () => {
+test("transforms codesandbox links", () => {
     const html = codesandboxTransformer.getHTML(
         "https://codesandbox.io/s/exciting-pascal-j5hwu",
     )

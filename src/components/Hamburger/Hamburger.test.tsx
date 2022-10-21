@@ -11,7 +11,7 @@ vi.mock("hooks")
 const mockUseApp = useApp as Mock
 mockUseApp.mockReturnValue(mockAppCtx)
 
-test.concurrent("opens mobile menu", async () => {
+test("opens mobile menu", async () => {
     render(<Hamburger />)
 
     fireEvent(

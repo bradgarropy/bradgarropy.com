@@ -2,7 +2,7 @@ import {render, screen} from "@testing-library/react"
 import Hero from "components/Hero"
 import {expect, test} from "vitest"
 
-test.concurrent("shows hero", () => {
+test("shows hero", () => {
     render(<Hero />)
 
     const heroImage = screen.getByAltText("bg")

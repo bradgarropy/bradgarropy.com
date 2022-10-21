@@ -9,7 +9,7 @@ vi.mock("hooks/useMeta")
 const mockUseMeta = useMeta as Mock
 mockUseMeta.mockReturnValue(mockMeta)
 
-test.concurrent("shows post header", () => {
+test("shows post header", () => {
     render(<Post post={mockPost} />)
 
     expect(screen.getByText("January 1, 2021", {exact: false}))
@@ -17,12 +17,12 @@ test.concurrent("shows post header", () => {
     expect(screen.getByText(mockPost.frontmatter.title))
 })
 
-test.concurrent("shows post body", () => {
+test("shows post body", () => {
     render(<Post post={mockPost} />)
     expect(screen.getByText("This is the first test post."))
 })
 
-test.concurrent("shows post footer", () => {
+test("shows post footer", () => {
     render(<Post post={mockPost} />)
     expect(screen.getByText("💬 discuss on twitter"))
     expect(screen.getByText("💻 edit on github"))

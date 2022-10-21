@@ -2,7 +2,7 @@ import {render, screen} from "@testing-library/react"
 import Podcast from "components/Podcast"
 import {expect, test} from "vitest"
 
-test.concurrent("shows podcast", () => {
+test("shows podcast", () => {
     render(<Podcast />)
 
     const podcastCover = screen.getByAltText("Web Dev Weekly")

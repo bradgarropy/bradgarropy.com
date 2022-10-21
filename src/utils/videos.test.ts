@@ -8,7 +8,7 @@ vi.mock("@bradgarropy/http")
 const mockGet = http.get as Mock
 mockGet.mockResolvedValue(mockYoutubeResponse)
 
-test.concurrent("gets latest videos", async () => {
+test("gets latest videos", async () => {
     const latestVideos = await getLatestVideos()
     expect(latestVideos).toEqual(mockVideos)
 })

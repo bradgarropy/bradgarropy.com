@@ -3,7 +3,7 @@ import LatestVideos from "components/LatestVideos"
 import {mockVideos} from "test-utils/mocks"
 import {expect, test} from "vitest"
 
-test.concurrent("shows latest videos", () => {
+test("shows latest videos", () => {
     render(<LatestVideos latestVideos={mockVideos} />)
 
     mockVideos.forEach(video => {

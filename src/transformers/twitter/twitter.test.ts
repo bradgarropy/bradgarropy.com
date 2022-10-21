@@ -1,7 +1,7 @@
 import {twitterTransformer} from "transformers/twitter"
 import {expect, test} from "vitest"
 
-test.concurrent("detects twitter links", () => {
+test("detects twitter links", () => {
     expect(
         twitterTransformer.shouldTransform(
             "https://twitter.com/bradgarropy/status/1458449938157801490",
@@ -9,13 +9,13 @@ test.concurrent("detects twitter links", () => {
     ).toBeTruthy()
 })
 
-test.concurrent("ignores non-twitter links", () => {
+test("ignores non-twitter links", () => {
     expect(
         twitterTransformer.shouldTransform("https://example.com"),
     ).toBeFalsy()
 })
 
-test.concurrent("transforms twitter links", async () => {
+test("transforms twitter links", async () => {
     const html = await twitterTransformer.getHTML(
         "https://twitter.com/bradgarropy/status/1458449938157801490",
     )

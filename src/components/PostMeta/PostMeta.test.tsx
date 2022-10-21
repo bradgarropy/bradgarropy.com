@@ -3,7 +3,7 @@ import PostMeta from "components/PostMeta"
 import {mockPost} from "test-utils/mocks"
 import {expect, test} from "vitest"
 
-test.concurrent("shows meta", () => {
+test("shows meta", () => {
     render(
         <PostMeta
             date={mockPost.frontmatter.date}
@@ -15,7 +15,7 @@ test.concurrent("shows meta", () => {
     expect(screen.getByText(`#${mockPost.frontmatter.topic}`))
 })
 
-test.concurrent("links to topic", () => {
+test("links to topic", () => {
     render(
         <PostMeta
             date={mockPost.frontmatter.date}

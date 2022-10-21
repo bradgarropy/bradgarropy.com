@@ -3,7 +3,7 @@ import Now from "components/Now"
 import {mockNewerNow, mockNow, mockOlderNow} from "test-utils/mocks"
 import {expect, test} from "vitest"
 
-test.concurrent("shows now", () => {
+test("shows now", () => {
     render(<Now now={mockNow} newer={mockNewerNow} older={mockOlderNow} />)
 
     expect(screen.getByText("🧭 now"))
@@ -13,7 +13,7 @@ test.concurrent("shows now", () => {
     expect(screen.getByText("nownownow"))
 })
 
-test.concurrent("navigates nows", () => {
+test("navigates nows", () => {
     render(<Now now={mockNow} newer={mockNewerNow} older={mockOlderNow} />)
 
     expect(screen.getByText("👈🏼 newer")).not.toHaveClass("disabled")
@@ -29,7 +29,7 @@ test.concurrent("navigates nows", () => {
     )
 })
 
-test.concurrent("disables nows", () => {
+test("disables nows", () => {
     render(<Now now={mockNow} newer={undefined} older={undefined} />)
 
     expect(screen.getByText("👈🏼 newer")).toHaveClass("disabled")

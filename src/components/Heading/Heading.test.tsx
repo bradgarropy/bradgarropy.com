@@ -2,7 +2,7 @@ import {render, screen} from "@testing-library/react"
 import Heading from "components/Heading"
 import {expect, test} from "vitest"
 
-test.concurrent("shows level one", () => {
+test("shows level one", () => {
     const {container} = render(<Heading level={1}>Heading one</Heading>)
 
     expect(container.querySelector("h1"))
@@ -14,7 +14,7 @@ test.concurrent("shows level one", () => {
     )
 })
 
-test.concurrent("shows level two", () => {
+test("shows level two", () => {
     const {container} = render(<Heading level={2}>Heading two</Heading>)
 
     expect(container.querySelector("h2"))
@@ -26,7 +26,7 @@ test.concurrent("shows level two", () => {
     )
 })
 
-test.concurrent("shows level three", () => {
+test("shows level three", () => {
     const {container} = render(<Heading level={3}>Heading three</Heading>)
 
     expect(container.querySelector("h3"))
@@ -42,7 +42,7 @@ test.concurrent("shows level three", () => {
     )
 })
 
-test.concurrent("overrides id", () => {
+test("overrides id", () => {
     render(
         <Heading level={1} id="custom">
             Heading one

@@ -12,7 +12,7 @@ vi.mock("hooks")
 
 const mockUseApp = useApp as Mock
 
-test.concurrent("toggles dark mode", async () => {
+test("toggles dark mode", async () => {
     mockUseApp.mockReturnValue(mockAppCtxLight)
 
     render(<ColorTheme />)
@@ -22,7 +22,7 @@ test.concurrent("toggles dark mode", async () => {
     expect(mockAppCtxLight.setTheme).toHaveBeenCalledWith("dark")
 })
 
-test.concurrent("toggles light mode", async () => {
+test("toggles light mode", async () => {
     mockUseApp.mockReturnValue(mockAppCtxDark)
 
     render(<ColorTheme />)
