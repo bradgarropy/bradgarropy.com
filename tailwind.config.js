@@ -4,6 +4,9 @@ const config = {
     content: ["src/pages/**/*.tsx", "src/components/**/*.tsx"],
     theme: {
         extend: {},
+        fontFamily: {
+            display: ["Righteous", "cursive"],
+        },
     },
     plugins: [],
 }
