@@ -7,14 +7,12 @@ import Streaming from "components/Streaming"
 import {useLive} from "hooks"
 import {FC} from "react"
 
-import styles from "./Header.module.css"
-
 const Header: FC = () => {
     const live = useLive()
 
     return (
-        <header className={styles.header}>
-            <div className={styles.left}>
+        <header className="grid grid-flow-col justify-between items-center p-5">
+            <div className="grid grid-flow-col gap-x-8 items-center">
                 <Link to="/" aria-label="bg">
                     <Logo />
                 </Link>
@@ -22,7 +20,7 @@ const Header: FC = () => {
                 {live && <Streaming />}
             </div>
 
-            <div className={styles.right}>
+            <div className="grid grid-flow-col gap-x-8 items-center">
                 <Navigation />
                 <MobileNavigation />
                 <ColorTheme />
