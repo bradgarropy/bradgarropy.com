@@ -1,11 +1,9 @@
 import SocialLink from "components/SocialLink"
 import {FC} from "react"
 
-import styles from "./Footer.module.css"
-
 const Footer: FC = () => {
     return (
-        <footer className={styles.footer}>
+        <footer className="grid grid-flow-col justify-center content-center gap-5 pt-12 pb-20">
             <SocialLink platform="twitch" />
             <SocialLink platform="github" />
             <SocialLink platform="youtube" />
