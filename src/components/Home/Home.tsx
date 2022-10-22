@@ -10,8 +10,6 @@ import {PostFrontmatter} from "types/post"
 import {Project} from "types/project"
 import {Video} from "types/video"
 
-import styles from "./Home.module.css"
-
 type HomeProps = {
     latestPosts: PostFrontmatter[]
     latestVideos: Video[]
@@ -20,7 +18,7 @@ type HomeProps = {
 
 const Home: FC<HomeProps> = ({latestPosts, latestVideos, featuredProjects}) => {
     return (
-        <div className={styles.sections}>
+        <div className="grid gap-y-16 my-16 max-[700px]:m-0">
             <Hero />
 
             <Section title="blog" link="/blog">
