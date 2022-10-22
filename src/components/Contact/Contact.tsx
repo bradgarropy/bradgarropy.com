@@ -14,7 +14,13 @@ const Contact: FC<ContactProps> = ({contact}) => {
     const Markdown = useMarkdown(contact.html)
 
     return (
-        <div className={classnames(LinkStyles.fancy, ContactStyles.contact)}>
+        <div
+            className={classnames(
+                LinkStyles.fancy,
+                ContactStyles.contact,
+                "place-self-center",
+            )}
+        >
             <h1>👋🏼 say hi</h1>
             {Markdown}
         </div>
