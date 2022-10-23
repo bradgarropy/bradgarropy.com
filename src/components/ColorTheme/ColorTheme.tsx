@@ -3,8 +3,6 @@ import {FC, useEffect} from "react"
 import Moon from "svg/moon.svg"
 import Sun from "svg/sun.svg"
 
-import styles from "./ColorTheme.module.css"
-
 const ColorTheme: FC = () => {
     const {theme, setTheme} = useApp()
     const label = theme === "light" ? "dark" : "light"
@@ -38,7 +36,7 @@ const ColorTheme: FC = () => {
 
     return (
         <button
-            className={styles.themeToggle}
+            className="cursor-pointer border-none bg-transparent p-0 h-6"
             onClick={onClick}
             aria-label={label}
         >
