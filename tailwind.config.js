@@ -3,7 +3,11 @@
 const config = {
     content: ["src/pages/**/*.tsx", "src/components/**/*.tsx"],
     theme: {
-        extend: {},
+        extend: {
+            gridTemplateColumns: {
+                newsletter: "1fr auto",
+            },
+        },
         fontFamily: {
             display: ["Righteous", "cursive"],
         },

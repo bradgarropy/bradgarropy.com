@@ -1,5 +1,4 @@
 import {http} from "@bradgarropy/http"
-import NewsletterStyles from "components/Newsletter/Newsletter.module.css"
 import {FC, useState} from "react"
 import ButtonStyles from "styles/Button.module.css"
 import InputStyles from "styles/Input.module.css"
@@ -26,11 +25,14 @@ const Newsletter: FC = () => {
 
     return (
         <div>
-            <p className={NewsletterStyles.description}>
+            <p className="-mt-12">
                 💻 side projects | 📰 web dev news | ⚡ tech opinions
             </p>
 
-            <form className={NewsletterStyles.newsletter} onSubmit={onSubmit}>
+            <form
+                className="grid grid-cols-newsletter grid-rows-1 gap-x-16 items-baseline max-[600px]:grid-cols-1 max-[600px]:grid-rows-2 max-[600px]:gap-y-4"
+                onSubmit={onSubmit}
+            >
                 <input
                     className={InputStyles.input}
                     placeholder="email@example.com"
