@@ -1,21 +1,3 @@
-.latestVideos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    justify-items: start;
-}
-
-@media (max-width: 700px) {
-    .latestVideos {
-        grid-template-columns: 1fr;
-    }
-}
-
-.thumbnailLink > span {
-    overflow: visible !important;
-    display: block !important;
-}
-
 .thumbnail {
     transition-property: box-shadow;
     transition-duration: var(--transitionDuration);

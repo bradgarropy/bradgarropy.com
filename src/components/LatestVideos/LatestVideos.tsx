@@ -11,7 +11,7 @@ type LatestVideosProps = {
 
 const LatestVideos: FC<LatestVideosProps> = ({latestVideos}) => {
     return (
-        <div className={LatestVideosStyles.latestVideos}>
+        <div className="grid grid-cols-2 gap-4 justify-items-start max-[700px]:grid-cols-1">
             {latestVideos.map(latestVideo => {
                 return (
                     <Link
