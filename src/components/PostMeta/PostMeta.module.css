@@ -1,8 +1,3 @@
-.postMeta > p {
-    margin: 0rem;
-    text-transform: lowercase;
-}
-
 .postMeta a {
     transition-property: color;
     transition-duration: var(--transitionDuration);
