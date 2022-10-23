@@ -5,7 +5,7 @@ import {createImageUrl} from "utils/cloudinary"
 
 const Podcast: FC = () => {
     return (
-        <div className={PodcastStyles.podcast}>
+        <div className="grid grid-cols-newsletter gap-8 justify-start items-center max-[700px]:grid-cols-1">
             <Link
                 to="https://open.spotify.com/show/3TAuVah0Q9BOV5PbwPDGfs"
                 className={PodcastStyles.podcastLink}
@@ -19,7 +19,7 @@ const Podcast: FC = () => {
                 />
             </Link>
 
-            <div className={PodcastStyles.description}>
+            <div className="grid justify-items-start text-black">
                 <span>a weekly podcast about web development hosted by</span>
 
                 <div className={PodcastStyles.hosts}>
