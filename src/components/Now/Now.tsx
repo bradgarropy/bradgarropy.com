@@ -22,7 +22,7 @@ const Now: FC<NowProps> = ({now, newer, older}) => {
 
     return (
         <>
-            <div className={NowStyles.header}>
+            <div className="flex items-baseline justify-between text-black lowercase">
                 <h1>🧭 now</h1>
                 <span>{formatDate(frontmatter.date)}</span>
             </div>
@@ -37,7 +37,7 @@ const Now: FC<NowProps> = ({now, newer, older}) => {
                 {Markdown}
             </div>
 
-            <div className={NowStyles.footer}>
+            <div className="flex justify-between">
                 <LinkButton
                     to={`/now/${newer?.frontmatter.date}`}
                     disabled={!newer}
@@ -54,7 +54,14 @@ const Now: FC<NowProps> = ({now, newer, older}) => {
                 </LinkButton>
             </div>
 
-            <p className={classnames(LinkStyles.fancy, NowStyles.inspiration)}>
+            <p
+                className={classnames(
+                    LinkStyles.fancy,
+                    "mt-20",
+                    "text-center",
+                    "italic",
+                )}
+            >
                 inspired by{" "}
                 <Link to="https://twitter.com/sivers">derek sivers</Link> and{" "}
                 <Link to="https://nownownow.com/about">nownownow</Link>
