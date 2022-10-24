@@ -13,7 +13,7 @@ const PostTitle: FC<PostTitleProps> = ({title, slug}) => {
             {slug ? (
                 <Link
                     to={`/blog/${slug}`}
-                    className="transition-colors text-black hover:text-purple-400"
+                    className="transition-colors duration-300 text-black hover:text-purple-400"
                 >
                     {title}
                 </Link>
