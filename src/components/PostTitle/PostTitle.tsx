@@ -2,8 +2,6 @@ import Link from "@bradgarropy/next-link"
 import {FC} from "react"
 import {Post} from "types/post"
 
-import PostStyles from "./PostTitle.module.css"
-
 type PostTitleProps = {
     title: Post["frontmatter"]["title"]
     slug?: Post["frontmatter"]["slug"]
@@ -11,9 +9,18 @@ type PostTitleProps = {
 
 const PostTitle: FC<PostTitleProps> = ({title, slug}) => {
     return (
-        <div className={PostStyles.postTitle}>
-            <h1>{slug ? <Link to={`/blog/${slug}`}>{title}</Link> : title}</h1>
-        </div>
+        <h1 className="m-0 text-4xl max-[750px]:text-2xl">
+            {slug ? (
+                <Link
+                    to={`/blog/${slug}`}
+                    className="transition-colors text-black hover:text-purple-400"
+                >
+                    {title}
+                </Link>
+            ) : (
+                title
+            )}
+        </h1>
     )
 }
 
