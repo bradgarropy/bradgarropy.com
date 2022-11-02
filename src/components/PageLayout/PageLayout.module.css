@@ -1,0 +1,7 @@
+.container {
+    min-height: 100vh;
+    padding: 0rem 1.25rem;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
