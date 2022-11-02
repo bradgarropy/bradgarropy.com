@@ -18,8 +18,8 @@ const Connect: FC = () => {
                 />
 
                 <div>
-                    <p>Hey, thanks for talking with me!</p>
-                    <p>Connect with me on the following platforms.</p>
+                    <p>Thanks for chatting with me!</p>
+                    <p>Let&apos;s connect on these platforms.</p>
                 </div>
 
                 <div className={styles.socials}>

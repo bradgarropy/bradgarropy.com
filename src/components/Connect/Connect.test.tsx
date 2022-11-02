@@ -5,8 +5,8 @@ test("shows connect", () => {
     render(<Connect />)
 
     expect(screen.getByAltText("bg"))
-    expect(screen.getByText("Hey, thanks for talking with me!"))
-    expect(screen.getByText("Connect with me on the following platforms."))
+    expect(screen.getByText("Thanks for chatting with me!"))
+    expect(screen.getByText("Let's connect on these platforms."))
 
     const labels = [
         "twitch",
