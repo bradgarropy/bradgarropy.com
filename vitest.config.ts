@@ -19,6 +19,7 @@ const config = defineConfig({
         passWithNoTests: true,
         setupFiles: "src/test-utils/setup.ts",
         watch: false,
+        threads: false,
     },
 })
 
