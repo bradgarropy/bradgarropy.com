@@ -42,6 +42,8 @@ declare global {
 
 ## 🌠 svg modules
 
+Another thing I had to adjust was how `svg` files were loaded into the test runner. With `jest`, you can use the `moduleNameMapper` configuration to stub out different file extensions. This was useful for all types of images and even `css`.
+
 ```typescript
 {
     moduleNameMapper: {
@@ -53,25 +55,19 @@ declare global {
 }
 ```
 
+With `vitest` I found a [plugin][svgr] for importing `svg` images. This plugin requires some interesting annotations to import statements to differentiate importing the `svg` as a URL or as a React component. These annotations luckily had no effect on my application build process, and are only used during testing.
+
 ```typescript
-import CloseIcon from "svg/close.svg?component"
-import DiscordIcon from "svg/discord.svg?component"
-import GatsbyIcon from "svg/gatsby.svg?component"
-import GithubIcon from "svg/github.svg?component"
-import InstagramIcon from "svg/instagram.svg?component"
-import JavascriptIcon from "svg/javascript.svg?component"
-import LinkIcon from "svg/link.svg?component"
-import MenuIcon from "svg/menu.svg?component"
-import NextIcon from "svg/next.svg?component"
-import NodeIcon from "svg/node.svg?component"
-import ReactIcon from "svg/reacticon.svg?component"
-import SvelteIcon from "svg/svelte.svg?component"
-import TailwindIcon from "svg/tailwind.svg?component"
-import TwitchIcon from "svg/twitch.svg?component"
 import TwitterIcon from "svg/twitter.svg?component"
-import TypescriptIcon from "svg/typescript.svg?component"
-import YouTubeIcon from "svg/youtube.svg?component"
 ```
+
+## 🏎 performance
+
+Based on everthing I had read, `vitest` was going to be much faster than `jest` thanks to `esbuild`. However, in practice I found that `jest` test runs completed X% faster.
+
+| jest | vitest |
+| ---- | ------ |
+| one  | two    |
 
 -   performance
     -   threads
@@ -85,3 +81,4 @@ import YouTubeIcon from "svg/youtube.svg?component"
 [mocks]: https://vitest.dev/config/#clearmocks
 [jest-dom]: https://testing-library.com/docs/ecosystem-jest-dom
 [modules]: https://jestjs.io/docs/configuration#modulenamemapper-objectstring-string--arraystring
+[svgr]: https://github.com/lucsky/vite-plugin-svgr
