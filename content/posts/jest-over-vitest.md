@@ -65,16 +65,7 @@ import TwitterIcon from "svg/twitter.svg?component"
 
 Based on everthing I had read, `vitest` was going to be much faster than `jest` thanks to `esbuild`. However, in practice I found that `jest` completed full test runs 14% faster.
 
-```
-    JEST     VITEST
-[1] 14.663s  16.294s
-[2] 13.996s  15.844s
-[3] 13.772s  15.919s
-[4] 13.672s  15.911s
-[5] 13.789s  16.305s
---------------------
-AVG 13.978s  16.055s
-```
+![jest vs vitest][jest-vs-vitest]
 
 I tried everything I could to make `vitest` faster. I moved from [jsdom][jsdom] to [happy-dom][happy-dom]. While it did increase speed, it came with its own [issues][issue]. I also tried disabling [threads][threads], which cut the runtime in half! However, it came at the cost of stability, as my tests passed locally, but [failed][failures] in GitHub Actions.
 
@@ -99,3 +90,4 @@ At the end of this little adventure, I decided that migrating to [vitest][vitest
 [issue]: https://github.com/capricorn86/happy-dom/issues/527
 [threads]: https://vitest.dev/config/#threads
 [failures]: https://github.com/bradgarropy/bradgarropy.com/actions/runs/3379996975
+[jest-vs-vitest]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/jest-vs-vitest.png
