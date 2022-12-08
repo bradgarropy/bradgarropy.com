@@ -3,8 +3,6 @@ import {FC} from "react"
 import {Project} from "types/project"
 import {getTechnologies} from "utils"
 
-import styles from "./ProjectTech.module.css"
-
 type ProjectTechProps = {
     project: Project
 }
@@ -13,7 +11,7 @@ const ProjectTech: FC<ProjectTechProps> = ({project}) => {
     const technologies = getTechnologies(project.topics)
 
     return (
-        <div className={styles.projectTech}>
+        <div className="grid grid-flow-col gap-x-2 items-center">
             {technologies.map(tech => {
                 return <Icon key={tech} name={tech} />
             })}
