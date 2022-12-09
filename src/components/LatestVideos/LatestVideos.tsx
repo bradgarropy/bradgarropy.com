@@ -3,8 +3,6 @@ import {FC} from "react"
 import {Video} from "types/video"
 import {createYouTubeUrl} from "utils/cloudinary"
 
-import LatestVideosStyles from "./LatestVideos.module.css"
-
 type LatestVideosProps = {
     latestVideos: Video[]
 }
@@ -17,14 +15,13 @@ const LatestVideos: FC<LatestVideosProps> = ({latestVideos}) => {
                     <Link
                         key={latestVideo.id}
                         to={`https://www.youtube.com/watch?v=${latestVideo.id}`}
-                        className={LatestVideosStyles.thumbnailLink}
                     >
                         <img
                             src={createYouTubeUrl(latestVideo.id)}
                             alt={latestVideo.title}
                             width="1280"
                             height="720"
-                            className={LatestVideosStyles.thumbnail}
+                            className="border-[3px] border-solid border-black shadow-box transition-shadow duration-300 hover:shadow-none"
                         />
                     </Link>
                 )
