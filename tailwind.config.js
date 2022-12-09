@@ -6,7 +6,6 @@ const config = {
         extend: {
             boxShadow: theme => ({box: `3px 3px 0 ${theme("colors.black")}`}),
             gridTemplateColumns: {
-                newsletter: "1fr auto",
                 hero: "minmax(auto, 15.625rem) auto",
             },
         },

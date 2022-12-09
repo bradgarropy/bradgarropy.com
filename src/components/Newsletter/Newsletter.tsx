@@ -30,7 +30,7 @@ const Newsletter: FC = () => {
             </p>
 
             <form
-                className="grid grid-cols-newsletter grid-rows-1 gap-x-16 items-baseline max-[600px]:grid-cols-1 max-[600px]:grid-rows-2 max-[600px]:gap-y-4"
+                className="grid grid-cols-[1fr_auto] grid-rows-1 gap-x-16 items-baseline max-[600px]:grid-cols-1 max-[600px]:grid-rows-2 max-[600px]:gap-y-4"
                 onSubmit={onSubmit}
             >
                 <input
