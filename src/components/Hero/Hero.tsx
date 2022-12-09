@@ -6,7 +6,7 @@ import styles from "./Hero.module.css"
 
 const Hero: FC = () => {
     return (
-        <div className={styles.hero}>
+        <div className="self-center items-start justify-self-center grid grid-cols-hero">
             <Link
                 to="https://instagram.com/bradgarropy"
                 className={styles.heroLink}
@@ -21,20 +21,38 @@ const Hero: FC = () => {
             </Link>
 
             <div>
-                <h1 className={styles.headline}>i&apos;m brad garropy</h1>
+                <h1 className="m-0 -tracking-[0.2rem] font-black text-5xl leading-normal">
+                    i&apos;m brad garropy
+                </h1>
 
-                <div className={styles.description}>
-                    <h2>lead frontend developer</h2>
-                    <span>👨🏼‍💻</span>
+                <div className="grid grid-cols-[repeat(2,auto)] justify-start justify-items-center gap-x-3 pl-10 leading-normal">
+                    <h2 className="text-2xl m-0 font-medium justify-self-start font-text">
+                        lead frontend developer
+                    </h2>
+                    <span className="text-2xl m-0 font-medium leading-normal">
+                        👨🏼‍💻
+                    </span>
 
-                    <h2>growing content creator</h2>
-                    <span>🎥</span>
+                    <h2 className="text-2xl m-0 font-medium justify-self-start font-text">
+                        growing content creator
+                    </h2>
+                    <span className="text-2xl m-0 font-medium leading-normal">
+                        🎥
+                    </span>
 
-                    <h2>side project connoisseur</h2>
-                    <span>🥃</span>
+                    <h2 className="text-2xl m-0 font-medium justify-self-start font-text">
+                        side project connoisseur
+                    </h2>
+                    <span className="text-2xl m-0 font-medium leading-normal">
+                        🥃
+                    </span>
 
-                    <h2>open source maintainer</h2>
-                    <span>✨</span>
+                    <h2 className="text-2xl m-0 font-medium justify-self-start font-text">
+                        open source maintainer
+                    </h2>
+                    <span className="text-2xl m-0 font-medium leading-normal">
+                        ✨
+                    </span>
                 </div>
             </div>
         </div>
