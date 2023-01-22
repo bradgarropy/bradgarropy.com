@@ -1,10 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 
+const typography = require("@tailwindcss/typography")
+
 const config = {
     content: ["src/pages/**/*.tsx", "src/components/**/*.tsx"],
     theme: {
         extend: {
-            boxShadow: theme => ({box: `3px 3px 0 ${theme("colors.black")}`}),
+            boxShadow: theme => ({
+                "box": `3px 3px 0 ${theme("colors.black")}`,
+                "link": `inset 0 -2px ${theme("colors.purple.400")}`,
+                "link-hover": `inset 0 -25px 0 ${theme("colors.purple.400")}`,
+            }),
             gridTemplateColumns: {
                 hero: "minmax(auto, 15.625rem) auto",
             },
@@ -14,7 +20,7 @@ const config = {
             text: ["Open Sans", "sans-serif"],
         },
     },
-    plugins: [],
+    plugins: [typography],
 }
 
 module.exports = config
