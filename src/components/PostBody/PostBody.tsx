@@ -21,7 +21,7 @@ const PostBody: FC<PostBodyProps> = ({html}) => {
                 "my-9",
                 CodeStyles.code,
                 EmbedsStyles.embeds,
-                "prose prose-purple prose-md max-w-3xl prose-a:shadow-link prose-a:no-underline prose-a:transition prose-a:duration-300 hover:prose-a:shadow-link-hover",
+                "prose prose-purple prose-md max-w-3xl prose-a:text-gray-700 prose-a:font-normal prose-a:shadow-link prose-a:no-underline prose-a:transition prose-a:duration-300 hover:prose-a:shadow-link-hover prose-img:mx-auto",
             )}
         >
             {Markdown}
