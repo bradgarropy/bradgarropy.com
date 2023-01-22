@@ -1,9 +1,8 @@
 import Link from "@bradgarropy/next-link"
-import classnames from "classnames"
+import Markdown from "components/Markdown"
 import {useMarkdown} from "hooks"
 import {FC} from "react"
 import slugify from "slugify"
-import LinkStyles from "styles/Link.module.css"
 import {Testimonial as TestimonialType} from "types/testimonial"
 import {createImageUrl} from "utils/cloudinary"
 
@@ -14,7 +13,7 @@ type TestimonialProps = {
 }
 
 const Testimonial: FC<TestimonialProps> = ({testimonial}) => {
-    const Markdown = useMarkdown(testimonial.html)
+    const markdown = useMarkdown(testimonial.html)
     const slug = slugify(testimonial.frontmatter.name.toLowerCase())
 
     return (
@@ -38,14 +37,7 @@ const Testimonial: FC<TestimonialProps> = ({testimonial}) => {
                 </p>
             </div>
 
-            <div
-                className={classnames(
-                    LinkStyles.fancy,
-                    TestimonialStyles.quote,
-                )}
-            >
-                {Markdown}
-            </div>
+            <Markdown content={markdown} />
         </Link>
     )
 }

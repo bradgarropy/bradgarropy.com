@@ -1,14 +1,10 @@
-import classnames from "classnames"
 import FancyLink from "components/FancyLink"
 import LinkButton from "components/LinkButton"
+import Markdown from "components/Markdown"
 import {useMarkdown} from "hooks"
 import {FC} from "react"
-import CodeStyles from "styles/Code.module.css"
-import LinkStyles from "styles/Link.module.css"
 import {Now as NowType} from "types/now"
 import {formatDate} from "utils/date"
-
-import NowStyles from "./Now.module.css"
 
 type NowProps = {
     now: NowType
@@ -18,7 +14,7 @@ type NowProps = {
 
 const Now: FC<NowProps> = ({now, newer, older}) => {
     const {html, frontmatter} = now
-    const Markdown = useMarkdown(html)
+    const markdown = useMarkdown(html)
 
     return (
         <>
@@ -27,15 +23,7 @@ const Now: FC<NowProps> = ({now, newer, older}) => {
                 <span>{formatDate(frontmatter.date)}</span>
             </div>
 
-            <div
-                className={classnames(
-                    LinkStyles.fancy,
-                    NowStyles.content,
-                    CodeStyles.code,
-                )}
-            >
-                {Markdown}
-            </div>
+            <Markdown content={markdown} />
 
             <div className="flex justify-between">
                 <LinkButton

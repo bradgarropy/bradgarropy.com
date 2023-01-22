@@ -6,6 +6,7 @@
     border: 3px solid var(--text);
     box-shadow: 3px 3px 0 var(--text);
     display: grid;
+    gap: 2rem;
     color: var(--text);
     max-width: 32rem;
 }
@@ -28,10 +29,6 @@
     font-size: 1.5rem;
     letter-spacing: -0.075rem;
     color: var(--text);
-}
-
-.quote > p {
-    margin: 2rem 0rem 0rem 0rem;
 }
 
 .header {

@@ -1,22 +1,22 @@
 import Heading from "components/Heading"
+import Markdown from "components/Markdown"
 import Testimonials from "components/Testimonials"
 import {useMarkdown} from "hooks"
 import {FC} from "react"
-import LinkStyles from "styles/Link.module.css"
-import {Markdown} from "types/markdown"
+import {Markdown as MarkdownType} from "types/markdown"
 import {Testimonial} from "types/testimonial"
 
 type HireMeProps = {
-    hireMe: Markdown
+    hireMe: MarkdownType
     testimonials: Testimonial[]
 }
 
 const HireMe: FC<HireMeProps> = ({hireMe, testimonials}) => {
-    const Markdown = useMarkdown(hireMe.html)
+    const markdown = useMarkdown(hireMe.html)
 
     return (
         <>
-            <div className={LinkStyles.fancy}>{Markdown}</div>
+            <Markdown content={markdown} />
 
             <Heading level={1} id="testimonials">
                 💯 what people think of me
