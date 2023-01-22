@@ -1,9 +1,9 @@
 import Link from "@bradgarropy/next-link"
 import classnames from "classnames"
+import FancyLink from "components/FancyLink"
 import Section from "components/Section"
 import SponsorsStyles from "components/Sponsors/Sponsors.module.css"
 import {FC} from "react"
-import LinkStyles from "styles/Link.module.css"
 import {Sponsors as SponsorsType} from "types/sponsor"
 import {createExternalImageUrl} from "utils/cloudinary"
 
@@ -15,7 +15,7 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
     return (
         <>
             <Section
-                className={classnames(SponsorsStyles.thanks, LinkStyles.fancy)}
+                className={classnames(SponsorsStyles.thanks)}
                 title="💜 thank you"
             >
                 <p>
@@ -27,7 +27,9 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
 
                 <p>
                     If you want to support me and be featured on this page go{" "}
-                    <Link to="https://bradgarropy.com/sponsor">sponsor</Link>{" "}
+                    <FancyLink to="https://bradgarropy.com/sponsor">
+                        sponsor
+                    </FancyLink>{" "}
                     me!
                 </p>
             </Section>
@@ -60,11 +62,11 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                                 ))}
                             </div>
                         ) : (
-                            <p className={LinkStyles.fancy}>
+                            <p>
                                 Nobody yet,{" "}
-                                <Link to="https://bradgarropy.com/sponsor">
+                                <FancyLink to="https://bradgarropy.com/sponsor">
                                     be the first
-                                </Link>
+                                </FancyLink>
                                 !
                             </p>
                         )}

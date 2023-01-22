@@ -1,5 +1,5 @@
-import Link from "@bradgarropy/next-link"
 import classnames from "classnames"
+import FancyLink from "components/FancyLink"
 import LinkButton from "components/LinkButton"
 import {useMarkdown} from "hooks"
 import {FC} from "react"
@@ -54,17 +54,15 @@ const Now: FC<NowProps> = ({now, newer, older}) => {
                 </LinkButton>
             </div>
 
-            <p
-                className={classnames(
-                    LinkStyles.fancy,
-                    "mt-20",
-                    "text-center",
-                    "italic",
-                )}
-            >
+            <p className="mt-20 text-center italic">
                 inspired by{" "}
-                <Link to="https://twitter.com/sivers">derek sivers</Link> and{" "}
-                <Link to="https://nownownow.com/about">nownownow</Link>
+                <FancyLink to="https://twitter.com/sivers">
+                    derek sivers
+                </FancyLink>{" "}
+                and{" "}
+                <FancyLink to="https://nownownow.com/about">
+                    nownownow
+                </FancyLink>
             </p>
         </>
     )
