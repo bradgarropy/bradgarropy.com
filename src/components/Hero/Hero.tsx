@@ -6,7 +6,7 @@ import styles from "./Hero.module.css"
 
 const Hero: FC = () => {
     return (
-        <div className="self-center items-start justify-self-center grid grid-cols-hero">
+        <div className="grid grid-cols-hero items-start self-center justify-self-center">
             <Link
                 to="https://instagram.com/bradgarropy"
                 className={styles.heroLink}
@@ -21,36 +21,36 @@ const Hero: FC = () => {
             </Link>
 
             <div>
-                <h1 className="m-0 -tracking-[0.2rem] font-black text-5xl leading-normal">
+                <h1 className="m-0 text-5xl font-black leading-normal -tracking-[0.2rem]">
                     i&apos;m brad garropy
                 </h1>
 
                 <div className="grid grid-cols-[repeat(2,auto)] justify-start justify-items-center gap-x-3 pl-10 leading-normal">
-                    <h2 className="text-2xl m-0 font-medium justify-self-start font-text">
+                    <h2 className="m-0 justify-self-start font-text text-2xl font-medium">
                         lead frontend developer
                     </h2>
-                    <span className="text-2xl m-0 font-medium leading-normal">
+                    <span className="m-0 text-2xl font-medium leading-normal">
                         👨🏼‍💻
                     </span>
 
-                    <h2 className="text-2xl m-0 font-medium justify-self-start font-text">
+                    <h2 className="m-0 justify-self-start font-text text-2xl font-medium">
                         growing content creator
                     </h2>
-                    <span className="text-2xl m-0 font-medium leading-normal">
+                    <span className="m-0 text-2xl font-medium leading-normal">
                         🎥
                     </span>
 
-                    <h2 className="text-2xl m-0 font-medium justify-self-start font-text">
+                    <h2 className="m-0 justify-self-start font-text text-2xl font-medium">
                         side project connoisseur
                     </h2>
-                    <span className="text-2xl m-0 font-medium leading-normal">
+                    <span className="m-0 text-2xl font-medium leading-normal">
                         🥃
                     </span>
 
-                    <h2 className="text-2xl m-0 font-medium justify-self-start font-text">
+                    <h2 className="m-0 justify-self-start font-text text-2xl font-medium">
                         open source maintainer
                     </h2>
-                    <span className="text-2xl m-0 font-medium leading-normal">
+                    <span className="m-0 text-2xl font-medium leading-normal">
                         ✨
                     </span>
                 </div>
