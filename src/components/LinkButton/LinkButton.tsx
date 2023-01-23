@@ -1,6 +1,5 @@
 import Link from "@bradgarropy/next-link"
 import classnames from "classnames"
-import LinkButtonStyles from "components/LinkButton/LinkButton.module.css"
 import {FC, ReactNode} from "react"
 
 type LinkButtonProps = {
@@ -16,10 +15,14 @@ const LinkButton: FC<LinkButtonProps> = ({
     disabled = false,
     ...props
 }) => {
-    const classes = classnames(LinkButtonStyles.linkButton, {
-        [LinkButtonStyles.reverse]: reverse,
-        [LinkButtonStyles.disabled]: disabled,
-    })
+    const classes = classnames(
+        "transition duration-300 inline-block bg-white text-black py-2 px-3 rounded-[0.3rem] border-2 border-black shadow-box mb-1",
+        {
+            ["shadow-reverse-box"]: reverse,
+            ["text-gray-300 border-gray-300 shadow-gray-300"]: disabled,
+            ["hover:text-inherit hover:shadow-none"]: !disabled,
+        },
+    )
 
     if (disabled) {
         return <span className={classes}>{props.children}</span>

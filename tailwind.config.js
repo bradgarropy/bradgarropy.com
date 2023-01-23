@@ -8,6 +8,7 @@ const config = {
         extend: {
             boxShadow: theme => ({
                 "box": `3px 3px 0 ${theme("colors.black")}`,
+                "reverse-box": `-3px 3px 0 ${theme("colors.black")}`,
                 "link": `inset 0 -2px ${theme("colors.purple.400")}`,
                 "link-hover": `inset 0 -25px 0 ${theme("colors.purple.400")}`,
             }),
