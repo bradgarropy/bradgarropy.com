@@ -6,6 +6,9 @@ const config = {
     content: ["src/pages/**/*.tsx", "src/components/**/*.tsx"],
     theme: {
         extend: {
+            borderWidth: {
+                7: "7px",
+            },
             boxShadow: theme => ({
                 "box": `3px 3px 0 ${theme("colors.black")}`,
                 "reverse-box": `-3px 3px 0 ${theme("colors.black")}`,

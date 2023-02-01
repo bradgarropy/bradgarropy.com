@@ -2,19 +2,17 @@ import Link from "@bradgarropy/next-link"
 import {FC} from "react"
 import {createImageUrl} from "utils/cloudinary"
 
-import styles from "./Hero.module.css"
-
 const Hero: FC = () => {
     return (
-        <div className="grid grid-cols-hero items-start self-center justify-self-center">
+        <div className="grid grid-cols-hero items-start self-center justify-self-center max-[700px]:grid-cols-1">
             <Link
                 to="https://instagram.com/bradgarropy"
-                className={styles.heroLink}
+                className="max-[700px]:m-auto max-[700px]:w-4/5"
             >
                 <img
                     src={createImageUrl("/pages/home/profile.jpg")}
                     alt="bg"
-                    className={styles.heroImage}
+                    className="rounded-full border-7 border-black transform duration-300 hover:-rotate-2 hover:border-purple-400"
                     width="460"
                     height="460"
                 />
