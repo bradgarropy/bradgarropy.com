@@ -1,5 +1,5 @@
-import FancyLink from "components/FancyLink"
 import {render, screen} from "@testing-library/react"
+import FancyLink from "components/FancyLink"
 
 test("renders", () => {
     render(<FancyLink />)
