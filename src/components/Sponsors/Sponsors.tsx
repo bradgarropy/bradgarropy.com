@@ -1,8 +1,6 @@
 import Link from "@bradgarropy/next-link"
-import classnames from "classnames"
 import FancyLink from "components/FancyLink"
 import Section from "components/Section"
-import SponsorsStyles from "components/Sponsors/Sponsors.module.css"
 import {FC} from "react"
 import {Sponsors as SponsorsType} from "types/sponsor"
 import {createExternalImageUrl} from "utils/cloudinary"
@@ -14,10 +12,7 @@ type SponsorsProps = {
 const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
     return (
         <>
-            <Section
-                className={classnames(SponsorsStyles.thanks)}
-                title="💜 thank you"
-            >
+            <Section title="💜 thank you">
                 <p>
                     Each and every supporter I have incentivizes me to continue
                     creating libraries, videos, blogs, and streams. All earnings
