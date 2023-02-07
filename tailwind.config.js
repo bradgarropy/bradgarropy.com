@@ -6,6 +6,9 @@ const config = {
     content: ["src/pages/**/*.tsx", "src/components/**/*.tsx"],
     theme: {
         extend: {
+            animation: {
+                pulse: "pulse 2s infinite ease-out",
+            },
             borderWidth: {
                 7: "7px",
             },
@@ -17,6 +20,19 @@ const config = {
             }),
             gridTemplateColumns: {
                 hero: "minmax(auto, 15.625rem) auto",
+            },
+            keyframes: {
+                pulse: {
+                    "0%": {
+                        opacity: "100%",
+                    },
+                    "50%": {
+                        opacity: "20%",
+                    },
+                    "100%": {
+                        opacity: "100%",
+                    },
+                },
             },
         },
         fontFamily: {
