@@ -1,6 +1,5 @@
 import Link from "@bradgarropy/next-link"
 import Icon from "components/Icon"
-import SocialLinkStyles from "components/SocialLink/SocialLink.module.css"
 import {FC} from "react"
 
 type SocialLinkProps = {
@@ -51,7 +50,10 @@ const SocialLink: FC<SocialLinkProps> = ({platform}) => {
 
     return (
         <Link to={url}>
-            <Icon className={SocialLinkStyles.icon} name={name} />
+            <Icon
+                className="transition duration-300 h-8 fill-black hover:fill-purple-400"
+                name={name}
+            />
         </Link>
     )
 }
