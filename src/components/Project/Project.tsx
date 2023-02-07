@@ -1,5 +1,4 @@
 import Link from "@bradgarropy/next-link"
-import ProjectStyles from "components/Project/Project.module.css"
 import ProjectTech from "components/ProjectTech"
 import {FC} from "react"
 import {Project as ProjectType} from "types/project"
@@ -10,21 +9,22 @@ type ProjectProps = {
 
 const Project: FC<ProjectProps> = ({project}) => {
     return (
-        <Link className={ProjectStyles.project} to={`${project.url}#readme`}>
+        <Link
+            className="transition duration-300 p-[1.125rem] rounded-[0.3rem] border-[3px] border-black shadow-box grid gap-y-4 content-between text-black hover:text-black hover:shadow-none"
+            to={`${project.url}#readme`}
+        >
             <div>
-                <h3 className={ProjectStyles.name}>{project.name}</h3>
+                <h3 className="m-0 font-heading font-black text-2xl tracking-[-0.075rem]">
+                    {project.name}
+                </h3>
 
-                <p className={ProjectStyles.description}>
-                    {project.description}
-                </p>
+                <p className="m-0">{project.description}</p>
             </div>
 
-            <div className={ProjectStyles.bottom}>
+            <div className="grid grid-flow-col justify-between items-center">
                 <ProjectTech project={project} />
 
-                <span
-                    className={ProjectStyles.stars}
-                >{`${project.stars}⭐`}</span>
+                <span className="m-0">{`${project.stars}⭐`}</span>
             </div>
         </Link>
     )
