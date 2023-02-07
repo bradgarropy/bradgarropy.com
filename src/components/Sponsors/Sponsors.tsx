@@ -34,19 +34,19 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                 </p>
             </Section>
 
-            <div className={SponsorsStyles.tiers}>
+            <div className="grid gap-y-20">
                 {Object.entries(sponsors).map(([frequency, sponsors]) => (
                     <Section key={frequency} title={frequency}>
                         {sponsors.length ? (
-                            <div className={SponsorsStyles.sponsors}>
+                            <div className="grid grid-flow-col justify-start gap-x-4">
                                 {sponsors.map(sponsor => (
                                     <Link
-                                        className={SponsorsStyles.sponsor}
+                                        className="inline-block relative"
                                         key={sponsor.username}
                                         to={sponsor.profile}
                                     >
                                         <img
-                                            className={SponsorsStyles.avatar}
+                                            className="transition duration-300 w-[6.625rem] m-0 rounded-full border-black border-[5px] hover:-rotate-2 hover:border-purple-400"
                                             src={createExternalImageUrl(
                                                 sponsor.avatar,
                                             )}
@@ -55,7 +55,7 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                                             height="460"
                                         />
 
-                                        <span className={SponsorsStyles.tier}>
+                                        <span className="text-[2.5rem] absolute -top-4 -left-4">
                                             {sponsor.tier}
                                         </span>
                                     </Link>
