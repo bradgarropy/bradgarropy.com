@@ -17,7 +17,7 @@ test("shows reverse", () => {
     )
 
     expect(screen.getByText("testing"))
-    expect(screen.getByText("testing")).toHaveClass("reverse")
+    expect(screen.getByText("testing")).toHaveClass("shadow-reverse-box")
 })
 
 test("shows disabled", () => {

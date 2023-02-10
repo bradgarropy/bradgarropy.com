@@ -3,7 +3,6 @@ import Fuse from "fuse.js"
 import {useRouter} from "next/router"
 import {FC, useEffect} from "react"
 import {useState} from "react"
-import InputStyles from "styles/Input.module.css"
 import {PostFrontmatter} from "types/post"
 
 type PostSearchBarProps = {
@@ -52,7 +51,7 @@ const PostSearchBar: FC<PostSearchBarProps> = ({posts, onSearch}) => {
     return (
         <input
             className={classnames(
-                InputStyles.input,
+                "text-base font-text border-[3px] border-black shadow-box text-black placeholder:text-gray-400 focus:outline-none focus:border-purple-400",
                 "w-[85%] mb-9 py-4 px-8 text-base font-text border-[3px] border-black rounded-[0.3rem] shadow-box text-black",
             )}
             type="text"

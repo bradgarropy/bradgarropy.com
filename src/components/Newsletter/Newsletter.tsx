@@ -1,6 +1,5 @@
 import {http} from "@bradgarropy/http"
 import {FC, useState} from "react"
-import InputStyles from "styles/Input.module.css"
 
 const Newsletter: FC = () => {
     const [email, setEmail] = useState("")
@@ -24,7 +23,7 @@ const Newsletter: FC = () => {
 
     return (
         <div>
-            <p className="-mt-12">
+            <p className="-mt-12 mb-7">
                 💻 side projects | 📰 web dev news | ⚡ tech opinions
             </p>
 
@@ -33,7 +32,7 @@ const Newsletter: FC = () => {
                 onSubmit={onSubmit}
             >
                 <input
-                    className={InputStyles.input}
+                    className="py-4 px-8 text-base font-text border-[3px] border-black shadow-box text-black placeholder:text-gray-400 focus:outline-none focus:border-purple-400 rounded-[0.3rem]"
                     placeholder="email@example.com"
                     type="email"
                     name="email"
