@@ -1,6 +1,5 @@
 import {http} from "@bradgarropy/http"
 import {FC, useState} from "react"
-import ButtonStyles from "styles/Button.module.css"
 import InputStyles from "styles/Input.module.css"
 
 const Newsletter: FC = () => {
@@ -43,7 +42,7 @@ const Newsletter: FC = () => {
                 />
 
                 <button
-                    className={ButtonStyles.button}
+                    className="transition duration-300 inline-block bg-purple-500 text-white py-2 px-3 rounded-[0.3rem] border-2 border-black shadow-box mb-[5px] text-base cursor-pointer font-heading font-black tracking-normal hover:enabled:shadow-none disabled:cursor-default"
                     type="submit"
                     disabled={subscribed}
                 >
