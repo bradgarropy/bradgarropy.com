@@ -1,36 +1,49 @@
 import Link from "@bradgarropy/next-link"
 import {FC} from "react"
 
-import NavigationStyles from "./Navigation.module.css"
-
 const Navigation: FC = () => {
     return (
-        <nav className={NavigationStyles.navigation}>
-            <Link className={NavigationStyles.link} to="/blog">
+        <nav className="grid grid-flow-col gap-x-5 text-black transition duration-300 max-[800px]:hidden">
+            <Link
+                className="transition duration-300 text-black hover:text-purple-400"
+                to="/blog"
+            >
                 blog
             </Link>
 
             <span>|</span>
 
-            <Link className={NavigationStyles.link} to="/now">
+            <Link
+                className="transition duration-300 text-black hover:text-purple-400"
+                to="/now"
+            >
                 now
             </Link>
 
             <span>|</span>
 
-            <Link className={NavigationStyles.link} to="/uses">
+            <Link
+                className="transition duration-300 text-black hover:text-purple-400"
+                to="/uses"
+            >
                 uses
             </Link>
 
             <span>|</span>
 
-            <Link className={NavigationStyles.link} to="/hire-me">
+            <Link
+                className="transition duration-300 text-black hover:text-purple-400"
+                to="/hire-me"
+            >
                 hire me
             </Link>
 
             <span>|</span>
 
-            <Link className={NavigationStyles.link} to="/contact">
+            <Link
+                className="transition duration-300 text-black hover:text-purple-400"
+                to="/contact"
+            >
                 contact
             </Link>
         </nav>
