@@ -3,7 +3,6 @@ import {FC, ReactNode} from "react"
 import {createImageUrl} from "utils/cloudinary"
 
 import pkg from "../../../package.json"
-import styles from "./PageLayout.module.css"
 
 type PageLayoutProps = {
     children?: ReactNode
@@ -28,7 +27,9 @@ const PageLayout: FC<PageLayoutProps> = ({children}) => {
                 }}
             />
 
-            <main className={styles.container}>{children}</main>
+            <main className="min-h-screen py-0 px-5 grid content-center justify-center">
+                {children}
+            </main>
         </>
     )
 }
