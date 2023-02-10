@@ -6,8 +6,6 @@ import {useState} from "react"
 import InputStyles from "styles/Input.module.css"
 import {PostFrontmatter} from "types/post"
 
-import PostSearchBarStyles from "./PostSearchBar.module.css"
-
 type PostSearchBarProps = {
     posts: PostFrontmatter[]
     onSearch?: (posts: PostFrontmatter[]) => void
@@ -55,7 +53,7 @@ const PostSearchBar: FC<PostSearchBarProps> = ({posts, onSearch}) => {
         <input
             className={classnames(
                 InputStyles.input,
-                PostSearchBarStyles.search,
+                "w-[85%] mb-9 py-4 px-8 text-base font-text border-[3px] border-black rounded-[0.3rem] shadow-box text-black",
             )}
             type="text"
             placeholder="search blog"
