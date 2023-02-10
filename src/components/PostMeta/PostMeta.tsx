@@ -1,5 +1,4 @@
 import Link from "@bradgarropy/next-link"
-import PostMetaStyles from "components/PostMeta/PostMeta.module.css"
 import {FC} from "react"
 import {Post} from "types/post"
 import {formatDate} from "utils/date"
@@ -8,10 +7,15 @@ type PostMetaProps = Pick<Post["frontmatter"], "date" | "topic">
 
 const PostMeta: FC<PostMetaProps> = ({date, topic}) => {
     return (
-        <div className={PostMetaStyles.postMeta}>
+        <div>
             <p className="m-0 lowercase">
                 {formatDate(date)} in{" "}
-                <Link to={`/topic/${topic}`}>#{topic}</Link>
+                <Link
+                    to={`/topic/${topic}`}
+                    className="transition duration-300 text-black hover:text-purple-400"
+                >
+                    #{topic}
+                </Link>
             </p>
         </div>
     )

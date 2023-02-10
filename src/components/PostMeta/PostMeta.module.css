@@ -1,9 +1,0 @@
-.postMeta a {
-    transition-property: color;
-    transition-duration: var(--transitionDuration);
-    color: var(--text);
-}
-
-.postMeta a:hover {
-    color: var(--primary);
-}
