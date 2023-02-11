@@ -1,8 +1,7 @@
 **Brad Garropy**  
 _817-266-5629_  
 [_bradgarropy@gmail.com_][email]  
-_604 Autumn Sage Way_  
-_Pflugerville, Texas 78660_
+_Austin, Texas_
 
 ## Objective
 
@@ -39,10 +38,17 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 
 ## Employment History
 
-**Atlassian | Frontend Platform Engineer**  
+**Atlassian | Senior Software Engineer**  
 _October 2021 - Present_
 
-[_Trello Web Platform_][trello]
+_Trello Developer CLI_
+
+-   Consistent interface across all Trello repositories.
+-   Integrated analytics and error reporting.
+-   Dynamic command discovery.
+-   On the fly TypeScript compilation with `esbuild`.
+
+_Trello Web Platform_
 
 -   Implement custom `eslint` rules to enforce best practices.
 -   Lead effort to remove Redux from the code base.
@@ -163,11 +169,13 @@ _03/04/2021_ | [Firebase][firebase-tutorial]
 
 ## Talks & Appearances
 
+_12/07/2022_ | [Cloudinary DevJams - Optimizing Cloudinary Images in Markdown Files][cloudinary-devjams]  
+_10/26/2022_ | [Syntax.fm Open Table][syntax-open-table] with Scott Tolinski and Wes Bos  
 _04/28/2022_ | [Compressed.fm][compressed-fm] with James Quick and Amy Dutton  
 _08/04/2021_ | [Purrfect.dev][purrfect-dev] with Brittney Postma and Alex Patterson  
 _06/25/2021_ | [Developers Hangout][developers-hangout] with James Perkins  
 _05/07/2021_ | [Web Dev Weekly][web-dev-weekly] with Brad Garropy and Richard Gottleber  
-_11/11/2020_ | [Syntax.fm][syntax] with Scott Tolinski and Wes Bos  
+_11/11/2020_ | [Syntax.fm 300th Episode][syntax-300] with Scott Tolinski and Wes Bos  
 _11/09/2020_ | [The Chau Codes Podcast][chau-codes] with Justin Chau  
 _10/06/2020_ | [That's My Jamstack][thats-my-jamstack] with Bryan Robinson  
 _08/14/2020_ | [Working on Side Projects][side-projects] with James Quick  
@@ -185,7 +193,7 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 
 -   Blog with embedded CMS.
 -   Sourced data from YouTube and an embedded CMS.
--   Developed with Next.js and React, hosted on Netlify.
+-   Developed with Next.js and React, hosted on Vercel.
 
 [🤠 daily texas country][dtxc]
 
@@ -280,21 +288,21 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 -   React hook countdown timer.
 -   Written in TypeScript.
 -   Powers my Twitch starting soon page.
--   Over 20,000 downloads!
+-   Over 71,000 downloads!
 
 [⏱ use-timer][use-timer]
 
 -   React hook stopwatch.
 -   Written in TypeScript.
 -   Used in the [Murphy][murphy] application.
--   Over 400 downloads!
+-   Over 500 downloads!
 
 [🎤 captivate-sdk][captivate-sdk]
 
 -   JavaScript SDK for the [Captivate][captivate] podcast host.
 -   Written in TypeScript.
 -   Worked with the Captivate team.
--   Over 800 downloads!
+-   Over 1,400 downloads!
 
 [🤖 bg codes twitch bot][twitch-bot]
 
@@ -312,25 +320,25 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 
 -   Simplified HTTP request library.
 -   Replaces `fetch`, heavily inspired by `axios`.
--   Over 1,500 downloads!
+-   Over 2,100 downloads!
 
 [🔗 next-link][next-link]
 
 -   Next.js link component.
 -   Accepts internal and external links.
--   Over 1,600 downloads!
+-   Over 1,700 downloads!
 
 [🔎 next-seo][next-seo]
 
 -   SEO component for Next.js.
 -   Supports Facebook, Twitter, Open Graph, and meta tags.
--   Over 3,800 downloads!
+-   Over 7,300 downloads!
 
 [📊 next-google-analytics][next-google-analytics]
 
 -   Google Analytics component for Next.js.
 -   Handles all setup out of the box.
--   Over 600 downloads!
+-   Over 9,200 downloads!
 
 [💎 eslint-config][eslint]
 
@@ -338,11 +346,18 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 -   Integrates accessibility, React, and React hooks plugins.
 -   Over 4,200 downloads!
 
+[🖼 rehype cloudinary image size][rehype-cloudinary-image-size]
+
+-   Rehype plugin that adds dimension attributes to images in Markdown.
+-   Powered by Cloudinary API.
+-   Featured on Cloudinary DevJams.
+-   Over 300 downloads!
+
 [✂ bg-snippets][bg-snippets]
 
 -   Visual Studio Code snippet library.
 -   Includes JavaScript, TypeScript, serverless, Jest, React, Styled Components, Markdown, and Python snippets.
--   Over 700 installs!
+-   Over 800 installs!
 
 ## Platforms
 
@@ -391,7 +406,7 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [npm]: https://npmjs.com/~bradgarropy
 [linkedin]: https://linkedin.com/in/bradgarropy
 [polywork]: https://polywork.com/bradgarropy
-[syntax]: https://youtu.be/W7y03fsqHJw?t=2503
+[syntax-300]: https://youtu.be/W7y03fsqHJw?t=2503
 [chau-codes]: https://youtu.be/A85MnRidA2A
 [thats-my-jamstack]: https://thatsmyjamstack.com/posts/brad-garropy
 [use-countdown]: https://npmjs.com/package/@bradgarropy/use-countdown
@@ -410,4 +425,6 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [firebase-tutorial]: https://youtube.com/watch?v=FArYmEBCMt0&list=PL6Mu1AMmTL-sSswsqShJ5fbIr9XjYHGFm
 [purrfect-dev]: https://youtu.be/Q-ELtpdIvzw
 [compressed-fm]: https://www.compressed.fm/episode/68
-[trello]: https://trello.com
+[cloudinary-devjams]: https://www.youtube.com/watch?v=QMQKXA9e2Ks
+[syntax-open-table]: https://www.youtube.com/watch?v=3HeRP7r01Cs&t=1434s
+[rehype-cloudinary-image-size]: https://www.npmjs.com/package/@bradgarropy/rehype-cloudinary-image-size
