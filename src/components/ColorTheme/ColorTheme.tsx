@@ -8,22 +8,7 @@ const ColorTheme: FC = () => {
     const label = theme === "light" ? "dark" : "light"
 
     useEffect(() => {
-        const root = document.documentElement
-
-        root.style.setProperty(
-            "--background",
-            theme === "light" ? "var(--white)" : "var(--black)",
-        )
-
-        root.style.setProperty(
-            "--text",
-            theme === "light" ? "var(--black)" : "var(--white)",
-        )
-
-        root.style.setProperty(
-            "--snow",
-            theme === "light" ? "var(--darkGrey)" : "var(--white)",
-        )
+        // change colors
     }, [theme])
 
     const onClick = () => {

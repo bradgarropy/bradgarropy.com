@@ -23,7 +23,7 @@ const Podcast: FC = () => {
 
                 <div className="grid gap-x-3 grid-flow-col items-center text-2xl font-heading font-black tracking-[-0.075rem] leading-[1.6] max-[700px]:text-[1.4rem]">
                     <Link
-                        className="transition-[text-shadow] duration-300 text-black hover:text-black hover:[text-shadow:_2px_2px_var(--primary)]"
+                        className="transition-[text-shadow] duration-300 text-black hover:text-black hover:[text-shadow:_2px_2px_var(--purple)]"
                         to="https://twitter.com/bradgarropy"
                     >
                         brad garropy
@@ -32,7 +32,7 @@ const Podcast: FC = () => {
                     <span>/</span>
 
                     <Link
-                        className="transition-[text-shadow] duration-300 text-black hover:text-black hover:[text-shadow:_2px_2px_var(--primary)]"
+                        className="transition-[text-shadow] duration-300 text-black hover:text-black hover:[text-shadow:_2px_2px_var(--purple)]"
                         to="https://twitter.com/RGottleber"
                     >
                         richard gottleber

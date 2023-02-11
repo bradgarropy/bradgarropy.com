@@ -4,7 +4,7 @@
     height: 500px;
     border: none;
     margin: 1.75rem auto;
-    border-radius: var(--borderRadius);
+    border-radius: 0.3rem;
     overflow: hidden;
 }
 
@@ -18,7 +18,7 @@
     position: relative;
     width: 100%;
     margin: 1.75rem auto;
-    border-radius: var(--borderRadius);
+    border-radius: 0.3rem;
 }
 
 .embeds :global(.twitch::after),

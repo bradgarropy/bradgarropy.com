@@ -4,25 +4,10 @@
 
 :root {
     /* colors */
-    --black: #000000;
-    --darkGrey: #aaaaaa;
-    --grey: #dddddd;
-    --white: #ffffff;
     --purple: #c792ea;
-    --darkPurple: #a038ff;
-
-    /* intentions */
-    --primary: var(--purple);
-    --text: var(--black);
-    --background: var(--white);
-    --snow: var(--grey);
 
     /* highlighting */
     --grvsc-line-highlighted-background-color: #c792ea66;
-    --grvsc-line-highlighted-border-color: var(--primary);
+    --grvsc-line-highlighted-border-color: #c792ea;
     --grvsc-line-highlighted-border-width: 4px;
-
-    /* design tokens */
-    --transitionDuration: 300ms;
-    --borderRadius: 0.3rem;
 }
