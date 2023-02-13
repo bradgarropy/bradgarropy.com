@@ -16,13 +16,13 @@ test("shows now", () => {
 test("navigates nows", () => {
     render(<Now now={mockNow} newer={mockNewerNow} older={mockOlderNow} />)
 
-    expect(screen.getByText("👈🏼 newer")).not.toHaveClass("disabled")
+    expect(screen.getByText("👈🏼 newer")).not.toHaveClass("shadow-gray-300")
     expect(screen.getByText("👈🏼 newer")).toHaveAttribute(
         "href",
         `/now/${mockNewerNow.frontmatter.date}`,
     )
 
-    expect(screen.getByText("older 👉🏼")).not.toHaveClass("disabled")
+    expect(screen.getByText("older 👉🏼")).not.toHaveClass("shadow-gray-300")
     expect(screen.getByText("older 👉🏼")).toHaveAttribute(
         "href",
         `/now/${mockOlderNow.frontmatter.date}`,
@@ -32,6 +32,6 @@ test("navigates nows", () => {
 test("disables nows", () => {
     render(<Now now={mockNow} newer={undefined} older={undefined} />)
 
-    expect(screen.getByText("👈🏼 newer")).toHaveClass("disabled")
-    expect(screen.getByText("older 👉🏼")).toHaveClass("disabled")
+    expect(screen.getByText("👈🏼 newer")).toHaveClass("shadow-gray-300")
+    expect(screen.getByText("older 👉🏼")).toHaveClass("shadow-gray-300")
 })

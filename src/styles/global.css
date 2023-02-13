@@ -2,10 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    /* colors */
-    --purple: #c792ea;
+@layer utilities {
+    .text-shadow-2 {
+        text-shadow: 2px 2px theme("colors.purple.400");
+    }
+    .text-shadow-3 {
+        text-shadow: 3px 3px theme("colors.purple.400");
+    }
+}
 
+:root {
     /* highlighting */
     --grvsc-line-highlighted-background-color: #c792ea66;
     --grvsc-line-highlighted-border-color: #c792ea;

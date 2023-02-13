@@ -28,5 +28,5 @@ test("shows disabled", () => {
     )
 
     expect(screen.getByText("testing"))
-    expect(screen.getByText("testing")).toHaveClass("disabled")
+    expect(screen.getByText("testing")).toHaveClass("shadow-gray-300")
 })

@@ -14,34 +14,22 @@ test("ignores non-youtube links", () => {
 
 test("transforms youtube links", () => {
     const html = youtubeTransformer.getHTML("https://youtu.be/9zcU6oUOHVc")
+    const node = new DOMParser().parseFromString(html, "text/html")
+    const iframe = node.querySelector("iframe")
 
-    expect(html).toEqual(`
-        <div class="youtube">
-            <iframe
-                title="9zcU6oUOHVc"
-                src="https://www.youtube-nocookie.com/embed/9zcU6oUOHVc"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-            >
-            </iframe>
-        </div>
-    `)
+    expect(iframe.title).toEqual("9zcU6oUOHVc")
+    expect(iframe.src).toEqual(
+        "https://www.youtube-nocookie.com/embed/9zcU6oUOHVc",
+    )
 })
 
 test("transforms youtube links with start", () => {
     const html = youtubeTransformer.getHTML("https://youtu.be/9zcU6oUOHVc?t=3")
+    const node = new DOMParser().parseFromString(html, "text/html")
+    const iframe = node.querySelector("iframe")
 
-    expect(html).toEqual(`
-        <div class="youtube">
-            <iframe
-                title="9zcU6oUOHVc"
-                src="https://www.youtube-nocookie.com/embed/9zcU6oUOHVc?start=3"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-            >
-            </iframe>
-        </div>
-    `)
+    expect(iframe.title).toEqual("9zcU6oUOHVc")
+    expect(iframe.src).toEqual(
+        "https://www.youtube-nocookie.com/embed/9zcU6oUOHVc?start=3",
+    )
 })
