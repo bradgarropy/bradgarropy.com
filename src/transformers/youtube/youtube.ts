@@ -14,16 +14,15 @@ const getHTML = (string: string): string => {
     }
 
     const html = `
-        <div class="youtube">
-            <iframe
-                title="${id}"
-                src="${src}"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-            >
-            </iframe>
-        </div>
+        <iframe
+            class="aspect-video w-full rounded-[0.3rem] my-8"
+            title="${id}"
+            src="${src}"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+        >
+        </iframe>
     `
 
     return html

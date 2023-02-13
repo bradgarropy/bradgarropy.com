@@ -3,7 +3,11 @@
 const typography = require("@tailwindcss/typography")
 
 const config = {
-    content: ["src/pages/**/*.tsx", "src/components/**/*.tsx"],
+    content: [
+        "src/pages/**/*.tsx",
+        "src/components/**/*.tsx",
+        "src/transformers/**/*.ts",
+    ],
     theme: {
         extend: {
             animation: {

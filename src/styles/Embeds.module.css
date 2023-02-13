@@ -1,38 +1,3 @@
-.embeds :global(.codesandbox > iframe) {
-    display: grid;
-    width: 100%;
-    height: 500px;
-    border: none;
-    margin: 1.75rem auto;
-    border-radius: 0.3rem;
-    overflow: hidden;
-}
-
 .embeds :global(.twitter > .twitter-tweet) {
     margin: 1.75rem auto !important;
-}
-
-.embeds :global(.twitch),
-.embeds :global(.youtube) {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    margin: 1.75rem auto;
-    border-radius: 0.3rem;
-}
-
-.embeds :global(.twitch::after),
-.embeds :global(.youtube::after) {
-    padding-top: 56.25%;
-    display: block;
-    content: "";
-}
-
-.embeds :global(.twitch iframe),
-.embeds :global(.youtube iframe) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }
