@@ -19,7 +19,7 @@ const Hero: FC = () => {
             </Link>
 
             <div>
-                <h1 className="m-0 text-5xl font-black leading-normal -tracking-[0.2rem]">
+                <h1 className="m-0 text-5xl font-black leading-normal -tracking-[0.2rem] font-heading">
                     i&apos;m brad garropy
                 </h1>
 

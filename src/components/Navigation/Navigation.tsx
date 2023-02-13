@@ -3,7 +3,7 @@ import {FC} from "react"
 
 const Navigation: FC = () => {
     return (
-        <nav className="grid grid-flow-col gap-x-5 text-black transition duration-300 max-[800px]:hidden">
+        <nav className="grid grid-flow-col gap-x-5 text-black transition duration-300 max-[800px]:hidden font-text">
             <Link
                 className="transition duration-300 text-black hover:text-purple-400"
                 to="/blog"

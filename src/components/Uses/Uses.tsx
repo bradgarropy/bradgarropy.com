@@ -11,10 +11,10 @@ const Uses: FC<UsesProps> = ({uses}) => {
     const markdown = useMarkdown(uses.html)
 
     return (
-        <>
-            <h1>💠 uses</h1>
+        <div className="grid gap-y-9">
+            <h1 className="text-[32px] font-heading font-semibold">💠 uses</h1>
             <Markdown content={markdown} />
-        </>
+        </div>
     )
 }
 

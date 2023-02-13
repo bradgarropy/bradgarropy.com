@@ -16,7 +16,7 @@ const LinkButton: FC<LinkButtonProps> = ({
     ...props
 }) => {
     const classes = classnames(
-        "transition duration-300 inline-block bg-white text-black py-2 px-3 rounded-[0.3rem] border-2 border-black shadow-box mb-1",
+        "transition duration-300 inline-block bg-white text-black py-2 px-3 rounded-[0.3rem] border-2 border-black shadow-box mb-1 font-text",
         {
             ["shadow-reverse-box"]: reverse,
             ["text-gray-300 border-gray-300 shadow-gray-300"]: disabled,

@@ -17,15 +17,19 @@ const Now: FC<NowProps> = ({now, newer, older}) => {
     const markdown = useMarkdown(html)
 
     return (
-        <>
+        <div className="grid gap-y-16">
             <div className="flex items-baseline justify-between text-black lowercase">
-                <h1>🧭 now</h1>
-                <span>{formatDate(frontmatter.date)}</span>
+                <h1 className="text-[32px] font-heading font-semibold">
+                    🧭 now
+                </h1>
+                <span className="font-text">
+                    {formatDate(frontmatter.date)}
+                </span>
             </div>
 
             <Markdown content={markdown} />
 
-            <div className="flex justify-between">
+            <div className="flex justify-between content-start">
                 <LinkButton
                     to={`/now/${newer?.frontmatter.date}`}
                     disabled={!newer}
@@ -42,7 +46,7 @@ const Now: FC<NowProps> = ({now, newer, older}) => {
                 </LinkButton>
             </div>
 
-            <p className="mt-20 text-center italic">
+            <p className="my-10 text-center italic">
                 inspired by{" "}
                 <FancyLink to="https://twitter.com/sivers">
                     derek sivers
@@ -52,7 +56,7 @@ const Now: FC<NowProps> = ({now, newer, older}) => {
                     nownownow
                 </FancyLink>
             </p>
-        </>
+        </div>
     )
 }
 

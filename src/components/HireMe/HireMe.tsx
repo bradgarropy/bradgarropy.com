@@ -15,15 +15,17 @@ const HireMe: FC<HireMeProps> = ({hireMe, testimonials}) => {
     const markdown = useMarkdown(hireMe.html)
 
     return (
-        <>
+        <div className="grid gap-y-9">
             <Markdown content={markdown} />
 
-            <Heading level={1} id="testimonials">
-                💯 what people think of me
-            </Heading>
+            <div className="prose prose-h1:font-bold">
+                <Heading level={1} id="testimonials">
+                    💯 what people think of me
+                </Heading>
+            </div>
 
             <Testimonials testimonials={testimonials} />
-        </>
+        </div>
     )
 }
 
