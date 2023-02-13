@@ -1,6 +1,5 @@
 import classnames from "classnames"
 import React, {FC, ReactElement} from "react"
-import EmbedsStyles from "styles/Embeds.module.css"
 
 type MarkdownProps = {
     content: ReactElement
