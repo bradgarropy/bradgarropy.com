@@ -12,7 +12,7 @@ type SponsorsProps = {
 const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
     return (
         <>
-            <Section title="💜 thank you" className="font-text">
+            <Section title="💜 thank you">
                 <p>
                     Each and every supporter I have incentivizes me to continue
                     creating libraries, videos, blogs, and streams. All earnings

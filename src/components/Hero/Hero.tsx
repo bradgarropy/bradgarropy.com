@@ -24,28 +24,28 @@ const Hero: FC = () => {
                 </h1>
 
                 <div className="grid grid-cols-[repeat(2,auto)] justify-start justify-items-center gap-x-3 pl-10 leading-normal">
-                    <h2 className="m-0 justify-self-start font-text text-2xl font-medium">
+                    <h2 className="m-0 justify-self-start text-2xl font-medium">
                         lead frontend developer
                     </h2>
                     <span className="m-0 text-2xl font-medium leading-normal">
                         👨🏼‍💻
                     </span>
 
-                    <h2 className="m-0 justify-self-start font-text text-2xl font-medium">
+                    <h2 className="m-0 justify-self-start text-2xl font-medium">
                         growing content creator
                     </h2>
                     <span className="m-0 text-2xl font-medium leading-normal">
                         🎥
                     </span>
 
-                    <h2 className="m-0 justify-self-start font-text text-2xl font-medium">
+                    <h2 className="m-0 justify-self-start text-2xl font-medium">
                         side project connoisseur
                     </h2>
                     <span className="m-0 text-2xl font-medium leading-normal">
                         🥃
                     </span>
 
-                    <h2 className="m-0 justify-self-start font-text text-2xl font-medium">
+                    <h2 className="m-0 justify-self-start text-2xl font-medium">
                         open source maintainer
                     </h2>
                     <span className="m-0 text-2xl font-medium leading-normal">

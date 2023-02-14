@@ -22,9 +22,7 @@ const Now: FC<NowProps> = ({now, newer, older}) => {
                 <h1 className="font-heading text-[32px] font-semibold">
                     🧭 now
                 </h1>
-                <span className="font-text">
-                    {formatDate(frontmatter.date)}
-                </span>
+                <span className="">{formatDate(frontmatter.date)}</span>
             </div>
 
             <Markdown content={markdown} />

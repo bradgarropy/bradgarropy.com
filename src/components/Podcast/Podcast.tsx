@@ -18,7 +18,7 @@ const Podcast: FC = () => {
                 />
             </Link>
 
-            <div className="grid justify-items-start font-text">
+            <div className="grid justify-items-start">
                 <span>a weekly podcast about web development hosted by</span>
 
                 <div className="grid grid-flow-col items-center gap-x-3 font-heading text-2xl font-black leading-[1.6] tracking-[-0.075rem] max-[700px]:text-[1.4rem]">

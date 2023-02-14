@@ -23,7 +23,7 @@ const Newsletter: FC = () => {
 
     return (
         <div>
-            <p className="-mt-12 mb-7 font-text text-black dark:text-white">
+            <p className="-mt-12 mb-7 text-black dark:text-white">
                 💻 side projects | 📰 web dev news | ⚡ tech opinions
             </p>
 
@@ -32,7 +32,7 @@ const Newsletter: FC = () => {
                 onSubmit={onSubmit}
             >
                 <input
-                    className="rounded-[0.3rem] border-3 border-black py-4 px-8 font-text text-base text-black shadow-box placeholder:text-gray-400 focus:border-purple-400 focus:outline-none dark:shadow-box-white"
+                    className="rounded-[0.3rem] border-3 border-black py-4 px-8 text-base text-black shadow-box placeholder:text-gray-400 focus:border-purple-400 focus:outline-none dark:shadow-box-white"
                     placeholder="email@example.com"
                     type="email"
                     name="email"

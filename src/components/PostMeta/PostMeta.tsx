@@ -8,7 +8,7 @@ type PostMetaProps = Pick<Post["frontmatter"], "date" | "topic">
 const PostMeta: FC<PostMetaProps> = ({date, topic}) => {
     return (
         <div>
-            <p className="m-0 font-text lowercase">
+            <p className="m-0 lowercase">
                 {formatDate(date)} in{" "}
                 <Link
                     to={`/topic/${topic}`}
