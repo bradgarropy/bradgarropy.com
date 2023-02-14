@@ -8,7 +8,7 @@ const config = {
         "src/components/**/*.tsx",
         "src/transformers/**/*.ts",
     ],
-    // darkMode: "class",
+    darkMode: "class",
     plugins: [typography],
     theme: {
         extend: {
@@ -23,6 +23,8 @@ const config = {
             boxShadow: theme => ({
                 "box": `3px 3px 0 ${theme("colors.black")}`,
                 "reverse-box": `-3px 3px 0 ${theme("colors.black")}`,
+                "box-white": `3px 3px 0 ${theme("colors.white")}`,
+                "reverse-box-white": `-3px 3px 0 ${theme("colors.white")}`,
                 "link": `inset 0 -2px ${theme("colors.purple.400")}`,
                 "link-hover": `inset 0 -25px 0 ${theme("colors.purple.400")}`,
             }),

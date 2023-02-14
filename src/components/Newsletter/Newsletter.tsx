@@ -32,7 +32,7 @@ const Newsletter: FC = () => {
                 onSubmit={onSubmit}
             >
                 <input
-                    className="py-4 px-8 text-base font-text border-3 border-black shadow-box text-black placeholder:text-gray-400 focus:outline-none focus:border-purple-400 rounded-[0.3rem]"
+                    className="py-4 px-8 text-base font-text border-3 border-black text-black placeholder:text-gray-400 focus:outline-none shadow-box dark:shadow-box-white focus:border-purple-400 rounded-[0.3rem]"
                     placeholder="email@example.com"
                     type="email"
                     name="email"
@@ -41,7 +41,7 @@ const Newsletter: FC = () => {
                 />
 
                 <button
-                    className="transition duration-300 inline-block bg-purple-500 text-white py-2 px-3 rounded-[0.3rem] border-2 border-black shadow-box mb-[5px] text-base cursor-pointer font-heading font-black tracking-normal hover:enabled:shadow-none disabled:cursor-default"
+                    className="transition duration-300 inline-block bg-purple-500 text-white py-2 px-3 rounded-[0.3rem] border-2 border-black shadow-box dark:shadow-box-white mb-[5px] text-base cursor-pointer font-heading font-black tracking-normal hover:enabled:shadow-none disabled:cursor-default"
                     type="submit"
                     disabled={subscribed}
                 >

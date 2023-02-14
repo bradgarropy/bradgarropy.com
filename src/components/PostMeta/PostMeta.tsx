@@ -12,7 +12,7 @@ const PostMeta: FC<PostMetaProps> = ({date, topic}) => {
                 {formatDate(date)} in{" "}
                 <Link
                     to={`/topic/${topic}`}
-                    className="transition duration-300 text-black hover:text-purple-400"
+                    className="transition duration-300 hover:text-purple-400"
                 >
                     #{topic}
                 </Link>

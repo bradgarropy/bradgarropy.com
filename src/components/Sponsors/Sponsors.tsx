@@ -12,7 +12,7 @@ type SponsorsProps = {
 const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
     return (
         <>
-            <Section title="💜 thank you">
+            <Section title="💜 thank you" className="font-text">
                 <p>
                     Each and every supporter I have incentivizes me to continue
                     creating libraries, videos, blogs, and streams. All earnings
@@ -41,7 +41,7 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                                         to={sponsor.profile}
                                     >
                                         <img
-                                            className="transition duration-300 w-[6.625rem] m-0 rounded-full border-black border-5] hover:-rotate-2 hover:border-purple-400"
+                                            className="transition duration-300 w-[6.625rem] m-0 rounded-full border-black dark:border-white border-5 hover:-rotate-2 hover:border-purple-400 hover:dark:border-purple-400"
                                             src={createExternalImageUrl(
                                                 sponsor.avatar,
                                             )}

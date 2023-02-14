@@ -9,7 +9,7 @@ type PostListProps = {
 const PostList: FC<PostListProps> = ({posts}) => {
     if (!posts.length) {
         return (
-            <div className="text-black italic text-xl">
+            <div className="italic text-xl">
                 <span className="not-italic">🤷🏼‍♂️</span> no posts found
             </div>
         )

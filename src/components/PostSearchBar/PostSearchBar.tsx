@@ -52,7 +52,7 @@ const PostSearchBar: FC<PostSearchBarProps> = ({posts, onSearch}) => {
         <input
             className={classnames(
                 "text-base font-text border-3 border-black shadow-box text-black placeholder:text-gray-400 focus:outline-none focus:border-purple-400",
-                "w-[85%] mb-9 py-4 px-8 text-base font-text border-3 border-black rounded-[0.3rem] shadow-box text-black",
+                "w-[85%] mb-9 py-4 px-8 text-base font-text border-3 border-black rounded-[0.3rem] shadow-box dark:shadow-box-white text-black",
             )}
             type="text"
             placeholder="search blog"

@@ -12,13 +12,13 @@ const Podcast: FC = () => {
                 <img
                     src={createImageUrl("/pages/home/web-dev-weekly.jpg")}
                     alt="Web Dev Weekly"
-                    className="transition duration-300 box-border border-3 border-black dark:border-white shadow-box hover:shadow-none rounded-[0.3rem]"
+                    className="transition duration-300 box-border border-3 border-black dark:border-white shadow-box hover:shadow-none dark:shadow-box-white hover:dark:shadow-none rounded-[0.3rem]"
                     width="500"
                     height="500"
                 />
             </Link>
 
-            <div className="grid justify-items-start text-black dark:text-white font-text">
+            <div className="grid justify-items-start font-text">
                 <span>a weekly podcast about web development hosted by</span>
 
                 <div className="grid gap-x-3 grid-flow-col items-center text-2xl font-heading font-black tracking-[-0.075rem] leading-[1.6] max-[700px]:text-[1.4rem]">

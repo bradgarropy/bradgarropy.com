@@ -23,7 +23,7 @@ const ColorTheme: FC = () => {
 
     return (
         <button
-            className="transition duration-300 cursor-pointer border-none bg-transparent p-0 h-6 text-black dark:text-white"
+            className="transition duration-300 cursor-pointer border-none bg-transparent p-0 h-6"
             onClick={onClick}
             aria-label={label}
         >

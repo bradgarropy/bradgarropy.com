@@ -30,7 +30,7 @@ const Layout: FC<LayoutProps> = ({children}) => {
                 }}
             />
 
-            <div className="m-auto grid min-h-screen max-w-5xl grid-rows-[auto_1fr_auto] gap-y-10">
+            <div className="m-auto grid min-h-screen max-w-5xl grid-rows-[auto_1fr_auto] gap-y-10 text-black dark:text-white transition-all">
                 <Header />
 
                 <main className="box-border grid w-full max-w-[700px] justify-self-center py-0 px-5">
