@@ -17,7 +17,7 @@ const Now: FC<NowProps> = ({now, newer, older}) => {
     const markdown = useMarkdown(html)
 
     return (
-        <div className="grid gap-y-16">
+        <div className="grid content-start gap-y-16">
             <div className="flex items-baseline justify-between lowercase text-black">
                 <h1 className="font-heading text-[32px] font-semibold">
                     🧭 now
