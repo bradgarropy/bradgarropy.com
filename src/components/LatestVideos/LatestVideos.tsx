@@ -21,7 +21,7 @@ const LatestVideos: FC<LatestVideosProps> = ({latestVideos}) => {
                             alt={latestVideo.title}
                             width="1280"
                             height="720"
-                            className="border-3] border-solid border-black shadow-box transition-shadow duration-300 hover:shadow-none rounded-[0.3rem]"
+                            className="border-3 border-solid border-black shadow-box transition-shadow duration-300 hover:shadow-none rounded-[0.3rem]"
                         />
                     </Link>
                 )

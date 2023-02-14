@@ -32,7 +32,7 @@ const Newsletter: FC = () => {
                 onSubmit={onSubmit}
             >
                 <input
-                    className="py-4 px-8 text-base font-text border-3] border-black shadow-box text-black placeholder:text-gray-400 focus:outline-none focus:border-purple-400 rounded-[0.3rem]"
+                    className="py-4 px-8 text-base font-text border-3 border-black shadow-box text-black placeholder:text-gray-400 focus:outline-none focus:border-purple-400 rounded-[0.3rem]"
                     placeholder="email@example.com"
                     type="email"
                     name="email"
