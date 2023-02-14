@@ -18,7 +18,7 @@ const Now: FC<NowProps> = ({now, newer, older}) => {
 
     return (
         <div className="grid content-start gap-y-16">
-            <div className="flex items-baseline justify-between lowercase text-black">
+            <div className="flex items-baseline justify-between lowercase">
                 <h1 className="font-heading text-[32px] font-semibold">
                     🧭 now
                 </h1>

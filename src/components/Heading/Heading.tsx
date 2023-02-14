@@ -21,7 +21,7 @@ const Heading: FC<HeadingProps> = ({level, id, children}) => {
     const link = (
         <a
             href={`#${slug}`}
-            className="absolute left-0 hidden h-full -translate-x-full py-0 px-5 text-gray-900 group-hover:visible group-hover:flex group-hover:shadow-none"
+            className="absolute left-0 hidden h-full -translate-x-full py-0 px-5 group-hover:visible group-hover:flex group-hover:shadow-none"
         >
             <Icon name="link" className="w-5 dark:text-white" />
         </a>
