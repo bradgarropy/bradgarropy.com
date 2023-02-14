@@ -8,7 +8,7 @@ const config = {
         "src/components/**/*.tsx",
         "src/transformers/**/*.ts",
     ],
-    darkMode: "class",
+    // darkMode: "class",
     plugins: [typography],
     theme: {
         extend: {
