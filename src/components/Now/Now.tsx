@@ -18,8 +18,8 @@ const Now: FC<NowProps> = ({now, newer, older}) => {
 
     return (
         <div className="grid gap-y-16">
-            <div className="flex items-baseline justify-between text-black lowercase">
-                <h1 className="text-[32px] font-heading font-semibold">
+            <div className="flex items-baseline justify-between lowercase text-black">
+                <h1 className="font-heading text-[32px] font-semibold">
                     🧭 now
                 </h1>
                 <span className="font-text">
@@ -29,7 +29,7 @@ const Now: FC<NowProps> = ({now, newer, older}) => {
 
             <Markdown content={markdown} />
 
-            <div className="flex justify-between content-start">
+            <div className="flex content-start justify-between">
                 <LinkButton
                     to={`/now/${newer?.frontmatter.date}`}
                     disabled={!newer}

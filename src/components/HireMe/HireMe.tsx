@@ -18,7 +18,7 @@ const HireMe: FC<HireMeProps> = ({hireMe, testimonials}) => {
         <div className="grid gap-y-9">
             <Markdown content={markdown} />
 
-            <div className="prose dark:prose-invert prose-h1:font-bold">
+            <div className="prose prose-h1:font-bold dark:prose-invert">
                 <Heading level={1} id="testimonials">
                     💯 what people think of me
                 </Heading>

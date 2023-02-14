@@ -12,7 +12,7 @@ type TitleProps = {
 
 const Title: FC<TitleProps> = ({title}) => {
     return (
-        <h2 className="transition-all duration-300 text-[clamp(3rem,_10vw,_4.5rem)] font-black tracking-[-0.2rem] m-0 hover:text-shadow-3 font-heading text-black dark:text-white">
+        <h2 className="hover:text-shadow-3 m-0 font-heading text-[clamp(3rem,_10vw,_4.5rem)] font-black tracking-[-0.2rem] text-black transition-all duration-300 dark:text-white">
             {title}
         </h2>
     )
@@ -22,7 +22,7 @@ const Section: FC<SectionProps> = ({title, link, children, ...props}) => {
     return (
         <section {...props}>
             {link ? (
-                <Link className="inline-block m-0 mb-7" to={link}>
+                <Link className="m-0 mb-7 inline-block" to={link}>
                     <Title title={title} />
                 </Link>
             ) : (

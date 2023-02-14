@@ -28,11 +28,11 @@ const Newsletter: FC = () => {
             </p>
 
             <form
-                className="grid grid-cols-[1fr_auto] grid-rows-1 gap-x-16 items-baseline max-[600px]:grid-cols-1 max-[600px]:grid-rows-2 max-[600px]:gap-y-4"
+                className="grid grid-cols-[1fr_auto] grid-rows-1 items-baseline gap-x-16 max-[600px]:grid-cols-1 max-[600px]:grid-rows-2 max-[600px]:gap-y-4"
                 onSubmit={onSubmit}
             >
                 <input
-                    className="py-4 px-8 text-base font-text border-3 border-black text-black placeholder:text-gray-400 focus:outline-none shadow-box dark:shadow-box-white focus:border-purple-400 rounded-[0.3rem]"
+                    className="rounded-[0.3rem] border-3 border-black py-4 px-8 font-text text-base text-black shadow-box placeholder:text-gray-400 focus:border-purple-400 focus:outline-none dark:shadow-box-white"
                     placeholder="email@example.com"
                     type="email"
                     name="email"
@@ -41,7 +41,7 @@ const Newsletter: FC = () => {
                 />
 
                 <button
-                    className="transition duration-300 inline-block bg-purple-500 text-white py-2 px-3 rounded-[0.3rem] border-2 border-black shadow-box dark:shadow-box-white mb-[5px] text-base cursor-pointer font-heading font-black tracking-normal hover:enabled:shadow-none disabled:cursor-default"
+                    className="mb-[5px] inline-block cursor-pointer rounded-[0.3rem] border-2 border-black bg-purple-500 py-2 px-3 font-heading text-base font-black tracking-normal text-white shadow-box transition duration-300 hover:enabled:shadow-none disabled:cursor-default dark:shadow-box-white"
                     type="submit"
                     disabled={subscribed}
                 >

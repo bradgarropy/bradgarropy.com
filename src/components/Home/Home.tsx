@@ -18,7 +18,7 @@ type HomeProps = {
 
 const Home: FC<HomeProps> = ({latestPosts, latestVideos, featuredProjects}) => {
     return (
-        <div className="grid gap-y-16 my-16 max-[700px]:m-0">
+        <div className="my-16 grid gap-y-16 max-[700px]:m-0">
             <Hero />
 
             <Section title="blog" link="/blog">

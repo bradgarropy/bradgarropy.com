@@ -36,12 +36,12 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                             <div className="grid grid-flow-col justify-start gap-x-4">
                                 {sponsors.map(sponsor => (
                                     <Link
-                                        className="inline-block relative"
+                                        className="relative inline-block"
                                         key={sponsor.username}
                                         to={sponsor.profile}
                                     >
                                         <img
-                                            className="transition duration-300 w-[6.625rem] m-0 rounded-full border-black dark:border-white border-5 hover:-rotate-2 hover:border-purple-400 hover:dark:border-purple-400"
+                                            className="m-0 w-[6.625rem] rounded-full border-5 border-black transition duration-300 hover:-rotate-2 hover:border-purple-400 dark:border-white hover:dark:border-purple-400"
                                             src={createExternalImageUrl(
                                                 sponsor.avatar,
                                             )}
@@ -50,7 +50,7 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                                             height="460"
                                         />
 
-                                        <span className="text-[2.5rem] absolute -top-4 -left-4">
+                                        <span className="absolute -top-4 -left-4 text-[2.5rem]">
                                             {sponsor.tier}
                                         </span>
                                     </Link>

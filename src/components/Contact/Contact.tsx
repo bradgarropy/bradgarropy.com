@@ -12,7 +12,7 @@ const Contact: FC<ContactProps> = ({contact}) => {
 
     return (
         <div className="place-self-center">
-            <h1 className="text-[2rem] mb-7 font-semibold font-heading">
+            <h1 className="mb-7 font-heading text-[2rem] font-semibold">
                 👋🏼 say hi
             </h1>
             <Markdown content={markdown} />

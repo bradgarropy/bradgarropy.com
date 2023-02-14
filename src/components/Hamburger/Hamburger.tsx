@@ -12,7 +12,7 @@ const Hamburger: FC = () => {
     return (
         <Icon
             name="menu"
-            className="text-black hidden cursor-pointer text-2xl max-[800px]:block"
+            className="hidden cursor-pointer text-2xl text-black max-[800px]:block"
             onClick={onClick}
         />
     )

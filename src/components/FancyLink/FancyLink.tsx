@@ -9,7 +9,7 @@ type FancyLinkProps = {
 const FancyLink: FC<FancyLinkProps> = ({children, to}) => {
     return (
         <Link
-            className="transition duration-300 text-black shadow-link hover:text-black hover:shadow-link-hover"
+            className="text-black shadow-link transition duration-300 hover:text-black hover:shadow-link-hover"
             to={to}
         >
             {children}

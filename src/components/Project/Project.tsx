@@ -10,18 +10,18 @@ type ProjectProps = {
 const Project: FC<ProjectProps> = ({project}) => {
     return (
         <Link
-            className="transition duration-300 p-[1.125rem] rounded-[0.3rem] border-3 border-black dark:border-white shadow-box hover:shadow-none dark:shadow-box-white hover:dark:shadow-none grid gap-y-4 content-between font-text"
+            className="grid content-between gap-y-4 rounded-[0.3rem] border-3 border-black p-[1.125rem] font-text shadow-box transition duration-300 hover:shadow-none dark:border-white dark:shadow-box-white hover:dark:shadow-none"
             to={`${project.url}#readme`}
         >
             <div>
-                <h3 className="m-0 font-heading font-black text-2xl tracking-[-0.075rem]">
+                <h3 className="m-0 font-heading text-2xl font-black tracking-[-0.075rem]">
                     {project.name}
                 </h3>
 
                 <p className="m-0">{project.description}</p>
             </div>
 
-            <div className="grid grid-flow-col justify-between items-center">
+            <div className="grid grid-flow-col items-center justify-between">
                 <ProjectTech project={project} />
 
                 <span className="m-0">{`${project.stars}⭐`}</span>

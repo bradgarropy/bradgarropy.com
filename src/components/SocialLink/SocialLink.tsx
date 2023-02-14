@@ -51,7 +51,7 @@ const SocialLink: FC<SocialLinkProps> = ({platform}) => {
     return (
         <Link to={url}>
             <Icon
-                className="transition duration-300 h-8 fill-black dark:fill-white hover:fill-purple-400"
+                className="h-8 fill-black transition duration-300 hover:fill-purple-400 dark:fill-white"
                 name={name}
             />
         </Link>

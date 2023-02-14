@@ -4,7 +4,7 @@ import {createImageUrl} from "utils/cloudinary"
 
 const Hero: FC = () => {
     return (
-        <div className="grid grid-cols-hero items-start self-center justify-self-center max-[700px]:grid-cols-1 text-black dark:text-white transition duration-300">
+        <div className="grid grid-cols-hero items-start self-center justify-self-center text-black transition duration-300 dark:text-white max-[700px]:grid-cols-1">
             <Link
                 to="https://instagram.com/bradgarropy"
                 className="max-[700px]:m-auto max-[700px]:w-4/5"
@@ -12,14 +12,14 @@ const Hero: FC = () => {
                 <img
                     src={createImageUrl("/pages/home/profile.jpg")}
                     alt="bg"
-                    className="rounded-full border-7 border-black dark:border-white transform duration-300 hover:-rotate-2 hover:border-purple-400"
+                    className="transform rounded-full border-7 border-black duration-300 hover:-rotate-2 hover:border-purple-400 dark:border-white"
                     width="460"
                     height="460"
                 />
             </Link>
 
             <div>
-                <h1 className="m-0 text-5xl font-black leading-normal -tracking-[0.2rem] font-heading">
+                <h1 className="m-0 font-heading text-5xl font-black leading-normal -tracking-[0.2rem]">
                     i&apos;m brad garropy
                 </h1>
 

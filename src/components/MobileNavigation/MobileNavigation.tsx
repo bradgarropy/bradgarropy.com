@@ -12,14 +12,14 @@ const MobileNavigation: FC = () => {
     }
 
     return open ? (
-        <div className="bg-white fixed inset-0 grid z-10 grid-rows-[auto_1fr] text-4xl overflow-hidden">
+        <div className="fixed inset-0 z-10 grid grid-rows-[auto_1fr] overflow-hidden bg-white text-4xl">
             <Icon
                 name="close"
-                className="text-black m-5 cursor-pointer justify-self-end"
+                className="m-5 cursor-pointer justify-self-end text-black"
                 onClick={onClick}
             />
 
-            <div className="grid grid-flow-row gap-y-4 content-center justify-center">
+            <div className="grid grid-flow-row content-center justify-center gap-y-4">
                 <Link className="text-black hover:text-purple-400" to="/blog">
                     blog
                 </Link>

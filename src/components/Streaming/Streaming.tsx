@@ -4,7 +4,7 @@ import {FC} from "react"
 const Streaming: FC = () => {
     return (
         <Link to="https://twitch.tv/bradgarropy">
-            <span className="font-heading font-black tracking-[-0.075rem] text-lg animate-pulse">
+            <span className="animate-pulse font-heading text-lg font-black tracking-[-0.075rem]">
                 🎥 streaming
             </span>
         </Link>

@@ -9,7 +9,7 @@ type LatestVideosProps = {
 
 const LatestVideos: FC<LatestVideosProps> = ({latestVideos}) => {
     return (
-        <div className="grid grid-cols-2 gap-4 justify-items-start max-[700px]:grid-cols-1">
+        <div className="grid grid-cols-2 justify-items-start gap-4 max-[700px]:grid-cols-1">
             {latestVideos.map(latestVideo => {
                 return (
                     <Link
@@ -21,7 +21,7 @@ const LatestVideos: FC<LatestVideosProps> = ({latestVideos}) => {
                             alt={latestVideo.title}
                             width="1280"
                             height="720"
-                            className="border-3 border-solid border-black dark:border-white shadow-box hover:shadow-none dark:shadow-box-white hover:dark:shadow-none transition duration-300 rounded-[0.3rem]"
+                            className="rounded-[0.3rem] border-3 border-solid border-black shadow-box transition duration-300 hover:shadow-none dark:border-white dark:shadow-box-white hover:dark:shadow-none"
                         />
                     </Link>
                 )

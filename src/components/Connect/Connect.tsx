@@ -4,11 +4,11 @@ import {createImageUrl} from "utils/cloudinary"
 
 const Connect: FC = () => {
     return (
-        <div className="grid gap-8 text-xl text-center">
+        <div className="grid gap-8 text-center text-xl">
             <img
                 src={createImageUrl("/pages/home/profile.jpg")}
                 alt="bg"
-                className="rounded-full border-7 border-solid border-black max-w-[14rem] w-[80vw]"
+                className="w-[80vw] max-w-[14rem] rounded-full border-7 border-solid border-black"
                 width="460"
                 height="460"
             />
@@ -18,7 +18,7 @@ const Connect: FC = () => {
                 <p className="m-0">Let&apos;s connect on these platforms.</p>
             </div>
 
-            <div className="grid grid-flow-col justify-center content-center gap-x-5">
+            <div className="grid grid-flow-col content-center justify-center gap-x-5">
                 <SocialLink platform="twitch" />
                 <SocialLink platform="github" />
                 <SocialLink platform="youtube" />

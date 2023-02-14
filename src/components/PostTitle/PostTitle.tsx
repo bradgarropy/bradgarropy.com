@@ -9,11 +9,11 @@ type PostTitleProps = {
 
 const PostTitle: FC<PostTitleProps> = ({title, slug}) => {
     return (
-        <h1 className="m-0 text-[40px] max-[750px]:text-2xl font-semibold font-heading text-black dark:text-white">
+        <h1 className="m-0 font-heading text-[40px] font-semibold text-black dark:text-white max-[750px]:text-2xl">
             {slug ? (
                 <Link
                     to={`/blog/${slug}`}
-                    className="hover:text-purple-400 duration-300 transition"
+                    className="transition duration-300 hover:text-purple-400"
                 >
                     {title}
                 </Link>
