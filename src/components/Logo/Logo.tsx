@@ -2,7 +2,7 @@ import {FC} from "react"
 
 const Logo: FC = () => (
     <svg
-        className="inline-block w-[50px] fill-black transition duration-300"
+        className="inline-block w-[50px] fill-black transition duration-300 dark:fill-white"
         version="1.1"
         viewBox="0 0 26.458 26.458"
         xmlns="http://www.w3.org/2000/svg"

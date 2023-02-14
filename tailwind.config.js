@@ -8,6 +8,8 @@ const config = {
         "src/components/**/*.tsx",
         "src/transformers/**/*.ts",
     ],
+    darkMode: "class",
+    plugins: [typography],
     theme: {
         extend: {
             animation: {
@@ -47,7 +49,6 @@ const config = {
             heading: ["Montserrat", "sans-serif"],
         },
     },
-    plugins: [typography],
 }
 
 module.exports = config

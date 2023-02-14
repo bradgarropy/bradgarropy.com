@@ -14,14 +14,16 @@ const ColorTheme: FC = () => {
     const onClick = () => {
         if (theme === "light") {
             setTheme("dark")
+            document.documentElement.classList.add("dark")
         } else {
             setTheme("light")
+            document.documentElement.classList.remove("dark")
         }
     }
 
     return (
         <button
-            className="cursor-pointer border-none bg-transparent p-0 h-6"
+            className="transition duration-300 cursor-pointer border-none bg-transparent p-0 h-6 text-black dark:text-white"
             onClick={onClick}
             aria-label={label}
         >

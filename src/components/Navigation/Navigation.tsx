@@ -3,9 +3,9 @@ import {FC} from "react"
 
 const Navigation: FC = () => {
     return (
-        <nav className="grid grid-flow-col gap-x-5 text-black transition duration-300 max-[800px]:hidden font-text">
+        <nav className="grid grid-flow-col gap-x-5 text-black dark:text-white transition duration-300 max-[800px]:hidden font-text">
             <Link
-                className="transition duration-300 text-black hover:text-purple-400"
+                className="transition duration-300 hover:text-purple-400"
                 to="/blog"
             >
                 blog
@@ -14,7 +14,7 @@ const Navigation: FC = () => {
             <span>|</span>
 
             <Link
-                className="transition duration-300 text-black hover:text-purple-400"
+                className="transition duration-300 hover:text-purple-400"
                 to="/now"
             >
                 now
@@ -23,7 +23,7 @@ const Navigation: FC = () => {
             <span>|</span>
 
             <Link
-                className="transition duration-300 text-black hover:text-purple-400"
+                className="transition duration-300 hover:text-purple-400"
                 to="/uses"
             >
                 uses
@@ -32,7 +32,7 @@ const Navigation: FC = () => {
             <span>|</span>
 
             <Link
-                className="transition duration-300 text-black hover:text-purple-400"
+                className="transition duration-300 hover:text-purple-400"
                 to="/hire-me"
             >
                 hire me
@@ -41,7 +41,7 @@ const Navigation: FC = () => {
             <span>|</span>
 
             <Link
-                className="transition duration-300 text-black hover:text-purple-400"
+                className="transition duration-300 hover:text-purple-400"
                 to="/contact"
             >
                 contact
