@@ -12,7 +12,7 @@ const Podcast: FC = () => {
                 <img
                     src={createImageUrl("/pages/home/web-dev-weekly.jpg")}
                     alt="Web Dev Weekly"
-                    className="transition duration-300 box-border border-[3px] border-black shadow-box hover:shadow-none rounded-[0.3rem]"
+                    className="transition duration-300 box-border border-3] border-black shadow-box hover:shadow-none rounded-[0.3rem]"
                     width="500"
                     height="500"
                 />

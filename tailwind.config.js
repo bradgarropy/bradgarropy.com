@@ -14,6 +14,8 @@ const config = {
                 pulse: "pulse 2s infinite ease-out",
             },
             borderWidth: {
+                3: "3px",
+                5: "5px",
                 7: "7px",
             },
             boxShadow: theme => ({

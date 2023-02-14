@@ -8,7 +8,7 @@ const Connect: FC = () => {
             <img
                 src={createImageUrl("/pages/home/profile.jpg")}
                 alt="bg"
-                className="rounded-full border-[7px] border-solid border-black max-w-[14rem] w-[80vw]"
+                className="rounded-full border-7 border-solid border-black max-w-[14rem] w-[80vw]"
                 width="460"
                 height="460"
             />
