@@ -24,7 +24,7 @@ const getHTML = (string: string): string => {
 
     const html = `
         <iframe
-            class="aspect-video w-full rounded-[0.3rem] my-8"
+            class="aspect-video w-full rounded my-8"
             src="${src}&parent=bradgarropy.com"
             frameborder="0"
             scrolling="no"

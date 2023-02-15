@@ -15,6 +15,9 @@ const config = {
             animation: {
                 pulse: "pulse 2s infinite ease-out",
             },
+            borderRadius: {
+                DEFAULT: "0.3rem",
+            },
             borderWidth: {
                 3: "3px",
                 5: "5px",

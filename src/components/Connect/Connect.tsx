@@ -4,7 +4,7 @@ import {createImageUrl} from "utils/cloudinary"
 
 const Connect: FC = () => {
     return (
-        <div className="grid gap-8 text-center text-xl">
+        <div className="grid justify-items-center gap-8 text-center text-xl">
             <img
                 src={createImageUrl("/pages/home/profile.jpg")}
                 alt="bg"

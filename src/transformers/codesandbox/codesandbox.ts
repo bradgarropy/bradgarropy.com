@@ -7,7 +7,7 @@ const getHTML = (string: string): string => {
 
     const html = `
         <iframe
-            class="aspect-video w-full rounded-[0.3rem] my-8 h-[500px]"
+            class="aspect-video w-full rounded my-8 h-[500px]"
             src="${src}"
             frameborder="0"
             allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"

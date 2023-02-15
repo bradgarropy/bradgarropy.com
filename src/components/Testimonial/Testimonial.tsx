@@ -16,7 +16,7 @@ const Testimonial: FC<TestimonialProps> = ({testimonial}) => {
 
     return (
         <Link
-            className="grid max-w-xl gap-8 rounded-[0.3rem] border-3 border-black p-8 shadow-box transition duration-300 hover:shadow-none dark:border-white dark:shadow-box-white hover:dark:shadow-none"
+            className="grid max-w-xl gap-8 rounded border-3 border-black p-8 shadow-box transition duration-300 hover:shadow-none dark:border-white dark:shadow-box-white hover:dark:shadow-none"
             id={slug}
             key={testimonial.frontmatter.name}
             to={testimonial.frontmatter.profile}
