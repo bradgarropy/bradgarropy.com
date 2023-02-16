@@ -23,6 +23,7 @@ topic: coding
 -   got rid of a whole global css file
 -   configuration isn't too crazy (59 lines)
 -   despite tailwind being verbose, i removed code
+-   can still leverage the cascade
 
 ![tailwind diff][tailwind-diff]
 
