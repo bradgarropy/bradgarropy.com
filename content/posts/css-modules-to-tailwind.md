@@ -23,7 +23,7 @@ I also don't have to spend any time thinking about class naming, with the except
 
 ![grid placement][grid-placement]
 
-Luckily, Tailwind has an awesome [vscode extension][vscode-extension] that not only autocompletes class names for you, but also shows the associated CSS output! This plugin is super helpful on all properties with the exception of `border`. I found that when
+Luckily, Tailwind has an awesome [vscode extension][vscode-extension] that not only autocompletes class names for you, but also shows the associated CSS output! This plugin is super helpful on all properties with only a few exceptions. For example, I found that when it autocompletes `border`, it places all of the different `border-spacing` values at the top of the list, forcing me to scroll way down to reach more relevant classes like `border-4`.
 
 ## 💯 incredibly maintainable
 
