@@ -11,9 +11,9 @@ type SponsorsProps = {
 
 const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
     return (
-        <>
+        <div className="grid content-start gap-y-16">
             <Section title="💜 thank you">
-                <p>
+                <p className="my-7">
                     Each and every supporter I have incentivizes me to continue
                     creating libraries, videos, blogs, and streams. All earnings
                     will go directly towards improving the quality of my work,
@@ -29,46 +29,44 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                 </p>
             </Section>
 
-            <div className="grid gap-y-20">
-                {Object.entries(sponsors).map(([frequency, sponsors]) => (
-                    <Section key={frequency} title={frequency}>
-                        {sponsors.length ? (
-                            <div className="grid grid-flow-col justify-start gap-x-4">
-                                {sponsors.map(sponsor => (
-                                    <Link
-                                        className="relative inline-block"
-                                        key={sponsor.username}
-                                        to={sponsor.profile}
-                                    >
-                                        <img
-                                            className="m-0 w-[6.625rem] rounded-full border-5 border-black transition duration-300 hover:-rotate-2 hover:border-purple-400 dark:border-white hover:dark:border-purple-400"
-                                            src={createExternalImageUrl(
-                                                sponsor.avatar,
-                                            )}
-                                            alt={sponsor.username}
-                                            width="460"
-                                            height="460"
-                                        />
+            {Object.entries(sponsors).map(([frequency, sponsors]) => (
+                <Section key={frequency} title={frequency}>
+                    {sponsors.length ? (
+                        <div className="grid grid-flow-col justify-start gap-x-4">
+                            {sponsors.map(sponsor => (
+                                <Link
+                                    className="relative inline-block"
+                                    key={sponsor.username}
+                                    to={sponsor.profile}
+                                >
+                                    <img
+                                        className="m-0 w-[6.625rem] rounded-full border-5 border-black transition duration-300 hover:-rotate-2 hover:border-purple-400 dark:border-white hover:dark:border-purple-400"
+                                        src={createExternalImageUrl(
+                                            sponsor.avatar,
+                                        )}
+                                        alt={sponsor.username}
+                                        width="460"
+                                        height="460"
+                                    />
 
-                                        <span className="absolute -top-4 -left-4 text-[2.5rem]">
-                                            {sponsor.tier}
-                                        </span>
-                                    </Link>
-                                ))}
-                            </div>
-                        ) : (
-                            <p>
-                                Nobody yet,{" "}
-                                <FancyLink to="https://bradgarropy.com/sponsor">
-                                    be the first
-                                </FancyLink>
-                                !
-                            </p>
-                        )}
-                    </Section>
-                ))}
-            </div>
-        </>
+                                    <span className="absolute -top-4 -left-4 text-[2.5rem]">
+                                        {sponsor.tier}
+                                    </span>
+                                </Link>
+                            ))}
+                        </div>
+                    ) : (
+                        <p>
+                            Nobody yet,{" "}
+                            <FancyLink to="https://bradgarropy.com/sponsor">
+                                be the first
+                            </FancyLink>
+                            !
+                        </p>
+                    )}
+                </Section>
+            ))}
+        </div>
     )
 }
 

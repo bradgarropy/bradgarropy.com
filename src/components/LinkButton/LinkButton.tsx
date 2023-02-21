@@ -16,11 +16,13 @@ const LinkButton: FC<LinkButtonProps> = ({
     ...props
 }) => {
     const classes = classnames(
-        "transition duration-300 inline-block bg-white py-2 px-3 rounded border-2 border-black shadow-box mb-1",
+        "transition duration-300 dark:text-black inline-block bg-white py-2 px-3 rounded border-2 border-black shadow-box dark:shadow-box-white mb-1",
         {
-            ["shadow-reverse-box"]: reverse,
-            ["text-gray-300 border-gray-300 shadow-gray-300"]: disabled,
-            ["hover:text-inherit hover:shadow-none"]: !disabled,
+            ["shadow-reverse-box dark:shadow-reverse-box-white"]: reverse,
+            ["text-gray-300 dark:text-gray-300 border-gray-300 shadow-gray-300"]:
+                disabled,
+            ["hover:text-inherit hover:shadow-none hover:dark:shadow-none"]:
+                !disabled,
         },
     )
 
