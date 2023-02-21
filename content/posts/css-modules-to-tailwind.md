@@ -51,7 +51,7 @@ While Tailwind does integrate well with [Next.js][next] through [create-next-app
 
 # 🧶 wrap up
 
-Overall I'm very happy with my migration to Tailwind. It took longer than expected, and rewriting everything from scratch would have probably been quicker, but I liked perspective it gave me. Tailwind has a great developer experience, it improved performance on my site, and gives me a great base to start styling from.
+Overall I'm very happy with my migration to [Tailwind][tailwind]. It took longer than expected, and rewriting everything from scratch would have probably been quicker, but I liked perspective it gave me. Tailwind has a great developer experience, it improved performance on my site, and gives me a great base to start styling from.
 
 [http-requests]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/http-requests.png
 [page-load-data]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/page-load-data.png
