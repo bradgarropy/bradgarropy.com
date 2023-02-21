@@ -27,27 +27,31 @@ Luckily, Tailwind has an awesome [vscode extension][vscode-extension] that not o
 
 ## 💯 incredibly maintainable
 
--   can add or remove classes knowing it won't affect anything else
--   got rid of a whole global css file
--   configuration isn't too crazy (59 lines)
--   despite tailwind being verbose, i removed code
--   can still leverage the cascade
+The biggest benefit that Tailwind offers is its long term maintainability. While making this transition, I had to remove the majority of a `global.css` file. Removing those styles was incredibly difficult because I didn't know which parts of the website would be affected. With Tailwind, all styles are declared right on the elements they modify. Despite being pretty verbose, I actually _removed_ code during the migration.
 
 ![tailwind diff][tailwind-diff]
 
+That doesn't mean there is no reusability. You can still leverage the cascade with Tailwind's class based styling. Instead of declaring a `font-family` on every element, you can place the class high up in the DOM and the styles will apply to all children.
+
+If you ever need to break free from Tailwind's out of the box classes, you can use [arbitrary values][arbitrary-values], or customize your [configuration][configuration]. While I did a fair bit of customization, it was still very manageable at only [59 lines][tailwind-config] of code.
+
 ## 🏎️ performance improvements
 
--   less http requests
--   faster load time
--   less data transferred
--   [github issue][github-issue]
+Most importantly, Tailwind brought me performance improvements on my website. Primarily, this was through reducing the amount of HTTP requests. It turns out that Next.js [preloads CSS Modules][github-issue] for client side routing to adjacent pages, which caused seven extra requests on my home page. Given that I'm moving to [Remix][remix] soon, I won't have much use for client side routing.
 
 ![http requests][http-requests]
+
+This reduction in HTTP requests ultimately lead to faster load times on my website by about `200ms` and a reduced page weight of around `50kb`.
+
 ![page load data][page-load-data]
 
 # 🙌🏼 framework integrations
 
--   first class support in remix
+While Tailwind does integrate well with [Next.js][next] through [create-next-app][with-tailwind], that only supports new projects. As I mentioned before I'll be moving to [Remix][remix], which is getting first class [Tailwind support][remix-tailwind] very soon.
+
+# 🧶 wrap up
+
+Overall I'm very happy with my migration to Tailwind. It took longer than expected, and rewriting everything from scratch would have probably been quicker, but I liked perspective it gave me. Tailwind has a great developer experience, it improved performance on my site, and gives me a great base to start styling from.
 
 [http-requests]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/http-requests.png
 [page-load-data]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/page-load-data.png
@@ -62,5 +66,12 @@ Luckily, Tailwind has an awesome [vscode extension][vscode-extension] that not o
 [preflight]: https://tailwindcss.com/docs/preflight
 [plugins]: https://tailwindcss.com/docs/plugins#official-plugins
 [typography-plugin]: https://tailwindcss.com/docs/typography-plugin
+[create-next-app]: https://nextjs.org/docs/api-reference/create-next-app
+[with-tailwind]: https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss
+[remix-tailwind]: https://remix.run/docs/en/v1/guides/styling#tailwind-css
+[arbitrary-values]: https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values
+[configuration]: https://tailwindcss.com/docs/configuration
+[remix]: https://remix.run
+[next]: https://nextjs.org
 
 [tailwind-config]:
