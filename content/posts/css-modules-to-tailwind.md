@@ -1,7 +1,7 @@
 ---
 title: 💨 css modules to tailwind
 slug: css-modules-to-tailwind
-date: "2023-02-16"
+date: "2023-02-22"
 topic: coding
 ---
 
@@ -73,5 +73,4 @@ Overall I'm very happy with my migration to [Tailwind][tailwind]. It took longer
 [configuration]: https://tailwindcss.com/docs/configuration
 [remix]: https://remix.run
 [next]: https://nextjs.org
-
-[tailwind-config]:
+[tailwind-config]: https://github.com/bradgarropy/bradgarropy.com/blob/master/tailwind.config.js
