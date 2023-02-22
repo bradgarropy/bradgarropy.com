@@ -4,8 +4,6 @@ import PostHeader from "components/PostHeader"
 import {FC} from "react"
 import {Post as PostType} from "types/post"
 
-import styles from "./Post.module.css"
-
 type PostProps = {
     post: PostType
 }
@@ -15,7 +13,7 @@ const Post: FC<PostProps> = ({post}) => {
     const {slug, title, date, topic} = frontmatter
 
     return (
-        <article className={styles.post}>
+        <article>
             <PostHeader date={date} topic={topic} title={title} />
             <PostBody html={html} />
             <PostFooter slug={slug} />

@@ -3,28 +3,25 @@ import {FC} from "react"
 import {Video} from "types/video"
 import {createYouTubeUrl} from "utils/cloudinary"
 
-import LatestVideosStyles from "./LatestVideos.module.css"
-
 type LatestVideosProps = {
     latestVideos: Video[]
 }
 
 const LatestVideos: FC<LatestVideosProps> = ({latestVideos}) => {
     return (
-        <div className={LatestVideosStyles.latestVideos}>
+        <div className="grid grid-cols-2 justify-items-start gap-4 max-[700px]:grid-cols-1">
             {latestVideos.map(latestVideo => {
                 return (
                     <Link
                         key={latestVideo.id}
                         to={`https://www.youtube.com/watch?v=${latestVideo.id}`}
-                        className={LatestVideosStyles.thumbnailLink}
                     >
                         <img
                             src={createYouTubeUrl(latestVideo.id)}
                             alt={latestVideo.title}
                             width="1280"
                             height="720"
-                            className={LatestVideosStyles.thumbnail}
+                            className="rounded border-3 border-solid border-black shadow-box transition duration-300 hover:shadow-none dark:border-white dark:shadow-box-white hover:dark:shadow-none"
                         />
                     </Link>
                 )

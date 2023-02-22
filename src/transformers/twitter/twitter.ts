@@ -11,7 +11,7 @@ const getHTML = async (string: string): Promise<string> => {
     )
 
     const html = `
-        <div class="twitter">
+        <div class="grid justify-center">
             ${response.html}
         </div>
     `

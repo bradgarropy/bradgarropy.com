@@ -6,7 +6,6 @@ import {FC, ReactNode} from "react"
 import {createImageUrl} from "utils/cloudinary"
 
 import pkg from "../../../package.json"
-import styles from "./Layout.module.css"
 
 type LayoutProps = {
     children?: ReactNode
@@ -31,9 +30,13 @@ const Layout: FC<LayoutProps> = ({children}) => {
                 }}
             />
 
-            <div className={styles.container}>
+            <div className="m-auto grid min-h-screen max-w-5xl grid-rows-[auto_1fr_auto] gap-y-10 font-text text-black transition-all dark:text-white">
                 <Header />
-                <main className={styles.content}>{children}</main>
+
+                <main className="box-border grid w-full max-w-[700px] justify-self-center py-0 px-5">
+                    {children}
+                </main>
+
                 <Footer />
             </div>
         </AppProvider>

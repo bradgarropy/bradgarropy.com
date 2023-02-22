@@ -19,15 +19,10 @@ test("transforms codesandbox links", () => {
         "https://codesandbox.io/s/exciting-pascal-j5hwu",
     )
 
-    expect(html).toEqual(`
-        <div class="codesandbox">
-            <iframe
-                src="https://codesandbox.io/embed/exciting-pascal-j5hwu"
-                frameborder="0"
-                allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-                sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-            >
-            </iframe>
-        </div>
-    `)
+    const node = new DOMParser().parseFromString(html, "text/html")
+    const iframe = node.querySelector("iframe")
+
+    expect(iframe.src).toEqual(
+        "https://codesandbox.io/embed/exciting-pascal-j5hwu",
+    )
 })

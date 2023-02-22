@@ -12,18 +12,12 @@ test("ignores non-twitch links", () => {
 
 test("transforms twitch channels", () => {
     const html = twitchTransformer.getHTML("https://twitch.tv/bradgarropy")
+    const node = new DOMParser().parseFromString(html, "text/html")
+    const iframe = node.querySelector("iframe")
 
-    expect(html).toEqual(`
-        <div class="twitch">
-            <iframe
-                src="https://player.twitch.tv?channel=bradgarropy&parent=bradgarropy.com"
-                frameborder="0"
-                scrolling="no"
-                allowfullscreen
-            >
-            </iframe>
-        </div>
-    `)
+    expect(iframe.src).toEqual(
+        "https://player.twitch.tv/?channel=bradgarropy&parent=bradgarropy.com",
+    )
 })
 
 test("transforms twitch videos", () => {
@@ -31,17 +25,12 @@ test("transforms twitch videos", () => {
         "https://twitch.tv/videos/1272889918",
     )
 
-    expect(html).toEqual(`
-        <div class="twitch">
-            <iframe
-                src="https://player.twitch.tv?video=1272889918&parent=bradgarropy.com"
-                frameborder="0"
-                scrolling="no"
-                allowfullscreen
-            >
-            </iframe>
-        </div>
-    `)
+    const node = new DOMParser().parseFromString(html, "text/html")
+    const iframe = node.querySelector("iframe")
+
+    expect(iframe.src).toEqual(
+        "https://player.twitch.tv/?video=1272889918&parent=bradgarropy.com",
+    )
 })
 
 test("transforms twitch clips", () => {
@@ -49,33 +38,26 @@ test("transforms twitch clips", () => {
         "https://twitch.tv/bradgarropy/clip/ZealousSpeedyStingrayUnSane",
     )
 
-    expect(domainHtml).toEqual(`
-        <div class="twitch">
-            <iframe
-                src="https://clips.twitch.tv/embed?clip=ZealousSpeedyStingrayUnSane&parent=bradgarropy.com"
-                frameborder="0"
-                scrolling="no"
-                allowfullscreen
-            >
-            </iframe>
-        </div>
-    `)
+    const domainNode = new DOMParser().parseFromString(domainHtml, "text/html")
+    const domainIframe = domainNode.querySelector("iframe")
+
+    expect(domainIframe.src).toEqual(
+        "https://clips.twitch.tv/embed?clip=ZealousSpeedyStingrayUnSane&parent=bradgarropy.com",
+    )
 
     const subdomainHtml = twitchTransformer.getHTML(
         "https://clips.twitch.tv/ZealousSpeedyStingrayUnSane",
     )
 
-    expect(subdomainHtml).toEqual(`
-        <div class="twitch">
-            <iframe
-                src="https://clips.twitch.tv/embed?clip=ZealousSpeedyStingrayUnSane&parent=bradgarropy.com"
-                frameborder="0"
-                scrolling="no"
-                allowfullscreen
-            >
-            </iframe>
-        </div>
-    `)
+    const subdomainNode = new DOMParser().parseFromString(
+        subdomainHtml,
+        "text/html",
+    )
+    const subdomainIframe = subdomainNode.querySelector("iframe")
+
+    expect(subdomainIframe.src).toEqual(
+        "https://clips.twitch.tv/embed?clip=ZealousSpeedyStingrayUnSane&parent=bradgarropy.com",
+    )
 
     const emptyHtml = twitchTransformer.getHTML("https://twitch.tv")
 

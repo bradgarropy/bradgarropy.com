@@ -86,6 +86,7 @@
         "@bradgarropy/plop-generator-react-context": "^1.1.0",
         "@bradgarropy/plop-generator-react-hook": "^1.1.0",
         "@svgr/webpack": "^6.1.2",
+        "@tailwindcss/typography": "^0.5.9",
         "@testing-library/jest-dom": "^5.15.0",
         "@testing-library/react": "^13.4.0",
         "@testing-library/user-event": "^14.4.3",
@@ -97,6 +98,7 @@
         "@typescript-eslint/parser": "^5.4.0",
         "@vercel/node": "^2.5.18",
         "all-contributors-cli": "^6.20.0",
+        "autoprefixer": "^10.4.12",
         "babel-jest": "^27.3.1",
         "eslint": "^8.2.0",
         "eslint-config-next": "^12.0.8",
@@ -112,8 +114,11 @@
         "plop-helper-bradgarropy": "^1.0.0",
         "plop-helper-date": "^1.0.0",
         "plop-helper-slugify": "^1.1.0",
-        "prettier": "^2.4.1",
+        "postcss": "^8.4.18",
+        "prettier": "^2.8.4",
+        "prettier-plugin-tailwindcss": "^0.2.2",
         "react": "^18.2.0",
+        "tailwindcss": "^3.2.0",
         "typescript": "^4.1.2"
     }
 }

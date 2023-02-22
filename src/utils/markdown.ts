@@ -12,7 +12,6 @@ import remarkInlineLinks from "remark-inline-links"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
 import remarkUnwrapImages from "remark-unwrap-images"
-import LinkStyles from "styles/Link.module.css"
 import {
     codesandboxTransformer,
     twitchTransformer,
@@ -68,7 +67,7 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
             rel: ["noopener", "noreferrer"],
         })
         .use(rehypeCloudinaryImageSize)
-        .use(rehypeImageLinks, {classes: [LinkStyles.image]})
+        .use(rehypeImageLinks)
         .use(rehypeRaw)
         .use(rehypeStringify)
 

@@ -36,9 +36,9 @@ const useMarkdown = (html: string) => {
         })
 
     const file = processor.processSync(html)
-    const Markdown = file.result
+    const markdown = file.result
 
-    return Markdown
+    return markdown
 }
 
 export default useMarkdown
