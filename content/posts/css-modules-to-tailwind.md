@@ -5,7 +5,7 @@ date: "2023-02-22"
 topic: coding
 ---
 
-I just finished migrating this website from [CSS Modules][css-modules] to [Tailwind][tailwind]. Overall it was a straightforward, but tedious process. The transition has proven to be worth it, and I'll explain my thoughts on the outcome below.
+I just finished migrating this website from [CSS Modules][css-modules] to [Tailwind][tailwind]. Overall it was a straightforward, but long process. The transition has proven to be worth it, and I'll explain my thoughts on the outcome below.
 
 ## 🧬 better defaults
 
@@ -13,11 +13,11 @@ If nothing else, Tailwind starts you off with a [better set of defaults][preflig
 
 Tailwind also provides you with a stellar set of design tokens out of the box. Everything from colors, to box shadows, to spacing have all been excellently designed for you to utilize.
 
-If you opt into some of Tailwind's [official plugins][plugins], they offer additional features than what comes out of the box. For example, the [typography plugin][typography-plugin] provided much better styling for my `markdown` content than I had created myself.
+If you opt into some of Tailwind's [official plugins][plugins], they offer great additional features. For example, the [typography plugin][typography-plugin] provided much better styling for my `markdown` content than I had created myself.
 
 ## ✍🏼 authoring experience
 
-While the authoring experience of Tailwind is its number on criticism, I didn't find it to be that bad. I really love the fact that I'm able to write my styles directly next to the elements that they affect rather than off in another file.
+While the authoring experience of Tailwind is its number one criticism, I didn't find it to be that bad. I really love the fact that I'm able to write my styles directly next to the elements that they affect rather than off in another file.
 
 I also don't have to spend any time thinking about class naming, with the exception of a few Tailwind classes that confuse me every time! Specifically the grid placement classes. Sometimes you have to be specific about the placement direction, like `justify` or `align`, other times you have to be specific about the thing you're placing, like `content` or `items`, and sometimes it's a mix of both.
 
@@ -27,17 +27,17 @@ Luckily, Tailwind has an awesome [vscode extension][vscode-extension] that not o
 
 ## 💯 incredibly maintainable
 
-The biggest benefit that Tailwind offers is its long term maintainability. While making this transition, I had to remove the majority of a `global.css` file. Removing those styles was incredibly difficult because I didn't know which parts of the website would be affected. With Tailwind, all styles are declared right on the elements they modify. Despite being pretty verbose, I actually _removed_ code during the migration.
+The biggest benefit that Tailwind offers is its long term maintainability. While making this transition, I was able to remove the majority of a `global.css` file. Modifying those styles was incredibly difficult because I didn't know which parts of the website would be affected. With Tailwind, all styles are declared right on the elements they modify, which means no scoping issues. Despite being pretty verbose, I actually _removed_ code during the migration.
 
 ![tailwind diff][tailwind-diff]
 
-That doesn't mean there is no reusability. You can still leverage the cascade with Tailwind's class based styling. Instead of declaring a `font-family` on every element, you can place the class high up in the DOM and the styles will apply to all children.
+But that doesn't mean Tailwind is not reusable. You can still leverage the cascade with Tailwind's class based styling. Instead of declaring a `font-family` on every element, you can place the class high up in the DOM and the styles will apply to all children.
 
-If you ever need to break free from Tailwind's out of the box classes, you can use [arbitrary values][arbitrary-values], or customize your [configuration][configuration]. While I did a fair bit of customization, it was still very manageable at only [59 lines][tailwind-config] of code.
+If you ever need to break free from Tailwind's out of the box classes, you can use [arbitrary values][arbitrary-values], or customize your [configuration][configuration]. While I did a fair bit of customization, my configuration was only [59 lines][tailwind-config] of code.
 
 ## 🏎️ performance improvements
 
-Most importantly, Tailwind brought me performance improvements on my website. Primarily, this was through reducing the amount of HTTP requests. It turns out that Next.js [preloads CSS Modules][github-issue] for client side routing to adjacent pages, which caused seven extra requests on my home page. Given that I'm moving to [Remix][remix] soon, I won't have much use for client side routing.
+Most importantly, Tailwind brought performance improvements to my website. Primarily this was through reducing the amount of HTTP requests. It turns out that Next.js [preloads CSS Modules][github-issue] for client side routing to adjacent pages, which caused seven extra requests on my home page. Given that I'm moving to [Remix][remix] soon, I won't have much use for client side routing.
 
 ![http requests][http-requests]
 
@@ -51,7 +51,7 @@ While Tailwind does integrate well with [Next.js][next] through [create-next-app
 
 ## 🧶 wrap up
 
-Overall I'm very happy with my migration to [Tailwind][tailwind]. It took longer than expected, and rewriting everything from scratch would have probably been quicker, but I liked perspective it gave me. Tailwind has a great developer experience, it improved performance on my site, and gives me a great base to start styling from.
+Overall I'm very happy with my migration to [Tailwind][tailwind]. It took longer than expected, and rewriting everything from scratch would have probably been quicker, but I liked perspective it gave me. Tailwind has a great developer experience, it improved performance on my site, and gives me a great base to start styling with.
 
 [http-requests]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/http-requests.png
 [page-load-data]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/page-load-data.png
