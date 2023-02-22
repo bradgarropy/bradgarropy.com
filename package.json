@@ -13,7 +13,8 @@
         "portfolio",
         "hacktoberfest",
         "vercel",
-        "cloudinary"
+        "cloudinary",
+        "tailwind"
     ],
     "homepage": "https://bradgarropy.com",
     "bugs": {
