@@ -214,16 +214,6 @@ const mockSponsors: Sponsors = {
 
 const mockChannelStatus = {isLive: true}
 
-const mockHireMe: Markdown = {
-    html: "<p>hire me</p>",
-    frontmatter: {},
-}
-
-const mockContact: Markdown = {
-    html: "<p>contact</p>",
-    frontmatter: {},
-}
-
 const mockResume: Markdown = {
     html: "<p>resume</p>",
     frontmatter: {},
@@ -318,8 +308,6 @@ const mockUses: Markdown = {
 
 export {
     mockChannelStatus,
-    mockContact,
-    mockHireMe,
     mockMeta,
     mockNewerNow,
     mockNow,
