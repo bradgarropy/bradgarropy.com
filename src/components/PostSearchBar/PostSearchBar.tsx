@@ -1,4 +1,3 @@
-import classnames from "classnames"
 import Fuse from "fuse.js"
 import {useRouter} from "next/router"
 import {FC, useEffect} from "react"
@@ -50,10 +49,7 @@ const PostSearchBar: FC<PostSearchBarProps> = ({posts, onSearch}) => {
 
     return (
         <input
-            className={classnames(
-                "border-3 border-black text-base shadow-box placeholder:text-gray-400 focus:border-purple-400 focus:outline-none",
-                "mb-9 w-[85%] rounded border-3 border-black py-4 px-8 text-base shadow-box dark:shadow-box-white",
-            )}
+            className="mb-9 w-[85%] rounded border-3 border-black py-4 px-8 text-base shadow-box placeholder:text-gray-400 focus:border-purple-400 focus:outline-none dark:shadow-box-white"
             type="text"
             placeholder="search blog"
             value={query}
