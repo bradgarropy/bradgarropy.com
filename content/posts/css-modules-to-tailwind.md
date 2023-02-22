@@ -45,11 +45,11 @@ This reduction in HTTP requests ultimately lead to faster load times on my websi
 
 ![page load data][page-load-data]
 
-# 🙌🏼 framework integrations
+## 🙌🏼 framework integrations
 
 While Tailwind does integrate well with [Next.js][next] through [create-next-app][with-tailwind], that only supports new projects. As I mentioned before I'll be moving to [Remix][remix], which is getting first class [Tailwind support][remix-tailwind] very soon.
 
-# 🧶 wrap up
+## 🧶 wrap up
 
 Overall I'm very happy with my migration to [Tailwind][tailwind]. It took longer than expected, and rewriting everything from scratch would have probably been quicker, but I liked perspective it gave me. Tailwind has a great developer experience, it improved performance on my site, and gives me a great base to start styling from.
 
