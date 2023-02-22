@@ -1,11 +1,9 @@
 import {FC} from "react"
 
-import styles from "./FourOhFour.module.css"
-
 const FourOhFour: FC = () => {
     return (
-        <div className={styles.fourOhFour}>
-            <h1>404</h1>
+        <div className="grid place-items-center">
+            <h1 className="font-display text-9xl">404</h1>
         </div>
     )
 }

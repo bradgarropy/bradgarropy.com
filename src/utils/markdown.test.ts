@@ -41,7 +41,7 @@ describe("transforms markdown", () => {
 
         expect(html).toEqual(
             // eslint-disable-next-line quotes
-            '<a href="https://bradgarropy.com/profile.jpg" class="image"><img src="https://bradgarropy.com/profile.jpg" alt="brad garropy"></a>',
+            '<a href="https://bradgarropy.com/profile.jpg"><img src="https://bradgarropy.com/profile.jpg" alt="brad garropy"></a>',
         )
     })
 
@@ -54,7 +54,7 @@ describe("transforms markdown", () => {
 
         expect(html).toEqual(
             // eslint-disable-next-line quotes
-            '<a href="http://res.cloudinary.com/profile.jpg" class="image"><img src="http://res.cloudinary.com/profile.jpg" alt="brad garropy" width="100" height="100"></a>',
+            '<a href="http://res.cloudinary.com/profile.jpg"><img src="http://res.cloudinary.com/profile.jpg" alt="brad garropy" width="100" height="100"></a>',
         )
 
         html = await transformMarkdown(
@@ -63,7 +63,7 @@ describe("transforms markdown", () => {
 
         expect(html).toEqual(
             // eslint-disable-next-line quotes
-            '<a href="https://res.cloudinary.com/profile.jpg" class="image"><img src="https://res.cloudinary.com/profile.jpg" alt="brad garropy" width="100" height="100"></a>',
+            '<a href="https://res.cloudinary.com/profile.jpg"><img src="https://res.cloudinary.com/profile.jpg" alt="brad garropy" width="100" height="100"></a>',
         )
     })
 
@@ -74,18 +74,13 @@ describe("transforms markdown", () => {
 
         expect(html).toEqual(
             // eslint-disable-next-line quotes
-            '<a href="https://bradgarropy.com/profile.jpg" class="image"><img src="https://bradgarropy.com/profile.jpg" alt="brad garropy"></a>',
+            '<a href="https://bradgarropy.com/profile.jpg"><img src="https://bradgarropy.com/profile.jpg" alt="brad garropy"></a>',
         )
     })
 
     test("embeds codesandbox", async () => {
         const html = await transformMarkdown(
             "https://codesandbox.io/s/exciting-pascal-j5hwu",
-        )
-
-        expect(html).toEqual(
-            // eslint-disable-next-line quotes
-            expect.stringContaining('<div class="codesandbox">'),
         )
 
         expect(html).toEqual(expect.stringContaining("<iframe"))
@@ -100,11 +95,6 @@ describe("transforms markdown", () => {
 
     test("embeds twitch", async () => {
         const html = await transformMarkdown("https://twitch.tv/bradgarropy")
-
-        expect(html).toEqual(
-            // eslint-disable-next-line quotes
-            expect.stringContaining('<div class="twitch">'),
-        )
 
         expect(html).toEqual(
             // eslint-disable-next-line quotes
@@ -124,8 +114,10 @@ describe("transforms markdown", () => {
             "https://twitter.com/bradgarropy/status/1458449938157801490",
         )
 
-        // eslint-disable-next-line quotes
-        expect(html).toEqual(expect.stringContaining('<div class="twitter">'))
+        expect(html).toEqual(
+            // eslint-disable-next-line quotes
+            expect.stringContaining('<div class="grid justify-center">'),
+        )
 
         expect(html).toEqual(
             // eslint-disable-next-line quotes
@@ -142,12 +134,6 @@ describe("transforms markdown", () => {
 
     test("embeds youtube", async () => {
         const html = await transformMarkdown("https://youtu.be/9zcU6oUOHVc")
-
-        // eslint-disable-next-line quotes
-        expect(html).toEqual(expect.stringContaining('<div class="youtube">'))
-
-        // eslint-disable-next-line quotes
-        expect(html).toEqual(expect.stringContaining('<div class="youtube">'))
 
         expect(html).toEqual(expect.stringContaining("<iframe"))
 

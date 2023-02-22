@@ -1,11 +1,6 @@
-import classnames from "classnames"
+import Markdown from "components/Markdown"
 import {useMarkdown} from "hooks"
 import {FC, useEffect} from "react"
-import CodeStyles from "styles/Code.module.css"
-import EmbedsStyles from "styles/Embeds.module.css"
-import LinkStyles from "styles/Link.module.css"
-
-import PostBodyStyles from "./PostBody.module.css"
 
 type PostBodyProps = {
     html: string
@@ -16,20 +11,8 @@ const PostBody: FC<PostBodyProps> = ({html}) => {
         window.twttr?.widgets.load()
     }, [])
 
-    const Markdown = useMarkdown(html)
-
-    return (
-        <section
-            className={classnames(
-                PostBodyStyles.postBody,
-                LinkStyles.fancy,
-                CodeStyles.code,
-                EmbedsStyles.embeds,
-            )}
-        >
-            {Markdown}
-        </section>
-    )
+    const markdown = useMarkdown(html)
+    return <Markdown className="my-9" content={markdown} />
 }
 
 export default PostBody

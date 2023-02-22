@@ -1,14 +1,10 @@
-import Link from "@bradgarropy/next-link"
-import classnames from "classnames"
+import FancyLink from "components/FancyLink"
 import LinkButton from "components/LinkButton"
+import Markdown from "components/Markdown"
 import {useMarkdown} from "hooks"
 import {FC} from "react"
-import CodeStyles from "styles/Code.module.css"
-import LinkStyles from "styles/Link.module.css"
 import {Now as NowType} from "types/now"
 import {formatDate} from "utils/date"
-
-import NowStyles from "./Now.module.css"
 
 type NowProps = {
     now: NowType
@@ -18,26 +14,20 @@ type NowProps = {
 
 const Now: FC<NowProps> = ({now, newer, older}) => {
     const {html, frontmatter} = now
-    const Markdown = useMarkdown(html)
+    const markdown = useMarkdown(html)
 
     return (
-        <>
-            <div className={NowStyles.header}>
-                <h1>🧭 now</h1>
-                <span>{formatDate(frontmatter.date)}</span>
+        <div className="grid content-start gap-y-16">
+            <div className="flex items-baseline justify-between lowercase">
+                <h1 className="font-heading text-[32px] font-semibold">
+                    🧭 now
+                </h1>
+                <span className="">{formatDate(frontmatter.date)}</span>
             </div>
 
-            <div
-                className={classnames(
-                    LinkStyles.fancy,
-                    NowStyles.content,
-                    CodeStyles.code,
-                )}
-            >
-                {Markdown}
-            </div>
+            <Markdown content={markdown} />
 
-            <div className={NowStyles.footer}>
+            <div className="flex content-start justify-between">
                 <LinkButton
                     to={`/now/${newer?.frontmatter.date}`}
                     disabled={!newer}
@@ -54,12 +44,17 @@ const Now: FC<NowProps> = ({now, newer, older}) => {
                 </LinkButton>
             </div>
 
-            <p className={classnames(LinkStyles.fancy, NowStyles.inspiration)}>
+            <p className="my-10 text-center italic">
                 inspired by{" "}
-                <Link to="https://twitter.com/sivers">derek sivers</Link> and{" "}
-                <Link to="https://nownownow.com/about">nownownow</Link>
+                <FancyLink to="https://twitter.com/sivers">
+                    derek sivers
+                </FancyLink>{" "}
+                and{" "}
+                <FancyLink to="https://nownownow.com/about">
+                    nownownow
+                </FancyLink>
             </p>
-        </>
+        </div>
     )
 }
 

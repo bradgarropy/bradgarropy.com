@@ -2,8 +2,6 @@ import Icon from "components/Icon"
 import {useApp} from "hooks"
 import {FC} from "react"
 
-import styles from "./Hamburger.module.css"
-
 const Hamburger: FC = () => {
     const {setOpen} = useApp()
 
@@ -11,7 +9,13 @@ const Hamburger: FC = () => {
         setOpen(true)
     }
 
-    return <Icon name="menu" className={styles.hamburger} onClick={onClick} />
+    return (
+        <Icon
+            name="menu"
+            className="hidden cursor-pointer text-2xl max-[800px]:block"
+            onClick={onClick}
+        />
+    )
 }
 
 export default Hamburger

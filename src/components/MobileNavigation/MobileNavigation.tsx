@@ -4,8 +4,6 @@ import Icon from "components/Icon"
 import {useApp} from "hooks"
 import {FC} from "react"
 
-import styles from "./MobileNavigation.module.css"
-
 const MobileNavigation: FC = () => {
     const {open, setOpen} = useApp()
 
@@ -14,27 +12,31 @@ const MobileNavigation: FC = () => {
     }
 
     return open ? (
-        <div className={styles.mobileNavigation}>
-            <Icon name="close" className={styles.close} onClick={onClick} />
+        <div className="fixed inset-0 z-10 grid grid-rows-[auto_1fr] overflow-hidden bg-white text-4xl dark:bg-black">
+            <Icon
+                name="close"
+                className="m-5 cursor-pointer justify-self-end"
+                onClick={onClick}
+            />
 
-            <div className={styles.links}>
-                <Link className={styles.link} to="/blog">
+            <div className="grid grid-flow-row content-center justify-center gap-y-4">
+                <Link className="hover:text-purple-400" to="/blog">
                     blog
                 </Link>
 
-                <Link className={styles.link} to="/now">
+                <Link className="hover:text-purple-400" to="/now">
                     now
                 </Link>
 
-                <Link className={styles.link} to="/uses">
+                <Link className="hover:text-purple-400" to="/uses">
                     uses
                 </Link>
 
-                <Link className={styles.link} to="/hire-me">
+                <Link className="hover:text-purple-400" to="/hire-me">
                     hire me
                 </Link>
 
-                <Link className={styles.link} to="/contact">
+                <Link className="hover:text-purple-400" to="/contact">
                     contact
                 </Link>
             </div>

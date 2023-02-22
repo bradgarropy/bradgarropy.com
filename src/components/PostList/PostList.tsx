@@ -2,8 +2,6 @@ import PostHeader from "components/PostHeader"
 import {FC} from "react"
 import {PostFrontmatter} from "types/post"
 
-import styles from "./PostList.module.css"
-
 type PostListProps = {
     posts: PostFrontmatter[]
 }
@@ -11,14 +9,14 @@ type PostListProps = {
 const PostList: FC<PostListProps> = ({posts}) => {
     if (!posts.length) {
         return (
-            <div className={styles.noPosts}>
-                <span>🤷🏼‍♂️</span> no posts found
+            <div className="text-xl italic">
+                <span className="not-italic">🤷🏼‍♂️</span> no posts found
             </div>
         )
     }
 
     return (
-        <div className={styles.postList}>
+        <div className="grid gap-y-9">
             {posts.map((post, index) => {
                 return (
                     <PostHeader

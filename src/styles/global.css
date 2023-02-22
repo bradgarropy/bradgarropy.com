@@ -1,113 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .text-shadow-2 {
+        text-shadow: 2px 2px theme("colors.purple.400");
+    }
+    .text-shadow-3 {
+        text-shadow: 3px 3px theme("colors.purple.400");
+    }
+}
+
 :root {
-    /* colors */
-    --black: #000000;
-    --darkGrey: #aaaaaa;
-    --grey: #dddddd;
-    --white: #ffffff;
-    --purple: #c792ea;
-    --darkPurple: #a038ff;
-
-    /* intentions */
-    --primary: var(--purple);
-    --text: var(--black);
-    --background: var(--white);
-    --snow: var(--grey);
-
     /* highlighting */
     --grvsc-line-highlighted-background-color: #c792ea66;
-    --grvsc-line-highlighted-border-color: var(--primary);
+    --grvsc-line-highlighted-border-color: #c792ea;
     --grvsc-line-highlighted-border-width: 4px;
-
-    /* design tokens */
-    --transitionDuration: 300ms;
-    --borderRadius: 0.3rem;
-}
-
-html {
-    margin: 0rem;
-    padding: 0rem;
-}
-
-body {
-    background-color: var(--background);
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    overflow-y: scroll;
-    margin: 0rem;
-    padding: 0rem;
-    transition-property: background-color;
-    transition-duration: var(--transitionDuration);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    color: var(--text);
-    margin-top: 1.75rem;
-    margin-bottom: 1.75rem;
-    line-height: 1.5;
-}
-
-p {
-    color: var(--text);
-    line-height: 1.75;
-    margin-top: 1.75rem;
-    margin-bottom: 1.75rem;
-}
-
-code {
-    line-height: 1.5;
-}
-
-a {
-    color: var(--primary);
-    text-decoration: none;
-}
-
-a:hover {
-    color: rgba(0, 0, 0, 0.8);
-}
-
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0rem auto;
-    border-radius: var(--borderRadius);
-    box-sizing: border-box;
-}
-
-blockquote {
-    border-left: 3px solid var(--primary);
-    font-style: italic;
-    padding-left: 1rem;
-}
-
-ul {
-    color: var(--text);
-}
-
-table {
-    color: var(--text);
-    margin: 1.75rem auto;
-}
-
-th,
-td {
-    padding: 0 2rem 0.5rem 0;
-}
-
-th:last-child,
-td:last-child {
-    padding-right: 0;
-}
-
-::selection {
-    background-color: var(--primary);
 }
