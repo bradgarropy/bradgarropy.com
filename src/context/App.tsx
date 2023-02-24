@@ -10,7 +10,7 @@ type AppProviderProps = {
 
 const AppProvider: FC<AppProviderProps> = ({children}) => {
     const [open, setOpen] = useState(false)
-    const [theme, setTheme] = useTheme()
+    const {theme, setTheme} = useTheme()
 
     const context = {
         open,
