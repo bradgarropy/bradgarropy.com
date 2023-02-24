@@ -1,5 +1,5 @@
 import {useApp} from "hooks"
-import {FC, useEffect} from "react"
+import {FC} from "react"
 import Moon from "svg/moon.svg"
 import Sun from "svg/sun.svg"
 
@@ -7,17 +7,11 @@ const ColorTheme: FC = () => {
     const {theme, setTheme} = useApp()
     const label = theme === "light" ? "dark" : "light"
 
-    useEffect(() => {
-        // change colors
-    }, [theme])
-
     const onClick = () => {
         if (theme === "light") {
             setTheme("dark")
-            document.documentElement.classList.add("dark")
         } else {
             setTheme("light")
-            document.documentElement.classList.remove("dark")
         }
     }
 
