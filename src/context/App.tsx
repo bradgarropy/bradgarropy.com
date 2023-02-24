@@ -1,4 +1,5 @@
-import {createContext, FC, ReactNode, useEffect, useRef, useState} from "react"
+import {useTheme} from "hooks"
+import {createContext, FC, ReactNode, useState} from "react"
 import {AppCtx} from "types/context"
 
 const AppContext = createContext({} as AppCtx)
@@ -9,21 +10,7 @@ type AppProviderProps = {
 
 const AppProvider: FC<AppProviderProps> = ({children}) => {
     const [open, setOpen] = useState(false)
-    const [theme, setTheme] = useState("light")
-    const initialRender = useRef(true)
-
-    useEffect(() => {
-        if (initialRender.current) {
-            initialRender.current = false
-            return
-        }
-
-        if (theme === "dark") {
-            document.documentElement.classList.add("dark")
-        } else {
-            document.documentElement.classList.remove("dark")
-        }
-    }, [theme])
+    const [theme, setTheme] = useTheme()
 
     const context = {
         open,
