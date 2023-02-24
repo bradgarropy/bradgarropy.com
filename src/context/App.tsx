@@ -1,3 +1,4 @@
+import {useTheme} from "hooks"
 import {createContext, FC, ReactNode, useState} from "react"
 import {AppCtx} from "types/context"
 
@@ -9,7 +10,7 @@ type AppProviderProps = {
 
 const AppProvider: FC<AppProviderProps> = ({children}) => {
     const [open, setOpen] = useState(false)
-    const [theme, setTheme] = useState("light")
+    const [theme, setTheme] = useTheme()
 
     const context = {
         open,

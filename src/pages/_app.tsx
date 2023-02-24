@@ -1,6 +1,7 @@
 import "styles/global.css"
 
 import GoogleAnalytics from "@bradgarropy/next-google-analytics"
+import {AppProvider} from "context"
 import type {AppProps} from "next/app"
 
 const App = ({Component, pageProps}: AppProps) => {
@@ -12,7 +13,9 @@ const App = ({Component, pageProps}: AppProps) => {
                 }
             />
 
-            <Component {...pageProps} />
+            <AppProvider>
+                <Component {...pageProps} />
+            </AppProvider>
         </>
     )
 }
