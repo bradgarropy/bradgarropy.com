@@ -1,42 +1,80 @@
 import {act, renderHook} from "@testing-library/react"
 import {useTheme} from "hooks"
 
-test("returns default theme", () => {
+const mockGetItem = jest.fn()
+const mockSetItem = jest.fn()
+
+beforeEach(() => {
+    global.Storage.prototype.getItem = mockGetItem
+    global.Storage.prototype.setItem = mockSetItem
+})
+
+afterEach(() => {
+    mockGetItem.mockReset()
+    mockGetItem.mockReset()
+})
+
+test("defaults to light theme", () => {
+    mockGetItem.mockReturnValue(null)
+
     const {result} = renderHook(() => useTheme())
-    const [theme] = result.current
-    expect(theme).toEqual("light")
+
+    expect(result.current.theme).toEqual("light")
+    expect(mockSetItem).toHaveBeenCalledTimes(1)
+    expect(mockSetItem).toHaveBeenCalledWith("theme", "light")
+    expect(document.documentElement.classList.contains("dark")).toBeFalsy()
 })
 
-test("returns light theme", () => {
-    const {result} = renderHook(() => useTheme("light"))
-    const [theme] = result.current
-    expect(theme).toEqual("light")
+test("uses localstorage light theme", () => {
+    mockGetItem.mockReturnValue("light")
+
+    const {result} = renderHook(() => useTheme())
+
+    expect(result.current.theme).toEqual("light")
+    expect(mockSetItem).toHaveBeenCalledTimes(1)
+    expect(mockSetItem).toHaveBeenCalledWith("theme", "light")
+    expect(document.documentElement.classList.contains("dark")).toBeFalsy()
 })
 
-test("returns dark theme", () => {
-    const {result} = renderHook(() => useTheme("dark"))
-    const [theme] = result.current
-    expect(theme).toEqual("dark")
+test("uses localstorage dark theme", () => {
+    mockGetItem.mockReturnValue("dark")
+
+    const {result} = renderHook(() => useTheme())
+
+    expect(result.current.theme).toEqual("dark")
+    expect(mockSetItem).toHaveBeenCalledTimes(1)
+    expect(mockSetItem).toHaveBeenCalledWith("theme", "dark")
+    expect(document.documentElement.classList.contains("dark")).toBeTruthy()
 })
 
-test("sets dark theme", () => {
-    const {result} = renderHook(() => useTheme("light"))
-    expect(result.current[0]).toEqual("light")
+test("switches to light theme", () => {
+    mockGetItem.mockReturnValue("dark")
+
+    const {result} = renderHook(() => useTheme())
+    expect(result.current.theme).toEqual("dark")
 
     act(() => {
-        result.current[1]("dark")
+        result.current.setTheme("light")
     })
 
-    expect(result.current[0]).toEqual("dark")
+    expect(result.current.theme).toEqual("light")
+    expect(mockSetItem).toHaveBeenCalledTimes(2)
+    expect(mockSetItem).toHaveBeenLastCalledWith("theme", "light")
+    expect(document.documentElement.classList.contains("dark")).toBeFalsy()
 })
 
-test("sets light theme", () => {
-    const {result} = renderHook(() => useTheme("dark"))
-    expect(result.current[0]).toEqual("dark")
+test("switches to dark theme", () => {
+    mockGetItem.mockReturnValue("light")
+
+    const {result} = renderHook(() => useTheme())
+    expect(result.current.theme).toEqual("light")
 
     act(() => {
-        result.current[1]("light")
+        result.current.setTheme("dark")
     })
 
-    expect(result.current[0]).toEqual("light")
+    expect(result.current.theme).toEqual("dark")
+    expect(mockSetItem).toHaveBeenCalledTimes(2)
+    expect(mockSetItem).toHaveBeenLastCalledWith("theme", "dark")
+    expect(document.documentElement.classList.contains("dark")).toBeTruthy()
 })

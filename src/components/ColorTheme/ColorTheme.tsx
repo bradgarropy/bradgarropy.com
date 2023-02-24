@@ -21,7 +21,8 @@ const ColorTheme: FC = () => {
             onClick={onClick}
             aria-label={label}
         >
-            {theme === "light" ? <Moon /> : <Sun />}
+            {theme === "light" ? <Moon /> : null}
+            {theme === "dark" ? <Sun /> : null}
         </button>
     )
 }
