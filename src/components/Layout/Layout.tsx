@@ -1,7 +1,6 @@
 import SEO from "@bradgarropy/next-seo"
 import Footer from "components/Footer"
 import Header from "components/Header"
-import {AppProvider} from "context"
 import {FC, ReactNode} from "react"
 import {createImageUrl} from "utils/cloudinary"
 
@@ -13,7 +12,7 @@ type LayoutProps = {
 
 const Layout: FC<LayoutProps> = ({children}) => {
     return (
-        <AppProvider>
+        <>
             <SEO
                 title="🏠 my home on the web"
                 keywords={pkg.keywords}
@@ -39,7 +38,7 @@ const Layout: FC<LayoutProps> = ({children}) => {
 
                 <Footer />
             </div>
-        </AppProvider>
+        </>
     )
 }
 
