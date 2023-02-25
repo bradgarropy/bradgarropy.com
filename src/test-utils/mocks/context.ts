@@ -1,10 +1,13 @@
-import {AppCtx} from "types/context"
+import {AppContextType, ThemeContextType} from "types/context"
 
-const mockAppCtx: AppCtx = {
+const mockAppCtx: AppContextType = {
     open: false,
     setOpen: jest.fn(),
+}
+
+const mockThemeCtx: ThemeContextType = {
     theme: "light",
     setTheme: jest.fn(),
 }
 
-export {mockAppCtx}
+export {mockAppCtx, mockThemeCtx}

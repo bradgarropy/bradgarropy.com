@@ -1,17 +1,20 @@
 import {render, screen} from "@testing-library/react"
-import {useApp, useLive} from "hooks"
-import {generateAppCtx} from "test-utils/generators"
+import {useApp, useLive, useTheme} from "hooks"
+import {generateAppCtx, generateThemeCtx} from "test-utils/generators"
 
 import Header from "./Header"
 
 jest.mock("hooks")
 
 const mockAppCtx = generateAppCtx()
-
-const mockUseLive = useLive as jest.Mock
+const mockThemeCtx = generateThemeCtx()
 
 const mockUseApp = useApp as jest.Mock
+const mockUseLive = useLive as jest.Mock
+const mockUseTheme = useTheme as jest.Mock
+
 mockUseApp.mockReturnValue(mockAppCtx)
+mockUseTheme.mockReturnValue(mockThemeCtx)
 
 describe("streaming", () => {
     mockUseLive.mockReturnValue(true)
