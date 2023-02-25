@@ -5,6 +5,19 @@ date: "2023-02-24"
 topic: coding
 ---
 
+overall strategy
+use react context to manage color theme
+persist theme in localstorage
+initialize theme from localstorage, default to light mode
+prevent light mode flashes
+
+react context
+two use effects
+theme provider
+
+theme.js
+initialization
+
 TODO: check out the [pull request][pull-request]  
 TODO: reference josh's [perfect dark mode][perfect-dark-mode]
 
