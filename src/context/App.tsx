@@ -1,8 +1,18 @@
-import {useTheme} from "hooks"
-import {createContext, FC, ReactNode, useState} from "react"
-import {AppCtx} from "types/context"
+import {
+    createContext,
+    Dispatch,
+    FC,
+    ReactNode,
+    SetStateAction,
+    useState,
+} from "react"
 
-const AppContext = createContext({} as AppCtx)
+type AppContextType = {
+    open: boolean
+    setOpen: Dispatch<SetStateAction<boolean>>
+}
+
+const AppContext = createContext({} as AppContextType)
 
 type AppProviderProps = {
     children: ReactNode
@@ -10,16 +20,14 @@ type AppProviderProps = {
 
 const AppProvider: FC<AppProviderProps> = ({children}) => {
     const [open, setOpen] = useState(false)
-    const {theme, setTheme} = useTheme()
 
-    const context = {
+    const context: AppContextType = {
         open,
         setOpen,
-        theme,
-        setTheme,
     }
 
     return <AppContext.Provider value={context}>{children}</AppContext.Provider>
 }
 
 export {AppContext, AppProvider}
+export type {AppContextType}
