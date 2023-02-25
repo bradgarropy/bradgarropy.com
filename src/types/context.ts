@@ -1,10 +1,14 @@
 import {Dispatch, SetStateAction} from "react"
+import {Theme} from "types/theme"
 
-type AppCtx = {
+type AppContextType = {
     open: boolean
     setOpen: Dispatch<SetStateAction<boolean>>
-    theme: string
-    setTheme: Dispatch<SetStateAction<string>>
 }
 
-export type {AppCtx}
+type ThemeContextType = {
+    theme: Theme
+    setTheme: Dispatch<SetStateAction<Theme>>
+}
+
+export type {AppContextType, ThemeContextType}

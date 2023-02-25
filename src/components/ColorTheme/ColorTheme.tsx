@@ -1,10 +1,10 @@
-import {useApp} from "hooks"
+import {useTheme} from "hooks"
 import {FC} from "react"
 import Moon from "svg/moon.svg"
 import Sun from "svg/sun.svg"
 
 const ColorTheme: FC = () => {
-    const {theme, setTheme} = useApp()
+    const {theme, setTheme} = useTheme()
     const label = theme === "light" ? "dark" : "light"
 
     const onClick = () => {

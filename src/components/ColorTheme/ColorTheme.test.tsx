@@ -1,32 +1,32 @@
 import {render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import ColorTheme from "components/ColorTheme"
-import {useApp} from "hooks"
-import {generateAppCtx} from "test-utils/generators"
+import {useTheme} from "hooks"
+import {generateThemeCtx} from "test-utils/generators"
 
-const mockAppCtxLight = generateAppCtx({theme: "light"})
-const mockAppCtxDark = generateAppCtx({theme: "dark"})
+const mockThemeCtxLight = generateThemeCtx({theme: "light"})
+const mockThemeCtxDark = generateThemeCtx({theme: "dark"})
 
 jest.mock("hooks")
 
-const mockUseApp = useApp as jest.Mock
+const mockUseTheme = useTheme as jest.Mock
 
 test("toggles dark mode", async () => {
-    mockUseApp.mockReturnValue(mockAppCtxLight)
+    mockUseTheme.mockReturnValue(mockThemeCtxLight)
 
     render(<ColorTheme />)
 
     await userEvent.click(screen.getByLabelText("dark"))
-    expect(mockAppCtxLight.setTheme).toHaveBeenCalledTimes(1)
-    expect(mockAppCtxLight.setTheme).toHaveBeenCalledWith("dark")
+    expect(mockThemeCtxLight.setTheme).toHaveBeenCalledTimes(1)
+    expect(mockThemeCtxLight.setTheme).toHaveBeenCalledWith("dark")
 })
 
 test("toggles light mode", async () => {
-    mockUseApp.mockReturnValue(mockAppCtxDark)
+    mockUseTheme.mockReturnValue(mockThemeCtxDark)
 
     render(<ColorTheme />)
 
     await userEvent.click(screen.getByLabelText("light"))
-    expect(mockAppCtxDark.setTheme).toHaveBeenCalledTimes(1)
-    expect(mockAppCtxDark.setTheme).toHaveBeenCalledWith("light")
+    expect(mockThemeCtxDark.setTheme).toHaveBeenCalledTimes(1)
+    expect(mockThemeCtxDark.setTheme).toHaveBeenCalledWith("light")
 })
