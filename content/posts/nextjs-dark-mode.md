@@ -12,29 +12,19 @@ The dark mode on my website was always pretty half baked, so while I was [conver
 -   The color theme is persisted across page transitions.
 -   There is no light mode flicker.
 
-Let me explain how I accomplished this.
+The rest of the post will go into more detail explaining how I accomplished this. You can also reference the [pull request][pull-request] for the full implementation.
 
 ## ♟️ strategy
 
-overall strategy
-use react context to manage color theme
-persist theme in localstorage
-initialize theme from localstorage, default to light mode
-prevent light mode flashes
-
-react context
-two use effects
-theme provider
-
-theme.js
-initialization
+My overall strategy involves a few different paths. First, I maintain the `theme` state in a [React context][context]. Next, I persist the theme across reloads using [local storage][local-storage]. Finally, the theme is applied by adding a `dark` class to the `html` element, and [Tailwind][tailwind] handles the rest of the styling.
 
 ![dark mode diagram][dark-mode-diagram]
 
-TODO: check out the [pull request][pull-request]  
-TODO: reference josh's [perfect dark mode][perfect-dark-mode]
+Anytime the `theme` changes, both `localStorage` and the `html` class are updated to reflect the current value. When the application loads, it checks `localStorage` for an existing user preference before defaulting to light mode. And last but not least, a prerender script is run to initialize the `html` class to match the value in `localStorage` in order to prevent light mode flicker.
 
-## theme context
+## 🤲🏼 theme provider
+
+I started by creating the `ThemeContext` and `ThemeProvider` so that the theme could be used freely throughout the application without prop drilling. At it's core, it just holds the `theme` value in state.
 
 ```tsx
 const ThemeProvider: FC<ThemeProviderProps> = ({children}) => {
@@ -53,6 +43,8 @@ const ThemeProvider: FC<ThemeProviderProps> = ({children}) => {
 }
 ```
 
+In order for this context to be shared with the rest of the application, I created a custom `_app.tsx` to wrap everything in the `ThemeProvider`.
+
 ```tsx
 import {ThemeProvider} from "context"
 
@@ -65,6 +57,8 @@ const App = ({Component, pageProps}: AppProps) => {
 }
 ```
 
+Once the provider is in place, I was able to access the `theme` from anywhere by using the `useTheme` hook shown below.
+
 ```tsx
 const useTheme = (): ThemeContextType => {
     const themeCtx = useContext(ThemeContext)
@@ -72,7 +66,11 @@ const useTheme = (): ThemeContextType => {
 }
 ```
 
-## theme toggle
+Next I started making the theme respond to user interactions.
+
+## 🌗 theme toggle
+
+In the header of my site I have a theme toggle. This is where I used `useTheme` to respond to user interactions. Now the newly selected theme would be populated in the context.
 
 ```tsx
 import {useTheme} from "hooks"
@@ -97,6 +95,8 @@ const ColorTheme: FC = () => {
 }
 ```
 
+Anytime the theme changed, I updated both the `localStorage` value and the `html` class to match. This process was managed with a `useEffect` that ran anytime `theme` changed.
+
 ```tsx
 useEffect(() => {
     if (theme === "dark") {
@@ -111,7 +111,9 @@ useEffect(() => {
 }, [theme])
 ```
 
-## loading theme
+## ⏳ loading theme
+
+Now I had to handle initializing the theme. Because the user's latest choice was in `localStorage`, I created a `useEffect` that runs when the provider is mounted that pulls the persisted value and initializes the context. However, if no theme was stored, I defaulted to light mode.
 
 ```tsx
 useEffect(() => {
@@ -120,7 +122,11 @@ useEffect(() => {
 }, [])
 ```
 
-## preventing flicker
+## 📸 preventing flicker
+
+So far the implementation was pretty straight forward, but there was still one glaring problem. If the user preferred dark mode, there was a flash of light mode before React kicked in and initialized the context to match `localStorage`. In order to prevent this flicker, I needed a script to run _before_ React rendered.
+
+[Next.js][nextjs] had me covered here with their `<Script>` component. This allowed me to inject some custom JavaScript that executes in the `<Head>` prior to the application rendering.
 
 ```tsx
 import Document, {Head, Html, Main, NextScript} from "next/document"
@@ -141,6 +147,8 @@ const Document = () => {
 }
 ```
 
+The prerender script was very short, all it had to do was make the initial `html` class match whatever `localStorage` had, so no flicker would occur once React rendered.
+
 ```javascript
 const localTheme = window.localStorage.getItem("theme")
 
@@ -153,7 +161,18 @@ if (localTheme === "dark") {
 }
 ```
 
+## 🔫 perfect dark mode
+
+Although this implementation was a bit confusing, the result was exactly what I was looking for. I took a lot of inspiration from [Josh Comeau's][josh-comeau] post titled [The Quest for the Perfect Dark Mode][perfect-dark-mode], and made some changes to adjust the solution to fit Next.js.
+
+This isn't a problem I'd like to solve twice, so I'm considering publishing this solution on `npm` for reuse in my other projects. Let me know if that's something you'd be interested in!
+
 [pull-request]: https://github.com/bradgarropy/bradgarropy.com/pull/349
 [perfect-dark-mode]: https://joshwcomeau.com/react/dark-mode
 [dark-mode-diagram]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/dark-mode-diagram.png
 [tailwind-migration]: https://bradgarropy.com/blog/css-modules-to-tailwind
+[context]: https://reactjs.org/docs/context.html
+[tailwind]: https://tailwindcss.com/
+[nextjs]: https://nextjs.org/
+[local-storage]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+[josh-comeau]: https://twitter.com/JoshWComeau
