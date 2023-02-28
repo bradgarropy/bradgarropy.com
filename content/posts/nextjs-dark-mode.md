@@ -5,7 +5,7 @@ date: "2023-02-27"
 topic: coding
 ---
 
-The dark mode on my website was always pretty half baked, so while I was [converting to Tailwind][tailwind-migration], I spent some time improving it. I had a few major requirements I wanted to implement.
+The dark mode on my website was always pretty half baked, so while I was [converting to Tailwind][tailwind-migration], I spent some time improving it. There were a few major requirements I wanted to implement.
 
 -   The color theme can be modified by the user.
 -   The color theme is persisted across reloads.
@@ -16,7 +16,7 @@ The rest of the post will go into more detail explaining how I accomplished this
 
 ## ♟️ strategy
 
-My overall strategy involves a few different paths. First, I maintain the `theme` state in a [React context][context]. Next, I persist the theme across reloads using [local storage][local-storage]. Finally, the theme is applied by adding a `dark` class to the `html` element, and [Tailwind][tailwind] handles the rest of the styling.
+My overall strategy involved a few different aspects. First, I maintained the `theme` state in a [React context][context]. Next, I persisted the theme across reloads using [local storage][local-storage]. Finally, I applied the theme by adding a `dark` class to the `html` element, and [Tailwind][tailwind] handled the rest of the styling.
 
 ![dark mode diagram][dark-mode-diagram]
 
@@ -57,7 +57,7 @@ const App = ({Component, pageProps}: AppProps) => {
 }
 ```
 
-Once the provider is in place, I was able to access the `theme` from anywhere by using the `useTheme` hook shown below.
+Once the provider was in place, I was able to access the `theme` from anywhere by using the `useTheme` hook shown below.
 
 ```tsx
 const useTheme = (): ThemeContextType => {
@@ -111,9 +111,9 @@ useEffect(() => {
 }, [theme])
 ```
 
-## ⏳ loading theme
+## ⏳ theme loading
 
-Now I had to handle initializing the theme. Because the user's latest choice was in `localStorage`, I created a `useEffect` that runs when the provider is mounted that pulls the persisted value and initializes the context. However, if no theme was stored, I defaulted to light mode.
+Now I had to handle initializing the theme. Because the user's latest choice was in `localStorage`, I created a `useEffect` that runs when the provider is mounted that pulled the persisted value and initialized the context. However, if no theme was stored, I defaulted to light mode.
 
 ```tsx
 useEffect(() => {
@@ -126,7 +126,7 @@ useEffect(() => {
 
 So far the implementation was pretty straight forward, but there was still one glaring problem. If the user preferred dark mode, there was a flash of light mode before React kicked in and initialized the context to match `localStorage`. In order to prevent this flicker, I needed a script to run _before_ React rendered.
 
-[Next.js][nextjs] had me covered here with their `<Script>` component. This allowed me to inject some custom JavaScript that executes in the `<Head>` prior to the application rendering.
+[Next.js][nextjs] had me covered here with their `<Script>` component. This allowed me to inject some custom JavaScript that executed in the `<Head>` prior to the application rendering.
 
 ```tsx
 import Document, {Head, Html, Main, NextScript} from "next/document"
@@ -163,9 +163,9 @@ if (localTheme === "dark") {
 
 ## 🔫 perfect dark mode
 
-Although this implementation was a bit confusing, the result was exactly what I was looking for. I took a lot of inspiration from [Josh Comeau's][josh-comeau] post titled [The Quest for the Perfect Dark Mode][perfect-dark-mode], and made some changes to adjust the solution to fit Next.js.
+Although this implementation was a bit confusing, the result was exactly what I was looking for. I took a lot of inspiration from [Josh Comeau's][josh-comeau] post titled [The Quest for the Perfect Dark Mode][perfect-dark-mode], and made some changes to adjust the solution to fit [Next.js][nextjs].
 
-This isn't a problem I'd like to solve twice, so I'm considering publishing this solution on `npm` for reuse in my other projects. Let me know if that's something you'd be interested in!
+This isn't a problem I'd like to solve twice, so I'm considering publishing this solution on [npm][npm] for reuse in my other projects. Let me know if that's something you'd be interested in!
 
 [pull-request]: https://github.com/bradgarropy/bradgarropy.com/pull/349
 [perfect-dark-mode]: https://joshwcomeau.com/react/dark-mode
@@ -176,3 +176,4 @@ This isn't a problem I'd like to solve twice, so I'm considering publishing this
 [nextjs]: https://nextjs.org/
 [local-storage]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 [josh-comeau]: https://twitter.com/JoshWComeau
+[npm]: https://www.npmjs.com/
