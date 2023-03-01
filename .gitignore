@@ -21,3 +21,5 @@ coverage
 # logs
 debug.log
 
+# os
+.DS_Store
