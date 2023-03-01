@@ -8,6 +8,8 @@ node_modules
 .cache
 .next
 tsconfig.tsbuildinfo
+api
+public/build
 
 # test
 coverage
