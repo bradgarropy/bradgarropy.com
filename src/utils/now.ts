@@ -1,7 +1,7 @@
 import fs from "fs"
 import matter from "gray-matter"
 import path from "path"
-import {Now, NowFrontmatter} from "types/now"
+import type {Now, NowFrontmatter} from "types/now"
 import {transformMarkdown} from "utils/markdown"
 
 const getAllNows = (): NowFrontmatter["date"][] => {

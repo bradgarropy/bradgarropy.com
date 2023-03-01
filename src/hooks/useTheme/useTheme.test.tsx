@@ -1,5 +1,6 @@
 import {act, renderHook} from "@testing-library/react"
-import {ThemeContextType, ThemeProvider} from "context"
+import type {ThemeContextType} from "context"
+import {ThemeProvider} from "context"
 import {useTheme} from "hooks"
 import {mockThemeCtx} from "test-utils/mocks"
 

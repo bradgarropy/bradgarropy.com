@@ -1,5 +1,5 @@
 import Link from "@bradgarropy/next-link"
-import {FC} from "react"
+import type {FC} from "react"
 import {createImageUrl} from "utils/cloudinary"
 
 const Podcast: FC = () => {

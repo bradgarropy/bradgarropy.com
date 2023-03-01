@@ -1,9 +1,9 @@
 import SEO from "@bradgarropy/next-seo"
 import HireMe from "components/HireMe"
 import Layout from "components/Layout"
-import {GetStaticProps} from "next"
-import {FC} from "react"
-import {Testimonial} from "types/testimonial"
+import type {GetStaticProps} from "next"
+import type {FC} from "react"
+import type {Testimonial} from "types/testimonial"
 import {createImageUrl} from "utils/cloudinary"
 import {getTestimonials} from "utils/testimonials"
 

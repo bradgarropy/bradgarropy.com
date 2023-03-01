@@ -1,6 +1,6 @@
 import PostHeader from "components/PostHeader"
-import {FC} from "react"
-import {PostFrontmatter} from "types/post"
+import type {FC} from "react"
+import type {PostFrontmatter} from "types/post"
 
 type PostListProps = {
     posts: PostFrontmatter[]

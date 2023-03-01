@@ -1,5 +1,5 @@
 import {graphql} from "@octokit/graphql"
-import {Project} from "types/project"
+import type {Project} from "types/project"
 
 type FeaturedProjectsResponse = {
     user: {

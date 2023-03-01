@@ -18,7 +18,7 @@ import {
     twitterTransformer,
     youtubeTransformer,
 } from "transformers"
-import {Markdown} from "types/markdown"
+import type {Markdown} from "types/markdown"
 import {unified} from "unified"
 
 const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {

@@ -1,5 +1,5 @@
 import {http} from "@bradgarropy/http"
-import {NextApiHandler} from "next"
+import type {NextApiHandler} from "next"
 
 type ChannelStatus = {
     isLive: boolean

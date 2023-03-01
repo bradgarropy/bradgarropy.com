@@ -1,8 +1,8 @@
 import Link from "@bradgarropy/next-link"
 import FancyLink from "components/FancyLink"
 import Section from "components/Section"
-import {FC} from "react"
-import {Sponsors as SponsorsType} from "types/sponsor"
+import type {FC} from "react"
+import type {Sponsors as SponsorsType} from "types/sponsor"
 import {createExternalImageUrl} from "utils/cloudinary"
 
 type SponsorsProps = {

@@ -1,9 +1,9 @@
 import Link from "@bradgarropy/next-link"
 import Markdown from "components/Markdown"
 import {useMarkdown} from "hooks"
-import {FC} from "react"
+import type {FC} from "react"
 import slugify from "slugify"
-import {Testimonial as TestimonialType} from "types/testimonial"
+import type {Testimonial as TestimonialType} from "types/testimonial"
 import {createImageUrl} from "utils/cloudinary"
 
 type TestimonialProps = {

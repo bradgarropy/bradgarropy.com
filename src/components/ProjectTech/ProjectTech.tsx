@@ -1,6 +1,6 @@
 import Icon from "components/Icon"
-import {FC} from "react"
-import {Project} from "types/project"
+import type {FC} from "react"
+import type {Project} from "types/project"
 import {getTechnologies} from "utils"
 
 type ProjectTechProps = {

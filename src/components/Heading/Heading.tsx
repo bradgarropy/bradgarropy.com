@@ -1,5 +1,5 @@
 import Icon from "components/Icon"
-import {FC, ReactNode} from "react"
+import type {FC, ReactNode} from "react"
 import slugify from "slugify"
 
 type HeadingProps = {

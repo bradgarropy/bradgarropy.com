@@ -1,5 +1,5 @@
 import {useTheme} from "hooks"
-import {FC} from "react"
+import type {FC} from "react"
 import Moon from "svg/moon.svg"
 import Sun from "svg/sun.svg"
 

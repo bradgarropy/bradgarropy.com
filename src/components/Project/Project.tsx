@@ -1,7 +1,7 @@
 import Link from "@bradgarropy/next-link"
 import ProjectTech from "components/ProjectTech"
-import {FC} from "react"
-import {Project as ProjectType} from "types/project"
+import type {FC} from "react"
+import type {Project as ProjectType} from "types/project"
 
 type ProjectProps = {
     project: ProjectType

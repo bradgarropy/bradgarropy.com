@@ -1,7 +1,7 @@
 import SEO from "@bradgarropy/next-seo"
 import Footer from "components/Footer"
 import Header from "components/Header"
-import {FC, ReactNode} from "react"
+import type {FC, ReactNode} from "react"
 import {createImageUrl} from "utils/cloudinary"
 
 import pkg from "../../../package.json"

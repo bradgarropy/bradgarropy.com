@@ -1,5 +1,6 @@
 import {renderHook} from "@testing-library/react"
-import {AppContextType, AppProvider} from "context"
+import type {AppContextType} from "context"
+import {AppProvider} from "context"
 import {useApp} from "hooks"
 import {mockAppCtx} from "test-utils/mocks"
 

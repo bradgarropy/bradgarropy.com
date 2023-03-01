@@ -1,6 +1,7 @@
-import {createContext, FC, ReactNode, useEffect, useState} from "react"
-import {ThemeContextType} from "types/context"
-import {Theme} from "types/theme"
+import type {FC, ReactNode} from "react"
+import {createContext, useEffect, useState} from "react"
+import type {ThemeContextType} from "types/context"
+import type {Theme} from "types/theme"
 
 const ThemeContext = createContext({} as ThemeContextType)
 

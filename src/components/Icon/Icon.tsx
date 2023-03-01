@@ -1,4 +1,4 @@
-import {FC, HTMLAttributes} from "react"
+import type {FC, HTMLAttributes} from "react"
 import CloseIcon from "svg/close.svg"
 import DiscordIcon from "svg/discord.svg"
 import GatsbyIcon from "svg/gatsby.svg"

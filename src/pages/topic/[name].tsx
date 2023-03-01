@@ -2,9 +2,9 @@ import SEO from "@bradgarropy/next-seo"
 import Layout from "components/Layout"
 import PostList from "components/PostList"
 import TopicMeta from "components/TopicMeta"
-import {GetStaticPaths, GetStaticProps} from "next"
-import {FC} from "react"
-import {PostFrontmatter, Topic} from "types/post"
+import type {GetStaticPaths, GetStaticProps} from "next"
+import type {FC} from "react"
+import type {PostFrontmatter, Topic} from "types/post"
 import {getPostsByTopic, getTopic, getTopics} from "utils/posts"
 
 type TopicPageProps = {

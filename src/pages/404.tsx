@@ -1,7 +1,7 @@
 import SEO from "@bradgarropy/next-seo"
 import FourOhFour from "components/FourOhFour"
 import Layout from "components/Layout"
-import {FC} from "react"
+import type {FC} from "react"
 
 const NotFoundPage: FC = () => {
     return (

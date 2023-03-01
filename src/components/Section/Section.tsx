@@ -1,5 +1,5 @@
 import Link from "@bradgarropy/next-link"
-import {FC, HTMLAttributes} from "react"
+import type {FC, HTMLAttributes} from "react"
 
 type SectionProps = {
     title: string

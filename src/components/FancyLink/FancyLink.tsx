@@ -1,5 +1,5 @@
 import Link from "@bradgarropy/next-link"
-import {FC, ReactNode} from "react"
+import type {FC, ReactNode} from "react"
 
 type FancyLinkProps = {
     to: string

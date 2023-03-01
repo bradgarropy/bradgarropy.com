@@ -5,10 +5,10 @@ import LatestVideos from "components/LatestVideos"
 import Newsletter from "components/Newsletter"
 import Podcast from "components/Podcast"
 import Section from "components/Section"
-import {FC} from "react"
-import {PostFrontmatter} from "types/post"
-import {Project} from "types/project"
-import {Video} from "types/video"
+import type {FC} from "react"
+import type {PostFrontmatter} from "types/post"
+import type {Project} from "types/project"
+import type {Video} from "types/video"
 
 type HomeProps = {
     latestPosts: PostFrontmatter[]

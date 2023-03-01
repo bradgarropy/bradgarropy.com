@@ -1,6 +1,6 @@
 import Testimonial from "components/Testimonial"
-import {FC} from "react"
-import {Testimonial as TestimonialType} from "types/testimonial"
+import type {FC} from "react"
+import type {Testimonial as TestimonialType} from "types/testimonial"
 
 type TestimonialsProps = {
     testimonials: TestimonialType[]
