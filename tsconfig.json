@@ -13,7 +13,7 @@
         "noEmit": true,
         "resolveJsonModule": true,
         "skipLibCheck": true,
-        "strict": false,
+        "strict": true,
         "target": "esnext"
     },
     "include": ["**/*.ts", "**/*.tsx"],
