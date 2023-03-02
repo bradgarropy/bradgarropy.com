@@ -1,7 +1,6 @@
+import {MoonIcon, SunIcon} from "components/Icons"
 import {useTheme} from "hooks"
-import type {FC} from "react"
-import Moon from "svg/moon.svg"
-import Sun from "svg/sun.svg"
+import {FC} from "react"
 
 const ColorTheme: FC = () => {
     const {theme, setTheme} = useTheme()
@@ -21,8 +20,8 @@ const ColorTheme: FC = () => {
             onClick={onClick}
             aria-label={label}
         >
-            {theme === "light" ? <Moon /> : null}
-            {theme === "dark" ? <Sun /> : null}
+            {theme === "light" ? <MoonIcon /> : null}
+            {theme === "dark" ? <SunIcon /> : null}
         </button>
     )
 }
