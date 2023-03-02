@@ -1,4 +1,4 @@
-import {FC} from "react"
+import type {FC} from "react"
 
 const MoonIcon: FC = props => {
     return (
