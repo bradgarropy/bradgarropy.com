@@ -2,10 +2,19 @@ import {render, screen} from "@testing-library/react"
 import Icon from "components/Icon"
 import {technologies} from "utils"
 
+const icons = [...technologies, "sun", "moon"]
+
 test("shows icons", () => {
-    technologies.forEach(technology => {
-        render(<Icon name={technology} />)
-        expect(screen.getByLabelText(technology))
+    icons.forEach(icon => {
+        render(<Icon name={icon} />)
+        expect(screen.getByLabelText(icon))
+    })
+})
+
+test("shows icons with props", () => {
+    icons.forEach(icon => {
+        render(<Icon name={icon} className="test" />)
+        expect(screen.getByLabelText(icon)).toHaveClass("test")
     })
 })
 
