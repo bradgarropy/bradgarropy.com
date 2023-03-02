@@ -1,4 +1,4 @@
-import Link from "@bradgarropy/next-link"
+import {Link} from "@remix-run/react"
 import FancyLink from "components/FancyLink"
 import Section from "components/Section"
 import type {FC} from "react"

@@ -1,4 +1,4 @@
-import Link from "@bradgarropy/next-link"
+import {Link} from "@remix-run/react"
 import Markdown from "components/Markdown"
 import {useMarkdown} from "hooks"
 import type {FC} from "react"

@@ -1,4 +1,4 @@
-import Link from "@bradgarropy/next-link"
+import {Link} from "@remix-run/react"
 import Heading from "components/Heading"
 import Head from "next/head"
 import React, {createElement, Fragment} from "react"

@@ -1,4 +1,4 @@
-import Link from "@bradgarropy/next-link"
+import {Link} from "@remix-run/react"
 import ProjectTech from "components/ProjectTech"
 import type {FC} from "react"
 import type {Project as ProjectType} from "types/project"

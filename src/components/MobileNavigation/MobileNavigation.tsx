@@ -1,4 +1,4 @@
-import Link from "@bradgarropy/next-link"
+import {Link} from "@remix-run/react"
 import Hamburger from "components/Hamburger"
 import Icon from "components/Icon"
 import {useApp} from "hooks"

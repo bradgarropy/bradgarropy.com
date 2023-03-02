@@ -1,4 +1,4 @@
-import Link from "@bradgarropy/next-link"
+import {Link} from "@remix-run/react"
 import Icon from "components/Icon"
 import type {FC} from "react"
 
