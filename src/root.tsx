@@ -36,13 +36,13 @@ const App = () => {
                 <Links />
             </head>
 
-            <body className="bg-remix-black text-white">
-                <div className="grid-rows-layout grid min-h-screen">
+            <body className="bg-white transition duration-300 dark:bg-black">
+                <div className="m-auto grid min-h-screen max-w-5xl grid-rows-[auto_1fr_auto] gap-y-10 font-text text-black transition-all dark:text-white">
                     <Header />
 
-                    <div className="p-8">
+                    <main className="box-border grid w-full max-w-[700px] justify-self-center py-0 px-5">
                         <Outlet />
-                    </div>
+                    </main>
 
                     <Footer />
                 </div>
