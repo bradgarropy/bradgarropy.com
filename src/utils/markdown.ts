@@ -51,6 +51,7 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
                 youtubeTransformer,
             ],
         })
+        // TODO: fix this
         // .use(remarkVscode, {
         //     theme: "Shades of Purple",
         //     extensions: ["shades-of-purple"],

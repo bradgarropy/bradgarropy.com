@@ -1,6 +1,6 @@
+import {useSearchParams} from "@remix-run/react"
 import Fuse from "fuse.js"
-import {useRouter} from "next/router"
-import type {FC} from "react"
+import type {ChangeEventHandler, FC} from "react"
 import {useEffect} from "react"
 import {useState} from "react"
 import type {PostFrontmatter} from "types/post"
@@ -11,8 +11,8 @@ type PostSearchBarProps = {
 }
 
 const PostSearchBar: FC<PostSearchBarProps> = ({posts, onSearch}) => {
-    const router = useRouter()
-    const defaultQuery = (router.query.search as string) || ""
+    const [searchParams, setSearchParams] = useSearchParams()
+    const defaultQuery = searchParams.get("search") || ""
     const [query, setQuery] = useState(defaultQuery)
 
     const fuse = new Fuse(posts, {
@@ -30,11 +30,7 @@ const PostSearchBar: FC<PostSearchBarProps> = ({posts, onSearch}) => {
 
     useEffect(
         () => {
-            const url = query
-                ? `${router.pathname}?search=${query}`
-                : router.pathname
-
-            router.push(url, undefined, {shallow: true})
+            query ? setSearchParams(`search=${query}`) : setSearchParams("")
 
             const newPosts = filterPosts(query)
             onSearch?.(newPosts)
@@ -44,7 +40,7 @@ const PostSearchBar: FC<PostSearchBarProps> = ({posts, onSearch}) => {
         [query],
     )
 
-    const onChange = event => {
+    const onChange: ChangeEventHandler<HTMLInputElement> = event => {
         setQuery(event.target.value)
     }
 

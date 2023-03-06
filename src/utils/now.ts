@@ -11,8 +11,8 @@ const getAllNows = (): NowFrontmatter["date"][] => {
     return nows
 }
 
-const getNowBySlug = async (slug: NowFrontmatter["date"]): Promise<Now> => {
-    const nowPath = path.join(process.cwd(), `content/now/${slug}.md`)
+const getNowByDate = async (date: NowFrontmatter["date"]): Promise<Now> => {
+    const nowPath = path.join(process.cwd(), `content/now/${date}.md`)
 
     const file = matter.read(nowPath)
     const html = await transformMarkdown(file.content)
@@ -30,7 +30,7 @@ const getLatestNow = async (): Promise<Now> => {
 
     const nows = fs.readdirSync(nowsPath)
     const slug = nows[nows.length - 1].replace(".md", "")
-    const latestNow = await getNowBySlug(slug)
+    const latestNow = await getNowByDate(slug)
 
     return latestNow
 }
@@ -49,7 +49,7 @@ const getNewerNow = async (currentNow: Now): Promise<Now | null> => {
         return null
     }
 
-    const newerNow = await getNowBySlug(slug)
+    const newerNow = await getNowByDate(slug)
     return newerNow
 }
 
@@ -67,8 +67,8 @@ const getOlderNow = async (currentNow: Now): Promise<Now | null> => {
         return null
     }
 
-    const olderNow = await getNowBySlug(slug)
+    const olderNow = await getNowByDate(slug)
     return olderNow
 }
 
-export {getAllNows, getLatestNow, getNewerNow, getNowBySlug, getOlderNow}
+export {getAllNows, getLatestNow, getNewerNow, getNowByDate, getOlderNow}
