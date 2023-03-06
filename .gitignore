@@ -1,27 +1,27 @@
 # editor
-.vscode
+/.vscode
 
 # dependencies
-node_modules
+/node_modules
 
 # build
-.cache
-.next
-tsconfig.tsbuildinfo
-api
-public/build
+/.cache
+/.next
+/tsconfig.tsbuildinfo
+/api
+/public/build
 
 # test
-coverage
+/coverage
 
 # host
-.vercel
+/.vercel
 
 # secrets
-.env*
+/.env*
 
 # logs
-debug.log
+/debug.log
 
 # os
 .DS_Store
