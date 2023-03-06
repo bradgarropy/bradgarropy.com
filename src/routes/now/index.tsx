@@ -10,8 +10,6 @@ const loader = async () => {
     const newerNow = await getNewerNow(latestNow)
     const olderNow = await getOlderNow(latestNow)
 
-    console.log(olderNow)
-
     return {
         latestNow,
         newerNow,
@@ -25,7 +23,6 @@ const NowRoute: FC = () => {
     return (
         <Layout>
             <SEO title="🧭 now" />
-            {/* TODO: fix this */}
             <Now now={latestNow} newer={newerNow} older={olderNow} />
         </Layout>
     )

@@ -10,7 +10,7 @@ const loader = async () => {
     return {sponsors}
 }
 
-const SponsorsPage: FC = () => {
+const SponsorsRoute: FC = () => {
     const {sponsors} = useLoaderData<typeof loader>()
 
     return (
@@ -21,5 +21,5 @@ const SponsorsPage: FC = () => {
     )
 }
 
-export default SponsorsPage
+export default SponsorsRoute
 export {loader}

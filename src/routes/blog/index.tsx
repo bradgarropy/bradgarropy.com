@@ -16,7 +16,7 @@ const loader = () => {
     }
 }
 
-const BlogPage: FC = () => {
+const BlogRoute: FC = () => {
     const {allPosts} = useLoaderData<typeof loader>()
     const [posts, setPosts] = useState(allPosts)
 
@@ -36,5 +36,5 @@ const BlogPage: FC = () => {
     )
 }
 
-export default BlogPage
+export default BlogRoute
 export {loader}

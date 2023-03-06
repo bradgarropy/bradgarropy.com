@@ -18,7 +18,7 @@ const loader = async ({params}: LoaderArgs) => {
     return {post}
 }
 
-const PostPage: FC = () => {
+const PostRoute: FC = () => {
     const {post} = useLoaderData<typeof loader>()
 
     return (
@@ -29,5 +29,5 @@ const PostPage: FC = () => {
     )
 }
 
-export default PostPage
+export default PostRoute
 export {loader}

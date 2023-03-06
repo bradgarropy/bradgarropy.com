@@ -25,17 +25,16 @@ const loader = async ({params}: LoaderArgs) => {
     }
 }
 
-const NowPage: FC = () => {
+const NowRoute: FC = () => {
     const {currentNow, newerNow, olderNow} = useLoaderData<typeof loader>()
 
     return (
         <Layout>
             <SEO title="🧭 now" />
-            {/* TODO: fix this */}
             <Now now={currentNow} newer={newerNow} older={olderNow} />
         </Layout>
     )
 }
 
-export default NowPage
+export default NowRoute
 export {loader}
