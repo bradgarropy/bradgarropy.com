@@ -1,7 +1,7 @@
 import fs from "fs"
 import matter from "gray-matter"
 import path from "path"
-import type {Now, NowFrontmatter} from "types/now"
+import type {NewerNow, Now, NowFrontmatter, OlderNow} from "types/now"
 import {transformMarkdown} from "utils/markdown"
 
 const getAllNows = (): NowFrontmatter["date"][] => {
@@ -35,7 +35,7 @@ const getLatestNow = async (): Promise<Now> => {
     return latestNow
 }
 
-const getNewerNow = async (currentNow: Now): Promise<Now | null> => {
+const getNewerNow = async (currentNow: Now): Promise<NewerNow> => {
     const nowsPath = path.join(process.cwd(), "content/now")
     const nows = fs.readdirSync(nowsPath).map(now => now.replace(".md", ""))
 
@@ -53,7 +53,7 @@ const getNewerNow = async (currentNow: Now): Promise<Now | null> => {
     return newerNow
 }
 
-const getOlderNow = async (currentNow: Now): Promise<Now | null> => {
+const getOlderNow = async (currentNow: Now): Promise<OlderNow> => {
     const nowsPath = path.join(process.cwd(), "content/now")
     const nows = fs.readdirSync(nowsPath).map(now => now.replace(".md", ""))
 
