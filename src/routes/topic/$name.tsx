@@ -1,5 +1,6 @@
 import SEO from "@bradgarropy/next-seo"
 import type {LoaderArgs} from "@remix-run/node"
+import {json} from "@remix-run/node"
 import {Response} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 import Layout from "components/Layout"
@@ -18,10 +19,10 @@ const loader = ({params}: LoaderArgs) => {
     const topic = getTopic(name)
     const posts = getPostsByTopic(topic.name)
 
-    return {
+    return json({
         topic,
         posts,
-    }
+    })
 }
 
 const TopicRoute: FC = () => {

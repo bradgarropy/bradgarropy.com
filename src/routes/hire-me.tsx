@@ -1,4 +1,5 @@
 import SEO from "@bradgarropy/next-seo"
+import {json} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 import HireMe from "components/HireMe"
 import Layout from "components/Layout"
@@ -8,7 +9,7 @@ import {getTestimonials} from "utils/testimonials"
 
 const loader = async () => {
     const testimonials = await getTestimonials()
-    return {testimonials}
+    return json({testimonials})
 }
 
 const HireMeRoute: FC = () => {

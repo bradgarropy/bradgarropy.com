@@ -1,4 +1,5 @@
 import SEO from "@bradgarropy/next-seo"
+import {json} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 import Layout from "components/Layout"
 import Now from "components/Now"
@@ -10,11 +11,11 @@ const loader = async () => {
     const newerNow = await getNewerNow(latestNow)
     const olderNow = await getOlderNow(latestNow)
 
-    return {
+    return json({
         latestNow,
         newerNow,
         olderNow,
-    }
+    })
 }
 
 const NowRoute: FC = () => {

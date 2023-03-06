@@ -1,4 +1,5 @@
 import SEO from "@bradgarropy/next-seo"
+import {json} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 import Layout from "components/Layout"
 import Uses from "components/Uses"
@@ -7,7 +8,7 @@ import {getMarkdownBySlug} from "utils/markdown"
 
 const loader = async () => {
     const uses = await getMarkdownBySlug("uses")
-    return {uses}
+    return json({uses})
 }
 
 const UsesRoute: FC = () => {

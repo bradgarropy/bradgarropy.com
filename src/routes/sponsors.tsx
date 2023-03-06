@@ -1,4 +1,5 @@
 import SEO from "@bradgarropy/next-seo"
+import {json} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 import Layout from "components/Layout"
 import Sponsors from "components/Sponsors"
@@ -7,7 +8,7 @@ import {getSponsors} from "utils/sponsors"
 
 const loader = async () => {
     const sponsors = await getSponsors()
-    return {sponsors}
+    return json({sponsors})
 }
 
 const SponsorsRoute: FC = () => {

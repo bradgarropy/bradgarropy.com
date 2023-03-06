@@ -1,4 +1,5 @@
 import SEO from "@bradgarropy/next-seo"
+import {json} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 import Layout from "components/Layout"
 import PostList from "components/PostList"
@@ -10,10 +11,7 @@ import {getAllPosts} from "utils/posts"
 
 const loader = () => {
     const allPosts = getAllPosts()
-
-    return {
-        allPosts,
-    }
+    return json({allPosts})
 }
 
 const BlogRoute: FC = () => {

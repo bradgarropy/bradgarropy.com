@@ -1,5 +1,6 @@
 import SEO from "@bradgarropy/next-seo"
 import type {LoaderArgs} from "@remix-run/node"
+import {json} from "@remix-run/node"
 import {Response} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 import Layout from "components/Layout"
@@ -18,11 +19,11 @@ const loader = async ({params}: LoaderArgs) => {
     const newerNow = await getNewerNow(currentNow)
     const olderNow = await getOlderNow(currentNow)
 
-    return {
+    return json({
         currentNow,
         newerNow,
         olderNow,
-    }
+    })
 }
 
 const NowRoute: FC = () => {
