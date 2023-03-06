@@ -1,5 +1,6 @@
 import SEO from "@bradgarropy/next-seo"
 import type {LoaderArgs} from "@remix-run/node"
+import {Response} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 import Layout from "components/Layout"
 import PostList from "components/PostList"
@@ -8,8 +9,12 @@ import type {FC} from "react"
 import {getPostsByTopic, getTopic} from "utils/posts"
 
 const loader = ({params}: LoaderArgs) => {
-    // TODO: fix this
-    const name = params.name as string
+    const name = params.name
+
+    if (!name) {
+        throw new Response("Not found", {status: 404})
+    }
+
     const topic = getTopic(name)
     const posts = getPostsByTopic(topic.name)
 

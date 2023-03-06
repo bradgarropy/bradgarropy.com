@@ -1,5 +1,6 @@
 import SEO from "@bradgarropy/next-seo"
 import type {LoaderArgs} from "@remix-run/node"
+import {Response} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 import Layout from "components/Layout"
 import Now from "components/Now"
@@ -7,8 +8,12 @@ import type {FC} from "react"
 import {getNewerNow, getNowByDate, getOlderNow} from "utils/now"
 
 const loader = async ({params}: LoaderArgs) => {
-    // TODO: fix this
-    const date = params.date as string
+    const date = params.date
+
+    if (!date) {
+        throw new Response("Not found", {status: 404})
+    }
+
     const currentNow = await getNowByDate(date)
     const newerNow = await getNewerNow(currentNow)
     const olderNow = await getOlderNow(currentNow)
