@@ -1,4 +1,9 @@
-import type {LinkDescriptor, LinksFunction, MetaFunction} from "@remix-run/node"
+import type {
+    LinkDescriptor,
+    LinksFunction,
+    MetaDescriptor,
+    MetaFunction,
+} from "@remix-run/node"
 import {
     Links,
     LiveReload,
@@ -8,12 +13,28 @@ import {
     ScrollRestoration,
 } from "@remix-run/react"
 import tailwindStyles from "styles/global.css"
+import {createImageUrl} from "utils/cloudinary"
 
-const meta: MetaFunction = () => ({
-    charset: "utf-8",
-    title: "💿 remix starter",
-    viewport: "width=device-width,initial-scale=1",
-})
+import pkg from "../package.json"
+
+const meta: MetaFunction = () => {
+    const meta: MetaDescriptor = {
+        "title": "🏠 my home on the web",
+        "keywords": pkg.keywords.join(","),
+        "charset": "utf-8",
+        "viewport": "width=device-width,initial-scale=1",
+        "og:url": "https://bradgarropy.com",
+        "og:type": "website",
+        "og:title": "🏠 my home on the web",
+        "og:image": createImageUrl("/social/facebook.png"),
+        "twitter:card": "summary",
+        "twitter:site": "@bradgarropy",
+        "twitter:title": "🏠 my home on the web",
+        "twitter:image": createImageUrl("/social/twitter.png"),
+    }
+
+    return meta
+}
 
 const links: LinksFunction = () => {
     const links: LinkDescriptor[] = [
@@ -36,7 +57,7 @@ const links: LinksFunction = () => {
         },
         {
             rel: "icon",
-            href: "https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/site/favicon.ico",
+            href: createImageUrl("/site/favicon.ico"),
         },
     ]
 

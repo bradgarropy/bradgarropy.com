@@ -8,11 +8,10 @@ import Post from "components/Post"
 import type {FC} from "react"
 import {getPostBySlug} from "utils/posts"
 
-const meta: MetaFunction = () => {
-    const meta: MetaDescriptor = {
-        title: "🏠 my home on the web",
-    }
+const meta: MetaFunction = ({data}) => {
+    const {post} = data
 
+    const meta: MetaDescriptor = {title: post.frontmatter.title}
     return meta
 }
 
@@ -32,7 +31,6 @@ const PostRoute: FC = () => {
 
     return (
         <Layout>
-            <SEO title={post.frontmatter.title} />
             <Post post={post} />
         </Layout>
     )

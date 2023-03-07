@@ -39,7 +39,6 @@ const NowRoute: FC = () => {
 
     return (
         <Layout>
-            {/* <SEO title="🧭 now" /> */}
             <Now now={currentNow} newer={newerNow} older={olderNow} />
         </Layout>
     )

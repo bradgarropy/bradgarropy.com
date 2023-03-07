@@ -14,7 +14,10 @@ const loader = async () => {
 
 const meta: MetaFunction = () => {
     const meta: MetaDescriptor = {
-        title: "🤝 let's work together",
+        "title": "🤝 let's work together",
+        "og:image": createImageUrl("/pages/hire-me/hire-me.png"),
+        "twitter:card": "summary_large_image",
+        "twitter:image": createImageUrl("/pages/hire-me/hire-me.png"),
     }
 
     return meta
@@ -25,17 +28,6 @@ const HireMeRoute: FC = () => {
 
     return (
         <Layout>
-            {/* <SEO
-                title="🤝 let's work together"
-                facebook={{
-                    image: createImageUrl("/pages/hire-me/hire-me.png"),
-                }}
-                twitter={{
-                    image: createImageUrl("/pages/hire-me/hire-me.png"),
-                    card: "summary_large_image",
-                }}
-            /> */}
-
             <HireMe testimonials={testimonials} />
         </Layout>
     )

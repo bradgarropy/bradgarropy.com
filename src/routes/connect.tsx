@@ -14,7 +14,6 @@ const meta: MetaFunction = () => {
 const ConnectRoute: FC = () => {
     return (
         <PageLayout>
-            {/* <SEO title="🤝 connect with me" /> */}
             <Connect />
         </PageLayout>
     )

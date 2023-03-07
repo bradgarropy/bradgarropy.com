@@ -32,8 +32,6 @@ const BlogRoute: FC = () => {
 
     return (
         <Layout>
-            {/* <SEO title="✍🏼 blog" /> */}
-
             <div>
                 <PostSearchBar posts={allPosts} onSearch={onSearch} />
                 <PostList posts={posts} />

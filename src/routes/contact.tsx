@@ -14,7 +14,6 @@ const meta: MetaFunction = () => {
 const ContactRoute: FC = () => {
     return (
         <Layout>
-            {/* <SEO title="👋🏼 say hi" /> */}
             <Contact />
         </Layout>
     )

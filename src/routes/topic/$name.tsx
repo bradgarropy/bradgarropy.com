@@ -9,9 +9,11 @@ import TopicMeta from "components/TopicMeta"
 import type {FC} from "react"
 import {getPostsByTopic, getTopic} from "utils/posts"
 
-const meta: MetaFunction = () => {
+const meta: MetaFunction = ({data}) => {
+    const {topic} = data
+
     const meta: MetaDescriptor = {
-        title: "🏠 my home on the web",
+        title: `${topic.icon} ${topic.name}`,
     }
 
     return meta
@@ -38,8 +40,6 @@ const TopicRoute: FC = () => {
 
     return (
         <Layout>
-            {/* <SEO title={`${topic.icon} ${topic.name}`} /> */}
-
             <TopicMeta topic={topic} />
             <PostList posts={posts} />
         </Layout>

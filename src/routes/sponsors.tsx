@@ -24,7 +24,6 @@ const SponsorsRoute: FC = () => {
 
     return (
         <Layout>
-            {/* <SEO title="💜 sponsors" /> */}
             <Sponsors sponsors={sponsors} />
         </Layout>
     )

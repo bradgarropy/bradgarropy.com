@@ -24,7 +24,6 @@ const ResumeRoute: FC = () => {
 
     return (
         <Layout>
-            {/* <SEO title="👔 resume" /> */}
             <Resume resume={resume} />
         </Layout>
     )

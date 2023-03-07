@@ -24,7 +24,6 @@ const UsesRoute: FC = () => {
 
     return (
         <Layout>
-            {/* <SEO title="💠 uses" /> */}
             <Uses uses={uses} />
         </Layout>
     )
