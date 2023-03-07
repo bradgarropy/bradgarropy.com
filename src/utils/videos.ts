@@ -16,6 +16,17 @@ type YouTubeSearchResponse = {
         }
         snippet: Snippet
     }[]
+    error: Error
+}
+
+type Error = {
+    code: number
+    message: string
+    errors: {
+        message: string
+        domain: string
+        reason: string
+    }
 }
 
 type PageInfo = {
@@ -58,6 +69,10 @@ const getLatestVideos = async (): Promise<Video[]> => {
             },
         },
     )
+
+    if (response.error.code === 403) {
+        return []
+    }
 
     const videos: Video[] = response.items.map(item => {
         const video: Video = {
