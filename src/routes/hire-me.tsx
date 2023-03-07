@@ -1,4 +1,4 @@
-import SEO from "@bradgarropy/next-seo"
+import type {MetaDescriptor, MetaFunction} from "@remix-run/node"
 import {json} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 import HireMe from "components/HireMe"
@@ -12,12 +12,20 @@ const loader = async () => {
     return json({testimonials})
 }
 
+const meta: MetaFunction = () => {
+    const meta: MetaDescriptor = {
+        title: "🤝 let's work together",
+    }
+
+    return meta
+}
+
 const HireMeRoute: FC = () => {
     const {testimonials} = useLoaderData<typeof loader>()
 
     return (
         <Layout>
-            <SEO
+            {/* <SEO
                 title="🤝 let's work together"
                 facebook={{
                     image: createImageUrl("/pages/hire-me/hire-me.png"),
@@ -26,7 +34,7 @@ const HireMeRoute: FC = () => {
                     image: createImageUrl("/pages/hire-me/hire-me.png"),
                     card: "summary_large_image",
                 }}
-            />
+            /> */}
 
             <HireMe testimonials={testimonials} />
         </Layout>
@@ -34,4 +42,4 @@ const HireMeRoute: FC = () => {
 }
 
 export default HireMeRoute
-export {loader}
+export {loader, meta}

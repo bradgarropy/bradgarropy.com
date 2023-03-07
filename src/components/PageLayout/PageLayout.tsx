@@ -1,8 +1,16 @@
-import SEO from "@bradgarropy/next-seo"
+import type {MetaDescriptor, MetaFunction} from "@remix-run/node"
 import type {FC, ReactNode} from "react"
 import {createImageUrl} from "utils/cloudinary"
 
 import pkg from "../../../package.json"
+
+const meta: MetaFunction = () => {
+    const meta: MetaDescriptor = {
+        title: "🏠 my home on the web",
+    }
+
+    return meta
+}
 
 type PageLayoutProps = {
     children?: ReactNode
@@ -11,7 +19,7 @@ type PageLayoutProps = {
 const PageLayout: FC<PageLayoutProps> = ({children}) => {
     return (
         <>
-            <SEO
+            {/* <SEO
                 title="🏠 my home on the web"
                 keywords={pkg.keywords}
                 icon={createImageUrl("/site/favicon.ico")}
@@ -25,7 +33,7 @@ const PageLayout: FC<PageLayoutProps> = ({children}) => {
                     site: "@bradgarropy",
                     card: "summary",
                 }}
-            />
+            /> */}
 
             <main className="grid min-h-screen content-center justify-center py-0 px-5 font-text">
                 {children}
@@ -35,3 +43,4 @@ const PageLayout: FC<PageLayoutProps> = ({children}) => {
 }
 
 export default PageLayout
+export {meta}

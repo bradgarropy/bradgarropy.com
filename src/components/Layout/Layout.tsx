@@ -1,10 +1,18 @@
-import SEO from "@bradgarropy/next-seo"
+import type {MetaDescriptor, MetaFunction} from "@remix-run/node"
 import Footer from "components/Footer"
 import Header from "components/Header"
 import type {FC, ReactNode} from "react"
 import {createImageUrl} from "utils/cloudinary"
 
 import pkg from "../../../package.json"
+
+const meta: MetaFunction = () => {
+    const meta: MetaDescriptor = {
+        title: "🏠 my home on the web",
+    }
+
+    return meta
+}
 
 type LayoutProps = {
     children?: ReactNode
@@ -13,7 +21,7 @@ type LayoutProps = {
 const Layout: FC<LayoutProps> = ({children}) => {
     return (
         <>
-            <SEO
+            {/* <SEO
                 title="🏠 my home on the web"
                 keywords={pkg.keywords}
                 icon={createImageUrl("/site/favicon.ico")}
@@ -27,7 +35,7 @@ const Layout: FC<LayoutProps> = ({children}) => {
                     site: "@bradgarropy",
                     card: "summary",
                 }}
-            />
+            /> */}
 
             <div className="m-auto grid min-h-screen max-w-5xl grid-rows-[auto_1fr_auto] gap-y-10 font-text text-black transition-all dark:text-white">
                 <Header />
@@ -43,3 +51,4 @@ const Layout: FC<LayoutProps> = ({children}) => {
 }
 
 export default Layout
+export {meta}

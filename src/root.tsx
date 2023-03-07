@@ -1,4 +1,4 @@
-import type {LinksFunction, MetaFunction} from "@remix-run/node"
+import type {LinkDescriptor, LinksFunction, MetaFunction} from "@remix-run/node"
 import {
     Links,
     LiveReload,
@@ -16,10 +16,27 @@ const meta: MetaFunction = () => ({
 })
 
 const links: LinksFunction = () => {
-    const links = [
+    const links: LinkDescriptor[] = [
         {
             rel: "stylesheet",
             href: tailwindStyles,
+        },
+        {
+            rel: "preconnect",
+            href: "https://fonts.googleapis.com",
+        },
+        {
+            rel: "preconnect",
+            href: "https://fonts.gstatic.com",
+            crossOrigin: "anonymous",
+        },
+        {
+            rel: "stylesheet",
+            href: "https://fonts.googleapis.com/css2?family=Righteous&family=Open+Sans:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap",
+        },
+        {
+            rel: "icon",
+            href: "https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/site/favicon.ico",
         },
     ]
 
@@ -30,19 +47,6 @@ const App = () => {
     return (
         <html lang="en">
             <head>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-                <link
-                    rel="preconnect"
-                    href="https://fonts.gstatic.com"
-                    crossOrigin="anonymous"
-                />
-
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Righteous&family=Open+Sans:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-                    rel="stylesheet"
-                />
-
                 <Meta />
                 <Links />
             </head>

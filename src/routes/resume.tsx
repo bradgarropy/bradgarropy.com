@@ -1,10 +1,18 @@
-import SEO from "@bradgarropy/next-seo"
+import type {MetaDescriptor, MetaFunction} from "@remix-run/node"
 import {json} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 import Layout from "components/Layout"
 import Resume from "components/Resume"
 import type {FC} from "react"
 import {getMarkdownBySlug} from "utils/markdown"
+
+const meta: MetaFunction = () => {
+    const meta: MetaDescriptor = {
+        title: "👔 resume",
+    }
+
+    return meta
+}
 
 const loader = async () => {
     const resume = await getMarkdownBySlug("resume")
@@ -16,11 +24,11 @@ const ResumeRoute: FC = () => {
 
     return (
         <Layout>
-            <SEO title="👔 resume" />
+            {/* <SEO title="👔 resume" /> */}
             <Resume resume={resume} />
         </Layout>
     )
 }
 
 export default ResumeRoute
-export {loader}
+export {loader, meta}

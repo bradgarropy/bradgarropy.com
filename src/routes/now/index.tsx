@@ -1,10 +1,18 @@
-import SEO from "@bradgarropy/next-seo"
+import type {MetaDescriptor, MetaFunction} from "@remix-run/node"
 import {json} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 import Layout from "components/Layout"
 import Now from "components/Now"
 import type {FC} from "react"
 import {getLatestNow, getNewerNow, getOlderNow} from "utils/now"
+
+const meta: MetaFunction = () => {
+    const meta: MetaDescriptor = {
+        title: "🧭 now",
+    }
+
+    return meta
+}
 
 const loader = async () => {
     const latestNow = await getLatestNow()
@@ -23,11 +31,11 @@ const NowRoute: FC = () => {
 
     return (
         <Layout>
-            <SEO title="🧭 now" />
+            {/* <SEO title="🧭 now" /> */}
             <Now now={latestNow} newer={newerNow} older={olderNow} />
         </Layout>
     )
 }
 
 export default NowRoute
-export {loader}
+export {loader, meta}

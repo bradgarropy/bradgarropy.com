@@ -1,4 +1,4 @@
-import SEO from "@bradgarropy/next-seo"
+import type {MetaDescriptor, MetaFunction} from "@remix-run/node"
 import {json} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 import Layout from "components/Layout"
@@ -8,6 +8,14 @@ import type {FC} from "react"
 import {useState} from "react"
 import type {PostFrontmatter} from "types/post"
 import {getAllPosts} from "utils/posts"
+
+const meta: MetaFunction = () => {
+    const meta: MetaDescriptor = {
+        title: "✍🏼 blog",
+    }
+
+    return meta
+}
 
 const loader = () => {
     const allPosts = getAllPosts()
@@ -24,7 +32,7 @@ const BlogRoute: FC = () => {
 
     return (
         <Layout>
-            <SEO title="✍🏼 blog" />
+            {/* <SEO title="✍🏼 blog" /> */}
 
             <div>
                 <PostSearchBar posts={allPosts} onSearch={onSearch} />
@@ -35,4 +43,4 @@ const BlogRoute: FC = () => {
 }
 
 export default BlogRoute
-export {loader}
+export {loader, meta}

@@ -1,5 +1,5 @@
-import SEO from "@bradgarropy/next-seo"
 import type {LoaderArgs} from "@remix-run/node"
+import type {MetaDescriptor, MetaFunction} from "@remix-run/node"
 import {json} from "@remix-run/node"
 import {Response} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
@@ -8,6 +8,14 @@ import PostList from "components/PostList"
 import TopicMeta from "components/TopicMeta"
 import type {FC} from "react"
 import {getPostsByTopic, getTopic} from "utils/posts"
+
+const meta: MetaFunction = () => {
+    const meta: MetaDescriptor = {
+        title: "🏠 my home on the web",
+    }
+
+    return meta
+}
 
 const loader = ({params}: LoaderArgs) => {
     const name = params.name
@@ -30,7 +38,7 @@ const TopicRoute: FC = () => {
 
     return (
         <Layout>
-            <SEO title={`${topic.icon} ${topic.name}`} />
+            {/* <SEO title={`${topic.icon} ${topic.name}`} /> */}
 
             <TopicMeta topic={topic} />
             <PostList posts={posts} />
@@ -39,4 +47,4 @@ const TopicRoute: FC = () => {
 }
 
 export default TopicRoute
-export {loader}
+export {loader, meta}

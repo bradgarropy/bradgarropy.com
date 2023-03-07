@@ -1,5 +1,5 @@
-import SEO from "@bradgarropy/next-seo"
 import type {LoaderArgs} from "@remix-run/node"
+import type {MetaDescriptor, MetaFunction} from "@remix-run/node"
 import {json} from "@remix-run/node"
 import {Response} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
@@ -7,6 +7,14 @@ import Layout from "components/Layout"
 import Post from "components/Post"
 import type {FC} from "react"
 import {getPostBySlug} from "utils/posts"
+
+const meta: MetaFunction = () => {
+    const meta: MetaDescriptor = {
+        title: "🏠 my home on the web",
+    }
+
+    return meta
+}
 
 const loader = async ({params}: LoaderArgs) => {
     const slug = params.slug
@@ -31,4 +39,4 @@ const PostRoute: FC = () => {
 }
 
 export default PostRoute
-export {loader}
+export {loader, meta}
