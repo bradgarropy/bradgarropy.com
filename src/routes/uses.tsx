@@ -6,7 +6,7 @@ import Uses from "components/Uses"
 import type {FC} from "react"
 import {getMarkdownBySlug} from "utils/markdown"
 
-const meta: MetaFunction = () => {
+export const meta: MetaFunction = () => {
     const meta: MetaDescriptor = {
         title: "💠 uses",
     }
@@ -14,7 +14,7 @@ const meta: MetaFunction = () => {
     return meta
 }
 
-const loader = async () => {
+export const loader = async () => {
     const uses = await getMarkdownBySlug("uses")
     return json({uses})
 }
@@ -30,4 +30,3 @@ const UsesRoute: FC = () => {
 }
 
 export default UsesRoute
-export {loader, meta}

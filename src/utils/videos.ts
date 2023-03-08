@@ -16,7 +16,7 @@ type YouTubeSearchResponse = {
         }
         snippet: Snippet
     }[]
-    error: Error
+    error?: Error
 }
 
 type Error = {
@@ -70,7 +70,7 @@ const getLatestVideos = async (): Promise<Video[]> => {
         },
     )
 
-    if (response.error.code === 403) {
+    if (response.error?.code === 403) {
         return []
     }
 

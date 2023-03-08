@@ -7,7 +7,7 @@ import {getLatestPosts} from "utils/posts"
 import {getFeaturedProjects} from "utils/projects"
 import {getLatestVideos} from "utils/videos"
 
-const loader = async () => {
+export const loader = async () => {
     const latestPosts = getLatestPosts()
     const latestVideos = await getLatestVideos()
     const featuredProjects = await getFeaturedProjects()
@@ -35,4 +35,3 @@ const IndexRoute: FC = () => {
 }
 
 export default IndexRoute
-export {loader}

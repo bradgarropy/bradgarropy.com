@@ -3,7 +3,7 @@ import Connect from "components/Connect"
 import PageLayout from "components/PageLayout"
 import type {FC} from "react"
 
-const meta: MetaFunction = () => {
+export const meta: MetaFunction = () => {
     const meta: MetaDescriptor = {
         title: "🤝 connect with me",
     }
@@ -20,4 +20,3 @@ const ConnectRoute: FC = () => {
 }
 
 export default ConnectRoute
-export {meta}

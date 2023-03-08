@@ -3,7 +3,7 @@ import Contact from "components/Contact"
 import Layout from "components/Layout"
 import type {FC} from "react"
 
-const meta: MetaFunction = () => {
+export const meta: MetaFunction = () => {
     const meta: MetaDescriptor = {
         title: "👋🏼 say hi",
     }
@@ -20,4 +20,3 @@ const ContactRoute: FC = () => {
 }
 
 export default ContactRoute
-export {meta}

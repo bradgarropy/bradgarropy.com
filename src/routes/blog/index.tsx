@@ -9,7 +9,7 @@ import {useState} from "react"
 import type {PostFrontmatter} from "types/post"
 import {getAllPosts} from "utils/posts"
 
-const meta: MetaFunction = () => {
+export const meta: MetaFunction = () => {
     const meta: MetaDescriptor = {
         title: "✍🏼 blog",
     }
@@ -17,7 +17,7 @@ const meta: MetaFunction = () => {
     return meta
 }
 
-const loader = () => {
+export const loader = () => {
     const allPosts = getAllPosts()
     return json({allPosts})
 }
@@ -41,4 +41,3 @@ const BlogRoute: FC = () => {
 }
 
 export default BlogRoute
-export {loader, meta}

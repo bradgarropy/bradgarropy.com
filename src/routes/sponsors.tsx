@@ -6,7 +6,7 @@ import Sponsors from "components/Sponsors"
 import type {FC} from "react"
 import {getSponsors} from "utils/sponsors"
 
-const meta: MetaFunction = () => {
+export const meta: MetaFunction = () => {
     const meta: MetaDescriptor = {
         title: "💜 sponsors",
     }
@@ -14,7 +14,7 @@ const meta: MetaFunction = () => {
     return meta
 }
 
-const loader = async () => {
+export const loader = async () => {
     const sponsors = await getSponsors()
     return json({sponsors})
 }
@@ -30,4 +30,3 @@ const SponsorsRoute: FC = () => {
 }
 
 export default SponsorsRoute
-export {loader, meta}

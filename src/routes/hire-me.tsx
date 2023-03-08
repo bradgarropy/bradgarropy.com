@@ -7,12 +7,12 @@ import type {FC} from "react"
 import {createImageUrl} from "utils/cloudinary"
 import {getTestimonials} from "utils/testimonials"
 
-const loader = async () => {
+export const loader = async () => {
     const testimonials = await getTestimonials()
     return json({testimonials})
 }
 
-const meta: MetaFunction = () => {
+export const meta: MetaFunction = () => {
     const meta: MetaDescriptor = {
         "title": "🤝 let's work together",
         "og:image": createImageUrl("/pages/hire-me/hire-me.png"),
@@ -34,4 +34,3 @@ const HireMeRoute: FC = () => {
 }
 
 export default HireMeRoute
-export {loader, meta}

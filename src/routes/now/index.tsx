@@ -6,7 +6,7 @@ import Now from "components/Now"
 import type {FC} from "react"
 import {getLatestNow, getNewerNow, getOlderNow} from "utils/now"
 
-const meta: MetaFunction = () => {
+export const meta: MetaFunction = () => {
     const meta: MetaDescriptor = {
         title: "🧭 now",
     }
@@ -14,7 +14,7 @@ const meta: MetaFunction = () => {
     return meta
 }
 
-const loader = async () => {
+export const loader = async () => {
     const latestNow = await getLatestNow()
     const newerNow = await getNewerNow(latestNow)
     const olderNow = await getOlderNow(latestNow)
@@ -37,4 +37,3 @@ const NowRoute: FC = () => {
 }
 
 export default NowRoute
-export {loader, meta}

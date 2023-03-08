@@ -9,7 +9,7 @@ import TopicMeta from "components/TopicMeta"
 import type {FC} from "react"
 import {getPostsByTopic, getTopic} from "utils/posts"
 
-const meta: MetaFunction = ({data}) => {
+export const meta: MetaFunction = ({data}) => {
     const {topic} = data
 
     const meta: MetaDescriptor = {
@@ -19,7 +19,7 @@ const meta: MetaFunction = ({data}) => {
     return meta
 }
 
-const loader = ({params}: LoaderArgs) => {
+export const loader = ({params}: LoaderArgs) => {
     const name = params.name
 
     if (!name) {
@@ -47,4 +47,3 @@ const TopicRoute: FC = () => {
 }
 
 export default TopicRoute
-export {loader, meta}

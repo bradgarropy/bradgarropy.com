@@ -8,14 +8,14 @@ import Post from "components/Post"
 import type {FC} from "react"
 import {getPostBySlug} from "utils/posts"
 
-const meta: MetaFunction = ({data}) => {
+export const meta: MetaFunction = ({data}) => {
     const {post} = data
 
     const meta: MetaDescriptor = {title: post.frontmatter.title}
     return meta
 }
 
-const loader = async ({params}: LoaderArgs) => {
+export const loader = async ({params}: LoaderArgs) => {
     const slug = params.slug
 
     if (!slug) {
@@ -37,4 +37,3 @@ const PostRoute: FC = () => {
 }
 
 export default PostRoute
-export {loader, meta}

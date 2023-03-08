@@ -6,7 +6,7 @@ import Resume from "components/Resume"
 import type {FC} from "react"
 import {getMarkdownBySlug} from "utils/markdown"
 
-const meta: MetaFunction = () => {
+export const meta: MetaFunction = () => {
     const meta: MetaDescriptor = {
         title: "👔 resume",
     }
@@ -14,7 +14,7 @@ const meta: MetaFunction = () => {
     return meta
 }
 
-const loader = async () => {
+export const loader = async () => {
     const resume = await getMarkdownBySlug("resume")
     return json({resume})
 }
@@ -30,4 +30,3 @@ const ResumeRoute: FC = () => {
 }
 
 export default ResumeRoute
-export {loader, meta}
