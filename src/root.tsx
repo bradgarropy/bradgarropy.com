@@ -17,7 +17,7 @@ import {createImageUrl} from "utils/cloudinary"
 
 import pkg from "../package.json"
 
-const meta: MetaFunction = () => {
+export const meta: MetaFunction = () => {
     const meta: MetaDescriptor = {
         "title": "🏠 my home on the web",
         "keywords": pkg.keywords.join(","),
@@ -36,7 +36,7 @@ const meta: MetaFunction = () => {
     return meta
 }
 
-const links: LinksFunction = () => {
+export const links: LinksFunction = () => {
     const links: LinkDescriptor[] = [
         {
             rel: "stylesheet",
@@ -83,4 +83,3 @@ const App = () => {
 }
 
 export default App
-export {links, meta}
