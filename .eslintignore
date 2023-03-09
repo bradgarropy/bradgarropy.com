@@ -6,7 +6,6 @@
 
 # build
 /.cache
-/.next
 /tsconfig.tsbuildinfo
 /api
 /public/build
