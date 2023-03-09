@@ -1,8 +1,7 @@
 import {render, screen} from "@testing-library/react"
+import PostFooter from "components/PostFooter"
 import {useMeta} from "hooks"
 import {mockMeta} from "test-utils/mocks"
-
-import PostFooter from "./PostFooter"
 
 jest.mock("hooks")
 

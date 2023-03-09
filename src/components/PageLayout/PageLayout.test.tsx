@@ -1,6 +1,5 @@
 import {render, screen} from "@testing-library/react"
-
-import PageLayout from "./PageLayout"
+import PageLayout from "components/PageLayout"
 
 test("shows content", () => {
     render(

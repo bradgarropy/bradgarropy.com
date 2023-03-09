@@ -1,7 +1,6 @@
 import {render, screen} from "@testing-library/react"
+import PostList from "components/PostList"
 import {mockPostsFrontmatter} from "test-utils/mocks"
-
-import PostList from "./PostList"
 
 test("shows posts", () => {
     render(<PostList posts={mockPostsFrontmatter} />)

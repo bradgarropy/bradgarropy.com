@@ -1,8 +1,7 @@
 import {render, screen} from "@testing-library/react"
+import Post from "components/Post"
 import {useMeta} from "hooks"
 import {mockMeta, mockPost} from "test-utils/mocks"
-
-import Post from "./Post"
 
 jest.mock("hooks/useMeta")
 
