@@ -38,7 +38,7 @@ const HireMe: FC<HireMeProps> = ({testimonials}) => {
                 me!
             </p>
 
-            <div className="prose prose-h1:font-bold dark:prose-invert">
+            <div className="prose dark:prose-invert prose-h1:font-bold">
                 <Heading level={1} id="testimonials">
                     💯 what people think of me
                 </Heading>
