@@ -29,6 +29,18 @@ const mockYoutubeResponse = {
     ],
 }
 
+const mockYoutubeErrorResponse = {
+    error: {
+        code: 403,
+        message: "quota exceeded",
+        errors: {
+            message: "you made too many requests",
+            domain: "youtube.com",
+            reason: "quota exceeded",
+        },
+    },
+}
+
 const mockTestimonialsPaths = ["first.md", "second.md"]
 
 const mockTestimonialsResponse = [
@@ -526,5 +538,6 @@ export {
     mockPostsResponse,
     mockTestimonialsPaths,
     mockTestimonialsResponse,
+    mockYoutubeErrorResponse,
     mockYoutubeResponse,
 }
