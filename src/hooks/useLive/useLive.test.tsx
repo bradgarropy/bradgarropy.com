@@ -3,7 +3,8 @@ import {useLive} from "hooks"
 import {getChannelStatus} from "utils/api/twitch"
 
 jest.mock("utils/api/twitch")
-jest.useFakeTimers("legacy")
+jest.useFakeTimers()
+jest.spyOn(global, "clearInterval")
 
 const mockGetChannelStatus = getChannelStatus as jest.Mock
 
