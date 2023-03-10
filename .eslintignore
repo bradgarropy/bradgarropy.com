@@ -8,6 +8,7 @@
 /.cache
 /tsconfig.tsbuildinfo
 /api
+/build
 /public/build
 
 # test
