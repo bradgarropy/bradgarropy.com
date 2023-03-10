@@ -1,4 +1,4 @@
-import {render, screen} from "@testing-library/react"
+import {act, render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import PostSearchBar from "components/PostSearchBar"
 import {
@@ -27,9 +27,11 @@ describe("search bar", () => {
     })
 
     test("searches", async () => {
-        await userEvent.type(
-            screen.getByPlaceholderText(mockPlaceholder),
-            mockQuery,
+        await act(() =>
+            userEvent.type(
+                screen.getByPlaceholderText(mockPlaceholder),
+                mockQuery,
+            ),
         )
 
         expect(screen.getByPlaceholderText(mockPlaceholder)).toHaveDisplayValue(

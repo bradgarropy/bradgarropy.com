@@ -1,5 +1,5 @@
 import {http} from "@bradgarropy/http"
-import {render, screen, waitFor} from "@testing-library/react"
+import {act, render, screen, waitFor} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import Newsletter from "components/Newsletter"
 
@@ -20,12 +20,12 @@ test("subscribes", async () => {
     render(<Newsletter />)
 
     const form = screen.getByPlaceholderText("email@example.com")
-    await userEvent.type(form, "bradgarropy@gmail.com")
+    await act(() => userEvent.type(form, "bradgarropy@gmail.com"))
 
     expect(form).toHaveValue("bradgarropy@gmail.com")
 
     const subscribeButton = screen.getByText("📧 subscribe")
-    await userEvent.click(subscribeButton)
+    await act(() => userEvent.click(subscribeButton))
 
     expect(http.post).toHaveBeenCalledTimes(1)
 
