@@ -20,7 +20,9 @@ describe("renders links", () => {
         const name = "example"
 
         const {result} = renderHook(() =>
-            useMarkdown(`<a href="https://${name}.com">${name}</a>`),
+            useMarkdown(
+                `<a href="https://${name}.com" rel="noopener noreferrer" target="_blank">${name}</a>`,
+            ),
         )
 
         render(result.current)

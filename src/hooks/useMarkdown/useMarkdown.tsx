@@ -1,6 +1,6 @@
 import {Link} from "@remix-run/react"
 import Heading from "components/Heading"
-import React, {createElement, Fragment} from "react"
+import {createElement, Fragment} from "react"
 import rehypeParse from "rehype-parse"
 import rehypeReact from "rehype-react"
 import {unified} from "unified"
