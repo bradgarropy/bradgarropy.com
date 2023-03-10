@@ -13,6 +13,7 @@ const useMarkdown = (html: string) => {
             Fragment,
             components: {
                 html: ({children}) => children,
+                head: ({children}) => children,
                 body: ({children}) => children,
                 a: ({href, children, ...props}) => {
                     return (

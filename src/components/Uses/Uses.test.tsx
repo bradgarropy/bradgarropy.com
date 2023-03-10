@@ -4,7 +4,6 @@ import {mockUses} from "test-utils/mocks"
 
 test("shows uses", () => {
     render(<Uses uses={mockUses} />)
-    screen.debug()
 
     expect(screen.getByText("💠 uses"))
     expect(screen.getByText("uses"))
