@@ -5,7 +5,7 @@ jest.mock("gray-matter")
 
 jest.mock("gatsby-remark-vscode", () => {
     return {
-        remarkPlugin: tree => tree,
+        remarkPlugin: (tree: any) => tree,
     }
 })
 

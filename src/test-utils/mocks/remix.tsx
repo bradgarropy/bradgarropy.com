@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const MockLink = ({to, children, ...props}: any) => (
     <a href={to} {...props}>
         {children}
