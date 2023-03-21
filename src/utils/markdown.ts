@@ -3,7 +3,6 @@ import {rehypeImageLinks} from "@bradgarropy/rehype-image-links"
 import remarkEmbedder from "@remark-embedder/core"
 // import {remarkPlugin as remarkVscode} from "gatsby-remark-vscode"
 import matter from "gray-matter"
-import path from "path"
 import rehypeExternalLinks from "rehype-external-links"
 import rehypeRaw from "rehype-raw"
 import rehypeStringify from "rehype-stringify"
@@ -68,6 +67,8 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
             rel: ["noopener", "noreferrer"],
         })
         .use(rehypeCloudinaryImageSize)
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         .use(rehypeImageLinks)
         .use(rehypeRaw)
         .use(rehypeStringify)
