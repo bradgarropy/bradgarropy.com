@@ -22,7 +22,7 @@ import type {Markdown} from "types/markdown"
 import {unified} from "unified"
 
 const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
-    const nowPath = path.join(process.cwd(), `content/pages/${slug}.md`)
+    const nowPath = `${__dirname}/../content/pages/${slug}.md`
 
     const file = matter.read(nowPath)
     const html = await transformMarkdown(file.content)
