@@ -33,7 +33,7 @@
     "scripts": {
         "start": "remix dev",
         "build": "remix build",
-        "build:vercel": "remix build && cp -r content build && cp -r content app && cp -r content public",
+        "build:vercel": "remix build && cp -r content build && cp -r content app && cp -r content public && cp -r content public/build",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
         "format": "prettier --check .",
