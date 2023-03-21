@@ -11,6 +11,7 @@ const icons = {
 }
 
 const getLatestPosts = (): PostFrontmatter[] => {
+    const foo = `${__dirname}/../../content/posts`
     const postsPath = path.join(process.cwd(), "content/posts")
 
     const posts = fs
