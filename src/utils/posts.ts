@@ -11,16 +11,7 @@ const icons = {
 }
 
 const getLatestPosts = (): PostFrontmatter[] => {
-    console.log(process.cwd())
-    console.log(__dirname)
-    console.log(fs.readdirSync(__dirname))
-    console.log(fs.readdirSync(path.join(__dirname, "..")))
-    console.log(fs.readdirSync(path.join(__dirname, "..", "..")))
-    console.log(fs.readdirSync(path.join(__dirname, "..", "..", "..")))
-
-    // const postsPath = path.join(process.cwd(), "content/posts")
     const postsPath = `${__dirname}/../content/posts`
-    console.log(postsPath)
 
     const posts = fs
         // read directory of posts
@@ -41,9 +32,7 @@ const getLatestPosts = (): PostFrontmatter[] => {
 }
 
 const getAllPosts = (): PostFrontmatter[] => {
-    // const postsPath = path.join(process.cwd(), "content/posts")
-    const postsPath = `${__dirname}/../../content/posts`
-    console.log(postsPath)
+    const postsPath = `${__dirname}/../content/posts`
 
     const posts = fs
         // read directory of posts
@@ -64,7 +53,7 @@ const getAllPosts = (): PostFrontmatter[] => {
 }
 
 const getPostBySlug = async (slug: PostFrontmatter["slug"]): Promise<Post> => {
-    const postPath = path.join(process.cwd(), `content/posts/${slug}.md`)
+    const postPath = `${__dirname}/../content/posts/${slug}.md`
 
     const file = matter.read(postPath)
     const html = await transformMarkdown(file.content)
@@ -87,7 +76,7 @@ const getTopic = (name: Topic["name"]): Topic => {
 }
 
 const getTopics = (): Topic[] => {
-    const postsPath = path.join(process.cwd(), "content/posts")
+    const postsPath = `${__dirname}/../content/posts`
 
     const topics = fs
         // read directory of posts
@@ -96,7 +85,7 @@ const getTopics = (): Topic[] => {
         // create path to each markdown file
         // read frontmatter from each post
         .reduce<Topic[]>((topics, slug) => {
-            const postPath = path.join(process.cwd(), `content/posts/${slug}`)
+            const postPath = `${postsPath}/${slug}`
             const file = matter.read(postPath)
             const post = file.data as PostFrontmatter
 
@@ -111,8 +100,7 @@ const getTopics = (): Topic[] => {
 }
 
 const getPostsByTopic = (topic: Topic["name"]): PostFrontmatter[] => {
-    // const postsPath = path.join(process.cwd(), "content/posts")
-    const postsPath = `${__dirname}/../../content/posts`
+    const postsPath = `${__dirname}/../content/posts`
 
     const posts = fs
         // read directory of posts
@@ -121,7 +109,7 @@ const getPostsByTopic = (topic: Topic["name"]): PostFrontmatter[] => {
         // create path to each markdown file
         // read frontmatter from each post
         .reduce<PostFrontmatter[]>((posts, slug) => {
-            const postPath = `${__dirname}/../../content/posts/${slug}`
+            const postPath = `${postsPath}/${slug}`
             const file = matter.read(postPath)
             const post = file.data as PostFrontmatter
 
