@@ -18,7 +18,9 @@ const getLatestPosts = (): PostFrontmatter[] => {
     console.log(fs.readdirSync(path.join(__dirname, "..", "..")))
     console.log(fs.readdirSync(path.join(__dirname, "..", "..", "..")))
 
-    const postsPath = path.join(process.cwd(), "content/posts")
+    // const postsPath = path.join(process.cwd(), "content/posts")
+    const postsPath = `${__dirname}/../../content/posts`
+    console.log(postsPath)
 
     const posts = fs
         // read directory of posts
@@ -27,7 +29,7 @@ const getLatestPosts = (): PostFrontmatter[] => {
         // create path to each markdown file
         // read frontmatter from each post
         .reduce<PostFrontmatter[]>((posts, slug) => {
-            const postPath = path.join(process.cwd(), `content/posts/${slug}`)
+            const postPath = `${postsPath}/${slug}`
             const file = matter.read(postPath)
             const post = file.data as PostFrontmatter
 
@@ -39,7 +41,9 @@ const getLatestPosts = (): PostFrontmatter[] => {
 }
 
 const getAllPosts = (): PostFrontmatter[] => {
-    const postsPath = path.join(process.cwd(), "content/posts")
+    // const postsPath = path.join(process.cwd(), "content/posts")
+    const postsPath = `${__dirname}/../../content/posts`
+    console.log(postsPath)
 
     const posts = fs
         // read directory of posts
@@ -48,7 +52,7 @@ const getAllPosts = (): PostFrontmatter[] => {
         // create path to each markdown file
         // read frontmatter from each post
         .reduce<PostFrontmatter[]>((posts, slug) => {
-            const postPath = path.join(process.cwd(), `content/posts/${slug}`)
+            const postPath = `${postsPath}/${slug}`
             const file = matter.read(postPath)
             const post = file.data as PostFrontmatter
 
