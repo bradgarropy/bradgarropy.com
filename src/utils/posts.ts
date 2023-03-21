@@ -11,6 +11,7 @@ const icons = {
 }
 
 const getLatestPosts = (): PostFrontmatter[] => {
+    console.log(process.cwd())
     console.log(__dirname)
     console.log(fs.readdirSync(__dirname))
     console.log(fs.readdirSync(path.join(__dirname, "..")))
