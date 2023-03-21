@@ -19,7 +19,7 @@ const getLatestPosts = (): PostFrontmatter[] => {
     console.log(fs.readdirSync(path.join(__dirname, "..", "..", "..")))
 
     // const postsPath = path.join(process.cwd(), "content/posts")
-    const postsPath = `${__dirname}/../../content/posts`
+    const postsPath = `${__dirname}/../content/posts`
     console.log(postsPath)
 
     const posts = fs
