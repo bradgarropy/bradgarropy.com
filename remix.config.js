@@ -4,6 +4,7 @@ const config = {
     appDirectory: "src",
     future: {
         unstable_tailwind: true,
+        // v2_routeConvention: true,
     },
     ignoredRouteFiles: ["**/.*"],
     server: process.env.NODE_ENV === "development" ? undefined : "./server.js",

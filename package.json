@@ -47,7 +47,6 @@
     "dependencies": {
         "@bradgarropy/captivate-sdk": "^0.4.0",
         "@bradgarropy/http": "^2.0.0",
-        "@bradgarropy/next-google-analytics": "^1.0.0",
         "@bradgarropy/rehype-cloudinary-image-size": "^1.0.0",
         "@bradgarropy/rehype-image-links": "^1.0.0",
         "@octokit/graphql": "^5.0.1",
