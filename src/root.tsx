@@ -12,6 +12,7 @@ import {
     Scripts,
     ScrollRestoration,
 } from "@remix-run/react"
+import {AppProvider, ThemeProvider} from "context"
 import tailwindStyles from "styles/global.css"
 import {createImageUrl} from "utils/cloudinary"
 
@@ -72,8 +73,13 @@ const App = () => {
                 <Links />
             </head>
 
-            <body>
-                <Outlet />
+            <body className="bg-white transition duration-300 dark:bg-black">
+                <ThemeProvider>
+                    <AppProvider>
+                        <Outlet />
+                    </AppProvider>
+                </ThemeProvider>
+
                 <ScrollRestoration />
                 <Scripts />
                 <LiveReload />
