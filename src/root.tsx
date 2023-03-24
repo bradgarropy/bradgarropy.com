@@ -4,6 +4,7 @@ import type {
     MetaDescriptor,
     MetaFunction,
 } from "@remix-run/node"
+import {json} from "@remix-run/node"
 import {
     Links,
     LiveReload,
@@ -11,6 +12,7 @@ import {
     Outlet,
     Scripts,
     ScrollRestoration,
+    useLoaderData,
 } from "@remix-run/react"
 import {AppProvider, ThemeProvider} from "context"
 import tailwindStyles from "styles/global.css"
@@ -65,7 +67,13 @@ export const links: LinksFunction = () => {
     return links
 }
 
+export const loader = () => {
+    return json({gaMeasurementId: process.env.GOOGLE_ANALYTICS_MEASUREMENT_ID})
+}
+
 const App = () => {
+    const {gaMeasurementId} = useLoaderData<typeof loader>()
+
     return (
         <html lang="en">
             <head>
@@ -74,6 +82,23 @@ const App = () => {
             </head>
 
             <body className="bg-white transition duration-300 dark:bg-black">
+                <script
+                    async
+                    src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+                ></script>
+
+                <script
+                    async
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${gaMeasurementId}');
+                `,
+                    }}
+                ></script>
+
                 <ThemeProvider>
                     <AppProvider>
                         <Outlet />
