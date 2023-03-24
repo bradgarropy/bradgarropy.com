@@ -49,7 +49,6 @@ const config = {
             },
         },
         fontFamily: {
-            display: ["Righteous", "cursive"],
             text: ["Open Sans", "sans-serif"],
             heading: ["Montserrat", "sans-serif"],
         },
