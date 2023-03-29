@@ -9,7 +9,7 @@ import {formatDate} from "utils/date"
 type NowProps = {
     now: NowType
     newer?: NewerNow
-    older: OlderNow
+    older?: OlderNow
 }
 
 const Now: FC<NowProps> = ({now, newer, older}) => {
