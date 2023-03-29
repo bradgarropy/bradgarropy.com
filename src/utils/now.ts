@@ -1,7 +1,7 @@
 import fs from "fs"
 import matter from "gray-matter"
 import path from "path"
-import type {Now, NowFrontmatter} from "types/now"
+import type {NewerNow, Now, NowFrontmatter, OlderNow} from "types/now"
 import {transformMarkdown} from "utils/markdown"
 
 const getAllNows = (): NowFrontmatter["date"][] => {
@@ -11,7 +11,7 @@ const getAllNows = (): NowFrontmatter["date"][] => {
     return nows
 }
 
-const getNowBySlug = async (slug: NowFrontmatter["date"]): Promise<Now> => {
+const getNowByDate = async (slug: NowFrontmatter["date"]): Promise<Now> => {
     const nowPath = path.join(process.cwd(), `content/now/${slug}.md`)
 
     const file = matter.read(nowPath)
@@ -29,13 +29,13 @@ const getLatestNow = async (): Promise<Now> => {
     const nowsPath = path.join(process.cwd(), "content/now")
 
     const nows = fs.readdirSync(nowsPath)
-    const slug = nows[nows.length - 1].replace(".md", "")
-    const latestNow = await getNowBySlug(slug)
+    const date = nows[nows.length - 1].replace(".md", "")
+    const latestNow = await getNowByDate(date)
 
     return latestNow
 }
 
-const getNewerNow = async (currentNow: Now): Promise<Now | null> => {
+const getNewerNow = async (currentNow: Now): Promise<NewerNow> => {
     const nowsPath = path.join(process.cwd(), "content/now")
     const nows = fs.readdirSync(nowsPath).map(now => now.replace(".md", ""))
 
@@ -43,17 +43,17 @@ const getNewerNow = async (currentNow: Now): Promise<Now | null> => {
         now => now === currentNow.frontmatter.date,
     )
 
-    const slug = nows[currentNowIndex + 1]
+    const date = nows[currentNowIndex + 1]
 
-    if (!slug) {
+    if (!date) {
         return null
     }
 
-    const newerNow = await getNowBySlug(slug)
+    const newerNow = await getNowByDate(date)
     return newerNow
 }
 
-const getOlderNow = async (currentNow: Now): Promise<Now | null> => {
+const getOlderNow = async (currentNow: Now): Promise<OlderNow> => {
     const nowsPath = path.join(process.cwd(), "content/now")
     const nows = fs.readdirSync(nowsPath).map(now => now.replace(".md", ""))
 
@@ -61,14 +61,14 @@ const getOlderNow = async (currentNow: Now): Promise<Now | null> => {
         now => now === currentNow.frontmatter.date,
     )
 
-    const slug = nows[currentNowIndex - 1]
+    const date = nows[currentNowIndex - 1]
 
-    if (!slug) {
+    if (!date) {
         return null
     }
 
-    const olderNow = await getNowBySlug(slug)
+    const olderNow = await getNowByDate(date)
     return olderNow
 }
 
-export {getAllNows, getLatestNow, getNewerNow, getNowBySlug, getOlderNow}
+export {getAllNows, getLatestNow, getNewerNow, getNowByDate, getOlderNow}

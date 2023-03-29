@@ -4,7 +4,7 @@ import Now from "components/Now"
 import type {GetStaticPaths, GetStaticProps} from "next"
 import type {FC} from "react"
 import type {Now as NowType, NowFrontmatter} from "types/now"
-import {getAllNows, getNewerNow, getNowBySlug, getOlderNow} from "utils/now"
+import {getAllNows, getNewerNow, getNowByDate, getOlderNow} from "utils/now"
 
 type NowPageProps = {
     currentNow: NowType
@@ -22,8 +22,9 @@ const NowPage: FC<NowPageProps> = ({currentNow, newerNow, olderNow}) => {
 }
 
 const getStaticProps: GetStaticProps = async context => {
-    const slug = context.params.slug as NowFrontmatter["date"]
-    const currentNow = await getNowBySlug(slug)
+    const date = context.params.slug as NowFrontmatter["date"]
+
+    const currentNow = await getNowByDate(date)
     const newerNow = await getNewerNow(currentNow)
     const olderNow = await getOlderNow(currentNow)
 

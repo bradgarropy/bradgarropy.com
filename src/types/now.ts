@@ -7,4 +7,9 @@ type NowFrontmatter = {
     date: string
 }
 
-export type {Now, NowFrontmatter}
+type AdjacentNow = Now | null
+
+type NewerNow = AdjacentNow
+type OlderNow = AdjacentNow
+
+export type {NewerNow, Now, NowFrontmatter, OlderNow}

@@ -12,7 +12,7 @@ import {
     getAllNows,
     getLatestNow,
     getNewerNow,
-    getNowBySlug,
+    getNowByDate,
     getOlderNow,
 } from "utils/now"
 
@@ -37,7 +37,7 @@ test("gets now by slug", async () => {
     const mockMatterRead = matter.read as jest.Mock
     mockMatterRead.mockReturnValue(mockNowsResponse[1])
 
-    const now = await getNowBySlug("2021-12-31")
+    const now = await getNowByDate("2021-12-31")
     expect(now).toEqual(mockNow)
 })
 

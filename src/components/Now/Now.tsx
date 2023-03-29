@@ -3,13 +3,13 @@ import LinkButton from "components/LinkButton"
 import Markdown from "components/Markdown"
 import {useMarkdown} from "hooks"
 import type {FC} from "react"
-import type {Now as NowType} from "types/now"
+import type {NewerNow, Now as NowType, OlderNow} from "types/now"
 import {formatDate} from "utils/date"
 
 type NowProps = {
     now: NowType
-    newer: NowType
-    older: NowType
+    newer?: NewerNow
+    older: OlderNow
 }
 
 const Now: FC<NowProps> = ({now, newer, older}) => {
