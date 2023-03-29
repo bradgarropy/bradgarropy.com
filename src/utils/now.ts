@@ -28,8 +28,8 @@ const getLatestNow = async (): Promise<Now> => {
     const nowsPath = `${__dirname}/../content/now`
 
     const nows = fs.readdirSync(nowsPath)
-    const slug = nows[nows.length - 1].replace(".md", "")
-    const latestNow = await getNowByDate(slug)
+    const date = nows[nows.length - 1].replace(".md", "")
+    const latestNow = await getNowByDate(date)
 
     return latestNow
 }
@@ -42,13 +42,13 @@ const getNewerNow = async (currentNow: Now): Promise<NewerNow> => {
         now => now === currentNow.frontmatter.date,
     )
 
-    const slug = nows[currentNowIndex + 1]
+    const date = nows[currentNowIndex + 1]
 
-    if (!slug) {
+    if (!date) {
         return null
     }
 
-    const newerNow = await getNowByDate(slug)
+    const newerNow = await getNowByDate(date)
     return newerNow
 }
 
@@ -60,13 +60,13 @@ const getOlderNow = async (currentNow: Now): Promise<OlderNow> => {
         now => now === currentNow.frontmatter.date,
     )
 
-    const slug = nows[currentNowIndex - 1]
+    const date = nows[currentNowIndex - 1]
 
-    if (!slug) {
+    if (!date) {
         return null
     }
 
-    const olderNow = await getNowByDate(slug)
+    const olderNow = await getNowByDate(date)
     return olderNow
 }
 
