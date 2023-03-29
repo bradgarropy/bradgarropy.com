@@ -1,7 +1,7 @@
 import fs from "fs"
 import matter from "gray-matter"
 import path from "path"
-import {Post, PostFrontmatter, Topic} from "types/post"
+import type {Post, PostFrontmatter, Topic} from "types/post"
 import {transformMarkdown} from "utils/markdown"
 
 const icons = {

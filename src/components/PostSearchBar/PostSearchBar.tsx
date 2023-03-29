@@ -1,8 +1,9 @@
 import Fuse from "fuse.js"
 import {useRouter} from "next/router"
-import {FC, useEffect} from "react"
+import type {FC} from "react"
+import {useEffect} from "react"
 import {useState} from "react"
-import {PostFrontmatter} from "types/post"
+import type {PostFrontmatter} from "types/post"
 
 type PostSearchBarProps = {
     posts: PostFrontmatter[]

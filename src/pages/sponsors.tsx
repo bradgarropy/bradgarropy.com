@@ -1,9 +1,9 @@
 import SEO from "@bradgarropy/next-seo"
 import Layout from "components/Layout"
 import Sponsors from "components/Sponsors"
-import {GetStaticProps} from "next"
-import {FC} from "react"
-import {Sponsors as SponsorsType} from "types/sponsor"
+import type {GetStaticProps} from "next"
+import type {FC} from "react"
+import type {Sponsors as SponsorsType} from "types/sponsor"
 import {getSponsors} from "utils/sponsors"
 
 type SponsorsPageProps = {

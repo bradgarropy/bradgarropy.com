@@ -1,6 +1,6 @@
 import Link from "@bradgarropy/next-link"
 import classnames from "classnames"
-import {FC, ReactNode} from "react"
+import type {FC, ReactNode} from "react"
 
 type LinkButtonProps = {
     to: string

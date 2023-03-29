@@ -1,5 +1,5 @@
 import {mockAppCtx, mockThemeCtx} from "test-utils/mocks"
-import {AppContextType, ThemeContextType} from "types/context"
+import type {AppContextType, ThemeContextType} from "types/context"
 
 const generateAppCtx = (
     overrides?: Partial<AppContextType>,

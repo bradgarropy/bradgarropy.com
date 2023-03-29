@@ -5,7 +5,7 @@ import MobileNavigation from "components/MobileNavigation"
 import Navigation from "components/Navigation"
 import Streaming from "components/Streaming"
 import {useLive} from "hooks"
-import {FC} from "react"
+import type {FC} from "react"
 
 const Header: FC = () => {
     const live = useLive()

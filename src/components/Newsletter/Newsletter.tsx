@@ -1,5 +1,6 @@
 import {http} from "@bradgarropy/http"
-import {FC, useState} from "react"
+import type {FC} from "react"
+import {useState} from "react"
 
 const Newsletter: FC = () => {
     const [email, setEmail] = useState("")

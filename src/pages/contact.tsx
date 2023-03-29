@@ -1,7 +1,7 @@
 import SEO from "@bradgarropy/next-seo"
 import Contact from "components/Contact"
 import Layout from "components/Layout"
-import {FC} from "react"
+import type {FC} from "react"
 
 const ContactPage: FC = () => {
     return (

@@ -1,9 +1,9 @@
 import SEO from "@bradgarropy/next-seo"
 import Layout from "components/Layout"
 import Resume from "components/Resume"
-import {GetStaticProps} from "next"
-import {FC} from "react"
-import {Markdown} from "types/markdown"
+import type {GetStaticProps} from "next"
+import type {FC} from "react"
+import type {Markdown} from "types/markdown"
 import {getMarkdownBySlug} from "utils/markdown"
 
 type ResumePageProps = {

@@ -1,5 +1,5 @@
 import FancyLink from "components/FancyLink"
-import {FC} from "react"
+import type {FC} from "react"
 
 const Contact: FC = () => {
     return (

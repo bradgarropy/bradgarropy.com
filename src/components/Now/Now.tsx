@@ -2,8 +2,8 @@ import FancyLink from "components/FancyLink"
 import LinkButton from "components/LinkButton"
 import Markdown from "components/Markdown"
 import {useMarkdown} from "hooks"
-import {FC} from "react"
-import {Now as NowType} from "types/now"
+import type {FC} from "react"
+import type {Now as NowType} from "types/now"
 import {formatDate} from "utils/date"
 
 type NowProps = {

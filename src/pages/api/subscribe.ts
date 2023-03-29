@@ -1,5 +1,5 @@
 import {http} from "@bradgarropy/http"
-import {NextApiHandler} from "next"
+import type {NextApiHandler} from "next"
 
 const handler: NextApiHandler = async (req, res) => {
     const apiKey = process.env.REVUE_API_KEY

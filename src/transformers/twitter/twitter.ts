@@ -1,5 +1,5 @@
 import {http} from "@bradgarropy/http"
-import {TwitterOembed} from "types/oembed"
+import type {TwitterOembed} from "types/oembed"
 
 const shouldTransform = (url: string): boolean => {
     return url.includes("twitter.com")

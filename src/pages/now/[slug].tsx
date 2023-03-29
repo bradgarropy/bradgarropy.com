@@ -1,9 +1,9 @@
 import SEO from "@bradgarropy/next-seo"
 import Layout from "components/Layout"
 import Now from "components/Now"
-import {GetStaticPaths, GetStaticProps} from "next"
-import {FC} from "react"
-import {Now as NowType, NowFrontmatter} from "types/now"
+import type {GetStaticPaths, GetStaticProps} from "next"
+import type {FC} from "react"
+import type {Now as NowType, NowFrontmatter} from "types/now"
 import {getAllNows, getNewerNow, getNowBySlug, getOlderNow} from "utils/now"
 
 type NowPageProps = {

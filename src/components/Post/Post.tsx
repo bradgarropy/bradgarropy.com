@@ -1,8 +1,8 @@
 import PostBody from "components/PostBody"
 import PostFooter from "components/PostFooter"
 import PostHeader from "components/PostHeader"
-import {FC} from "react"
-import {Post as PostType} from "types/post"
+import type {FC} from "react"
+import type {Post as PostType} from "types/post"
 
 type PostProps = {
     post: PostType

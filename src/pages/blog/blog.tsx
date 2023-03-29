@@ -2,9 +2,10 @@ import SEO from "@bradgarropy/next-seo"
 import Layout from "components/Layout"
 import PostList from "components/PostList"
 import PostSearchBar from "components/PostSearchBar"
-import {GetStaticProps} from "next"
-import {FC, useState} from "react"
-import {PostFrontmatter} from "types/post"
+import type {GetStaticProps} from "next"
+import type {FC} from "react"
+import {useState} from "react"
+import type {PostFrontmatter} from "types/post"
 import {getAllPosts} from "utils/posts"
 
 type BlogPageProps = {

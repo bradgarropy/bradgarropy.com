@@ -1,6 +1,6 @@
 import LinkButton from "components/LinkButton"
 import {useMeta} from "hooks"
-import {FC} from "react"
+import type {FC} from "react"
 
 type PostCommentsProps = {
     slug: string

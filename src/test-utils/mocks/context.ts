@@ -1,4 +1,4 @@
-import {AppContextType, ThemeContextType} from "types/context"
+import type {AppContextType, ThemeContextType} from "types/context"
 
 const mockAppCtx: AppContextType = {
     open: false,

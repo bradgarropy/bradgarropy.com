@@ -1,7 +1,7 @@
 import SEO from "@bradgarropy/next-seo"
 import Connect from "components/Connect"
 import PageLayout from "components/PageLayout"
-import {FC} from "react"
+import type {FC} from "react"
 
 const ConnectPage: FC = () => {
     return (

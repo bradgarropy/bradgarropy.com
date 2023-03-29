@@ -1,5 +1,5 @@
 import LinkButton from "components/LinkButton"
-import {FC} from "react"
+import type {FC} from "react"
 
 type PostEditProps = {
     slug: string

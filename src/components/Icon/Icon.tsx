@@ -19,7 +19,7 @@ import {
     TypescriptIcon,
     YoutubeIcon,
 } from "components/Icons"
-import {FC, HTMLAttributes} from "react"
+import type {FC, HTMLAttributes} from "react"
 
 type IconProps = {
     name: string

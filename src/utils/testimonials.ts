@@ -1,7 +1,7 @@
 import fs from "fs"
 import matter from "gray-matter"
 import path from "path"
-import {Testimonial, TestimonialFrontmatter} from "types/testimonial"
+import type {Testimonial, TestimonialFrontmatter} from "types/testimonial"
 import {transformMarkdown} from "utils/markdown"
 
 const getTestimonials = async (): Promise<Testimonial[]> => {

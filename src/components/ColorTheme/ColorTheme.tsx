@@ -1,6 +1,6 @@
 import {MoonIcon, SunIcon} from "components/Icons"
 import {useTheme} from "hooks"
-import {FC} from "react"
+import type {FC} from "react"
 
 const ColorTheme: FC = () => {
     const {theme, setTheme} = useTheme()

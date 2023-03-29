@@ -1,6 +1,6 @@
 import Link from "@bradgarropy/next-link"
-import {FC} from "react"
-import {Post} from "types/post"
+import type {FC} from "react"
+import type {Post} from "types/post"
 import {formatDate} from "utils/date"
 
 type PostMetaProps = Pick<Post["frontmatter"], "date" | "topic">
