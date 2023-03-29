@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    @font-face {
+        font-family: "Montserrat";
+        src: url("/fonts/montserrat.ttf") format("truetype");
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: "Open Sans";
+        src: url("/fonts/open-sans.ttf") format("truetype");
+        font-display: swap;
+    }
+}
+
 @layer utilities {
     .text-shadow-2 {
         text-shadow: 2px 2px theme("colors.purple.400");
