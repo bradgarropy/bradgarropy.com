@@ -6,7 +6,7 @@ type PageLayoutProps = {
 
 const PageLayout: FC<PageLayoutProps> = ({children}) => {
     return (
-        <main className="grid min-h-screen content-center justify-center py-0 px-5 font-text">
+        <main className="grid min-h-screen content-center justify-center px-5 py-0 font-text text-black transition-all dark:text-white">
             {children}
         </main>
     )
