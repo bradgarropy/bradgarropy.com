@@ -27,7 +27,7 @@ const PageLayout: FC<PageLayoutProps> = ({children}) => {
                 }}
             />
 
-            <main className="grid min-h-screen content-center justify-center py-0 px-5">
+            <main className="grid min-h-screen content-center justify-center px-5 py-0 font-text text-black transition-all dark:text-white">
                 {children}
             </main>
         </>
