@@ -1,2 +1,1 @@
-import PostHeader from "./PostHeader"
-export default PostHeader
+export {default} from "./PostHeader"

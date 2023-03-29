@@ -1,2 +1,1 @@
-import MobileNavigation from "./MobileNavigation"
-export default MobileNavigation
+export {default} from "./MobileNavigation"

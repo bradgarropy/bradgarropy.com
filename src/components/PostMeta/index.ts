@@ -1,2 +1,1 @@
-import PostMeta from "./PostMeta"
-export default PostMeta
+export {default} from "./PostMeta"

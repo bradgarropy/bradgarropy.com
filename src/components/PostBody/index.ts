@@ -1,2 +1,1 @@
-import PostBody from "./PostBody"
-export default PostBody
+export {default} from "./PostBody"
