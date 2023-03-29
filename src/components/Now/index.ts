@@ -1,2 +1,1 @@
-import Now from "./Now"
-export default Now
+export {default} from "./Now"

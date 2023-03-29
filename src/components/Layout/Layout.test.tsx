@@ -1,7 +1,6 @@
 import {render, screen} from "@testing-library/react"
+import Layout from "components/Layout"
 import {useLive} from "hooks"
-
-import Layout from "./Layout"
 
 jest.mock("hooks/useLive")
 

@@ -1,9 +1,8 @@
 import {render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
+import MobileNavigation from "components/MobileNavigation"
 import {useApp} from "hooks"
 import {generateAppCtx} from "test-utils/generators"
-
-import MobileNavigation from "./MobileNavigation"
 
 const mockAppCtxOpen = generateAppCtx({open: true})
 const mockAppCtxClosed = generateAppCtx({open: false})

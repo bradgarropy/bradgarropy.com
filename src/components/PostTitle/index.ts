@@ -1,2 +1,1 @@
-import PostTitle from "./PostTitle"
-export default PostTitle
+export {default} from "./PostTitle"

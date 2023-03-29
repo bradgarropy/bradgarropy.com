@@ -1,2 +1,1 @@
-import FourOhFour from "./FourOhFour"
-export default FourOhFour
+export {default} from "./FourOhFour"

@@ -1,8 +1,7 @@
 import {render, screen} from "@testing-library/react"
+import Header from "components/Header"
 import {useApp, useLive, useTheme} from "hooks"
 import {generateAppCtx, generateThemeCtx} from "test-utils/generators"
-
-import Header from "./Header"
 
 jest.mock("hooks")
 

@@ -1,6 +1,5 @@
 import {render, screen} from "@testing-library/react"
-
-import SocialLink from "./SocialLink"
+import SocialLink from "components/SocialLink"
 
 test("instagram", () => {
     render(<SocialLink platform="instagram" />)

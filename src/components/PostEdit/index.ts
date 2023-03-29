@@ -1,2 +1,1 @@
-import PostEdit from "./PostEdit"
-export default PostEdit
+export {default} from "./PostEdit"

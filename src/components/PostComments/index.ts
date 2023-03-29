@@ -1,2 +1,1 @@
-import PostComments from "./PostComments"
-export default PostComments
+export {default} from "./PostComments"
