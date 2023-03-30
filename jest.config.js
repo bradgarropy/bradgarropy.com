@@ -13,7 +13,11 @@ const config = {
         "\\.(js|jsx|ts|tsx)$": [
             "babel-jest",
             {
-                presets: ["next/babel"],
+                presets: [
+                    "@babel/preset-env",
+                    ["@babel/preset-react", {runtime: "automatic"}],
+                    "@babel/preset-typescript",
+                ],
             },
         ],
     },
