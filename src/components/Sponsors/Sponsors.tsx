@@ -49,7 +49,7 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                                         height="460"
                                     />
 
-                                    <span className="absolute -top-4 -left-4 text-[2.5rem]">
+                                    <span className="absolute -left-4 -top-4 text-[2.5rem]">
                                         {sponsor.tier}
                                     </span>
                                 </Link>

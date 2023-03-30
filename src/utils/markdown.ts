@@ -67,6 +67,8 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
             rel: ["noopener", "noreferrer"],
         })
         .use(rehypeCloudinaryImageSize)
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         .use(rehypeImageLinks)
         .use(rehypeRaw)
         .use(rehypeStringify)
