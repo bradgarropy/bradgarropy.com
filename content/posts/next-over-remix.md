@@ -9,41 +9,48 @@ According to my [2023 goals][goals], my first task of the year was to convert my
 
 ## 🍰 conversion process
 
--   change link import
--   move pages to routes
--   map \_app and \_document to remix concepts (root)
--   same amount of lines
--   mocking was straightforward
+Converting from [Next.js][next] to [Remix][remix] was pretty straightforward. I started by swapping out the `next.config.js` for a `remix.config.js`. Then I had to map the `_app.tsx` and `_document.tsx` files to the Remix equivalent `root.tsx` file.
+
+Next I moved all of my `pages` into the `routes` folder and modified the structure slightly. All of the `getStaticProps` calls had to be converted to Remix `loader` functions, and I had to use the Remix `meta` function for SEO information. Then I swapped out the Next `<Link>` component for the Remix one.
+
+Ultimately the [pull request][pull-request] was only a four line difference if you don't count the `package-lock.json` file. Both frameworks were structured in a similar manner, but something about Remix felt simpler.
 
 ## 😖 issues
 
--   loader exports
--   gatsby remark vscode plugin
--   markdown file references
--   code highlighting not working
--   youtube api
+The project wasn't without issues though. The first problem I noticed was that sometimes page transitions weren't loading data correctly. That's because the `loader` functions must be exported inline, rather than at the bottom of the file.
+
+```typescript
+export const loader = () => {}
+```
+
+The next issue I hit was a very weird one. Once deployed to [Vercel][vercel], I was no longer to read my local `markdown` files. After [deep searching][vercel-files], I found that referencing `process.cwd()` does not work the same in Remix as it does in Next.js when hosted on Vercel.
+
+```typescript
+const postsPath = `${__dirname}/../content/posts`
+```
+
+The solution was to use `__dirname` to construct paths, so that they can be statically analyzed by the hosting platform.
+
+Another similar problem I ran into was with [gatsby-remark-vscode][gatsby-remark-vscode]. Internally it looks for some other files in nearby directories, which were not present because I had told Remix to bundle all server dependencies. Unfortunately I never found a solution to this problem.
+
+But the last issue I ran into was enough to put a stop to the project. Because Remix is an SSR framework, I was sending API requests to fetch my latest YouTube videos on every page load, which caused me to get rate limited for the rest of the day.
+
+I investigated using cache headers on the request sent from the server and from the browser, but nothing seemed to have any effect. Instead of go further down the caching rabbit hole with something like [Redis][redis], or set up a cron job to pull my latest videos, I decided that it was too much infrastructure for a static site.
 
 ## 🏎️ performance
 
--   remix
+But regardless, I wanted to see how a fully server rended application performed when compared to my existing Next.js site.
 
-    -   27 requests
-    -   990kb xferred
-    -   2mb resources
-    -   finish 1.5
-    -   dom 750ms
-    -   load 1.2s
-    -   100/97/92/82 lighthouse
+|                  | Next.js | Remix   |
+| ---------------- | ------: | :------ |
+| Requests         |    `52` | `27`    |
+| Transferred      | `992kb` | `990kb` |
+| Resources        |   `2mb` | `2mb`   |
+| Finish           |  `1.2s` | `1.5s`  |
+| DOMContentLoaded | `500ms` | `750ms` |
+| Load             | `850ms` | `1.2s`  |
 
--   next
-
-    -   52 requests
-    -   992kb xferred
-    -   2mb resources
-    -   finish 1.2
-    -   dom 500ms
-    -   load 850ms
-    -   100/98/92/90 lighthouse
+Despite the fact that Next.js had many more network requests fetching neighboring pages, it was faster in nearly every way! The loading experience was identical in both applications, with no noticable differences in layout shift or perceived loading time.
 
 ## 🎬 conclusion
 
@@ -64,3 +71,6 @@ According to my [2023 goals][goals], my first task of the year was to convert my
 [goals]: https://bradgarropy.com/blog/goals-for-2023#bradgarropy.com
 [tailwind]: https://tailwindcss.com
 [css-modules-to-tailwind]: https://bradgarropy.com/blog/css-modules-to-tailwind
+[vercel]: https://vercel.com
+[gatsby-remark-vscode]: https://github.com/andrewbranch/gatsby-remark-vscode
+[redis]: https://redis.com
