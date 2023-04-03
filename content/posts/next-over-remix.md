@@ -1,7 +1,7 @@
 ---
 title: 🔼 next over remix
 slug: next-over-remix
-date: "2023-03-31"
+date: "2023-04-03"
 topic: coding
 ---
 
@@ -54,15 +54,11 @@ Despite the fact that Next.js had many more network requests fetching neighborin
 
 ## 🎬 conclusion
 
--   remix is still my top picks for apps
--   using it at work
--   stick with next
--   host on vercel
--   debating on how far i push into next ecosystem
--   just removed next/image
--   pair well together
--   should stop rewriting my blog
--   instead should write all the posts i have drafted
+Given the issues I ran into, it showed me that [Remix][remix] isn't the right choice for a static blog. While the simplicity and developer experience is amazing, Remix really shines for authenticated web applications. That's why we're using it at [Atlassian][atlassian] for our latest internal tools.
+
+With that being said, I'm going to stick with [Next.js][next] for now. I'm still hosting on [Vercel][vercel], and they go together like peanut butter and jelly. However, I'm still debating on how far I push into the Next.js ecosystem. I recently made an effort to remove the `<Image>` component from my codebase, as it locked me into using Next.js. But their new `@next/font` module is very enticing...
+
+At the end of the day, I should stop rewriting my website and start finishing all of the blog ideas I have!
 
 [pull-request]: https://github.com/bradgarropy/bradgarropy.com/pull/353
 [remix]: https://remix.run
@@ -74,3 +70,4 @@ Despite the fact that Next.js had many more network requests fetching neighborin
 [vercel]: https://vercel.com
 [gatsby-remark-vscode]: https://github.com/andrewbranch/gatsby-remark-vscode
 [redis]: https://redis.com
+[atlassian]: https://www.atlassian.com
