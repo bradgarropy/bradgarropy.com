@@ -23,17 +23,15 @@ The project wasn't without issues though. The first problem I noticed was that s
 export const loader = () => {}
 ```
 
-The next issue I hit was a very weird one. Once deployed to [Vercel][vercel], I was no longer to read my local `markdown` files. After [deep searching][vercel-files], I found that referencing `process.cwd()` does not work the same in Remix as it does in Next.js when hosted on Vercel.
+The next issue I hit was a very weird one. Once deployed to [Vercel][vercel], I was no longer to read my local `markdown` files. After some [deep searching][vercel-files], I found that referencing `process.cwd()` does not work the same in Remix as it does in Next.js when hosted on Vercel. The solution was to use `__dirname` to construct paths, so that they can be statically analyzed by the hosting platform.
 
 ```typescript
 const postsPath = `${__dirname}/../content/posts`
 ```
 
-The solution was to use `__dirname` to construct paths, so that they can be statically analyzed by the hosting platform.
+Another similar problem I ran into was with [gatsby-remark-vscode][gatsby-remark-vscode] causing build failures. Internally it looks for some other files in nearby directories, which were not in their expected locations because I had told Remix to bundle all server dependencies. Unfortunately I never found a solution to this problem.
 
-Another similar problem I ran into was with [gatsby-remark-vscode][gatsby-remark-vscode]. Internally it looks for some other files in nearby directories, which were not present because I had told Remix to bundle all server dependencies. Unfortunately I never found a solution to this problem.
-
-But the last issue I ran into was enough to put a stop to the project. Because Remix is an SSR framework, I was sending API requests to fetch my latest YouTube videos on every page load, which caused me to get rate limited for the rest of the day.
+But the last issue I ran into was enough to put a stop to the project. Because Remix is an SSR framework, I was sending API requests to fetch my latest YouTube videos on every page load, which depleted my quota and caused me to get rate limited for the rest of the day.
 
 I investigated using cache headers on the request sent from the server and from the browser, but nothing seemed to have any effect. Instead of go further down the caching rabbit hole with something like [Redis][redis], or set up a cron job to pull my latest videos, I decided that it was too much infrastructure for a static site.
 
@@ -50,7 +48,7 @@ But regardless, I wanted to see how a fully server rended application performed 
 | DOMContentLoaded | `500ms` | `750ms` |
 | Load             | `850ms` | `1.2s`  |
 
-Despite the fact that Next.js had many more network requests fetching neighboring pages, it was faster in nearly every way! The loading experience was identical in both applications, with no noticable differences in layout shift or perceived loading time.
+Despite the fact that Next.js had many more network requests to fetch neighboring pages, it was faster in nearly every way! The loading experience was identical in both applications, with no noticable differences in layout shift or perceived loading time.
 
 ## 🎬 conclusion
 
