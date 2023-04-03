@@ -23,7 +23,7 @@ The project wasn't without issues though. The first problem I noticed was that s
 export const loader = () => {}
 ```
 
-The next issue I hit was a very weird one. Once deployed to [Vercel][vercel], I was no longer to read my local `markdown` files. After some [deep searching][vercel-files], I found that referencing `process.cwd()` does not work the same in Remix as it does in Next.js when hosted on Vercel. The solution was to use `__dirname` to construct paths, so that they can be statically analyzed by the hosting platform.
+The next issue I hit was a very weird one. Once deployed to [Vercel][vercel], I was no longer able to read my local `markdown` files. After some [deep searching][vercel-files], I found that referencing `process.cwd()` does not work the same in Remix as it does in Next.js when hosted on Vercel. The solution was to use `__dirname` to construct paths, so that they can be statically analyzed by the hosting platform.
 
 ```typescript
 const postsPath = `${__dirname}/../content/posts`
