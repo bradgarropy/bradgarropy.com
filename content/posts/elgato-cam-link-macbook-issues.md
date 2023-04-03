@@ -1,7 +1,7 @@
 ---
 title: 📷 elgato cam link macbook issues
 slug: elgato-cam-link-macbook-issues
-date: "2023-04-04"
+date: "2023-04-03"
 topic: tech
 ---
 
