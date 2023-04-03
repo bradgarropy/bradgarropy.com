@@ -7,23 +7,26 @@ topic: coding
 
 [documentation][documentation]
 
+`.vscode/tasks.json`  
+`Tasks: Run Task`  
+`test current file`
+
 ```json
 {
-    "label": "test current file",
-    "type": "shell",
-    "command": "npm run test ${fileBasenameNoExtension}.test${fileExtname}",
-    "group": "test",
-    "presentation": {
-        "clear": true,
-        "close": false,
-        "echo": true,
-        "panel": "dedicated",
-        "reveal": "always",
-        "showReuseMessage": true
-    },
-    "runOptions": {
-        "runOn": "default"
-    }
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "test current file",
+            "type": "shell",
+            "command": "npm run test ${fileBasenameNoExtension}.test${fileExtname}",
+            "group": "test",
+            "presentation": {
+                "clear": true,
+                "close": false,
+                "panel": "dedicated"
+            }
+        }
+    ]
 }
 ```
 
