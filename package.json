@@ -44,7 +44,6 @@
         "new": "plop"
     },
     "dependencies": {
-        "@bradgarropy/captivate-sdk": "^0.4.0",
         "@bradgarropy/http": "^2.0.0",
         "@bradgarropy/next-google-analytics": "^1.0.0",
         "@bradgarropy/next-link": "^1.0.2",
