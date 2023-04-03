@@ -12,7 +12,7 @@ jobs:
             - name: "🟢 node"
               uses: actions/setup-node@v3.5.0
               with:
-                  node-version: 14
+                  node-version: 19
                   registry-url: https://registry.npmjs.org/
             - name: "📦 install"
               run: npm ci
