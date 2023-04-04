@@ -3,6 +3,7 @@
 
 # build
 /.cache
+/.contentlayer
 /.next
 /tsconfig.tsbuildinfo
 
