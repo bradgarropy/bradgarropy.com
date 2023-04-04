@@ -12,14 +12,13 @@ import remarkInlineLinks from "remark-inline-links"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
 import remarkUnwrapImages from "remark-unwrap-images"
-import {
-    codesandboxTransformer,
-    twitchTransformer,
-    twitterTransformer,
-    youtubeTransformer,
-} from "transformers"
-import type {Markdown} from "types/markdown"
 import {unified} from "unified"
+
+import {codesandboxTransformer} from "~/transformers/codesandbox"
+import {twitchTransformer} from "~/transformers/twitch"
+import {twitterTransformer} from "~/transformers/twitter"
+import {youtubeTransformer} from "~/transformers/youtube"
+import type {Markdown} from "~/types/markdown"
 
 const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
     const nowPath = path.join(process.cwd(), `content/pages/${slug}.md`)

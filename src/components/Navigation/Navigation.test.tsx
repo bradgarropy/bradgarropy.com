@@ -1,5 +1,6 @@
 import {render, screen} from "@testing-library/react"
-import Navigation from "components/Navigation"
+
+import Navigation from "~/components/Navigation"
 
 const links = ["blog", "now", "uses", "hire me", "contact"]
 

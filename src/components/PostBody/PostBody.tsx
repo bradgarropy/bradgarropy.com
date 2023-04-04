@@ -1,7 +1,8 @@
-import Markdown from "components/Markdown"
-import {useMarkdown} from "hooks"
 import type {FC} from "react"
 import {useEffect} from "react"
+
+import Markdown from "~/components/Markdown"
+import useMarkdown from "~/hooks/useMarkdown"
 
 type PostBodyProps = {
     html: string

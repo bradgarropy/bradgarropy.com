@@ -1,8 +1,10 @@
-import "styles/global.css"
+import "~/styles/global.css"
 
 import GoogleAnalytics from "@bradgarropy/next-google-analytics"
-import {AppProvider, ThemeProvider} from "context"
 import type {AppProps} from "next/app"
+
+import {AppProvider} from "~/context/App"
+import {ThemeProvider} from "~/context/Theme"
 
 const App = ({Component, pageProps}: AppProps) => {
     return (

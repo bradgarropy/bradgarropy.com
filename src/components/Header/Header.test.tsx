@@ -1,9 +1,14 @@
 import {render, screen} from "@testing-library/react"
-import Header from "components/Header"
-import {useApp, useLive, useTheme} from "hooks"
-import {generateAppCtx, generateThemeCtx} from "test-utils/generators"
 
-jest.mock("hooks")
+import Header from "~/components/Header"
+import useApp from "~/hooks/useApp"
+import useLive from "~/hooks/useLive"
+import useTheme from "~/hooks/useTheme"
+import {generateAppCtx, generateThemeCtx} from "~/test-utils/generators"
+
+jest.mock("~/hooks/useApp")
+jest.mock("~/hooks/useLive")
+jest.mock("~/hooks/useTheme")
 
 const mockAppCtx = generateAppCtx()
 const mockThemeCtx = generateThemeCtx()

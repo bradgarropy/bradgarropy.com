@@ -1,8 +1,9 @@
 import {act, renderHook} from "@testing-library/react"
-import type {ThemeContextType} from "context"
-import {ThemeProvider} from "context"
-import {useTheme} from "hooks"
-import {mockThemeCtx} from "test-utils/mocks"
+
+import type {ThemeContextType} from "~/context/Theme"
+import {ThemeProvider} from "~/context/Theme"
+import useTheme from "~/hooks/useTheme"
+import {mockThemeCtx} from "~/test-utils/mocks"
 
 const mockThemeContext: ThemeContextType = {
     ...mockThemeCtx,

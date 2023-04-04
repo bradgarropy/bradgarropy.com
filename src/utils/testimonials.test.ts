@@ -1,11 +1,12 @@
 import {readdirSync} from "fs"
 import matter from "gray-matter"
+
 import {
     mockTestimonials,
     mockTestimonialsPaths,
     mockTestimonialsResponse,
-} from "test-utils/mocks"
-import {getTestimonials} from "utils/testimonials"
+} from "~/test-utils/mocks"
+import {getTestimonials} from "~/utils/testimonials"
 
 jest.mock("fs")
 jest.mock("gray-matter")

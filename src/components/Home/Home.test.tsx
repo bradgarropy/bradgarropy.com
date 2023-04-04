@@ -1,6 +1,11 @@
 import {render, screen} from "@testing-library/react"
-import Home from "components/Home"
-import {mockPostsFrontmatter, mockProjects, mockVideos} from "test-utils/mocks"
+
+import Home from "~/components/Home"
+import {
+    mockPostsFrontmatter,
+    mockProjects,
+    mockVideos,
+} from "~/test-utils/mocks"
 
 test("shows home page", () => {
     render(

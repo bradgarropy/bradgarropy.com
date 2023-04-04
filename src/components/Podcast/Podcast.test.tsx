@@ -1,5 +1,6 @@
 import {render, screen} from "@testing-library/react"
-import Podcast from "components/Podcast"
+
+import Podcast from "~/components/Podcast"
 
 test("shows podcast", () => {
     render(<Podcast />)

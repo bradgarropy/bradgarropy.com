@@ -1,6 +1,7 @@
-import SocialLink from "components/SocialLink"
 import type {FC} from "react"
-import {createImageUrl} from "utils/cloudinary"
+
+import SocialLink from "~/components/SocialLink"
+import {createImageUrl} from "~/utils/cloudinary"
 
 const Connect: FC = () => {
     return (

@@ -1,6 +1,7 @@
-import PostComments from "components/PostComments"
-import PostEdit from "components/PostEdit"
 import type {FC} from "react"
+
+import PostComments from "~/components/PostComments"
+import PostEdit from "~/components/PostEdit"
 
 type PostFooterProps = {
     slug: string

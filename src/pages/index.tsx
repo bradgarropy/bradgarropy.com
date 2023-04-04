@@ -1,13 +1,14 @@
-import Home from "components/Home"
-import Layout from "components/Layout"
 import type {GetStaticProps} from "next"
 import type {FC} from "react"
-import type {PostFrontmatter} from "types/post"
-import type {Project} from "types/project"
-import type {Video} from "types/video"
-import {getLatestPosts} from "utils/posts"
-import {getFeaturedProjects} from "utils/projects"
-import {getLatestVideos} from "utils/videos"
+
+import Home from "~/components/Home"
+import Layout from "~/components/Layout"
+import type {PostFrontmatter} from "~/types/post"
+import type {Project} from "~/types/project"
+import type {Video} from "~/types/video"
+import {getLatestPosts} from "~/utils/posts"
+import {getFeaturedProjects} from "~/utils/projects"
+import {getLatestVideos} from "~/utils/videos"
 
 type IndexPageProps = {
     latestPosts: PostFrontmatter[]

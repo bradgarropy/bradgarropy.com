@@ -1,4 +1,4 @@
-import type {Meta} from "types/meta"
+import type {Meta} from "~/types/meta"
 
 const useMeta = (): Meta => {
     const meta: Meta = {

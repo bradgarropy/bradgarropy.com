@@ -1,6 +1,7 @@
 import {renderHook, waitFor} from "@testing-library/react"
-import {useLive} from "hooks"
-import {getChannelStatus} from "utils/api/twitch"
+
+import useLive from "~/hooks/useLive"
+import {getChannelStatus} from "~/utils/api/twitch"
 
 jest.mock("utils/api/twitch")
 jest.useFakeTimers()

@@ -1,6 +1,7 @@
 import {render, screen} from "@testing-library/react"
 import {renderHook} from "@testing-library/react"
-import {useMarkdown} from "hooks"
+
+import useMarkdown from "~/hooks/useMarkdown"
 
 describe("renders links", () => {
     test("local links", () => {

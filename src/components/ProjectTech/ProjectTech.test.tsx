@@ -1,6 +1,7 @@
 import {render, screen} from "@testing-library/react"
-import ProjectTech from "components/ProjectTech"
-import {mockProjects} from "test-utils/mocks"
+
+import ProjectTech from "~/components/ProjectTech"
+import {mockProjects} from "~/test-utils/mocks"
 
 test("shows technologies", () => {
     render(<ProjectTech project={mockProjects[0]} />)

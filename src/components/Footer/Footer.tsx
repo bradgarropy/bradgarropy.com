@@ -1,5 +1,6 @@
-import SocialLink from "components/SocialLink"
 import type {FC} from "react"
+
+import SocialLink from "~/components/SocialLink"
 
 const Footer: FC = () => {
     return (

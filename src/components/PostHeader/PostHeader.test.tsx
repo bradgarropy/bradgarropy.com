@@ -1,6 +1,7 @@
 import {render, screen} from "@testing-library/react"
-import PostHeader from "components/PostHeader"
-import {mockPost} from "test-utils/mocks"
+
+import PostHeader from "~/components/PostHeader"
+import {mockPost} from "~/test-utils/mocks"
 
 test("shows meta", () => {
     render(
