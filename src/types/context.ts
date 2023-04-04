@@ -1,5 +1,6 @@
 import type {Dispatch, SetStateAction} from "react"
-import type {Theme} from "types/theme"
+
+import type {Theme} from "~/types/theme"
 
 type AppContextType = {
     open: boolean

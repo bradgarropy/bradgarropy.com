@@ -1,9 +1,10 @@
 import {render, screen} from "@testing-library/react"
-import PostFooter from "components/PostFooter"
-import {useMeta} from "hooks"
-import {mockMeta} from "test-utils/mocks"
 
-jest.mock("hooks")
+import PostFooter from "~/components/PostFooter"
+import useMeta from "~/hooks/useMeta"
+import {mockMeta} from "~/test-utils/mocks"
+
+jest.mock("~/hooks/useMeta")
 
 const mockUseMeta = useMeta as jest.Mock
 mockUseMeta.mockReturnValue(mockMeta)

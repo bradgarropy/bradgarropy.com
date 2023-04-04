@@ -1,5 +1,6 @@
 import {render, screen} from "@testing-library/react"
-import Section from "components/Section"
+
+import Section from "~/components/Section"
 
 test("shows section", () => {
     render(<Section title="Test" link="https://example.com" />)

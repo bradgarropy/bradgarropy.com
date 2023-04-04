@@ -1,6 +1,7 @@
 import Link from "@bradgarropy/next-link"
-import Icon from "components/Icon"
 import type {FC} from "react"
+
+import Icon from "~/components/Icon"
 
 type SocialLinkProps = {
     platform:

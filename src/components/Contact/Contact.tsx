@@ -1,5 +1,6 @@
-import FancyLink from "components/FancyLink"
 import type {FC} from "react"
+
+import FancyLink from "~/components/FancyLink"
 
 const Contact: FC = () => {
     return (

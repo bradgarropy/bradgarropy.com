@@ -1,6 +1,7 @@
 import SEO from "@bradgarropy/next-seo"
 import type {FC, ReactNode} from "react"
-import {createImageUrl} from "utils/cloudinary"
+
+import {createImageUrl} from "~/utils/cloudinary"
 
 import pkg from "../../../package.json"
 

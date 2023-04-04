@@ -1,8 +1,9 @@
 import fs from "fs"
 import matter from "gray-matter"
 import path from "path"
-import type {NewerNow, Now, NowFrontmatter, OlderNow} from "types/now"
-import {transformMarkdown} from "utils/markdown"
+
+import type {NewerNow, Now, NowFrontmatter, OlderNow} from "~/types/now"
+import {transformMarkdown} from "~/utils/markdown"
 
 const getAllNows = (): NowFrontmatter["date"][] => {
     const nowsPath = path.join(process.cwd(), "content/now")

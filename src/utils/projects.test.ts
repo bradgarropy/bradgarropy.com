@@ -1,6 +1,7 @@
 import {graphql} from "@octokit/graphql"
-import {mockGitHubPinnedResponse, mockProjects} from "test-utils/mocks"
-import {getFeaturedProjects} from "utils/projects"
+
+import {mockGitHubPinnedResponse, mockProjects} from "~/test-utils/mocks"
+import {getFeaturedProjects} from "~/utils/projects"
 
 jest.mock("@octokit/graphql")
 

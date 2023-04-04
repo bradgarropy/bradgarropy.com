@@ -1,7 +1,8 @@
-import PostMeta from "components/PostMeta"
-import PostTitle from "components/PostTitle"
 import type {FC} from "react"
-import type {PostFrontmatter} from "types/post"
+
+import PostMeta from "~/components/PostMeta"
+import PostTitle from "~/components/PostTitle"
+import type {PostFrontmatter} from "~/types/post"
 
 type PostHeaderProps = {
     date: PostFrontmatter["date"]

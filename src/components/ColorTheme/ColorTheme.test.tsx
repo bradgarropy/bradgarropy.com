@@ -1,13 +1,14 @@
 import {render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
-import ColorTheme from "components/ColorTheme"
-import {useTheme} from "hooks"
-import {generateThemeCtx} from "test-utils/generators"
+
+import ColorTheme from "~/components/ColorTheme"
+import useTheme from "~/hooks/useTheme"
+import {generateThemeCtx} from "~/test-utils/generators"
 
 const mockThemeCtxLight = generateThemeCtx({theme: "light"})
 const mockThemeCtxDark = generateThemeCtx({theme: "dark"})
 
-jest.mock("hooks")
+jest.mock("~/hooks/useTheme")
 
 const mockUseTheme = useTheme as jest.Mock
 

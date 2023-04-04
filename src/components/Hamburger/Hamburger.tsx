@@ -1,6 +1,7 @@
-import Icon from "components/Icon"
-import {useApp} from "hooks"
 import type {FC} from "react"
+
+import Icon from "~/components/Icon"
+import useApp from "~/hooks/useApp"
 
 const Hamburger: FC = () => {
     const {setOpen} = useApp()

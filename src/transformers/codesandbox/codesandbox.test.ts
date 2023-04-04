@@ -1,4 +1,4 @@
-import {codesandboxTransformer} from "transformers/codesandbox"
+import {codesandboxTransformer} from "~/transformers/codesandbox"
 
 test("detects codesandbox links", () => {
     expect(

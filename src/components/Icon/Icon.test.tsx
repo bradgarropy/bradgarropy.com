@@ -1,6 +1,7 @@
 import {render, screen} from "@testing-library/react"
-import Icon from "components/Icon"
-import {technologies} from "utils"
+
+import Icon from "~/components/Icon"
+import {technologies} from "~/utils/tech"
 
 const icons = [...technologies, "sun", "moon"]
 

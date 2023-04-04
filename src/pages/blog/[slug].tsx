@@ -1,10 +1,11 @@
 import SEO from "@bradgarropy/next-seo"
-import Layout from "components/Layout"
-import Post from "components/Post"
 import type {GetStaticPaths, GetStaticProps} from "next"
 import type {FC} from "react"
-import type {Post as PostType, PostFrontmatter} from "types/post"
-import {getAllPosts, getPostBySlug} from "utils/posts"
+
+import Layout from "~/components/Layout"
+import Post from "~/components/Post"
+import type {Post as PostType, PostFrontmatter} from "~/types/post"
+import {getAllPosts, getPostBySlug} from "~/utils/posts"
 
 type PostPageProps = {
     post: PostType

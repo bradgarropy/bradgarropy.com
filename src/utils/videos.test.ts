@@ -1,10 +1,11 @@
 import {http} from "@bradgarropy/http"
+
 import {
     mockVideos,
     mockYoutubeErrorResponse,
     mockYoutubeResponse,
-} from "test-utils/mocks"
-import {getLatestVideos} from "utils/videos"
+} from "~/test-utils/mocks"
+import {getLatestVideos} from "~/utils/videos"
 
 jest.mock("@bradgarropy/http")
 

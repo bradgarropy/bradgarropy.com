@@ -1,6 +1,7 @@
-import PostTitle from "components/PostTitle"
 import type {FC} from "react"
-import type {PostFrontmatter} from "types/post"
+
+import PostTitle from "~/components/PostTitle"
+import type {PostFrontmatter} from "~/types/post"
 
 type LatestPostsProps = {
     latestPosts: PostFrontmatter[]
