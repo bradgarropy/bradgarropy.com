@@ -1,6 +1,7 @@
 import Link from "@bradgarropy/next-link"
 import type {FC} from "react"
-import type {Post} from "types/post"
+
+import type {Post} from "~/types/post"
 
 type PostTitleProps = {
     title: Post["frontmatter"]["title"]

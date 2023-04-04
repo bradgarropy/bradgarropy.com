@@ -1,5 +1,6 @@
 import {render, screen} from "@testing-library/react"
-import Heading from "components/Heading"
+
+import Heading from "~/components/Heading"
 
 test("shows level one", () => {
     const {container} = render(<Heading level={1}>Heading one</Heading>)

@@ -1,5 +1,6 @@
 import {http} from "@bradgarropy/http"
-import type {Video} from "types/video"
+
+import type {Video} from "~/types/video"
 
 type YouTubeSearchResponse = {
     kind: string

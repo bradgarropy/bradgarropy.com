@@ -1,7 +1,8 @@
 import Link from "@bradgarropy/next-link"
 import type {FC} from "react"
-import type {Video} from "types/video"
-import {createYouTubeUrl} from "utils/cloudinary"
+
+import type {Video} from "~/types/video"
+import {createYouTubeUrl} from "~/utils/cloudinary"
 
 type LatestVideosProps = {
     latestVideos: Video[]

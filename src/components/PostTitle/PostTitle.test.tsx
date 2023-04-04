@@ -1,5 +1,6 @@
 import {render, screen} from "@testing-library/react"
-import PostTitle from "components/PostTitle"
+
+import PostTitle from "~/components/PostTitle"
 
 const mockTitle = "🧪 My Test Post"
 const mockSlug = "my-test-post"

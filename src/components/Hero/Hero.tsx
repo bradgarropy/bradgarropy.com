@@ -1,6 +1,7 @@
 import Link from "@bradgarropy/next-link"
 import type {FC} from "react"
-import {createImageUrl} from "utils/cloudinary"
+
+import {createImageUrl} from "~/utils/cloudinary"
 
 const Hero: FC = () => {
     return (

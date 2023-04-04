@@ -1,5 +1,6 @@
 import type {FC} from "react"
-import type {Topic} from "types/post"
+
+import type {Topic} from "~/types/post"
 
 type TopicMetaProps = {
     topic: Topic

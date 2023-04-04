@@ -1,3 +1,5 @@
+import type {FC, HTMLAttributes} from "react"
+
 import {
     CloseIcon,
     DiscordIcon,
@@ -18,8 +20,7 @@ import {
     TwitterIcon,
     TypescriptIcon,
     YoutubeIcon,
-} from "components/Icons"
-import type {FC, HTMLAttributes} from "react"
+} from "~/components/Icons"
 
 type IconProps = {
     name: string

@@ -1,5 +1,6 @@
 import {render, screen} from "@testing-library/react"
-import Connect from "components/Connect"
+
+import Connect from "~/components/Connect"
 
 test("shows connect", () => {
     render(<Connect />)

@@ -1,11 +1,12 @@
 import Link from "@bradgarropy/next-link"
-import ColorTheme from "components/ColorTheme"
-import Logo from "components/Logo"
-import MobileNavigation from "components/MobileNavigation"
-import Navigation from "components/Navigation"
-import Streaming from "components/Streaming"
-import {useLive} from "hooks"
 import type {FC} from "react"
+
+import ColorTheme from "~/components/ColorTheme"
+import Logo from "~/components/Logo"
+import MobileNavigation from "~/components/MobileNavigation"
+import Navigation from "~/components/Navigation"
+import Streaming from "~/components/Streaming"
+import useLive from "~/hooks/useLive"
 
 const Header: FC = () => {
     const live = useLive()

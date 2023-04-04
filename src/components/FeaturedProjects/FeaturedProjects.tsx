@@ -1,6 +1,7 @@
-import Project from "components/Project"
 import type {FC} from "react"
-import type {Project as ProjectType} from "types/project"
+
+import Project from "~/components/Project"
+import type {Project as ProjectType} from "~/types/project"
 
 type FeaturedProjectsProps = {
     featuredProjects: ProjectType[]

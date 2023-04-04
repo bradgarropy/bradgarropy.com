@@ -3,7 +3,8 @@ import {useRouter} from "next/router"
 import type {FC} from "react"
 import {useEffect} from "react"
 import {useState} from "react"
-import type {PostFrontmatter} from "types/post"
+
+import type {PostFrontmatter} from "~/types/post"
 
 type PostSearchBarProps = {
     posts: PostFrontmatter[]

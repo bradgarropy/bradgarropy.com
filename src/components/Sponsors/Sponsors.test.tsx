@@ -1,6 +1,7 @@
 import {render, screen} from "@testing-library/react"
-import Sponsors from "components/Sponsors"
-import {mockSponsors} from "test-utils/mocks"
+
+import Sponsors from "~/components/Sponsors"
+import {mockSponsors} from "~/test-utils/mocks"
 
 test("shows sponsors page", () => {
     render(<Sponsors sponsors={mockSponsors} />)

@@ -1,4 +1,4 @@
-import {createImageUrl, createYouTubeUrl} from "utils/cloudinary"
+import {createImageUrl, createYouTubeUrl} from "~/utils/cloudinary"
 
 test("creates internal image url", () => {
     const url = createImageUrl("/photo.jpg")

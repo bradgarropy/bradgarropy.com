@@ -1,5 +1,6 @@
 import {readdirSync} from "fs"
 import matter from "gray-matter"
+
 import {
     mockNewerNow,
     mockNow,
@@ -7,14 +8,14 @@ import {
     mockNows,
     mockNowsResponse,
     mockOlderNow,
-} from "test-utils/mocks"
+} from "~/test-utils/mocks"
 import {
     getAllNows,
     getLatestNow,
     getNewerNow,
     getNowByDate,
     getOlderNow,
-} from "utils/now"
+} from "~/utils/now"
 
 jest.mock("fs")
 jest.mock("gray-matter")

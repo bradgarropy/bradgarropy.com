@@ -1,8 +1,9 @@
 import {render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
-import PostSearchBar from "components/PostSearchBar"
 import * as nextRouter from "next/router"
-import {mockPosts, mockPostsFrontmatter} from "test-utils/mocks"
+
+import PostSearchBar from "~/components/PostSearchBar"
+import {mockPosts, mockPostsFrontmatter} from "~/test-utils/mocks"
 
 const onSearchMock = jest.fn()
 const mockPlaceholder = "search blog"

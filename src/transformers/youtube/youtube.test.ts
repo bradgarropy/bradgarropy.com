@@ -1,4 +1,4 @@
-import {youtubeTransformer} from "transformers/youtube"
+import {youtubeTransformer} from "~/transformers/youtube"
 
 test("detects youtube links", () => {
     expect(

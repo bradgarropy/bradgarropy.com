@@ -1,6 +1,7 @@
 import {http} from "@bradgarropy/http"
-import {mockChannelStatus} from "test-utils/mocks"
-import {getChannelStatus} from "utils/api/twitch"
+
+import {mockChannelStatus} from "~/test-utils/mocks"
+import {getChannelStatus} from "~/utils/api/twitch"
 
 jest.mock("@bradgarropy/http")
 

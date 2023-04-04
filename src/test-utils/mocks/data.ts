@@ -1,11 +1,11 @@
-import type {Markdown} from "types/markdown"
-import type {Meta} from "types/meta"
-import type {Now, NowFrontmatter} from "types/now"
-import type {Post, PostFrontmatter, Topic} from "types/post"
-import type {Project} from "types/project"
-import type {Sponsors} from "types/sponsor"
-import type {Testimonial} from "types/testimonial"
-import type {Video} from "types/video"
+import type {Markdown} from "~/types/markdown"
+import type {Meta} from "~/types/meta"
+import type {Now, NowFrontmatter} from "~/types/now"
+import type {Post, PostFrontmatter, Topic} from "~/types/post"
+import type {Project} from "~/types/project"
+import type {Sponsors} from "~/types/sponsor"
+import type {Testimonial} from "~/types/testimonial"
+import type {Video} from "~/types/video"
 
 const mockPosts: Post[] = [
     {

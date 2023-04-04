@@ -1,5 +1,6 @@
 import {readdirSync} from "fs"
 import matter from "gray-matter"
+
 import {
     mockPost,
     mockPostFrontmatter,
@@ -9,7 +10,7 @@ import {
     mockSortedPostsFrontmatter,
     mockTopic,
     mockTopics,
-} from "test-utils/mocks"
+} from "~/test-utils/mocks"
 import {
     getAllPosts,
     getLatestPosts,
@@ -18,7 +19,7 @@ import {
     getTopic,
     getTopics,
     sortPostsByDate,
-} from "utils/posts"
+} from "~/utils/posts"
 
 jest.mock("fs")
 jest.mock("gray-matter")

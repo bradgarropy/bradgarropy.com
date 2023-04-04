@@ -1,8 +1,9 @@
-import FancyLink from "components/FancyLink"
-import Heading from "components/Heading"
-import Testimonials from "components/Testimonials"
 import type {FC} from "react"
-import type {Testimonial} from "types/testimonial"
+
+import FancyLink from "~/components/FancyLink"
+import Heading from "~/components/Heading"
+import Testimonials from "~/components/Testimonials"
+import type {Testimonial} from "~/types/testimonial"
 
 type HireMeProps = {
     testimonials: Testimonial[]
