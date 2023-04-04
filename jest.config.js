@@ -8,6 +8,7 @@ const config = {
         "\\.css$": "<rootDir>/src/test-utils/css.ts",
         "\\.jpg$": "<rootDir>/src/test-utils/image.ts",
         "\\~/components/(.*)$": "<rootDir>/src/components/$1",
+        "\\~/content$": "<rootDir>/.contentlayer/generated",
         "\\~/context/(.*)$": "<rootDir>/src/context/$1",
         "\\~/hooks/(.*)$": "<rootDir>/src/hooks/$1",
         "\\~/pages/(.*)$": "<rootDir>/src/pages/$1",
