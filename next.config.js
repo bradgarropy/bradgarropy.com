@@ -1,6 +1,6 @@
-/**
- * @type {import('next').NextConfig}
- */
+const {withContentLayer} = require("next-contentlayer")
+
+/** @type {import('next').NextConfig} */
 
 const config = {
     i18n: {
@@ -81,4 +81,4 @@ const config = {
     },
 }
 
-module.exports = config
+module.exports = withContentLayer(config)
