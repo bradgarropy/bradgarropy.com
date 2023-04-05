@@ -33,6 +33,9 @@ Check for updates
 -   Photos > view > show hidden photo album
 -   Messages > settings > iMessage > check enable messages in iCloud
 -   Enable hey Siri
+-   Podcasts > settings > general
+    -   uncheck download when saving
+    -   turn off automatic downloads
 
 ## install applications
 
