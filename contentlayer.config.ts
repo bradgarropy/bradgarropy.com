@@ -23,7 +23,7 @@ const now = defineDocumentType(() => ({
     filePathPattern: "now/*.md",
     fields: {
         date: {
-            type: "date",
+            type: "string",
             description: "post date",
             required: true,
         },
