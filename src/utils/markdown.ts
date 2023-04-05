@@ -2,8 +2,6 @@ import {rehypeCloudinaryImageSize} from "@bradgarropy/rehype-cloudinary-image-si
 import {rehypeImageLinks} from "@bradgarropy/rehype-image-links"
 import remarkEmbedder from "@remark-embedder/core"
 import {remarkPlugin as remarkVscode} from "gatsby-remark-vscode"
-import matter from "gray-matter"
-import path from "path"
 import rehypeExternalLinks from "rehype-external-links"
 import rehypeRaw from "rehype-raw"
 import rehypeStringify from "rehype-stringify"
@@ -14,6 +12,7 @@ import remarkRehype from "remark-rehype"
 import remarkUnwrapImages from "remark-unwrap-images"
 import {unified} from "unified"
 
+import {allPages} from "~/content"
 import {codesandboxTransformer} from "~/transformers/codesandbox"
 import {twitchTransformer} from "~/transformers/twitch"
 import {twitterTransformer} from "~/transformers/twitter"
@@ -21,14 +20,13 @@ import {youtubeTransformer} from "~/transformers/youtube"
 import type {Markdown} from "~/types/markdown"
 
 const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
-    const nowPath = path.join(process.cwd(), `content/pages/${slug}.md`)
-
-    const file = matter.read(nowPath)
-    const html = await transformMarkdown(file.content)
+    const page = allPages.find(
+        page => page._raw.sourceFileName === `${slug}.md`,
+    )
 
     const markdown: Markdown = {
-        html,
-        frontmatter: file.data,
+        html: page.body.html,
+        frontmatter: {},
     }
 
     return markdown
