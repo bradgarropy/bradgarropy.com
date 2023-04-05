@@ -69,6 +69,7 @@
         "rehype-raw": "^6.1.0",
         "rehype-react": "^7.1.2",
         "rehype-stringify": "^9.0.2",
+        "remark-frontmatter": "^4.0.1",
         "remark-gfm": "^3.0.1",
         "remark-inline-links": "^6.0.1",
         "remark-parse": "^10.0.1",
