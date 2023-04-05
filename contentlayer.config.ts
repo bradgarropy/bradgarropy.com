@@ -18,12 +18,42 @@ import {twitchTransformer} from "./src/transformers/twitch"
 import {twitterTransformer} from "./src/transformers/twitter"
 import {youtubeTransformer} from "./src/transformers/youtube"
 
-export const Post = defineDocumentType(() => ({
-    name: "Post",
-    filePathPattern: "*.md",
+const now = defineDocumentType(() => ({
+    name: "now",
+    filePathPattern: "now/*.md",
     fields: {
         date: {
             type: "date",
+            description: "post date",
+            required: true,
+        },
+    },
+    computedFields: {
+        url: {
+            type: "string",
+            resolve: now => `/now/${now._raw.flattenedPath}`,
+        },
+    },
+}))
+
+const page = defineDocumentType(() => ({
+    name: "page",
+    filePathPattern: "pages/*.md",
+    fields: {},
+    computedFields: {
+        url: {
+            type: "string",
+            resolve: page => `/${page._raw.flattenedPath}`,
+        },
+    },
+}))
+
+const post = defineDocumentType(() => ({
+    name: "post",
+    filePathPattern: "posts/*.md",
+    fields: {
+        date: {
+            type: "string",
             description: "post date",
             required: true,
         },
@@ -52,10 +82,38 @@ export const Post = defineDocumentType(() => ({
     },
 }))
 
-export default makeSource({
-    contentDirPath: "content/posts",
+const testimonial = defineDocumentType(() => ({
+    name: "testimonial",
+    filePathPattern: "testimonials/*.md",
+    fields: {
+        name: {
+            type: "string",
+            description: "testimonial name",
+            required: true,
+        },
+        profile: {
+            type: "string",
+            description: "testimonial profile",
+            required: true,
+        },
+        photo: {
+            type: "string",
+            description: "testimonial photo",
+            required: true,
+        },
+    },
+    // computedFields: {
+    //     url: {
+    //         type: "string",
+    //         resolve: page => `/${page._raw.flattenedPath}`,
+    //     },
+    // },
+}))
+
+const source = makeSource({
+    contentDirPath: "content",
     disableImportAliasWarning: true,
-    documentTypes: [Post],
+    documentTypes: [post, now, page, testimonial],
     markdown: processor => {
         processor.use(remarkFrontmatter)
         processor.use(remarkParse)
@@ -93,3 +151,6 @@ export default makeSource({
         processor.use(rehypeStringify)
     },
 })
+
+export default source
+export {now, page, post, testimonial}
