@@ -19,7 +19,7 @@ import {twitterTransformer} from "./src/transformers/twitter"
 import {youtubeTransformer} from "./src/transformers/youtube"
 
 const now = defineDocumentType(() => ({
-    name: "now",
+    name: "Now",
     filePathPattern: "now/*.md",
     fields: {
         date: {
@@ -37,7 +37,7 @@ const now = defineDocumentType(() => ({
 }))
 
 const page = defineDocumentType(() => ({
-    name: "page",
+    name: "Page",
     filePathPattern: "pages/*.md",
     fields: {},
     computedFields: {
@@ -49,7 +49,7 @@ const page = defineDocumentType(() => ({
 }))
 
 const post = defineDocumentType(() => ({
-    name: "post",
+    name: "Post",
     filePathPattern: "posts/*.md",
     fields: {
         date: {
@@ -83,7 +83,7 @@ const post = defineDocumentType(() => ({
 }))
 
 const testimonial = defineDocumentType(() => ({
-    name: "testimonial",
+    name: "Testimonial",
     filePathPattern: "testimonials/*.md",
     fields: {
         name: {
@@ -102,12 +102,6 @@ const testimonial = defineDocumentType(() => ({
             required: true,
         },
     },
-    // computedFields: {
-    //     url: {
-    //         type: "string",
-    //         resolve: page => `/${page._raw.flattenedPath}`,
-    //     },
-    // },
 }))
 
 const source = makeSource({
