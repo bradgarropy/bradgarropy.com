@@ -465,6 +465,7 @@ const mockPostsResponse = [
         data: {
             date: "2021-01-01",
             slug: "first-test-post",
+            tags: [],
             title: "first test post",
             topic: "life",
         },
@@ -474,6 +475,7 @@ const mockPostsResponse = [
         data: {
             date: "2021-02-01",
             slug: "second-test-post",
+            tags: [],
             title: "second test post",
             topic: "tech",
         },
@@ -483,6 +485,7 @@ const mockPostsResponse = [
         data: {
             date: "2021-03-01",
             slug: "third-test-post",
+            tags: [],
             title: "third test post",
             topic: "coding",
         },
@@ -492,6 +495,7 @@ const mockPostsResponse = [
         data: {
             date: "2021-03-01",
             slug: "fourth-test-post",
+            tags: [],
             title: "fourth test post",
             topic: "coding",
         },
