@@ -16,13 +16,15 @@ const Testimonial: FC<TestimonialProps> = ({testimonial}) => {
     const slug = slugify(testimonial.frontmatter.name.toLowerCase())
 
     return (
-        <Link
-            className="grid max-w-xl gap-8 rounded border-3 border-black p-8 shadow-box transition duration-300 hover:shadow-none dark:border-white dark:shadow-box-white hover:dark:shadow-none"
+        <div
+            className="grid max-w-xl justify-items-start gap-8 rounded border-3 border-black p-8 shadow-box transition duration-300 hover:shadow-none dark:border-white dark:shadow-box-white hover:dark:shadow-none"
             id={slug}
             key={testimonial.frontmatter.name}
-            to={testimonial.frontmatter.profile}
         >
-            <div className="grid grid-cols-[4.375rem_auto] items-center justify-start gap-x-4">
+            <Link
+                to={testimonial.frontmatter.profile}
+                className="grid grid-cols-[4.375rem_auto] items-center justify-start gap-x-4"
+            >
                 <img
                     src={createImageUrl(testimonial.frontmatter.photo)}
                     width="460"
@@ -34,10 +36,10 @@ const Testimonial: FC<TestimonialProps> = ({testimonial}) => {
                 <p className="m-0 font-heading text-2xl font-black tracking-[-0.075rem]">
                     {testimonial.frontmatter.name}
                 </p>
-            </div>
+            </Link>
 
             <Markdown content={markdown} />
-        </Link>
+        </div>
     )
 }
 
