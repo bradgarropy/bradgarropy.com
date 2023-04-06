@@ -22,12 +22,12 @@ const NowPage: FC<NowPageProps> = ({currentNow, newerNow, olderNow}) => {
     )
 }
 
-const getStaticProps: GetStaticProps = async context => {
+const getStaticProps: GetStaticProps = context => {
     const date = context.params.slug as NowFrontmatter["date"]
 
-    const currentNow = await getNowByDate(date)
-    const newerNow = await getNewerNow(currentNow)
-    const olderNow = await getOlderNow(currentNow)
+    const currentNow = getNowByDate(date)
+    const newerNow = getNewerNow(currentNow)
+    const olderNow = getOlderNow(currentNow)
 
     return {
         props: {
