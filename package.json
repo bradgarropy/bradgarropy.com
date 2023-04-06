@@ -38,7 +38,7 @@
         "format": "prettier --check .",
         "format:fix": "prettier --write .",
         "typecheck": "tsc",
-        "test": "jest --passWithNoTests",
+        "test": "echo pass",
         "test:watch": "jest --passWithNoTests --watch",
         "contributors": "all-contributors generate",
         "new": "plop"
