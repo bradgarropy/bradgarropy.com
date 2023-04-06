@@ -3,6 +3,7 @@ title: 💡 think bigger
 slug: think-bigger
 date: "2021-12-05"
 topic: life
+tags: []
 ---
 
 Recently, I've had two separate conversations with other developers that made realize I need to think bigger.

@@ -3,6 +3,7 @@ title: 💎 eslint configuration
 slug: eslint-configuration
 date: "2019-04-16"
 topic: coding
+tags: []
 ---
 
 Previously I kept my [ESLint][eslint] configuration in my [dotfiles][dotfiles] repository. But I'm a lazy developer, and I got tired of opening up [GitHub][github], navigating to the repository, finding the file, and copy / pasting it to each new project I started. So I made my entire ESLint configuration an [npm][npm] package and [published it][eslint-config-bradgarropy]!

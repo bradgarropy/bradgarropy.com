@@ -3,6 +3,7 @@ title: 🌃 working on side projects livestream
 slug: working-on-side-projects-livestream
 date: "2020-08-20"
 topic: coding
+tags: []
 ---
 
 [James Quick][james-quick] needed a last minute guest for his [Twitch][jqq-twitch] stream and I came in clutch to fill the spot! I've been working on a new side project lately called [MURPHY][murphy], and talking a lot about it in the [Learn Build Teach][learn-build-teach] Discord.

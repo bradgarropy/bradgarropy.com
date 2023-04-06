@@ -3,6 +3,7 @@ title: 🧪 vscode test current file task
 slug: vscode-test-current-file-task
 date: "2023-04-03"
 topic: coding
+tags: []
 ---
 
 While setting up a new project at [Atlassian][atlassian], I decided to dive into some `vscode` workspace settings to see how I could improve the developer experience. I found the [task][tasks] system to be pretty interesting and extensible, so I created a custom task to run tests against the currently open file.

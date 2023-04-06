@@ -3,6 +3,7 @@ title: 📺 coding livestreams
 slug: coding-livestreams
 date: "2019-03-05"
 topic: coding
+tags: []
 ---
 
 Lately I've had the urge to share more of what I do regarding software development. So recently, I started [livestreaming][streams] my coding sessions on [YouTube][youtube].

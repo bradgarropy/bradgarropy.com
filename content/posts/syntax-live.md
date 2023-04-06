@@ -3,6 +3,7 @@ title: 🎥 syntax live
 slug: syntax-live
 date: "2020-11-11"
 topic: coding
+tags: []
 ---
 
 My all time favorite web development podcast is [Syntax][podcast], hosted by [Scott Tolinski][scott] and [Wes Bos][wes]. They put on a [300th episode spectacular][episode] where listeners were invited onto the show to participate!

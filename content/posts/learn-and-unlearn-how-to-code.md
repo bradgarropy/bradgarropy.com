@@ -3,6 +3,7 @@ title: 🧠 learn and unlearn how to code
 slug: learn-and-unlearn-how-to-code
 date: "2020-06-24"
 topic: coding
+tags: []
 ---
 
 https://youtu.be/5eJ2a9rn54U

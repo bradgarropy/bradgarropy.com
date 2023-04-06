@@ -3,6 +3,7 @@ title: 🔼 next over remix
 slug: next-over-remix
 date: "2023-04-03"
 topic: coding
+tags: []
 ---
 
 According to my [2023 goals][goals], my first task of the year was to convert my website to [Remix][remix] and [Tailwind][tailwind]. I completed the [Tailwind conversion][css-modules-to-tailwind] back in February, and the Remix conversion took me just over a month. Here's how it went.

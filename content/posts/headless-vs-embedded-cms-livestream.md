@@ -3,6 +3,7 @@ title: 📂 headless vs. embedded cms livestream
 slug: headless-vs-embedded-cms-livestream
 date: "2020-04-23"
 topic: coding
+tags: []
 ---
 
 I didn't know who [James Quick][james-quick] was until I took the [Fullstack React & Firebase][tutorial] tutorial on [Level Up Tutorials][lut]. The course was great, and I wanted additional content so I found his [Twitch channel][twitch].
