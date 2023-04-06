@@ -8,6 +8,7 @@ type PostFrontmatter = {
     topic: string
     title: string
     slug: string
+    tags: string[]
 }
 
 type Topic = {
