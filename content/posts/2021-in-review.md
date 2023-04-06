@@ -3,6 +3,7 @@ title: 📅 2021 in review
 slug: 2021-in-review
 date: "2021-12-10"
 topic: life
+tags: []
 ---
 
 Settings goals is pointless if you don't look back and reflect on how you did. It seems like 2021 was a shit show in so many ways, but I was also _very_ productive at the beginning and end of the year. Let's break down each of my [2021 goals][2021-goals] and see how I did.

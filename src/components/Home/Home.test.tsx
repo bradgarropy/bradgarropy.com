@@ -20,5 +20,5 @@ test("shows home page", () => {
     expect(screen.getByText("blog"))
     expect(screen.getByText("videos"))
     expect(screen.getByText("projects"))
-    expect(screen.getByText("podcast"))
+    expect(screen.getByText("podcasts"))
 })

@@ -3,6 +3,7 @@ title: 📺 youtube vs. twitch
 slug: youtube-vs-twitch
 date: "2020-04-29"
 topic: tech
+tags: []
 ---
 
 Lately I've been watching more developers on [Twitch][twitch]. Guys like [Jason Lengstorf][jason], [Chris on Code][chris], and [James Quick][james] all have some great content! I've [streamed][streams] quite a bit in the past on [YouTube][youtube], but I wasn't totally satisifed with the platform.

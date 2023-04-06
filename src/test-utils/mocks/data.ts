@@ -15,6 +15,7 @@ const mockPosts: Post[] = [
             slug: "first-test-post",
             title: "first test post",
             topic: "life",
+            tags: [],
         },
     },
     {
@@ -24,6 +25,7 @@ const mockPosts: Post[] = [
             slug: "second-test-post",
             title: "second test post",
             topic: "tech",
+            tags: [],
         },
     },
     {
@@ -33,6 +35,7 @@ const mockPosts: Post[] = [
             slug: "third-test-post",
             title: "third test post",
             topic: "coding",
+            tags: [],
         },
     },
     {
@@ -42,6 +45,7 @@ const mockPosts: Post[] = [
             slug: "fourth-test-post",
             title: "fourth test post",
             topic: "coding",
+            tags: [],
         },
     },
 ]

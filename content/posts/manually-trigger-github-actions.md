@@ -3,6 +3,7 @@ title: 🏁 manually trigger github actions
 slug: manually-trigger-github-actions
 date: "2022-10-05"
 topic: coding
+tags: []
 ---
 
 Most [GitHub Actions][actions] run automatically when things happen in the repository. Events like pushes, pull requests, issues, forks, and releases are the most common. But if you've ever wanted to kick off a workflow manually, that is also supported.

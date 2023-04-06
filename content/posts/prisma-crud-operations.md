@@ -3,6 +3,7 @@ title: 💩 prisma crud operations
 slug: prisma-crud-operations
 date: "2022-10-01"
 topic: coding
+tags: []
 ---
 
 Lately I've been working with [PostgreSQL][postgres] databases, using [Prisma][prisma] as the ORM to make life easier. I always forget how to do basic CRUD operations, so here's a little reference post that hopefully helps you as much as it helps me!

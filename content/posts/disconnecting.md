@@ -3,6 +3,7 @@ title: 📴 disconnecting
 slug: disconnecting
 date: "2022-09-12"
 topic: life
+tags: []
 ---
 
 As you can see by my [GitHub][github] contribution graph, my commits over the past four months have been lacking. There was a lot of organizational changes at work and I was struggling to find projects that excited me. In short, I was [bored][boredom]. I wasn't feeling motivated to code after work hours, so I took a break.

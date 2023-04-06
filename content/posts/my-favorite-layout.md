@@ -3,6 +3,7 @@ title: 👙 my favorite layout
 slug: my-favorite-layout
 date: "2019-05-29"
 topic: coding
+tags: []
 ---
 
 Every time I spin up a new website, I find myself settling on the same layout: a tried and true three row header / content / footer design. With the widespread support of [CSS grid][grid], it's gotten much easier to implement. I'll show you how!

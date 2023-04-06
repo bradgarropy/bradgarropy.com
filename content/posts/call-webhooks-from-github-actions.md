@@ -3,6 +3,7 @@ title: 🪝 call webhooks from github actions
 slug: call-webhooks-from-github-actions
 date: "2022-10-06"
 topic: coding
+tags: []
 ---
 
 Often I need to _make things to happen_ in a GitHub Action by calling out to an external service. For example, I want to rebuild a website with a [Netlify build hook][netlify-hook] or a [Vercel deploy hook][vercel-hook].
