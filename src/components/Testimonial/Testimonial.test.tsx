@@ -22,7 +22,6 @@ test("links to profile", () => {
     render(<Testimonial testimonial={mockTestimonial} />)
 
     expect(
-        screen.getByText(mockTestimonial.frontmatter.name).parentElement
-            .parentElement,
+        screen.getByText(mockTestimonial.frontmatter.name).parentElement,
     ).toHaveAttribute("href", mockTestimonial.frontmatter.profile)
 })
