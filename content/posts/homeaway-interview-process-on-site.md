@@ -3,7 +3,7 @@ title: 👨🏼‍💼 homeaway interview process - on site
 slug: homeaway-interview-process-on-site
 date: "2018-10-22"
 topic: coding
-tags: []
+tags: ["interview", "homeaway"]
 ---
 
 Following my phone interview with [HomeAway][homeaway], I was invited on site for a more thorough technical interview. The interview took three hours, where I talked with four interviewers from four different teams.

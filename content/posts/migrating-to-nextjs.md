@@ -3,7 +3,7 @@ title: 🦆 migrating to next.js
 slug: migrating-to-nextjs
 date: "2022-02-08"
 topic: coding
-tags: []
+tags: ["next", "gatsby"]
 ---
 
 I've attempted to migrate this site from [Gatsby][gatsby] to [Next.js][next] three times now, and have always called it quits for [one reason or another][gatsby-vs-nextjs]. Some reasons were backed by data, others were just a gut feeling. At the end of the day, on the fourth attempt, I decided to stop sitting on the fence, and merged the `nextjs` branch into `master`.

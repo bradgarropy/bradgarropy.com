@@ -3,7 +3,7 @@ title: 🌲 cloudflare worker link tree
 slug: cloudflare-worker-link-tree
 date: "2021-06-28"
 topic: coding
-tags: []
+tags: ["cloudflare"]
 ---
 
 I've heard a lot about [Cloudflare Workers][workers], but until recently I've never created one. Today I built and deployed my first worker, so I'd like to teach you how to do the same thing!

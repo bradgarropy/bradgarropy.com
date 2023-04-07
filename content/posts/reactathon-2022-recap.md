@@ -3,7 +3,7 @@ title: ⚛️ reactathon 2022 recap
 slug: reactathon-2022-recap
 date: "2022-05-10"
 topic: coding
-tags: []
+tags: ["conference"]
 ---
 
 Over the past few days I was lucky enough to attend [Reactathon][reactathon] thanks to [Atlassian][atlassian]! The conference was held in Berkeley, California at the [Bruns Ampitheater][bruns-ampitheater], which was absolutely gorgeous! Reactathon is a conference focused on frontend web development, React, JavaScript, and the frameworks and tools that support it.
