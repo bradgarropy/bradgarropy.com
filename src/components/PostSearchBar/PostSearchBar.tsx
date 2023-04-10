@@ -1,14 +1,12 @@
-import Fuse from "fuse.js"
 import {useRouter} from "next/router"
-import type {FC} from "react"
-import {useEffect} from "react"
+import type {ChangeEventHandler, FC} from "react"
 import {useState} from "react"
 
 import type {PostFrontmatter} from "~/types/post"
 
 type PostSearchBarProps = {
     posts: PostFrontmatter[]
-    onSearch?: (posts: PostFrontmatter[]) => void
+    onSearch: (query: string) => void
 }
 
 const PostSearchBar: FC<PostSearchBarProps> = ({posts, onSearch}) => {
@@ -16,47 +14,29 @@ const PostSearchBar: FC<PostSearchBarProps> = ({posts, onSearch}) => {
     const defaultQuery = (router.query.search as string) || ""
     const [query, setQuery] = useState(defaultQuery)
 
-    const fuse = new Fuse(posts, {
-        keys: ["title", "topic.name"],
-    })
-
-    const filterPosts = (query: string): PostFrontmatter[] => {
-        if (!query) {
-            return posts
-        }
-
-        const filteredPosts = fuse.search(query).map(result => result.item)
-        return filteredPosts
-    }
-
-    useEffect(
-        () => {
-            const url = query
-                ? `${router.pathname}?search=${query}`
-                : router.pathname
-
-            router.push(url, undefined, {shallow: true})
-
-            const newPosts = filterPosts(query)
-            onSearch?.(newPosts)
-        },
-
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        [query],
-    )
-
-    const onChange = event => {
+    const onChange: ChangeEventHandler<HTMLInputElement> = event => {
         setQuery(event.target.value)
+        onSearch(event.target.value)
     }
 
     return (
-        <input
-            className="mb-9 w-[85%] rounded border-3 border-black px-8 py-4 text-base shadow-box placeholder:text-gray-400 focus:border-purple-400 focus:outline-none dark:shadow-box-white"
-            type="text"
-            placeholder="search blog"
-            value={query}
-            onChange={onChange}
-        />
+        <div className="flex w-full flex-col">
+            <label
+                htmlFor="search"
+                className="font-heading text-xl font-extrabold"
+            >
+                title
+            </label>
+
+            <input
+                id="search"
+                className="rounded border-3 border-black px-8 py-4 text-base shadow-box placeholder:text-gray-400 focus:border-purple-400 focus:outline-none dark:text-black dark:shadow-box-white"
+                type="text"
+                placeholder="search blog"
+                value={query}
+                onChange={onChange}
+            />
+        </div>
     )
 }
 
