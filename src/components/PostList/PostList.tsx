@@ -1,6 +1,6 @@
 import type {FC} from "react"
 
-import PostHeader from "~/components/PostHeader"
+import PostCard from "~/components/PostCard"
 import type {PostFrontmatter} from "~/types/post"
 
 type PostListProps = {
@@ -17,17 +17,9 @@ const PostList: FC<PostListProps> = ({posts}) => {
     }
 
     return (
-        <div className="grid gap-y-9">
+        <div className="grid gap-y-8">
             {posts.map((post, index) => {
-                return (
-                    <PostHeader
-                        key={index}
-                        date={post.date}
-                        topic={post.topic}
-                        title={post.title}
-                        slug={post.slug}
-                    />
-                )
+                return <PostCard key={index} post={post} />
             })}
         </div>
     )
