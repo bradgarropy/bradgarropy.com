@@ -3,7 +3,7 @@ title: 📧 google's inbox is going away
 slug: googles-inbox-is-going-away
 date: "2018-09-12"
 topic: tech
-tags: []
+tags: ["email", "google"]
 ---
 
 Today, [Google][google] dropped this bomb. As with thousands of others, I'm sad to see [Inbox][inbox] go. It was a fresh take on email, which offered some great features.

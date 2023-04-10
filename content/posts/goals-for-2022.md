@@ -3,7 +3,7 @@ title: 🏆 goals for 2022
 slug: goals-for-2022
 date: "2021-12-30"
 topic: life
-tags: []
+tags: ["goals"]
 ---
 
 I spent the [past year][2021] focusing on my foundations. In 2022 I'm ready to take on new larger projects with the aim of creating a real source of side income for myself. I've set the following goals to help me accomplish that.

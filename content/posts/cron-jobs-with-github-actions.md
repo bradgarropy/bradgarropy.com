@@ -3,7 +3,7 @@ title: ⏲ cron jobs with github actions
 slug: cron-jobs-with-github-actions
 date: "2022-10-05"
 topic: coding
-tags: []
+tags: ["github", "cron"]
 ---
 
 I was looking for a free way to repeatedly run some tasks, and I remembered that [GitHub Actions][actions] now supports scheduled workflows. If you're not familiar with actions, check out the quickstart in the [documentation][actions-docs].

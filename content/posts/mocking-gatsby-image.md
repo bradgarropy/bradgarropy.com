@@ -3,7 +3,7 @@ title: 😜 mocking gatsby image
 slug: mocking-gatsby-image
 date: "2021-06-25"
 topic: coding
-tags: []
+tags: ["gatsby", "jest"]
 ---
 
 In my quest for 100% test coverage, I've had to mock some [gatsby][gatsby] internals to get tests to run in isolation. Since the release of [Gatsby v3][v3], I had to take into account the new [gatsby-plugin-image][gatsby-plugin-image].

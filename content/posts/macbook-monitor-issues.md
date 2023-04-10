@@ -3,7 +3,7 @@ title: 🖥️ macbook monitor issues
 slug: macbook-monitor-issues
 date: "2023-02-14"
 topic: tech
-tags: []
+tags: ["macbook"]
 ---
 
 In my current [desk setup][uses], I've got a MacBook Pro plugged into two monitors via HDMI. Every so often, one or both of the monitors will go black for a few seconds. Usually they recover on their own, but sometimes I have to unplug them to bring them back to life.

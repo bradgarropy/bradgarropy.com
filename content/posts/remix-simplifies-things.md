@@ -3,7 +3,7 @@ title: 💿 remix simplifies things
 slug: remix-simplifies-things
 date: "2022-10-01"
 topic: coding
-tags: []
+tags: ["remix"]
 ---
 
 I've got an new idea for an application, so naturally I started thinking about what tech stack I want to use to build it. Lately I've been a bit bothered by the growing complexity of [Next.js][nextjs], and I've been hearing so many good things about [Remix][remix], so I jumped in a gave it a shot.

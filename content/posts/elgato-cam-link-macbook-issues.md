@@ -3,7 +3,7 @@ title: 📷 elgato cam link macbook issues
 slug: elgato-cam-link-macbook-issues
 date: "2023-04-03"
 topic: tech
-tags: []
+tags: ["elgato", "macbook"]
 ---
 
 I recently got an M1 MacBook Pro and found that my [Elgato Cam Link 4k][camlink] was available as a camera source, but not showing any output.

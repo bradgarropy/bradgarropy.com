@@ -3,7 +3,7 @@ title: 🟢 profiling node scripts
 slug: profiling-node-scripts
 date: "2022-09-13"
 topic: coding
-tags: []
+tags: ["node", "performance"]
 ---
 
 If you're looking to improve the performance of a [Node.js][node] script, a [flamegraph][flamegraph] is a great way to visualize where time is spent during execution.

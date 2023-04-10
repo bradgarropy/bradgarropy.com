@@ -3,7 +3,7 @@ title: 🧼 cleaning up jest mocks
 slug: cleaning-up-jest-mocks
 date: "2022-05-15"
 topic: coding
-tags: []
+tags: ["jest"]
 ---
 
 In [jest][jest], there are three different ways to clean up a [mock function][mock-function].

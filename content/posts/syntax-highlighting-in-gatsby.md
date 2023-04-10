@@ -3,7 +3,7 @@ title: 💄 syntax highlighting in gatsby
 slug: syntax-highlighting-in-gatsby
 date: "2018-10-08"
 topic: coding
-tags: []
+tags: ["gatsby"]
 ---
 
 After I posted about how I set up the [👀 contentful preview api with gatsby + netlify][contentful-preview], I got some positive feedback and some questions about the syntax highlighting on my blog. Luckily I was already working on a post to discuss exactly that, so I'll walk you through how I set it up.

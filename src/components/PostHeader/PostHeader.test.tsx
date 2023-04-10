@@ -9,13 +9,14 @@ test("shows meta", () => {
             date={mockPost.frontmatter.date}
             topic={mockPost.frontmatter.topic}
             title={mockPost.frontmatter.title}
-            slug={mockPost.frontmatter.slug}
+            tags={mockPost.frontmatter.tags}
         />,
     )
 
     expect(screen.getByText("January 1, 2021", {exact: false}))
     expect(screen.getByText(`#${mockPost.frontmatter.topic}`))
     expect(screen.getByText(mockPost.frontmatter.title))
+    expect(screen.getByText(mockPost.frontmatter.tags[0]))
 })
 
 test("links to topic", () => {
@@ -24,12 +25,28 @@ test("links to topic", () => {
             date={mockPost.frontmatter.date}
             topic={mockPost.frontmatter.topic}
             title={mockPost.frontmatter.title}
-            slug={mockPost.frontmatter.slug}
+            tags={mockPost.frontmatter.tags}
         />,
     )
 
     expect(screen.getByText(`#${mockPost.frontmatter.topic}`)).toHaveAttribute(
         "href",
         `/topic/${mockPost.frontmatter.topic}`,
+    )
+})
+
+test("links to tag", () => {
+    render(
+        <PostHeader
+            date={mockPost.frontmatter.date}
+            topic={mockPost.frontmatter.topic}
+            title={mockPost.frontmatter.title}
+            tags={mockPost.frontmatter.tags}
+        />,
+    )
+
+    expect(screen.getByText(mockPost.frontmatter.tags[0])).toHaveAttribute(
+        "href",
+        `/tag/${mockPost.frontmatter.tags[0]}`,
     )
 })

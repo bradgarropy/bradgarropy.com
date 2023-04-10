@@ -11,11 +11,11 @@ type PostProps = {
 
 const Post: FC<PostProps> = ({post}) => {
     const {html, frontmatter} = post
-    const {slug, title, date, topic} = frontmatter
+    const {slug, title, date, topic, tags} = frontmatter
 
     return (
         <article>
-            <PostHeader date={date} topic={topic} title={title} />
+            <PostHeader date={date} tags={tags} topic={topic} title={title} />
             <PostBody html={html} />
             <PostFooter slug={slug} />
         </article>

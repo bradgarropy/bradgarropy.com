@@ -14,7 +14,7 @@ const PostBody: FC<PostBodyProps> = ({html}) => {
     }, [])
 
     const markdown = useMarkdown(html)
-    return <Markdown className="my-9" content={markdown} />
+    return <Markdown className="my-16" content={markdown} />
 }
 
 export default PostBody

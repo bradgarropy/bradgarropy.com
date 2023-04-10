@@ -3,7 +3,7 @@ title: ⌨️ drop ctrl high profile
 slug: drop-ctrl-high-profile
 date: "2021-01-22"
 topic: tech
-tags: []
+tags: ["keyboard"]
 ---
 
 I've been using a [Razer Black Widow][black-widow] keyboard for the past nine years. At this point it's like an extension of my hands. But as the rest of my setup has matured, I wanted to replace my gaming keyboard with something more professional. So for Christmas I picked up a [Drop CTRL High Profile][ctrl] mechanical keyboard.

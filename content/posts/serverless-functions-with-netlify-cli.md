@@ -3,7 +3,7 @@ title: ⚡ serverless functions with netlify cli
 slug: serverless-functions-with-netlify-cli
 date: "2020-04-28"
 topic: coding
-tags: []
+tags: ["serverless", "netlify"]
 ---
 
 The other day I read a tweet from [James Quick][jqq] which asked a question that I definitely had some input on.

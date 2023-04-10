@@ -3,7 +3,7 @@ title: 💨 css modules to tailwind
 slug: css-modules-to-tailwind
 date: "2023-02-22"
 topic: coding
-tags: []
+tags: ["tailwind", "css"]
 ---
 
 I just finished migrating this website from [CSS Modules][css-modules] to [Tailwind][tailwind]. Overall it was a straightforward, but long process. The transition has proven to be worth it, and I'll explain my thoughts on the outcome below.

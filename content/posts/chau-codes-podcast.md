@@ -3,7 +3,7 @@ title: 🎤 chau codes podcast
 slug: chau-codes-podcast
 date: "2020-11-09"
 topic: coding
-tags: []
+tags: ["podcast"]
 ---
 
 I'd been seeing a lot of [Justin Chau][twitter] around the internet and really liked the what he was sharing. It's rare to see developers producing content early in their career, but Justin knows what's up.
