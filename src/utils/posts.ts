@@ -2,7 +2,7 @@ import fs from "fs"
 import matter from "gray-matter"
 import path from "path"
 
-import type {Post, PostFrontmatter, Topic} from "~/types/post"
+import type {Post, PostFrontmatter, Tag, Topic} from "~/types/post"
 import {transformMarkdown} from "~/utils/markdown"
 
 const icons = {
@@ -100,6 +100,26 @@ const getTopics = (): Topic[] => {
     return topics
 }
 
+const getTags = (): Tag[] => {
+    const postsPath = path.join(process.cwd(), "content/posts")
+
+    const duplicateTags = fs
+        // read directory of posts
+        .readdirSync(postsPath)
+
+        // create path to each markdown file
+        // read frontmatter from each post
+        .flatMap(slug => {
+            const postPath = path.join(process.cwd(), `content/posts/${slug}`)
+            const file = matter.read(postPath)
+            const post = file.data as PostFrontmatter
+            return post.tags
+        })
+
+    const tags = [...new Set(duplicateTags)]
+    return tags
+}
+
 const getPostsByTopic = (topic: Topic["name"]): PostFrontmatter[] => {
     const postsPath = path.join(process.cwd(), "content/posts")
 
@@ -121,6 +141,29 @@ const getPostsByTopic = (topic: Topic["name"]): PostFrontmatter[] => {
     const sortedTopicPosts = sortPostsByDate(topicPosts)
 
     return sortedTopicPosts
+}
+
+const getPostsByTag = (tag: Tag): PostFrontmatter[] => {
+    const postsPath = path.join(process.cwd(), "content/posts")
+
+    const posts = fs
+        // read directory of posts
+        .readdirSync(postsPath)
+
+        // create path to each markdown file
+        // read frontmatter from each post
+        .reduce<PostFrontmatter[]>((posts, slug) => {
+            const postPath = path.join(process.cwd(), `content/posts/${slug}`)
+            const file = matter.read(postPath)
+            const post = file.data as PostFrontmatter
+
+            return [...posts, post]
+        }, [])
+
+    const tagPosts = posts.filter(post => post.tags.includes(tag))
+    const sortedTagPosts = sortPostsByDate(tagPosts)
+
+    return sortedTagPosts
 }
 
 const sortPostsByDate = (posts: PostFrontmatter[]): PostFrontmatter[] => {
@@ -146,7 +189,9 @@ export {
     getAllPosts,
     getLatestPosts,
     getPostBySlug,
+    getPostsByTag,
     getPostsByTopic,
+    getTags,
     getTopic,
     getTopics,
     sortPostsByDate,
