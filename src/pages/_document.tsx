@@ -3,7 +3,7 @@ import Script from "next/script"
 
 const Document = () => {
     return (
-        <Html>
+        <Html className="overflow-y-scroll">
             <Head />
 
             <body className="bg-white transition duration-300 dark:bg-black">
