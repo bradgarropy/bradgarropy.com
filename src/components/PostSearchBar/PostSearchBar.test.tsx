@@ -6,7 +6,7 @@ import PostSearchBar from "~/components/PostSearchBar"
 import {mockPosts, mockPostsFrontmatter} from "~/test-utils/mocks"
 
 const onSearchMock = jest.fn()
-const mockPlaceholder = "search blog"
+const mockPlaceholder = "search by title, topic, or tag..."
 const mockQuery = "fourth"
 
 const mockUseRouter = jest.spyOn(nextRouter, "useRouter")
