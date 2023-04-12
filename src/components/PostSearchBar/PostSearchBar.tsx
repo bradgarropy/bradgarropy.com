@@ -17,7 +17,7 @@ const PostSearchBar: FC<PostSearchBarProps> = ({posts, onSearch}) => {
     const [query, setQuery] = useState(defaultQuery)
 
     const fuse = new Fuse(posts, {
-        keys: ["title", "topic.name"],
+        keys: ["title", "topic", "tags"],
     })
 
     const filterPosts = (query: string): PostFrontmatter[] => {
