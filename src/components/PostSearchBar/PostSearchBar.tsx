@@ -50,13 +50,24 @@ const PostSearchBar: FC<PostSearchBarProps> = ({posts, onSearch}) => {
     }
 
     return (
-        <input
-            className="mb-16 w-full rounded border-3 border-black px-8 py-4 text-base shadow-box placeholder:text-gray-400 focus:border-purple-400 focus:outline-none dark:shadow-box-white"
-            type="text"
-            placeholder="search blog"
-            value={query}
-            onChange={onChange}
-        />
+        <div className="mb-24">
+            <label
+                htmlFor="search"
+                className="font-heading text-xl font-extrabold"
+            >
+                search
+            </label>
+
+            <input
+                className="w-full rounded border-3 border-black px-8 py-4 text-base shadow-box placeholder:text-gray-400 focus:border-purple-400 focus:outline-none dark:shadow-box-white"
+                type="text"
+                id="search"
+                placeholder="search by title, topic, or tag..."
+                value={query}
+                onChange={onChange}
+                autoComplete="off"
+            />
+        </div>
     )
 }
 
