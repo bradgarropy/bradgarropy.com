@@ -18,6 +18,23 @@ const generator = plop => {
                 message: "post topic",
                 choices: ["coding", "life", "tech"],
             },
+            {
+                type: "input",
+                name: "tags",
+                message: "post tag",
+                filter: input => {
+                    if (!input) {
+                        return ""
+                    }
+
+                    const filteredInput = input
+                        .split(" ")
+                        .map(item => `"${item}"`)
+                        .join(", ")
+
+                    return filteredInput
+                },
+            },
         ],
         actions: [
             {
