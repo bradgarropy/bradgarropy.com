@@ -10,70 +10,112 @@ I recently got a new [M1 MacBook Pro][macbook-pro], and I wanted to document exa
 
 ## 🔺 install updates
 
--   check for system updates
--   check for app store updates
+-   Check for system updates
+-   Check for app store updates
 
 ## 🗑️ uninstall applications
 
--   garageband
--   imovie
--   numbers
--   keynote
--   pages
+-   GarageBand
+-   iMovie
+-   Keynote
+-   Numbers
+-   Pages
 
 ## 🎛️ adjust settings
 
+### icloud
+
 -   Login to iCloud
--   Add bradgarropy@gmail.com to internet accounts (for mail and calendar)
--   Enable Touch ID
--   Change scroll direction
--   Setup mission control hot corners
--   Set dynamic wallpaper
--   Allow unlock with Apple Watch
--   Automatically hide and show the dock
--   Swap control and command keys on external keyboard
--   Change mouse speed and scrolling speed to fastest
--   Photos > view > show > uncheck shared with you
--   Photos > view > show hidden photo album
--   Messages > settings > iMessage > check enable messages in iCloud
--   Enable hey Siri
--   Safari > advanced > show developer
--   Podcasts > settings > general
-    -   uncheck download when saving
-    -   turn off automatic downloads
--   Finder
-    -   Hide tags in sidebar
-    -   show Mac hd in sidebar
+
+### siri & spotlight
+
+-   Enable _Listen for "Hey Siri"_
+
+### desktop & dock
+
+-   Enable _Automatically hide and show the Dock_
+-   Setup _Mission Control_ hot corners
+
+    |                   |                   |
+    | ----------------- | ----------------- |
+    | _Mission Control_ | _Mission Control_ |
+    | _Desktop_         | _Desktop_         |
+
+### wallpaper
+
+-   Select _Dynamic_ wallpaper
+
+### touch id & password
+
+-   Enable _Touch ID_
+-   Allow unlocking with Apple Watch
+
+### internet accounts
+
+-   Add `bradgarropy@gmail.com` account
+
+    -   Select _Mail_ and _Calendar_
+
+### keyboard
+
+-   _Keyboard Shortcuts_ > _Modifier_
+    -   Swap the _Control_ and _Command_ keys on external keyboard
+
+### mouse
+
+-   Increase _Tracking speed_ to _Fast_
+-   Uncheck _Natural scrolling_
+-   Increase _Scrolling speed_
+
+### applications
+
+-   Photos > View > Show
+    -   Uncheck _Shared with You_
+-   Photos > View
+    -   Check _Show Hidden Photo Album_
+-   Messages > Settings > iMessage
+    -   Check _Enable Messages in iCloud_
+-   Safari > Settings > Advanced
+    -   Check _Show Develop menu in menu bar_
+-   Podcasts > Settings > General
+    -   Uncheck _Download When Saving_
+    -   Select _Off_ for _Automatically Download_
+-   Podcasts > Settings > Playback
+    -   Select _Stop when an episode ends_
+-   Finder > Settings > Tags
+    -   Delete all tags
+-   Finder > Settings > Sidebar
+    -   Select _Hard Disks_
 
 ## 📥 install applications
 
--   [chrome][chrome]
+-   [Google Chrome][chrome]
 
-    -   sign in
-    -   set as default browser
+    -   Sign in
+    -   Set as default browser
 
--   [discord][discord]
--   [elgato camera hub][elgato]
--   [elgato control center][elgato]
--   [elgato stream deck][elgato]
--   [elgato wave link][elgato]
--   [obs][obs]
--   [spotify][spotify]
+-   [Discord][discord]
+-   [Elgato Camera Hub][elgato]
+-   [Elgato Control Center][elgato]
+-   [Elgato Stream Deck][elgato]
+-   [Elgato Wave Link][elgato]
+-   [OBS][obs]
+-   [Spotify][spotify]
 -   [vscode][vscode]
 
-    -   update
-    -   sign in with github
-    -   [install shell command][vscode-cli]
+    -   Update
+    -   Sign in with GitHub
+    -   [Install shell command][vscode-cli]
 
 ## 📦 development packages
 
 -   [homebrew][homebrew]
 -   [git][git]
 -   [nvm][nvm]
--   [github cli][github-cli]
--   [netlify cli][netlify-cli]
+-   [GitHub CLI][github-cli]
+-   [Netlify CLI][netlify-cli]
 -   [ngrok][ngrok]
--   [vercel cli][vercel-cli]
+-   [Vercel CLI][vercel-cli]
 
 ```zsh
 # brew
