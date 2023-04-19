@@ -1,11 +1,11 @@
-import type {Markdown} from "types/markdown"
-import type {Meta} from "types/meta"
-import type {Now, NowFrontmatter} from "types/now"
-import type {Post, PostFrontmatter, Topic} from "types/post"
-import type {Project} from "types/project"
-import type {Sponsors} from "types/sponsor"
-import type {Testimonial} from "types/testimonial"
-import type {Video} from "types/video"
+import type {Markdown} from "~/types/markdown"
+import type {Meta} from "~/types/meta"
+import type {Now, NowFrontmatter} from "~/types/now"
+import type {Post, PostFrontmatter, Topic} from "~/types/post"
+import type {Project} from "~/types/project"
+import type {Sponsors} from "~/types/sponsor"
+import type {Testimonial} from "~/types/testimonial"
+import type {Video} from "~/types/video"
 
 const mockPosts: Post[] = [
     {
@@ -15,6 +15,7 @@ const mockPosts: Post[] = [
             slug: "first-test-post",
             title: "first test post",
             topic: "life",
+            tags: ["first-tag"],
         },
     },
     {
@@ -24,6 +25,7 @@ const mockPosts: Post[] = [
             slug: "second-test-post",
             title: "second test post",
             topic: "tech",
+            tags: ["first-tag", "second-tag"],
         },
     },
     {
@@ -33,6 +35,7 @@ const mockPosts: Post[] = [
             slug: "third-test-post",
             title: "third test post",
             topic: "coding",
+            tags: ["first-tag", "second-tag", "third-tag"],
         },
     },
     {
@@ -42,6 +45,7 @@ const mockPosts: Post[] = [
             slug: "fourth-test-post",
             title: "fourth test post",
             topic: "coding",
+            tags: ["first-tag", "second-tag", "third-tag", "fourth-tag"],
         },
     },
 ]

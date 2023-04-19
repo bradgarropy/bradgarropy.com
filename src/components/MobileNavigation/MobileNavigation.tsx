@@ -1,8 +1,9 @@
 import Link from "@bradgarropy/next-link"
-import Hamburger from "components/Hamburger"
-import Icon from "components/Icon"
-import {useApp} from "hooks"
 import type {FC} from "react"
+
+import Hamburger from "~/components/Hamburger"
+import Icon from "~/components/Icon"
+import useApp from "~/hooks/useApp"
 
 const MobileNavigation: FC = () => {
     const {open, setOpen} = useApp()

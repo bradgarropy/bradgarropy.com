@@ -3,6 +3,7 @@ title: 🔒 securing webhooks
 slug: securing-webhooks
 date: "2022-10-06"
 topic: coding
+tags: ["webhooks"]
 ---
 
 The thing about webhooks is that they need to be accessible from everywhere. But what if you want to secure them so that only authorized callers can execute them? We can lock down webhooks using an [HTTP Authorization header][authorization-header] and a server side secret.

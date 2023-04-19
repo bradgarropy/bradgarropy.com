@@ -3,6 +3,7 @@ title: 😜 mocking next.js
 slug: mocking-nextjs
 date: "2021-06-28"
 topic: coding
+tags: ["next", "jest"]
 ---
 
 Previously I covered how to mock [gatsby][mock-gatsby] and [gatsby image][mock-gatsby-image] in `jest` tests. Lately I've been using [Next.js][next] for new projects, and with that I've had to reimplement a few things that I had built specifically for [Gatsby][gatsby]. For instance, I'll have to create new versions of my [gatsby-plugin-seo][gatsby-plugin-seo] and [gatsby-link][gatsby-link] packages for Next.js.

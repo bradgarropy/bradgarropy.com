@@ -1,6 +1,7 @@
 import {render, screen} from "@testing-library/react"
-import Testimonial from "components/Testimonial"
-import {mockTestimonial} from "test-utils/mocks"
+
+import Testimonial from "~/components/Testimonial"
+import {mockTestimonial} from "~/test-utils/mocks"
 
 test("shows name", () => {
     render(<Testimonial testimonial={mockTestimonial} />)
@@ -21,7 +22,6 @@ test("links to profile", () => {
     render(<Testimonial testimonial={mockTestimonial} />)
 
     expect(
-        screen.getByText(mockTestimonial.frontmatter.name).parentElement
-            .parentElement,
+        screen.getByText(mockTestimonial.frontmatter.name).parentElement,
     ).toHaveAttribute("href", mockTestimonial.frontmatter.profile)
 })

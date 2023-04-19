@@ -1,11 +1,12 @@
 import SEO from "@bradgarropy/next-seo"
-import HireMe from "components/HireMe"
-import Layout from "components/Layout"
 import type {GetStaticProps} from "next"
 import type {FC} from "react"
-import type {Testimonial} from "types/testimonial"
-import {createImageUrl} from "utils/cloudinary"
-import {getTestimonials} from "utils/testimonials"
+
+import HireMe from "~/components/HireMe"
+import Layout from "~/components/Layout"
+import type {Testimonial} from "~/types/testimonial"
+import {createImageUrl} from "~/utils/cloudinary"
+import {getTestimonials} from "~/utils/testimonials"
 
 type HireMePageProps = {
     testimonials: Testimonial[]

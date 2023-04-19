@@ -1,12 +1,13 @@
 import SEO from "@bradgarropy/next-seo"
-import Layout from "components/Layout"
-import PostList from "components/PostList"
-import PostSearchBar from "components/PostSearchBar"
 import type {GetStaticProps} from "next"
 import type {FC} from "react"
 import {useState} from "react"
-import type {PostFrontmatter} from "types/post"
-import {getAllPosts} from "utils/posts"
+
+import Layout from "~/components/Layout"
+import PostList from "~/components/PostList"
+import PostSearchBar from "~/components/PostSearchBar"
+import type {PostFrontmatter} from "~/types/post"
+import {getAllPosts} from "~/utils/posts"
 
 type BlogPageProps = {
     allPosts: PostFrontmatter[]

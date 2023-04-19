@@ -3,6 +3,7 @@ title: 🌑 gatsby dark mode
 slug: gatsby-dark-mode
 date: "2021-04-30"
 topic: coding
+tags: ["gatsby"]
 ---
 
 You're not one of the cool kids nowadays if you don't have a dark mode on your site. So I figured it was time to join the club and get this implemented. My previous work [converting styled component variables to css custom properties][sc-to-cv] laid the groundwork for this feature.

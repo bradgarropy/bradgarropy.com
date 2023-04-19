@@ -1,6 +1,7 @@
 import {render, screen} from "@testing-library/react"
-import HireMe from "components/HireMe"
-import {mockTestimonials} from "test-utils/mocks"
+
+import HireMe from "~/components/HireMe"
+import {mockTestimonials} from "~/test-utils/mocks"
 
 test("shows hire me page", () => {
     render(<HireMe testimonials={mockTestimonials} />)

@@ -1,24 +1,28 @@
 import {readdirSync} from "fs"
 import matter from "gray-matter"
+
 import {
     mockPost,
     mockPostFrontmatter,
+    mockPosts,
     mockPostsFrontmatter,
     mockPostsPaths,
     mockPostsResponse,
     mockSortedPostsFrontmatter,
     mockTopic,
     mockTopics,
-} from "test-utils/mocks"
+} from "~/test-utils/mocks"
 import {
     getAllPosts,
     getLatestPosts,
     getPostBySlug,
+    getPostsByTag,
     getPostsByTopic,
+    getTags,
     getTopic,
     getTopics,
     sortPostsByDate,
-} from "utils/posts"
+} from "~/utils/posts"
 
 jest.mock("fs")
 jest.mock("gray-matter")
@@ -110,6 +114,36 @@ test("gets posts by topic", () => {
 
     const post = getPostsByTopic("life")
     expect(post).toEqual([mockPostFrontmatter])
+})
+
+test("gets tags", () => {
+    const mockReadDirSync = readdirSync as jest.Mock
+    mockReadDirSync.mockReturnValue(mockPostsPaths)
+
+    const mockMatterRead = matter.read as jest.Mock
+    mockMatterRead
+        .mockReturnValueOnce(mockPostsResponse[0])
+        .mockReturnValueOnce(mockPostsResponse[1])
+        .mockReturnValueOnce(mockPostsResponse[2])
+        .mockReturnValueOnce(mockPostsResponse[3])
+
+    const tags = getTags()
+    expect(tags).toEqual(mockPosts[3].frontmatter.tags)
+})
+
+test("gets posts by tag", () => {
+    const mockReadDirSync = readdirSync as jest.Mock
+    mockReadDirSync.mockReturnValue(mockPostsPaths)
+
+    const mockMatterRead = matter.read as jest.Mock
+    mockMatterRead
+        .mockReturnValueOnce(mockPostsResponse[0])
+        .mockReturnValueOnce(mockPostsResponse[1])
+        .mockReturnValueOnce(mockPostsResponse[2])
+        .mockReturnValueOnce(mockPostsResponse[3])
+
+    const post = getPostsByTag("third-tag")
+    expect(post).toEqual(mockPostsFrontmatter.slice(2))
 })
 
 test("sorts posts by date", () => {

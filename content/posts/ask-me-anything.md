@@ -3,6 +3,7 @@ title: ❔ ask me anything
 slug: ask-me-anything
 date: "2019-02-13"
 topic: life
+tags: ["ama"]
 ---
 
 I've been inspired by [Kent C. Dodds][kcd] lately to grow my online presence as a developer. My favorite thing about him is how he makes himself available to folks who are looking for advice or help.

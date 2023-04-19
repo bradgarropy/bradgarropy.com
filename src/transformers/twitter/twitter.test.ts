@@ -1,4 +1,4 @@
-import {twitterTransformer} from "transformers/twitter"
+import {twitterTransformer} from "~/transformers/twitter"
 
 test("detects twitter links", () => {
     expect(

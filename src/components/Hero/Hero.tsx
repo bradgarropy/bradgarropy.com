@@ -1,6 +1,7 @@
 import Link from "@bradgarropy/next-link"
 import type {FC} from "react"
-import {createImageUrl} from "utils/cloudinary"
+
+import {createImageUrl} from "~/utils/cloudinary"
 
 const Hero: FC = () => {
     return (
@@ -12,7 +13,7 @@ const Hero: FC = () => {
                 <img
                     src={createImageUrl("/pages/home/profile.jpg")}
                     alt="bg"
-                    className="transform rounded-full border-7 border-black duration-300 hover:-rotate-2 hover:border-purple-400 dark:border-white"
+                    className="transform rounded-full border-7 border-black duration-300 hover:-rotate-2 hover:border-purple-400 dark:border-white dark:hover:border-purple-400"
                     width="460"
                     height="460"
                 />

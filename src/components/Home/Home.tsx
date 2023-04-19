@@ -1,14 +1,15 @@
-import FeaturedProjects from "components/FeaturedProjects"
-import Hero from "components/Hero"
-import LatestPosts from "components/LatestPosts"
-import LatestVideos from "components/LatestVideos"
-import Newsletter from "components/Newsletter"
-import Podcast from "components/Podcast"
-import Section from "components/Section"
 import type {FC} from "react"
-import type {PostFrontmatter} from "types/post"
-import type {Project} from "types/project"
-import type {Video} from "types/video"
+
+import FeaturedProjects from "~/components/FeaturedProjects"
+import Hero from "~/components/Hero"
+import LatestPosts from "~/components/LatestPosts"
+import LatestVideos from "~/components/LatestVideos"
+import Newsletter from "~/components/Newsletter"
+import Podcasts from "~/components/Podcasts"
+import Section from "~/components/Section"
+import type {PostFrontmatter} from "~/types/post"
+import type {Project} from "~/types/project"
+import type {Video} from "~/types/video"
 
 type HomeProps = {
     latestPosts: PostFrontmatter[]
@@ -33,8 +34,8 @@ const Home: FC<HomeProps> = ({latestPosts, latestVideos, featuredProjects}) => {
                 <FeaturedProjects featuredProjects={featuredProjects} />
             </Section>
 
-            <Section title="podcast" link="https://webdevweekly.captivate.fm">
-                <Podcast />
+            <Section title="podcasts" link="https://webdevweekly.captivate.fm">
+                <Podcasts />
             </Section>
 
             <Section title="newsletter" link="/newsletter">

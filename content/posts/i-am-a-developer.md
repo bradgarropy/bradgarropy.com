@@ -3,6 +3,7 @@ title: ⌨️ i am a developer
 slug: i-am-a-developer
 date: "2018-08-05"
 topic: coding
+tags: ["thoughts"]
 ---
 
 First and foremost I consider myself a `developer`.

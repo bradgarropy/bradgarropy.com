@@ -1,20 +1,23 @@
-import PostMeta from "components/PostMeta"
-import PostTitle from "components/PostTitle"
 import type {FC} from "react"
-import type {PostFrontmatter} from "types/post"
+
+import PostMeta from "~/components/PostMeta"
+import type {PostFrontmatter} from "~/types/post"
 
 type PostHeaderProps = {
     date: PostFrontmatter["date"]
+    tags: PostFrontmatter["tags"]
     topic: PostFrontmatter["topic"]
     title: PostFrontmatter["title"]
-    slug?: PostFrontmatter["slug"]
 }
 
-const PostHeader: FC<PostHeaderProps> = ({date, topic, title, slug}) => {
+const PostHeader: FC<PostHeaderProps> = ({date, tags, topic, title}) => {
     return (
         <section>
-            <PostMeta date={date} topic={topic} />
-            <PostTitle title={title} slug={slug} />
+            <PostMeta date={date} topic={topic} tags={tags} />
+
+            <h1 className="mt-6 font-heading text-4xl font-semibold">
+                {title}
+            </h1>
         </section>
     )
 }

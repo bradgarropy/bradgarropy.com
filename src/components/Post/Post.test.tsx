@@ -1,7 +1,8 @@
 import {render, screen} from "@testing-library/react"
-import Post from "components/Post"
-import {useMeta} from "hooks"
-import {mockMeta, mockPost} from "test-utils/mocks"
+
+import Post from "~/components/Post"
+import useMeta from "~/hooks/useMeta"
+import {mockMeta, mockPost} from "~/test-utils/mocks"
 
 jest.mock("hooks/useMeta")
 
@@ -14,6 +15,7 @@ test("shows post header", () => {
     expect(screen.getByText("January 1, 2021", {exact: false}))
     expect(screen.getByText(`#${mockPost.frontmatter.topic}`))
     expect(screen.getByText(mockPost.frontmatter.title))
+    expect(screen.getByText(mockPost.frontmatter.tags[0]))
 })
 
 test("shows post body", () => {

@@ -1,6 +1,7 @@
-import Icon from "components/Icon"
 import type {FC, ReactNode} from "react"
 import slugify from "slugify"
+
+import Icon from "~/components/Icon"
 
 type HeadingProps = {
     level: 1 | 2 | 3

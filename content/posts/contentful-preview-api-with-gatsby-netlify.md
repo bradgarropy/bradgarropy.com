@@ -3,6 +3,7 @@ title: 👀 contentful preview api with gatsby + netlify
 slug: contentful-preview-api-with-gatsby-netlify
 date: "2018-09-04"
 topic: coding
+tags: ["contentful", "gatsby", "netlify"]
 ---
 
 My favorite feature of [Netlify][netlify] is branch deploys, all I have to do is push my code to a [Github][github] branch and Netlify will deploy my site to a custom url specific to that branch. This feature essentially enables different environments, like production, development, staging, etc.

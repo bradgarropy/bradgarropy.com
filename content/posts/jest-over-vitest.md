@@ -3,6 +3,7 @@ title: 👌🏼 jest over vitest
 slug: jest-over-vitest
 date: "2022-11-04"
 topic: coding
+tags: ["jest", "vitest"]
 ---
 
 JavaScript tooling has gotten a lot faster recently with the advent of [ESModules][esm] and the creation of new Rust and Go based compilers. These speed improvements have affected everything from bundlers to test runners. [Vitest][vitest] is a prime example of a new test runner that leverages [esbuild][esbuild] to execute very quickly.

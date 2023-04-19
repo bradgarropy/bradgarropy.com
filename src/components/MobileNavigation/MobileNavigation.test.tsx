@@ -1,13 +1,14 @@
 import {render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
-import MobileNavigation from "components/MobileNavigation"
-import {useApp} from "hooks"
-import {generateAppCtx} from "test-utils/generators"
+
+import MobileNavigation from "~/components/MobileNavigation"
+import useApp from "~/hooks/useApp"
+import {generateAppCtx} from "~/test-utils/generators"
 
 const mockAppCtxOpen = generateAppCtx({open: true})
 const mockAppCtxClosed = generateAppCtx({open: false})
 
-jest.mock("hooks")
+jest.mock("~/hooks/useApp")
 
 const mockUseApp = useApp as jest.Mock
 

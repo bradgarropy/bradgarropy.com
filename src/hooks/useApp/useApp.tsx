@@ -1,6 +1,7 @@
-import type {AppContextType} from "context"
-import {AppContext} from "context"
 import {useContext} from "react"
+
+import type {AppContextType} from "~/context/App"
+import {AppContext} from "~/context/App"
 
 const useApp = (): AppContextType => {
     const appCtx = useContext(AppContext)

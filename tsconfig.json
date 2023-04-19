@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "allowJs": true,
-        "baseUrl": "src",
+        "baseUrl": ".",
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "incremental": true,
@@ -11,10 +11,21 @@
         "module": "esnext",
         "moduleResolution": "node",
         "noEmit": true,
+        "paths": {
+            "~/components/*": ["src/components/*"],
+            "~/context/*": ["src/context/*"],
+            "~/hooks/*": ["src/hooks/*"],
+            "~/pages/*": ["src/pages/*"],
+            "~/styles/*": ["src/styles/*"],
+            "~/test-utils/*": ["src/test-utils/*"],
+            "~/transformers/*": ["src/transformers/*"],
+            "~/types/*": ["src/types/*"],
+            "~/utils/*": ["src/utils/*"]
+        },
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "strict": false,
-        "target": "es5"
+        "target": "esnext"
     },
     "include": ["**/*.ts", "**/*.tsx"],
     "exclude": ["node_modules"]

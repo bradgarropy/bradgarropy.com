@@ -3,6 +3,7 @@ title: 🥱 the boredom / motivation correlation
 slug: the-boredom-motivation-correlation
 date: "2022-05-26"
 topic: life
+tags: ["thoughts"]
 ---
 
 What happens at work often affects my ability to get things done outside of work. If I don't have enough to do, if there are too many meetings, or if I'm not being challenged at the right level, my brain turns to mush. While in this state, it becomes difficult to maintain focus and find the willpower to make progress on anything. I call this phenomenon **The Boredom / Motivation Correlation**.

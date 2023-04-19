@@ -1,4 +1,4 @@
-import {formatDate} from "utils/date"
+import {formatDate} from "~/utils/date"
 
 test("formats date", () => {
     const formattedDate = formatDate("2022-01-01")

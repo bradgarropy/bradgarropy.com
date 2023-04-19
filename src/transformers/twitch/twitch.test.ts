@@ -1,4 +1,4 @@
-import {twitchTransformer} from "transformers/twitch"
+import {twitchTransformer} from "~/transformers/twitch"
 
 test("detects twitch links", () => {
     expect(

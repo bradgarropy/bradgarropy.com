@@ -3,6 +3,7 @@ title: 📅 2022 in review
 slug: 2022-in-review
 date: "2023-01-11"
 topic: life
+tags: ["review"]
 ---
 
 As the year winds down, it's the perfect time to reflect on everything I've accomplished. It's also a good time to see if I lived up to my [goals for 2022][2022], so let's get into it!

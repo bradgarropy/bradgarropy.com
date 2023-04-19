@@ -3,6 +3,7 @@ title: 📦 npm publish with github actions
 slug: npm-publish-with-github-actions
 date: "2019-04-27"
 topic: coding
+tags: ["npm", "github"]
 ---
 
 I recently published my first package to [npm][npm], [eslint-config-bradgarropy][eslint-config-bradgarropy]. But now that it's had a few version bumps, eight to be exact, I wanted to automate the release process. Turns out I could do this without even leaving [GitHub][github] with the _relatively_ new [GitHub Actions][github-actions] feature.

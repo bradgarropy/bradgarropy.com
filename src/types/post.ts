@@ -8,6 +8,7 @@ type PostFrontmatter = {
     topic: string
     title: string
     slug: string
+    tags: Tag[]
 }
 
 type Topic = {
@@ -15,4 +16,6 @@ type Topic = {
     name: string
 }
 
-export type {Post, PostFrontmatter, Topic}
+type Tag = string
+
+export type {Post, PostFrontmatter, Tag, Topic}

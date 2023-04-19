@@ -3,6 +3,7 @@ title: 🏆 goals for 2023
 slug: goals-for-2023
 date: "2023-01-13"
 topic: life
+tags: ["goals"]
 ---
 
 After a very successful [2022][2022-in-review], I'm kicking off the new year with another set of goals. Last year I [disconnected][disconnecting] for about four months in the summer. To avoid that this year, I'm scaling back some of my goals and focusing more on enjoying the process.

@@ -3,6 +3,7 @@ title: 🌑 next.js dark mode
 slug: nextjs-dark-mode
 date: "2023-02-27"
 topic: coding
+tags: ["next"]
 ---
 
 The dark mode on my website was always pretty half baked, so while I was [converting to Tailwind][tailwind-migration], I spent some time improving it. There were a few major requirements I wanted to implement.

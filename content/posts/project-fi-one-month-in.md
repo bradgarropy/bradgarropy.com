@@ -3,6 +3,7 @@ title: 📅 project fi one month in
 slug: project-fi-one-month-in
 date: "2018-09-07"
 topic: tech
+tags: ["review"]
 ---
 
 my bill was six dollars.

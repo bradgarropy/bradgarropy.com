@@ -1,7 +1,8 @@
-import Markdown from "components/Markdown"
-import {useMarkdown} from "hooks"
 import type {FC} from "react"
-import type {Markdown as MarkdownType} from "types/markdown"
+
+import Markdown from "~/components/Markdown"
+import useMarkdown from "~/hooks/useMarkdown"
+import type {Markdown as MarkdownType} from "~/types/markdown"
 
 type UsesProps = {
     uses: MarkdownType
