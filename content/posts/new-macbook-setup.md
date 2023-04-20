@@ -6,7 +6,7 @@ topic: tech
 tags: ["apple", "macbook"]
 ---
 
-I recently got a new [M1 MacBook Pro][macbook-pro], and I wanted to document exactly how I set it up. I not only want to share this with you, but also use it as a reference for me in the future.
+I recently got a new [M1 MacBook Pro][macbook-pro], and I wanted to document exactly how I set it up. Not only do I want to share this with you, but I also want to use it as a reference for myself in the future.
 
 ## 🔺 install updates
 
@@ -27,9 +27,13 @@ I recently got a new [M1 MacBook Pro][macbook-pro], and I wanted to document exa
 
 -   Login to iCloud
 
+![iCloud][icloud]
+
 ### siri & spotlight
 
 -   Enable _Listen for "Hey Siri"_
+
+![Siri & Spotlight][siri-and-spotlight]
 
 ### desktop & dock
 
@@ -41,31 +45,42 @@ I recently got a new [M1 MacBook Pro][macbook-pro], and I wanted to document exa
     | _Mission Control_ | _Mission Control_ |
     | _Desktop_         | _Desktop_         |
 
+![Desktop & Dock][desktop-and-dock]
+
 ### wallpaper
 
 -   Select _Dynamic_ wallpaper
+
+![Wallpaper][wallpaper]
 
 ### touch id & password
 
 -   Enable _Touch ID_
 -   Allow unlocking with Apple Watch
 
+![Touch ID & Password][touch-id-and-password]
+
 ### internet accounts
 
 -   Add `bradgarropy@gmail.com` account
-
     -   Select _Mail_ and _Calendar_
+
+![Internet Accounts][internet-accounts]
 
 ### keyboard
 
--   _Keyboard Shortcuts_ > _Modifier_
+-   Keyboard Shortcuts > Modifier
     -   Swap the _Control_ and _Command_ keys on external keyboard
+
+![Keyboard][keyboard]
 
 ### mouse
 
 -   Increase _Tracking speed_ to _Fast_
 -   Uncheck _Natural scrolling_
 -   Increase _Scrolling speed_
+
+![Mouse][mouse]
 
 ### applications
 
@@ -87,13 +102,13 @@ I recently got a new [M1 MacBook Pro][macbook-pro], and I wanted to document exa
 -   Finder > Settings > Sidebar
     -   Select _Hard Disks_
 
+![Finder][finder]
+
 ## 📥 install applications
 
 -   [Google Chrome][chrome]
-
     -   Sign in
     -   Set as default browser
-
 -   [Discord][discord]
 -   [Elgato Camera Hub][elgato]
 -   [Elgato Control Center][elgato]
@@ -102,7 +117,6 @@ I recently got a new [M1 MacBook Pro][macbook-pro], and I wanted to document exa
 -   [OBS][obs]
 -   [Spotify][spotify]
 -   [vscode][vscode]
-
     -   Update
     -   Sign in with GitHub
     -   [Install shell command][vscode-cli]
@@ -145,3 +159,12 @@ npm install --global vercel
 [netlify-cli]: https://www.netlify.com/products/cli
 [ngrok]: https://ngrok.com
 [vscode-cli]: https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
+[icloud]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/icloud.png
+[siri-and-spotlight]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/siri-and-spotlight.png
+[desktop-and-dock]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/desktop-and-dock.png
+[wallpaper]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/wallpaper.png
+[touch-id-and-password]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/touch-id-and-password.png
+[internet-accounts]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/internet-accounts.png
+[keyboard]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/keyboard.png
+[mouse]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/mouse.png
+[finder]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/finder.png
