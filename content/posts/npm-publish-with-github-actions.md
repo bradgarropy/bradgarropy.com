@@ -24,16 +24,16 @@ I clicked **Done** and the final workflow looks like this.
 
 I checked the `main.workflow` file and found that the visual editor had generated the following code.
 
-```
+```toml
 workflow "🚀 release" {
-  on = "release"
-  resolves = ["📦 npm publish"]
+    on = "release"
+    resolves = ["📦 npm publish"]
 }
 
 action "📦 npm publish" {
-  uses = "actions/npm@master"
-  secrets = ["NPM_AUTH_TOKEN"]
-  args = "publish"
+    uses = "actions/npm@master"
+    secrets = ["NPM_AUTH_TOKEN"]
+    args = "publish"
 }
 ```
 

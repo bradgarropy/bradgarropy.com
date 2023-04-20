@@ -14,7 +14,7 @@ He's right, `netlify dev` is the best way to run your serverless functions local
 
 First, you're going to want to install the command line tool globally. And if that's not your style, you can always run it with `npx`.
 
-```bash
+```zsh
 npm install --global netlify-cli
 ```
 
@@ -27,7 +27,7 @@ Next, create a directory for your project, I called mine `bg-serverless`, and cr
 
 Now let's use Netlify CLI to create a serverless function for us. Enter the command below and notice how you are prompted to choose from one of many different [serverless function templates][templates]!
 
-```bash
+```zsh
 netlify function:create hello
 ```
 
@@ -46,7 +46,7 @@ Now we can hit `/api/hello` instead of the ugly default Netlify URL.
 
 Let's make this site live! Use the Netlify CLI one more time to create a site, and deploy your serverless functions.
 
-```bash
+```zsh
 netlify deploy --prod
 ```
 

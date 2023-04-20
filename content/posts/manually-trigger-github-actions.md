@@ -39,7 +39,7 @@ Now the _Run workflow_ button on your action will show a dialog with all of the 
 
 As an added bonus, the [GitHub CLI][cli] also supports workflow commands. Workflows can be viewed, started, and monitored from your terminal. Use the command below to manually trigger a workflow from the CLI. It walks you through selecting the workflow and adding inputs.
 
-```bash
+```zsh
 gh workflow run
 ```
 

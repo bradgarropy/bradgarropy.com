@@ -30,13 +30,13 @@ Before we get started, you'll have to [sign up][signup] for a Cloudflare account
 
 Cloudflare made it easy to manage your workers and test them locally with a cli tool called [wrangler][cli]. Install it globally as shown below.
 
-```bash
+```zsh
 npm install --global @cloudflare/wrangler
 ```
 
 Then, login to Cloudflare from `wrangler`.
 
-```bash
+```zsh
 wrangler login
 ```
 
@@ -48,13 +48,13 @@ While you can start from scratch, Cloudflare provides lots of [starter templates
 
 To begin our link tree, let's use `wrangler` to generate a basic [worker template][worker-template].
 
-```bash
+```zsh
 wrangler generate link-tree https://github.com/cloudflare/worker-template
 ```
 
 Then, head over to the directory and install the dependencies.
 
-```bash
+```zsh
 cd link-tree
 npm install
 ```
@@ -93,7 +93,7 @@ You can think of workers like a miniature web application that lives on a CDN. W
 
 I chose [itty-router][router] because it was specifically designed for use with Cloudflare Workers. Install it by using the command below.
 
-```bash
+```zsh
 npm install itty-router
 ```
 
@@ -123,7 +123,7 @@ The call to `addEventListener` is standard boilerplate for listening to events i
 
 Let's take a minute here to ensure our two routes are working and learn how to start our development server. Run the following command to start a local instance of our worker.
 
-```bash
+```zsh
 wrangler dev
 ```
 
@@ -270,7 +270,7 @@ Head over to `127.0.0.1:8787` to see the new HTML response, which has been rewri
 
 Now you can use `wrangler` to publish your worker to Cloudflare.
 
-```bash
+```zsh
 wrangler publish
 ```
 

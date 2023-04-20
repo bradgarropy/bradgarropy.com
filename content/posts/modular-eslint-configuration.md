@@ -15,7 +15,7 @@ I feel like I revamp my [eslint][eslint] configuration almost annually nowadays.
 
 The configurations are intended to extend one another, starting from the base [JavaScript][npm-eslint-base] configuration. It can be installed like this.
 
-```bash
+```zsh
 npx install-peerdeps --dev @bradgarropy/eslint-config
 ```
 
@@ -29,7 +29,7 @@ Then you can create an `.eslintrc` file to extend the base configuration.
 
 But let's say you were working in a [React][react] project using [TypeScript][typescript]. You can enable linting for those technologies by first downloading the packages.
 
-```bash
+```zsh
 npx install-peerdeps --dev @bradgarropy/eslint-config-react
 npx install-peerdeps --dev @bradgarropy/eslint-config-typescript
 ```

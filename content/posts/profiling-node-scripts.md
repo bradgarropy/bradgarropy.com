@@ -10,7 +10,7 @@ If you're looking to improve the performance of a [Node.js][node] script, a [fla
 
 Node supports generating data from scripts that is required to create a flamegraph. To start profiling a script, run it with the `inspect` command to begin a debugging session.
 
-```bash
+```zsh
 node inspect index.js
 ```
 
