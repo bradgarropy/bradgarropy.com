@@ -14,7 +14,7 @@ Well I have. Enough times to drive me to actually address the issue. The problem
 
 To fix this, first install the latest version of `@hot-loader/react-dom`.
 
-```shell
+```zsh
 npm install --save-dev @hot-loader/react-dom
 ```
 

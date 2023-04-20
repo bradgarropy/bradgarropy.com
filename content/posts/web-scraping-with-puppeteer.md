@@ -10,7 +10,7 @@ tags: ["puppeteer"]
 
 First we install [Puppeteer][puppeteer] into our project.
 
-```shell
+```zsh
 npm install puppeteer
 ```
 

@@ -20,20 +20,20 @@ In order to submit a pull request, you'll have to setup your own development env
 
 Then you can clone the forked repository to your system.
 
-```bash
+```zsh
 git clone https://github.com/<username>/bradgarropy.com
 ```
 
 Next you need to install the dependencies.
 
-```bash
+```zsh
 cd bradgarropy.com
 npm install
 ```
 
 Finally, you can build and test the project.
 
-```bash
+```zsh
 npm run test
 npm run build
 ```
@@ -46,7 +46,7 @@ When writing your code, please try to follow the existing code style.
 
 Your code will be automatically linted and formatted before each commit. However, if you want to manually lint and format, use the provided `npm` scripts.
 
-```bash
+```zsh
 npm run lint:fix
 npm run format:fix
 ```
@@ -55,7 +55,7 @@ npm run format:fix
 
 The project maintains `100%` test coverage. If you change code, please maintain complete test coverage. You can run the tests to confirm.
 
-```bash
+```zsh
 npm run test
 ```
 
@@ -67,7 +67,7 @@ If you make any changes that require documentation updates, please include them 
 
 This project do not enforce a specific commit style. However, if you submit a pull request that closes an issue, please reference it in the commit message.
 
-```bash
+```zsh
 git commit -m "Fix a bug. Closes #1."
 ```
 
@@ -75,7 +75,7 @@ git commit -m "Fix a bug. Closes #1."
 
 Once your pull request is submitted, I may provide you with some feedback. While working on the feedback, please move the pull request to `Draft` state. Once you've finished addressing the feedback, mark the pull request as `Ready for review` and mention me in a comment.
 
-```
+```text
 Alright @bradgarropy, how's this?
 ```
 

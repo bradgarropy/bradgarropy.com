@@ -16,7 +16,7 @@ First I added a deprecation message to the `readme`. I put the message towards t
 
 Then I published the `readme` changes to `npm` as a new `patch` version. The two commands below came in handy to bump the version and publish the package, but your deployment setup may vary.
 
-```
+```zsh
 npm version patch
 npm publish
 ```
@@ -35,7 +35,7 @@ While this button is in the _Danger Zone_, you can _Unarchive_ your repository a
 
 Finally, I had to let `npm` know that the package is deprecated. I used the [deprecate][deprecate] command to do that. The last parameter is a deprecation message that will show up when a user tries to install a deprecated package
 
-```bash
+```zsh
 npm deprecate eslint-config-bradgarropy "This package is deprecated."
 ```
 

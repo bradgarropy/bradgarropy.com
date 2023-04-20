@@ -62,7 +62,7 @@ That's it! Most other articles I read included other steps, like responding to r
 
 To ensure that everything is running properly, you can check a few things. First, the _Network_ tab should include a request to retrieve the `gtag` script with the following url.
 
-```
+```text
 https://www.googletagmanager.com/gtag/js?id=<measurement-id>
 ```
 

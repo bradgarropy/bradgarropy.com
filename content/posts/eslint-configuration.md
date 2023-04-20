@@ -26,7 +26,7 @@ As some of you may have noticed, this configuration does not include [Prettier][
 
 First, install the configuration with command below. This not only installs the ESLint configuration, but all peer dependencies as well (like ESLint and the plugins).
 
-```
+```zsh
 npx install-peerdeps --dev eslint-config-bradgarropy
 ```
 
