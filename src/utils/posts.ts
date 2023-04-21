@@ -1,4 +1,5 @@
 import fs from "fs"
+import Fuse from "fuse.js"
 import matter from "gray-matter"
 import path from "path"
 
@@ -185,12 +186,36 @@ const sortPostsByDate = (posts: PostFrontmatter[]): PostFrontmatter[] => {
     return sortedPosts
 }
 
+const getRelatedPosts = (post: PostFrontmatter) => {
+    const posts = getAllPosts()
+
+    const fuse = new Fuse(posts, {
+        keys: ["title", "topic", "tags"],
+    })
+
+    fuse.remove(item => item.slug === post.slug)
+
+    const query: Fuse.Expression = {
+        $or: [
+            {title: post.title},
+            {topic: post.topic},
+            ...post.tags.map(tag => ({tags: tag})),
+        ],
+    }
+
+    const queryResults = fuse.search(query).slice(0, 2)
+    const relatedPosts = queryResults.map(result => result.item)
+
+    return relatedPosts
+}
+
 export {
     getAllPosts,
     getLatestPosts,
     getPostBySlug,
     getPostsByTag,
     getPostsByTopic,
+    getRelatedPosts,
     getTags,
     getTopic,
     getTopics,
