@@ -18,6 +18,7 @@ import {
     getPostBySlug,
     getPostsByTag,
     getPostsByTopic,
+    getRelatedPosts,
     getTags,
     getTopic,
     getTopics,
@@ -156,4 +157,23 @@ test("sorts posts by date", () => {
 
     const sortedPosts = sortPostsByDate(unsortedPosts)
     expect(sortedPosts).toEqual(mockSortedPostsFrontmatter)
+})
+
+test("gets related posts", () => {
+    const mockReadDirSync = readdirSync as jest.Mock
+    mockReadDirSync.mockReturnValue(mockPostsPaths)
+
+    const mockMatterRead = matter.read as jest.Mock
+    mockMatterRead
+        .mockReturnValueOnce(mockPostsResponse[0])
+        .mockReturnValueOnce(mockPostsResponse[1])
+        .mockReturnValueOnce(mockPostsResponse[2])
+        .mockReturnValueOnce(mockPostsResponse[3])
+
+    const relatedPosts = getRelatedPosts(mockPostsFrontmatter[1])
+
+    expect(relatedPosts).toEqual([
+        mockPostsFrontmatter[3],
+        mockPostsFrontmatter[2],
+    ])
 })
