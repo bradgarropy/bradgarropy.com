@@ -10,6 +10,7 @@ import Section from "~/components/Section"
 import type {PostFrontmatter} from "~/types/post"
 import type {Project} from "~/types/project"
 import type {Video} from "~/types/video"
+import {createImageUrl} from "~/utils/cloudinary"
 
 type HomeProps = {
     latestPosts: PostFrontmatter[]
@@ -36,6 +37,13 @@ const Home: FC<HomeProps> = ({latestPosts, latestVideos, featuredProjects}) => {
 
             <Section title="podcasts" link="https://webdevweekly.captivate.fm">
                 <Podcasts />
+            </Section>
+
+            <Section title="store" link="https://bradgarropy.com/store">
+                <img
+                    src={createImageUrl("/pages/home/curly-bois.png")}
+                    alt="shirts"
+                />
             </Section>
 
             <Section title="newsletter" link="/newsletter">
