@@ -4,7 +4,7 @@ import FancyLink from "~/components/FancyLink"
 
 const Contact: FC = () => {
     return (
-        <div className="place-self-center">
+        <div className="grid h-full w-full  place-content-center">
             <h1 className="mb-7 font-heading text-[2rem] font-semibold">
                 👋🏼 say hi
             </h1>

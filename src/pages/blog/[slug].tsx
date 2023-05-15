@@ -20,7 +20,7 @@ const PostPage: FC<PostPageProps> = ({post, relatedPosts}) => {
         <Layout>
             <SEO title={post.frontmatter.title} />
 
-            <div className="grid gap-y-28">
+            <div className="flex flex-col gap-y-28">
                 <Post post={post} />
 
                 <Section title="related posts">
