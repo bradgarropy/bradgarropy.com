@@ -35,7 +35,10 @@ const Home: FC<HomeProps> = ({latestPosts, latestVideos, featuredProjects}) => {
                 <FeaturedProjects featuredProjects={featuredProjects} />
             </Section>
 
-            <Section title="podcasts" link="https://webdevweekly.captivate.fm">
+            <Section
+                title="podcasts"
+                link="https://open.spotify.com/show/3TAuVah0Q9BOV5PbwPDGfs"
+            >
                 <Podcasts />
             </Section>
 
