@@ -16,30 +16,40 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 
 ### Software
 
-|              |                                                                                                        |
-| ------------ | ------------------------------------------------------------------------------------------------------ |
-| _JavaScript_ | React, Gatsby, Next.js, Remix, Node.js, TypeScript, Svelte, GraphQL, Express, Jest, Cypress, Storybook |
-| _Python_     | Paramiko, Beautiful Soup, JUnit, Selenium                                                              |
-| _Others_     | HTML5, CSS3, Tailwind CSS, PWA, Stripe, Bash, Groovy, JSON, Markdown, YAML, TOML, C                    |
+|             |                                                                        |
+| ----------- | ---------------------------------------------------------------------- |
+| _Languages_ | JavaScript, TypeScript, HTML, CSS, Bash, Markdown, YAML, TOML          |
+| _Runtimes_  | Node, Deno                                                             |
+| _Frontend_  | React, Next, Remix, Gatsby, Svelte, SvelteKit, Astro, Webpack, esbuild |
+| _Backend_   | Serverless, Webhooks, REST, GraphQL, Express, Fastify                  |
+| _Testing_   | Jest, Vitest, Cypress, Playwright, Mock Service Worker, Storybook      |
 
 ### Tools
 
-|                          |                                                              |
-| ------------------------ | ------------------------------------------------------------ |
-| _Version Control_        | GitHub, Bitbucket, GitLab, SVN                               |
-| _Continuous Integration_ | Jenkins, Travis CI, GitHub Actions                           |
-| _Cloud_                  | Amazon Web Services Lambda, Google Cloud Functions           |
-| _Hosting_                | Netlify, Vercel, Heroku, Github Pages, Firebase, Fly, Render |
-| _Databases_              | MongoDB, MySQL, Firestore, FaunaDB, Supabase, PlanetScale    |
-| _Infrastructure_         | Puppet, Artifactory, vSphere                                 |
-| _Monitoring_             | New Relic, Pager Duty, OpsGenie, Sentry, Splunk              |
-| _Development Lifecycle_  | JIRA, Rally, Code Collaborator                               |
-| _Design_                 | Figma                                                        |
+|                          |                                                                        |
+| ------------------------ | ---------------------------------------------------------------------- |
+| _Version Control_        | GitHub, Bitbucket, GitLab                                              |
+| _Continuous Integration_ | GitHub Actions, Travis CI, Jenkins, Bitbucket Pipelines                |
+| _Cloud_                  | Amazon Web Services, Google Cloud Platform, Microsoft Azure            |
+| _Hosting_                | Vercel, Netlify, Heroku, Google Firebase, Fly, Render, GitHub Pages    |
+| _Databases_              | MongoDB, MySQL, Firestore, FaunaDB, Supabase, PlanetScale, Redis, Xata |
+| _Infrastructure_         | Puppet, Artifactory                                                    |
+| _Monitoring_             | Sentry, Splunk, OpsGenie, Pager Duty, New Relic                        |
+| _Development Lifecycle_  | JIRA, GitHub Projects, Rally                                           |
+| _Design_                 | Figma                                                                  |
 
 ## Employment History
 
 **Atlassian | Senior Software Engineer**  
 _October 2021 - Present_
+
+_Task Dashboard_
+
+-   Dashboard to monitor health and metrics of asynchronous tasks.
+-   Architected the application: Remix, Tailwind, Vitest, Mock Service Worker, Cypress
+-   Wrote continuous integration with Bitbucket Pipelines and Spinnaker deploys.
+-   Integrated the application with services like Sentry, SonarQube, Splunk, and Launch Darkly.
+-   Leveraged the Atlassian component library for UI elements.
 
 _Trello Developer CLI_
 
@@ -50,10 +60,11 @@ _Trello Developer CLI_
 
 _Trello Web Platform_
 
--   Implement custom `eslint` rules to enforce best practices.
--   Lead effort to remove Redux from the code base.
+-   Release manager for Trello frontend. Deployed and monitored production releases.
+-   Created code generators for components, tests, stories, and packages.
+-   Implemented custom `eslint` rules to enforce best practices.
 -   Major contributions in converting JavaScript to TypeScript.
--   Write documentation and guides for frontend contributors.
+-   Wrote documentation and guides for frontend contributors.
 
 **Adobe | Senior Frontend Developer**  
 _July 2020 - October 2021_
@@ -169,12 +180,12 @@ _03/04/2021_ | [Firebase][firebase-tutorial]
 
 ## Talks & Appearances
 
+_Recurring_ | [Compressed.fm][compressed-fm] with James Quick and Amy Dutton  
+_Recurring_ | [Web Dev Weekly][web-dev-weekly] with Richard Gottleber  
 _12/07/2022_ | [Cloudinary DevJams - Optimizing Cloudinary Images in Markdown Files][cloudinary-devjams]  
 _10/26/2022_ | [Syntax.fm Open Table][syntax-open-table] with Scott Tolinski and Wes Bos  
-_04/28/2022_ | [Compressed.fm][compressed-fm] with James Quick and Amy Dutton  
 _08/04/2021_ | [Purrfect.dev][purrfect-dev] with Brittney Postma and Alex Patterson  
 _06/25/2021_ | [Developers Hangout][developers-hangout] with James Perkins  
-_05/07/2021_ | [Web Dev Weekly][web-dev-weekly] with Brad Garropy and Richard Gottleber  
 _11/11/2020_ | [Syntax.fm 300th Episode][syntax-300] with Scott Tolinski and Wes Bos  
 _11/09/2020_ | [The Chau Codes Podcast][chau-codes] with Justin Chau  
 _10/06/2020_ | [That's My Jamstack][thats-my-jamstack] with Bryan Robinson  
@@ -420,7 +431,7 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [events-sdk]: https://github.com/adobe/magento-storefront-events-sdk
 [event-collector]: https://github.com/adobe/magento-storefront-event-collector
 [developers-hangout]: https://youtu.be/oRZNF38Z5Jg
-[web-dev-weekly]: https://webdevweekly.captivate.fm
+[web-dev-weekly]: https://open.spotify.com/show/3TAuVah0Q9BOV5PbwPDGfs
 [webpack-tutorial]: https://youtube.com/watch?v=cidA_qfiO0M&list=PL6Mu1AMmTL-vGQdj1-auEc12KM14OmjXH
 [firebase-tutorial]: https://youtube.com/watch?v=FArYmEBCMt0&list=PL6Mu1AMmTL-sSswsqShJ5fbIr9XjYHGFm
 [purrfect-dev]: https://youtu.be/Q-ELtpdIvzw
