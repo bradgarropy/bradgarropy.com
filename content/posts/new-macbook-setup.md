@@ -115,7 +115,6 @@ I recently got a new [M1 MacBook Pro][macbook-pro], and I wanted to document exa
 -   [Elgato Stream Deck][elgato]
 -   [Elgato Wave Link][elgato]
 -   [OBS][obs]
--   [Spotify][spotify]
 -   [vscode][vscode]
     -   Update
     -   Sign in with GitHub
@@ -153,7 +152,6 @@ npm install --global vercel
 [vscode]: https://code.visualstudio.com/download
 [discord]: https://discord.com/download
 [obs]: https://obsproject.com/download
-[spotify]: https://www.spotify.com/us/download
 [elgato]: https://www.elgato.com/en/downloads
 [homebrew]: https://brew.sh
 [git]: https://git-scm.com
