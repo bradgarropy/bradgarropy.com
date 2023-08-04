@@ -121,6 +121,10 @@ I recently got a new [M1 MacBook Pro][macbook-pro], and I wanted to document exa
     -   Sign in with GitHub
     -   [Install shell command][vscode-cli]
 
+## 🖋️ fonts
+
+-   [Cascadia Code][cascadia-code]
+
 ## 📦 development packages
 
 -   [homebrew][homebrew]
@@ -168,3 +172,4 @@ npm install --global vercel
 [keyboard]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/keyboard.png
 [mouse]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/mouse.png
 [finder]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/finder.png
+[cascadia-code]: https://github.com/microsoft/cascadia-code
