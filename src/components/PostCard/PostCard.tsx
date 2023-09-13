@@ -1,4 +1,5 @@
 import Link from "@bradgarropy/next-link"
+import classnames from "classnames"
 import type {FC} from "react"
 
 import PostMeta from "~/components/PostMeta"
@@ -6,11 +7,17 @@ import type {PostFrontmatter} from "~/types/post"
 
 type PostCardProps = {
     post: PostFrontmatter
+    className?: string
 }
 
-const PostCard: FC<PostCardProps> = ({post}) => {
+const PostCard: FC<PostCardProps> = ({post, className}) => {
     return (
-        <div className="rounded border-3 border-black px-8 py-8 shadow-box duration-300 hover:shadow-none dark:border-white dark:shadow-box-white hover:dark:shadow-none">
+        <div
+            className={classnames(
+                "rounded border-3 border-black px-8 py-8 shadow-box duration-300 hover:shadow-none dark:border-white dark:shadow-box-white hover:dark:shadow-none",
+                className,
+            )}
+        >
             <h1 className="mb-10 font-heading text-3xl font-semibold max-[750px]:text-2xl">
                 <Link
                     to={`/blog/${post.slug}`}

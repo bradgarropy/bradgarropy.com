@@ -21,10 +21,7 @@ const FourOhFour: FC<FourOhFourProps> = ({post, videos}) => {
                 But maybe you were looking for some of my recent content?
             </p>
 
-            <div className="mb-4 w-full">
-                <PostCard post={post} />
-            </div>
-
+            <PostCard className="mb-4" post={post} />
             <LatestVideos latestVideos={videos} />
         </div>
     )
