@@ -12,7 +12,7 @@ const icons = {
     life: "😎",
 }
 
-const getLatestPosts = (): PostFrontmatter[] => {
+const getLatestPosts = (count = 3): PostFrontmatter[] => {
     const postsPath = path.join(process.cwd(), "content/posts")
 
     const posts = fs
@@ -29,7 +29,7 @@ const getLatestPosts = (): PostFrontmatter[] => {
             return [...posts, post]
         }, [])
 
-    const latestPosts = sortPostsByDate(posts).slice(0, 3)
+    const latestPosts = sortPostsByDate(posts).slice(0, count)
     return latestPosts
 }
 
