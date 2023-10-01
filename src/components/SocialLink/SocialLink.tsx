@@ -5,12 +5,13 @@ import Icon from "~/components/Icon"
 
 type SocialLinkProps = {
     platform:
-        | "instagram"
-        | "github"
-        | "twitter"
-        | "youtube"
-        | "twitch"
         | "discord"
+        | "github"
+        | "instagram"
+        | "twitch"
+        | "twitter"
+        | "x"
+        | "youtube"
 }
 
 const SocialLink: FC<SocialLinkProps> = ({platform}) => {
@@ -46,6 +47,11 @@ const SocialLink: FC<SocialLinkProps> = ({platform}) => {
         case "discord":
             url = "https://bradgarropy.com/discord"
             name = "discord"
+            break
+
+        case "x":
+            url = "https://x.com/bradgarropy"
+            name = "x"
             break
     }
 

@@ -19,6 +19,7 @@ import {
     TwitchIcon,
     TwitterIcon,
     TypescriptIcon,
+    XIcon,
     YoutubeIcon,
 } from "~/components/Icons"
 
@@ -64,6 +65,8 @@ const Icon: FC<IconProps> = ({name, ...props}) => {
             return <TypescriptIcon {...props} />
         case "tailwind":
             return <TailwindIcon {...props} />
+        case "x":
+            return <XIcon {...props} />
         case "youtube":
             return <YoutubeIcon {...props} />
         default:
