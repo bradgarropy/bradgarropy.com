@@ -23,7 +23,7 @@ const Connect: FC = () => {
                 <SocialLink platform="twitch" />
                 <SocialLink platform="github" />
                 <SocialLink platform="youtube" />
-                <SocialLink platform="twitter" />
+                <SocialLink platform="x" />
                 <SocialLink platform="instagram" />
                 <SocialLink platform="discord" />
             </div>
