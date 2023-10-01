@@ -24,7 +24,7 @@ const Newsletter: FC = () => {
 
     return (
         <div>
-            <p className="-mt-12 mb-7">
+            <p className="-mt-6 mb-7">
                 💻 side projects | 📰 web dev news | ⚡ tech opinions
             </p>
 

@@ -46,7 +46,7 @@ const Home: FC<HomeProps> = ({latestPosts, latestVideos, featuredProjects}) => {
                 <Shirts />
             </Section>
 
-            <Section title="newsletter" link="/newsletter">
+            <Section title="newsletter">
                 <Newsletter />
             </Section>
         </div>
