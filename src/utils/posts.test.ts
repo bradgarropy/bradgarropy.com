@@ -14,6 +14,7 @@ import {
 } from "~/test-utils/mocks"
 import {
     getAllPosts,
+    getLatestPost,
     getLatestPosts,
     getPostBySlug,
     getPostsByTag,
@@ -34,6 +35,21 @@ jest.mock("gatsby-remark-vscode", () => {
     }
 })
 
+test("gets latest post", () => {
+    const mockReadDirSync = readdirSync as jest.Mock
+    mockReadDirSync.mockReturnValue(mockPostsPaths)
+
+    const mockMatterRead = matter.read as jest.Mock
+    mockMatterRead
+        .mockReturnValueOnce(mockPostsResponse[0])
+        .mockReturnValueOnce(mockPostsResponse[1])
+        .mockReturnValueOnce(mockPostsResponse[2])
+        .mockReturnValueOnce(mockPostsResponse[3])
+
+    const post = getLatestPost()
+    expect(post).toEqual(mockSortedPostsFrontmatter[0])
+})
+
 test("gets latest posts", () => {
     const mockReadDirSync = readdirSync as jest.Mock
     mockReadDirSync.mockReturnValue(mockPostsPaths)
@@ -45,8 +61,23 @@ test("gets latest posts", () => {
         .mockReturnValueOnce(mockPostsResponse[2])
         .mockReturnValueOnce(mockPostsResponse[3])
 
-    const posts = getLatestPosts()
+    const posts = getLatestPosts(3)
     expect(posts).toEqual(mockSortedPostsFrontmatter.slice(0, 3))
+})
+
+test("gets particular number of latest posts", () => {
+    const mockReadDirSync = readdirSync as jest.Mock
+    mockReadDirSync.mockReturnValue(mockPostsPaths)
+
+    const mockMatterRead = matter.read as jest.Mock
+    mockMatterRead
+        .mockReturnValueOnce(mockPostsResponse[0])
+        .mockReturnValueOnce(mockPostsResponse[1])
+        .mockReturnValueOnce(mockPostsResponse[2])
+        .mockReturnValueOnce(mockPostsResponse[3])
+
+    const posts = getLatestPosts(2)
+    expect(posts).toEqual(mockSortedPostsFrontmatter.slice(0, 2))
 })
 
 test("gets all posts", () => {

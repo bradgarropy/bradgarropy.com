@@ -56,14 +56,21 @@ type Thumbnail = {
     height: number
 }
 
-const getLatestVideos = async (): Promise<Video[]> => {
+const getLatestVideo = async (): Promise<Video> => {
+    const latestVideos = await getLatestVideos(1)
+    const latestVideo = latestVideos[0]
+
+    return latestVideo
+}
+
+const getLatestVideos = async (count = 2): Promise<Video[]> => {
     const response = await http.get<YouTubeSearchResponse>(
         "https://www.googleapis.com/youtube/v3/search",
         {
             params: {
                 key: process.env.YOUTUBE_API_KEY,
                 channelId: "UCgbFhcZKt36Upo7oxWlLEig",
-                maxResults: 2,
+                maxResults: count,
                 part: "snippet",
                 order: "date",
                 type: "video",
@@ -91,4 +98,4 @@ const getLatestVideos = async (): Promise<Video[]> => {
     return videos
 }
 
-export {getLatestVideos}
+export {getLatestVideo, getLatestVideos}

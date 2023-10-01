@@ -33,8 +33,8 @@ const IndexPage: FC<IndexPageProps> = ({
 }
 
 const getStaticProps: GetStaticProps = async () => {
-    const latestPosts = getLatestPosts()
-    const latestVideos = await getLatestVideos()
+    const latestPosts = getLatestPosts(3)
+    const latestVideos = await getLatestVideos(2)
     const featuredProjects = await getFeaturedProjects()
 
     return {
