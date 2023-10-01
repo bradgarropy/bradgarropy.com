@@ -9,14 +9,7 @@ test("shows connect", () => {
     expect(screen.getByText("Thanks for chatting with me!"))
     expect(screen.getByText("Let's connect on these platforms."))
 
-    const labels = [
-        "twitch",
-        "github",
-        "youtube",
-        "twitter",
-        "instagram",
-        "discord",
-    ]
+    const labels = ["twitch", "github", "youtube", "x", "instagram", "discord"]
 
     labels.forEach(label => expect(screen.getByLabelText(label)))
 })
