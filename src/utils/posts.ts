@@ -12,7 +12,14 @@ const icons = {
     life: "😎",
 }
 
-const getLatestPosts = (): PostFrontmatter[] => {
+const getLatestPost = (): PostFrontmatter => {
+    const latestPosts = getLatestPosts(1)
+    const latestPost = latestPosts[0]
+
+    return latestPost
+}
+
+const getLatestPosts = (count?: number): PostFrontmatter[] => {
     const postsPath = path.join(process.cwd(), "content/posts")
 
     const posts = fs
@@ -29,28 +36,12 @@ const getLatestPosts = (): PostFrontmatter[] => {
             return [...posts, post]
         }, [])
 
-    const latestPosts = sortPostsByDate(posts).slice(0, 3)
+    const latestPosts = sortPostsByDate(posts).slice(0, count)
     return latestPosts
 }
 
 const getAllPosts = (): PostFrontmatter[] => {
-    const postsPath = path.join(process.cwd(), "content/posts")
-
-    const posts = fs
-        // read directory of posts
-        .readdirSync(postsPath)
-
-        // create path to each markdown file
-        // read frontmatter from each post
-        .reduce<PostFrontmatter[]>((posts, slug) => {
-            const postPath = path.join(process.cwd(), `content/posts/${slug}`)
-            const file = matter.read(postPath)
-            const post = file.data as PostFrontmatter
-
-            return [...posts, post]
-        }, [])
-
-    const allPosts = sortPostsByDate(posts)
+    const allPosts = getLatestPosts()
     return allPosts
 }
 
@@ -211,6 +202,7 @@ const getRelatedPosts = (post: PostFrontmatter) => {
 
 export {
     getAllPosts,
+    getLatestPost,
     getLatestPosts,
     getPostBySlug,
     getPostsByTag,
