@@ -22,11 +22,10 @@ const HireMe: FC<HireMeProps> = ({testimonials}) => {
                     <span className="font-semibold">Atlassian</span>
                 </FancyLink>
                 , working on{" "}
-                <FancyLink to="https://trello.com">
-                    <span className="font-semibold">Trello</span>
+                <FancyLink to="https://www.atlassian.com/software/confluence">
+                    <span className="font-semibold">Confluence</span>
                 </FancyLink>{" "}
-                as a{" "}
-                <span className="italic">Developer Experience Engineer</span>.
+                as a <span className="italic">Frontend Developer</span>.
                 Although I&apos;m not actively looking for a new role, please
                 check out my{" "}
                 <FancyLink to="https://bradgarropy.com/resume">
