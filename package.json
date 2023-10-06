@@ -117,7 +117,7 @@
         "plop-helper-bradgarropy": "^1.0.0",
         "plop-helper-date": "^1.0.0",
         "plop-helper-slugify": "^1.1.0",
-        "postcss": "^8.4.21",
+        "postcss": "^8.4.31",
         "prettier": "^2.8.7",
         "prettier-plugin-tailwindcss": "^0.2.6",
         "react": "^18.2.0",
