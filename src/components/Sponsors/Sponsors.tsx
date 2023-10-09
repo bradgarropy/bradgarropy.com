@@ -31,7 +31,7 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
             </Section>
 
             {Object.entries(sponsors).map(([frequency, sponsors]) => (
-                <Section key={frequency} title={frequency}>
+                <Section key={frequency} id={frequency} title={frequency}>
                     {sponsors.length ? (
                         <div className="grid grid-flow-col justify-start gap-x-4">
                             {sponsors.map(sponsor => (

@@ -23,11 +23,11 @@ const PostPage: FC<PostPageProps> = ({post, relatedPosts}) => {
             <div className="flex flex-col gap-y-28">
                 <Post post={post} />
 
-                <Section title="related posts">
+                <Section id="related-posts" title="related posts">
                     <PostList posts={relatedPosts} />
                 </Section>
 
-                <Section title="newsletter" link="/newsletter">
+                <Section id="newsletter" title="newsletter" link="/newsletter">
                     <Newsletter />
                 </Section>
             </div>
