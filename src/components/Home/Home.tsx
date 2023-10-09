@@ -23,30 +23,43 @@ const Home: FC<HomeProps> = ({latestPosts, latestVideos, featuredProjects}) => {
         <div className="mt-16 grid gap-y-16 max-[700px]:m-0">
             <Hero />
 
-            <Section title="blog" link="/blog">
+            <Section id="blog" title="blog" link="/blog">
                 <LatestPosts latestPosts={latestPosts} />
             </Section>
 
-            <Section title="videos" link="https://youtube.com/bradgarropy">
+            <Section
+                id="videos"
+                title="videos"
+                link="https://youtube.com/bradgarropy"
+            >
                 <LatestVideos latestVideos={latestVideos} />
             </Section>
 
-            <Section title="projects" link="https://github.com/bradgarropy">
+            <Section
+                id="projects"
+                title="projects"
+                link="https://github.com/bradgarropy"
+            >
                 <FeaturedProjects featuredProjects={featuredProjects} />
             </Section>
 
             <Section
+                id="podcasts"
                 title="podcasts"
                 link="https://open.spotify.com/show/3TAuVah0Q9BOV5PbwPDGfs"
             >
                 <Podcasts />
             </Section>
 
-            <Section title="store" link="https://bradgarropy.com/store">
+            <Section
+                id="store"
+                title="store"
+                link="https://bradgarropy.com/store"
+            >
                 <Shirts />
             </Section>
 
-            <Section title="newsletter">
+            <Section id="newsletter" title="newsletter">
                 <Newsletter />
             </Section>
         </div>
