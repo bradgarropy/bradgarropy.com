@@ -34,7 +34,7 @@ const onCreateWebpackConfig = ({stage, actions}) => {
 
 And that's it, no more annoying error message! Hopefully one day Gatsby will adopt [react-refresh][refresh], eliminate this warning message, and give us stateful component reloading too!
 
-[refresh]: https://github.com/facebook/react/tree/master/packages/react-refresh
+[refresh]: https://github.com/facebook/react/tree/main/packages/react-refresh
 [react]: https://reactjs.org
 [hot-loader]: https://github.com/gaearon/react-hot-loader
 [warning]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/warning.png

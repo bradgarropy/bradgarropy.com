@@ -41,7 +41,7 @@ _My home on the web._
 [github-actions-badge]: https://img.shields.io/github/workflow/status/bradgarropy/bradgarropy.com/%F0%9F%A7%AA%20test?style=flat-square
 [codecov]: https://app.codecov.io/gh/bradgarropy/bradgarropy.com
 [codecov-badge]: https://img.shields.io/codecov/c/github/bradgarropy/bradgarropy.com?style=flat-square
-[contributing]: https://github.com/bradgarropy/bradgarropy.com/blob/master/contributing.md
+[contributing]: https://github.com/bradgarropy/bradgarropy.com/blob/main/contributing.md
 [contributing-badge]: https://img.shields.io/badge/PRs-welcome-success?style=flat-square
 [contributors]: #-Contributors
 [contributors-badge]: https://img.shields.io/github/all-contributors/bradgarropy/bradgarropy.com?style=flat-square
