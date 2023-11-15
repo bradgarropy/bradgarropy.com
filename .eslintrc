@@ -1,9 +1,10 @@
 {
     "extends": [
+        "@remix-run/eslint-config",
+        "@remix-run/eslint-config/node",
         "@bradgarropy/eslint-config",
         "@bradgarropy/eslint-config-react",
-        "@bradgarropy/eslint-config-typescript",
-        "next"
+        "@bradgarropy/eslint-config-typescript"
     ],
     "rules": {
         "@next/next/no-img-element": "off"
