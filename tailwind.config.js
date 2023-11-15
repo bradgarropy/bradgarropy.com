@@ -4,7 +4,7 @@ const typography = require("@tailwindcss/typography")
 
 const config = {
     content: [
-        "src/pages/**/*.tsx",
+        "src/routes/**/*.tsx",
         "src/components/**/*.tsx",
         "src/transformers/**/*.ts",
     ],

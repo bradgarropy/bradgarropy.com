@@ -15,7 +15,7 @@
             "~/components/*": ["src/components/*"],
             "~/context/*": ["src/context/*"],
             "~/hooks/*": ["src/hooks/*"],
-            "~/pages/*": ["src/pages/*"],
+            "~/routes/*": ["src/routes/*"],
             "~/styles/*": ["src/styles/*"],
             "~/test-utils/*": ["src/test-utils/*"],
             "~/transformers/*": ["src/transformers/*"],
