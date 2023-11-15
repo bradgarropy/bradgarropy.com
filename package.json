@@ -31,6 +31,8 @@
         "url": "https://github.com/bradgarropy/bradgarropy.com"
     },
     "scripts": {
+        "start:remix": "remix dev",
+        "build:remix": "remix build",
         "start": "next-remote-watch ./content",
         "build": "next build",
         "lint": "eslint .",
@@ -51,6 +53,8 @@
         "@bradgarropy/rehype-image-links": "^1.0.0",
         "@octokit/graphql": "^5.0.5",
         "@remark-embedder/core": "^3.0.1",
+        "@remix-run/node": "^2.2.0",
+        "@remix-run/react": "^2.2.0",
         "classnames": "^2.3.1",
         "date-fns": "^2.27.0",
         "form-data": "^4.0.0",
@@ -88,6 +92,9 @@
         "@bradgarropy/plop-generator-react-context": "^1.1.1",
         "@bradgarropy/plop-generator-react-hook": "^1.1.1",
         "@bradgarropy/rehype-cloudinary-image-size": "^1.0.1",
+        "@remix-run/dev": "^2.2.0",
+        "@remix-run/eslint-config": "^2.2.0",
+        "@remix-run/serve": "^2.2.0",
         "@tailwindcss/typography": "^0.5.9",
         "@testing-library/jest-dom": "^5.15.0",
         "@testing-library/react": "^14.0.0",
