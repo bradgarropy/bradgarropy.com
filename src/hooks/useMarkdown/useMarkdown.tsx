@@ -1,6 +1,6 @@
-import Link from "@bradgarropy/next-link"
+import {Link} from "@remix-run/react"
 import Head from "next/head"
-import React, {createElement, Fragment} from "react"
+import {createElement, Fragment} from "react"
 import rehypeParse from "rehype-parse"
 import rehypeReact from "rehype-react"
 import {unified} from "unified"

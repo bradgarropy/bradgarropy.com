@@ -1,4 +1,4 @@
-import type {LinksFunction, MetaFunction} from "@remix-run/node"
+import type {LinksFunction, MetaDescriptor, MetaFunction} from "@remix-run/node"
 import {
     Links,
     LiveReload,
@@ -10,22 +10,27 @@ import {
 
 import {AppProvider} from "~/context/App"
 import {ThemeProvider} from "~/context/Theme"
+import styles from "~/styles/tailwind.css"
 import {createImageUrl} from "~/utils/cloudinary"
 
-// import tailwindStyles from "~/styles/tailwind.css"
+import pkg from "../package.json"
 
-const meta: MetaFunction = () => [
-    {charset: "utf-8"},
-    {title: "💿 remix starter"},
-    {viewport: "width=device-width,initial-scale=1"},
-]
+export const meta: MetaFunction = () => {
+    const meta: MetaDescriptor[] = [
+        {
+            title: "💿 remix starter",
+        },
+    ]
 
-const links: LinksFunction = () => {
+    return meta
+}
+
+export const links: LinksFunction = () => {
     const links = [
-        // {
-        //     rel: "stylesheet",
-        //     href: tailwindStyles,
-        // },
+        {
+            rel: "stylesheet",
+            href: styles,
+        },
         {
             rel: "icon",
             href: createImageUrl("/site/favicon.ico"),
@@ -39,6 +44,36 @@ const App = () => {
     return (
         <html lang="en" className="overflow-y-scroll">
             <head>
+                <meta charSet="utf-8" />
+                <meta name="keywords" content={pkg.keywords.join(",")} />
+
+                <meta
+                    name="viewport"
+                    content="width=device-width,initial-scale=1"
+                />
+
+                <meta property="og:url" content="https://bradgarropy.com" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="🏠 my home on the web" />
+
+                <meta
+                    property="og:image"
+                    content={createImageUrl("/social/facebook.png")}
+                />
+
+                <meta property="twitter:card" content="summary" />
+                <meta property="twitter:site" content="@bradgarropy" />
+
+                <meta
+                    property="twitter:title"
+                    content="🏠 my home on the web"
+                />
+
+                <meta
+                    property="twitter:image"
+                    content={createImageUrl("/social/twitter.png")}
+                />
+
                 <Meta />
                 <Links />
             </head>
@@ -59,4 +94,3 @@ const App = () => {
 }
 
 export default App
-export {links, meta}
