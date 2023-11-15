@@ -6,7 +6,5 @@
         "@bradgarropy/eslint-config-react",
         "@bradgarropy/eslint-config-typescript"
     ],
-    "rules": {
-        "@next/next/no-img-element": "off"
-    }
+    "rules": {}
 }
