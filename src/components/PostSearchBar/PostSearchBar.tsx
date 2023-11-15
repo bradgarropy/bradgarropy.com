@@ -1,8 +1,7 @@
 import Fuse from "fuse.js"
 import {useRouter} from "next/router"
 import type {FC} from "react"
-import {useEffect} from "react"
-import {useState} from "react"
+import {useEffect, useState} from "react"
 
 import type {PostFrontmatter} from "~/types/post"
 

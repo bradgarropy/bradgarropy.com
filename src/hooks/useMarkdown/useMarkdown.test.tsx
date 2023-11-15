@@ -1,5 +1,4 @@
-import {render, screen} from "@testing-library/react"
-import {renderHook} from "@testing-library/react"
+import {render, renderHook, screen} from "@testing-library/react"
 
 import useMarkdown from "~/hooks/useMarkdown"
 
