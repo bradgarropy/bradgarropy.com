@@ -8,6 +8,8 @@ import {
     ScrollRestoration,
 } from "@remix-run/react"
 
+import {AppProvider} from "~/context/App"
+import {ThemeProvider} from "~/context/Theme"
 import {createImageUrl} from "~/utils/cloudinary"
 
 // import tailwindStyles from "~/styles/tailwind.css"
@@ -35,14 +37,19 @@ const links: LinksFunction = () => {
 
 const App = () => {
     return (
-        <html lang="en">
+        <html lang="en" className="overflow-y-scroll">
             <head>
                 <Meta />
                 <Links />
             </head>
 
-            <body className="">
-                <Outlet />
+            <body className="bg-white transition duration-300 dark:bg-black">
+                <ThemeProvider>
+                    <AppProvider>
+                        <Outlet />
+                    </AppProvider>
+                </ThemeProvider>
+
                 <ScrollRestoration />
                 <Scripts />
                 <LiveReload />
