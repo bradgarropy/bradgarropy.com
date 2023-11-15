@@ -1,14 +1,20 @@
 import type {MetaFunction} from "@remix-run/node"
 
-const meta: MetaFunction = () => [
+import Connect from "~/components/Connect"
+import PageLayout from "~/components/PageLayout"
+
+export const meta: MetaFunction = () => [
     {
-        title: "💿 remix starter | connect",
+        title: "🤝 connect with me",
     },
 ]
 
-const IndexRoute = () => {
-    return <h2 className="text-2xl font-bold">Connect</h2>
+const ConnectRoute = () => {
+    return (
+        <PageLayout>
+            <Connect />
+        </PageLayout>
+    )
 }
 
-export default IndexRoute
-export {meta}
+export default ConnectRoute

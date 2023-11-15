@@ -1,6 +1,6 @@
 import type {MetaFunction} from "@remix-run/node"
 
-const meta: MetaFunction = () => [
+export const meta: MetaFunction = () => [
     {
         title: "💿 remix starter | blog",
     },
@@ -11,4 +11,3 @@ const IndexRoute = () => {
 }
 
 export default IndexRoute
-export {meta}
