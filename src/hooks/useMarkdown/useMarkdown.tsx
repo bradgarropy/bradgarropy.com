@@ -1,5 +1,4 @@
 import {Link} from "@remix-run/react"
-import Head from "next/head"
 import {createElement, Fragment} from "react"
 import rehypeParse from "rehype-parse"
 import rehypeReact from "rehype-react"
@@ -15,7 +14,7 @@ const useMarkdown = (html: string) => {
             Fragment,
             components: {
                 html: ({children}) => children,
-                head: ({children}) => <Head>{children}</Head>,
+                head: ({children}) => children,
                 body: ({children}) => children,
                 a: ({href, children, ...props}) => {
                     return (

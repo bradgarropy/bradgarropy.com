@@ -20,6 +20,38 @@ export const meta: MetaFunction = () => {
         {
             title: "💿 remix starter",
         },
+        {
+            property: "og:url",
+            content: "https://bradgarropy.com",
+        },
+        {
+            property: "og:type",
+            content: "website",
+        },
+        {
+            property: "og:title",
+            content: "🏠 my home on the web",
+        },
+        {
+            property: "og:image",
+            content: createImageUrl("/social/facebook.png"),
+        },
+        {
+            property: "twitter:card",
+            content: "summary",
+        },
+        {
+            property: "twitter:site",
+            content: "@bradgarropy",
+        },
+        {
+            property: "twitter:title",
+            content: "🏠 my home on the web",
+        },
+        {
+            property: "twitter:image",
+            content: createImageUrl("/social/twitter.png"),
+        },
     ]
 
     return meta
@@ -50,28 +82,6 @@ const App = () => {
                 <meta
                     name="viewport"
                     content="width=device-width,initial-scale=1"
-                />
-
-                <meta property="og:url" content="https://bradgarropy.com" />
-                <meta property="og:type" content="website" />
-                <meta property="og:title" content="🏠 my home on the web" />
-
-                <meta
-                    property="og:image"
-                    content={createImageUrl("/social/facebook.png")}
-                />
-
-                <meta property="twitter:card" content="summary" />
-                <meta property="twitter:site" content="@bradgarropy" />
-
-                <meta
-                    property="twitter:title"
-                    content="🏠 my home on the web"
-                />
-
-                <meta
-                    property="twitter:image"
-                    content={createImageUrl("/social/twitter.png")}
                 />
 
                 <Meta />
