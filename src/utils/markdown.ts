@@ -1,9 +1,10 @@
+import path from "node:path"
+
 import {rehypeCloudinaryImageSize} from "@bradgarropy/rehype-cloudinary-image-size"
 import {rehypeImageLinks} from "@bradgarropy/rehype-image-links"
 import remarkEmbedder from "@remark-embedder/core"
-import {remarkPlugin as remarkVscode} from "gatsby-remark-vscode"
+// import {remarkPlugin as remarkVscode} from "gatsby-remark-vscode"
 import matter from "gray-matter"
-import path from "path"
 import rehypeExternalLinks from "rehype-external-links"
 import rehypeRaw from "rehype-raw"
 import rehypeStringify from "rehype-stringify"
@@ -50,16 +51,16 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
                 youtubeTransformer,
             ],
         })
-        .use(remarkVscode, {
-            theme: "Shades of Purple",
-            extensions: ["shades-of-purple"],
-            inlineCode: {
-                marker: "|",
-                theme: {
-                    default: "Shades of Purple",
-                },
-            },
-        })
+        // .use(remarkVscode, {
+        //     theme: "Shades of Purple",
+        //     extensions: ["shades-of-purple"],
+        //     inlineCode: {
+        //         marker: "|",
+        //         theme: {
+        //             default: "Shades of Purple",
+        //         },
+        //     },
+        // })
         .use(remarkRehype, {allowDangerousHtml: true})
         .use(rehypeExternalLinks, {
             target: "_blank",
