@@ -1,4 +1,5 @@
-import {readdirSync} from "fs"
+import {readdirSync} from "node:fs"
+
 import matter from "gray-matter"
 
 import {
@@ -8,7 +9,7 @@ import {
 } from "~/test-utils/mocks"
 import {getTestimonials} from "~/utils/testimonials"
 
-jest.mock("fs")
+jest.mock("node:fs")
 jest.mock("gray-matter")
 
 jest.mock("gatsby-remark-vscode", () => {

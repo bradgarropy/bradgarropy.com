@@ -1,7 +1,8 @@
-import fs from "fs"
+import fs from "node:fs"
+import path from "node:path"
+
 import Fuse from "fuse.js"
 import matter from "gray-matter"
-import path from "path"
 
 import type {Post, PostFrontmatter, Tag, Topic} from "~/types/post"
 import {transformMarkdown} from "~/utils/markdown"
@@ -21,6 +22,7 @@ const getLatestPost = (): PostFrontmatter => {
 
 const getLatestPosts = (count?: number): PostFrontmatter[] => {
     const postsPath = path.join(process.cwd(), "content/posts")
+    console.log(postsPath)
 
     const posts = fs
         // read directory of posts

@@ -1,4 +1,5 @@
-import {readdirSync} from "fs"
+import {readdirSync} from "node:fs"
+
 import matter from "gray-matter"
 
 import {
@@ -26,7 +27,7 @@ import {
     sortPostsByDate,
 } from "~/utils/posts"
 
-jest.mock("fs")
+jest.mock("node:fs")
 jest.mock("gray-matter")
 
 jest.mock("gatsby-remark-vscode", () => {

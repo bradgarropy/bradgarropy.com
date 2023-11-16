@@ -1,6 +1,7 @@
-import fs from "fs"
+import fs from "node:fs"
+import path from "node:path"
+
 import matter from "gray-matter"
-import path from "path"
 
 import type {Testimonial, TestimonialFrontmatter} from "~/types/testimonial"
 import {transformMarkdown} from "~/utils/markdown"
