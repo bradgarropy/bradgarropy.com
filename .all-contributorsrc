@@ -45,6 +45,17 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "EliasAfara",
+      "name": "Elias Afara",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39487200?v=4",
+      "profile": "https://eliasafara.fr/",
+      "contributions": [
+        "bug"
+      ]
     }
-  ]
+  ],
+  "commitType": "docs",
+  "commitConvention": "angular"
 }
