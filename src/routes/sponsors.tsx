@@ -17,7 +17,7 @@ export const meta: MetaFunction = () => [
     },
 ]
 
-const IndexRoute = () => {
+const SponsorsRoute = () => {
     const {sponsors} = useLoaderData<typeof loader>()
 
     return (
@@ -27,4 +27,4 @@ const IndexRoute = () => {
     )
 }
 
-export default IndexRoute
+export default SponsorsRoute

@@ -20,7 +20,7 @@ export const meta: MetaFunction<typeof loader> = ({data}) => [
     },
 ]
 
-const IndexRoute = () => {
+const TagRoute = () => {
     const {tag, posts} = useLoaderData<typeof loader>()
 
     return (
@@ -42,4 +42,4 @@ const IndexRoute = () => {
     )
 }
 
-export default IndexRoute
+export default TagRoute

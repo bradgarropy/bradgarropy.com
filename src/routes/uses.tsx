@@ -6,8 +6,8 @@ export const meta: MetaFunction = () => [
     },
 ]
 
-const IndexRoute = () => {
+const UsesRoute = () => {
     return <h2 className="text-2xl font-bold">uses</h2>
 }
 
-export default IndexRoute
+export default UsesRoute
