@@ -1,13 +1,29 @@
-import type {MetaFunction} from "@remix-run/node"
+import {json, type MetaFunction} from "@remix-run/node"
+import {useLoaderData} from "@remix-run/react"
+
+import Layout from "~/components/Layout"
+import Resume from "~/components/Resume"
+import {getMarkdownBySlug} from "~/utils/markdown"
+
+export const loader = async () => {
+    const resume = await getMarkdownBySlug("resume")
+    return json({resume})
+}
 
 export const meta: MetaFunction = () => [
     {
-        title: "💿 remix starter | resume",
+        title: "👔 resume",
     },
 ]
 
-const IndexRoute = () => {
-    return <h2 className="text-2xl font-bold">resume</h2>
+const ResumeRoute = () => {
+    const {resume} = useLoaderData<typeof loader>()
+
+    return (
+        <Layout>
+            <Resume resume={resume} />
+        </Layout>
+    )
 }
 
-export default IndexRoute
+export default ResumeRoute
