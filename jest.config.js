@@ -33,4 +33,4 @@ const config = {
     transformIgnorePatterns: [],
 }
 
-module.exports = config
+export default config
