@@ -1,4 +1,5 @@
 import {renderHook} from "@testing-library/react"
+import type {FC, ReactNode} from "react"
 
 import type {AppContextType} from "~/context/App"
 import {AppProvider} from "~/context/App"
@@ -10,8 +11,15 @@ const mockAppContext: AppContextType = {
     setOpen: expect.any(Function),
 }
 
+type WrapperProps = {
+    children: ReactNode
+}
+
 test("returns app context", () => {
-    const wrapper = ({children}) => <AppProvider>{children}</AppProvider>
+    const wrapper: FC<WrapperProps> = ({children}) => (
+        <AppProvider>{children}</AppProvider>
+    )
+
     const {result} = renderHook(() => useApp(), {wrapper})
 
     expect(result.current).toEqual(mockAppContext)

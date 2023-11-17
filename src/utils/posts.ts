@@ -7,7 +7,7 @@ import matter from "gray-matter"
 import type {Post, PostFrontmatter, Tag, Topic} from "~/types/post"
 import {transformMarkdown} from "~/utils/markdown"
 
-const icons = {
+const icons: Record<string, string> = {
     coding: "💻",
     tech: "🔌",
     life: "😎",

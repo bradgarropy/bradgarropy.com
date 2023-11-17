@@ -1,4 +1,4 @@
-import type {FC, ReactNode} from "react"
+import type {FC} from "react"
 import slugify from "slugify"
 
 import Icon from "~/components/Icon"
@@ -6,11 +6,11 @@ import Icon from "~/components/Icon"
 type HeadingProps = {
     level: 1 | 2 | 3
     id?: string
-    children?: ReactNode
+    children: string
 }
 
 const Heading: FC<HeadingProps> = ({level, id, children}) => {
-    const text = typeof children === "string" ? children : children[0]
+    const text = children
 
     const slug = id
         ? id

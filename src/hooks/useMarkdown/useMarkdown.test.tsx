@@ -53,7 +53,7 @@ describe("renders headers", () => {
 
         const icon = screen.getByLabelText("link")
         const link = icon.parentElement
-        const heading = link.parentElement
+        const heading = link?.parentElement
 
         expect(link).toHaveAttribute("href", "#heading-one")
         expect(heading).toHaveAttribute("id", "heading-one")
@@ -65,7 +65,7 @@ describe("renders headers", () => {
 
         const icon = screen.getByLabelText("link")
         const link = icon.parentElement
-        const heading = link.parentElement
+        const heading = link?.parentElement
 
         expect(link).toHaveAttribute("href", "#heading-two")
         expect(heading).toHaveAttribute("id", "heading-two")
@@ -77,7 +77,7 @@ describe("renders headers", () => {
 
         const icon = screen.getByLabelText("link")
         const link = icon.parentElement
-        const heading = link.parentElement
+        const heading = link?.parentElement
 
         expect(link).toHaveAttribute("href", "#heading-three")
         expect(heading).toHaveAttribute("id", "heading-three")

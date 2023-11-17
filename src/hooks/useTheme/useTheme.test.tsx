@@ -1,4 +1,6 @@
 import {act, renderHook} from "@testing-library/react"
+import type {FC, ReactNode} from "react"
+import React from "react"
 
 import type {ThemeContextType} from "~/context/Theme"
 import {ThemeProvider} from "~/context/Theme"
@@ -23,8 +25,14 @@ afterEach(() => {
     mockGetItem.mockReset()
 })
 
+type WrapperProps = {
+    children: ReactNode
+}
+
 test("returns theme context", () => {
-    const wrapper = ({children}) => <ThemeProvider>{children}</ThemeProvider>
+    const wrapper: FC<WrapperProps> = ({children}) => (
+        <ThemeProvider>{children}</ThemeProvider>
+    )
     const {result} = renderHook(() => useTheme(), {wrapper})
 
     expect(result.current).toEqual(mockThemeContext)
@@ -33,7 +41,10 @@ test("returns theme context", () => {
 test("defaults to light theme", () => {
     mockGetItem.mockReturnValue(null)
 
-    const wrapper = ({children}) => <ThemeProvider>{children}</ThemeProvider>
+    const wrapper: FC<WrapperProps> = ({children}) => (
+        <ThemeProvider>{children}</ThemeProvider>
+    )
+
     const {result} = renderHook(() => useTheme(), {wrapper})
 
     expect(result.current.theme).toEqual("light")
@@ -45,7 +56,10 @@ test("defaults to light theme", () => {
 test("uses localstorage light theme", () => {
     mockGetItem.mockReturnValue("light")
 
-    const wrapper = ({children}) => <ThemeProvider>{children}</ThemeProvider>
+    const wrapper: FC<WrapperProps> = ({children}) => (
+        <ThemeProvider>{children}</ThemeProvider>
+    )
+
     const {result} = renderHook(() => useTheme(), {wrapper})
 
     expect(result.current.theme).toEqual("light")
@@ -57,7 +71,10 @@ test("uses localstorage light theme", () => {
 test("uses localstorage dark theme", () => {
     mockGetItem.mockReturnValue("dark")
 
-    const wrapper = ({children}) => <ThemeProvider>{children}</ThemeProvider>
+    const wrapper: FC<WrapperProps> = ({children}) => (
+        <ThemeProvider>{children}</ThemeProvider>
+    )
+
     const {result} = renderHook(() => useTheme(), {wrapper})
 
     expect(result.current.theme).toEqual("dark")
@@ -69,7 +86,10 @@ test("uses localstorage dark theme", () => {
 test("switches to light theme", () => {
     mockGetItem.mockReturnValue("dark")
 
-    const wrapper = ({children}) => <ThemeProvider>{children}</ThemeProvider>
+    const wrapper: FC<WrapperProps> = ({children}) => (
+        <ThemeProvider>{children}</ThemeProvider>
+    )
+
     const {result} = renderHook(() => useTheme(), {wrapper})
 
     expect(result.current.theme).toEqual("dark")
@@ -87,7 +107,10 @@ test("switches to light theme", () => {
 test("switches to dark theme", () => {
     mockGetItem.mockReturnValue("light")
 
-    const wrapper = ({children}) => <ThemeProvider>{children}</ThemeProvider>
+    const wrapper: FC<WrapperProps> = ({children}) => (
+        <ThemeProvider>{children}</ThemeProvider>
+    )
+
     const {result} = renderHook(() => useTheme(), {wrapper})
 
     expect(result.current.theme).toEqual("light")

@@ -17,8 +17,8 @@ test("transforms youtube links", () => {
     const node = new DOMParser().parseFromString(html, "text/html")
     const iframe = node.querySelector("iframe")
 
-    expect(iframe.title).toEqual("9zcU6oUOHVc")
-    expect(iframe.src).toEqual(
+    expect(iframe?.title).toEqual("9zcU6oUOHVc")
+    expect(iframe?.src).toEqual(
         "https://www.youtube-nocookie.com/embed/9zcU6oUOHVc",
     )
 })
@@ -28,8 +28,8 @@ test("transforms youtube links with start", () => {
     const node = new DOMParser().parseFromString(html, "text/html")
     const iframe = node.querySelector("iframe")
 
-    expect(iframe.title).toEqual("9zcU6oUOHVc")
-    expect(iframe.src).toEqual(
+    expect(iframe?.title).toEqual("9zcU6oUOHVc")
+    expect(iframe?.src).toEqual(
         "https://www.youtube-nocookie.com/embed/9zcU6oUOHVc?start=3",
     )
 })
