@@ -27,6 +27,6 @@
         "strict": true,
         "target": "ESNext"
     },
-    "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
+    "include": ["remix.env.d.ts", "**/*.js", "**/*.ts", "**/*.tsx"],
     "exclude": ["node_modules"]
 }
