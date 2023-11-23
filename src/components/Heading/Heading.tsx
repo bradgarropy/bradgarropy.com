@@ -1,4 +1,4 @@
-import type {FC} from "react"
+import type {FC, ReactNode} from "react"
 import slugify from "slugify"
 
 import Icon from "~/components/Icon"
@@ -6,11 +6,13 @@ import Icon from "~/components/Icon"
 type HeadingProps = {
     level: 1 | 2 | 3
     id?: string
-    children: string
+    children: ReactNode
 }
 
 const Heading: FC<HeadingProps> = ({level, id, children}) => {
-    const text = children
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    const text = typeof children === "string" ? children : children[0]
 
     const slug = id
         ? id
