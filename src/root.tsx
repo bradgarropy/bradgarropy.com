@@ -97,6 +97,8 @@ const App = () => {
                     content="width=device-width,initial-scale=1"
                 />
 
+                <script src="/theme.js" />
+
                 <Meta />
                 <Links />
             </head>
