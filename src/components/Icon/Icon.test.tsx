@@ -21,5 +21,5 @@ test("shows icons with props", () => {
 
 test("shows default", () => {
     render(<Icon name="test" />)
-    expect(screen.queryByLabelText("text")).toBeNull()
+    expect(screen.queryByLabelText("text")).not.toBeInTheDocument()
 })

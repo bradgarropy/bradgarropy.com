@@ -39,6 +39,6 @@ describe("not streaming", () => {
         mockUseLive.mockReturnValue(false)
 
         render(<Header />)
-        expect(screen.queryByText("🎥 streaming")).toBeNull()
+        expect(screen.queryByText("🎥 streaming")).not.toBeInTheDocument()
     })
 })

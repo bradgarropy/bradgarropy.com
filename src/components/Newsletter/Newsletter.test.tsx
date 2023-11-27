@@ -36,7 +36,7 @@ test("subscribes", async () => {
         },
     })
 
-    waitFor(() => {
+    await waitFor(() => {
         const subscribedButton = screen.getByText("💜 subscribed")
         expect(subscribedButton)
     })

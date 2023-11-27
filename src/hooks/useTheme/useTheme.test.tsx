@@ -50,7 +50,7 @@ test("defaults to light theme", () => {
     expect(result.current.theme).toEqual("light")
     expect(mockSetItem).toHaveBeenCalledTimes(1)
     expect(mockSetItem).toHaveBeenCalledWith("theme", "light")
-    expect(document.documentElement.classList.contains("dark")).toBeFalsy()
+    expect(document.documentElement).not.toHaveClass("dark")
 })
 
 test("uses localstorage light theme", () => {
@@ -65,7 +65,7 @@ test("uses localstorage light theme", () => {
     expect(result.current.theme).toEqual("light")
     expect(mockSetItem).toHaveBeenCalledTimes(1)
     expect(mockSetItem).toHaveBeenCalledWith("theme", "light")
-    expect(document.documentElement.classList.contains("dark")).toBeFalsy()
+    expect(document.documentElement).not.toHaveClass("dark")
 })
 
 test("uses localstorage dark theme", () => {
@@ -80,7 +80,7 @@ test("uses localstorage dark theme", () => {
     expect(result.current.theme).toEqual("dark")
     expect(mockSetItem).toHaveBeenCalledTimes(1)
     expect(mockSetItem).toHaveBeenCalledWith("theme", "dark")
-    expect(document.documentElement.classList.contains("dark")).toBeTruthy()
+    expect(document.documentElement).toHaveClass("dark")
 })
 
 test("switches to light theme", () => {
@@ -101,7 +101,7 @@ test("switches to light theme", () => {
     expect(result.current.theme).toEqual("light")
     expect(mockSetItem).toHaveBeenCalledTimes(2)
     expect(mockSetItem).toHaveBeenLastCalledWith("theme", "light")
-    expect(document.documentElement.classList.contains("dark")).toBeFalsy()
+    expect(document.documentElement).not.toHaveClass("dark")
 })
 
 test("switches to dark theme", () => {
@@ -122,5 +122,5 @@ test("switches to dark theme", () => {
     expect(result.current.theme).toEqual("dark")
     expect(mockSetItem).toHaveBeenCalledTimes(2)
     expect(mockSetItem).toHaveBeenLastCalledWith("theme", "dark")
-    expect(document.documentElement.classList.contains("dark")).toBeTruthy()
+    expect(document.documentElement).toHaveClass("dark")
 })

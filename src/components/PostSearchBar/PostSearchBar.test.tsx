@@ -10,20 +10,25 @@ const mockPlaceholder = "search by title, topic, or tag..."
 const mockQuery = "fourth"
 
 describe("search bar", () => {
-    beforeEach(() => {
+    test("shows search bar", () => {
         render(
             <PostSearchBar
                 onSearch={onSearchMock}
                 posts={mockPostsFrontmatter}
             />,
         )
-    })
 
-    test("shows search bar", () => {
         expect(screen.getByPlaceholderText(mockPlaceholder))
     })
 
     test("searches", async () => {
+        render(
+            <PostSearchBar
+                onSearch={onSearchMock}
+                posts={mockPostsFrontmatter}
+            />,
+        )
+
         await userEvent.type(
             screen.getByPlaceholderText(mockPlaceholder),
             mockQuery,
@@ -44,7 +49,7 @@ describe("search bar", () => {
 })
 
 describe("search bar with input", () => {
-    beforeEach(() => {
+    test("shows search bar with input", () => {
         mockSearchParams.get.mockReturnValueOnce(mockQuery)
 
         render(
@@ -53,9 +58,7 @@ describe("search bar with input", () => {
                 posts={mockPostsFrontmatter}
             />,
         )
-    })
 
-    test("shows search bar with input", () => {
         expect(screen.getByPlaceholderText(mockPlaceholder)).toHaveDisplayValue(
             mockQuery,
         )
