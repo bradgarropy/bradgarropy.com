@@ -15,12 +15,15 @@ const mockUseSearchParams = () => {
     return [mockSearchParams, mockSetSearchParams]
 }
 
+const mockUseLocation = jest.fn().mockReturnValue({pathname: "/"})
+
 const actualRemix = jest.requireActual("@remix-run/react")
 
 const mockRemix = {
     ...actualRemix,
     Link: MockLink,
+    useLocation: mockUseLocation,
     useSearchParams: mockUseSearchParams,
 }
 
-export {mockRemix, mockSearchParams, mockSetSearchParams}
+export {mockRemix, mockSearchParams, mockSetSearchParams, mockUseLocation}
