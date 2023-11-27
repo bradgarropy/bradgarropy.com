@@ -2,6 +2,7 @@
     "extends": [
         "@remix-run/eslint-config",
         "@remix-run/eslint-config/node",
+        "@remix-run/eslint-config/jest-testing-library",
         "@bradgarropy/eslint-config",
         "@bradgarropy/eslint-config-react",
         "@bradgarropy/eslint-config-typescript"
