@@ -22,7 +22,6 @@ const getLatestPost = (): PostFrontmatter => {
 
 const getLatestPosts = (count?: number): PostFrontmatter[] => {
     const postsPath = path.join(process.cwd(), "content/posts")
-    console.log(postsPath)
 
     const posts = fs
         // read directory of posts
