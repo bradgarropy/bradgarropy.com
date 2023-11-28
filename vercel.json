@@ -1,6 +1,9 @@
 {
+    "buildCommand": "npm run build",
     "cleanUrls": true,
-    "trailingSlash": false,
+    "devCommand": "npm start",
+    "framework": "remix",
+    "installCommand": "npm install",
     "redirects": [
         {
             "source": "/ama",
@@ -67,5 +70,6 @@
             "destination": "https://www.getrevue.co/profile/bradgarropy",
             "permanent": true
         }
-    ]
+    ],
+    "trailingSlash": false
 }
