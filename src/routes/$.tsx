@@ -4,6 +4,7 @@ import {useLoaderData} from "@remix-run/react"
 
 import FourOhFour from "~/components/FourOhFour"
 import Layout from "~/components/Layout"
+import {getMeta} from "~/utils/meta"
 import {getLatestPost} from "~/utils/posts"
 import {getLatestVideos} from "~/utils/videos"
 
@@ -17,11 +18,13 @@ export const loader = async () => {
     })
 }
 
-export const meta: MetaFunction = () => [
-    {
+export const meta: MetaFunction = () => {
+    const meta = getMeta({
         title: "🤷🏼‍♂️ not found",
-    },
-]
+    })
+
+    return meta
+}
 
 const NotFoundRoute = () => {
     const {latestPost, latestVideos} = useLoaderData<typeof loader>()

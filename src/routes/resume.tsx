@@ -5,17 +5,20 @@ import {useLoaderData} from "@remix-run/react"
 import Layout from "~/components/Layout"
 import Resume from "~/components/Resume"
 import {getMarkdownBySlug} from "~/utils/markdown"
+import {getMeta} from "~/utils/meta"
 
 export const loader = async () => {
     const resume = await getMarkdownBySlug("resume")
     return json({resume})
 }
 
-export const meta: MetaFunction = () => [
-    {
+export const meta: MetaFunction = () => {
+    const meta = getMeta({
         title: "👔 resume",
-    },
-]
+    })
+
+    return meta
+}
 
 const ResumeRoute = () => {
     const {resume} = useLoaderData<typeof loader>()

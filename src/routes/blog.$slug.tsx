@@ -8,6 +8,7 @@ import Post from "~/components/Post"
 import PostList from "~/components/PostList"
 import Section from "~/components/Section"
 import type {PostFrontmatter} from "~/types/post"
+import {getMeta} from "~/utils/meta"
 import {getPostBySlug, getRelatedPosts} from "~/utils/posts"
 
 export const loader = async ({params}: LoaderFunctionArgs) => {
@@ -18,11 +19,13 @@ export const loader = async ({params}: LoaderFunctionArgs) => {
     return json({post, relatedPosts})
 }
 
-export const meta: MetaFunction<typeof loader> = ({data}) => [
-    {
+export const meta: MetaFunction<typeof loader> = ({data}) => {
+    const meta = getMeta({
         title: data?.post.frontmatter.title,
-    },
-]
+    })
+
+    return meta
+}
 
 const BlogRoute = () => {
     const {post, relatedPosts} = useLoaderData<typeof loader>()

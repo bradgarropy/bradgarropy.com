@@ -4,6 +4,7 @@ import {useLoaderData} from "@remix-run/react"
 
 import Layout from "~/components/Layout"
 import Sponsors from "~/components/Sponsors"
+import {getMeta} from "~/utils/meta"
 import {getSponsors} from "~/utils/sponsors"
 
 export const loader = async () => {
@@ -11,11 +12,13 @@ export const loader = async () => {
     return json({sponsors})
 }
 
-export const meta: MetaFunction = () => [
-    {
+export const meta: MetaFunction = () => {
+    const meta = getMeta({
         title: "💜 sponsors",
-    },
-]
+    })
+
+    return meta
+}
 
 const SponsorsRoute = () => {
     const {sponsors} = useLoaderData<typeof loader>()

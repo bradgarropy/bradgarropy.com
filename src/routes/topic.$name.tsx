@@ -6,6 +6,7 @@ import Layout from "~/components/Layout"
 import PostList from "~/components/PostList"
 import TopicMeta from "~/components/TopicMeta"
 import type {Topic} from "~/types/post"
+import {getMeta} from "~/utils/meta"
 import {getPostsByTopic, getTopic} from "~/utils/posts"
 
 export const loader = async ({params}: LoaderFunctionArgs) => {
@@ -16,11 +17,13 @@ export const loader = async ({params}: LoaderFunctionArgs) => {
     return json({topic, posts})
 }
 
-export const meta: MetaFunction<typeof loader> = ({data}) => [
-    {
+export const meta: MetaFunction<typeof loader> = ({data}) => {
+    const meta = getMeta({
         title: `${data?.topic.icon} ${data?.topic.name}`,
-    },
-]
+    })
+
+    return meta
+}
 
 const TopicRoute = () => {
     const {topic, posts} = useLoaderData<typeof loader>()

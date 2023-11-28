@@ -1,6 +1,6 @@
 import type {LinksFunction} from "@remix-run/node"
 import {json} from "@remix-run/node"
-import type {MetaDescriptor, MetaFunction} from "@remix-run/react"
+import type {MetaFunction} from "@remix-run/react"
 import {
     Links,
     LiveReload,
@@ -16,6 +16,7 @@ import {AppProvider} from "~/context/App"
 import {ThemeProvider} from "~/context/Theme"
 import styles from "~/styles/tailwind.css"
 import {createImageUrl} from "~/utils/cloudinary"
+import {getMeta} from "~/utils/meta"
 
 import pkg from "../package.json"
 
@@ -27,44 +28,7 @@ export const loader = async () => {
 }
 
 export const meta: MetaFunction = () => {
-    const meta: MetaDescriptor[] = [
-        {
-            title: "💿 remix starter",
-        },
-        {
-            property: "og:url",
-            content: "https://bradgarropy.com",
-        },
-        {
-            property: "og:type",
-            content: "website",
-        },
-        {
-            property: "og:title",
-            content: "🏠 my home on the web",
-        },
-        {
-            property: "og:image",
-            content: createImageUrl("/social/facebook.png"),
-        },
-        {
-            property: "twitter:card",
-            content: "summary",
-        },
-        {
-            property: "twitter:site",
-            content: "@bradgarropy",
-        },
-        {
-            property: "twitter:title",
-            content: "🏠 my home on the web",
-        },
-        {
-            property: "twitter:image",
-            content: createImageUrl("/social/twitter.png"),
-        },
-    ]
-
+    const meta = getMeta()
     return meta
 }
 

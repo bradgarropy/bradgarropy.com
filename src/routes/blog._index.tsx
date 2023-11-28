@@ -7,6 +7,7 @@ import Layout from "~/components/Layout"
 import PostList from "~/components/PostList"
 import PostSearchBar from "~/components/PostSearchBar"
 import type {PostFrontmatter} from "~/types/post"
+import {getMeta} from "~/utils/meta"
 import {getAllPosts} from "~/utils/posts"
 
 export const loader = async () => {
@@ -15,11 +16,13 @@ export const loader = async () => {
     return json({allPosts})
 }
 
-export const meta: MetaFunction = () => [
-    {
+export const meta: MetaFunction = () => {
+    const meta = getMeta({
         title: "✍🏼 blog",
-    },
-]
+    })
+
+    return meta
+}
 
 const BlogRoute = () => {
     const {allPosts} = useLoaderData<typeof loader>()
