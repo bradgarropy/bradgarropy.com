@@ -9,5 +9,5 @@ test("shows content", () => {
         </PageLayout>,
     )
 
-    expect(screen.getByText("testing"))
+    expect(screen.getByText("testing")).toBeInTheDocument()
 })

@@ -5,8 +5,8 @@ import Shirts from "~/components/Shirts"
 test("shows shirts", () => {
     render(<Shirts />)
 
-    expect(screen.getByAltText("bg codes"))
-    expect(screen.getByAltText("cobalt2"))
-    expect(screen.getByAltText("night owl"))
-    expect(screen.getByAltText("monokai"))
+    expect(screen.getByAltText("bg codes")).toBeInTheDocument()
+    expect(screen.getByAltText("cobalt2")).toBeInTheDocument()
+    expect(screen.getByAltText("night owl")).toBeInTheDocument()
+    expect(screen.getByAltText("monokai")).toBeInTheDocument()
 })

@@ -7,6 +7,6 @@ test("shows latest posts", () => {
     render(<LatestPosts latestPosts={mockPostsFrontmatter} />)
 
     mockPostsFrontmatter.forEach(post => {
-        expect(screen.getByText(post.title))
+        expect(screen.getByText(post.title)).toBeInTheDocument()
     })
 })

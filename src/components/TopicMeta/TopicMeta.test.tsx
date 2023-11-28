@@ -5,5 +5,8 @@ import {mockTopic} from "~/test-utils/mocks"
 
 test("shows meta", () => {
     render(<TopicMeta topic={mockTopic} />)
-    expect(screen.getByText(`${mockTopic.icon} ${mockTopic.name}`))
+
+    expect(
+        screen.getByText(`${mockTopic.icon} ${mockTopic.name}`),
+    ).toBeInTheDocument()
 })

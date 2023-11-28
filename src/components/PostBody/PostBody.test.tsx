@@ -5,5 +5,5 @@ import {mockPost} from "~/test-utils/mocks"
 
 test("shows post body", () => {
     render(<PostBody html={mockPost.html} />)
-    expect(screen.getByText("This is the first test post."))
+    expect(screen.getByText("This is the first test post.")).toBeInTheDocument()
 })

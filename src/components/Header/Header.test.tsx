@@ -25,12 +25,12 @@ describe("streaming", () => {
 
     test("shows logo", () => {
         render(<Header />)
-        expect(screen.getByLabelText("bg"))
+        expect(screen.getByLabelText("bg")).toBeInTheDocument()
     })
 
     test("shows streaming", () => {
         render(<Header />)
-        expect(screen.getByText("🎥 streaming"))
+        expect(screen.getByText("🎥 streaming")).toBeInTheDocument()
     })
 })
 

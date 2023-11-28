@@ -9,12 +9,20 @@ jest.mock("@bradgarropy/http")
 test("shows newsletter", () => {
     render(<Newsletter />)
 
-    expect(screen.getByText("💻 side projects", {exact: false}))
-    expect(screen.getByText("📰 web dev news", {exact: false}))
-    expect(screen.getByText("⚡ tech opinions", {exact: false}))
+    expect(
+        screen.getByText("💻 side projects", {exact: false}),
+    ).toBeInTheDocument()
 
-    expect(screen.getByPlaceholderText("email@example.com"))
-    expect(screen.getByText("📧 subscribe"))
+    expect(
+        screen.getByText("📰 web dev news", {exact: false}),
+    ).toBeInTheDocument()
+
+    expect(
+        screen.getByText("⚡ tech opinions", {exact: false}),
+    ).toBeInTheDocument()
+
+    expect(screen.getByPlaceholderText("email@example.com")).toBeInTheDocument()
+    expect(screen.getByText("📧 subscribe")).toBeInTheDocument()
 })
 
 test("subscribes", async () => {
@@ -37,7 +45,6 @@ test("subscribes", async () => {
     })
 
     await waitFor(() => {
-        const subscribedButton = screen.getByText("💜 subscribed")
-        expect(subscribedButton)
+        expect(screen.getByText("💜 subscribed")).toBeInTheDocument()
     })
 })

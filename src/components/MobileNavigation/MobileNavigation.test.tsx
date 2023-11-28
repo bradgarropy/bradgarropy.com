@@ -21,7 +21,7 @@ describe("closed mobile navigation", () => {
 
     test("shows hamburger", () => {
         render(<MobileNavigation />)
-        expect(screen.getByLabelText("menu"))
+        expect(screen.getByLabelText("menu")).toBeInTheDocument()
     })
 
     test("opens navigation", async () => {
@@ -41,8 +41,11 @@ describe("open mobile navigation", () => {
     test("shows menu", () => {
         render(<MobileNavigation />)
 
-        expect(screen.getByLabelText("close"))
-        links.forEach(link => expect(screen.getByText(link)))
+        expect(screen.getByLabelText("close")).toBeInTheDocument()
+
+        links.forEach(link => {
+            expect(screen.getByText(link)).toBeInTheDocument()
+        })
     })
 
     test("closes navigation", async () => {

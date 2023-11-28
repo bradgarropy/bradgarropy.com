@@ -4,5 +4,5 @@ import Streaming from "~/components/Streaming"
 
 test("shows streaming", () => {
     render(<Streaming />)
-    expect(screen.getByText("🎥 streaming"))
+    expect(screen.getByText("🎥 streaming")).toBeInTheDocument()
 })

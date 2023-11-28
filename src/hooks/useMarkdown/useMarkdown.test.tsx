@@ -45,7 +45,7 @@ test("renders images", () => {
     )
 
     render(result.current)
-    expect(screen.getByAltText(name))
+    expect(screen.getByAltText(name)).toBeInTheDocument()
 })
 
 describe("renders headers", () => {

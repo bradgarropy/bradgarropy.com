@@ -18,7 +18,7 @@ describe("search bar", () => {
             />,
         )
 
-        expect(screen.getByPlaceholderText(mockPlaceholder))
+        expect(screen.getByPlaceholderText(mockPlaceholder)).toBeInTheDocument()
     })
 
     test("searches", async () => {
