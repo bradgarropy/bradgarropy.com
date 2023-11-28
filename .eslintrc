@@ -7,5 +7,12 @@
         "@bradgarropy/eslint-config-react",
         "@bradgarropy/eslint-config-typescript"
     ],
-    "rules": {}
+    "rules": {
+        "testing-library/no-await-sync-events": [
+            "error",
+            {
+                "eventModules": ["fire-event"]
+            }
+        ]
+    }
 }
