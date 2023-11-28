@@ -32,8 +32,7 @@
         "url": "https://github.com/bradgarropy/bradgarropy.com"
     },
     "scripts": {
-        "start:remix": "remix dev",
-        "start": "next-remote-watch ./content",
+        "start": "remix dev",
         "build": "remix build",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
