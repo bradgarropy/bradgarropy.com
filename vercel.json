@@ -47,27 +47,27 @@
         },
         {
             "source": "/podcast",
-            "destination": "https://webdevweekly.captivate.fm",
+            "destination": "https://compressed.fm",
             "permanent": true
         },
         {
             "source": "/wdw",
-            "destination": "https://webdevweekly.captivate.fm",
+            "destination": "https://open.spotify.com/show/3TAuVah0Q9BOV5PbwPDGfs",
             "permanent": true
         },
         {
             "source": "/webdevweekly",
-            "destination": "https://webdevweekly.captivate.fm",
+            "destination": "https://open.spotify.com/show/3TAuVah0Q9BOV5PbwPDGfs",
             "permanent": true
         },
         {
             "source": "/subscribe",
-            "destination": "https://www.getrevue.co/profile/bradgarropy",
+            "destination": "https://bradgarropy.com#newsletter",
             "permanent": true
         },
         {
             "source": "/newsletter",
-            "destination": "https://www.getrevue.co/profile/bradgarropy",
+            "destination": "https://bradgarropy.com#newsletter",
             "permanent": true
         }
     ],
