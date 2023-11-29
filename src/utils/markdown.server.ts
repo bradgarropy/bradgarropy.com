@@ -16,6 +16,7 @@ import remarkInlineLinks from "remark-inline-links"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
 import remarkUnwrapImages from "remark-unwrap-images"
+import shiki, {BUNDLED_LANGUAGES, BUNDLED_THEMES} from "shiki"
 import {unified} from "unified"
 
 import {codesandboxTransformer} from "~/transformers/codesandbox"
