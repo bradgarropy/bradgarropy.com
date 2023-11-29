@@ -40,10 +40,12 @@ const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
 }
 
 const transformMarkdown = async (markdown: string): Promise<string> => {
-    const theme = fs.readFileSync(
+    const themePath = path.join(
+        process.cwd(),
         "src/shiki/themes/shades-of-purple.json",
-        "utf8",
     )
+
+    const theme = fs.readFileSync(themePath, "utf8")
 
     const options: Options = {
         theme: json5.parse(theme),
@@ -52,8 +54,8 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
             getHighlighter({
                 theme: json5.parse(theme),
                 paths: {
-                    languages: "src/shiki/languages",
-                    themes: "src/shiki/themes",
+                    languages: path.join(process.cwd(), "src/shiki/languages"),
+                    themes: path.join(process.cwd(), "src/shiki/themes"),
                 },
             }),
     }
