@@ -1,11 +1,14 @@
+import fs from "node:fs"
 import path from "node:path"
 
 import {rehypeCloudinaryImageSize} from "@bradgarropy/rehype-cloudinary-image-size"
 import {rehypeImageLinks} from "@bradgarropy/rehype-image-links"
 import remarkEmbedder from "@remark-embedder/core"
-import gatsbyRemarkVscode from "gatsby-remark-vscode"
 import matter from "gray-matter"
+import json5 from "json5"
 import rehypeExternalLinks from "rehype-external-links"
+import type {Options} from "rehype-pretty-code"
+import rehypePrettyCode from "rehype-pretty-code"
 import rehypeRaw from "rehype-raw"
 import rehypeStringify from "rehype-stringify"
 import remarkGfm from "remark-gfm"
@@ -36,6 +39,15 @@ const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
 }
 
 const transformMarkdown = async (markdown: string): Promise<string> => {
+    const theme = fs.readFileSync("src/styles/theme.json", "utf8")
+    console.log("THEME")
+    console.log(theme)
+
+    const options: Options = {
+        theme: json5.parse(theme),
+        keepBackground: false,
+    }
+
     const processor = unified()
         .use(remarkParse)
         .use(remarkGfm)
@@ -51,17 +63,8 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
                 youtubeTransformer,
             ],
         })
-        .use(gatsbyRemarkVscode.remarkPlugin, {
-            theme: "Shades of Purple",
-            extensions: ["shades-of-purple"],
-            inlineCode: {
-                marker: "|",
-                theme: {
-                    default: "Shades of Purple",
-                },
-            },
-        })
         .use(remarkRehype, {allowDangerousHtml: true})
+        .use(rehypePrettyCode, options)
         .use(rehypeExternalLinks, {
             target: "_blank",
             rel: ["noopener", "noreferrer"],

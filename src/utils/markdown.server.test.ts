@@ -4,12 +4,6 @@ import {getMarkdownBySlug, transformMarkdown} from "~/utils/markdown.server"
 
 jest.mock("gray-matter")
 
-jest.mock("gatsby-remark-vscode", () => {
-    return {
-        remarkPlugin: tree => tree,
-    }
-})
-
 const mockFetch = jest.fn()
 global.fetch = mockFetch
 

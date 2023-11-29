@@ -1,4 +1,4 @@
-import {readdirSync} from "node:fs"
+import {readdirSync, readFileSync} from "node:fs"
 
 import matter from "gray-matter"
 
@@ -12,14 +12,11 @@ import {getTestimonials} from "~/utils/testimonials"
 jest.mock("node:fs")
 jest.mock("gray-matter")
 
-jest.mock("gatsby-remark-vscode", () => {
-    return {
-        remarkPlugin: tree => tree,
-    }
-})
-
 const mockReadDirSync = readdirSync as jest.Mock
 mockReadDirSync.mockReturnValue(mockTestimonialsPaths)
+
+const mockReadFileSync = readFileSync as jest.Mock
+mockReadFileSync.mockReturnValue("{}")
 
 const mockMatterRead = matter.read as jest.Mock
 mockMatterRead
