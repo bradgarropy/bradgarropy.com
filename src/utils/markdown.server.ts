@@ -39,16 +39,11 @@ const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
 }
 
 const transformMarkdown = async (markdown: string): Promise<string> => {
-    const themePath = path.join(
-        process.cwd(),
-        "public/material-theme-darker.json",
-    )
-
+    const themePath = path.join(process.cwd(), "public/theme.json")
     const theme = fs.readFileSync(themePath, "utf8")
 
     const options: Options = {
         theme: json5.parse(theme),
-        // theme: "material-theme-darker",
         keepBackground: true,
     }
 
