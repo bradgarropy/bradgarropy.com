@@ -5,7 +5,7 @@ import Fuse from "fuse.js"
 import matter from "gray-matter"
 
 import type {Post, PostFrontmatter, Tag, Topic} from "~/types/post"
-import {transformMarkdown} from "~/utils/markdown"
+import {transformMarkdown} from "~/utils/markdown.server"
 
 const icons: Record<string, string> = {
     coding: "💻",

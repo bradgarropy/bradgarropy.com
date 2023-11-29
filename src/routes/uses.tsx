@@ -4,7 +4,7 @@ import {useLoaderData} from "@remix-run/react"
 
 import Layout from "~/components/Layout"
 import Uses from "~/components/Uses"
-import {getMarkdownBySlug} from "~/utils/markdown"
+import {getMarkdownBySlug} from "~/utils/markdown.server"
 import {getMeta} from "~/utils/meta"
 
 export const loader = async () => {

@@ -4,7 +4,7 @@ import path from "node:path"
 import matter from "gray-matter"
 
 import type {Testimonial, TestimonialFrontmatter} from "~/types/testimonial"
-import {transformMarkdown} from "~/utils/markdown"
+import {transformMarkdown} from "~/utils/markdown.server"
 
 const getTestimonials = async (): Promise<Testimonial[]> => {
     const testimonialsPath = path.join(process.cwd(), "content/testimonials")

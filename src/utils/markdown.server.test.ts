@@ -1,6 +1,6 @@
 import matter from "gray-matter"
 
-import {getMarkdownBySlug, transformMarkdown} from "~/utils/markdown"
+import {getMarkdownBySlug, transformMarkdown} from "~/utils/markdown.server"
 
 jest.mock("gray-matter")
 
