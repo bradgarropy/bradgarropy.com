@@ -16,7 +16,6 @@ import remarkInlineLinks from "remark-inline-links"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
 import remarkUnwrapImages from "remark-unwrap-images"
-import shiki, {BUNDLED_LANGUAGES, BUNDLED_THEMES} from "shiki"
 import {unified} from "unified"
 
 import {codesandboxTransformer} from "~/transformers/codesandbox"
@@ -40,8 +39,14 @@ const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
 }
 
 const transformMarkdown = async (markdown: string): Promise<string> => {
-    const themePath = path.join(process.cwd(), "public/theme.json")
+    const themePath = path.join(
+        process.cwd(),
+        "src/shiki/themes/shades-of-purple.json",
+    )
+
     const theme = fs.readFileSync(themePath, "utf8")
+    const shiki = fs.readdirSync(path.join(process.cwd(), "src/shiki"))
+    console.log(shiki)
 
     const options: Options = {
         theme: json5.parse(theme),
