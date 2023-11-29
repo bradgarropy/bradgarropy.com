@@ -46,8 +46,8 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
     )
 
     const theme = fs.readFileSync(themePath, "utf8")
-    const shiki = fs.readdirSync(path.join(process.cwd(), "src/shiki"))
-    console.log(shiki)
+    // const shiki = fs.readdirSync(path.join(process.cwd(), "src/shiki"))
+    // console.log(shiki)
 
     const options: Options = {
         theme: json5.parse(theme),
