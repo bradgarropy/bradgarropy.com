@@ -4,7 +4,12 @@ const config = {
     appDirectory: "src",
     ignoredRouteFiles: ["**/.*"],
     future: {},
-    serverDependenciesToBundle: ["shiki"],
+    serverDependenciesToBundle: [
+        "shiki",
+        "shiki/**/*",
+        "shiki/languages/**/*",
+        "shiki/themes/**/*",
+    ],
     serverModuleFormat: "esm",
 }
 
