@@ -39,7 +39,7 @@ const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
 }
 
 const transformMarkdown = async (markdown: string): Promise<string> => {
-    const theme = fs.readFileSync("src/styles/theme.json", "utf8")
+    const theme = fs.readFileSync("public/theme.json", "utf8")
 
     const options: Options = {
         theme: json5.parse(theme),
