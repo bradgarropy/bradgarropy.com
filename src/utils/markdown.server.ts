@@ -1,11 +1,11 @@
-// import fs from "node:fs"
+import fs from "node:fs"
 import path from "node:path"
 
 import {rehypeCloudinaryImageSize} from "@bradgarropy/rehype-cloudinary-image-size"
 import {rehypeImageLinks} from "@bradgarropy/rehype-image-links"
 import remarkEmbedder from "@remark-embedder/core"
 import matter from "gray-matter"
-// import json5 from "json5"
+import json5 from "json5"
 import rehypeExternalLinks from "rehype-external-links"
 import type {Options} from "rehype-pretty-code"
 import rehypePrettyCode from "rehype-pretty-code"
@@ -39,12 +39,16 @@ const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
 }
 
 const transformMarkdown = async (markdown: string): Promise<string> => {
-    // const themePath = path.join(process.cwd(), "public/theme.json")
-    // const theme = fs.readFileSync(themePath, "utf8")
+    const themePath = path.join(
+        process.cwd(),
+        "public/material-theme-darker.json",
+    )
+
+    const theme = fs.readFileSync(themePath, "utf8")
 
     const options: Options = {
-        // theme: json5.parse(theme),
-        theme: "material-theme-darker",
+        theme: json5.parse(theme),
+        // theme: "material-theme-darker",
         keepBackground: true,
     }
 
