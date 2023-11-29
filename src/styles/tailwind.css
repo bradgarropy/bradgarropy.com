@@ -25,9 +25,11 @@
     }
 }
 
-:root {
-    /* highlighting */
-    --grvsc-line-highlighted-background-color: #c792ea66;
-    --grvsc-line-highlighted-border-color: #c792ea;
-    --grvsc-line-highlighted-border-width: 4px;
+span[data-line] {
+    padding-inline: 1.5rem;
+}
+
+span[data-highlighted-line] {
+    background-color: #c792ea66;
+    border-left: 4px solid #c792ea;
 }
