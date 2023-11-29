@@ -16,6 +16,7 @@ import remarkInlineLinks from "remark-inline-links"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
 import remarkUnwrapImages from "remark-unwrap-images"
+import {getHighlighter} from "shiki"
 import {unified} from "unified"
 
 import {codesandboxTransformer} from "~/transformers/codesandbox"
@@ -51,6 +52,14 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
     const options: Options = {
         theme: json5.parse(theme),
         keepBackground: true,
+        getHighlighter: () =>
+            getHighlighter({
+                theme: json5.parse(theme),
+                paths: {
+                    languages: path.join(process.cwd(), "src/shiki/languages"),
+                    themes: path.join(process.cwd(), "src/shiki/themes"),
+                },
+            }),
     }
 
     const processor = unified()
