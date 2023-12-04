@@ -1,3 +1,3 @@
-type Theme = "light" | "dark"
+type Theme = "light" | "dark" | undefined
 
 export type {Theme}
