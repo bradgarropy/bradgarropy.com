@@ -63,10 +63,18 @@ const getLatestVideo = async (): Promise<Video> => {
     return latestVideo
 }
 
+let latestVideos: Video[]
+
 const getLatestVideos = async (count = 2): Promise<Video[]> => {
+    if (latestVideos) {
+        console.log("CACHE HIT")
+        return latestVideos
+    }
+
     const response = await http.get<YouTubeSearchResponse>(
         "https://www.googleapis.com/youtube/v3/search",
         {
+            headers: {"Cache-Control": "public, s-maxage=86400"},
             params: {
                 key: process.env.YOUTUBE_API_KEY,
                 channelId: "UCgbFhcZKt36Upo7oxWlLEig",
@@ -94,6 +102,9 @@ const getLatestVideos = async (count = 2): Promise<Video[]> => {
 
         return video
     })
+
+    console.log("UPDATING CACHE")
+    latestVideos = videos
 
     return videos
 }
