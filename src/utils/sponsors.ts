@@ -67,14 +67,20 @@ const getSponsors = async (): Promise<Sponsors> => {
     const sponsorships = user.sponsorshipsAsMaintainer.nodes
 
     sponsorships.forEach(sponsorship => {
-        const re = new RegExp("### (.*)$", "m")
-        const tier = re.exec(sponsorship.tier.description)[1].split(" ")[0]
+        const re = new RegExp("### (?<tier>.*)$", "m")
+        const tier = re.exec(sponsorship.tier.description)?.groups?.tier
+
+        if (!tier) {
+            return
+        }
+
+        const tierIcon = tier.split(" ")[0]
 
         const sponsor: Sponsor = {
             username: sponsorship.sponsorEntity.login,
             avatar: sponsorship.sponsorEntity.avatarUrl,
             profile: sponsorship.sponsorEntity.url,
-            tier,
+            tier: tierIcon,
         }
 
         if (sponsorship.tier.isOneTime) {
