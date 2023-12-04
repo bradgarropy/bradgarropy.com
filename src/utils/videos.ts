@@ -63,14 +63,7 @@ const getLatestVideo = async (): Promise<Video> => {
     return latestVideo
 }
 
-let latestVideos: Video[]
-
 const getLatestVideos = async (count = 2): Promise<Video[]> => {
-    if (latestVideos) {
-        console.log("CACHE HIT")
-        return latestVideos
-    }
-
     const response = await http.get<YouTubeSearchResponse>(
         "https://www.googleapis.com/youtube/v3/search",
         {
@@ -102,9 +95,6 @@ const getLatestVideos = async (count = 2): Promise<Video[]> => {
 
         return video
     })
-
-    console.log("UPDATING CACHE")
-    latestVideos = videos
 
     return videos
 }
