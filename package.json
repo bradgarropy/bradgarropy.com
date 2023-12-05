@@ -42,7 +42,9 @@
         "format:fix": "prettier --write .",
         "typecheck": "tsc",
         "test": "jest --passWithNoTests",
+        "pretest": "tsx src/scripts/copyTheme.ts",
         "test:watch": "jest --passWithNoTests --watch",
+        "pretest:watch": "tsx src/scripts/copyTheme.ts",
         "contributors": "all-contributors generate",
         "new": "plop"
     },
