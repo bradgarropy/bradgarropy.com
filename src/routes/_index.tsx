@@ -31,8 +31,9 @@ export const meta: MetaFunction = () => {
     return meta
 }
 
-export const headers: HeadersFunction = ({loaderHeaders}) => {
-    return loaderHeaders
+export const headers: HeadersFunction = () => {
+    const headers: HeadersInit = {"Cache-Control": "public, s-maxage=86400"}
+    return headers
 }
 
 const IndexRoute = () => {
