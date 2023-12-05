@@ -33,7 +33,9 @@
     },
     "scripts": {
         "start": "remix dev",
+        "prestart": "tsx src/scripts/copyTheme.ts",
         "build": "remix build",
+        "prebuild": "tsx src/scripts/copyTheme.ts",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
         "format": "prettier --check .",
@@ -42,8 +44,7 @@
         "test": "jest --passWithNoTests",
         "test:watch": "jest --passWithNoTests --watch",
         "contributors": "all-contributors generate",
-        "new": "plop",
-        "postinstall": "tsx src/scripts/copyTheme.ts"
+        "new": "plop"
     },
     "dependencies": {
         "@bradgarropy/http": "^2.0.0",
