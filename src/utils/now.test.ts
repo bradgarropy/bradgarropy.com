@@ -1,4 +1,5 @@
-import {readdirSync} from "fs"
+import {readdirSync, readFileSync} from "node:fs"
+
 import matter from "gray-matter"
 
 import {
@@ -17,14 +18,8 @@ import {
     getOlderNow,
 } from "~/utils/now"
 
-jest.mock("fs")
+jest.mock("node:fs")
 jest.mock("gray-matter")
-
-jest.mock("gatsby-remark-vscode", () => {
-    return {
-        remarkPlugin: tree => tree,
-    }
-})
 
 test("gets all nows", () => {
     const mockReadDirSync = readdirSync as jest.Mock
@@ -36,7 +31,10 @@ test("gets all nows", () => {
 
 test("gets now by slug", async () => {
     const mockMatterRead = matter.read as jest.Mock
+    const mockReadFileSync = readFileSync as jest.Mock
+
     mockMatterRead.mockReturnValue(mockNowsResponse[1])
+    mockReadFileSync.mockReturnValue("{}")
 
     const now = await getNowByDate("2021-12-31")
     expect(now).toEqual(mockNow)
@@ -44,10 +42,12 @@ test("gets now by slug", async () => {
 
 test("gets latest now", async () => {
     const mockReadDirSync = readdirSync as jest.Mock
-    mockReadDirSync.mockReturnValue(mockNowPaths)
-
     const mockMatterRead = matter.read as jest.Mock
+    const mockReadFileSync = readFileSync as jest.Mock
+
+    mockReadDirSync.mockReturnValue(mockNowPaths)
     mockMatterRead.mockReturnValue(mockNowsResponse[0])
+    mockReadFileSync.mockReturnValue("{}")
 
     const now = await getLatestNow()
     expect(now).toEqual(mockNows[0])
@@ -56,9 +56,11 @@ test("gets latest now", async () => {
 test("gets newer now", async () => {
     const mockReadDirSync = readdirSync as jest.Mock
     const mockMatterRead = matter.read as jest.Mock
+    const mockReadFileSync = readFileSync as jest.Mock
 
     mockReadDirSync.mockReturnValue(mockNowPaths)
     mockMatterRead.mockReturnValue(mockNowsResponse[0])
+    mockReadFileSync.mockReturnValue("{}")
 
     const newerNow = await getNewerNow(mockNow)
     expect(newerNow).toEqual(mockNewerNow)
@@ -73,9 +75,11 @@ test("gets newer now", async () => {
 test("gets older now", async () => {
     const mockReadDirSync = readdirSync as jest.Mock
     const mockMatterRead = matter.read as jest.Mock
+    const mockReadFileSync = readFileSync as jest.Mock
 
     mockReadDirSync.mockReturnValue(mockNowPaths)
     mockMatterRead.mockReturnValue(mockNowsResponse[2])
+    mockReadFileSync.mockReturnValue("{}")
 
     const olderNow = await getOlderNow(mockNow)
     expect(olderNow).toEqual(mockOlderNow)

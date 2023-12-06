@@ -1,7 +1,7 @@
 const config = {
     clearMocks: true,
     collectCoverage: true,
-    setupFilesAfterEnv: ["<rootDir>/src/test-utils/setup.ts"],
+    setupFilesAfterEnv: ["<rootDir>/src/test-utils/setup.tsx"],
     moduleDirectories: ["<rootDir>/src", "node_modules"],
     moduleNameMapper: {
         "\\.module.css$": "identity-obj-proxy",
@@ -33,4 +33,4 @@ const config = {
     transformIgnorePatterns: [],
 }
 
-module.exports = config
+export default config

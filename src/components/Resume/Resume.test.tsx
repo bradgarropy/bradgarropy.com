@@ -5,5 +5,5 @@ import {mockResume} from "~/test-utils/mocks"
 
 test("shows resume page", () => {
     render(<Resume resume={mockResume} />)
-    expect(screen.getByText("resume"))
+    expect(screen.getByText("resume")).toBeInTheDocument()
 })

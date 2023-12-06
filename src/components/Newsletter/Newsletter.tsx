@@ -1,16 +1,16 @@
 import {http} from "@bradgarropy/http"
-import type {FC} from "react"
+import type {ChangeEventHandler, FC, FormEventHandler} from "react"
 import {useState} from "react"
 
 const Newsletter: FC = () => {
     const [email, setEmail] = useState("")
     const [subscribed, setSubscribed] = useState(false)
 
-    const onChange = event => {
+    const onChange: ChangeEventHandler<HTMLInputElement> = event => {
         setEmail(event.target.value)
     }
 
-    const onSubmit = async event => {
+    const onSubmit: FormEventHandler = async event => {
         event.preventDefault()
 
         await http.post("/api/subscribe", {

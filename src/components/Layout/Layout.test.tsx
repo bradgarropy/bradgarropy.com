@@ -15,5 +15,5 @@ test("shows content", () => {
         </Layout>,
     )
 
-    expect(screen.getByText("testing"))
+    expect(screen.getByText("testing")).toBeInTheDocument()
 })

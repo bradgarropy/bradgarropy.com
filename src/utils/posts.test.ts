@@ -1,4 +1,5 @@
-import {readdirSync} from "fs"
+import {readdirSync, readFileSync} from "node:fs"
+
 import matter from "gray-matter"
 
 import {
@@ -26,14 +27,8 @@ import {
     sortPostsByDate,
 } from "~/utils/posts"
 
-jest.mock("fs")
+jest.mock("node:fs")
 jest.mock("gray-matter")
-
-jest.mock("gatsby-remark-vscode", () => {
-    return {
-        remarkPlugin: tree => tree,
-    }
-})
 
 test("gets latest post", () => {
     const mockReadDirSync = readdirSync as jest.Mock
@@ -98,6 +93,9 @@ test("gets all posts", () => {
 test("gets post by slug", async () => {
     const mockMatterRead = matter.read as jest.Mock
     mockMatterRead.mockReturnValue(mockPostsResponse[0])
+
+    const mockReadFileSync = readFileSync as jest.Mock
+    mockReadFileSync.mockReturnValue("{}")
 
     const post = await getPostBySlug("first-test-post")
     expect(post).toEqual(mockPost)

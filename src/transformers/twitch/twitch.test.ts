@@ -15,7 +15,7 @@ test("transforms twitch channels", () => {
     const node = new DOMParser().parseFromString(html, "text/html")
     const iframe = node.querySelector("iframe")
 
-    expect(iframe.src).toEqual(
+    expect(iframe?.src).toEqual(
         "https://player.twitch.tv/?channel=bradgarropy&parent=bradgarropy.com",
     )
 })
@@ -28,7 +28,7 @@ test("transforms twitch videos", () => {
     const node = new DOMParser().parseFromString(html, "text/html")
     const iframe = node.querySelector("iframe")
 
-    expect(iframe.src).toEqual(
+    expect(iframe?.src).toEqual(
         "https://player.twitch.tv/?video=1272889918&parent=bradgarropy.com",
     )
 })
@@ -41,7 +41,7 @@ test("transforms twitch clips", () => {
     const domainNode = new DOMParser().parseFromString(domainHtml, "text/html")
     const domainIframe = domainNode.querySelector("iframe")
 
-    expect(domainIframe.src).toEqual(
+    expect(domainIframe?.src).toEqual(
         "https://clips.twitch.tv/embed?clip=ZealousSpeedyStingrayUnSane&parent=bradgarropy.com",
     )
 
@@ -55,7 +55,7 @@ test("transforms twitch clips", () => {
     )
     const subdomainIframe = subdomainNode.querySelector("iframe")
 
-    expect(subdomainIframe.src).toEqual(
+    expect(subdomainIframe?.src).toEqual(
         "https://clips.twitch.tv/embed?clip=ZealousSpeedyStingrayUnSane&parent=bradgarropy.com",
     )
 

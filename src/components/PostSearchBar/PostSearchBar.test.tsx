@@ -1,56 +1,34 @@
 import {render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
-import * as nextRouter from "next/router"
 
 import PostSearchBar from "~/components/PostSearchBar"
 import {mockPosts, mockPostsFrontmatter} from "~/test-utils/mocks"
+import {mockSearchParams} from "~/test-utils/mocks/remix"
 
 const onSearchMock = jest.fn()
 const mockPlaceholder = "search by title, topic, or tag..."
 const mockQuery = "fourth"
 
-const mockUseRouter = jest.spyOn(nextRouter, "useRouter")
-const mockPush = jest.fn()
-
 describe("search bar", () => {
-    beforeEach(() => {
-        mockUseRouter.mockReturnValue({
-            asPath: "",
-            back: jest.fn(),
-            basePath: "",
-            beforePopState: jest.fn(),
-            events: {
-                on: jest.fn(),
-                off: jest.fn(),
-                emit: jest.fn(),
-            },
-            forward: jest.fn(),
-            isFallback: false,
-            isLocaleDomain: false,
-            isPreview: false,
-            isReady: true,
-            pathname: "/blog",
-            prefetch: jest.fn(),
-            push: mockPush,
-            replace: jest.fn(),
-            reload: jest.fn(),
-            route: "",
-            query: {},
-        })
-
+    test("shows search bar", () => {
         render(
             <PostSearchBar
                 onSearch={onSearchMock}
                 posts={mockPostsFrontmatter}
             />,
         )
-    })
 
-    test("shows search bar", () => {
-        expect(screen.getByPlaceholderText(mockPlaceholder))
+        expect(screen.getByPlaceholderText(mockPlaceholder)).toBeInTheDocument()
     })
 
     test("searches", async () => {
+        render(
+            <PostSearchBar
+                onSearch={onSearchMock}
+                posts={mockPostsFrontmatter}
+            />,
+        )
+
         await userEvent.type(
             screen.getByPlaceholderText(mockPlaceholder),
             mockQuery,
@@ -60,51 +38,19 @@ describe("search bar", () => {
             mockQuery,
         )
 
+        expect(window.location.search).toEqual(`?search=${mockQuery}`)
+
         expect(onSearchMock).toHaveBeenCalledTimes(7)
 
         expect(onSearchMock).toHaveBeenLastCalledWith([
             mockPosts[3].frontmatter,
         ])
-
-        expect(mockPush).toHaveBeenCalledTimes(7)
-
-        expect(mockPush).toHaveBeenLastCalledWith(
-            `/blog?search=${mockQuery}`,
-            undefined,
-            {
-                shallow: true,
-            },
-        )
     })
 })
 
 describe("search bar with input", () => {
-    beforeEach(() => {
-        mockUseRouter.mockReturnValue({
-            asPath: "",
-            back: jest.fn(),
-            basePath: "",
-            beforePopState: jest.fn(),
-            events: {
-                on: jest.fn(),
-                off: jest.fn(),
-                emit: jest.fn(),
-            },
-            forward: jest.fn(),
-            isFallback: false,
-            isLocaleDomain: false,
-            isPreview: false,
-            isReady: true,
-            pathname: "/blog",
-            prefetch: jest.fn(),
-            push: mockPush,
-            replace: jest.fn(),
-            reload: jest.fn(),
-            route: "",
-            query: {
-                search: mockQuery,
-            },
-        })
+    test("shows search bar with input", () => {
+        mockSearchParams.get.mockReturnValueOnce(mockQuery)
 
         render(
             <PostSearchBar
@@ -112,9 +58,7 @@ describe("search bar with input", () => {
                 posts={mockPostsFrontmatter}
             />,
         )
-    })
 
-    test("shows search bar with input", () => {
         expect(screen.getByPlaceholderText(mockPlaceholder)).toHaveDisplayValue(
             mockQuery,
         )

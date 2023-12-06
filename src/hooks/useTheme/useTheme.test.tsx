@@ -1,4 +1,6 @@
 import {act, renderHook} from "@testing-library/react"
+import type {FC, ReactNode} from "react"
+import React from "react"
 
 import type {ThemeContextType} from "~/context/Theme"
 import {ThemeProvider} from "~/context/Theme"
@@ -23,8 +25,14 @@ afterEach(() => {
     mockGetItem.mockReset()
 })
 
+type WrapperProps = {
+    children: ReactNode
+}
+
 test("returns theme context", () => {
-    const wrapper = ({children}) => <ThemeProvider>{children}</ThemeProvider>
+    const wrapper: FC<WrapperProps> = ({children}) => (
+        <ThemeProvider>{children}</ThemeProvider>
+    )
     const {result} = renderHook(() => useTheme(), {wrapper})
 
     expect(result.current).toEqual(mockThemeContext)
@@ -33,43 +41,55 @@ test("returns theme context", () => {
 test("defaults to light theme", () => {
     mockGetItem.mockReturnValue(null)
 
-    const wrapper = ({children}) => <ThemeProvider>{children}</ThemeProvider>
+    const wrapper: FC<WrapperProps> = ({children}) => (
+        <ThemeProvider>{children}</ThemeProvider>
+    )
+
     const {result} = renderHook(() => useTheme(), {wrapper})
 
     expect(result.current.theme).toEqual("light")
     expect(mockSetItem).toHaveBeenCalledTimes(1)
     expect(mockSetItem).toHaveBeenCalledWith("theme", "light")
-    expect(document.documentElement.classList.contains("dark")).toBeFalsy()
+    expect(document.documentElement).not.toHaveClass("dark")
 })
 
 test("uses localstorage light theme", () => {
     mockGetItem.mockReturnValue("light")
 
-    const wrapper = ({children}) => <ThemeProvider>{children}</ThemeProvider>
+    const wrapper: FC<WrapperProps> = ({children}) => (
+        <ThemeProvider>{children}</ThemeProvider>
+    )
+
     const {result} = renderHook(() => useTheme(), {wrapper})
 
     expect(result.current.theme).toEqual("light")
     expect(mockSetItem).toHaveBeenCalledTimes(1)
     expect(mockSetItem).toHaveBeenCalledWith("theme", "light")
-    expect(document.documentElement.classList.contains("dark")).toBeFalsy()
+    expect(document.documentElement).not.toHaveClass("dark")
 })
 
 test("uses localstorage dark theme", () => {
     mockGetItem.mockReturnValue("dark")
 
-    const wrapper = ({children}) => <ThemeProvider>{children}</ThemeProvider>
+    const wrapper: FC<WrapperProps> = ({children}) => (
+        <ThemeProvider>{children}</ThemeProvider>
+    )
+
     const {result} = renderHook(() => useTheme(), {wrapper})
 
     expect(result.current.theme).toEqual("dark")
     expect(mockSetItem).toHaveBeenCalledTimes(1)
     expect(mockSetItem).toHaveBeenCalledWith("theme", "dark")
-    expect(document.documentElement.classList.contains("dark")).toBeTruthy()
+    expect(document.documentElement).toHaveClass("dark")
 })
 
 test("switches to light theme", () => {
     mockGetItem.mockReturnValue("dark")
 
-    const wrapper = ({children}) => <ThemeProvider>{children}</ThemeProvider>
+    const wrapper: FC<WrapperProps> = ({children}) => (
+        <ThemeProvider>{children}</ThemeProvider>
+    )
+
     const {result} = renderHook(() => useTheme(), {wrapper})
 
     expect(result.current.theme).toEqual("dark")
@@ -81,13 +101,16 @@ test("switches to light theme", () => {
     expect(result.current.theme).toEqual("light")
     expect(mockSetItem).toHaveBeenCalledTimes(2)
     expect(mockSetItem).toHaveBeenLastCalledWith("theme", "light")
-    expect(document.documentElement.classList.contains("dark")).toBeFalsy()
+    expect(document.documentElement).not.toHaveClass("dark")
 })
 
 test("switches to dark theme", () => {
     mockGetItem.mockReturnValue("light")
 
-    const wrapper = ({children}) => <ThemeProvider>{children}</ThemeProvider>
+    const wrapper: FC<WrapperProps> = ({children}) => (
+        <ThemeProvider>{children}</ThemeProvider>
+    )
+
     const {result} = renderHook(() => useTheme(), {wrapper})
 
     expect(result.current.theme).toEqual("light")
@@ -99,5 +122,5 @@ test("switches to dark theme", () => {
     expect(result.current.theme).toEqual("dark")
     expect(mockSetItem).toHaveBeenCalledTimes(2)
     expect(mockSetItem).toHaveBeenLastCalledWith("theme", "dark")
-    expect(document.documentElement.classList.contains("dark")).toBeTruthy()
+    expect(document.documentElement).toHaveClass("dark")
 })

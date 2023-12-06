@@ -1,12 +1,13 @@
-import fs from "fs"
+import fs from "node:fs"
+import path from "node:path"
+
 import Fuse from "fuse.js"
 import matter from "gray-matter"
-import path from "path"
 
 import type {Post, PostFrontmatter, Tag, Topic} from "~/types/post"
-import {transformMarkdown} from "~/utils/markdown"
+import {transformMarkdown} from "~/utils/markdown.server"
 
-const icons = {
+const icons: Record<string, string> = {
     coding: "💻",
     tech: "🔌",
     life: "😎",

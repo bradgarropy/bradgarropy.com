@@ -1,4 +1,4 @@
-import Link from "@bradgarropy/next-link"
+import {Link} from "@remix-run/react"
 import type {FC} from "react"
 
 import type {Video} from "~/types/video"

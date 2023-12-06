@@ -4,35 +4,35 @@ import SocialLink from "~/components/SocialLink"
 
 test("discord", () => {
     render(<SocialLink platform="discord" />)
-    expect(screen.getByLabelText("discord"))
+    expect(screen.getByLabelText("discord")).toBeInTheDocument()
 })
 
 test("github", () => {
     render(<SocialLink platform="github" />)
-    expect(screen.getByLabelText("github"))
+    expect(screen.getByLabelText("github")).toBeInTheDocument()
 })
 
 test("instagram", () => {
     render(<SocialLink platform="instagram" />)
-    expect(screen.getByLabelText("instagram"))
+    expect(screen.getByLabelText("instagram")).toBeInTheDocument()
 })
 
 test("twitter", () => {
     render(<SocialLink platform="twitter" />)
-    expect(screen.getByLabelText("twitter"))
+    expect(screen.getByLabelText("twitter")).toBeInTheDocument()
 })
 
 test("twitch", () => {
     render(<SocialLink platform="twitch" />)
-    expect(screen.getByLabelText("twitch"))
+    expect(screen.getByLabelText("twitch")).toBeInTheDocument()
 })
 
 test("x", () => {
     render(<SocialLink platform="x" />)
-    expect(screen.getByLabelText("x"))
+    expect(screen.getByLabelText("x")).toBeInTheDocument()
 })
 
 test("youtube", () => {
     render(<SocialLink platform="youtube" />)
-    expect(screen.getByLabelText("youtube"))
+    expect(screen.getByLabelText("youtube")).toBeInTheDocument()
 })

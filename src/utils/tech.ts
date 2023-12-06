@@ -10,7 +10,7 @@ const technologies = [
 ]
 
 const getTechnologies = (topics: string[]): string[] => {
-    const tech = []
+    const tech: string[] = []
 
     topics.forEach(topic => {
         if (technologies.includes(topic)) {

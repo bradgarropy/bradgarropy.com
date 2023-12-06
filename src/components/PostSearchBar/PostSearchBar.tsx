@@ -1,8 +1,7 @@
+import {useLocation, useSearchParams} from "@remix-run/react"
 import Fuse from "fuse.js"
-import {useRouter} from "next/router"
-import type {FC} from "react"
-import {useEffect} from "react"
-import {useState} from "react"
+import type {ChangeEventHandler, FC} from "react"
+import {useEffect, useState} from "react"
 
 import type {PostFrontmatter} from "~/types/post"
 
@@ -12,8 +11,10 @@ type PostSearchBarProps = {
 }
 
 const PostSearchBar: FC<PostSearchBarProps> = ({posts, onSearch}) => {
-    const router = useRouter()
-    const defaultQuery = (router.query.search as string) || ""
+    const location = useLocation()
+    const [searchParams] = useSearchParams()
+
+    const defaultQuery = searchParams.get("query") ?? ""
     const [query, setQuery] = useState(defaultQuery)
 
     const fuse = new Fuse(posts, {
@@ -32,10 +33,10 @@ const PostSearchBar: FC<PostSearchBarProps> = ({posts, onSearch}) => {
     useEffect(
         () => {
             const url = query
-                ? `${router.pathname}?search=${query}`
-                : router.pathname
+                ? `${location.pathname}?search=${query}`
+                : location.pathname
 
-            router.push(url, undefined, {shallow: true})
+            window.history.replaceState(null, "", url)
 
             const newPosts = filterPosts(query)
             onSearch?.(newPosts)
@@ -45,7 +46,7 @@ const PostSearchBar: FC<PostSearchBarProps> = ({posts, onSearch}) => {
         [query],
     )
 
-    const onChange = event => {
+    const onChange: ChangeEventHandler<HTMLInputElement> = event => {
         setQuery(event.target.value)
     }
 

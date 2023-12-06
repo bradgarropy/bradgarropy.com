@@ -114,6 +114,18 @@ const mockGitHubSponsorsResponse = {
                         isOneTime: true,
                     },
                 },
+                {
+                    sponsorEntity: {
+                        login: "romangarropy",
+                        url: "https://github.com/romangarropy",
+                        avatarUrl: "https://github.com/romangarropy.png",
+                    },
+                    tier: {
+                        name: "$1000",
+                        description: "Invalid sponsorship tier",
+                        isOneTime: false,
+                    },
+                },
             ],
         },
     },

@@ -7,6 +7,6 @@ test("shows featured projects", () => {
     render(<FeaturedProjects featuredProjects={mockProjects} />)
 
     mockProjects.forEach(project => {
-        expect(screen.getByText(project.name))
+        expect(screen.getByText(project.name)).toBeInTheDocument()
     })
 })
