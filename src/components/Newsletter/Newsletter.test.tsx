@@ -23,6 +23,11 @@ test("shows newsletter", () => {
     ).toBeInTheDocument()
 
     expect(screen.getByPlaceholderText("email@example.com")).toBeInTheDocument()
+    expect(screen.getByPlaceholderText("email@example.com")).toHaveAttribute(
+        "autocomplete",
+        "email",
+    )
+
     expect(screen.getByText("📧 subscribe")).toBeInTheDocument()
 })
 

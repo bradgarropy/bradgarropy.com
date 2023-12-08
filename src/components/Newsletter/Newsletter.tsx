@@ -39,6 +39,7 @@ const Newsletter: FC = () => {
                     name="email"
                     value={email}
                     onChange={onChange}
+                    autoComplete="email"
                 />
 
                 <button
