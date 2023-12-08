@@ -1,3 +1,5 @@
+import {vi} from "vitest"
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const MockLink = ({to, children, ...props}: any) => (
     <a href={to} {...props}>
@@ -6,18 +8,18 @@ const MockLink = ({to, children, ...props}: any) => (
 )
 
 const mockSearchParams = {
-    get: jest.fn(),
+    get: vi.fn(),
 }
 
-const mockSetSearchParams = jest.fn()
+const mockSetSearchParams = vi.fn()
 
 const mockUseSearchParams = () => {
     return [mockSearchParams, mockSetSearchParams]
 }
 
-const mockUseLocation = jest.fn().mockReturnValue({pathname: "/"})
+const mockUseLocation = vi.fn().mockReturnValue({pathname: "/"})
 
-const actualRemix = jest.requireActual("@remix-run/react")
+const actualRemix = vi.importActual("@remix-run/react")
 
 const mockRemix = {
     ...actualRemix,

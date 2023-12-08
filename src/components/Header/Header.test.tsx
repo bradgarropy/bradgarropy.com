@@ -1,4 +1,6 @@
 import {render, screen} from "@testing-library/react"
+import type {Mock} from "vitest"
+import {describe, expect, test, vi} from "vitest"
 
 import Header from "~/components/Header"
 import useApp from "~/hooks/useApp"
@@ -6,16 +8,16 @@ import useLive from "~/hooks/useLive"
 import useTheme from "~/hooks/useTheme"
 import {generateAppCtx, generateThemeCtx} from "~/test-utils/generators"
 
-jest.mock("~/hooks/useApp")
-jest.mock("~/hooks/useLive")
-jest.mock("~/hooks/useTheme")
+vi.mock("~/hooks/useApp")
+vi.mock("~/hooks/useLive")
+vi.mock("~/hooks/useTheme")
 
 const mockAppCtx = generateAppCtx()
 const mockThemeCtx = generateThemeCtx()
 
-const mockUseApp = useApp as jest.Mock
-const mockUseLive = useLive as jest.Mock
-const mockUseTheme = useTheme as jest.Mock
+const mockUseApp = useApp as Mock
+const mockUseLive = useLive as Mock
+const mockUseTheme = useTheme as Mock
 
 mockUseApp.mockReturnValue(mockAppCtx)
 mockUseTheme.mockReturnValue(mockThemeCtx)

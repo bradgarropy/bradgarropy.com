@@ -1,3 +1,5 @@
+import {expect, test} from "vitest"
+
 import {formatDate} from "~/utils/date"
 
 test("formats date", () => {

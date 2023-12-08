@@ -1,10 +1,11 @@
 import {http} from "@bradgarropy/http"
 import {render, screen, waitFor} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
+import {expect, test, vi} from "vitest"
 
 import Newsletter from "~/components/Newsletter"
 
-jest.mock("@bradgarropy/http")
+vi.mock("@bradgarropy/http")
 
 test("shows newsletter", () => {
     render(<Newsletter />)

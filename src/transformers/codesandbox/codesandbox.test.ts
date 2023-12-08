@@ -1,3 +1,5 @@
+import {expect, test} from "vitest"
+
 import {codesandboxTransformer} from "~/transformers/codesandbox"
 
 test("detects codesandbox links", () => {

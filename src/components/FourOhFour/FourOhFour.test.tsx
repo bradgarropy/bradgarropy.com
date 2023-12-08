@@ -1,4 +1,5 @@
 import {render, screen} from "@testing-library/react"
+import {expect, test} from "vitest"
 
 import FourOhFour from "~/components/FourOhFour"
 import {mockPostFrontmatter, mockVideos} from "~/test-utils/mocks"

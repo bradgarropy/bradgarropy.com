@@ -1,9 +1,12 @@
+import {expect, test} from "vitest"
+
 import {getMeta} from "~/utils/meta"
 
 import {createImageUrl} from "./cloudinary"
 
 test("shows default meta", () => {
     const meta = getMeta()
+
     expect(meta).toEqual([
         {
             title: "🏠 my home on the web",

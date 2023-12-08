@@ -1,11 +1,13 @@
 import {graphql} from "@octokit/graphql"
+import type {Mock} from "vitest"
+import {expect, test, vi} from "vitest"
 
 import {mockGitHubSponsorsResponse, mockSponsors} from "~/test-utils/mocks"
 import {getSponsors} from "~/utils/sponsors"
 
-jest.mock("@octokit/graphql")
+vi.mock("@octokit/graphql")
 
-const mockOctokit = graphql.defaults as jest.Mock
+const mockOctokit = graphql.defaults as Mock
 mockOctokit.mockReturnValue(() => mockGitHubSponsorsResponse)
 
 test("gets sponsors", async () => {

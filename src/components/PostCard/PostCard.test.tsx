@@ -1,4 +1,5 @@
 import {render, screen} from "@testing-library/react"
+import {expect, test} from "vitest"
 
 import PostCard from "~/components/PostCard"
 import {mockPostFrontmatter} from "~/test-utils/mocks"

@@ -1,6 +1,7 @@
 import {act, renderHook} from "@testing-library/react"
 import type {FC, ReactNode} from "react"
 import React from "react"
+import {afterEach, beforeEach, expect, test, vi} from "vitest"
 
 import type {ThemeContextType} from "~/context/Theme"
 import {ThemeProvider} from "~/context/Theme"
@@ -12,8 +13,8 @@ const mockThemeContext: ThemeContextType = {
     setTheme: expect.any(Function),
 }
 
-const mockGetItem = jest.fn()
-const mockSetItem = jest.fn()
+const mockGetItem = vi.fn()
+const mockSetItem = vi.fn()
 
 beforeEach(() => {
     global.Storage.prototype.getItem = mockGetItem
