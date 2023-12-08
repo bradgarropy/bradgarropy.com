@@ -10,7 +10,11 @@ const config = defineConfig({
     test: {
         clearMocks: true,
         coverage: {
-            provider: "v8",
+            all: false,
+            clean: true,
+            cleanOnRerun: true,
+            enabled: true,
+            provider: "istanbul",
             reporter: ["text", "lcov"],
             reportOnFailure: false,
         },
