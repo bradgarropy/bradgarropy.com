@@ -11,7 +11,7 @@ const config = defineConfig({
         clearMocks: true,
         coverage: {
             provider: "v8",
-            reporter: ["text"],
+            reporter: ["text", "lcov"],
             reportOnFailure: false,
         },
         environment: "jsdom",
