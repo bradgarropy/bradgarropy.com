@@ -1,6 +1,8 @@
 import {readdirSync, readFileSync} from "node:fs"
 
 import matter from "gray-matter"
+import type {Mock} from "vitest"
+import {expect, test, vi} from "vitest"
 
 import {
     mockTestimonials,
@@ -9,16 +11,16 @@ import {
 } from "~/test-utils/mocks"
 import {getTestimonials} from "~/utils/testimonials"
 
-jest.mock("node:fs")
-jest.mock("gray-matter")
+vi.mock("node:fs")
+vi.mock("gray-matter")
 
-const mockReadDirSync = readdirSync as jest.Mock
+const mockReadDirSync = readdirSync as Mock
 mockReadDirSync.mockReturnValue(mockTestimonialsPaths)
 
-const mockReadFileSync = readFileSync as jest.Mock
+const mockReadFileSync = readFileSync as Mock
 mockReadFileSync.mockReturnValue("{}")
 
-const mockMatterRead = matter.read as jest.Mock
+const mockMatterRead = matter.read as Mock
 mockMatterRead
     .mockReturnValueOnce(mockTestimonialsResponse[0])
     .mockReturnValueOnce(mockTestimonialsResponse[1])

@@ -1,4 +1,5 @@
 import {render, screen} from "@testing-library/react"
+import {expect, test} from "vitest"
 
 import LatestPosts from "~/components/LatestPosts"
 import {mockPostsFrontmatter} from "~/test-utils/mocks"

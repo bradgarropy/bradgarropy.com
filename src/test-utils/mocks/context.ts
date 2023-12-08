@@ -1,13 +1,15 @@
+import {vi} from "vitest"
+
 import type {AppContextType, ThemeContextType} from "~/types/context"
 
 const mockAppCtx: AppContextType = {
     open: false,
-    setOpen: jest.fn(),
+    setOpen: vi.fn(),
 }
 
 const mockThemeCtx: ThemeContextType = {
     theme: "light",
-    setTheme: jest.fn(),
+    setTheme: vi.fn(),
 }
 
 export {mockAppCtx, mockThemeCtx}

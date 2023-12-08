@@ -1,7 +1,12 @@
-import "@testing-library/jest-dom"
+import "@testing-library/jest-dom/vitest"
 
-jest.mock("@remix-run/react", () => {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const remix = require("~/test-utils/mocks/remix")
-    return remix.mockRemix
+import {cleanup} from "@testing-library/react"
+import {afterEach, vi} from "vitest"
+
+import {mockRemix} from "~/test-utils/mocks/remix"
+
+afterEach(() => {
+    cleanup()
 })
+
+vi.mock("@remix-run/react", () => mockRemix)

@@ -1,5 +1,7 @@
 import {render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
+import type {Mock} from "vitest"
+import {expect, test, vi} from "vitest"
 
 import ColorTheme from "~/components/ColorTheme"
 import useTheme from "~/hooks/useTheme"
@@ -8,9 +10,9 @@ import {generateThemeCtx} from "~/test-utils/generators"
 const mockThemeCtxLight = generateThemeCtx({theme: "light"})
 const mockThemeCtxDark = generateThemeCtx({theme: "dark"})
 
-jest.mock("~/hooks/useTheme")
+vi.mock("~/hooks/useTheme")
 
-const mockUseTheme = useTheme as jest.Mock
+const mockUseTheme = useTheme as Mock
 
 test("toggles dark mode", async () => {
     mockUseTheme.mockReturnValue(mockThemeCtxLight)

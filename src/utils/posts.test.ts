@@ -1,6 +1,8 @@
 import {readdirSync, readFileSync} from "node:fs"
 
 import matter from "gray-matter"
+import type {Mock} from "vitest"
+import {expect, test, vi} from "vitest"
 
 import {
     mockPost,
@@ -27,14 +29,14 @@ import {
     sortPostsByDate,
 } from "~/utils/posts"
 
-jest.mock("node:fs")
-jest.mock("gray-matter")
+vi.mock("node:fs")
+vi.mock("gray-matter")
 
 test("gets latest post", () => {
-    const mockReadDirSync = readdirSync as jest.Mock
+    const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockPostsPaths)
 
-    const mockMatterRead = matter.read as jest.Mock
+    const mockMatterRead = matter.read as Mock
     mockMatterRead
         .mockReturnValueOnce(mockPostsResponse[0])
         .mockReturnValueOnce(mockPostsResponse[1])
@@ -46,10 +48,10 @@ test("gets latest post", () => {
 })
 
 test("gets latest posts", () => {
-    const mockReadDirSync = readdirSync as jest.Mock
+    const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockPostsPaths)
 
-    const mockMatterRead = matter.read as jest.Mock
+    const mockMatterRead = matter.read as Mock
     mockMatterRead
         .mockReturnValueOnce(mockPostsResponse[0])
         .mockReturnValueOnce(mockPostsResponse[1])
@@ -61,10 +63,10 @@ test("gets latest posts", () => {
 })
 
 test("gets particular number of latest posts", () => {
-    const mockReadDirSync = readdirSync as jest.Mock
+    const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockPostsPaths)
 
-    const mockMatterRead = matter.read as jest.Mock
+    const mockMatterRead = matter.read as Mock
     mockMatterRead
         .mockReturnValueOnce(mockPostsResponse[0])
         .mockReturnValueOnce(mockPostsResponse[1])
@@ -76,10 +78,10 @@ test("gets particular number of latest posts", () => {
 })
 
 test("gets all posts", () => {
-    const mockReadDirSync = readdirSync as jest.Mock
+    const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockPostsPaths)
 
-    const mockMatterRead = matter.read as jest.Mock
+    const mockMatterRead = matter.read as Mock
     mockMatterRead
         .mockReturnValueOnce(mockPostsResponse[0])
         .mockReturnValueOnce(mockPostsResponse[1])
@@ -91,10 +93,10 @@ test("gets all posts", () => {
 })
 
 test("gets post by slug", async () => {
-    const mockMatterRead = matter.read as jest.Mock
+    const mockMatterRead = matter.read as Mock
     mockMatterRead.mockReturnValue(mockPostsResponse[0])
 
-    const mockReadFileSync = readFileSync as jest.Mock
+    const mockReadFileSync = readFileSync as Mock
     mockReadFileSync.mockReturnValue("{}")
 
     const post = await getPostBySlug("first-test-post")
@@ -102,10 +104,10 @@ test("gets post by slug", async () => {
 })
 
 test("gets topic", () => {
-    const mockReadDirSync = readdirSync as jest.Mock
+    const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockPostsPaths)
 
-    const mockMatterRead = matter.read as jest.Mock
+    const mockMatterRead = matter.read as Mock
     mockMatterRead
         .mockReturnValueOnce(mockPostsResponse[0])
         .mockReturnValueOnce(mockPostsResponse[1])
@@ -117,10 +119,10 @@ test("gets topic", () => {
 })
 
 test("gets topics", () => {
-    const mockReadDirSync = readdirSync as jest.Mock
+    const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockPostsPaths)
 
-    const mockMatterRead = matter.read as jest.Mock
+    const mockMatterRead = matter.read as Mock
     mockMatterRead
         .mockReturnValueOnce(mockPostsResponse[0])
         .mockReturnValueOnce(mockPostsResponse[1])
@@ -132,10 +134,10 @@ test("gets topics", () => {
 })
 
 test("gets posts by topic", () => {
-    const mockReadDirSync = readdirSync as jest.Mock
+    const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockPostsPaths)
 
-    const mockMatterRead = matter.read as jest.Mock
+    const mockMatterRead = matter.read as Mock
     mockMatterRead
         .mockReturnValueOnce(mockPostsResponse[0])
         .mockReturnValueOnce(mockPostsResponse[1])
@@ -147,10 +149,10 @@ test("gets posts by topic", () => {
 })
 
 test("gets tags", () => {
-    const mockReadDirSync = readdirSync as jest.Mock
+    const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockPostsPaths)
 
-    const mockMatterRead = matter.read as jest.Mock
+    const mockMatterRead = matter.read as Mock
     mockMatterRead
         .mockReturnValueOnce(mockPostsResponse[0])
         .mockReturnValueOnce(mockPostsResponse[1])
@@ -162,10 +164,10 @@ test("gets tags", () => {
 })
 
 test("gets posts by tag", () => {
-    const mockReadDirSync = readdirSync as jest.Mock
+    const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockPostsPaths)
 
-    const mockMatterRead = matter.read as jest.Mock
+    const mockMatterRead = matter.read as Mock
     mockMatterRead
         .mockReturnValueOnce(mockPostsResponse[0])
         .mockReturnValueOnce(mockPostsResponse[1])
@@ -189,10 +191,10 @@ test("sorts posts by date", () => {
 })
 
 test("gets related posts", () => {
-    const mockReadDirSync = readdirSync as jest.Mock
+    const mockReadDirSync = readdirSync as Mock
     mockReadDirSync.mockReturnValue(mockPostsPaths)
 
-    const mockMatterRead = matter.read as jest.Mock
+    const mockMatterRead = matter.read as Mock
     mockMatterRead
         .mockReturnValueOnce(mockPostsResponse[0])
         .mockReturnValueOnce(mockPostsResponse[1])

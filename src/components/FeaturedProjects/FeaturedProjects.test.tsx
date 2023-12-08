@@ -1,4 +1,5 @@
 import {render, screen} from "@testing-library/react"
+import {expect, test} from "vitest"
 
 import FeaturedProjects from "~/components/FeaturedProjects"
 import {mockProjects} from "~/test-utils/mocks"

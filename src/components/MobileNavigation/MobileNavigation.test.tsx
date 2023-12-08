@@ -1,5 +1,7 @@
 import {render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
+import type {Mock} from "vitest"
+import {beforeEach, describe, expect, test, vi} from "vitest"
 
 import MobileNavigation from "~/components/MobileNavigation"
 import useApp from "~/hooks/useApp"
@@ -8,9 +10,9 @@ import {generateAppCtx} from "~/test-utils/generators"
 const mockAppCtxOpen = generateAppCtx({open: true})
 const mockAppCtxClosed = generateAppCtx({open: false})
 
-jest.mock("~/hooks/useApp")
+vi.mock("~/hooks/useApp")
 
-const mockUseApp = useApp as jest.Mock
+const mockUseApp = useApp as Mock
 
 const links = ["blog", "now", "uses", "hire me", "contact"]
 

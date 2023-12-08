@@ -1,10 +1,12 @@
 import matter from "gray-matter"
+import type {Mock} from "vitest"
+import {describe, expect, test, vi} from "vitest"
 
 import {getMarkdownBySlug, transformMarkdown} from "~/utils/markdown.server"
 
-jest.mock("gray-matter")
+vi.mock("gray-matter")
 
-const mockFetch = jest.fn()
+const mockFetch = vi.fn()
 global.fetch = mockFetch
 
 mockFetch.mockResolvedValue({
@@ -12,7 +14,7 @@ mockFetch.mockResolvedValue({
 })
 
 test("gets markdown by slug", async () => {
-    const mockMatter = matter.read as jest.Mock
+    const mockMatter = matter.read as Mock
     mockMatter.mockReturnValue({data: {}, content: "This is the uses page."})
 
     const markdown = await getMarkdownBySlug("uses")

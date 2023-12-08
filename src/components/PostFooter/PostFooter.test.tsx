@@ -1,12 +1,14 @@
 import {render, screen} from "@testing-library/react"
+import type {Mock} from "vitest"
+import {expect, test, vi} from "vitest"
 
 import PostFooter from "~/components/PostFooter"
 import useMeta from "~/hooks/useMeta"
 import {mockMeta} from "~/test-utils/mocks"
 
-jest.mock("~/hooks/useMeta")
+vi.mock("~/hooks/useMeta")
 
-const mockUseMeta = useMeta as jest.Mock
+const mockUseMeta = useMeta as Mock
 mockUseMeta.mockReturnValue(mockMeta)
 
 test("shows comment button", () => {
