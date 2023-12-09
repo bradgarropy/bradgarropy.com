@@ -10,10 +10,12 @@ import {
     ScrollRestoration,
     useLoaderData,
 } from "@remix-run/react"
+import classnames from "classnames"
 
 import GoogleAnalytics from "~/components/GoogleAnalytics"
 import {AppProvider} from "~/context/App"
 import {ThemeProvider} from "~/context/Theme"
+import useTheme from "~/hooks/useTheme"
 import styles from "~/styles/tailwind.css"
 import {createImageUrl} from "~/utils/cloudinary"
 import {getMeta} from "~/utils/meta"
@@ -49,9 +51,10 @@ export const links: LinksFunction = () => {
 
 const App = () => {
     const {measurementId} = useLoaderData<typeof loader>()
+    const {theme} = useTheme()
 
     return (
-        <html lang="en" className="overflow-y-scroll">
+        <html lang="en" className={classnames("overflow-y-scroll", theme)}>
             <head>
                 <meta charSet="utf-8" />
                 <meta name="keywords" content={pkg.keywords.join(",")} />
@@ -61,7 +64,20 @@ const App = () => {
                     content="width=device-width,initial-scale=1"
                 />
 
-                <script src="/theme.js" />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+                            const colorTheme = mediaQuery.matches ? "dark" : "light"
+
+                            const classes = document.documentElement.classList
+
+                            if (!classes.contains("light") && !classes.contains("dark")) {
+                                classes.add(colorTheme)
+                            }
+                        `,
+                    }}
+                />
 
                 <Meta />
                 <Links />
@@ -69,13 +85,7 @@ const App = () => {
 
             <body className="bg-white transition duration-300 dark:bg-black">
                 <GoogleAnalytics measurementId={measurementId} />
-
-                <ThemeProvider>
-                    <AppProvider>
-                        <Outlet />
-                    </AppProvider>
-                </ThemeProvider>
-
+                <Outlet />
                 <ScrollRestoration />
                 <Scripts />
                 <LiveReload />
@@ -84,4 +94,14 @@ const App = () => {
     )
 }
 
-export default App
+const AppWithProviders = () => {
+    return (
+        <ThemeProvider>
+            <AppProvider>
+                <App />
+            </AppProvider>
+        </ThemeProvider>
+    )
+}
+
+export default AppWithProviders

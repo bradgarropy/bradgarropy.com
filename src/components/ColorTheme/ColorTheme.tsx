@@ -19,10 +19,11 @@ const ColorTheme: FC = () => {
         <button
             className="h-6 cursor-pointer border-none bg-transparent p-0 transition duration-300"
             onClick={onClick}
-            aria-label={label}
+            // aria-label={label}
         >
-            {theme === "light" ? <MoonIcon /> : null}
-            {theme === "dark" ? <SunIcon /> : null}
+            {/* {theme === "light" ? <MoonIcon /> : null}
+            {theme === "dark" ? <SunIcon /> : null} */}
+            TOGGLE
         </button>
     )
 }

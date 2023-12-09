@@ -1,5 +1,5 @@
 import type {FC, ReactNode} from "react"
-import {createContext, useEffect, useState} from "react"
+import {createContext, useState} from "react"
 
 import type {ThemeContextType} from "~/types/context"
 import type {Theme} from "~/types/theme"
@@ -11,24 +11,16 @@ type ThemeProviderProps = {
 }
 
 const ThemeProvider: FC<ThemeProviderProps> = ({children}) => {
-    const [theme, setTheme] = useState<Theme>()
-
-    useEffect(() => {
-        const localTheme = window.localStorage.getItem("theme") as Theme
-        setTheme(localTheme ?? "light")
-    }, [])
-
-    useEffect(() => {
-        if (theme === "dark") {
-            window.localStorage.setItem("theme", "dark")
-            document.documentElement.classList.add("dark")
+    const [theme, setTheme] = useState<Theme>(() => {
+        if (typeof window !== "object") {
+            return null
         }
 
-        if (theme === "light") {
-            window.localStorage.setItem("theme", "light")
-            document.documentElement.classList.remove("dark")
-        }
-    }, [theme])
+        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+        const theme = mediaQuery.matches ? "dark" : "light"
+
+        return theme
+    })
 
     const context: ThemeContextType = {
         theme,
