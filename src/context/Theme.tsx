@@ -1,3 +1,4 @@
+import {useFetcher} from "@remix-run/react"
 import type {FC, ReactNode} from "react"
 import {createContext, useEffect, useState} from "react"
 
@@ -7,27 +8,33 @@ import type {Theme} from "~/types/theme"
 const ThemeContext = createContext({} as ThemeContextType)
 
 type ThemeProviderProps = {
+    defaultTheme?: Theme
     children: ReactNode
 }
 
-const ThemeProvider: FC<ThemeProviderProps> = ({children}) => {
-    const [theme, setTheme] = useState<Theme>()
+const ThemeProvider: FC<ThemeProviderProps> = ({
+    defaultTheme = "light",
+    children,
+}) => {
+    const fetcher = useFetcher()
+    const [theme, setTheme] = useState<Theme>(defaultTheme)
 
     useEffect(() => {
-        const localTheme = window.localStorage.getItem("theme") as Theme
-        setTheme(localTheme ?? "light")
-    }, [])
+        fetcher.submit({theme}, {action: "api/theme", method: "post"})
 
-    useEffect(() => {
-        if (theme === "dark") {
-            window.localStorage.setItem("theme", "dark")
-            document.documentElement.classList.add("dark")
+        switch (theme) {
+            case "light":
+                document.documentElement.classList.remove("dark")
+                document.documentElement.classList.add("light")
+                break
+
+            case "dark":
+                document.documentElement.classList.remove("light")
+                document.documentElement.classList.add("dark")
+                break
         }
 
-        if (theme === "light") {
-            window.localStorage.setItem("theme", "light")
-            document.documentElement.classList.remove("dark")
-        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [theme])
 
     const context: ThemeContextType = {

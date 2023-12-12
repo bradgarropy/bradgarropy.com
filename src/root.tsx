@@ -1,4 +1,4 @@
-import type {LinksFunction} from "@remix-run/node"
+import type {LinksFunction, LoaderFunctionArgs} from "@remix-run/node"
 import {json} from "@remix-run/node"
 import type {MetaFunction} from "@remix-run/react"
 import {
@@ -10,6 +10,7 @@ import {
     ScrollRestoration,
     useLoaderData,
 } from "@remix-run/react"
+import classnames from "classnames"
 
 import GoogleAnalytics from "~/components/GoogleAnalytics"
 import {AppProvider} from "~/context/App"
@@ -17,14 +18,16 @@ import {ThemeProvider} from "~/context/Theme"
 import styles from "~/styles/tailwind.css"
 import {createImageUrl} from "~/utils/cloudinary"
 import {getMeta} from "~/utils/meta"
+import {getTheme} from "~/utils/session.server"
 
 import pkg from "../package.json"
 
-export const loader = async () => {
+export const loader = async ({request}: LoaderFunctionArgs) => {
     const measurementId =
         process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_ID || ""
 
-    return json({measurementId})
+    const theme = await getTheme(request)
+    return json({measurementId, theme})
 }
 
 export const meta: MetaFunction = () => {
@@ -48,10 +51,10 @@ export const links: LinksFunction = () => {
 }
 
 const App = () => {
-    const {measurementId} = useLoaderData<typeof loader>()
+    const {measurementId, theme} = useLoaderData<typeof loader>()
 
     return (
-        <html lang="en" className="overflow-y-scroll">
+        <html lang="en" className={classnames("overflow-y-scroll", theme)}>
             <head>
                 <meta charSet="utf-8" />
                 <meta name="keywords" content={pkg.keywords.join(",")} />
@@ -61,8 +64,6 @@ const App = () => {
                     content="width=device-width,initial-scale=1"
                 />
 
-                <script src="/theme.js" />
-
                 <Meta />
                 <Links />
             </head>
@@ -70,7 +71,7 @@ const App = () => {
             <body className="bg-white transition duration-300 dark:bg-black">
                 <GoogleAnalytics measurementId={measurementId} />
 
-                <ThemeProvider>
+                <ThemeProvider defaultTheme={theme}>
                     <AppProvider>
                         <Outlet />
                     </AppProvider>
