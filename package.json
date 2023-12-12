@@ -65,7 +65,7 @@
         "json5": "^2.2.3",
         "react-dom": "^18.2.0",
         "react-helmet": "^6.0.0",
-        "rehype-external-links": "^2.0.1",
+        "rehype-external-links": "^3.0.0",
         "rehype-img-size": "^1.0.1",
         "rehype-parse": "^8.0.3",
         "rehype-pretty-code": "^0.10.2",
