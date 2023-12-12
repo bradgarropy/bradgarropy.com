@@ -1,61 +1,51 @@
 {
-  "projectName": "bradgarropy.com",
-  "projectOwner": "bradgarropy",
-  "repoType": "github",
-  "repoHost": "https://github.com",
-  "files": [
-    "readme.md",
-    "contributing.md"
-  ],
-  "imageSize": 100,
-  "contributorsPerLine": 7,
-  "contributorsSortAlphabetically": false,
-  "skipCi": false,
-  "contributors": [
-    {
-      "login": "bradgarropy",
-      "name": "Brad Garropy",
-      "avatar_url": "https://avatars.githubusercontent.com/u/11336745?v=4",
-      "profile": "https://bradgarropy.com",
-      "contributions": [
-        "blog",
-        "code",
-        "content",
-        "design",
-        "doc",
-        "infra",
-        "test"
-      ]
-    },
-    {
-      "login": "sleepyArpan",
-      "name": "Arpan Chattopadhyay",
-      "avatar_url": "https://avatars.githubusercontent.com/u/50901152?v=4",
-      "profile": "https://github.com/sleepyArpan",
-      "contributions": [
-        "blog",
-        "bug"
-      ]
-    },
-    {
-      "login": "closetgeekshow",
-      "name": "closetgeekshow",
-      "avatar_url": "https://avatars.githubusercontent.com/u/991289?v=4",
-      "profile": "https://github.com/closetgeekshow",
-      "contributions": [
-        "bug"
-      ]
-    },
-    {
-      "login": "EliasAfara",
-      "name": "Elias Afara",
-      "avatar_url": "https://avatars.githubusercontent.com/u/39487200?v=4",
-      "profile": "https://eliasafara.fr/",
-      "contributions": [
-        "bug"
-      ]
-    }
-  ],
-  "commitType": "docs",
-  "commitConvention": "angular"
+    "projectName": "bradgarropy.com",
+    "projectOwner": "bradgarropy",
+    "repoType": "github",
+    "repoHost": "https://github.com",
+    "files": ["readme.md", "contributing.md"],
+    "imageSize": 100,
+    "contributorsPerLine": 7,
+    "contributorsSortAlphabetically": false,
+    "skipCi": false,
+    "contributors": [
+        {
+            "login": "bradgarropy",
+            "name": "Brad Garropy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/11336745?v=4",
+            "profile": "https://bradgarropy.com",
+            "contributions": [
+                "blog",
+                "code",
+                "content",
+                "design",
+                "doc",
+                "infra",
+                "test"
+            ]
+        },
+        {
+            "login": "sleepyArpan",
+            "name": "Arpan Chattopadhyay",
+            "avatar_url": "https://avatars.githubusercontent.com/u/50901152?v=4",
+            "profile": "https://github.com/sleepyArpan",
+            "contributions": ["blog", "bug"]
+        },
+        {
+            "login": "closetgeekshow",
+            "name": "closetgeekshow",
+            "avatar_url": "https://avatars.githubusercontent.com/u/991289?v=4",
+            "profile": "https://github.com/closetgeekshow",
+            "contributions": ["bug"]
+        },
+        {
+            "login": "EliasAfara",
+            "name": "Elias Afara",
+            "avatar_url": "https://avatars.githubusercontent.com/u/39487200?v=4",
+            "profile": "https://eliasafara.fr/",
+            "contributions": ["bug"]
+        }
+    ],
+    "commitType": "docs",
+    "commitConvention": "angular"
 }
