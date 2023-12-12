@@ -6,7 +6,7 @@ export const loader = async () => {
         User-agent: *
         Allow: /
 
-        Sitemap: https://bradgarropy.com/sitemap.xml
+        Sitemap: https://bradgarropy.com/sitemap.txt
     `
         .trim()
         .split("\n")
