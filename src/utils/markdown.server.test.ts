@@ -150,8 +150,6 @@ describe("transforms markdown", () => {
             "This is an [external link](https://example.com).",
         )
 
-        console.log(html)
-
         expect(html).toEqual(
             expect.stringContaining(
                 // eslint-disable-next-line quotes
