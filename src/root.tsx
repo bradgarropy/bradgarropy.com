@@ -1,4 +1,4 @@
-import type {LinksFunction} from "@remix-run/node"
+import type {LinksFunction, LoaderFunctionArgs} from "@remix-run/node"
 import {json} from "@remix-run/node"
 import type {MetaFunction} from "@remix-run/react"
 import {
@@ -15,18 +15,19 @@ import classnames from "classnames"
 import GoogleAnalytics from "~/components/GoogleAnalytics"
 import {AppProvider} from "~/context/App"
 import {ThemeProvider} from "~/context/Theme"
-import useTheme from "~/hooks/useTheme"
 import styles from "~/styles/tailwind.css"
 import {createImageUrl} from "~/utils/cloudinary"
 import {getMeta} from "~/utils/meta"
+import {getTheme} from "~/utils/session.server"
 
 import pkg from "../package.json"
 
-export const loader = async () => {
+export const loader = async ({request}: LoaderFunctionArgs) => {
     const measurementId =
         process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_ID || ""
 
-    return json({measurementId})
+    const theme = await getTheme(request)
+    return json({measurementId, theme})
 }
 
 export const meta: MetaFunction = () => {
@@ -50,8 +51,7 @@ export const links: LinksFunction = () => {
 }
 
 const App = () => {
-    const {measurementId} = useLoaderData<typeof loader>()
-    const {theme} = useTheme()
+    const {measurementId, theme} = useLoaderData<typeof loader>()
 
     return (
         <html lang="en" className={classnames("overflow-y-scroll", theme)}>
@@ -64,28 +64,19 @@ const App = () => {
                     content="width=device-width,initial-scale=1"
                 />
 
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-                            const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
-                            const colorTheme = mediaQuery.matches ? "dark" : "light"
-
-                            const classes = document.documentElement.classList
-
-                            if (!classes.contains("light") && !classes.contains("dark")) {
-                                classes.add(colorTheme)
-                            }
-                        `,
-                    }}
-                />
-
                 <Meta />
                 <Links />
             </head>
 
             <body className="bg-white transition duration-300 dark:bg-black">
                 <GoogleAnalytics measurementId={measurementId} />
-                <Outlet />
+
+                <ThemeProvider defaultTheme={theme}>
+                    <AppProvider>
+                        <Outlet />
+                    </AppProvider>
+                </ThemeProvider>
+
                 <ScrollRestoration />
                 <Scripts />
                 <LiveReload />
@@ -94,14 +85,4 @@ const App = () => {
     )
 }
 
-const AppWithProviders = () => {
-    return (
-        <ThemeProvider>
-            <AppProvider>
-                <App />
-            </AppProvider>
-        </ThemeProvider>
-    )
-}
-
-export default AppWithProviders
+export default App

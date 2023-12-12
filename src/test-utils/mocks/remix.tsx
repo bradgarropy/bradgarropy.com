@@ -19,13 +19,27 @@ const mockUseSearchParams = () => {
 
 const mockUseLocation = vi.fn().mockReturnValue({pathname: "/"})
 
+const mockSubmit = vi.fn()
+
+const mockUseFetcher = vi.fn().mockReturnValue({
+    submit: mockSubmit,
+})
+
 const actualRemix = vi.importActual("@remix-run/react")
 
 const mockRemix = {
     ...actualRemix,
     Link: MockLink,
+    useFetcher: mockUseFetcher,
     useLocation: mockUseLocation,
     useSearchParams: mockUseSearchParams,
 }
 
-export {mockRemix, mockSearchParams, mockSetSearchParams, mockUseLocation}
+export {
+    mockRemix,
+    mockSearchParams,
+    mockSetSearchParams,
+    mockSubmit,
+    mockUseFetcher,
+    mockUseLocation,
+}
