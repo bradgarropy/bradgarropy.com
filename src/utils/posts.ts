@@ -1,6 +1,7 @@
 import fs from "node:fs"
 import path from "node:path"
 
+import type {Expression} from "fuse.js"
 import Fuse from "fuse.js"
 import matter from "gray-matter"
 
@@ -187,7 +188,7 @@ const getRelatedPosts = (post: PostFrontmatter) => {
 
     fuse.remove(item => item.slug === post.slug)
 
-    const query: Fuse.Expression = {
+    const query: Expression = {
         $or: [
             {title: post.title},
             {topic: post.topic},
