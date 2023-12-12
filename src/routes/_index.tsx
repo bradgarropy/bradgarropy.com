@@ -1,4 +1,4 @@
-import type {HeadersFunction, MetaFunction} from "@remix-run/node"
+import type {MetaFunction} from "@remix-run/node"
 import {json} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 
@@ -14,26 +14,16 @@ export const loader = async () => {
     const latestVideos = await getLatestVideos(2)
     const featuredProjects = await getFeaturedProjects()
 
-    const headers: HeadersInit = {"Cache-Control": "public, s-maxage=86400"}
-
-    return json(
-        {
-            latestPosts,
-            latestVideos,
-            featuredProjects,
-        },
-        {headers},
-    )
+    return json({
+        latestPosts,
+        latestVideos,
+        featuredProjects,
+    })
 }
 
 export const meta: MetaFunction = () => {
     const meta = getMeta({title: "🏠 my home on the web"})
     return meta
-}
-
-export const headers: HeadersFunction = () => {
-    const headers: HeadersInit = {"Cache-Control": "public, s-maxage=86400"}
-    return headers
 }
 
 const IndexRoute = () => {
