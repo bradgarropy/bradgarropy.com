@@ -13,6 +13,7 @@ import {
     NextIcon,
     NodeIcon,
     ReactIcon,
+    RemixIcon,
     SunIcon,
     SvelteIcon,
     TailwindIcon,
@@ -53,6 +54,8 @@ const Icon: FC<IconProps> = ({name, ...props}) => {
             return <NodeIcon {...props} />
         case "react":
             return <ReactIcon {...props} />
+        case "remix":
+            return <RemixIcon {...props} />
         case "sun":
             return <SunIcon {...props} />
         case "svelte":
