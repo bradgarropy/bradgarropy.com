@@ -4,13 +4,15 @@ import {useLoaderData} from "@remix-run/react"
 
 import FourOhFour from "~/components/FourOhFour"
 import Layout from "~/components/Layout"
+import type {Video} from "~/types/video"
 import {getMeta} from "~/utils/meta"
 import {getLatestPost} from "~/utils/posts"
-import {getLatestVideos} from "~/utils/videos"
+// import {getLatestVideos} from "~/utils/videos"
 
 export const loader = async () => {
     const latestPost = getLatestPost()
-    const latestVideos = await getLatestVideos(2)
+    // const latestVideos = await getLatestVideos(2)
+    const latestVideos: Video[] = []
 
     return json({
         latestPost,

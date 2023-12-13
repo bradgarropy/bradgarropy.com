@@ -63,6 +63,11 @@ const getLatestVideo = async (): Promise<Video> => {
     return latestVideo
 }
 
+// Do not call this function now, I'm trying to figure out a way to
+// cache the response so I don't hit the quota limit.
+//
+// Check the quota limit here:
+// https://console.cloud.google.com/apis/api/youtube.googleapis.com/quotas
 const getLatestVideos = async (count = 2): Promise<Video[]> => {
     const response = await http.get<YouTubeSearchResponse>(
         "https://www.googleapis.com/youtube/v3/search",

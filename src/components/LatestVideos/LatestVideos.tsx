@@ -9,6 +9,10 @@ type LatestVideosProps = {
 }
 
 const LatestVideos: FC<LatestVideosProps> = ({latestVideos}) => {
+    if (latestVideos.length === 0) {
+        return <p>⛔️ YouTube API Limit Reached</p>
+    }
+
     return (
         <div className="grid grid-cols-2 justify-items-start gap-4 max-[700px]:grid-cols-1">
             {latestVideos.map(latestVideo => {
