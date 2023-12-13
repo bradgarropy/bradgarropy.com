@@ -1,4 +1,4 @@
-import Link from "@bradgarropy/next-link"
+import {Link} from "@remix-run/react"
 import type {FC} from "react"
 
 import {createImageUrl} from "~/utils/cloudinary"
@@ -10,6 +10,8 @@ const Shirts: FC = () => {
                 <img
                     src={createImageUrl("/pages/home/night-owl.png")}
                     alt="night owl"
+                    width="400"
+                    height="474"
                 />
             </Link>
 
@@ -17,6 +19,8 @@ const Shirts: FC = () => {
                 <img
                     src={createImageUrl("/pages/home/bg-codes.png")}
                     alt="bg codes"
+                    width="400"
+                    height="474"
                 />
             </Link>
 
@@ -25,6 +29,8 @@ const Shirts: FC = () => {
                     src={createImageUrl("/pages/home/cobalt2.png")}
                     className="max-[700px]:hidden"
                     alt="cobalt2"
+                    width="400"
+                    height="473"
                 />
             </Link>
 
@@ -33,6 +39,8 @@ const Shirts: FC = () => {
                     src={createImageUrl("/pages/home/monokai.png")}
                     className="max-[700px]:hidden"
                     alt="monokai"
+                    width="400"
+                    height="473"
                 />
             </Link>
         </div>

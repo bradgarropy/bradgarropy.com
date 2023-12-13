@@ -1,11 +1,12 @@
 import {render, screen} from "@testing-library/react"
+import {expect, test} from "vitest"
 
 import Heading from "~/components/Heading"
 
 test("shows level one", () => {
     const {container} = render(<Heading level={1}>Heading one</Heading>)
 
-    expect(container.querySelector("h1"))
+    expect(container.querySelector("h1")).toBeInTheDocument()
     expect(screen.getByText("Heading one")).toHaveAttribute("id", "heading-one")
 
     expect(screen.getByLabelText("link").parentElement).toHaveAttribute(
@@ -17,7 +18,7 @@ test("shows level one", () => {
 test("shows level two", () => {
     const {container} = render(<Heading level={2}>Heading two</Heading>)
 
-    expect(container.querySelector("h2"))
+    expect(container.querySelector("h2")).toBeInTheDocument()
     expect(screen.getByText("Heading two")).toHaveAttribute("id", "heading-two")
 
     expect(screen.getByLabelText("link").parentElement).toHaveAttribute(
@@ -29,7 +30,7 @@ test("shows level two", () => {
 test("shows level three", () => {
     const {container} = render(<Heading level={3}>Heading three</Heading>)
 
-    expect(container.querySelector("h3"))
+    expect(container.querySelector("h3")).toBeInTheDocument()
 
     expect(screen.getByText("Heading three")).toHaveAttribute(
         "id",

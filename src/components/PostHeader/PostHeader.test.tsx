@@ -1,4 +1,5 @@
 import {render, screen} from "@testing-library/react"
+import {expect, test} from "vitest"
 
 import PostHeader from "~/components/PostHeader"
 import {mockPost} from "~/test-utils/mocks"
@@ -13,10 +14,16 @@ test("shows meta", () => {
         />,
     )
 
-    expect(screen.getByText("January 1, 2021", {exact: false}))
-    expect(screen.getByText(`#${mockPost.frontmatter.topic}`))
-    expect(screen.getByText(mockPost.frontmatter.title))
-    expect(screen.getByText(mockPost.frontmatter.tags[0]))
+    expect(
+        screen.getByText("January 1, 2021", {exact: false}),
+    ).toBeInTheDocument()
+
+    expect(
+        screen.getByText(`#${mockPost.frontmatter.topic}`),
+    ).toBeInTheDocument()
+
+    expect(screen.getByText(mockPost.frontmatter.title)).toBeInTheDocument()
+    expect(screen.getByText(mockPost.frontmatter.tags[0])).toBeInTheDocument()
 })
 
 test("links to topic", () => {

@@ -54,7 +54,7 @@ Thanks for following along and tweet me your themes [@bradgarropy][twitter]!
 [gatsby-transformer-remark]: https://www.gatsbyjs.org/packages/gatsby-transformer-remark
 [prism-themes]: https://github.com/PrismJS/prism/tree/master/themes
 [prism-funky]: https://github.com/PrismJS/prism/blob/master/themes/prism-funky.css
-[prism-funky-css]: https://github.com/bradgarropy/bradgarropy.com/blob/master/src/scss/PrismFunky.scss
+[prism-funky-css]: https://github.com/bradgarropy/bradgarropy.com/blob/main/src/scss/PrismFunky.scss
 [vscode]: https://code.visualstudio.com/
 [vscode-theme]: https://github.com/bradgarropy/vscode-theme
 [twitter]: https://twitter.com/bradgarropy

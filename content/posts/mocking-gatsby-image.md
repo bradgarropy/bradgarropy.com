@@ -40,5 +40,5 @@ Feel free to give this mock a try, and if there's enough interest I can package 
 [gatsby-plugin-image]: https://gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image
 [react]: https://reactjs.org
 [jest]: https://jestjs.io
-[setup]: https://github.com/bradgarropy/bradgarropy.com/blob/master/src/test-utils/setup.js#L9
+[setup]: https://github.com/bradgarropy/bradgarropy.com/blob/main/src/test-utils/setup.js#L9
 [npm]: https://npmjs.com

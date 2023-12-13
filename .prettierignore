@@ -3,9 +3,9 @@
 
 # build
 /.cache
-/.next
+/build
+/public/build
 /tsconfig.tsbuildinfo
-
 
 # test
 /coverage

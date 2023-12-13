@@ -1,4 +1,5 @@
 import {render, screen} from "@testing-library/react"
+import {expect, test} from "vitest"
 
 import Home from "~/components/Home"
 import {
@@ -16,9 +17,9 @@ test("shows home page", () => {
         />,
     )
 
-    expect(screen.getByText("i'm brad garropy"))
-    expect(screen.getByText("blog"))
-    expect(screen.getByText("videos"))
-    expect(screen.getByText("projects"))
-    expect(screen.getByText("podcasts"))
+    expect(screen.getByText("i'm brad garropy")).toBeInTheDocument()
+    expect(screen.getByText("blog")).toBeInTheDocument()
+    expect(screen.getByText("videos")).toBeInTheDocument()
+    expect(screen.getByText("projects")).toBeInTheDocument()
+    expect(screen.getByText("podcasts")).toBeInTheDocument()
 })

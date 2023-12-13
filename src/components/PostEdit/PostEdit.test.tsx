@@ -1,4 +1,5 @@
 import {render, screen} from "@testing-library/react"
+import {expect, test} from "vitest"
 
 import PostEdit from "~/components/PostEdit"
 
@@ -7,6 +8,6 @@ test("shows edit button", () => {
 
     expect(screen.getByText("💻 edit on github")).toHaveAttribute(
         "href",
-        "https://github.com/bradgarropy/bradgarropy.com/edit/master/content/posts/my-test-post.md",
+        "https://github.com/bradgarropy/bradgarropy.com/edit/main/content/posts/my-test-post.md",
     )
 })

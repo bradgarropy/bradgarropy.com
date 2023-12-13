@@ -1,20 +1,34 @@
 import {http} from "@bradgarropy/http"
 import {render, screen, waitFor} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
+import {expect, test, vi} from "vitest"
 
 import Newsletter from "~/components/Newsletter"
 
-jest.mock("@bradgarropy/http")
+vi.mock("@bradgarropy/http")
 
 test("shows newsletter", () => {
     render(<Newsletter />)
 
-    expect(screen.getByText("💻 side projects", {exact: false}))
-    expect(screen.getByText("📰 web dev news", {exact: false}))
-    expect(screen.getByText("⚡ tech opinions", {exact: false}))
+    expect(
+        screen.getByText("💻 side projects", {exact: false}),
+    ).toBeInTheDocument()
 
-    expect(screen.getByPlaceholderText("email@example.com"))
-    expect(screen.getByText("📧 subscribe"))
+    expect(
+        screen.getByText("📰 web dev news", {exact: false}),
+    ).toBeInTheDocument()
+
+    expect(
+        screen.getByText("⚡ tech opinions", {exact: false}),
+    ).toBeInTheDocument()
+
+    expect(screen.getByPlaceholderText("email@example.com")).toBeInTheDocument()
+    expect(screen.getByPlaceholderText("email@example.com")).toHaveAttribute(
+        "autocomplete",
+        "email",
+    )
+
+    expect(screen.getByText("📧 subscribe")).toBeInTheDocument()
 })
 
 test("subscribes", async () => {
@@ -36,8 +50,7 @@ test("subscribes", async () => {
         },
     })
 
-    waitFor(() => {
-        const subscribedButton = screen.getByText("💜 subscribed")
-        expect(subscribedButton)
+    await waitFor(() => {
+        expect(screen.getByText("💜 subscribed")).toBeInTheDocument()
     })
 })

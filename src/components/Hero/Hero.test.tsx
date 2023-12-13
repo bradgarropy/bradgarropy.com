@@ -1,4 +1,5 @@
 import {render, screen} from "@testing-library/react"
+import {expect, test} from "vitest"
 
 import Hero from "~/components/Hero"
 
@@ -13,8 +14,8 @@ test("shows hero", () => {
         "https://instagram.com/bradgarropy",
     )
 
-    expect(screen.getByText("lead frontend developer"))
-    expect(screen.getByText("growing content creator"))
-    expect(screen.getByText("side project connoisseur"))
-    expect(screen.getByText("open source maintainer"))
+    expect(screen.getByText("lead frontend developer")).toBeInTheDocument()
+    expect(screen.getByText("growing content creator")).toBeInTheDocument()
+    expect(screen.getByText("side project connoisseur")).toBeInTheDocument()
+    expect(screen.getByText("open source maintainer")).toBeInTheDocument()
 })

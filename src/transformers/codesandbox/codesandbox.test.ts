@@ -1,3 +1,5 @@
+import {expect, test} from "vitest"
+
 import {codesandboxTransformer} from "~/transformers/codesandbox"
 
 test("detects codesandbox links", () => {
@@ -22,7 +24,7 @@ test("transforms codesandbox links", () => {
     const node = new DOMParser().parseFromString(html, "text/html")
     const iframe = node.querySelector("iframe")
 
-    expect(iframe.src).toEqual(
+    expect(iframe?.src).toEqual(
         "https://codesandbox.io/embed/exciting-pascal-j5hwu",
     )
 })

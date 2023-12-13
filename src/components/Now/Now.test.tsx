@@ -1,4 +1,5 @@
 import {render, screen} from "@testing-library/react"
+import {expect, test} from "vitest"
 
 import Now from "~/components/Now"
 import {mockNewerNow, mockNow, mockOlderNow} from "~/test-utils/mocks"
@@ -6,11 +7,11 @@ import {mockNewerNow, mockNow, mockOlderNow} from "~/test-utils/mocks"
 test("shows now", () => {
     render(<Now now={mockNow} newer={mockNewerNow} older={mockOlderNow} />)
 
-    expect(screen.getByText("🧭 now"))
-    expect(screen.getByText("December 31, 2020"))
-    expect(screen.getByText("This is a now."))
-    expect(screen.getByText("derek sivers"))
-    expect(screen.getByText("nownownow"))
+    expect(screen.getByText("🧭 now")).toBeInTheDocument()
+    expect(screen.getByText("December 31, 2020")).toBeInTheDocument()
+    expect(screen.getByText("This is a now.")).toBeInTheDocument()
+    expect(screen.getByText("derek sivers")).toBeInTheDocument()
+    expect(screen.getByText("nownownow")).toBeInTheDocument()
 })
 
 test("navigates nows", () => {
