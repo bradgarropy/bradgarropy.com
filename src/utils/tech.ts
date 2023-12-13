@@ -4,6 +4,7 @@ const technologies = [
     "next",
     "node",
     "react",
+    "remix",
     "svelte",
     "tailwind",
     "typescript",

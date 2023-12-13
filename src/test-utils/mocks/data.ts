@@ -298,6 +298,7 @@ const mockRepositoryTopics: string[] = [
     "next",
     "node",
     "react",
+    "remix",
     "svelte",
     "tailwind",
     "typescript",
