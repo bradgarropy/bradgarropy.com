@@ -58,7 +58,7 @@ Now you're all set to build some awesome things using serverless functions! Hit 
 
 [jqq]: https://twitter.com/jamesqquick
 [cli]: https://cli.netlify.com
-[templates]: https://github.com/netlify/cli/tree/master/src/functions-templates/js
+[templates]: https://github.com/netlify/cli/tree/main/src/functions-templates/js
 [graphql]: https://www.apollographql.com
 [stripe]: https://stripe.com
 [fauna]: https://fauna.com

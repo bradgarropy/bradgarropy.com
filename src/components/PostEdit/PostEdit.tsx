@@ -7,7 +7,7 @@ type PostEditProps = {
 }
 
 const PostEdit: FC<PostEditProps> = ({slug}) => {
-    const edit = `https://github.com/bradgarropy/bradgarropy.com/edit/master/content/posts/${slug}.md`
+    const edit = `https://github.com/bradgarropy/bradgarropy.com/edit/main/content/posts/${slug}.md`
 
     return (
         <LinkButton to={edit} reverse>

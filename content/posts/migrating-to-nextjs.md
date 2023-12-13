@@ -114,8 +114,8 @@ Like I said at the beginning, this migration is a tradeoff, but I think I'm maki
 [diff]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/pr-diff.png
 [saas]: https://bradgarropy.com/blog/goals-for-2022#products
 [repo]: https://github.com/bradgarropy/bradgarropy.com
-[use-markdown]: https://github.com/bradgarropy/bradgarropy.com/blob/master/src/hooks/useMarkdown/useMarkdown.tsx
-[transform-markdown]: https://github.com/bradgarropy/bradgarropy.com/blob/master/src/utils/markdown.ts#L36
+[use-markdown]: https://github.com/bradgarropy/bradgarropy.com/blob/main/src/hooks/useMarkdown/useMarkdown.tsx
+[transform-markdown]: https://github.com/bradgarropy/bradgarropy.com/blob/main/src/utils/markdown.ts#L36
 [next-remote-watch]: https://github.com/hashicorp/next-remote-watch
 [plugins]: https://gatsbyjs.com/plugins
 [captivate]: https://webdevweekly.captivate.fm

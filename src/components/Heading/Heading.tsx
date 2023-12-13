@@ -6,10 +6,12 @@ import Icon from "~/components/Icon"
 type HeadingProps = {
     level: 1 | 2 | 3
     id?: string
-    children?: ReactNode
+    children: ReactNode
 }
 
 const Heading: FC<HeadingProps> = ({level, id, children}) => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     const text = typeof children === "string" ? children : children[0]
 
     const slug = id

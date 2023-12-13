@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "Montserrat";
+        src: url("/fonts/montserrat.ttf") format("truetype");
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: "Open Sans";
+        src: url("/fonts/open-sans.ttf") format("truetype");
+        font-display: swap;
+    }
+}
+
+@layer utilities {
+    .text-shadow-2 {
+        text-shadow: 2px 2px theme("colors.purple.400");
+    }
+    .text-shadow-3 {
+        text-shadow: 3px 3px theme("colors.purple.400");
+    }
+}
+
+span[data-line] {
+    padding-inline: 1.5rem;
+}
+
+span[data-highlighted-line] {
+    background-color: #c792ea66;
+    border-left: 4px solid #c792ea;
+}

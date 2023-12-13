@@ -14,7 +14,10 @@ const useLive = (): boolean => {
         execute()
 
         const id = setInterval(() => execute(), 60000)
-        return () => clearInterval(id)
+
+        return () => {
+            clearInterval(id)
+        }
     }, [])
 
     return live

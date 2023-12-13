@@ -1,4 +1,5 @@
 import {render, screen} from "@testing-library/react"
+import {expect, test} from "vitest"
 
 import LatestVideos from "~/components/LatestVideos"
 import {mockVideos} from "~/test-utils/mocks"

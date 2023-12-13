@@ -1,5 +1,7 @@
 import {render, screen} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
+import type {Mock} from "vitest"
+import {beforeEach, describe, expect, test, vi} from "vitest"
 
 import MobileNavigation from "~/components/MobileNavigation"
 import useApp from "~/hooks/useApp"
@@ -8,9 +10,9 @@ import {generateAppCtx} from "~/test-utils/generators"
 const mockAppCtxOpen = generateAppCtx({open: true})
 const mockAppCtxClosed = generateAppCtx({open: false})
 
-jest.mock("~/hooks/useApp")
+vi.mock("~/hooks/useApp")
 
-const mockUseApp = useApp as jest.Mock
+const mockUseApp = useApp as Mock
 
 const links = ["blog", "now", "uses", "hire me", "contact"]
 
@@ -21,7 +23,7 @@ describe("closed mobile navigation", () => {
 
     test("shows hamburger", () => {
         render(<MobileNavigation />)
-        expect(screen.getByLabelText("menu"))
+        expect(screen.getByLabelText("menu")).toBeInTheDocument()
     })
 
     test("opens navigation", async () => {
@@ -41,8 +43,11 @@ describe("open mobile navigation", () => {
     test("shows menu", () => {
         render(<MobileNavigation />)
 
-        expect(screen.getByLabelText("close"))
-        links.forEach(link => expect(screen.getByText(link)))
+        expect(screen.getByLabelText("close")).toBeInTheDocument()
+
+        links.forEach(link => {
+            expect(screen.getByText(link)).toBeInTheDocument()
+        })
     })
 
     test("closes navigation", async () => {

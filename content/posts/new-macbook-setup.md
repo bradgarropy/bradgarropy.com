@@ -115,11 +115,14 @@ I recently got a new [M1 MacBook Pro][macbook-pro], and I wanted to document exa
 -   [Elgato Stream Deck][elgato]
 -   [Elgato Wave Link][elgato]
 -   [OBS][obs]
--   [Spotify][spotify]
 -   [vscode][vscode]
     -   Update
     -   Sign in with GitHub
     -   [Install shell command][vscode-cli]
+
+## 🖋️ fonts
+
+-   [Cascadia Code][cascadia-code]
 
 ## 📦 development packages
 
@@ -149,7 +152,6 @@ npm install --global vercel
 [vscode]: https://code.visualstudio.com/download
 [discord]: https://discord.com/download
 [obs]: https://obsproject.com/download
-[spotify]: https://www.spotify.com/us/download
 [elgato]: https://www.elgato.com/en/downloads
 [homebrew]: https://brew.sh
 [git]: https://git-scm.com
@@ -168,3 +170,4 @@ npm install --global vercel
 [keyboard]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/keyboard.png
 [mouse]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/mouse.png
 [finder]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/finder.png
+[cascadia-code]: https://github.com/microsoft/cascadia-code

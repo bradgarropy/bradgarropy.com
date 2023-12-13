@@ -1,11 +1,12 @@
 import {render, screen} from "@testing-library/react"
+import {expect, test} from "vitest"
 
 import LinkButton from "~/components/LinkButton"
 
 test("shows link", () => {
     render(<LinkButton to="/">testing</LinkButton>)
 
-    expect(screen.getByText("testing"))
+    expect(screen.getByText("testing")).toBeInTheDocument()
     expect(screen.getByText("testing")).not.toHaveClass("reverse")
 })
 
@@ -16,7 +17,7 @@ test("shows reverse", () => {
         </LinkButton>,
     )
 
-    expect(screen.getByText("testing"))
+    expect(screen.getByText("testing")).toBeInTheDocument()
     expect(screen.getByText("testing")).toHaveClass("shadow-reverse-box")
 })
 
@@ -27,6 +28,6 @@ test("shows disabled", () => {
         </LinkButton>,
     )
 
-    expect(screen.getByText("testing"))
+    expect(screen.getByText("testing")).toBeInTheDocument()
     expect(screen.getByText("testing")).toHaveClass("shadow-gray-300")
 })

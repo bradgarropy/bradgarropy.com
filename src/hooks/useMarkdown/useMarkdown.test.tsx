@@ -1,5 +1,5 @@
-import {render, screen} from "@testing-library/react"
-import {renderHook} from "@testing-library/react"
+import {render, renderHook, screen} from "@testing-library/react"
+import {describe, expect, test} from "vitest"
 
 import useMarkdown from "~/hooks/useMarkdown"
 
@@ -21,7 +21,9 @@ describe("renders links", () => {
         const name = "example"
 
         const {result} = renderHook(() =>
-            useMarkdown(`<a href="https://${name}.com">${name}</a>`),
+            useMarkdown(
+                `<a href="https://${name}.com" rel="noopener noreferrer" target="_blank">${name}</a>`,
+            ),
         )
 
         render(result.current)
@@ -44,7 +46,7 @@ test("renders images", () => {
     )
 
     render(result.current)
-    expect(screen.getByAltText(name))
+    expect(screen.getByAltText(name)).toBeInTheDocument()
 })
 
 describe("renders headers", () => {
@@ -54,7 +56,7 @@ describe("renders headers", () => {
 
         const icon = screen.getByLabelText("link")
         const link = icon.parentElement
-        const heading = link.parentElement
+        const heading = link?.parentElement
 
         expect(link).toHaveAttribute("href", "#heading-one")
         expect(heading).toHaveAttribute("id", "heading-one")
@@ -66,7 +68,7 @@ describe("renders headers", () => {
 
         const icon = screen.getByLabelText("link")
         const link = icon.parentElement
-        const heading = link.parentElement
+        const heading = link?.parentElement
 
         expect(link).toHaveAttribute("href", "#heading-two")
         expect(heading).toHaveAttribute("id", "heading-two")
@@ -78,7 +80,7 @@ describe("renders headers", () => {
 
         const icon = screen.getByLabelText("link")
         const link = icon.parentElement
-        const heading = link.parentElement
+        const heading = link?.parentElement
 
         expect(link).toHaveAttribute("href", "#heading-three")
         expect(heading).toHaveAttribute("id", "heading-three")

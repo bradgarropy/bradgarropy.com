@@ -1,3 +1,5 @@
+import {expect, test} from "vitest"
+
 import {createImageUrl, createYouTubeUrl} from "~/utils/cloudinary"
 
 test("creates internal image url", () => {

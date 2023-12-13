@@ -1,6 +1,5 @@
 import classnames from "classnames"
 import type {FC, ReactElement} from "react"
-import React from "react"
 
 type MarkdownProps = {
     content: ReactElement

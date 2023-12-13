@@ -1,22 +1,21 @@
 import {render, screen} from "@testing-library/react"
+import {expect, test} from "vitest"
 
 import Connect from "~/components/Connect"
 
 test("shows connect", () => {
     render(<Connect />)
 
-    expect(screen.getByAltText("bg"))
-    expect(screen.getByText("Thanks for chatting with me!"))
-    expect(screen.getByText("Let's connect on these platforms."))
+    expect(screen.getByAltText("bg")).toBeInTheDocument()
+    expect(screen.getByText("Thanks for chatting with me!")).toBeInTheDocument()
 
-    const labels = [
-        "twitch",
-        "github",
-        "youtube",
-        "twitter",
-        "instagram",
-        "discord",
-    ]
+    expect(
+        screen.getByText("Let's connect on these platforms."),
+    ).toBeInTheDocument()
 
-    labels.forEach(label => expect(screen.getByLabelText(label)))
+    const labels = ["twitch", "github", "youtube", "x", "instagram", "discord"]
+
+    labels.forEach(label => {
+        expect(screen.getByLabelText(label)).toBeInTheDocument()
+    })
 })

@@ -74,4 +74,4 @@ Overall I'm very happy with my migration to [Tailwind][tailwind]. It took longer
 [configuration]: https://tailwindcss.com/docs/configuration
 [remix]: https://remix.run
 [next]: https://nextjs.org
-[tailwind-config]: https://github.com/bradgarropy/bradgarropy.com/blob/master/tailwind.config.js
+[tailwind-config]: https://github.com/bradgarropy/bradgarropy.com/blob/main/tailwind.config.js

@@ -1,3 +1,5 @@
+import {expect, test} from "vitest"
+
 import {mockRepositoryTopics} from "~/test-utils/mocks"
 import {getTechnologies, technologies} from "~/utils/tech"
 
