@@ -7,21 +7,15 @@ If you want to know more details or have any questions, ask me in my [AMA][ama].
 
 ## 🏠 home office
 
-I use my home office as a place to stream, play games, and work on personal projects. This setup is based around a custom built [NZXT][nzxt] themed Windows PC sitting under an [UPLIFT Desk][uplift].
+I use my home office as a place to stream, podcast, and code. This setup was recently slimmed down to just the essentials, which are kept on an [UPLIFT Desk][uplift].
 
 ![home office][home-office]
 
-### 💻 custom pc
+### 💻 laptop
 
-[NZXT N7 Z390 Motherboard][mobo]  
-[Intel i7 9700K CPU][cpu]  
-[NZXT Kraken X62 CPU Cooler][cooler]  
-[Samsung 970 Evo Plus M.2 SSD 1TB][ssd-tb]  
-[Samsung 970 Evo Plus M.2 SSD 500GB][ssd-gb]  
-[Corsair Vengeance RGB Pro Memory 32GB][ram]  
-[NVIDIA 2080 RTX Super Graphics Card][gpu]  
-[NZXT E 850W Power Supply][psu]  
-[NZXT H510i Case][case]
+I used to have a custom PC, but I stopped playing games on the computer, so I was able to ditch the desktop and rely solely on a laptop.
+
+[Apple 16" M1 MacBook Pro][macbook]
 
 ### ⌨️ accessories
 
@@ -42,10 +36,10 @@ I'm getting more serious about [streaming][stream] my coding sessions, and now I
 [Sigma 16mm f1.4 Lens][sigma]  
 [Elgato Cam Link 4K][camlink]  
 [Elgato Multi Mount][multi-mount]  
-[Elgato Stream Deck Mini][stream-deck]  
+[Elgato Stream Deck+][stream-deck]  
 [Rode PSA1 Boom Arm][psa1]  
 [Shure SM7B Microphone][sm7b]  
-[TC Helicon GoXLR][goxlr]
+[Elgato Wave XLR][wave-xlr]
 
 ## 👨🏼‍💻 software
 
@@ -58,32 +52,23 @@ Regardless of what computer I'm on, I use these applications. As you may guess, 
 [Insomnia][insomnia]  
 [OBS Studio][obs]  
 [GitHub CLI][github-cli]  
-[carbon][carbon]
+[Ray][ray]
 
 ## 🎧 electronics
 
 These pieces of tech are always within reach.
 
-[Google Pixel 6][pixel]  
-[Google Nest Mini][google-nest]  
-[Google Pixel Buds A-Series][pixel-buds]  
-[Fossil Gen 6 Smartwatch][gen-6]  
-[Sony WH-1000XM3 Headphones][wh-1000mx3]
+[Apple iPhone 14 Pro][iphone]
+[Apple AirPods Pro (2nd gen)][airpods]  
+[Apple Watch Series 9][watch]  
+[Sony WH-1000XM3 Headphones][wh-1000mx3]  
+[Nintento Switch OLED][switch]
 
 [developer]: https://bradgarropy.com/topic/coding
 [tech]: https://bradgarropy.com/topic/tech
 [ama]: https://bradgarropy.com/ama
-[nzxt]: https://www.nzxt.com
 [home-office]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/pages/uses/home-office.jpg
-[mobo]: https://www.amazon.com/NZXT-Z390-N7-Z39XT-W1-Motherboard-Wireless-AC/dp/B07ZGFPLK3?tag=bradgarropy00-20
-[cpu]: https://www.amazon.com/Intel-i7-9700K-Desktop-Processor-Unlocked/dp/B07HHN6KBZ?tag=bradgarropy00-20
-[cooler]: https://www.amazon.com/Kraken-280mm-Water-Cooling-Bracket/dp/B06XS9QNPS?tag=bradgarropy00-20
-[ssd-tb]: https://www.amazon.com/Samsung-970-EVO-Plus-MZ-V7S500B/dp/B07MFZY2F2?tag=bradgarropy00-20
-[ssd-gb]: https://www.amazon.com/Samsung-970-EVO-Plus-MZ-V7S500B/dp/B07M7Q21N7?tag=bradgarropy00-20
-[ram]: https://www.amazon.com/Corsair-Vengeance-PC4-25600-Desktop-Memory/dp/B07RJXBMM7?tag=bradgarropy00-20
-[gpu]: https://www.amazon.com/NVIDIA-GeForce-Super-Founders-Graphics/dp/B07W3P4PC2?tag=bradgarropy00-20
-[psu]: https://www.amazon.com/NP-1PM-E850A-Modular-Digital-Supply-Certified/dp/B07CGCFWJY?tag=bradgarropy00-20
-[case]: https://www.amazon.com/NZXT-H510i-Mid-Tower-Integrated-Water-Cooling/dp/B07SB3B1Z5?tag=bradgarropy00-20
+[macbook]: https://www.amazon.com/Apple-MacBook-16-inch-10%E2%80%91core-16%E2%80%91core/dp/B09JQKBQSB?tag=bradgarropy00-20
 [ctrl]: https://drop.com/buy/drop-ctrl-high-profile-mechanical-keyboard
 [naos]: https://www.amazon.com/gp/product/B00ANIRU7U?tag=bradgarropy00-20
 [propus]: https://www.amazon.com/gp/product/B004J35DYW?tag=bradgarropy00-20
@@ -92,12 +77,12 @@ These pieces of tech are always within reach.
 [google-nest]: https://store.google.com/product/google_nest_mini
 [stream]: https://bradgarropy.com/stream
 [sm7b]: https://www.amazon.com/Shure-SM7B-Cardioid-Dynamic-Microphone/dp/B0002E4Z8M?tag=bradgarropy00-20
-[goxlr]: https://www.amazon.com/GoXLR-Mixer-Sampler-Voice-Streamers/dp/B07JKNG4NV?tag=bradgarropy00-20
+[wave-xlr]: https://www.amazon.com/Elgato-XLR-Solution-Microphone-Broadcasting/dp/B09738CKKX?tag=bradgarropy00-20
 [psa1]: https://www.amazon.com/gp/product/B001D7UYBO?tag=bradgarropy00-20
 [a6000]: https://www.amazon.com/Sony-Mirrorless-Digitial-3-0-Inch-16-50mm/dp/B00I8BICB2?tag=bradgarropy00-20
 [sigma]: https://www.amazon.com/Sigma-16mm-Contemporary-Lens-Sony/dp/B077BWD2BB?tag=bradgarropy00-20
 [camlink]: https://www.amazon.com/Elgato-Cam-Link-Broadcast-Camcorder/dp/B07K3FN5MR?tag=bradgarropy00-20
-[stream-deck]: https://www.amazon.com/Elgato-Stream-Deck-Mini-customizable/dp/B07DYRS1WH?tag=bradgarropy00-20
+[stream-deck]: https://www.amazon.com/Elgato-Production-Controller-Streaming-Customizable/dp/B0BJL8SJ59?tag=bradgarropy00-20
 [multi-mount]: https://www.elgato.com/en/gaming/multi-mount
 [key-light]: https://www.elgato.com/en/gaming/key-light
 [vscode]: https://code.visualstudio.com
@@ -105,11 +90,12 @@ These pieces of tech are always within reach.
 [figma]: https://www.figma.com
 [obs]: https://obsproject.com
 [github-cli]: https://cli.github.com
-[carbon]: https://carbon.now.sh
-[pixel]: https://store.google.com/product/pixel_6
-[pixel-buds]: https://store.google.com/product/pixel_buds_a_series
-[gen-6]: https://www.fossil.com/en-us/products/gen-6-smartwatch-brown-leather/FTW4062V.html
+[ray]: https://ray.so
+[iphone]: https://www.apple.com/shop/buy-iphone/iphone-14
+[airpods]: https://www.amazon.com/Apple-Generation-Cancelling-Transparency-Personalized/dp/B0CHWRXH8B?tag=bradgarropy00-20
+[watch]: https://www.amazon.com/Apple-Cellular-Smartwatch-Midnight-Aluminum/dp/B0CHXB6CNY?tag=bradgarropy00-20
 [wh-1000mx3]: https://www.amazon.com/gp/product/B07G4MNFS1?tag=bradgarropy00-20
 [discord]: https://discord.com
 [insomnia]: https://insomnia.rest
 [uplift]: https://www.upliftdesk.com/uplift-4-leg-standing-desk-v2-v2-commercial
+[switch]: https://www.amazon.com/Nintendo-Switch-OLED-Model-Neon-Joy/dp/B098RKWHHZ?tag=bradgarropy00-20
