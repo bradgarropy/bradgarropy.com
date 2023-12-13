@@ -58,7 +58,7 @@ Regardless of what computer I'm on, I use these applications. As you may guess, 
 
 These pieces of tech are always within reach.
 
-[Apple iPhone 14 Pro][iphone]
+[Apple iPhone 14 Pro][iphone]  
 [Apple AirPods Pro (2nd gen)][airpods]  
 [Apple Watch Series 9][watch]  
 [Sony WH-1000XM3 Headphones][wh-1000mx3]  
