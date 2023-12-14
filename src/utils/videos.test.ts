@@ -7,7 +7,7 @@ import {
     mockYoutubeErrorResponse,
     mockYoutubeResponse,
 } from "~/test-utils/mocks"
-import {getLatestVideo, getLatestVideos} from "~/utils/videos"
+import {getLatestVideo, getLatestVideos, videoCache} from "~/utils/videos"
 
 vi.mock("@bradgarropy/http")
 
@@ -28,6 +28,7 @@ test("gets latest videos", async () => {
 })
 
 test("handles youtube error", async () => {
+    vi.spyOn(videoCache, "get").mockReturnValue(undefined)
     mockGet.mockResolvedValue(mockYoutubeErrorResponse)
 
     const latestVideos = await getLatestVideos()
