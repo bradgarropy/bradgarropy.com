@@ -1,6 +1,12 @@
 import {http} from "@bradgarropy/http"
+import TTLCache from "@isaacs/ttlcache"
 
 import type {Video} from "~/types/video"
+
+const cache = new TTLCache<"latestVideos", Video[]>({
+    max: 1,
+    ttl: 1000 * 60 * 60,
+})
 
 type YouTubeSearchResponse = {
     kind: string
@@ -69,6 +75,18 @@ const getLatestVideo = async (): Promise<Video> => {
 // Check the quota limit here:
 // https://console.cloud.google.com/apis/api/youtube.googleapis.com/quotas
 const getLatestVideos = async (count = 2): Promise<Video[]> => {
+    console.log("getLatestVideos")
+
+    const cachedVideos = cache.get("latestVideos")
+
+    if (cachedVideos) {
+        console.log("cache hit")
+        console.log(cache.getRemainingTTL("latestVideos"))
+        return cachedVideos
+    } else {
+        console.log("cache miss")
+    }
+
     const response = await http.get<YouTubeSearchResponse>(
         "https://www.googleapis.com/youtube/v3/search",
         {
@@ -84,6 +102,7 @@ const getLatestVideos = async (count = 2): Promise<Video[]> => {
     )
 
     if (response.error?.code === 403) {
+        console.log("youtube quota limit reached")
         return []
     }
 
@@ -100,6 +119,8 @@ const getLatestVideos = async (count = 2): Promise<Video[]> => {
         return video
     })
 
+    console.log("updated cache")
+    cache.set("latestVideos", videos)
     return videos
 }
 
