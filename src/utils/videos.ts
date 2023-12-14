@@ -3,7 +3,7 @@ import TTLCache from "@isaacs/ttlcache"
 
 import type {Video} from "~/types/video"
 
-const cache = new TTLCache<"latestVideos", Video[]>({
+const videoCache = new TTLCache<"videos", Video[]>({
     max: 1,
     ttl: 1000 * 60 * 60,
 })
@@ -77,11 +77,11 @@ const getLatestVideo = async (): Promise<Video> => {
 const getLatestVideos = async (count = 2): Promise<Video[]> => {
     console.log("getLatestVideos")
 
-    const cachedVideos = cache.get("latestVideos")
+    const cachedVideos = videoCache.get("videos")
 
     if (cachedVideos) {
         console.log("cache hit")
-        console.log(cache.getRemainingTTL("latestVideos"))
+        console.log(videoCache.getRemainingTTL("videos"))
         return cachedVideos
     } else {
         console.log("cache miss")
@@ -120,8 +120,8 @@ const getLatestVideos = async (count = 2): Promise<Video[]> => {
     })
 
     console.log("updated cache")
-    cache.set("latestVideos", videos)
+    videoCache.set("videos", videos)
     return videos
 }
 
-export {getLatestVideo, getLatestVideos}
+export {getLatestVideo, getLatestVideos, videoCache}
