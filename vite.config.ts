@@ -1,12 +1,20 @@
+import {unstable_vitePlugin as remix} from "@remix-run/dev"
 import react from "@vitejs/plugin-react"
 import tsconfigPaths from "vite-tsconfig-paths"
 import {defineConfig} from "vitest/config"
 
 const config = defineConfig({
-    passWithNoTests: true,
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    plugins: [tsconfigPaths(), react()],
+    plugins: [
+        process.env.VITEST
+            ? react()
+            : remix({
+                  appDirectory: "src",
+                  future: {},
+                  ignoredRouteFiles: ["**/.*"],
+                  serverModuleFormat: "esm",
+              }),
+        tsconfigPaths(),
+    ],
     test: {
         clearMocks: true,
         coverage: {
@@ -20,6 +28,7 @@ const config = defineConfig({
         },
         environment: "jsdom",
         globals: false,
+        passWithNoTests: true,
         setupFiles: ["src/test-utils/setup.tsx"],
     },
 })
