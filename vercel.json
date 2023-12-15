@@ -4,6 +4,7 @@
     "devCommand": "npm start",
     "framework": "remix",
     "installCommand": "npm install",
+    "outputDirectory": "build/client",
     "redirects": [
         {
             "source": "/ama",
