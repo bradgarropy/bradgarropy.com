@@ -1,11 +1,14 @@
 import {copyFileSync, cpSync} from "node:fs"
 
-cpSync("node_modules/shiki/themes", "build/shiki/themes", {recursive: true})
-cpSync("node_modules/shiki/languages", "build/shiki/languages", {
+cpSync("node_modules/shikiji/dist/themes", "build/shikiji/themes", {
+    recursive: true,
+})
+
+cpSync("node_modules/shikiji/dist/langs", "build/shikiji/langs", {
     recursive: true,
 })
 
 copyFileSync(
     "node_modules/shades-of-purple/themes/shades-of-purple-color-theme.json",
-    "build/shiki/themes/shades-of-purple.json",
+    "build/shikiji/themes/shades-of-purple.json",
 )

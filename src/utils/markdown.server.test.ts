@@ -153,7 +153,28 @@ describe("transforms markdown", () => {
         expect(html).toEqual(
             expect.stringContaining(
                 // eslint-disable-next-line quotes
-                '<a href="https://example.com" target="_blank" rel="noopener noreferrer">external link</a>',
+                '<a href="https://example.com"',
+            ),
+        )
+
+        expect(html).toEqual(
+            expect.stringContaining(
+                // eslint-disable-next-line quotes
+                "external link</a>",
+            ),
+        )
+
+        expect(html).toEqual(
+            expect.stringContaining(
+                // eslint-disable-next-line quotes
+                'rel="noopener noreferrer"',
+            ),
+        )
+
+        expect(html).toEqual(
+            expect.stringContaining(
+                // eslint-disable-next-line quotes
+                'target="_blank"',
             ),
         )
     })

@@ -47,7 +47,7 @@ const useMarkdown = (html: string) => {
         })
 
     const file = processor.processSync(html)
-    const markdown = file.result
+    const markdown = file.result as JSX.Element
 
     return markdown
 }

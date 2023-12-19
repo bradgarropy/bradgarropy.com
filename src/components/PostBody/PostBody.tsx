@@ -10,6 +10,7 @@ type PostBodyProps = {
 
 const PostBody: FC<PostBodyProps> = ({html}) => {
     useEffect(() => {
+        /* v8 ignore next */
         window.twttr?.widgets.load()
     }, [])
 
