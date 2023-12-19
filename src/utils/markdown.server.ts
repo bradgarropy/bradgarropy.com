@@ -25,9 +25,6 @@ import {twitterTransformer} from "~/transformers/twitter"
 import {youtubeTransformer} from "~/transformers/youtube"
 import type {Markdown} from "~/types/markdown"
 
-console.log(remarkEmbedder)
-console.log(remarkEmbedder.default)
-
 const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
     const nowPath = path.join(process.cwd(), `content/pages/${slug}.md`)
 
