@@ -99,7 +99,7 @@
         "@types/react": "^18.0.31",
         "@types/react-dom": "^18.0.11",
         "@vitejs/plugin-react": "^4.2.1",
-        "@vitest/coverage-istanbul": "^1.0.2",
+        "@vitest/coverage-v8": "^1.1.0",
         "all-contributors-cli": "^6.24.0",
         "eslint": "^8.37.0",
         "eslint-config-prettier": "^9.0.0",

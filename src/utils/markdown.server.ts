@@ -67,16 +67,20 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
         .use(remarkGfm)
         .use(remarkUnwrapImages)
         .use(remarkInlineLinks)
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
-        .use(process.env.VITEST ? remarkEmbedder : remarkEmbedder.default, {
-            transformers: [
-                codesandboxTransformer,
-                twitchTransformer,
-                twitterTransformer,
-                youtubeTransformer,
-            ],
-        })
+        .use(
+            /* v8 ignore next 3 */
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
+            process.env.VITEST ? remarkEmbedder : remarkEmbedder.default,
+            {
+                transformers: [
+                    codesandboxTransformer,
+                    twitchTransformer,
+                    twitterTransformer,
+                    youtubeTransformer,
+                ],
+            },
+        )
         .use(remarkRehype, {allowDangerousHtml: true})
         .use(rehypePrettyCode, options)
         .use(rehypeExternalLinks, {

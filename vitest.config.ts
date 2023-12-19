@@ -13,7 +13,7 @@ const config = defineConfig({
             clean: true,
             cleanOnRerun: true,
             enabled: true,
-            provider: "istanbul",
+            provider: "v8",
             reporter: ["text", "lcov"],
             reportOnFailure: false,
         },
