@@ -16,7 +16,7 @@ import remarkInlineLinks from "remark-inline-links"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
 import remarkUnwrapImages from "remark-unwrap-images"
-import {getHighlighter} from "shiki"
+import {getHighlighter} from "shikiji"
 import {unified} from "unified"
 
 import {codesandboxTransformer} from "~/transformers/codesandbox"
@@ -42,7 +42,7 @@ const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
 const transformMarkdown = async (markdown: string): Promise<string> => {
     const themePath = path.join(
         process.cwd(),
-        "build/shiki/themes/shades-of-purple.json",
+        "build/shikiji/themes/shades-of-purple.json",
     )
 
     const theme = fs.readFileSync(themePath, "utf8")
@@ -52,13 +52,12 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
         keepBackground: true,
         getHighlighter: () =>
             getHighlighter({
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-expect-error
                 theme: json5.parse(theme),
                 paths: {
-                    languages: path.join(
-                        process.cwd(),
-                        "build/shiki/languages",
-                    ),
-                    themes: path.join(process.cwd(), "build/shiki/themes"),
+                    languages: path.join(process.cwd(), "build/shikiji/langs"),
+                    themes: path.join(process.cwd(), "build/shikiji/themes"),
                 },
             }),
     }
@@ -68,16 +67,20 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
         .use(remarkGfm)
         .use(remarkUnwrapImages)
         .use(remarkInlineLinks)
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        .use(remarkEmbedder, {
-            transformers: [
-                codesandboxTransformer,
-                twitchTransformer,
-                twitterTransformer,
-                youtubeTransformer,
-            ],
-        })
+        .use(
+            /* v8 ignore next 3 */
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
+            process.env.VITEST ? remarkEmbedder : remarkEmbedder.default,
+            {
+                transformers: [
+                    codesandboxTransformer,
+                    twitchTransformer,
+                    twitterTransformer,
+                    youtubeTransformer,
+                ],
+            },
+        )
         .use(remarkRehype, {allowDangerousHtml: true})
         .use(rehypePrettyCode, options)
         .use(rehypeExternalLinks, {
@@ -85,8 +88,6 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
             rel: ["noopener", "noreferrer"],
         })
         .use(rehypeCloudinaryImageSize)
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
         .use(rehypeImageLinks)
         .use(rehypeRaw)
         .use(rehypeStringify)

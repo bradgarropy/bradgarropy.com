@@ -515,12 +515,6 @@ const mockPostsResponse = [
     },
 ]
 
-const mockCaptivateResponse = {
-    title: "Test Podcast",
-    link: "https://anchor.fm/test-podcast",
-    artwork: "https://anchor.fm/test-podcast.jpg",
-}
-
 const mockNowPaths = ["2020-12-30.md", "2020-12-31.md", "2021-01-01.md"]
 
 const mockNowsResponse = [
@@ -545,7 +539,6 @@ const mockNowsResponse = [
 ]
 
 export {
-    mockCaptivateResponse,
     mockGitHubPinnedResponse,
     mockGitHubSponsorsResponse,
     mockNowPaths,
