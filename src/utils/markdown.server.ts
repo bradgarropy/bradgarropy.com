@@ -16,7 +16,7 @@ import remarkInlineLinks from "remark-inline-links"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
 import remarkUnwrapImages from "remark-unwrap-images"
-import {getHighlighter} from "shiki"
+import {getHighlighter} from "shikiji"
 import {unified} from "unified"
 
 import {codesandboxTransformer} from "~/transformers/codesandbox"
@@ -24,6 +24,9 @@ import {twitchTransformer} from "~/transformers/twitch"
 import {twitterTransformer} from "~/transformers/twitter"
 import {youtubeTransformer} from "~/transformers/youtube"
 import type {Markdown} from "~/types/markdown"
+
+console.log(remarkEmbedder)
+console.log(remarkEmbedder.default)
 
 const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
     const nowPath = path.join(process.cwd(), `content/pages/${slug}.md`)
@@ -52,6 +55,8 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
         keepBackground: true,
         getHighlighter: () =>
             getHighlighter({
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-expect-error
                 theme: json5.parse(theme),
                 paths: {
                     languages: path.join(
@@ -69,7 +74,7 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
         .use(remarkUnwrapImages)
         .use(remarkInlineLinks)
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
+        // @ts-expect-error
         .use(remarkEmbedder, {
             transformers: [
                 codesandboxTransformer,
@@ -85,8 +90,6 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
             rel: ["noopener", "noreferrer"],
         })
         .use(rehypeCloudinaryImageSize)
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
         .use(rehypeImageLinks)
         .use(rehypeRaw)
         .use(rehypeStringify)
