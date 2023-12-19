@@ -52,7 +52,7 @@ test("switches to light theme", () => {
     expect(document.documentElement).toHaveClass("light")
     expect(document.documentElement).not.toHaveClass("dark")
 
-    expect(mockSubmit).toHaveBeenCalledTimes(2)
+    expect(mockSubmit).toHaveBeenCalledTimes(1)
 
     expect(mockSubmit).toHaveBeenLastCalledWith(
         {theme: "light"},
@@ -78,7 +78,7 @@ test("switches to dark theme", () => {
     expect(document.documentElement).toHaveClass("dark")
     expect(document.documentElement).not.toHaveClass("light")
 
-    expect(mockSubmit).toHaveBeenCalledTimes(2)
+    expect(mockSubmit).toHaveBeenCalledTimes(1)
 
     expect(mockSubmit).toHaveBeenLastCalledWith(
         {theme: "dark"},

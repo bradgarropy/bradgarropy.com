@@ -1,6 +1,6 @@
 import {useFetcher} from "@remix-run/react"
 import type {FC, ReactNode} from "react"
-import {createContext, useEffect, useState} from "react"
+import {createContext, useEffect, useRef, useState} from "react"
 
 import type {ThemeContextType} from "~/types/context"
 import type {Theme} from "~/types/theme"
@@ -18,10 +18,9 @@ const ThemeProvider: FC<ThemeProviderProps> = ({
 }) => {
     const fetcher = useFetcher()
     const [theme, setTheme] = useState<Theme>(defaultTheme)
+    const themeRef = useRef(theme)
 
     useEffect(() => {
-        fetcher.submit({theme}, {action: "api/theme", method: "post"})
-
         switch (theme) {
             case "light":
                 document.documentElement.classList.remove("dark")
@@ -33,6 +32,15 @@ const ThemeProvider: FC<ThemeProviderProps> = ({
                 document.documentElement.classList.add("dark")
                 break
         }
+    }, [theme])
+
+    useEffect(() => {
+        if (theme === themeRef.current) {
+            return
+        }
+
+        themeRef.current = theme
+        fetcher.submit({theme}, {action: "api/theme", method: "post"})
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [theme])
