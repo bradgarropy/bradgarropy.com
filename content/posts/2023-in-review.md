@@ -90,7 +90,7 @@ What about y'all? Did you accomplish your goals for 2023? Let me know on [Twitte
 [goals-for-2023]: https://bradgarropy.com/blog/goals-for-2023
 [seven-principles]: https://www.amazon.com/Seven-Principles-Making-Marriage-Work/dp/0553447718?tag=bradgarropy00-20
 [eight-dates]: https://www.amazon.com/Eight-Dates-Essential-Conversations-Lifetime/dp/1523504463?tag=bradgarropy00-20
-[gaby]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/gaby.jpg
+[gaby]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/gaby.jpg
 [suerte]: https://www.suerteatx.com
 [electric-shuffle]: https://electricshuffleusa.com/austin
 [coffee-shop]: https://www.instagram.com/p/CwBoU9UNf4q
@@ -112,10 +112,10 @@ What about y'all? Did you accomplish your goals for 2023? Let me know on [Twitte
 [cloudinary]: https://cloudinary.com
 [side-income]: https://bradgarropy/blog/2023-in-review#side-income
 [youtube]: https://youtube.com/bradgarropy
-[monetization]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/monetization.png
+[monetization]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/monetization.png
 [webdevcody]: https://www.youtube.com/@WebDevCody
 [duolingo]: https://www.duolingo.com
-[streak]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/duolingo.jpg
+[streak]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/duolingo.jpg
 [switch]: https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy/dp/B098RKWHHZ?tag=bradgarropy00-20
 [mario-kart]: https://www.amazon.com/Mario-Kart-Deluxe-Nintendo-Digital/dp/B01N1037CV?tag=bradgarropy00-20
 [super-mario]: https://www.amazon.com/Super-Mario-Bros-TM-Wonder-Nintendo-Version/dp/B0C8VHZR14?tag=bradgarropy00-20

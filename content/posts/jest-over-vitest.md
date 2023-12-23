@@ -91,4 +91,4 @@ At the end of this little adventure, I decided that migrating to [vitest][vitest
 [issue]: https://github.com/capricorn86/happy-dom/issues/527
 [threads]: https://vitest.dev/config/#threads
 [failures]: https://github.com/bradgarropy/bradgarropy.com/actions/runs/3379996975
-[jest-vs-vitest]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/jest-vs-vitest.png
+[jest-vs-vitest]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/jest-vs-vitest.png

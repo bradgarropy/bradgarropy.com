@@ -48,5 +48,5 @@ I'm interested to hear your responses, let me know [@bradgarropy][twitter].
 [keep]: http://keep.google.com/
 [calendar]: https://calendar.google.com
 [tasks]: https://play.google.com/store/apps/details?id=com.google.android.apps.tasks
-[inbox-gmail]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/inbox-gmail.png
+[inbox-gmail]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/inbox-gmail.png
 [twitter]: https://twitter.com/bradgarropy

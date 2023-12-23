@@ -47,9 +47,9 @@ This process coudn't have been easier, and now I'm looking for other automation 
 [eslint-config-bradgarropy]: https://www.npmjs.com/package/eslint-config-bradgarropy
 [github]: https://github.com
 [github-actions]: https://github.com/features/actions
-[configure-workflow]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/configure-workflow.png
+[configure-workflow]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/configure-workflow.png
 [npm-action]: https://github.com/marketplace/actions/github-action-for-npm
-[configure-action]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/configure-action.png
-[main-workflow]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/main-workflow.png
-[actions]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/actions.png
+[configure-action]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/configure-action.png
+[main-workflow]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/main-workflow.png
+[actions]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/actions.png
 [twitter]: https://twitter.com/bradgarropy

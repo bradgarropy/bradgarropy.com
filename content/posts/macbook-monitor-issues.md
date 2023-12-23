@@ -13,4 +13,4 @@ This was super annoying, but I finally found the fix! The laptop was switching g
 ![automatic graphics switching][graphics-switching]
 
 [uses]: https://bradgarropy.com/uses
-[graphics-switching]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/graphics-switching.png
+[graphics-switching]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/graphics-switching.png

@@ -170,7 +170,7 @@ This isn't a problem I'd like to solve twice, so I'm considering publishing this
 
 [pull-request]: https://github.com/bradgarropy/bradgarropy.com/pull/349
 [perfect-dark-mode]: https://joshwcomeau.com/react/dark-mode
-[dark-mode-diagram]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/dark-mode-diagram.png
+[dark-mode-diagram]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/dark-mode-diagram.png
 [tailwind-migration]: https://bradgarropy.com/blog/css-modules-to-tailwind
 [context]: https://reactjs.org/docs/context.html
 [tailwind]: https://tailwindcss.com/

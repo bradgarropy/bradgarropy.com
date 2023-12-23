@@ -49,9 +49,9 @@ For more information about manually triggering workflows, check the [documentati
 
 [actions]: https://github.com/features/actions
 [input-context]: https://docs.github.com/en/actions/learn-github-actions/contexts#inputs-context
-[manual]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/manual.png
-[manual-inputs]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/manual-inputs.png
+[manual]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/manual.png
+[manual-inputs]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/manual-inputs.png
 [workflow-dispatch]: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
-[workflow-cli]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/workflow-cli.png
+[workflow-cli]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/workflow-cli.png
 [cli]: https://cli.github.com
 [twitter]: https://twitter.com/bradgarropy

@@ -40,7 +40,7 @@ On that note, I highly recommend Project Fi, and if you want to try it out, use 
 
 [project-fi]: https://fi.google.com/about/
 [brandon-hassler]: https://twitter.com/BrandonHassler
-[ice-cream]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/project-fi-ice-cream.jpg
+[ice-cream]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/project-fi-ice-cream.jpg
 [pixel]: https://store.google.com/us/product/pixel_2
 [voicemail-app]: https://play.google.com/store/apps/details?id=com.att.mobile.android.vvm
 [phone-app]: https://play.google.com/store/apps/details?id=com.google.android.dialer

@@ -54,10 +54,10 @@ While Tailwind does integrate well with [Next.js][next] through [create-next-app
 
 Overall I'm very happy with my migration to [Tailwind][tailwind]. It took longer than expected, and rewriting everything from scratch would have probably been quicker, but I liked perspective it gave me. Tailwind has a great developer experience, it improved performance on my site, and gives me a great base to start styling with.
 
-[http-requests]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/http-requests.png
-[page-load-data]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/page-load-data.png
-[tailwind-diff]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/tailwind-diff.png
-[grid-placement]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/grid-placement.png
+[http-requests]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/http-requests.png
+[page-load-data]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/page-load-data.png
+[tailwind-diff]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/tailwind-diff.png
+[grid-placement]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/grid-placement.png
 [github-issue]: https://github.com/vercel/next.js/issues/19009
 [prettier-plugin]: https://github.com/tailwindlabs/prettier-plugin-tailwindcss
 [vscode-extension]: https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss

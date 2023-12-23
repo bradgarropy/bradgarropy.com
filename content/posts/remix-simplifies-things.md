@@ -133,7 +133,7 @@ Overall I'm very happy working in [Remix][remix], and I plan to build all of my 
 [jokes-tutorial]: https://remix.run/docs/en/v1/tutorials/jokes
 [remix-stacks]: https://remix.run/docs/en/v1/pages/stacks
 [tailwind]: https://tailwindcss.com
-[remix-vs-next]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/remix-vs-next.png
+[remix-vs-next]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/remix-vs-next.png
 [react-query]: https://tanstack.com/query
 [swr]: https://swr.vercel.app
 [apollo]: https://apollographql.com/apollo-client

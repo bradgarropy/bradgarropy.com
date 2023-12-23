@@ -287,7 +287,7 @@ I'm definitely fascinated by [Cloudflare Workers][workers], and I'm still explor
 [workers]: https://workers.cloudflare.com
 [dashboard]: https://dash.cloudflare.com
 [cli]: https://developers.cloudflare.com/workers/cli-wrangler
-[finished]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/link-tree.png
+[finished]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/link-tree.png
 [linktree]: https://linktr.ee
 [signup]: https://dash.cloudflare.com/sign-up
 [pricing]: https://workers.cloudflare.com/#plans
@@ -299,7 +299,7 @@ I'm definitely fascinated by [Cloudflare Workers][workers], and I'm still explor
 [template]: https://static-links-page.signalnerve.workers.dev
 [runtime-apis]: https://developers.cloudflare.com/workers/runtime-apis
 [htmlrewriter]: https://developers.cloudflare.com/workers/runtime-apis/html-rewriter
-[final]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/final.png
+[final]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/final.png
 [twitter]: https://twitter.com/bradgarropy
 [repo]: https://github.com/bradgarropy/cloudflare-link-tree
 [github]: https://github.com/bradgarropy

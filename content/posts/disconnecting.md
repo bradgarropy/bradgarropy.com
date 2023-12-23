@@ -62,16 +62,16 @@ I'm not sure what it was, but I felt compelled to start coding again about a mon
 
 When I [tweeted][tweet] about my break, it seemed to resonate with a lot of people. Some are disconnecting right now, and others want to take time off in the future. I can tell it did me good, and I recommend taking time away from the keyboard as often as possible!
 
-[contribution-graph]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/github-contribution-graph.png
+[contribution-graph]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/github-contribution-graph.png
 [github]: https://github.com/bradgarropy
 [tweet]: https://twitter.com/bradgarropy/status/1564802254187761667
-[books]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/books.jpg
-[cable-machine]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/cable-machine.jpg
-[delaney-family]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/delaney-family.jpg
-[grill]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/grill.jpg
-[onewheel]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/onewheel.jpg
-[sayulita]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/sayulita.jpg
-[trello-nyc]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/trello-nyc.jpg
+[books]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/books.jpg
+[cable-machine]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/cable-machine.jpg
+[delaney-family]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/delaney-family.jpg
+[grill]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/grill.jpg
+[onewheel]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/onewheel.jpg
+[sayulita]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/sayulita.jpg
+[trello-nyc]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/trello-nyc.jpg
 [boredom]: https://bradgarropy.com/blog/the-boredom-motivation-correlation
 [reactathon]: https://reactathon.com
 [wow]: https://worldofwarcraft.com

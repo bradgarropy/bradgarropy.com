@@ -75,6 +75,28 @@ describe("transforms markdown", () => {
         )
     })
 
+    test("adds optimizations to cloudinary images", async () => {
+        const html = await transformMarkdown(
+            "![brad garropy](https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/profile.jpg)",
+        )
+
+        expect(html).toEqual(
+            // eslint-disable-next-line quotes
+            '<a href="https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/profile.jpg"><img src="https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto,w_660,c_limit/bradgarropy.com/profile.jpg" alt="brad garropy" width="100" height="100"></a>',
+        )
+    })
+
+    test("does not add optimizations to other images", async () => {
+        const html = await transformMarkdown(
+            "![brad garropy](https://bradgarropy.com/profile.jpg)",
+        )
+
+        expect(html).toEqual(
+            // eslint-disable-next-line quotes
+            '<a href="https://bradgarropy.com/profile.jpg"><img src="https://bradgarropy.com/profile.jpg" alt="brad garropy"></a>',
+        )
+    })
+
     test("embeds codesandbox", async () => {
         const html = await transformMarkdown(
             "https://codesandbox.io/s/exciting-pascal-j5hwu",

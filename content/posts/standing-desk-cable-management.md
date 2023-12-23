@@ -56,12 +56,12 @@ Overall, everything worked according to plan! Now I have a picturesque workspace
 
 ![chair][chair]
 
-[desk]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/desk.jpg
-[audio]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/audio.jpg
-[cables]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/cables.jpg
-[power]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/power.jpg
-[usb]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/usb.jpg
-[chair]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/chair.jpg
+[desk]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/desk.jpg
+[audio]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/audio.jpg
+[cables]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/cables.jpg
+[power]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/power.jpg
+[usb]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/usb.jpg
+[chair]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/chair.jpg
 [uplift]: https://upliftdesk.com
 [uses]: https://bradgarropy.com/uses
 [tripp-lite]: https://amazon.com/gp/product/B00006B83A?tag=bradgarropy00-20

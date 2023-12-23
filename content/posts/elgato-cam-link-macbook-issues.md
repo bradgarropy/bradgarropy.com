@@ -15,6 +15,6 @@ I fixed it by going to the Elgato [downloads][downloads] page and downloading th
 So far so good, that fixed any camera issues I had!
 
 [forum]: https://talk.macpowerusers.com/t/elgato-cam-link-freezing-m1-mac/28132/2
-[elgato-camera-hub]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/elgato-camera-hub.jpg
+[elgato-camera-hub]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/elgato-camera-hub.jpg
 [camlink]: https://www.amazon.com/Elgato-Cam-Link-Broadcast-Camcorder/dp/B07K3FN5MR/ref=sr_1_2?tag=bradgarropy00-20
 [downloads]: https://www.elgato.com/en/downloads
