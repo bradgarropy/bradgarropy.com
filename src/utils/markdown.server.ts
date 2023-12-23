@@ -93,8 +93,12 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
                 const base =
                     "https://res.cloudinary.com/bradgarropy/image/upload"
 
+                if (!url.startsWith(base)) {
+                    return url
+                }
+
                 const path = url.split(base)[1]
-                const newUrl = `${base}/f_auto,q_auto,w_660,c_limit/${path}`
+                const newUrl = `${base}/f_auto,q_auto,w_660,c_limit${path}`
                 return newUrl
             },
         })
