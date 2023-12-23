@@ -67,7 +67,7 @@ These pieces of tech are always within reach.
 [developer]: https://bradgarropy.com/topic/coding
 [tech]: https://bradgarropy.com/topic/tech
 [ama]: https://bradgarropy.com/ama
-[home-office]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/pages/uses/home-office.jpg
+[home-office]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/pages/uses/home-office.jpg
 [macbook]: https://www.amazon.com/Apple-MacBook-16-inch-10%E2%80%91core-16%E2%80%91core/dp/B09JQKBQSB?tag=bradgarropy00-20
 [ctrl]: https://drop.com/buy/drop-ctrl-high-profile-mechanical-keyboard
 [naos]: https://www.amazon.com/gp/product/B00ANIRU7U?tag=bradgarropy00-20

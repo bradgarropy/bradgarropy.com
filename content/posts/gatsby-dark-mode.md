@@ -107,4 +107,4 @@ While this dark modes works very well, and persists through page navigation, it'
 [pull-request]: https://github.com/bradgarropy/bradgarropy.com/pull/205/files
 [gatsby-plugin-layout]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-layout
 [moon]: #
-[dark-mode]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/dark-mode.png
+[dark-mode]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/dark-mode.png

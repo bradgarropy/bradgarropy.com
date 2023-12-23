@@ -34,7 +34,7 @@ While I'm happy with the basic functionality at this point and time, there's lot
 If you've got any other ideas you should [create an issue][issues]!
 
 [amorty]: https://amorty.netlify.com/
-[amorty-image]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/amorty.png
+[amorty-image]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/amorty.png
 [gatsby]: https://www.gatsbyjs.org/
 [react]: https://reactjs.org/
 [amortization]: https://github.com/eithanshavit/amortization

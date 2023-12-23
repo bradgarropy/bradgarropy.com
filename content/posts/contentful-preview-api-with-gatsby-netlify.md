@@ -108,7 +108,7 @@ But for now, just know that you can catch a sneak peak of content I'm working on
 [bradgarropy]: https://bradgarropy.com/
 [bradgarropy-dev]: https://dev.bradgarropy.com/
 [contentful]: https://app.contentful.com/
-[netlify-env-vars]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/netlify-environment.png
+[netlify-env-vars]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/netlify-environment.png
 [deploy-contexts]: https://www.netlify.com/docs/continuous-deployment/#deploy-contexts
 [gatsby]: https://www.gatsbyjs.org/
 [gatsby-env-vars]: https://www.gatsbyjs.org/docs/environment-variables/

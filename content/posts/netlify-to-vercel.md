@@ -81,9 +81,9 @@ Where do you host your websites? Let me know on [Twitter][twitter]!
 [typescript]: https://www.typescriptlang.org
 [netlify-redirects]: https://docs.netlify.com/routing/redirects
 [vercel-redirects]: https://vercel.com/docs/cli#project-configuration/redirects
-[environment-variables]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/environment-variables.png
-[pr-comments]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/pr-comments.png
-[analytics]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/analytics.png
+[environment-variables]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/environment-variables.png
+[pr-comments]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/pr-comments.png
+[analytics]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/analytics.png
 [github]: https://github.com
 [web-vitals]: https://vercel.com/bradgarropy/bradgarropy/analytics
 [twitter]: https://twitter.com/bradgarropy

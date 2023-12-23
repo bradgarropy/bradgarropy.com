@@ -23,7 +23,7 @@ As I got to speak with Bryan more, I couldn't help but think about creating my o
 [jamstack]: https://jamstack.org
 [fauna]: https://fauna.com
 [murphy]: https://murphy.bradgarropy.com
-[thumbnail]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/thats-my-jamstack.png
+[thumbnail]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/thats-my-jamstack.png
 [sanity]: https://sanity.io
 [episode]: https://thatsmyjamstack.com/posts/brad-garropy
 [podcast]: https://thatsmyjamstack.com

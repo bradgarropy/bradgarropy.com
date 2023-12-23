@@ -29,10 +29,10 @@ My motivation can also be affected by being too busy at work, which would be the
 
 Ideally, boredom and busyness would not have any effect on motivation, and the graph would look something like the one above. If you have mastered your motivation levels and broken the correlation, [tweet at me][twitter] and share your tips on how you did it!
 
-[boredom-constant]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/boredom-constant.jpg
-[boredom-full]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/boredom-full.jpg
-[boredom-linear]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/boredom-linear.jpg
-[boredom-spike]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/boredom-spike.jpg
+[boredom-constant]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/boredom-constant.jpg
+[boredom-full]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/boredom-full.jpg
+[boredom-linear]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/boredom-linear.jpg
+[boredom-spike]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/boredom-spike.jpg
 [james-clear]: https://twitter.com/JamesClear
 [atomic-habits]: https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299?tag=bradgarropy00-20
 [twitter]: https://twitter.com/bradgarropy

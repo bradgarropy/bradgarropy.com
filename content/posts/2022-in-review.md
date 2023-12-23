@@ -104,7 +104,7 @@ I feel like 2023 will cement my ability to generate income from side projects, a
 [migrating-to-nextjs]: https://bradgarropy.com/blog/migrating-to-nextjs
 [remix]: https://remix.run
 [tailwind]: https://tailwindcss.com
-[youtube-monetization]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/youtube-monetization.png
+[youtube-monetization]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/youtube-monetization.png
 [hire-me]: https://bradgarropy.com/hire-me
 [cotton-bureau]: https://cottonbureau.com/people/brad-garropy
 [github-sponsors]: https://github.com/sponsors/bradgarropy
@@ -113,7 +113,7 @@ I feel like 2023 will cement my ability to generate income from side projects, a
 [todoist]: https://todoist.com
 [pixel]: https://store.google.com/product/pixel_6a
 [iphone]: https://www.apple.com/iphone-14-pro
-[duolingo-stats]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/duolingo-stats.png
+[duolingo-stats]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/duolingo-stats.png
 [james-quick]: https://twitter.com/jamesqquick
 [amy-dutton]: https://twitter.com/selfteachme
 [compressedfm]: https://www.compressed.fm

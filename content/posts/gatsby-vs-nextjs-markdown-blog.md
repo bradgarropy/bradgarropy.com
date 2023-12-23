@@ -107,7 +107,7 @@ Ultimately I chose the tool that felt like it was made specifically for Markdown
 [gatsby-plugins]: https://www.gatsbyjs.com/plugins
 [conversion]: https://github.com/leerob/gatsby-to-nextjs
 [leerob]: https://twitter.com/leeerob
-[diff]: https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto/bradgarropy.com/posts/diff.png
+[diff]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/diff.png
 [initial-tweet]: https://twitter.com/bradgarropy/status/1343788025684357122
 [branch]: https://github.com/bradgarropy/bradgarropy.com/tree/next
 [gatsby]: https://gatsbyjs.com
