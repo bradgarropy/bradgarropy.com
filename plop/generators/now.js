@@ -15,4 +15,4 @@ const generator = plop => {
     })
 }
 
-module.exports = generator
+export default generator

@@ -109,7 +109,7 @@
         "eslint-plugin-simple-import-sort": "^10.0.0",
         "jest": "^29.7.0",
         "jsdom": "^23.0.1",
-        "plop": "^2.7.6",
+        "plop": "^4.0.1",
         "plop-helper-bradgarropy": "^1.0.0",
         "plop-helper-date": "^1.0.0",
         "plop-helper-slugify": "^1.1.0",
