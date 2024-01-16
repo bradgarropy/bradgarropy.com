@@ -1,5 +1,6 @@
+import {useLocation} from "@remix-run/react"
 import type {Dispatch, FC, ReactNode, SetStateAction} from "react"
-import {createContext, useState} from "react"
+import {createContext, useEffect, useState} from "react"
 
 type AppContextType = {
     open: boolean
@@ -14,6 +15,11 @@ type AppProviderProps = {
 
 const AppProvider: FC<AppProviderProps> = ({children}) => {
     const [open, setOpen] = useState(false)
+    const {pathname} = useLocation()
+
+    useEffect(() => {
+        setOpen(false)
+    }, [pathname])
 
     const context: AppContextType = {
         open,
