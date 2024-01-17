@@ -12,6 +12,7 @@ const PostMeta: FC<PostMetaProps> = ({date, tags, topic}) => {
             <span className="lowercase">
                 {formatDate(date)} in{" "}
                 <Link
+                    prefetch="intent"
                     to={`/topic/${topic}`}
                     className="transition duration-300 hover:text-purple-400"
                 >
@@ -26,6 +27,7 @@ const PostMeta: FC<PostMetaProps> = ({date, tags, topic}) => {
                             key={tag}
                             className="rounded bg-black px-2 font-heading text-sm font-bold text-white duration-300 hover:bg-purple-400 dark:bg-white dark:text-black dark:hover:bg-purple-400"
                             to={`/tag/${tag}`}
+                            prefetch="intent"
                         >
                             {tag}
                         </Link>

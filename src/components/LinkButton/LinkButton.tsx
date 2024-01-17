@@ -31,7 +31,7 @@ const LinkButton: FC<LinkButtonProps> = ({
     }
 
     return (
-        <Link to={to} className={classes}>
+        <Link prefetch="intent" to={to} className={classes}>
             {props.children}
         </Link>
     )

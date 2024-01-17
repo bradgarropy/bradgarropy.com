@@ -21,23 +21,43 @@ const MobileNavigation: FC = () => {
             />
 
             <div className="grid grid-flow-row content-center justify-center gap-y-4">
-                <Link className="hover:text-purple-400" to="/blog">
+                <Link
+                    prefetch="intent"
+                    className="hover:text-purple-400"
+                    to="/blog"
+                >
                     blog
                 </Link>
 
-                <Link className="hover:text-purple-400" to="/now">
+                <Link
+                    prefetch="intent"
+                    className="hover:text-purple-400"
+                    to="/now"
+                >
                     now
                 </Link>
 
-                <Link className="hover:text-purple-400" to="/uses">
+                <Link
+                    prefetch="intent"
+                    className="hover:text-purple-400"
+                    to="/uses"
+                >
                     uses
                 </Link>
 
-                <Link className="hover:text-purple-400" to="/hire-me">
+                <Link
+                    prefetch="intent"
+                    className="hover:text-purple-400"
+                    to="/hire-me"
+                >
                     hire me
                 </Link>
 
-                <Link className="hover:text-purple-400" to="/contact">
+                <Link
+                    prefetch="intent"
+                    className="hover:text-purple-400"
+                    to="/contact"
+                >
                     contact
                 </Link>
             </div>
