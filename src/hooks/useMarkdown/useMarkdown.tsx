@@ -29,7 +29,7 @@ const useMarkdown = (html: string) => {
                     props: Record<string, unknown>
                 }) => {
                     return (
-                        <Link to={href} {...props}>
+                        <Link prefetch="intent" to={href} {...props}>
                             {children}
                         </Link>
                     )

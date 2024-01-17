@@ -20,6 +20,7 @@ const PostCard: FC<PostCardProps> = ({post, className}) => {
         >
             <h1 className="mb-10 font-heading text-3xl font-semibold max-[750px]:text-2xl">
                 <Link
+                    prefetch="intent"
                     to={`/blog/${post.slug}`}
                     className="transition duration-300 hover:text-purple-400"
                 >

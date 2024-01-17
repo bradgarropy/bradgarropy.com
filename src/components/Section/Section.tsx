@@ -22,7 +22,11 @@ const Section: FC<SectionProps> = ({title, link, children, ...props}) => {
     return (
         <section {...props}>
             {link ? (
-                <Link className="m-0 mb-7 inline-block" to={link}>
+                <Link
+                    className="m-0 mb-7 inline-block"
+                    to={link}
+                    prefetch="intent"
+                >
                     <Title title={title} />
                 </Link>
             ) : (

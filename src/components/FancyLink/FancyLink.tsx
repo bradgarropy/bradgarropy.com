@@ -11,6 +11,7 @@ const FancyLink: FC<FancyLinkProps> = ({children, to}) => {
         <Link
             className="shadow-link transition duration-300 hover:shadow-link-hover"
             to={to}
+            prefetch="intent"
         >
             {children}
         </Link>
