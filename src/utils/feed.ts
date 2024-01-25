@@ -1,4 +1,3 @@
-import {parseISO} from "date-fns"
 import {Feed} from "feed"
 
 import {createImageUrl} from "~/utils/cloudinary"
@@ -38,10 +37,10 @@ const generateFeed = (type: FeedType) => {
                 },
             ],
             copyright: `© ${new Date().getFullYear()} Brad Garropy`,
-            date: parseISO(post.date),
+            date: new Date(`${post.date}T00:00:00.000Z`),
             id: post.slug,
             link: `https://bradgarropy.com/blog/${post.slug}`,
-            published: new Date(post.date),
+            published: new Date(`${post.date}T00:00:00.000Z`),
             title: post.title,
         })
     })

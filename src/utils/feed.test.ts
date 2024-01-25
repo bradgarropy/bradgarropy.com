@@ -46,8 +46,8 @@ test("generates json feed", () => {
                 id: "first-test-post",
                 url: "https://bradgarropy.com/blog/first-test-post",
                 title: "first test post",
-                date_modified: "2021-01-01T06:00:00.000Z",
-                date_published: "2021-01-01T06:00:00.000Z",
+                date_modified: "2021-01-01T00:00:00.000Z",
+                date_published: "2021-01-01T00:00:00.000Z",
                 author: {
                     name: "Brad Garropy",
                     url: "https://twitter.com/bradgarropy",
@@ -57,8 +57,8 @@ test("generates json feed", () => {
                 id: "second-test-post",
                 url: "https://bradgarropy.com/blog/second-test-post",
                 title: "second test post",
-                date_modified: "2021-02-01T06:00:00.000Z",
-                date_published: "2021-02-01T06:00:00.000Z",
+                date_modified: "2021-02-01T00:00:00.000Z",
+                date_published: "2021-02-01T00:00:00.000Z",
                 author: {
                     name: "Brad Garropy",
                     url: "https://twitter.com/bradgarropy",
@@ -68,8 +68,8 @@ test("generates json feed", () => {
                 id: "third-test-post",
                 url: "https://bradgarropy.com/blog/third-test-post",
                 title: "third test post",
-                date_modified: "2021-03-01T06:00:00.000Z",
-                date_published: "2021-03-01T06:00:00.000Z",
+                date_modified: "2021-03-01T00:00:00.000Z",
+                date_published: "2021-03-01T00:00:00.000Z",
                 author: {
                     name: "Brad Garropy",
                     url: "https://twitter.com/bradgarropy",
@@ -79,8 +79,8 @@ test("generates json feed", () => {
                 id: "fourth-test-post",
                 url: "https://bradgarropy.com/blog/fourth-test-post",
                 title: "fourth test post",
-                date_modified: "2021-03-01T06:00:00.000Z",
-                date_published: "2021-03-01T06:00:00.000Z",
+                date_modified: "2021-03-01T00:00:00.000Z",
+                date_published: "2021-03-01T00:00:00.000Z",
                 author: {
                     name: "Brad Garropy",
                     url: "https://twitter.com/bradgarropy",
