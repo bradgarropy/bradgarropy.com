@@ -44,6 +44,18 @@ export const links: LinksFunction = () => {
             rel: "icon",
             href: createImageUrl("/site/favicon.ico"),
         },
+        {
+            rel: "alternate",
+            type: "application/xml",
+            href: "/feed.xml",
+            title: "rss feed",
+        },
+        {
+            rel: "alternate",
+            type: "application/json",
+            href: "/feed.json",
+            title: "json feed",
+        },
     ]
 
     return links
