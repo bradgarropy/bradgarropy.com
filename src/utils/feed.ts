@@ -41,7 +41,7 @@ const generateFeed = (type: FeedType) => {
             date: parseISO(post.date),
             id: post.slug,
             link: `https://bradgarropy.com/blog/${post.slug}`,
-            published: parseISO(post.date),
+            published: new Date(post.date),
             title: post.title,
         })
     })
