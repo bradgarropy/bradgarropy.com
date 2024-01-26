@@ -11,6 +11,7 @@ const Footer: FC = () => {
             <SocialLink platform="x" />
             <SocialLink platform="instagram" />
             <SocialLink platform="discord" />
+            <SocialLink platform="feed" />
         </footer>
     )
 }

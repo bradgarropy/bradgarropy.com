@@ -8,6 +8,7 @@ type SocialLinkProps = {
         | "discord"
         | "github"
         | "instagram"
+        | "feed"
         | "twitch"
         | "twitter"
         | "x"
@@ -19,9 +20,9 @@ const SocialLink: FC<SocialLinkProps> = ({platform}) => {
     let name
 
     switch (platform) {
-        case "instagram":
-            url = "https://instagram.com/bradgarropy"
-            name = "instagram"
+        case "discord":
+            url = "https://bradgarropy.com/discord"
+            name = "discord"
             break
 
         case "github":
@@ -29,14 +30,14 @@ const SocialLink: FC<SocialLinkProps> = ({platform}) => {
             name = "github"
             break
 
-        case "twitter":
-            url = "https://twitter.com/bradgarropy"
-            name = "twitter"
+        case "instagram":
+            url = "https://instagram.com/bradgarropy"
+            name = "instagram"
             break
 
-        case "youtube":
-            url = "https://youtube.com/bradgarropy"
-            name = "youtube"
+        case "feed":
+            url = "https://bradgarropy.com/feed.json"
+            name = "feed"
             break
 
         case "twitch":
@@ -44,14 +45,19 @@ const SocialLink: FC<SocialLinkProps> = ({platform}) => {
             name = "twitch"
             break
 
-        case "discord":
-            url = "https://bradgarropy.com/discord"
-            name = "discord"
+        case "twitter":
+            url = "https://twitter.com/bradgarropy"
+            name = "twitter"
             break
 
         case "x":
             url = "https://x.com/bradgarropy"
             name = "x"
+            break
+
+        case "youtube":
+            url = "https://youtube.com/bradgarropy"
+            name = "youtube"
             break
     }
 

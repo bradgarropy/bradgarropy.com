@@ -1,5 +1,6 @@
 export {default as CloseIcon} from "~/components/Icons/CloseIcon"
 export {default as DiscordIcon} from "~/components/Icons/DiscordIcon"
+export {default as FeedIcon} from "~/components/Icons/FeedIcon"
 export {default as GatsbyIcon} from "~/components/Icons/GatsbyIcon"
 export {default as GithubIcon} from "~/components/Icons/GithubIcon"
 export {default as InstagramIcon} from "~/components/Icons/InstagramIcon"

@@ -2,9 +2,31 @@ import {render, screen} from "@testing-library/react"
 import {expect, test} from "vitest"
 
 import Icon from "~/components/Icon"
-import {technologies} from "~/utils/tech"
 
-const icons = [...technologies, "sun", "moon"]
+const icons = [
+    "close",
+    "discord",
+    "feed",
+    "gatsby",
+    "github",
+    "instagram",
+    "javascript",
+    "link",
+    "menu",
+    "moon",
+    "next",
+    "node",
+    "react",
+    "remix",
+    "sun",
+    "svelte",
+    "twitch",
+    "twitter",
+    "typescript",
+    "tailwind",
+    "x",
+    "youtube",
+]
 
 test("shows icons", () => {
     icons.forEach(icon => {
