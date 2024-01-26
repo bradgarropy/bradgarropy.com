@@ -13,6 +13,11 @@ test("github", () => {
     expect(screen.getByLabelText("github")).toBeInTheDocument()
 })
 
+test("feed", () => {
+    render(<SocialLink platform="feed" />)
+    expect(screen.getByLabelText("feed")).toBeInTheDocument()
+})
+
 test("instagram", () => {
     render(<SocialLink platform="instagram" />)
     expect(screen.getByLabelText("instagram")).toBeInTheDocument()

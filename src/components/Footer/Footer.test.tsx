@@ -3,7 +3,15 @@ import {expect, test} from "vitest"
 
 import Footer from "~/components/Footer"
 
-const labels = ["twitch", "github", "youtube", "x", "instagram", "discord"]
+const labels = [
+    "discord",
+    "feed",
+    "github",
+    "instagram",
+    "twitch",
+    "x",
+    "youtube",
+]
 
 test("shows social links", () => {
     render(<Footer />)

@@ -3,6 +3,7 @@ import type {FC, HTMLAttributes} from "react"
 import {
     CloseIcon,
     DiscordIcon,
+    FeedIcon,
     GatsbyIcon,
     GithubIcon,
     InstagramIcon,
@@ -34,6 +35,8 @@ const Icon: FC<IconProps> = ({name, ...props}) => {
             return <CloseIcon {...props} />
         case "discord":
             return <DiscordIcon {...props} />
+        case "feed":
+            return <FeedIcon {...props} />
         case "gatsby":
             return <GatsbyIcon {...props} />
         case "github":
