@@ -1,11 +1,15 @@
-import {expect, test, vi} from "vitest"
+import {afterEach, expect, test, vi} from "vitest"
 
 import {mockPosts} from "~/test-utils/mocks"
-import {generateFeed} from "~/utils/feed"
+import {feedCache, generateFeed} from "~/utils/feed"
 import * as posts from "~/utils/posts"
 
 const getPostsSpy = vi.spyOn(posts, "getPosts")
 getPostsSpy.mockResolvedValue(mockPosts)
+
+afterEach(() => {
+    feedCache.clear()
+})
 
 test("generates xml feed", async () => {
     const feed = await generateFeed("xml")
@@ -94,4 +98,29 @@ test("generates json feed", async () => {
             },
         ],
     })
+})
+
+test("caches json feed", async () => {
+    expect(feedCache.get("feed")).toBeUndefined()
+
+    const feed = await generateFeed("json")
+
+    // eslint-disable-next-line quotes
+    expect(feed).toContain('"title": "bradgarropy.com"')
+    expect(feed).not.toBeUndefined()
+
+    const cachedFeed = await generateFeed("json")
+    expect(cachedFeed).toEqual(feed)
+})
+
+test("caches xml feed", async () => {
+    expect(feedCache.get("feed")).toBeUndefined()
+
+    const feed = await generateFeed("xml")
+
+    expect(feed).not.toBeUndefined()
+    expect(feed).toContain("<title>bradgarropy.com</title>")
+
+    const cachedFeed = await generateFeed("xml")
+    expect(cachedFeed).toEqual(feed)
 })

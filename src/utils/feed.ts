@@ -85,4 +85,4 @@ const generateFeed = async (type: FeedType) => {
     }
 }
 
-export {generateFeed}
+export {feedCache, generateFeed}
