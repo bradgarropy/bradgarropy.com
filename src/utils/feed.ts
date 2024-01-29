@@ -6,27 +6,30 @@ import {getPosts} from "~/utils/posts"
 
 type FeedType = "xml" | "json"
 
-const feedCache = new TTLCache<FeedType, Feed>({
+const feedCache = new TTLCache<"feed", Feed>({
     max: 1,
     ttl: 1000 * 60 * 60 * 24, // 1 day
 })
 
 const generateFeed = async (type: FeedType) => {
-    const cachedFeed = feedCache.get(type)
+    const cachedFeed = feedCache.get("feed")
 
     if (cachedFeed) {
-        console.log(`feed cache hit | ${type}`)
-        console.log(feedCache.getRemainingTTL(type))
+        console.log("feed cache hit")
+        console.log(feedCache.getRemainingTTL("feed"))
 
         switch (type) {
-            case "xml":
+            case "xml": {
                 return cachedFeed.rss2()
-            case "json":
+            }
+
+            case "json": {
                 return cachedFeed.json1()
+            }
         }
-    } else {
-        console.log(`feed cache miss | ${type}`)
     }
+
+    console.log("feed cache miss")
 
     const feed = new Feed({
         title: "bradgarropy.com",
@@ -68,14 +71,17 @@ const generateFeed = async (type: FeedType) => {
         })
     })
 
-    console.log(`updated feed cache | ${type}`)
-    feedCache.set(type, feed)
+    console.log("updated feed cache")
+    feedCache.set("feed", feed)
 
     switch (type) {
-        case "xml":
+        case "xml": {
             return feed.rss2()
-        case "json":
+        }
+
+        case "json": {
             return feed.json1()
+        }
     }
 }
 
