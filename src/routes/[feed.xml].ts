@@ -1,7 +1,7 @@
 import {generateFeed} from "~/utils/feed"
 
-export const loader = () => {
-    const feed = generateFeed("xml")
+export const loader = async () => {
+    const feed = await generateFeed("xml")
 
     return new Response(feed, {
         headers: {

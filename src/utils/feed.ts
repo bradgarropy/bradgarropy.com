@@ -1,11 +1,33 @@
+import TTLCache from "@isaacs/ttlcache"
 import {Feed} from "feed"
 
 import {createImageUrl} from "~/utils/cloudinary"
-import {getAllPosts} from "~/utils/posts"
+import {getPosts} from "~/utils/posts"
 
 type FeedType = "xml" | "json"
 
-const generateFeed = (type: FeedType) => {
+const feedCache = new TTLCache<FeedType, Feed>({
+    max: 1,
+    ttl: 1000 * 60 * 60 * 24, // 1 day
+})
+
+const generateFeed = async (type: FeedType) => {
+    const cachedFeed = feedCache.get(type)
+
+    if (cachedFeed) {
+        console.log(`feed cache hit | ${type}`)
+        console.log(feedCache.getRemainingTTL(type))
+
+        switch (type) {
+            case "xml":
+                return cachedFeed.rss2()
+            case "json":
+                return cachedFeed.json1()
+        }
+    } else {
+        console.log(`feed cache miss | ${type}`)
+    }
+
     const feed = new Feed({
         title: "bradgarropy.com",
         id: "https://bradgarropy.com",
@@ -25,7 +47,7 @@ const generateFeed = (type: FeedType) => {
         },
     })
 
-    const posts = getAllPosts()
+    const posts = await getPosts()
 
     posts.forEach(post => {
         feed.addItem({
@@ -36,14 +58,18 @@ const generateFeed = (type: FeedType) => {
                     link: "https://twitter.com/bradgarropy",
                 },
             ],
+            content: post.html,
             copyright: `© ${new Date().getFullYear()} Brad Garropy`,
-            date: new Date(`${post.date}T00:00:00.000Z`),
-            id: post.slug,
-            link: `https://bradgarropy.com/blog/${post.slug}`,
-            published: new Date(`${post.date}T00:00:00.000Z`),
-            title: post.title,
+            date: new Date(`${post.frontmatter.date}T00:00:00.000Z`),
+            id: post.frontmatter.slug,
+            link: `https://bradgarropy.com/blog/${post.frontmatter.slug}`,
+            published: new Date(`${post.frontmatter.date}T00:00:00.000Z`),
+            title: post.frontmatter.title,
         })
     })
+
+    console.log(`updated feed cache | ${type}`)
+    feedCache.set(type, feed)
 
     switch (type) {
         case "xml":
