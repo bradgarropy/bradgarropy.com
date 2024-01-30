@@ -24,3 +24,9 @@
 
 # templates
 *.hbs
+
+# generated
+/public/feed.json
+/public/feed.xml
+/public/robots.txt
+/public/sitemap.txt

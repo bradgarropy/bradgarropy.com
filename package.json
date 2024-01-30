@@ -35,7 +35,7 @@
         "start": "remix dev",
         "prestart": "tsx src/scripts/copyTheme.ts",
         "build": "remix build",
-        "prebuild": "tsx src/scripts/copyTheme.ts",
+        "prebuild": "tsx src/scripts/copyTheme.ts && tsx src/scripts/generateRobots.ts && tsx src/scripts/generateSitemap.ts && tsx src/scripts/generateFeeds.ts",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
         "format": "prettier --check .",
