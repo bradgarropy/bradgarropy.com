@@ -21,3 +21,9 @@
 
 # os
 .DS_Store
+
+# generated
+/public/feed.json
+/public/feed.xml
+/public/robots.txt
+/public/sitemap.txt

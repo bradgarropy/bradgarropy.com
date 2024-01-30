@@ -1,7 +1,9 @@
+import {writeFile} from "node:fs/promises"
+
 import {getAllNows} from "~/utils/now"
 import {getAllPosts, getTags, getTopics} from "~/utils/posts"
 
-export const loader = async () => {
+const generate = async () => {
     const pages = [
         "/",
         "/blog",
@@ -39,12 +41,7 @@ export const loader = async () => {
         .sort()
         .join("\n")
 
-    const response = new Response(sitemap, {
-        status: 200,
-        headers: {
-            "content-type": "text/plain",
-        },
-    })
-
-    return response
+    await writeFile("public/sitemap.txt", sitemap)
 }
+
+generate()
