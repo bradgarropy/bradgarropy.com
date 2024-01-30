@@ -1,26 +1,32 @@
-import {expect, test, vi} from "vitest"
+import {afterEach, expect, test, vi} from "vitest"
 
-import {mockPostsFrontmatter} from "~/test-utils/mocks"
-import {generateFeed} from "~/utils/feed"
+import {mockPosts} from "~/test-utils/mocks"
+import {feedCache, generateFeed} from "~/utils/feed"
 import * as posts from "~/utils/posts"
 
-const getAllPostsSpy = vi.spyOn(posts, "getAllPosts")
-getAllPostsSpy.mockReturnValue(mockPostsFrontmatter)
+const getPostsSpy = vi.spyOn(posts, "getPosts")
+getPostsSpy.mockResolvedValue(mockPosts)
 
-test("generates xml feed", () => {
-    const feed = generateFeed("xml")
+afterEach(() => {
+    feedCache.clear()
+})
+
+test("generates xml feed", async () => {
+    const feed = await generateFeed("xml")
 
     expect(feed).toContain("<title>bradgarropy.com</title>")
     expect(feed).toContain("<link>https://bradgarropy.com</link>")
 
-    mockPostsFrontmatter.forEach(post => {
-        expect(feed).toContain(`<title><![CDATA[${post.title}]]></title>`)
-
+    mockPosts.forEach(post => {
         expect(feed).toContain(
-            `<link>https://bradgarropy.com/blog/${post.slug}</link>`,
+            `<title><![CDATA[${post.frontmatter.title}]]></title>`,
         )
 
-        expect(feed).toContain(`<guid>${post.slug}</guid>`)
+        expect(feed).toContain(
+            `<link>https://bradgarropy.com/blog/${post.frontmatter.slug}</link>`,
+        )
+
+        expect(feed).toContain(`<guid>${post.frontmatter.slug}</guid>`)
 
         expect(feed).toContain(
             "<author>bradgarropy@gmail.com (Brad Garropy)</author>",
@@ -28,8 +34,8 @@ test("generates xml feed", () => {
     })
 })
 
-test("generates json feed", () => {
-    const feed = generateFeed("json")
+test("generates json feed", async () => {
+    const feed = await generateFeed("json")
 
     expect(JSON.parse(feed)).toEqual({
         version: "https://jsonfeed.org/version/1",
@@ -52,6 +58,7 @@ test("generates json feed", () => {
                     name: "Brad Garropy",
                     url: "https://twitter.com/bradgarropy",
                 },
+                content_html: "<p>This is the first test post.</p>",
             },
             {
                 id: "second-test-post",
@@ -63,6 +70,7 @@ test("generates json feed", () => {
                     name: "Brad Garropy",
                     url: "https://twitter.com/bradgarropy",
                 },
+                content_html: "<p>This is the second test post.</p>",
             },
             {
                 id: "third-test-post",
@@ -74,6 +82,7 @@ test("generates json feed", () => {
                     name: "Brad Garropy",
                     url: "https://twitter.com/bradgarropy",
                 },
+                content_html: "<p>This is the third test post.</p>",
             },
             {
                 id: "fourth-test-post",
@@ -85,7 +94,33 @@ test("generates json feed", () => {
                     name: "Brad Garropy",
                     url: "https://twitter.com/bradgarropy",
                 },
+                content_html: "<p>This is the fourth test post.</p>",
             },
         ],
     })
+})
+
+test("caches json feed", async () => {
+    expect(feedCache.get("feed")).toBeUndefined()
+
+    const feed = await generateFeed("json")
+
+    // eslint-disable-next-line quotes
+    expect(feed).toContain('"title": "bradgarropy.com"')
+    expect(feed).not.toBeUndefined()
+
+    const cachedFeed = await generateFeed("json")
+    expect(cachedFeed).toEqual(feed)
+})
+
+test("caches xml feed", async () => {
+    expect(feedCache.get("feed")).toBeUndefined()
+
+    const feed = await generateFeed("xml")
+
+    expect(feed).not.toBeUndefined()
+    expect(feed).toContain("<title>bradgarropy.com</title>")
+
+    const cachedFeed = await generateFeed("xml")
+    expect(cachedFeed).toEqual(feed)
 })

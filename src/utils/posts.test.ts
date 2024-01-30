@@ -20,6 +20,7 @@ import {
     getLatestPost,
     getLatestPosts,
     getPostBySlug,
+    getPosts,
     getPostsByTag,
     getPostsByTopic,
     getRelatedPosts,
@@ -207,4 +208,9 @@ test("gets related posts", () => {
         mockPostsFrontmatter[3],
         mockPostsFrontmatter[2],
     ])
+})
+
+test("gets posts", async () => {
+    const posts = await getPosts()
+    expect(posts).toEqual(mockPosts)
 })

@@ -5,7 +5,7 @@ import type {Video} from "~/types/video"
 
 const videoCache = new TTLCache<"videos", Video[]>({
     max: 1,
-    ttl: 1000 * 60 * 60,
+    ttl: 1000 * 60 * 60, // 1 hour
 })
 
 type YouTubeSearchResponse = {
@@ -80,11 +80,11 @@ const getLatestVideos = async (count = 2): Promise<Video[]> => {
     const cachedVideos = videoCache.get("videos")
 
     if (cachedVideos) {
-        console.log("cache hit")
+        console.log("video cache hit")
         console.log(videoCache.getRemainingTTL("videos"))
         return cachedVideos
     } else {
-        console.log("cache miss")
+        console.log("video cache miss")
     }
 
     const response = await http.get<YouTubeSearchResponse>(
@@ -119,7 +119,7 @@ const getLatestVideos = async (count = 2): Promise<Video[]> => {
         return video
     })
 
-    console.log("updated cache")
+    console.log("updated video cache")
     videoCache.set("videos", videos)
     return videos
 }

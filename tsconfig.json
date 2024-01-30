@@ -20,13 +20,13 @@
             "~/test-utils/*": ["src/test-utils/*"],
             "~/transformers/*": ["src/transformers/*"],
             "~/types/*": ["src/types/*"],
-            "~/utils/*": ["src/utils/*"]
+            "~/utils/*": ["src/utils/*"],
         },
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "strict": true,
-        "target": "ESNext"
+        "target": "ESNext",
     },
     "include": ["remix.env.d.ts", "**/*.js", "**/*.ts", "**/*.tsx"],
-    "exclude": ["node_modules"]
+    "exclude": ["node_modules"],
 }

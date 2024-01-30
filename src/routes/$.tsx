@@ -9,6 +9,8 @@ import {getLatestPost} from "~/utils/posts"
 import {getLatestVideos} from "~/utils/videos"
 
 export const loader = async () => {
+    console.log("$")
+
     const latestPost = getLatestPost()
     const latestVideos = await getLatestVideos(2)
 

@@ -3,8 +3,6 @@ import tsconfigPaths from "vite-tsconfig-paths"
 import {defineConfig} from "vitest/config"
 
 const config = defineConfig({
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     plugins: [tsconfigPaths(), react()],
     test: {
         clearMocks: true,

@@ -47,6 +47,18 @@ const getAllPosts = (): PostFrontmatter[] => {
     return allPosts
 }
 
+const getPosts = async (): Promise<Post[]> => {
+    const postsPath = path.join(process.cwd(), "content/posts")
+
+    const postPaths = fs.readdirSync(postsPath)
+    const promises = postPaths.map(path =>
+        getPostBySlug(path.replace(".md", "")),
+    )
+
+    const posts = await Promise.all(promises)
+    return posts
+}
+
 const getPostBySlug = async (slug: PostFrontmatter["slug"]): Promise<Post> => {
     const postPath = path.join(process.cwd(), `content/posts/${slug}.md`)
 
@@ -207,6 +219,7 @@ export {
     getLatestPost,
     getLatestPosts,
     getPostBySlug,
+    getPosts,
     getPostsByTag,
     getPostsByTopic,
     getRelatedPosts,
