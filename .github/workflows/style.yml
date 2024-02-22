@@ -15,7 +15,7 @@ jobs:
                   node-version: 20
                   registry-url: https://registry.npmjs.org/
             - name: "📦 install"
-              run: npm install
+              run: npm ci
             - name: "🧶 lint"
               run: npm run lint
             - name: "💾 format"
