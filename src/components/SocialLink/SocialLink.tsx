@@ -1,3 +1,4 @@
+import {Link} from "@remix-run/react"
 import type {FC} from "react"
 
 import Icon from "~/components/Icon"
@@ -61,12 +62,12 @@ const SocialLink: FC<SocialLinkProps> = ({platform}) => {
     }
 
     return (
-        <a href={url}>
+        <Link to={url}>
             <Icon
                 className="h-8 fill-black transition duration-300 hover:fill-purple-400 dark:fill-white hover:dark:fill-purple-400"
                 name={name}
             />
-        </a>
+        </Link>
     )
 }
 
