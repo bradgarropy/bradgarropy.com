@@ -51,6 +51,13 @@
             "avatar_url": "https://avatars.githubusercontent.com/u/102450568?v=4",
             "profile": "https://www.chrisnowicki.io",
             "contributions": ["bug"]
+        },
+        {
+            "login": "brookslybrand",
+            "name": "Brooks Lybrand",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12396812?v=4",
+            "profile": "https://github.com/brookslybrand",
+            "contributions": ["ideas", "code"]
         }
     ],
     "commitType": "docs",
