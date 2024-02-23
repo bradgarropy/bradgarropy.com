@@ -51,11 +51,7 @@ const Home: FC<HomeProps> = ({latestPosts, latestVideos, featuredProjects}) => {
                 <Podcasts />
             </Section>
 
-            <Section
-                id="store"
-                title="store"
-                link="https://bradgarropy.com/store"
-            >
+            <Section id="store" title="store" link="/store">
                 <Shirts />
             </Section>
 

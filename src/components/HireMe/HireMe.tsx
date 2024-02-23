@@ -17,25 +17,12 @@ const HireMe: FC<HireMeProps> = ({testimonials}) => {
             </h1>
 
             <p>
-                I just snagged a new job at{" "}
-                <FancyLink to="https://atlassian.com">
-                    <span className="font-semibold">Atlassian</span>
-                </FancyLink>
-                , working on{" "}
-                <FancyLink to="https://www.atlassian.com/software/confluence">
-                    <span className="font-semibold">Confluence</span>
+                I&apos;m actively looking for a new role as a{" "}
+                <span className="italic">Senior Frontend Developer</span>.<br />
+                Please check out my <FancyLink to="/resume">
+                    resume
                 </FancyLink>{" "}
-                as a <span className="italic">Frontend Developer</span>.
-                Although I&apos;m not actively looking for a new role, please
-                check out my{" "}
-                <FancyLink to="https://bradgarropy.com/resume">
-                    <span className="font-semibold">resume</span>
-                </FancyLink>{" "}
-                and{" "}
-                <FancyLink to="https://bradgarropy.com/contact">
-                    <span className="font-semibold">contact</span>
-                </FancyLink>{" "}
-                me!
+                and <FancyLink to="/contact">contact</FancyLink> me!
             </p>
 
             <div className="prose dark:prose-invert prose-h1:font-bold">

@@ -21,7 +21,7 @@ const SocialLink: FC<SocialLinkProps> = ({platform}) => {
 
     switch (platform) {
         case "discord":
-            url = "https://bradgarropy.com/discord"
+            url = "/discord"
             name = "discord"
             break
 
@@ -36,7 +36,7 @@ const SocialLink: FC<SocialLinkProps> = ({platform}) => {
             break
 
         case "feed":
-            url = "https://bradgarropy.com/feed.json"
+            url = "/feed.json"
             name = "feed"
             break
 

@@ -23,10 +23,7 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
 
                 <p>
                     If you want to support me and be featured on this page go{" "}
-                    <FancyLink to="https://bradgarropy.com/sponsor">
-                        sponsor
-                    </FancyLink>{" "}
-                    me!
+                    <FancyLink to="/sponsor">sponsor</FancyLink> me!
                 </p>
             </Section>
 
@@ -59,10 +56,7 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                     ) : (
                         <p>
                             Nobody yet,{" "}
-                            <FancyLink to="https://bradgarropy.com/sponsor">
-                                be the first
-                            </FancyLink>
-                            !
+                            <FancyLink to="/sponsor">be the first</FancyLink>!
                         </p>
                     )}
                 </Section>
