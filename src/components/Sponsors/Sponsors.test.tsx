@@ -31,9 +31,5 @@ test("shows empty sponsor tier", () => {
     mockSponsors["one-time"] = []
 
     render(<Sponsors sponsors={mockSponsors} />)
-
-    expect(screen.getByText("be the first")).toHaveAttribute(
-        "href",
-        "https://bradgarropy.com/sponsor",
-    )
+    expect(screen.getByText("be the first")).toHaveAttribute("href", "/sponsor")
 })
