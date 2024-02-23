@@ -1,8 +1,6 @@
 import {redirect} from "@remix-run/node"
 import {redirects} from "vercel.json"
 
-console.log(redirects)
-
 const checkRedirects = (request: Request) => {
     const url = new URL(request.url)
 
