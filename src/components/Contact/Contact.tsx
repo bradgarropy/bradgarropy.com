@@ -25,9 +25,7 @@ const Contact: FC = () => {
                 </FancyLink>
 
                 <span>🙋🏼‍♂️</span>
-                <FancyLink to="https://bradgarropy.com/ama">
-                    ask me anything
-                </FancyLink>
+                <FancyLink to="/ama">ask me anything</FancyLink>
 
                 <span>🐦</span>
                 <FancyLink to="https://twitter.com/bradgarropy">
