@@ -202,9 +202,9 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 
 [🏡 bradgarropy.com][bg]
 
--   Blog with embedded CMS.
+-   Portfolio and blog with embedded CMS.
 -   Sourced data from YouTube and an embedded CMS.
--   Developed with Remix and React, hosted on Vercel.
+-   Developed with TypeScript, React, Remix and Tailwind, hosted on Vercel.
 
 [🤠 daily texas country][dtxc]
 
