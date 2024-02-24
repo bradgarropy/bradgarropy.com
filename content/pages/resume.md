@@ -174,7 +174,7 @@ _CMC / Force 10 Switch Interface_
 
 -   Over 140 videos and 1,500 subscribers on [YouTube][youtube]
 -   Tutorial series on [Webpack][webpack-tutorial], [Firebase][firebase-tutorial], [Plop][plop-tutorial], and [NPM Packages][npm-tutorial]
--   Multiple individual tutorials and live streams
+-   Created three [Dev Hints][dev-hints] videos for [Cloudinary][cloudinary] _(not yet released)_
 
 ## Podcasts
 
@@ -361,7 +361,7 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 
 -   Rehype plugin that adds dimension attributes to images in Markdown.
 -   Powered by Cloudinary API.
--   Featured on Cloudinary DevJams.
+-   Featured on [Cloudinary DevJams][cloudinary-devjams].
 -   Over 1,500 downloads!
 
 [✂ bg-snippets][bg-snippets]
@@ -438,3 +438,5 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 [frontend-feud]: https://changelog.com/jsparty/308
 [syntax-open-table]: https://www.youtube.com/watch?v=3HeRP7r01Cs&t=1434s
 [rehype-cloudinary-image-size]: https://www.npmjs.com/package/@bradgarropy/rehype-cloudinary-image-size
+[cloudinary]: https://cloudinary.com
+[dev-hints]: https://youtube.com/playlist?list=PL8dVGjLA2oMpaTbvoKCaRNBMQzBUIv7N8
