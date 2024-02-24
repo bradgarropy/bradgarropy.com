@@ -5,7 +5,7 @@ _Austin, Texas_
 
 ## Objective
 
-Find a job where I can do more work in public, collaborate directly with other individuals or companies, and share what I create with the world.
+Find a fully remote job in a smaller company where I can architect, lead, and develop web applications with a fast moving team that owns their own stack. I prefer to work in TypeScript, Remix, Tailwind, and PostgreSQL. Any public facing products or open source opportunities are a great bonus.
 
 ## Education
 
@@ -18,35 +18,42 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 
 |             |                                                                        |
 | ----------- | ---------------------------------------------------------------------- |
-| _Languages_ | JavaScript, TypeScript, HTML, CSS, Bash, Markdown, YAML, TOML          |
-| _Runtimes_  | Node, Deno                                                             |
-| _Frontend_  | React, Next, Remix, Gatsby, Svelte, SvelteKit, Astro, Webpack, esbuild |
-| _Backend_   | Serverless, Webhooks, REST, GraphQL, Express, Fastify                  |
-| _Testing_   | Jest, Vitest, Cypress, Playwright, Mock Service Worker, Storybook      |
+| _Languages_ | TypeScript, JavaScript, HTML, CSS, Bash, Markdown, YAML, TOML          |
+| _Runtimes_  | Node, Deno, Bun                                                        |
+| _Frontend_  | React, Remix, Next, Svelte, SvelteKit, Astro, Gatsby, esbuild, Webpack |
+| _Backend_   | Serverless, Webhooks, REST, GraphQL, Express, Fastify, Prisma          |
+| _Testing_   | Vitest, Playwright, Jest, Cypress, Mock Service Worker, Storybook      |
 
 ### Tools
 
-|                          |                                                                        |
-| ------------------------ | ---------------------------------------------------------------------- |
-| _Version Control_        | GitHub, Bitbucket, GitLab                                              |
-| _Continuous Integration_ | GitHub Actions, Travis CI, Jenkins, Bitbucket Pipelines                |
-| _Cloud_                  | Amazon Web Services, Google Cloud Platform, Microsoft Azure            |
-| _Hosting_                | Vercel, Netlify, Heroku, Google Firebase, Fly, Render, GitHub Pages    |
-| _Databases_              | MongoDB, MySQL, Firestore, FaunaDB, Supabase, PlanetScale, Redis, Xata |
-| _Infrastructure_         | Puppet, Artifactory                                                    |
-| _Monitoring_             | Sentry, Splunk, OpsGenie, Pager Duty, New Relic                        |
-| _Development Lifecycle_  | JIRA, GitHub Projects, Rally                                           |
-| _Design_                 | Figma                                                                  |
+|                          |                                                                                 |
+| ------------------------ | ------------------------------------------------------------------------------- |
+| _Version Control_        | GitHub, Bitbucket, GitLab                                                       |
+| _Continuous Integration_ | GitHub Actions, Bitbucket Pipelines, Travis CI, Jenkins                         |
+| _Cloud_                  | Amazon Web Services, Google Cloud Platform, Microsoft Azure                     |
+| _Hosting_                | Vercel, Netlify, Cloudflare, Fly, Render, Heroku, Google Firebase, GitHub Pages |
+| _Databases_              | PostgreSQL, MySQL, MongoDB, Redis, Firestore, Supabase, PlanetScale, Xata       |
+| _Infrastructure_         | Terraform, Puppet, Artifactory                                                  |
+| _Monitoring_             | Sentry, SignalFX, Splunk, OpsGenie, Pager Duty, New Relic                       |
+| _Development Lifecycle_  | JIRA, GitHub Projects                                                           |
+| _Design_                 | Figma                                                                           |
 
 ## Employment History
 
 **Atlassian | Senior Software Engineer**  
 _October 2021 - Present_
 
-_Task Dashboard_
+_Confluence Observatory_
 
--   Dashboard to monitor health and metrics of asynchronous tasks.
--   Architected the application: Remix, Tailwind, Vitest, Mock Service Worker, Cypress
+-   Application to generate SignalFX dashboards and monitor alerts for Confluence services.
+-   Built with Remix, Tailwind, Vitest, Mock Service Worker, Playwright.
+-   Dashboard configuration stored in PostgreSQL and accessed with Prisma.
+-   Dashboards generated with Terraform based on user configuration.
+
+_Confluence Task Dashboard_
+
+-   Dashboard to monitor health and metrics of asynchronous tasks that power Confluence.
+-   Architected the application: Remix, Tailwind, Vitest, Mock Service Worker, Playwright.
 -   Wrote continuous integration with Bitbucket Pipelines and Spinnaker deploys.
 -   Integrated the application with services like Sentry, SonarQube, Splunk, and Launch Darkly.
 -   Leveraged the Atlassian component library for UI elements.
@@ -103,14 +110,10 @@ _April 2019 - July 2020_
 
 _Leadership_
 
--   Lead the Adobe Frontend Guild.
-    -   Organize speakers and topics.
-    -   Give talks myself.
--   Mentor two junior developers on a bi-weekly basis.
+-   Lead and spoke at the Adobe Frontend Guild.
+-   Mentored two junior developers on a bi-weekly basis.
 -   Ran team meetings (standup, retrospectives, demos).
--   Pitched a Hackathon idea federating our GraphQL APIs.
-    -   Lead a team to implement the idea.
-    -   Idea was chosen as next proof of concept project!
+-   Lead a Hackathon team to federate our GraphQL APIs.
 
 **Dell | Server Software Release Engineer (Build Verification Test Lead)**  
 _February 2014 - April 2019_
@@ -123,10 +126,6 @@ _Build Verification Test (BVT) Lead_
 -   Led a team of five contractors to test more in depth issues.
 -   Weekly interlocks on automated testing status with developers.
 -   Managed the entire stack supporting development testing.
-    -   VMs and their configuration with Puppet and Artifactory.
-    -   MATF test framework.
-    -   Hardware systems, managed with GRM.
-    -   Jenkins jobs for continuous integration.
 
 _Modular Automated Test Framework (MATF)_
 
@@ -146,22 +145,20 @@ _Generic Resource Manager (GRM)_
 -   Hooked into continuous integration process to reserve test hardware from MATF.
 -   Tracks all requests, checkins, checkouts, and resources.
 
-_Continuous Integration Pipeline_
-
--   Transitioned legacy Multijob process into a Jenkins scripted pipeline.
--   Defined pipeline stages for staging, build, test, merge, and release steps.
--   Leveraged a single pipeline across 18 releases by utilizing parameters.
--   New pipeline implementation deprecated 100 Jenkins jobs.
-
 _Topic Status_
 
 -   Web application to view status of code commits in the continuous integration process.
 -   Scaled to twelve concurrent releases.
 -   Code commit data pulled from MySQL database.
--   Styled with Bulma CSS framework.
--   Tracked Pending, Staging, and Completed status.
--   Links to each commit in each affected repository.
--   Completely searchable, with button to contact the author.
+-   Built with vanilla JavaScript and Bulma CSS.
+-   Completely searchable, with links to each commit and button to contact the author.
+
+<!-- _Continuous Integration Pipeline_
+
+-   Transitioned legacy Multijob process into a Jenkins scripted pipeline.
+-   Defined pipeline stages for staging, build, test, merge, and release steps.
+-   Leveraged a single pipeline across 18 releases by utilizing parameters.
+-   New pipeline implementation deprecated 100 Jenkins jobs. -->
 
 <!-- **Dell | Chassis Management Controller Firmware Engineer**
 _July 2010 - February 2014_
@@ -173,28 +170,31 @@ _CMC / Force 10 Switch Interface_
 -   Implemented the CMC side of the interface.
 -   Developed a test executable to run interface commands. -->
 
-## Tutorials
+## YouTube
 
-_03/24/2021_ | [Webpack][webpack-tutorial]  
-_03/04/2021_ | [Firebase][firebase-tutorial]
+-   Over 140 videos and 1,500 subscribers on [YouTube][youtube]
+-   Tutorial series on [Webpack][webpack-tutorial], [Firebase][firebase-tutorial], [Plop][plop-tutorial], and [NPM Packages][npm-tutorial]
+-   Created three [Dev Hints][dev-hints] videos for [Cloudinary][cloudinary] _(not yet released)_
+
+## Podcasts
+
+_Current_ | [Compressed.fm][compressed-fm] with James Quick and Amy Dutton  
+_Retired_ | [Web Dev Weekly][web-dev-weekly] with Richard Gottleber
 
 ## Talks & Appearances
 
-_Recurring_ | [Compressed.fm][compressed-fm] with James Quick and Amy Dutton  
-_Recurring_ | [Web Dev Weekly][web-dev-weekly] with Richard Gottleber  
+_01/29/2024_ | [THAT Conference][that-conference] live podcast  
+_01/18/2024_ | [JS Party - Frontend Feud][frontend-feud] with Jerod Santo  
 _12/07/2022_ | [Cloudinary DevJams - Optimizing Cloudinary Images in Markdown Files][cloudinary-devjams]  
 _10/26/2022_ | [Syntax.fm Open Table][syntax-open-table] with Scott Tolinski and Wes Bos  
-_08/04/2021_ | [Purrfect.dev][purrfect-dev] with Brittney Postma and Alex Patterson  
-_06/25/2021_ | [Developers Hangout][developers-hangout] with James Perkins  
+_08/04/2021_ | [CodingCat.dev][codingcat-dev] with Brittney Postma and Alex Patterson  
 _11/11/2020_ | [Syntax.fm 300th Episode][syntax-300] with Scott Tolinski and Wes Bos  
 _11/09/2020_ | [The Chau Codes Podcast][chau-codes] with Justin Chau  
 _10/06/2020_ | [That's My Jamstack][thats-my-jamstack] with Bryan Robinson  
 _08/14/2020_ | [Working on Side Projects][side-projects] with James Quick  
 _06/24/2020_ | [Learning & Unlearning How To Code][whiskey-wednesday] with Scott Spence & Marc Backes  
 _06/13/2020_ | [Publishing NPM Packages][webinar] with James Quick  
-_04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick  
-_09/05/2019_ | [React Context + Hooks: A Lightweight Redux Alternative][context-hooks]  
-_07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsby-netlify]
+_04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 
 ## Personal Projects
 
@@ -202,9 +202,9 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 
 [🏡 bradgarropy.com][bg]
 
--   Blog with embedded CMS.
+-   Portfolio and blog with embedded CMS.
 -   Sourced data from YouTube and an embedded CMS.
--   Developed with Next.js and React, hosted on Vercel.
+-   Developed with TypeScript, React, Remix and Tailwind, hosted on Vercel.
 
 [🤠 daily texas country][dtxc]
 
@@ -253,11 +253,11 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 -   Loan amortization calculator web application.
 -   Developed with Gatsby and React, hosted on Netlify.
 
-[⏩ snap kitchen slider][slider]
+<!-- [⏩ snap kitchen slider][slider]
 
 -   Solution to a Snap Kitchen interview coding question.
 -   Food selection slider with transitions and smart buttons.
--   Developed with Gatsby and React, hosted on Netlify.
+-   Developed with Gatsby and React, hosted on Netlify. -->
 
 <!-- [💬 homeaway typeahead][typeahead]
 
@@ -272,6 +272,13 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 -   Developed with Gatsby and React, hosted on Netlify. -->
 
 ### Packages / Extensions / Bots
+
+[⏳ use-countdown][use-countdown]
+
+-   React hook countdown timer.
+-   Written in TypeScript.
+-   Powers my Twitch starting soon page.
+-   Over 101,000 downloads!
 
 [💡 hue-sdk][hue-sdk]
 
@@ -294,27 +301,6 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 -   Interactive CLI to help users create their own business card.
 -   Over 1,100 downloads!
 
-[⏳ use-countdown][use-countdown]
-
--   React hook countdown timer.
--   Written in TypeScript.
--   Powers my Twitch starting soon page.
--   Over 71,000 downloads!
-
-[⏱ use-timer][use-timer]
-
--   React hook stopwatch.
--   Written in TypeScript.
--   Used in the [Murphy][murphy] application.
--   Over 500 downloads!
-
-[🎤 captivate-sdk][captivate-sdk]
-
--   JavaScript SDK for the [Captivate][captivate] podcast host.
--   Written in TypeScript.
--   Worked with the Captivate team.
--   Over 1,400 downloads!
-
 [🤖 bg codes twitch bot][twitch-bot]
 
 -   Twitch bot that responds to chat commands and offers redemptions.
@@ -333,11 +319,25 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 -   Replaces `fetch`, heavily inspired by `axios`.
 -   Over 2,100 downloads!
 
+[⏱ use-timer][use-timer]
+
+-   React hook stopwatch.
+-   Written in TypeScript.
+-   Used in the [Murphy][murphy] application.
+-   Over 500 downloads!
+
+[🎤 captivate-sdk][captivate-sdk]
+
+-   JavaScript SDK for the [Captivate][captivate] podcast host.
+-   Written in TypeScript.
+-   Worked with the Captivate team.
+-   Over 1,400 downloads!
+
 [🔗 next-link][next-link]
 
 -   Next.js link component.
 -   Accepts internal and external links.
--   Over 1,700 downloads!
+-   Over 4,000 downloads!
 
 [🔎 next-seo][next-seo]
 
@@ -349,7 +349,7 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 
 -   Google Analytics component for Next.js.
 -   Handles all setup out of the box.
--   Over 9,200 downloads!
+-   Over 33,000 downloads!
 
 [💎 eslint-config][eslint]
 
@@ -361,14 +361,14 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 
 -   Rehype plugin that adds dimension attributes to images in Markdown.
 -   Powered by Cloudinary API.
--   Featured on Cloudinary DevJams.
--   Over 300 downloads!
+-   Featured on [Cloudinary DevJams][cloudinary-devjams].
+-   Over 1,500 downloads!
 
 [✂ bg-snippets][bg-snippets]
 
 -   Visual Studio Code snippet library.
 -   Includes JavaScript, TypeScript, serverless, Jest, React, Styled Components, Markdown, and Python snippets.
--   Over 800 installs!
+-   Over 1,100 installs!
 
 ## Platforms
 
@@ -377,19 +377,16 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [Twitter][twitter]  
 [GitHub][github]  
 [npm][npm]  
-[LinkedIn][linkedin]  
-[Polywork][polywork]
+[LinkedIn][linkedin]
 
 [email]: mailto:bradgarropy@gmail.com
 [prex]: https://magento.com/products/product-recommendations
 [recommendations-js-sdk]: https://npmjs.com/package/@magento/recommendations-js-sdk
-[context-hooks]: https://docs.google.com/presentation/d/1M9-3Vp-GoiFFpos61Ttgaa2oPeqYLSE00DvluinWwZc
 [side-projects]: https://youtu.be/iIxk8ebUC_g
 [whiskey-wednesday]: https://youtu.be/5eJ2a9rn54U
 [webinar]: https://youtu.be/xleL7v7yBmM
 [cms]: https://youtu.be/6hp-szqbQwg
-[gatsby-netlify]: https://github.com/bradgarropy/gatsby-plus-netlify
-[dtxc]: https://dailytexascountry.com
+[dtxc]: https://dailytexascountry.netlify.app
 [bg]: https://bradgarropy.com
 [murphy]: https://murphy.bradgarropy.com
 [murphy-app]: https://play.google.com/store/apps/details?id=com.bradgarropy.murphy.twa
@@ -416,7 +413,6 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [github]: https://github.com/bradgarropy
 [npm]: https://npmjs.com/~bradgarropy
 [linkedin]: https://linkedin.com/in/bradgarropy
-[polywork]: https://polywork.com/bradgarropy
 [syntax-300]: https://youtu.be/W7y03fsqHJw?t=2503
 [chau-codes]: https://youtu.be/A85MnRidA2A
 [thats-my-jamstack]: https://thatsmyjamstack.com/posts/brad-garropy
@@ -430,12 +426,17 @@ _07/25/2019_ | [Gatsby + Netlify: The Free & Easy Way to Your Own Website][gatsb
 [search]: https://magento.com/products/live-search
 [events-sdk]: https://github.com/adobe/magento-storefront-events-sdk
 [event-collector]: https://github.com/adobe/magento-storefront-event-collector
-[developers-hangout]: https://youtu.be/oRZNF38Z5Jg
 [web-dev-weekly]: https://open.spotify.com/show/3TAuVah0Q9BOV5PbwPDGfs
 [webpack-tutorial]: https://youtube.com/watch?v=cidA_qfiO0M&list=PL6Mu1AMmTL-vGQdj1-auEc12KM14OmjXH
 [firebase-tutorial]: https://youtube.com/watch?v=FArYmEBCMt0&list=PL6Mu1AMmTL-sSswsqShJ5fbIr9XjYHGFm
-[purrfect-dev]: https://youtu.be/Q-ELtpdIvzw
-[compressed-fm]: https://www.compressed.fm/episode/68
+[plop-tutorial]: https://youtube.com/watch?v=NKW65IVwm6k&list=PL6Mu1AMmTL-vR7eK-1EqewignxemucVo2
+[npm-tutorial]: https://www.youtube.com/watch?v=VuysNccCnEQ&list=PL6Mu1AMmTL-sbySI5prQ6O6t79leQLUcb
+[codingcat-dev]: https://youtube.com/watch?v=jwb5zi5bjfE
+[compressed-fm]: https://www.compressed.fm/episode/159
 [cloudinary-devjams]: https://www.youtube.com/watch?v=QMQKXA9e2Ks
+[that-conference]: https://youtube.com/live/_w8B2B-xyYI?si=HYtDVLm5hN4Rpsz2&t=16595
+[frontend-feud]: https://changelog.com/jsparty/308
 [syntax-open-table]: https://www.youtube.com/watch?v=3HeRP7r01Cs&t=1434s
 [rehype-cloudinary-image-size]: https://www.npmjs.com/package/@bradgarropy/rehype-cloudinary-image-size
+[cloudinary]: https://cloudinary.com
+[dev-hints]: https://youtube.com/playlist?list=PL8dVGjLA2oMpaTbvoKCaRNBMQzBUIv7N8
