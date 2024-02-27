@@ -45,32 +45,34 @@ _October 2021 - Present_
 
 _Confluence Observatory_
 
--   Application to generate SignalFX dashboards and monitor alerts for Confluence services.
+-   Application to generate SignalFX dashboards and monitor alerts for all Confluence services and APIs.
 -   Built with Remix, Tailwind, Vitest, Mock Service Worker, Playwright.
--   Dashboard configuration stored in PostgreSQL and accessed with Prisma.
--   Dashboards generated with Terraform based on user configuration.
+-   Stored dashboard configuration in PostgreSQL and accessed with Prisma.
+-   Generated dashboards with Terraform based on user configuration.
 
 _Confluence Task Dashboard_
 
--   Dashboard to monitor health and metrics of asynchronous tasks that power Confluence.
--   Architected the application: Remix, Tailwind, Vitest, Mock Service Worker, Playwright.
+-   Dashboard to monitor health and metrics of 330+ million daily asynchronous tasks that power Confluence.
+-   Proposed and implemented the application architecture.
+-   Lead and mentored a team of two developers to build the application.
+-   Built with Remix, Tailwind, Vitest, Mock Service Worker, and Playwright.
 -   Wrote continuous integration with Bitbucket Pipelines and Spinnaker deploys.
 -   Integrated the application with services like Sentry, SonarQube, Splunk, and Launch Darkly.
 -   Leveraged the Atlassian component library for UI elements.
 
 _Trello Developer CLI_
 
--   Consistent interface across all Trello repositories.
--   Integrated analytics and error reporting.
--   Dynamic command discovery.
--   On the fly TypeScript compilation with `esbuild`.
+-   Standardized and extensible CLI tool across all Trello teams.
+-   Integrated analytics and error reporting to track developer productivity.
+-   Dynamically discovered commands.
+-   Compiled TypeScript on the fly with `esbuild`.
 
 _Trello Web Platform_
 
--   Release manager for Trello frontend. Deployed and monitored production releases.
+-   Deployed and monitored production releases to ensure incident free deployments.
 -   Created code generators for components, tests, stories, and packages.
 -   Implemented custom `eslint` rules to enforce best practices.
--   Major contributions in converting JavaScript to TypeScript.
+-   Majorly contributed to converting JavaScript to TypeScript.
 -   Wrote documentation and guides for frontend contributors.
 
 **Adobe | Senior Frontend Developer**  
@@ -106,7 +108,7 @@ _April 2019 - July 2020_
 -   Created shopper event tracking mechanism to track recommendations performance.
 -   Made a Magento extension to load the admin UI.
 -   Implemented testing and continuous integration and deployment for all projects.
--   Direct communication with customers to help with onboarding and bugs during early access program.
+-   Communicated directly with customers to help with onboarding and bugs during early access program.
 
 _Leadership_
 
@@ -132,16 +134,16 @@ _Modular Automated Test Framework (MATF)_
 -   Python test framework distributed used by the server firmware development teams.
 -   Supported four products, over 300 developers, and over 50 product releases.
 -   Developers contributed over 20,000 test cases.
--   Libraries for all supported platforms to update, restart, gather logs, etc.
+-   Created libraries for all supported platforms to update, restart, gather logs, etc.
 -   Gave knowledge sharing talks on test case development and tool usage.
--   Tool enabled performance testing, code coverage, stress testing, unit testing, and security audits.
+-   Enabled performance testing, code coverage, stress testing, unit testing, and security audits.
 
 _Generic Resource Manager (GRM)_
 
 -   Web application, Python CLI, and Python library to manage and reserve hardware.
 -   React front end with Node and Express backend hooked up to MongoDB.
 -   Exposed an authenticated REST API.
--   Authentication integrated with company LDAP, implemented with JSON Web Tokens.
+-   Built authentication that integrated with company LDAP, implemented with JSON Web Tokens.
 -   Hooked into continuous integration process to reserve test hardware from MATF.
 -   Tracks all requests, checkins, checkouts, and resources.
 
@@ -149,7 +151,7 @@ _Topic Status_
 
 -   Web application to view status of code commits in the continuous integration process.
 -   Scaled to twelve concurrent releases.
--   Code commit data pulled from MySQL database.
+-   Pulled code commit data from MySQL database.
 -   Built with vanilla JavaScript and Bulma CSS.
 -   Completely searchable, with links to each commit and button to contact the author.
 
@@ -173,7 +175,7 @@ _CMC / Force 10 Switch Interface_
 ## YouTube
 
 -   Over 140 videos and 1,500 subscribers on [YouTube][youtube]
--   Tutorial series on [Webpack][webpack-tutorial], [Firebase][firebase-tutorial], [Plop][plop-tutorial], and [NPM Packages][npm-tutorial]
+-   Published tutorial series on [Webpack][webpack-tutorial], [Firebase][firebase-tutorial], [Plop][plop-tutorial], and [NPM Packages][npm-tutorial]
 -   Created three [Dev Hints][dev-hints] videos for [Cloudinary][cloudinary] _(not yet released)_
 
 ## Podcasts
