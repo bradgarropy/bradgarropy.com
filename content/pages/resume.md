@@ -5,7 +5,7 @@ _Austin, Texas_
 
 ## Objective
 
-Find a fully remote job in a smaller company where I can architect, lead, and develop web applications with a fast moving team that owns their own stack. I prefer to work in TypeScript, Remix, Tailwind, and PostgreSQL. Any public facing products or open source opportunities are a great bonus.
+To find a fully remote position in a smaller company where I can architect, lead, and develop web applications with a fast moving team that owns their own stack. I prefer to work in TypeScript, Remix, Tailwind, and PostgreSQL. Public facing products or open source opportunities are a great bonus.
 
 ## Education
 
@@ -26,19 +26,19 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 
 ### Tools
 
-|                          |                                                                                 |
-| ------------------------ | ------------------------------------------------------------------------------- |
-| _Version Control_        | GitHub, Bitbucket, GitLab                                                       |
-| _Continuous Integration_ | GitHub Actions, Bitbucket Pipelines, Travis CI, Jenkins                         |
-| _Cloud_                  | Amazon Web Services, Google Cloud Platform, Microsoft Azure                     |
-| _Hosting_                | Vercel, Netlify, Cloudflare, Fly, Render, Heroku, Google Firebase, GitHub Pages |
-| _Databases_              | PostgreSQL, MySQL, MongoDB, Redis, Firestore, Supabase, PlanetScale, Xata       |
-| _Infrastructure_         | Terraform, Puppet, Artifactory                                                  |
-| _Monitoring_             | Sentry, SignalFX, Splunk, OpsGenie, Pager Duty, New Relic                       |
-| _Development Lifecycle_  | JIRA, GitHub Projects                                                           |
-| _Design_                 | Figma                                                                           |
+|                          |                                                             |
+| ------------------------ | ----------------------------------------------------------- |
+| _Version Control_        | GitHub, Bitbucket, GitLab                                   |
+| _Continuous Integration_ | GitHub Actions, Bitbucket Pipelines, Travis CI, Jenkins     |
+| _Cloud_                  | Amazon Web Services, Google Cloud Platform, Microsoft Azure |
+| _Hosting_                | Vercel, Netlify, Cloudflare, Fly, Render, Heroku            |
+| _Databases_              | PostgreSQL, MySQL, MongoDB, Redis, Firestore                |
+| _Infrastructure_         | Terraform, Puppet, Artifactory                              |
+| _Monitoring_             | Sentry, SignalFX, Splunk, OpsGenie, Pager Duty, New Relic   |
+| _Development Lifecycle_  | JIRA, GitHub Projects                                       |
+| _Design_                 | Figma                                                       |
 
-## Employment History
+## Work Experience
 
 **Atlassian | Senior Software Engineer**  
 _October 2021 - Present_
@@ -184,17 +184,18 @@ _Retired_ | [Web Dev Weekly][web-dev-weekly] with Richard Gottleber
 ## Talks & Appearances
 
 _01/29/2024_ | [THAT Conference][that-conference] live podcast  
-_01/18/2024_ | [JS Party - Frontend Feud][frontend-feud] with Jerod Santo  
 _12/07/2022_ | [Cloudinary DevJams - Optimizing Cloudinary Images in Markdown Files][cloudinary-devjams]  
-_10/26/2022_ | [Syntax.fm Open Table][syntax-open-table] with Scott Tolinski and Wes Bos  
 _08/04/2021_ | [CodingCat.dev][codingcat-dev] with Brittney Postma and Alex Patterson  
-_11/11/2020_ | [Syntax.fm 300th Episode][syntax-300] with Scott Tolinski and Wes Bos  
 _11/09/2020_ | [The Chau Codes Podcast][chau-codes] with Justin Chau  
 _10/06/2020_ | [That's My Jamstack][thats-my-jamstack] with Bryan Robinson  
 _08/14/2020_ | [Working on Side Projects][side-projects] with James Quick  
-_06/24/2020_ | [Learning & Unlearning How To Code][whiskey-wednesday] with Scott Spence & Marc Backes  
 _06/13/2020_ | [Publishing NPM Packages][webinar] with James Quick  
 _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
+
+<!-- _01/18/2024_ | [JS Party - Frontend Feud][frontend-feud] with Jerod Santo   -->
+<!-- _10/26/2022_ | [Syntax.fm Open Table][syntax-open-table] with Scott Tolinski and Wes Bos   -->
+<!-- _11/11/2020_ | [Syntax.fm 300th Episode][syntax-300] with Scott Tolinski and Wes Bos   -->
+<!-- _06/24/2020_ | [Learning & Unlearning How To Code][whiskey-wednesday] with Scott Spence & Marc Backes   -->
 
 ## Personal Projects
 
@@ -228,13 +229,6 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 -   Tracks most and least popular restaurants with Airtable.
 -   Built with Gatsby and React, hosted on Netlify.
 
-[🎥 bg codes twitch overlay][bg-codes]
-
--   Gatsby website used as a Twitch overlay.
--   Supports solo and guest streaming.
--   Includes a countdown screen.
--   Stream data sourced through Firebase.
-
 [🏋🏼‍♂️ iron jimmy][iron-jimmy]
 
 -   E-commerce website for a small weightlifting business.
@@ -242,16 +236,23 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 -   Full cart and checkout experience.
 -   Developed with Gatsby and React, hosted on Netlify.
 
-[📷 photogarropy][photogarropy]
-
--   Website for a small photography business.
--   Front page image carousel. Contact form using Netlify Forms.
--   JAMstack style site developed with Gatsby and React, hosted on Netlify.
-
 [💳 amorty][amorty]
 
 -   Loan amortization calculator web application.
 -   Developed with Gatsby and React, hosted on Netlify.
+
+<!-- [📷 photogarropy][photogarropy]
+
+-   Website for a small photography business.
+-   Front page image carousel. Contact form using Netlify Forms.
+-   JAMstack style site developed with Gatsby and React, hosted on Netlify. -->
+
+<!-- [🎥 bg codes twitch overlay][bg-codes]
+
+-   Gatsby website used as a Twitch overlay.
+-   Supports solo and guest streaming.
+-   Includes a countdown screen.
+-   Stream data sourced through Firebase. -->
 
 <!-- [⏩ snap kitchen slider][slider]
 
@@ -313,50 +314,6 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 -   Leverages the Spotify API to retrieve the playlist, and the Twitter API to publish tweets.
 -   Executed by a serverless function triggered by a GitHub Action.
 
-[📻 http][http]
-
--   Simplified HTTP request library.
--   Replaces `fetch`, heavily inspired by `axios`.
--   Over 2,100 downloads!
-
-[⏱ use-timer][use-timer]
-
--   React hook stopwatch.
--   Written in TypeScript.
--   Used in the [Murphy][murphy] application.
--   Over 500 downloads!
-
-[🎤 captivate-sdk][captivate-sdk]
-
--   JavaScript SDK for the [Captivate][captivate] podcast host.
--   Written in TypeScript.
--   Worked with the Captivate team.
--   Over 1,400 downloads!
-
-[🔗 next-link][next-link]
-
--   Next.js link component.
--   Accepts internal and external links.
--   Over 4,000 downloads!
-
-[🔎 next-seo][next-seo]
-
--   SEO component for Next.js.
--   Supports Facebook, Twitter, Open Graph, and meta tags.
--   Over 7,300 downloads!
-
-[📊 next-google-analytics][next-google-analytics]
-
--   Google Analytics component for Next.js.
--   Handles all setup out of the box.
--   Over 33,000 downloads!
-
-[💎 eslint-config][eslint]
-
--   Shareable version of my eslint configuration.
--   Integrates accessibility, React, and React hooks plugins.
--   Over 4,200 downloads!
-
 [🖼 rehype cloudinary image size][rehype-cloudinary-image-size]
 
 -   Rehype plugin that adds dimension attributes to images in Markdown.
@@ -364,11 +321,55 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 -   Featured on [Cloudinary DevJams][cloudinary-devjams].
 -   Over 1,500 downloads!
 
-[✂ bg-snippets][bg-snippets]
+[📊 next-google-analytics][next-google-analytics]
+
+-   Google Analytics component for Next.js.
+-   Handles all setup out of the box.
+-   Over 33,000 downloads!
+
+<!-- [📻 http][http]
+
+-   Simplified HTTP request library.
+-   Replaces `fetch`, heavily inspired by `axios`.
+-   Over 2,100 downloads! -->
+
+<!-- [🔎 next-seo][next-seo]
+
+-   SEO component for Next.js.
+-   Supports Facebook, Twitter, Open Graph, and meta tags.
+-   Over 7,300 downloads! -->
+
+<!-- [⏱ use-timer][use-timer]
+
+-   React hook stopwatch.
+-   Written in TypeScript.
+-   Used in the [Murphy][murphy] application.
+-   Over 500 downloads! -->
+
+<!-- [🎤 captivate-sdk][captivate-sdk]
+
+-   JavaScript SDK for the [Captivate][captivate] podcast host.
+-   Written in TypeScript.
+-   Worked with the Captivate team.
+-   Over 1,400 downloads! -->
+
+<!-- [🔗 next-link][next-link]
+
+-   Next.js link component.
+-   Accepts internal and external links.
+-   Over 4,000 downloads! -->
+
+<!-- [💎 eslint-config][eslint]
+
+-   Shareable version of my eslint configuration.
+-   Integrates accessibility, React, and React hooks plugins.
+-   Over 4,200 downloads! -->
+
+<!-- [✂ bg-snippets][bg-snippets]
 
 -   Visual Studio Code snippet library.
 -   Includes JavaScript, TypeScript, serverless, Jest, React, Styled Components, Markdown, and Python snippets.
--   Over 1,100 installs!
+-   Over 1,100 installs! -->
 
 ## Platforms
 
