@@ -435,7 +435,7 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 [plop-tutorial]: https://youtube.com/watch?v=NKW65IVwm6k&list=PL6Mu1AMmTL-vR7eK-1EqewignxemucVo2
 [npm-tutorial]: https://www.youtube.com/watch?v=VuysNccCnEQ&list=PL6Mu1AMmTL-sbySI5prQ6O6t79leQLUcb
 [codingcat-dev]: https://youtube.com/watch?v=jwb5zi5bjfE
-[compressed-fm]: https://www.compressed.fm/episode/159
+[compressed-fm]: https://compressed.fm
 [cloudinary-devjams]: https://www.youtube.com/watch?v=QMQKXA9e2Ks
 [that-conference]: https://youtube.com/live/_w8B2B-xyYI?si=HYtDVLm5hN4Rpsz2&t=16595
 [frontend-feud]: https://changelog.com/jsparty/308
