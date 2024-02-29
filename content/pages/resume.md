@@ -155,23 +155,6 @@ _Topic Status_
 -   Built with vanilla JavaScript and Bulma CSS.
 -   Completely searchable, with links to each commit and button to contact the author.
 
-<!-- _Continuous Integration Pipeline_
-
--   Transitioned legacy Multijob process into a Jenkins scripted pipeline.
--   Defined pipeline stages for staging, build, test, merge, and release steps.
--   Leveraged a single pipeline across 18 releases by utilizing parameters.
--   New pipeline implementation deprecated 100 Jenkins jobs. -->
-
-<!-- **Dell | Chassis Management Controller Firmware Engineer**
-_July 2010 - February 2014_
-
-_CMC / Force 10 Switch Interface_
-
--   XML based interface enabling communication between Dell CMC and Force 10 switches.
--   Co-author of the XML interface spec in collaboration with the Force 10 engineering team.
--   Implemented the CMC side of the interface.
--   Developed a test executable to run interface commands. -->
-
 ## YouTube
 
 -   Over 140 videos and 1,500 subscribers on [YouTube][youtube]
@@ -193,11 +176,6 @@ _10/06/2020_ | [That's My Jamstack][thats-my-jamstack] with Bryan Robinson
 _08/14/2020_ | [Working on Side Projects][side-projects] with James Quick  
 _06/13/2020_ | [Publishing NPM Packages][webinar] with James Quick  
 _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
-
-<!-- _01/18/2024_ | [JS Party - Frontend Feud][frontend-feud] with Jerod Santo   -->
-<!-- _10/26/2022_ | [Syntax.fm Open Table][syntax-open-table] with Scott Tolinski and Wes Bos   -->
-<!-- _11/11/2020_ | [Syntax.fm 300th Episode][syntax-300] with Scott Tolinski and Wes Bos   -->
-<!-- _06/24/2020_ | [Learning & Unlearning How To Code][whiskey-wednesday] with Scott Spence & Marc Backes   -->
 
 ## Personal Projects
 
@@ -242,37 +220,6 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 
 -   Loan amortization calculator web application.
 -   Developed with Gatsby and React, hosted on Netlify.
-
-<!-- [📷 photogarropy][photogarropy]
-
--   Website for a small photography business.
--   Front page image carousel. Contact form using Netlify Forms.
--   JAMstack style site developed with Gatsby and React, hosted on Netlify. -->
-
-<!-- [🎥 bg codes twitch overlay][bg-codes]
-
--   Gatsby website used as a Twitch overlay.
--   Supports solo and guest streaming.
--   Includes a countdown screen.
--   Stream data sourced through Firebase. -->
-
-<!-- [⏩ snap kitchen slider][slider]
-
--   Solution to a Snap Kitchen interview coding question.
--   Food selection slider with transitions and smart buttons.
--   Developed with Gatsby and React, hosted on Netlify. -->
-
-<!-- [💬 homeaway typeahead][typeahead]
-
--   Solution to a HomeAway interview coding question.
--   Github user search with typeahead suggestions.
--   Developed with Gatsby and React, hosted on Netlify. -->
-
-<!-- [📜 homeaway infinite scroll][infinite-scroll]
-
--   Solution to a HomeAway interview coding question.
--   Pokemon themed infinite scroll.
--   Developed with Gatsby and React, hosted on Netlify. -->
 
 ### Packages / Extensions / Bots
 
@@ -329,50 +276,6 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 -   Handles all setup out of the box.
 -   Over 33,000 downloads!
 
-<!-- [📻 http][http]
-
--   Simplified HTTP request library.
--   Replaces `fetch`, heavily inspired by `axios`.
--   Over 2,100 downloads! -->
-
-<!-- [🔎 next-seo][next-seo]
-
--   SEO component for Next.js.
--   Supports Facebook, Twitter, Open Graph, and meta tags.
--   Over 7,300 downloads! -->
-
-<!-- [⏱ use-timer][use-timer]
-
--   React hook stopwatch.
--   Written in TypeScript.
--   Used in the [Murphy][murphy] application.
--   Over 500 downloads! -->
-
-<!-- [🎤 captivate-sdk][captivate-sdk]
-
--   JavaScript SDK for the [Captivate][captivate] podcast host.
--   Written in TypeScript.
--   Worked with the Captivate team.
--   Over 1,400 downloads! -->
-
-<!-- [🔗 next-link][next-link]
-
--   Next.js link component.
--   Accepts internal and external links.
--   Over 4,000 downloads! -->
-
-<!-- [💎 eslint-config][eslint]
-
--   Shareable version of my eslint configuration.
--   Integrates accessibility, React, and React hooks plugins.
--   Over 4,200 downloads! -->
-
-<!-- [✂ bg-snippets][bg-snippets]
-
--   Visual Studio Code snippet library.
--   Includes JavaScript, TypeScript, serverless, Jest, React, Styled Components, Markdown, and Python snippets.
--   Over 1,100 installs! -->
-
 ## Platforms
 
 [Twitch][twitch]  
@@ -386,7 +289,6 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 [prex]: https://magento.com/products/product-recommendations
 [recommendations-js-sdk]: https://npmjs.com/package/@magento/recommendations-js-sdk
 [side-projects]: https://youtu.be/iIxk8ebUC_g
-[whiskey-wednesday]: https://youtu.be/5eJ2a9rn54U
 [webinar]: https://youtu.be/xleL7v7yBmM
 [cms]: https://youtu.be/6hp-szqbQwg
 [dtxc]: https://dailytexascountry.netlify.app
@@ -395,37 +297,23 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 [murphy-app]: https://play.google.com/store/apps/details?id=com.bradgarropy.murphy.twa
 [adobe-lunch]: https://adobe-lunch.netlify.app
 [iron-jimmy]: https://ironjimmy.com
-[photogarropy]: https://photogarropy.netlify.app
 [amorty]: https://amorty.netlify.com
-[slider]: https://snap-kitchen-slider.netlify.com
-[typeahead]: https://homeaway-typeahead.netlify.com
-[infinite-scroll]: https://homeaway-infinite-scroll.netlify.com
 [dtxc-bot]: https://twitter.com/dailytxcountry
 [labman]: https://npmjs.com/package/labman
 [github-cli]: https://github.com/cli/cli/releases/tag/v2.9.0
 [business-card]: https://npmjs.com/package/bradgarropy
-[http]: https://npmjs.com/package/@bradgarropy/http
-[next-link]: https://npmjs.com/package/@bradgarropy/next-link
-[next-seo]: https://npmjs.com/package/@bradgarropy/next-seo
 [next-google-analytics]: https://npmjs.com/package/@bradgarropy/next-google-analytics
-[eslint]: https://npmjs.com/package/@bradgarropy/eslint-config
-[bg-snippets]: https://marketplace.visualstudio.com/items?itemName=bradgarropy.bg-snippets
 [twitch]: https://twitch.tv/bradgarropy
 [youtube]: https://youtube.com/bradgarropy
 [twitter]: https://twitter.com/bradgarropy
 [github]: https://github.com/bradgarropy
 [npm]: https://npmjs.com/~bradgarropy
 [linkedin]: https://linkedin.com/in/bradgarropy
-[syntax-300]: https://youtu.be/W7y03fsqHJw?t=2503
 [chau-codes]: https://youtu.be/A85MnRidA2A
 [thats-my-jamstack]: https://thatsmyjamstack.com/posts/brad-garropy
 [use-countdown]: https://npmjs.com/package/@bradgarropy/use-countdown
-[use-timer]: https://npmjs.com/package/@bradgarropy/use-timer
-[captivate-sdk]: https://npmjs.com/package/@bradgarropy/captivate-sdk
-[captivate]: https://captivate.fm
 [hue-sdk]: https://npmjs.com/package/@bradgarropy/hue-sdk
 [twitch-bot]: https://github.com/bradgarropy/twitch-bot
-[bg-codes]: https://bg-codes.netlify.app
 [search]: https://magento.com/products/live-search
 [events-sdk]: https://github.com/adobe/magento-storefront-events-sdk
 [event-collector]: https://github.com/adobe/magento-storefront-event-collector
@@ -438,8 +326,6 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 [compressed-fm]: https://compressed.fm
 [cloudinary-devjams]: https://www.youtube.com/watch?v=QMQKXA9e2Ks
 [that-conference]: https://youtube.com/live/_w8B2B-xyYI?si=HYtDVLm5hN4Rpsz2&t=16595
-[frontend-feud]: https://changelog.com/jsparty/308
-[syntax-open-table]: https://www.youtube.com/watch?v=3HeRP7r01Cs&t=1434s
 [rehype-cloudinary-image-size]: https://www.npmjs.com/package/@bradgarropy/rehype-cloudinary-image-size
 [cloudinary]: https://cloudinary.com
 [dev-hints]: https://youtube.com/playlist?list=PL8dVGjLA2oMpaTbvoKCaRNBMQzBUIv7N8
