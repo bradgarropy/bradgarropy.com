@@ -7,6 +7,14 @@ _Austin, Texas_
 
 To find a fully remote position in a smaller company where I can architect, lead, and develop web applications with a fast moving team that owns their own stack. I prefer to work in TypeScript, Remix, Tailwind, and PostgreSQL. Public facing products or open source opportunities are a great bonus.
 
+## Summary
+
+-   14 years of engineering experience across 3 companies
+-   Led multiple teams to build applications from scratch
+-   Specialize in frontend development with React and TypeScript
+-   Maintain many open source projects and repositories
+-   Create videos, podcasts, and streams to educate others
+
 ## Education
 
 **The University of Texas at Austin**  
@@ -53,9 +61,9 @@ _Confluence Observatory_
 _Confluence Task Dashboard_
 
 -   Dashboard to monitor health and metrics of 330+ million daily asynchronous tasks that power Confluence.
--   Proposed and implemented the application architecture.
--   Lead and mentored a team of two developers to build the application.
 -   Built with Remix, Tailwind, Vitest, Mock Service Worker, and Playwright.
+-   Proposed and implemented the application architecture.
+-   Led and mentored a team of two developers to build the application.
 -   Wrote continuous integration with Bitbucket Pipelines and Spinnaker deploys.
 -   Integrated the application with services like Sentry, SonarQube, Splunk, and Launch Darkly.
 -   Leveraged the Atlassian component library for UI elements.
@@ -63,9 +71,9 @@ _Confluence Task Dashboard_
 _Trello Developer CLI_
 
 -   Standardized and extensible CLI tool across all Trello teams.
+-   Built with Node, TypeScript, Commander, and esbuild.
 -   Integrated analytics and error reporting to track developer productivity.
--   Dynamically discovered commands.
--   Compiled TypeScript on the fly with `esbuild`.
+-   Compiled discovered commands on the fly with `esbuild`.
 
 _Trello Web Platform_
 
@@ -112,12 +120,12 @@ _April 2019 - July 2020_
 
 _Leadership_
 
--   Lead and spoke at the Adobe Frontend Guild.
+-   Led and spoke at the Adobe Frontend Guild.
 -   Mentored two junior developers on a bi-weekly basis.
 -   Ran team meetings (standup, retrospectives, demos).
--   Lead a Hackathon team to federate our GraphQL APIs.
+-   Led a Hackathon team to federate our GraphQL APIs.
 
-**Dell | Server Software Release Engineer (Build Verification Test Lead)**  
+**Dell | Server Software Release Engineer**  
 _February 2014 - April 2019_
 
 _Build Verification Test (BVT) Lead_
@@ -201,26 +209,6 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 -   Built with Svelte, Tailwind CSS, FaunaDB, and Netlify.
 -   Released on the [Google Play Store][murphy-app].
 
-[🥪 adobe lunch][adobe-lunch]
-
--   Lunch spot picker for my coworkers.
--   Detects user location via browser API.
--   Leverages FourSquare for restaurant information.
--   Tracks most and least popular restaurants with Airtable.
--   Built with Gatsby and React, hosted on Netlify.
-
-[🏋🏼‍♂️ iron jimmy][iron-jimmy]
-
--   E-commerce website for a small weightlifting business.
--   Shopify backend integrated using Gatsby plugins and the Shopify Storefront API.
--   Full cart and checkout experience.
--   Developed with Gatsby and React, hosted on Netlify.
-
-[💳 amorty][amorty]
-
--   Loan amortization calculator web application.
--   Developed with Gatsby and React, hosted on Netlify.
-
 ### Packages / Extensions / Bots
 
 [⏳ use-countdown][use-countdown]
@@ -230,12 +218,11 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 -   Powers my Twitch starting soon page.
 -   Over 101,000 downloads!
 
-[💡 hue-sdk][hue-sdk]
+[🤖 bg codes twitch bot][twitch-bot]
 
--   Philips Hue JavaScript SDK.
--   Written in TypeScript.
--   Powers functionality in my Twitch bot.
--   Over 2,500 downloads!
+-   Twitch bot that responds to chat commands and offers redemptions.
+-   Integrates with the Hue SDK to control lights.
+-   Modifies the vscode theme based on chat commands.
 
 [👨🏼‍🔬 labman][labman]
 
@@ -250,31 +237,6 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 -   Run `npx bradgarropy` to see for yourself.
 -   Interactive CLI to help users create their own business card.
 -   Over 1,100 downloads!
-
-[🤖 bg codes twitch bot][twitch-bot]
-
--   Twitch bot that responds to chat commands and offers redemptions.
--   Integrates with the Hue SDK to control lights.
--   Modifies the vscode theme based on chat commands.
-
-[🤠 daily texas country twitter bot][dtxc-bot]
-
--   Twitter bot that tweets a random song from a playlist daily.
--   Leverages the Spotify API to retrieve the playlist, and the Twitter API to publish tweets.
--   Executed by a serverless function triggered by a GitHub Action.
-
-[🖼 rehype cloudinary image size][rehype-cloudinary-image-size]
-
--   Rehype plugin that adds dimension attributes to images in Markdown.
--   Powered by Cloudinary API.
--   Featured on [Cloudinary DevJams][cloudinary-devjams].
--   Over 1,500 downloads!
-
-[📊 next-google-analytics][next-google-analytics]
-
--   Google Analytics component for Next.js.
--   Handles all setup out of the box.
--   Over 33,000 downloads!
 
 ## Platforms
 
@@ -295,14 +257,10 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 [bg]: https://bradgarropy.com
 [murphy]: https://murphy.bradgarropy.com
 [murphy-app]: https://play.google.com/store/apps/details?id=com.bradgarropy.murphy.twa
-[adobe-lunch]: https://adobe-lunch.netlify.app
-[iron-jimmy]: https://ironjimmy.com
-[amorty]: https://amorty.netlify.com
 [dtxc-bot]: https://twitter.com/dailytxcountry
 [labman]: https://npmjs.com/package/labman
 [github-cli]: https://github.com/cli/cli/releases/tag/v2.9.0
 [business-card]: https://npmjs.com/package/bradgarropy
-[next-google-analytics]: https://npmjs.com/package/@bradgarropy/next-google-analytics
 [twitch]: https://twitch.tv/bradgarropy
 [youtube]: https://youtube.com/bradgarropy
 [twitter]: https://twitter.com/bradgarropy
@@ -312,7 +270,6 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 [chau-codes]: https://youtu.be/A85MnRidA2A
 [thats-my-jamstack]: https://thatsmyjamstack.com/posts/brad-garropy
 [use-countdown]: https://npmjs.com/package/@bradgarropy/use-countdown
-[hue-sdk]: https://npmjs.com/package/@bradgarropy/hue-sdk
 [twitch-bot]: https://github.com/bradgarropy/twitch-bot
 [search]: https://magento.com/products/live-search
 [events-sdk]: https://github.com/adobe/magento-storefront-events-sdk
