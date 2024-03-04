@@ -32,9 +32,9 @@
         "url": "https://github.com/bradgarropy/bradgarropy.com"
     },
     "scripts": {
-        "start": "remix dev",
+        "start": "remix vite:dev",
         "prestart": "tsx src/scripts/copyTheme.ts",
-        "build": "remix build",
+        "build": "remix vite:build",
         "prebuild": "tsx src/scripts/copyTheme.ts && tsx src/scripts/generateRobots.ts && tsx src/scripts/generateSitemap.ts && tsx src/scripts/generateFeeds.ts",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
