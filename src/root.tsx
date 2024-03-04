@@ -3,7 +3,6 @@ import {json} from "@remix-run/node"
 import type {MetaFunction} from "@remix-run/react"
 import {
     Links,
-    LiveReload,
     Meta,
     Outlet,
     Scripts,
