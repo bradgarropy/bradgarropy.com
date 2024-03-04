@@ -90,7 +90,6 @@ const App = () => {
 
                 <ScrollRestoration />
                 <Scripts />
-                <LiveReload />
             </body>
         </html>
     )
