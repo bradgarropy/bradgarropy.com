@@ -42,7 +42,7 @@ const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
 const transformMarkdown = async (markdown: string): Promise<string> => {
     const themePath = path.join(
         process.cwd(),
-        "build/server/shikiji/themes/shades-of-purple.json",
+        "build/client/shikiji/themes/shades-of-purple.json",
     )
 
     const theme = fs.readFileSync(themePath, "utf8")
@@ -58,11 +58,11 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
                 paths: {
                     languages: path.join(
                         process.cwd(),
-                        "build/server/shikiji/langs",
+                        "build/client/shikiji/langs",
                     ),
                     themes: path.join(
                         process.cwd(),
-                        "build/server/shikiji/themes",
+                        "build/client/shikiji/themes",
                     ),
                 },
             }),
