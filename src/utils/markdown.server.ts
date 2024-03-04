@@ -16,7 +16,7 @@ import remarkInlineLinks from "remark-inline-links"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
 import remarkUnwrapImages from "remark-unwrap-images"
-import {getHighlighter} from "shikiji"
+import {getHighlighter} from "shiki"
 import {unified} from "unified"
 
 import {codesandboxTransformer} from "~/transformers/codesandbox"
@@ -42,7 +42,7 @@ const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
 const transformMarkdown = async (markdown: string): Promise<string> => {
     const themePath = path.join(
         process.cwd(),
-        "build/shikiji/themes/shades-of-purple.json",
+        "build/shiki/themes/shades-of-purple.json",
     )
 
     const theme = fs.readFileSync(themePath, "utf8")
@@ -50,15 +50,10 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
     const options: Options = {
         theme: json5.parse(theme),
         keepBackground: true,
-        getHighlighter: () =>
+        getHighlighter: options =>
             getHighlighter({
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                // @ts-expect-error
-                theme: json5.parse(theme),
-                paths: {
-                    languages: path.join(process.cwd(), "build/shikiji/langs"),
-                    themes: path.join(process.cwd(), "build/shikiji/themes"),
-                },
+                ...options,
+                themes: [json5.parse(theme)],
             }),
     }
 
