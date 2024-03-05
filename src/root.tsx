@@ -3,7 +3,6 @@ import {json} from "@remix-run/node"
 import type {MetaFunction} from "@remix-run/react"
 import {
     Links,
-    LiveReload,
     Meta,
     Outlet,
     Scripts,
@@ -15,7 +14,7 @@ import classnames from "classnames"
 import GoogleAnalytics from "~/components/GoogleAnalytics"
 import {AppProvider} from "~/context/App"
 import {ThemeProvider} from "~/context/Theme"
-import styles from "~/styles/tailwind.css"
+import styles from "~/styles/tailwind.css?url"
 import {createImageUrl} from "~/utils/cloudinary"
 import {getMeta} from "~/utils/meta"
 import {getTheme} from "~/utils/session.server"
@@ -90,7 +89,6 @@ const App = () => {
 
                 <ScrollRestoration />
                 <Scripts />
-                <LiveReload />
             </body>
         </html>
     )
