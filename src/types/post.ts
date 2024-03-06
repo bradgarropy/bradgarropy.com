@@ -1,3 +1,8 @@
+type Markdown = {
+    attributes: PostFrontmatter
+    markdown: string
+}
+
 type Post = {
     html: string
     frontmatter: PostFrontmatter
@@ -18,4 +23,4 @@ type Topic = {
 
 type Tag = string
 
-export type {Post, PostFrontmatter, Tag, Topic}
+export type {Markdown, Post, PostFrontmatter, Tag, Topic}
