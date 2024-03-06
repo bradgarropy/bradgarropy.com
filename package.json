@@ -35,7 +35,7 @@
         "start": "remix vite:dev",
         "prestart": "tsx src/scripts/copyTheme.ts",
         "build": "remix vite:build",
-        "postbuild": "tsx src/scripts/copyTheme.ts && tsx src/scripts/generateRobots.ts && tsx src/scripts/generateSitemap.ts && tsx src/scripts/generateFeeds.ts",
+        "postbuild": "tsx src/scripts/copyTheme.ts && tsx src/scripts/generateRobots.ts",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
         "format": "prettier --check .",
