@@ -1,6 +1,4 @@
-import {writeFile} from "node:fs/promises"
-
-const generate = async () => {
+const generateRobots = () => {
     const robots = `
             User-agent: Googlebot
             Disallow: /nogooglebot/
@@ -15,7 +13,7 @@ const generate = async () => {
         .map(line => line.trim())
         .join("\n")
 
-    await writeFile("public/robots.txt", robots)
+    return robots
 }
 
-generate()
+export {generateRobots}

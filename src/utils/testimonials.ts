@@ -1,30 +1,17 @@
-import fs from "node:fs"
-import path from "node:path"
-
-import matter from "gray-matter"
-
+import type {Markdown} from "~/types/markdown"
 import type {Testimonial, TestimonialFrontmatter} from "~/types/testimonial"
 import {transformMarkdown} from "~/utils/markdown.server"
 
 const getTestimonials = async (): Promise<Testimonial[]> => {
-    const testimonialsPath = path.join(process.cwd(), "content/testimonials")
+    const files = import.meta.glob<Markdown<TestimonialFrontmatter>>(
+        "/content/testimonials/*.md",
+        {eager: true},
+    )
 
-    const testimonialPaths = fs.readdirSync(testimonialsPath).map(slug => {
-        const testimonialPath = path.join(
-            process.cwd(),
-            `content/testimonials/${slug}`,
-        )
-
-        return testimonialPath
-    })
-
-    const promises = testimonialPaths.map(async testimonialPath => {
-        const file = matter.read(testimonialPath)
-        const html = await transformMarkdown(file.content)
-
+    const promises = Object.values(files).map(async file => {
         const testimonial: Testimonial = {
-            html,
-            frontmatter: file.data as TestimonialFrontmatter,
+            html: await transformMarkdown(file.markdown),
+            frontmatter: file.attributes,
         }
 
         return testimonial

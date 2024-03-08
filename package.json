@@ -1,6 +1,6 @@
 {
     "name": "bradgarropy.com",
-    "version": "7.5.0",
+    "version": "7.6.0",
     "description": "🏠 my home on the web",
     "type": "module",
     "keywords": [
@@ -35,7 +35,7 @@
         "start": "remix vite:dev",
         "prestart": "tsx src/scripts/copyTheme.ts",
         "build": "remix vite:build",
-        "postbuild": "tsx src/scripts/copyTheme.ts && tsx src/scripts/generateRobots.ts && tsx src/scripts/generateSitemap.ts && tsx src/scripts/generateFeeds.ts",
+        "postbuild": "tsx src/scripts/copyTheme.ts",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
         "format": "prettier --check .",
@@ -61,7 +61,6 @@
         "date-fns": "^3.3.1",
         "feed": "^4.2.2",
         "fuse.js": "^7.0.0",
-        "gray-matter": "^4.0.3",
         "isbot": "latest",
         "json5": "^2.2.3",
         "react-dom": "^18.2.0",
@@ -122,6 +121,7 @@
         "tsx": "^4.6.0",
         "typescript": "^5.0.2",
         "vite": "^5.1.4",
+        "vite-plugin-markdown": "^2.2.0",
         "vite-tsconfig-paths": "^4.2.1",
         "vitest": "^1.0.2"
     },

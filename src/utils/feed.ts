@@ -50,7 +50,7 @@ const generateFeed = async (type: FeedType) => {
         },
     })
 
-    const posts = await getPosts()
+    const posts = getPosts()
 
     posts.forEach(post => {
         feed.addItem({
@@ -61,13 +61,12 @@ const generateFeed = async (type: FeedType) => {
                     link: "https://twitter.com/bradgarropy",
                 },
             ],
-            content: post.html,
             copyright: `© ${new Date().getFullYear()} Brad Garropy`,
-            date: new Date(`${post.frontmatter.date}T00:00:00.000Z`),
-            id: post.frontmatter.slug,
-            link: `https://bradgarropy.com/blog/${post.frontmatter.slug}`,
-            published: new Date(`${post.frontmatter.date}T00:00:00.000Z`),
-            title: post.frontmatter.title,
+            date: new Date(`${post.date}T00:00:00.000Z`),
+            id: post.slug,
+            link: `https://bradgarropy.com/blog/${post.slug}`,
+            published: new Date(`${post.date}T00:00:00.000Z`),
+            title: post.title,
         })
     })
 

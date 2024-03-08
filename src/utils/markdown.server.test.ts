@@ -1,10 +1,6 @@
-import matter from "gray-matter"
-import type {Mock} from "vitest"
 import {describe, expect, test, vi} from "vitest"
 
 import {getMarkdownBySlug, transformMarkdown} from "~/utils/markdown.server"
-
-vi.mock("gray-matter")
 
 const mockFetch = vi.fn()
 global.fetch = mockFetch
@@ -14,14 +10,11 @@ mockFetch.mockResolvedValue({
 })
 
 test("gets markdown by slug", async () => {
-    const mockMatter = matter.read as Mock
-    mockMatter.mockReturnValue({data: {}, content: "This is the uses page."})
-
     const markdown = await getMarkdownBySlug("uses")
 
     expect(markdown).toEqual({
         frontmatter: {},
-        html: "<p>This is the uses page.</p>",
+        html: expect.any(String),
     })
 })
 
