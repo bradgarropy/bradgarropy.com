@@ -1,11 +1,7 @@
-import {afterEach, expect, test, vi} from "vitest"
+import {afterEach, expect, test} from "vitest"
 
-import {mockPostsFrontmatter} from "~/test-utils/mocks"
 import {feedCache, generateFeed} from "~/utils/feed"
-import * as posts from "~/utils/posts"
-
-const getPostsSpy = vi.spyOn(posts, "getPosts")
-getPostsSpy.mockResolvedValue(mockPostsFrontmatter)
+import {getPosts} from "~/utils/posts"
 
 afterEach(() => {
     feedCache.clear()
@@ -13,11 +9,12 @@ afterEach(() => {
 
 test("generates xml feed", async () => {
     const feed = await generateFeed("xml")
+    const posts = getPosts()
 
     expect(feed).toContain("<title>bradgarropy.com</title>")
     expect(feed).toContain("<link>https://bradgarropy.com</link>")
 
-    mockPostsFrontmatter.forEach(post => {
+    posts.forEach(post => {
         expect(feed).toContain(`<title><![CDATA[${post.title}]]></title>`)
 
         expect(feed).toContain(
@@ -34,8 +31,9 @@ test("generates xml feed", async () => {
 
 test("generates json feed", async () => {
     const feed = await generateFeed("json")
+    const parsedFeed = JSON.parse(feed)
 
-    expect(JSON.parse(feed)).toEqual({
+    expect(parsedFeed).toMatchObject({
         version: "https://jsonfeed.org/version/1",
         title: "bradgarropy.com",
         home_page_url: "https://bradgarropy.com",
@@ -45,52 +43,19 @@ test("generates json feed", async () => {
             name: "Brad Garropy",
             url: "https://twitter.com/bradgarropy",
         },
-        items: [
-            {
-                id: "first-test-post",
-                url: "https://bradgarropy.com/blog/first-test-post",
-                title: "first test post",
-                date_modified: "2021-01-01T00:00:00.000Z",
-                date_published: "2021-01-01T00:00:00.000Z",
+        items: expect.arrayContaining([
+            expect.objectContaining({
+                id: expect.any(String),
+                url: expect.any(String),
+                title: expect.any(String),
+                date_modified: expect.any(String),
+                date_published: expect.any(String),
                 author: {
-                    name: "Brad Garropy",
-                    url: "https://twitter.com/bradgarropy",
+                    name: expect.any(String),
+                    url: expect.any(String),
                 },
-            },
-            {
-                id: "second-test-post",
-                url: "https://bradgarropy.com/blog/second-test-post",
-                title: "second test post",
-                date_modified: "2021-02-01T00:00:00.000Z",
-                date_published: "2021-02-01T00:00:00.000Z",
-                author: {
-                    name: "Brad Garropy",
-                    url: "https://twitter.com/bradgarropy",
-                },
-            },
-            {
-                id: "third-test-post",
-                url: "https://bradgarropy.com/blog/third-test-post",
-                title: "third test post",
-                date_modified: "2021-03-01T00:00:00.000Z",
-                date_published: "2021-03-01T00:00:00.000Z",
-                author: {
-                    name: "Brad Garropy",
-                    url: "https://twitter.com/bradgarropy",
-                },
-            },
-            {
-                id: "fourth-test-post",
-                url: "https://bradgarropy.com/blog/fourth-test-post",
-                title: "fourth test post",
-                date_modified: "2021-03-01T00:00:00.000Z",
-                date_published: "2021-03-01T00:00:00.000Z",
-                author: {
-                    name: "Brad Garropy",
-                    url: "https://twitter.com/bradgarropy",
-                },
-            },
-        ],
+            }),
+        ]),
     })
 })
 

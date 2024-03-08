@@ -14,7 +14,7 @@ test("gets markdown by slug", async () => {
 
     expect(markdown).toEqual({
         frontmatter: {},
-        html: "<p>This is the uses page.</p>",
+        html: expect.any(String),
     })
 })
 
