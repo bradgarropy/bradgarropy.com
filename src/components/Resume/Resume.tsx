@@ -2,10 +2,10 @@ import type {FC} from "react"
 
 import Markdown from "~/components/Markdown"
 import useMarkdown from "~/hooks/useMarkdown"
-import type {Markdown as MarkdownType} from "~/types/markdown"
+import type {TransformedMarkdown} from "~/types/markdown"
 
 type ResumeProps = {
-    resume: MarkdownType
+    resume: TransformedMarkdown
 }
 
 const Resume: FC<ResumeProps> = ({resume}) => {

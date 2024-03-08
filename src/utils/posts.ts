@@ -1,7 +1,8 @@
 import type {Expression} from "fuse.js"
 import Fuse from "fuse.js"
 
-import type {Markdown, Post, PostFrontmatter, Tag, Topic} from "~/types/post"
+import type {Markdown} from "~/types/markdown"
+import type {Post, PostFrontmatter, Tag, Topic} from "~/types/post"
 import {transformMarkdown} from "~/utils/markdown.server"
 
 const icons: Record<string, string> = {
@@ -18,9 +19,12 @@ const getLatestPost = (): PostFrontmatter => {
 }
 
 const getPosts = (count?: number): PostFrontmatter[] => {
-    const files = import.meta.glob<Markdown>("/content/posts/*.md", {
-        eager: true,
-    })
+    const files = import.meta.glob<Markdown<PostFrontmatter>>(
+        "/content/posts/*.md",
+        {
+            eager: true,
+        },
+    )
 
     const posts = Object.values(files).map(file => file.attributes)
     const latestPosts = sortPostsByDate(posts).slice(0, count)
@@ -29,9 +33,12 @@ const getPosts = (count?: number): PostFrontmatter[] => {
 }
 
 const getPostBySlug = async (slug: PostFrontmatter["slug"]): Promise<Post> => {
-    const files = import.meta.glob<Markdown>("/content/posts/*.md", {
-        eager: true,
-    })
+    const files = import.meta.glob<Markdown<PostFrontmatter>>(
+        "/content/posts/*.md",
+        {
+            eager: true,
+        },
+    )
 
     const file = files[`/content/posts/${slug}.md`]
     const html = await transformMarkdown(file.markdown)

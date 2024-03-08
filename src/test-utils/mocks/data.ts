@@ -1,4 +1,4 @@
-import type {Markdown} from "~/types/markdown"
+import type {TransformedMarkdown} from "~/types/markdown"
 import type {Meta} from "~/types/meta"
 import type {Now, NowFrontmatter} from "~/types/now"
 import type {Post, PostFrontmatter, Topic} from "~/types/post"
@@ -218,7 +218,7 @@ const mockSponsors: Sponsors = {
 
 const mockChannelStatus = {isLive: true}
 
-const mockResume: Markdown = {
+const mockResume: TransformedMarkdown = {
     html: "<p>resume</p>",
     frontmatter: {},
 }
@@ -306,7 +306,7 @@ const mockRepositoryTopics: string[] = [
     "portfolio",
 ]
 
-const mockUses: Markdown = {
+const mockUses: TransformedMarkdown = {
     html: "<p>uses</p>",
     frontmatter: {},
 }

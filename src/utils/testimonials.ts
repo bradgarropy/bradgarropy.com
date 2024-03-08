@@ -1,16 +1,19 @@
-import type {Markdown} from "~/types/post"
+import type {Markdown} from "~/types/markdown"
 import type {Testimonial, TestimonialFrontmatter} from "~/types/testimonial"
 import {transformMarkdown} from "~/utils/markdown.server"
 
 const getTestimonials = async (): Promise<Testimonial[]> => {
-    const files = import.meta.glob<Markdown>("/content/testimonials/*.md", {
-        eager: true,
-    })
+    const files = import.meta.glob<Markdown<TestimonialFrontmatter>>(
+        "/content/testimonials/*.md",
+        {
+            eager: true,
+        },
+    )
 
     const promises = Object.values(files).map(async file => {
         const testimonial: Testimonial = {
             html: await transformMarkdown(file.markdown),
-            frontmatter: file.attributes as unknown as TestimonialFrontmatter,
+            frontmatter: file.attributes,
         }
 
         return testimonial

@@ -22,18 +22,19 @@ import {codesandboxTransformer} from "~/transformers/codesandbox"
 import {twitchTransformer} from "~/transformers/twitch"
 import {twitterTransformer} from "~/transformers/twitter"
 import {youtubeTransformer} from "~/transformers/youtube"
-import type {Markdown} from "~/types/markdown"
-import type {Markdown as ViteMarkdown} from "~/types/post"
+import type {Markdown, TransformedMarkdown} from "~/types/markdown"
 
-const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
-    const files = import.meta.glob<ViteMarkdown>("/content/pages/*.md", {
+const getMarkdownBySlug = async (
+    slug: string,
+): Promise<TransformedMarkdown> => {
+    const files = import.meta.glob<Markdown>("/content/pages/*.md", {
         eager: true,
     })
 
     const file = files[`/content/pages/${slug}.md`]
     const html = await transformMarkdown(file.markdown)
 
-    const markdown: Markdown = {
+    const markdown: TransformedMarkdown = {
         html,
         frontmatter: file.attributes,
     }

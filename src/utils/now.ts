@@ -1,20 +1,26 @@
+import type {Markdown} from "~/types/markdown"
 import type {NewerNow, Now, NowFrontmatter, OlderNow} from "~/types/now"
-import type {Markdown} from "~/types/post"
 import {transformMarkdown} from "~/utils/markdown.server"
 
 const getAllNows = (): NowFrontmatter["date"][] => {
-    const files = import.meta.glob<Markdown>("/content/now/*.md", {
-        eager: true,
-    })
+    const files = import.meta.glob<Markdown<NowFrontmatter>>(
+        "/content/now/*.md",
+        {
+            eager: true,
+        },
+    )
 
     const nows = Object.values(files).map(file => file.attributes.date)
     return nows
 }
 
 const getNowByDate = async (slug: NowFrontmatter["date"]): Promise<Now> => {
-    const files = import.meta.glob<Markdown>("/content/now/*.md", {
-        eager: true,
-    })
+    const files = import.meta.glob<Markdown<NowFrontmatter>>(
+        "/content/now/*.md",
+        {
+            eager: true,
+        },
+    )
 
     const file = files[`/content/now/${slug}.md`]
     const html = await transformMarkdown(file.markdown)
