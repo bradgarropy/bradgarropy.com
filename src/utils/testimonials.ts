@@ -5,9 +5,7 @@ import {transformMarkdown} from "~/utils/markdown.server"
 const getTestimonials = async (): Promise<Testimonial[]> => {
     const files = import.meta.glob<Markdown<TestimonialFrontmatter>>(
         "/content/testimonials/*.md",
-        {
-            eager: true,
-        },
+        {eager: true},
     )
 
     const promises = Object.values(files).map(async file => {
