@@ -7,13 +7,24 @@ import Newsletter from "~/components/Newsletter"
 import Post from "~/components/Post"
 import PostList from "~/components/PostList"
 import Section from "~/components/Section"
-import type {PostFrontmatter} from "~/types/post"
+import type {Markdown, Post as PostType, PostFrontmatter} from "~/types/post"
+import {transformMarkdown} from "~/utils/markdown.server"
 import {getMeta} from "~/utils/meta"
-import {getPostBySlug, getRelatedPosts} from "~/utils/posts"
+import {getRelatedPosts} from "~/utils/posts"
 
 export const loader = async ({params}: LoaderFunctionArgs) => {
     const slug = params.slug as PostFrontmatter["slug"]
-    const post = await getPostBySlug(slug)
+
+    const file: Markdown = await import(
+        /* @vite-ignore */
+        `/content/posts/${slug}.md`
+    )
+
+    const post: PostType = {
+        html: await transformMarkdown(file.markdown),
+        frontmatter: file.attributes,
+    }
+
     const relatedPosts = getRelatedPosts(post.frontmatter)
 
     return json({post, relatedPosts})
