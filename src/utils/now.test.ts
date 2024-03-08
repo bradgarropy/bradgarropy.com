@@ -1,6 +1,5 @@
 import {readdirSync, readFileSync} from "node:fs"
 
-import matter from "gray-matter"
 import type {Mock} from "vitest"
 import {expect, test, vi} from "vitest"
 
@@ -9,7 +8,6 @@ import {
     mockNow,
     mockNowPaths,
     mockNows,
-    mockNowsResponse,
     mockOlderNow,
 } from "~/test-utils/mocks"
 import {
@@ -21,7 +19,6 @@ import {
 } from "~/utils/now"
 
 vi.mock("node:fs")
-vi.mock("gray-matter")
 
 test("gets all nows", () => {
     const mockReadDirSync = readdirSync as Mock
@@ -32,10 +29,7 @@ test("gets all nows", () => {
 })
 
 test("gets now by slug", async () => {
-    const mockMatterRead = matter.read as Mock
     const mockReadFileSync = readFileSync as Mock
-
-    mockMatterRead.mockReturnValue(mockNowsResponse[1])
     mockReadFileSync.mockReturnValue("{}")
 
     const now = await getNowByDate("2021-12-31")
@@ -44,11 +38,9 @@ test("gets now by slug", async () => {
 
 test("gets latest now", async () => {
     const mockReadDirSync = readdirSync as Mock
-    const mockMatterRead = matter.read as Mock
     const mockReadFileSync = readFileSync as Mock
 
     mockReadDirSync.mockReturnValue(mockNowPaths)
-    mockMatterRead.mockReturnValue(mockNowsResponse[0])
     mockReadFileSync.mockReturnValue("{}")
 
     const now = await getLatestNow()
@@ -57,11 +49,9 @@ test("gets latest now", async () => {
 
 test("gets newer now", async () => {
     const mockReadDirSync = readdirSync as Mock
-    const mockMatterRead = matter.read as Mock
     const mockReadFileSync = readFileSync as Mock
 
     mockReadDirSync.mockReturnValue(mockNowPaths)
-    mockMatterRead.mockReturnValue(mockNowsResponse[0])
     mockReadFileSync.mockReturnValue("{}")
 
     const newerNow = await getNewerNow(mockNow)
@@ -76,11 +66,9 @@ test("gets newer now", async () => {
 
 test("gets older now", async () => {
     const mockReadDirSync = readdirSync as Mock
-    const mockMatterRead = matter.read as Mock
     const mockReadFileSync = readFileSync as Mock
 
     mockReadDirSync.mockReturnValue(mockNowPaths)
-    mockMatterRead.mockReturnValue(mockNowsResponse[2])
     mockReadFileSync.mockReturnValue("{}")
 
     const olderNow = await getOlderNow(mockNow)

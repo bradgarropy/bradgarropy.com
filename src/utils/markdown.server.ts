@@ -4,7 +4,6 @@ import path from "node:path"
 import {rehypeCloudinaryImageSize} from "@bradgarropy/rehype-cloudinary-image-size"
 import {rehypeImageLinks} from "@bradgarropy/rehype-image-links"
 import remarkEmbedder from "@remark-embedder/core"
-import matter from "gray-matter"
 import json5 from "json5"
 import rehypeExternalLinks from "rehype-external-links"
 import type {Options} from "rehype-pretty-code"
@@ -24,16 +23,19 @@ import {twitchTransformer} from "~/transformers/twitch"
 import {twitterTransformer} from "~/transformers/twitter"
 import {youtubeTransformer} from "~/transformers/youtube"
 import type {Markdown} from "~/types/markdown"
+import type {Markdown as ViteMarkdown} from "~/types/post"
 
 const getMarkdownBySlug = async (slug: string): Promise<Markdown> => {
-    const nowPath = path.join(process.cwd(), `content/pages/${slug}.md`)
+    const files = import.meta.glob<ViteMarkdown>("/content/pages/*.md", {
+        eager: true,
+    })
 
-    const file = matter.read(nowPath)
-    const html = await transformMarkdown(file.content)
+    const file = files[`/content/pages/${slug}.md`]
+    const html = await transformMarkdown(file.markdown)
 
     const markdown: Markdown = {
         html,
-        frontmatter: file.data,
+        frontmatter: file.attributes,
     }
 
     return markdown

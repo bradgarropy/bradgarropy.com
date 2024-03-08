@@ -22,11 +22,9 @@ const getPosts = (count?: number): PostFrontmatter[] => {
         eager: true,
     })
 
-    const posts = Object.entries(files).map(([, file]) => {
-        return file.attributes
-    })
-
+    const posts = Object.values(files).map(file => file.attributes)
     const latestPosts = sortPostsByDate(posts).slice(0, count)
+
     return latestPosts
 }
 
