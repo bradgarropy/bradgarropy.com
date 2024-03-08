@@ -1,5 +1,5 @@
 import {getAllNows} from "~/utils/now"
-import {getAllPosts, getTags, getTopics} from "~/utils/posts"
+import {getPosts, getTags, getTopics} from "~/utils/posts"
 
 const generateSitemap = async () => {
     const pages = [
@@ -15,7 +15,7 @@ const generateSitemap = async () => {
     ]
 
     // blogs
-    getAllPosts().forEach(post => {
+    getPosts().forEach(post => {
         pages.push(`/blog/${post.slug}`)
     })
 

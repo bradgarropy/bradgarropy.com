@@ -5,12 +5,12 @@ import {useLoaderData} from "@remix-run/react"
 import Home from "~/components/Home"
 import Layout from "~/components/Layout"
 import {getMeta} from "~/utils/meta"
-import {getLatestPosts} from "~/utils/posts"
+import {getPosts} from "~/utils/posts"
 import {getFeaturedProjects} from "~/utils/projects"
 import {getLatestVideos} from "~/utils/videos"
 
 export const loader = async () => {
-    const latestPosts = getLatestPosts(3)
+    const latestPosts = getPosts(3)
     const latestVideos = await getLatestVideos(2)
     const featuredProjects = await getFeaturedProjects()
 

@@ -16,9 +16,7 @@ import {
     mockTopics,
 } from "~/test-utils/mocks"
 import {
-    getAllPosts,
     getLatestPost,
-    getLatestPosts,
     getPostBySlug,
     getPosts,
     getPostsByTag,
@@ -59,7 +57,7 @@ test("gets latest posts", () => {
         .mockReturnValueOnce(mockPostsResponse[2])
         .mockReturnValueOnce(mockPostsResponse[3])
 
-    const posts = getLatestPosts(3)
+    const posts = getPosts(3)
     expect(posts).toEqual(mockSortedPostsFrontmatter.slice(0, 3))
 })
 
@@ -74,7 +72,7 @@ test("gets particular number of latest posts", () => {
         .mockReturnValueOnce(mockPostsResponse[2])
         .mockReturnValueOnce(mockPostsResponse[3])
 
-    const posts = getLatestPosts(2)
+    const posts = getPosts(2)
     expect(posts).toEqual(mockSortedPostsFrontmatter.slice(0, 2))
 })
 
@@ -89,7 +87,7 @@ test("gets all posts", () => {
         .mockReturnValueOnce(mockPostsResponse[2])
         .mockReturnValueOnce(mockPostsResponse[3])
 
-    const posts = getAllPosts()
+    const posts = getPosts()
     expect(posts).toEqual(mockSortedPostsFrontmatter)
 })
 

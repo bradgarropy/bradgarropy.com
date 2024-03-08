@@ -8,11 +8,10 @@ import PostList from "~/components/PostList"
 import PostSearchBar from "~/components/PostSearchBar"
 import type {PostFrontmatter} from "~/types/post"
 import {getMeta} from "~/utils/meta"
-import {getAllPosts} from "~/utils/posts"
+import {getPosts} from "~/utils/posts"
 
 export const loader = async () => {
-    const allPosts = getAllPosts()
-
+    const allPosts = getPosts()
     return json({allPosts})
 }
 

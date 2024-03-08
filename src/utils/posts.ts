@@ -11,13 +11,13 @@ const icons: Record<string, string> = {
 }
 
 const getLatestPost = (): PostFrontmatter => {
-    const latestPosts = getLatestPosts(1)
+    const latestPosts = getPosts(1)
     const latestPost = latestPosts[0]
 
     return latestPost
 }
 
-const getLatestPosts = (count?: number): PostFrontmatter[] => {
+const getPosts = (count?: number): PostFrontmatter[] => {
     const files = import.meta.glob<Markdown>("/content/posts/*.md", {
         eager: true,
     })
@@ -28,24 +28,6 @@ const getLatestPosts = (count?: number): PostFrontmatter[] => {
 
     const latestPosts = sortPostsByDate(posts).slice(0, count)
     return latestPosts
-}
-
-const getAllPosts = (): PostFrontmatter[] => {
-    const allPosts = getLatestPosts()
-    return allPosts
-}
-
-const getPosts = async (): Promise<Post[]> => {
-    const files = import.meta.glob<Markdown>("/content/posts/*.md", {
-        eager: true,
-    })
-
-    const promises = Object.values(files).map(file => {
-        return getPostBySlug(file.attributes.slug)
-    })
-
-    const posts = await Promise.all(promises)
-    return posts
 }
 
 const getPostBySlug = async (slug: PostFrontmatter["slug"]): Promise<Post> => {
@@ -74,7 +56,7 @@ const getTopic = (name: Topic["name"]): Topic => {
 }
 
 const getTopics = (): Topic[] => {
-    const posts = getLatestPosts()
+    const posts = getPosts()
 
     const topics = posts.reduce<Topic[]>((topics, post) => {
         if (!topics.some(topic => topic.name === post.topic)) {
@@ -88,7 +70,7 @@ const getTopics = (): Topic[] => {
 }
 
 const getTags = (): Tag[] => {
-    const posts = getAllPosts()
+    const posts = getPosts()
 
     const duplicateTags = posts.flatMap(post => {
         return post.tags
@@ -99,14 +81,14 @@ const getTags = (): Tag[] => {
 }
 
 const getPostsByTopic = (topic: Topic["name"]): PostFrontmatter[] => {
-    const posts = getAllPosts()
+    const posts = getPosts()
     const topicPosts = posts.filter(post => post.topic === topic)
 
     return topicPosts
 }
 
 const getPostsByTag = (tag: Tag): PostFrontmatter[] => {
-    const posts = getAllPosts()
+    const posts = getPosts()
     const tagPosts = posts.filter(post => post.tags.includes(tag))
 
     return tagPosts
@@ -132,7 +114,7 @@ const sortPostsByDate = (posts: PostFrontmatter[]): PostFrontmatter[] => {
 }
 
 const getRelatedPosts = (post: PostFrontmatter) => {
-    const posts = getAllPosts()
+    const posts = getPosts()
 
     const fuse = new Fuse(posts, {
         keys: ["title", "topic", "tags"],
@@ -155,9 +137,7 @@ const getRelatedPosts = (post: PostFrontmatter) => {
 }
 
 export {
-    getAllPosts,
     getLatestPost,
-    getLatestPosts,
     getPostBySlug,
     getPosts,
     getPostsByTag,
