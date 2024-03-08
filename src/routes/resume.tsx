@@ -22,7 +22,6 @@ export const meta: MetaFunction = () => {
 
 const ResumeRoute = () => {
     const {resume} = useLoaderData<typeof loader>()
-    resume.frontmatter.data = 1
 
     return (
         <Layout>
