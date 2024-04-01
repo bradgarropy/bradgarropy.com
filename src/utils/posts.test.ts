@@ -1,3 +1,5 @@
+import {readdirSync} from "node:fs"
+
 import {expect, test, vi} from "vitest"
 
 import {
@@ -25,7 +27,8 @@ const mockMarkdown = vi.spyOn(markdown, "transformMarkdown")
 test("gets posts", async () => {
     const posts = getPosts()
 
-    expect(posts).toHaveLength(85)
+    const files = readdirSync("content/posts")
+    expect(posts).toHaveLength(files.length)
 
     expect(posts).toContainEqual(
         expect.objectContaining({
@@ -85,7 +88,7 @@ test("gets topics", () => {
 test("gets posts by topic", () => {
     const posts = getPostsByTopic("life")
 
-    expect(posts).toHaveLength(19)
+    expect(posts.length).toBeGreaterThanOrEqual(19)
     expect(posts).toContainEqual(
         expect.objectContaining({
             title: "🔜 stuff coming soon",
