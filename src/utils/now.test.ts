@@ -1,17 +1,5 @@
-import {readdirSync, readFileSync} from "node:fs"
+import {expect, test} from "vitest"
 
-import matter from "gray-matter"
-import type {Mock} from "vitest"
-import {expect, test, vi} from "vitest"
-
-import {
-    mockNewerNow,
-    mockNow,
-    mockNowPaths,
-    mockNows,
-    mockNowsResponse,
-    mockOlderNow,
-} from "~/test-utils/mocks"
 import {
     getAllNows,
     getLatestNow,
@@ -20,75 +8,59 @@ import {
     getOlderNow,
 } from "~/utils/now"
 
-vi.mock("node:fs")
-vi.mock("gray-matter")
-
 test("gets all nows", () => {
-    const mockReadDirSync = readdirSync as Mock
-    mockReadDirSync.mockReturnValue(mockNowPaths)
-
     const nows = getAllNows()
-    expect(nows).toEqual(["2020-12-30", "2020-12-31", "2021-01-01"])
+    expect(nows).toHaveLength(6)
+    expect(nows).toContain("2020-09-25")
 })
 
 test("gets now by slug", async () => {
-    const mockMatterRead = matter.read as Mock
-    const mockReadFileSync = readFileSync as Mock
+    const now = await getNowByDate("2020-09-25")
 
-    mockMatterRead.mockReturnValue(mockNowsResponse[1])
-    mockReadFileSync.mockReturnValue("{}")
-
-    const now = await getNowByDate("2021-12-31")
-    expect(now).toEqual(mockNow)
+    expect(now).toMatchObject({
+        html: expect.any(String),
+        frontmatter: {
+            date: "2020-09-25",
+        },
+    })
 })
 
 test("gets latest now", async () => {
-    const mockReadDirSync = readdirSync as Mock
-    const mockMatterRead = matter.read as Mock
-    const mockReadFileSync = readFileSync as Mock
-
-    mockReadDirSync.mockReturnValue(mockNowPaths)
-    mockMatterRead.mockReturnValue(mockNowsResponse[0])
-    mockReadFileSync.mockReturnValue("{}")
-
     const now = await getLatestNow()
-    expect(now).toEqual(mockNows[0])
+
+    expect(now).toMatchObject({
+        html: expect.any(String),
+        frontmatter: {
+            date: expect.any(String),
+        },
+    })
 })
 
 test("gets newer now", async () => {
-    const mockReadDirSync = readdirSync as Mock
-    const mockMatterRead = matter.read as Mock
-    const mockReadFileSync = readFileSync as Mock
+    const nows = getAllNows()
+    const now = await getNowByDate(nows[0])
+    const newerNow = await getNewerNow(now)
 
-    mockReadDirSync.mockReturnValue(mockNowPaths)
-    mockMatterRead.mockReturnValue(mockNowsResponse[0])
-    mockReadFileSync.mockReturnValue("{}")
-
-    const newerNow = await getNewerNow(mockNow)
-    expect(newerNow).toEqual(mockNewerNow)
+    expect(newerNow).not.toBeNull()
+    expect(newerNow?.frontmatter.date).toEqual(nows[1])
 
     // when there is no newer now
-    mockReadDirSync.mockReturnValue(mockNowPaths)
+    const latestNow = await getLatestNow()
+    const emptyNow = await getNewerNow(latestNow)
 
-    const emptyNow = await getNewerNow(mockNows[0])
     expect(emptyNow).toBeNull()
 })
 
 test("gets older now", async () => {
-    const mockReadDirSync = readdirSync as Mock
-    const mockMatterRead = matter.read as Mock
-    const mockReadFileSync = readFileSync as Mock
+    const nows = getAllNows()
+    const latestNow = await getLatestNow()
+    const olderNow = await getOlderNow(latestNow)
 
-    mockReadDirSync.mockReturnValue(mockNowPaths)
-    mockMatterRead.mockReturnValue(mockNowsResponse[2])
-    mockReadFileSync.mockReturnValue("{}")
-
-    const olderNow = await getOlderNow(mockNow)
-    expect(olderNow).toEqual(mockOlderNow)
+    expect(olderNow).not.toBeNull()
+    expect(olderNow?.frontmatter.date).toEqual(nows[nows.length - 2])
 
     // when there is no older now
-    mockReadDirSync.mockReturnValue(mockNowPaths)
-
-    const emptyNow = await getOlderNow(mockNows[2])
+    const earliestNow = await getNowByDate(nows[0])
+    const emptyNow = await getOlderNow(earliestNow)
     expect(emptyNow).toBeNull()
 })

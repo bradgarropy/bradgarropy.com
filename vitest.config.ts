@@ -1,9 +1,10 @@
 import react from "@vitejs/plugin-react"
+import {Mode, plugin as markdown} from "vite-plugin-markdown"
 import tsconfigPaths from "vite-tsconfig-paths"
 import {defineConfig} from "vitest/config"
 
 const config = defineConfig({
-    plugins: [tsconfigPaths(), react()],
+    plugins: [tsconfigPaths(), markdown({mode: [Mode.MARKDOWN]}), react()],
     test: {
         clearMocks: true,
         coverage: {

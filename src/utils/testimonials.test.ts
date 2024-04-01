@@ -1,31 +1,20 @@
-import {readdirSync, readFileSync} from "node:fs"
+import {expect, test} from "vitest"
 
-import matter from "gray-matter"
-import type {Mock} from "vitest"
-import {expect, test, vi} from "vitest"
-
-import {
-    mockTestimonials,
-    mockTestimonialsPaths,
-    mockTestimonialsResponse,
-} from "~/test-utils/mocks"
 import {getTestimonials} from "~/utils/testimonials"
-
-vi.mock("node:fs")
-vi.mock("gray-matter")
-
-const mockReadDirSync = readdirSync as Mock
-mockReadDirSync.mockReturnValue(mockTestimonialsPaths)
-
-const mockReadFileSync = readFileSync as Mock
-mockReadFileSync.mockReturnValue("{}")
-
-const mockMatterRead = matter.read as Mock
-mockMatterRead
-    .mockReturnValueOnce(mockTestimonialsResponse[0])
-    .mockReturnValueOnce(mockTestimonialsResponse[1])
 
 test("gets testimonials", async () => {
     const testimonials = await getTestimonials()
-    expect(testimonials).toEqual(mockTestimonials)
+
+    expect(testimonials).toHaveLength(11)
+
+    expect(testimonials).toContainEqual(
+        expect.objectContaining({
+            html: expect.any(String),
+            frontmatter: {
+                name: "James Quick",
+                profile: "https://twitter.com/jamesqquick",
+                photo: "/testimonials/james-quick.jpg",
+            },
+        }),
+    )
 })

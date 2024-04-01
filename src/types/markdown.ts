@@ -1,7 +1,13 @@
-type Markdown = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type TransformedMarkdown<T = Record<string, any>> = {
     html: string
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    frontmatter: Record<string, any>
+    frontmatter: T
 }
 
-export type {Markdown}
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type Markdown<T = Record<string, any>> = {
+    markdown: string
+    attributes: T
+}
+
+export type {Markdown, TransformedMarkdown}

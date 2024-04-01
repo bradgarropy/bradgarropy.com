@@ -1,9 +1,7 @@
-import {writeFile} from "node:fs/promises"
-
 import {getAllNows} from "~/utils/now"
-import {getAllPosts, getTags, getTopics} from "~/utils/posts"
+import {getPosts, getTags, getTopics} from "~/utils/posts"
 
-const generate = async () => {
+const generateSitemap = async () => {
     const pages = [
         "/",
         "/blog",
@@ -17,7 +15,7 @@ const generate = async () => {
     ]
 
     // blogs
-    getAllPosts().forEach(post => {
+    getPosts().forEach(post => {
         pages.push(`/blog/${post.slug}`)
     })
 
@@ -41,7 +39,7 @@ const generate = async () => {
         .sort()
         .join("\n")
 
-    await writeFile("public/sitemap.txt", sitemap)
+    return sitemap
 }
 
-generate()
+export {generateSitemap}

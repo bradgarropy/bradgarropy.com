@@ -1,10 +1,7 @@
-import fs from "node:fs"
-import path from "node:path"
-
 import type {Expression} from "fuse.js"
 import Fuse from "fuse.js"
-import matter from "gray-matter"
 
+import type {Markdown} from "~/types/markdown"
 import type {Post, PostFrontmatter, Tag, Topic} from "~/types/post"
 import {transformMarkdown} from "~/utils/markdown.server"
 
@@ -15,59 +12,40 @@ const icons: Record<string, string> = {
 }
 
 const getLatestPost = (): PostFrontmatter => {
-    const latestPosts = getLatestPosts(1)
+    const latestPosts = getPosts(1)
     const latestPost = latestPosts[0]
 
     return latestPost
 }
 
-const getLatestPosts = (count?: number): PostFrontmatter[] => {
-    const postsPath = path.join(process.cwd(), "content/posts")
+const getPosts = (count?: number): PostFrontmatter[] => {
+    const files = import.meta.glob<Markdown<PostFrontmatter>>(
+        "/content/posts/*.md",
+        {
+            eager: true,
+        },
+    )
 
-    const posts = fs
-        // read directory of posts
-        .readdirSync(postsPath)
-
-        // create path to each markdown file
-        // read frontmatter from each post
-        .reduce<PostFrontmatter[]>((posts, slug) => {
-            const postPath = path.join(process.cwd(), `content/posts/${slug}`)
-            const file = matter.read(postPath)
-            const post = file.data as PostFrontmatter
-
-            return [...posts, post]
-        }, [])
-
+    const posts = Object.values(files).map(file => file.attributes)
     const latestPosts = sortPostsByDate(posts).slice(0, count)
+
     return latestPosts
 }
 
-const getAllPosts = (): PostFrontmatter[] => {
-    const allPosts = getLatestPosts()
-    return allPosts
-}
-
-const getPosts = async (): Promise<Post[]> => {
-    const postsPath = path.join(process.cwd(), "content/posts")
-
-    const postPaths = fs.readdirSync(postsPath)
-    const promises = postPaths.map(path =>
-        getPostBySlug(path.replace(".md", "")),
+const getPostBySlug = async (slug: PostFrontmatter["slug"]): Promise<Post> => {
+    const files = import.meta.glob<Markdown<PostFrontmatter>>(
+        "/content/posts/*.md",
+        {
+            eager: true,
+        },
     )
 
-    const posts = await Promise.all(promises)
-    return posts
-}
-
-const getPostBySlug = async (slug: PostFrontmatter["slug"]): Promise<Post> => {
-    const postPath = path.join(process.cwd(), `content/posts/${slug}.md`)
-
-    const file = matter.read(postPath)
-    const html = await transformMarkdown(file.content)
+    const file = files[`/content/posts/${slug}.md`]
+    const html = await transformMarkdown(file.markdown)
 
     const post: Post = {
         html,
-        frontmatter: file.data as PostFrontmatter,
+        frontmatter: file.attributes,
     }
 
     return post
@@ -83,93 +61,42 @@ const getTopic = (name: Topic["name"]): Topic => {
 }
 
 const getTopics = (): Topic[] => {
-    const postsPath = path.join(process.cwd(), "content/posts")
+    const posts = getPosts()
 
-    const topics = fs
-        // read directory of posts
-        .readdirSync(postsPath)
-
-        // create path to each markdown file
-        // read frontmatter from each post
-        .reduce<Topic[]>((topics, slug) => {
-            const postPath = path.join(process.cwd(), `content/posts/${slug}`)
-            const file = matter.read(postPath)
-            const post = file.data as PostFrontmatter
-
-            if (!topics.some(topic => topic.name === post.topic)) {
-                return [...topics, getTopic(post.topic)]
-            } else {
-                return topics
-            }
-        }, [])
+    const topics = posts.reduce<Topic[]>((topics, post) => {
+        if (!topics.some(topic => topic.name === post.topic)) {
+            return [...topics, getTopic(post.topic)]
+        } else {
+            return topics
+        }
+    }, [])
 
     return topics
 }
 
 const getTags = (): Tag[] => {
-    const postsPath = path.join(process.cwd(), "content/posts")
+    const posts = getPosts()
 
-    const duplicateTags = fs
-        // read directory of posts
-        .readdirSync(postsPath)
-
-        // create path to each markdown file
-        // read frontmatter from each post
-        .flatMap(slug => {
-            const postPath = path.join(process.cwd(), `content/posts/${slug}`)
-            const file = matter.read(postPath)
-            const post = file.data as PostFrontmatter
-            return post.tags
-        })
+    const duplicateTags = posts.flatMap(post => {
+        return post.tags
+    })
 
     const tags = [...new Set(duplicateTags)]
     return tags
 }
 
 const getPostsByTopic = (topic: Topic["name"]): PostFrontmatter[] => {
-    const postsPath = path.join(process.cwd(), "content/posts")
-
-    const posts = fs
-        // read directory of posts
-        .readdirSync(postsPath)
-
-        // create path to each markdown file
-        // read frontmatter from each post
-        .reduce<PostFrontmatter[]>((posts, slug) => {
-            const postPath = path.join(process.cwd(), `content/posts/${slug}`)
-            const file = matter.read(postPath)
-            const post = file.data as PostFrontmatter
-
-            return [...posts, post]
-        }, [])
-
+    const posts = getPosts()
     const topicPosts = posts.filter(post => post.topic === topic)
-    const sortedTopicPosts = sortPostsByDate(topicPosts)
 
-    return sortedTopicPosts
+    return topicPosts
 }
 
 const getPostsByTag = (tag: Tag): PostFrontmatter[] => {
-    const postsPath = path.join(process.cwd(), "content/posts")
-
-    const posts = fs
-        // read directory of posts
-        .readdirSync(postsPath)
-
-        // create path to each markdown file
-        // read frontmatter from each post
-        .reduce<PostFrontmatter[]>((posts, slug) => {
-            const postPath = path.join(process.cwd(), `content/posts/${slug}`)
-            const file = matter.read(postPath)
-            const post = file.data as PostFrontmatter
-
-            return [...posts, post]
-        }, [])
-
+    const posts = getPosts()
     const tagPosts = posts.filter(post => post.tags.includes(tag))
-    const sortedTagPosts = sortPostsByDate(tagPosts)
 
-    return sortedTagPosts
+    return tagPosts
 }
 
 const sortPostsByDate = (posts: PostFrontmatter[]): PostFrontmatter[] => {
@@ -192,7 +119,7 @@ const sortPostsByDate = (posts: PostFrontmatter[]): PostFrontmatter[] => {
 }
 
 const getRelatedPosts = (post: PostFrontmatter) => {
-    const posts = getAllPosts()
+    const posts = getPosts()
 
     const fuse = new Fuse(posts, {
         keys: ["title", "topic", "tags"],
@@ -215,9 +142,7 @@ const getRelatedPosts = (post: PostFrontmatter) => {
 }
 
 export {
-    getAllPosts,
     getLatestPost,
-    getLatestPosts,
     getPostBySlug,
     getPosts,
     getPostsByTag,
