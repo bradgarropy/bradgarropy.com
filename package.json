@@ -1,6 +1,6 @@
 {
     "name": "bradgarropy.com",
-    "version": "7.6.0",
+    "version": "7.7.0",
     "description": "🏠 my home on the web",
     "type": "module",
     "keywords": [
@@ -62,7 +62,6 @@
         "feed": "^4.2.2",
         "fuse.js": "^7.0.0",
         "isbot": "latest",
-        "json5": "^2.2.3",
         "react-dom": "^18.2.0",
         "rehype-external-links": "^3.0.0",
         "rehype-img-size": "^1.0.1",
