@@ -1,10 +1,9 @@
-import fs from "node:fs"
-import path from "node:path"
-
 import {rehypeCloudinaryImageSize} from "@bradgarropy/rehype-cloudinary-image-size"
 import {rehypeImageLinks} from "@bradgarropy/rehype-image-links"
 import remarkEmbedder from "@remark-embedder/core"
-import json5 from "json5"
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import theme from "node_modules/shades-of-purple/themes/shades-of-purple-color-theme.json5"
 import rehypeExternalLinks from "rehype-external-links"
 import type {Options} from "rehype-pretty-code"
 import rehypePrettyCode from "rehype-pretty-code"
@@ -43,20 +42,13 @@ const getMarkdownBySlug = async (
 }
 
 const transformMarkdown = async (markdown: string): Promise<string> => {
-    const themePath = path.join(
-        process.cwd(),
-        "build/client/shiki/themes/shades-of-purple.json",
-    )
-
-    const theme = fs.readFileSync(themePath, "utf8")
-
     const options: Options = {
-        theme: json5.parse(theme),
+        theme,
         keepBackground: true,
         getHighlighter: options =>
             getHighlighter({
                 ...options,
-                themes: [json5.parse(theme)],
+                themes: [theme],
             }),
     }
 
