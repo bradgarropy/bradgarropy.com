@@ -55,6 +55,7 @@ _Confluence Observatory_
 
 -   Application to generate SignalFX dashboards and monitor alerts for all Confluence services and APIs.
 -   Built with Remix, Tailwind, Vitest, Mock Service Worker, Playwright.
+-   Led and mentored a team of three developers to build the application.
 -   Stored dashboard configuration in PostgreSQL and accessed with Prisma.
 -   Generated dashboards with Terraform based on user configuration.
 
@@ -166,8 +167,8 @@ _Topic Status_
 ## YouTube
 
 -   Over 140 videos and 1,500 subscribers on [YouTube][youtube]
--   Published tutorial series on [Webpack][webpack-tutorial], [Firebase][firebase-tutorial], [Plop][plop-tutorial], and [NPM Packages][npm-tutorial]
--   Created three [Dev Hints][dev-hints] videos for [Cloudinary][cloudinary] _(not yet released)_
+-   Published tutorial series on [Remix][remix-tutorial], [Webpack][webpack-tutorial], [Firebase][firebase-tutorial], [Plop][plop-tutorial], and [NPM Packages][npm-tutorial]
+-   Created three [Dev Hints][dev-hints] videos for [Cloudinary][cloudinary]
 
 ## Podcasts
 
@@ -176,6 +177,7 @@ _Retired_ | [Web Dev Weekly][web-dev-weekly] with Richard Gottleber
 
 ## Talks & Appearances
 
+_Upcoming_ | [Frontend Nation][frontend-nation] panel  
 _01/29/2024_ | [THAT Conference][that-conference] live podcast  
 _12/07/2022_ | [Cloudinary DevJams - Optimizing Cloudinary Images in Markdown Files][cloudinary-devjams]  
 _08/04/2021_ | [CodingCat.dev][codingcat-dev] with Brittney Postma and Alex Patterson  
@@ -275,13 +277,15 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 [events-sdk]: https://github.com/adobe/magento-storefront-events-sdk
 [event-collector]: https://github.com/adobe/magento-storefront-event-collector
 [web-dev-weekly]: https://open.spotify.com/show/3TAuVah0Q9BOV5PbwPDGfs
-[webpack-tutorial]: https://youtube.com/watch?v=cidA_qfiO0M&list=PL6Mu1AMmTL-vGQdj1-auEc12KM14OmjXH
-[firebase-tutorial]: https://youtube.com/watch?v=FArYmEBCMt0&list=PL6Mu1AMmTL-sSswsqShJ5fbIr9XjYHGFm
-[plop-tutorial]: https://youtube.com/watch?v=NKW65IVwm6k&list=PL6Mu1AMmTL-vR7eK-1EqewignxemucVo2
-[npm-tutorial]: https://www.youtube.com/watch?v=VuysNccCnEQ&list=PL6Mu1AMmTL-sbySI5prQ6O6t79leQLUcb
+[remix-tutorial]: https://www.youtube.com/playlist?list=PL6Mu1AMmTL-thD5jx_slLzvv1t1WAO0_1
+[webpack-tutorial]: https://www.youtube.com/playlist?list=PL6Mu1AMmTL-vGQdj1-auEc12KM14OmjXH
+[firebase-tutorial]: https://www.youtube.com/playlist?list=PL6Mu1AMmTL-sSswsqShJ5fbIr9XjYHGFm
+[plop-tutorial]: https://www.youtube.com/playlist?list=PL6Mu1AMmTL-vR7eK-1EqewignxemucVo2
+[npm-tutorial]: https://www.youtube.com/playlist?list=PL6Mu1AMmTL-sbySI5prQ6O6t79leQLUcb
 [codingcat-dev]: https://youtube.com/watch?v=jwb5zi5bjfE
 [compressed-fm]: https://compressed.fm
 [cloudinary-devjams]: https://www.youtube.com/watch?v=QMQKXA9e2Ks
+[frontend-nation]: https://frontendnation.com
 [that-conference]: https://youtube.com/live/_w8B2B-xyYI?si=HYtDVLm5hN4Rpsz2&t=16595
 [rehype-cloudinary-image-size]: https://www.npmjs.com/package/@bradgarropy/rehype-cloudinary-image-size
 [cloudinary]: https://cloudinary.com
