@@ -177,7 +177,7 @@ _Retired_ | [Web Dev Weekly][web-dev-weekly] with Richard Gottleber
 
 ## Talks & Appearances
 
-_Upcoming_ | [Frontend Nation][frontend-nation] panel  
+_06/05/2024_ | [Frontend Nation][frontend-nation] panel  
 _01/29/2024_ | [THAT Conference][that-conference] live podcast  
 _12/07/2022_ | [Cloudinary DevJams - Optimizing Cloudinary Images in Markdown Files][cloudinary-devjams]  
 _08/04/2021_ | [CodingCat.dev][codingcat-dev] with Brittney Postma and Alex Patterson  
@@ -285,7 +285,7 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 [codingcat-dev]: https://youtube.com/watch?v=jwb5zi5bjfE
 [compressed-fm]: https://compressed.fm
 [cloudinary-devjams]: https://www.youtube.com/watch?v=QMQKXA9e2Ks
-[frontend-nation]: https://frontendnation.com
+[frontend-nation]: https://www.youtube.com/watch?v=0Yz7mti0FcE
 [that-conference]: https://youtube.com/live/_w8B2B-xyYI?si=HYtDVLm5hN4Rpsz2&t=16595
 [rehype-cloudinary-image-size]: https://www.npmjs.com/package/@bradgarropy/rehype-cloudinary-image-size
 [cloudinary]: https://cloudinary.com
