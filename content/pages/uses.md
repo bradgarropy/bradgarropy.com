@@ -63,7 +63,7 @@ These pieces of tech are always within reach.
 [Apple AirPods Pro (2nd gen)][airpods]  
 [Apple Watch Series 9][watch]  
 [Sony WH-1000XM3 Headphones][wh-1000mx3]  
-[Sony Playstation 5 Slim ][playstation]  
+[Sony Playstation 5 Slim][playstation]  
 [Nintento Switch OLED][switch]
 
 [developer]: https://bradgarropy.com/topic/coding
