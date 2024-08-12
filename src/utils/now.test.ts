@@ -1,3 +1,5 @@
+import {readdirSync} from "node:fs"
+
 import {expect, test} from "vitest"
 
 import {
@@ -10,7 +12,9 @@ import {
 
 test("gets all nows", () => {
     const nows = getAllNows()
-    expect(nows).toHaveLength(6)
+
+    const files = readdirSync("content/now")
+    expect(nows).toHaveLength(files.length)
     expect(nows).toContain("2020-09-25")
 })
 
