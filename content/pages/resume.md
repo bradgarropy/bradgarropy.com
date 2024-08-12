@@ -9,7 +9,7 @@ To find a fully remote position in a smaller company where I can architect, lead
 
 ## Summary
 
--   14 years of engineering experience across 3 companies
+-   14 years of engineering experience across 4 companies
 -   Led multiple teams to build applications from scratch
 -   Specialize in frontend development with React and TypeScript
 -   Maintain many open source projects and repositories
@@ -49,7 +49,22 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 ## Work Experience
 
 **Atlassian | Senior Software Engineer**  
-_October 2021 - Present_
+_August 2024 - Present_
+
+_Optimized Checkout Team_
+
+-   To be determined
+
+**Atlassian | Senior Software Engineer**
+
+_October 2021 - August 2024_
+
+_Notion Importer OAuth Flow_
+
+-   Designed and implemented a Notion OAuth integration for Confluence.
+-   Drastically reduced the number of clicks for authentication.
+-   Unblocked team for general availability release.
+-   Used `postMessage` for cross window communication.
 
 _Confluence Observatory_
 

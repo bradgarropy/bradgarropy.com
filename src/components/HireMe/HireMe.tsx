@@ -17,10 +17,12 @@ const HireMe: FC<HireMeProps> = ({testimonials}) => {
                     🤝 let&apos;s work together
                 </h1>
 
-                <p className="mb-6">
-                    I&apos;m actively looking for a new role as a{" "}
-                    <span className="italic">Senior Frontend Developer</span>.
-                    <br />
+                <p>
+                    I am always open to contract work, side projects, and
+                    collaborations.
+                </p>
+
+                <p>
                     Please check out my{" "}
                     <FancyLink to="/resume">
                         <span className="font-bold">resume</span>
@@ -32,7 +34,7 @@ const HireMe: FC<HireMeProps> = ({testimonials}) => {
                     me!
                 </p>
 
-                <p className="mb-6">
+                {/* <p className="mb-6">
                     My ideal job would look something like this.
                 </p>
 
@@ -44,7 +46,7 @@ const HireMe: FC<HireMeProps> = ({testimonials}) => {
                     <li>🏡 Fully remote</li>
                     <li>🏖️ Unlimited paid time off</li>
                     <li>🧠 Learning budget</li>
-                </ul>
+                </ul> */}
             </section>
 
             <section>
