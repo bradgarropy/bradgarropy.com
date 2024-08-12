@@ -48,7 +48,7 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 
 ## Work Experience
 
-**Atlassian | Senior Software Engineer**  
+**Atlassian | Senior Frontend Engineer**  
 _August 2024 - Present_
 
 _Optimized Checkout Team_
