@@ -8,6 +8,8 @@ tags: ["apple", "macbook"]
 
 I recently got a new [M1 MacBook Pro][macbook-pro], and I wanted to document exactly how I set it up. Not only do I want to share this with you, but I also want to use it as a reference for myself in the future.
 
+_Before setting up a new computer, I always [backup][backup] all of my previous settings._
+
 ## 🔺 install updates
 
 -   Check for system updates
@@ -149,6 +151,7 @@ npm install --global vercel
 ```
 
 [macbook-pro]: https://www.apple.com/macbook-pro
+[backup]: https://bradgarropy.com/blog/backup-and-restore
 [arc]: https://arc.net/download
 [raycast]: https://www.raycast.com
 [raycast-hotkey]: https://manual.raycast.com/hotkey
