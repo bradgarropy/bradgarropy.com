@@ -18,7 +18,6 @@ I recently got a new [M1 MacBook Pro][macbook-pro], and I wanted to document exa
 -   GarageBand
 -   iMovie
 -   Keynote
--   Numbers
 -   Pages
 
 ## 🎛️ adjust settings
@@ -106,9 +105,11 @@ I recently got a new [M1 MacBook Pro][macbook-pro], and I wanted to document exa
 
 ## 📥 install applications
 
--   [Google Chrome][chrome]
+-   [Arc][arc]
     -   Sign in
     -   Set as default browser
+-   [Raycast][raycast]
+    -   [Replace Spotlight][raycast-hotkey]
 -   [Discord][discord]
 -   [Elgato Camera Hub][elgato]
 -   [Elgato Control Center][elgato]
@@ -148,7 +149,9 @@ npm install --global vercel
 ```
 
 [macbook-pro]: https://www.apple.com/macbook-pro
-[chrome]: https://www.google.com/chrome/dr/download
+[arc]: https://arc.net/download
+[raycast]: https://www.raycast.com
+[raycast-hotkey]: https://manual.raycast.com/hotkey
 [vscode]: https://code.visualstudio.com/download
 [discord]: https://discord.com/download
 [obs]: https://obsproject.com/download
