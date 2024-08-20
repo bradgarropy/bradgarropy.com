@@ -277,16 +277,16 @@ const mockOlderNow: Now = mockNows[2]
 
 const mockTopics: Topic[] = [
     {
-        icon: "🔌",
-        name: "tech",
+        icon: "💻",
+        name: "coding",
     },
     {
         icon: "😎",
         name: "life",
     },
     {
-        icon: "💻",
-        name: "coding",
+        icon: "🔌",
+        name: "tech",
     },
 ]
 
