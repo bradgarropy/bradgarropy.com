@@ -6,13 +6,17 @@ topic: life
 tags: ["fitness", "workout"]
 ---
 
-Over my years of experience exercising, I've come to realized that a hybrid approach to training is the most effective way to keep me strong, athletic, and flexible. Here is the five day split that I'm currently running.
+Over my years of experience exercising, I've come to realized that a hybrid approach to training is the most effective way to keep me strong, athletic, and flexible.
+
+I'm currently running a five day split, where I lift for four days then run on the last day. I workout in our garage gym, no matter the weather. Over the years it has become pretty well equipped.
 
 I start each session with a power lifting movement. I work up to a heavy set of anywhere from one to five reps. I use periodization to increase my strength over time.
 
 After the power lifting exercise I transition to bodybuilding exercises that focus on hypertrophy and time under tension. I vary these exercises to ensure even growth. I also swap between dumbbell, cable, and EZ bar movements to stimulate muscles differently.
 
 To round out the week I like to go for a long run to make sure my cardiovascular health stays in check.
+
+![gym-right][gym-right]
 
 ## Chest & Triceps
 
@@ -65,4 +69,9 @@ To round out the week I like to go for a long run to make sure my cardiovascular
 | :------- | :--------- | :--------------- |
 | 5 Miles  | 160BPM     | 9:30 Mins / Mile |
 
-I do my best to keep my heart rate under that limit while hitting the target pace. I also tend to throw in a few shorter 1-2 mile runs after a workout to include more cardio, which bumps my weekly mileage to about 10 miles.
+I do my best to keep my heart rate under that limit while hitting the target pace. I also tend to throw in a few shorter 1-2 mile runs after a workout to include more cardio, which bumps my weekly mileage to about 10 miles. I always run outdoors, no matter what the weather is.
+
+![gym-left][gym-left]
+
+[gym-left]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/gym-left.jpg
+[gym-right]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/gym-right.jpg
