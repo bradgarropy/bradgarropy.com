@@ -54,13 +54,15 @@ I put [ranch][ranch] dressing on this meal to give it some more flavor.
 
 ## macronutrients
 
-So all in all, each day my macronutrient intake looks something like this. Again, this is my ideal day while maintaining a very restricted diet usually when I'm trying to lose body fat. In actuality, I usually snack on things like nuts, turkey pepperoni, dates, and fruit until I feel satisfied. I use the planned meals as a baseline of required calories, and then build on top of that if needed.
+So all in all, each day my macronutrient intake looks something like this. Again, this is my ideal day while maintaining a very restricted diet usually when I'm trying to lose body fat.
 
 | Protein | Carbs | Fat | Calories |
 | :------ | :---- | :-- | :------- |
 | 177g    | 130g  | 49g | 1,634    |
 
 ![macros][macros]
+
+In actuality, I usually snack on things like nuts, turkey pepperoni, dates, and fruit until I feel satisfied. I use the planned meals as a baseline of required calories, and then build on top of that if needed.
 
 ## water
 
