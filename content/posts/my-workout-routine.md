@@ -1,7 +1,7 @@
 ---
 title: 💪🏼 my workout routine
 slug: my-workout-routine
-date: "2024-08-20"
+date: "2024-08-21"
 topic: life
 tags: ["fitness", "workout"]
 ---
@@ -18,7 +18,7 @@ To round out the week I like to go for a long run to make sure my cardiovascular
 
 ![gym-right][gym-right]
 
-## Chest & Triceps
+## chest & triceps
 
 | Exercise                   | Sets x Reps    |
 | :------------------------- | :------------- |
@@ -29,7 +29,7 @@ To round out the week I like to go for a long run to make sure my cardiovascular
 | Long Head Tricep Exercise  | 3x10 + Dropset |
 | Short Head Tricep Exercise | 3x10 + Dropset |
 
-## Legs
+## legs
 
 | Exercise                      | Sets x Reps |
 | :---------------------------- | :---------- |
@@ -39,7 +39,7 @@ To round out the week I like to go for a long run to make sure my cardiovascular
 | Dumbbell Stiff Leg Deadlift   | 3x10        |
 | Dumbbell Standing Calf Raises | 3x10        |
 
-## Shoulders & Abs
+## shoulders & abs
 
 | Exercise                        | Sets x Reps    |
 | :------------------------------ | :------------- |
@@ -51,7 +51,7 @@ To round out the week I like to go for a long run to make sure my cardiovascular
 | Cable Crunches                  | 3x20           |
 | Lying Leg Raises                | 3x10           |
 
-## Back & Biceps
+## back & biceps
 
 | Exercise                     | Sets x Reps    |
 | :--------------------------- | :------------- |
@@ -63,7 +63,7 @@ To round out the week I like to go for a long run to make sure my cardiovascular
 | Neutral Grip Bicep Exercise  | 3x10 + Dropset |
 | Pronated Grip Bicep Exercise | 3x10 + Dropset |
 
-## Running
+## running
 
 | Distance | Heart Rate | Pace             |
 | :------- | :--------- | :--------------- |
