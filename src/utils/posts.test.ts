@@ -76,7 +76,7 @@ test("gets post by slug", async () => {
 })
 
 test("gets topic", () => {
-    const topic = getTopic("tech")
+    const topic = getTopic("coding")
     expect(topic).toEqual(mockTopic)
 })
 

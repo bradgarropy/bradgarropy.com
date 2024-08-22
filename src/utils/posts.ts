@@ -63,13 +63,15 @@ const getTopic = (name: Topic["name"]): Topic => {
 const getTopics = (): Topic[] => {
     const posts = getPosts()
 
-    const topics = posts.reduce<Topic[]>((topics, post) => {
-        if (!topics.some(topic => topic.name === post.topic)) {
-            return [...topics, getTopic(post.topic)]
-        } else {
-            return topics
-        }
-    }, [])
+    const topics = posts
+        .reduce<Topic[]>((topics, post) => {
+            if (!topics.some(topic => topic.name === post.topic)) {
+                return [...topics, getTopic(post.topic)]
+            } else {
+                return topics
+            }
+        }, [])
+        .sort((a, b) => a.name.localeCompare(b.name))
 
     return topics
 }
