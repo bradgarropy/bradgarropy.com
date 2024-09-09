@@ -15,7 +15,7 @@ I use my home office as a place to stream, podcast, and code. This setup was rec
 
 I used to have a custom PC, but I stopped playing games on the computer, so I was able to ditch the desktop and rely solely on a laptop.
 
-[Apple 16" M1 MacBook Pro][macbook]
+[Apple 16" M3 MacBook Pro][macbook]
 
 ### ⌨️ accessories
 
@@ -70,7 +70,7 @@ These pieces of tech are always within reach.
 [tech]: https://bradgarropy.com/topic/tech
 [ama]: https://bradgarropy.com/ama
 [home-office]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/pages/uses/home-office.jpg
-[macbook]: https://www.amazon.com/Apple-MacBook-16-inch-10%E2%80%91core-16%E2%80%91core/dp/B09JQKBQSB?tag=bradgarropy00-20
+[macbook]: https://amzn.to/3AW5abz
 [ctrl]: https://drop.com/buy/drop-ctrl-high-profile-mechanical-keyboard
 [basilisk]: https://amzn.to/4ciaV02
 [propus]: https://www.amazon.com/gp/product/B004J35DYW?tag=bradgarropy00-20
