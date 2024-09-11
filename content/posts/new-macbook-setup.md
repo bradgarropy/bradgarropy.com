@@ -65,6 +65,8 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 
 -   Add `bradgarropy@gmail.com` account
     -   Select _Mail_ and _Calendar_
+-   Add `brad@compressed.fm` account
+    -   Select _Mail_ and _Calendar_
 
 ![Internet Accounts][internet-accounts]
 
@@ -101,7 +103,16 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 -   Finder > Settings > Tags
     -   Delete all tags
 -   Finder > Settings > Sidebar
-    -   Select _Hard Disks_
+    -   Enable only the following options
+        -   _Applications_
+        -   _Desktop_
+        -   _Downloads_
+        -   _bradgarropy_
+        -   _iCloud Drive_
+        -   _Shared_
+        -   _Hard Disks_
+        -   _External Disks_
+    -   Disable everything else
 
 ![Finder][finder]
 
