@@ -6,7 +6,7 @@ topic: tech
 tags: ["apple", "macbook"]
 ---
 
-I recently got a new [M1 MacBook Pro][macbook-pro], and I wanted to document exactly how I set it up. Not only do I want to share this with you, but I also want to use it as a reference for myself in the future.
+I recently got a new [M3 MacBook Pro][macbook-pro], and I wanted to document exactly how I set it up. Not only do I want to share this with you, but I also want to use it as a reference for myself in the future.
 
 _Before setting up a new computer, I always [backup][backup] all of my previous settings._
 
@@ -18,7 +18,6 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 ## 🗑️ uninstall applications
 
 -   GarageBand
--   iMovie
 -   Keynote
 -   Pages
 
@@ -30,6 +29,20 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 
 ![iCloud][icloud]
 
+### sound
+
+-   Set _Output_ to _Elgato Wave XLR_
+-   Set _Input_ to _Wave Link Stream_
+
+![Sound][sound]
+
+### general
+
+-   Language & Region
+    -   Change _First day of week_ to _Monday_
+
+![Lanuage & Region][language-and-region]
+
 ### siri & spotlight
 
 -   Enable _Listen for "Hey Siri"_
@@ -38,6 +51,7 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 
 ### desktop & dock
 
+-   Remove all applications from the dock
 -   Enable _Automatically hide and show the Dock_
 -   Setup _Mission Control_ hot corners
 
@@ -56,6 +70,7 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 
 ### touch id & password
 
+-   Add fingerprint
 -   Enable _Touch ID_
 -   Allow unlocking with Apple Watch
 
@@ -113,6 +128,18 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
         -   _Hard Disks_
         -   _External Disks_
     -   Disable everything else
+    -   Select _Hard Disks_
+-   Elgato Control Center > Preferences > Startup
+    -   Check _Open automatically on Log In_
+-   Elgato Stream Deck > Preferences > Plugins
+    -   [Apple Music][apple-music-plugin]
+    -   [Control Center][control-center-plugin]
+    -   [OBS Studio][obs-studio-plugin]
+    -   [Wave Link][wave-link-plugin]
+-   Elgato Wave Link > Configure Wave Link
+    -   Add _Elgato Wave XLR_ as audio input
+    -   Install [DeeGate][deegate]
+    -   Set noise gate to `36db`
 
 ![Finder][finder]
 
@@ -133,6 +160,7 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
     -   Update
     -   Sign in with GitHub
     -   [Install shell command][vscode-cli]
+-   [iMovie][imovie]
 
 ## 🖋️ fonts
 
@@ -161,7 +189,7 @@ npm install --global netlify-cli
 npm install --global vercel
 ```
 
-[macbook-pro]: https://www.apple.com/macbook-pro
+[macbook-pro]: https://amzn.to/3AW5abz
 [backup]: https://bradgarropy.com/blog/backup-and-restore
 [arc]: https://arc.net/download
 [raycast]: https://www.raycast.com
@@ -188,3 +216,11 @@ npm install --global vercel
 [mouse]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/mouse.png
 [finder]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/finder.png
 [cascadia-code]: https://github.com/microsoft/cascadia-code
+[imovie]: https://apps.apple.com/us/app/imovie/id408981434
+[language-and-region]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/language-and-region.png
+[sound]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/sound.png
+[apple-music-plugin]: https://marketplace.elgato.com/product/apple-music-719b94df-ee43-47b3-a7c0-a3ea176ebbec
+[control-center-plugin]: https://marketplace.elgato.com/product/control-center-39a4fa43-1afe-457a-8a19-b5d386e77d53
+[obs-studio-plugin]: https://marketplace.elgato.com/product/obs-studio-35615969-830f-45c9-ba0a-1a295bba7fec
+[wave-link-plugin]: https://marketplace.elgato.com/product/wave-link-1baa435a-c623-406d-b53c-53338c6d95d3
+[deegate]: https://dotec-audio.com/deegate.html
