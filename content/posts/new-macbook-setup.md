@@ -115,6 +115,8 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
     -   Select _Off_ for _Automatically Download_
 -   Podcasts > Settings > Playback
     -   Select _Stop when an episode ends_
+-   Finder > General
+    -   Set _New Finder windows show_ to _Desktop_
 -   Finder > Settings > Tags
     -   Delete all tags
 -   Finder > Settings > Sidebar
@@ -128,7 +130,6 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
         -   _Hard Disks_
         -   _External Disks_
     -   Disable everything else
-    -   Select _Hard Disks_
 -   Elgato Control Center > Preferences > Startup
     -   Check _Open automatically on Log In_
 -   Elgato Stream Deck > Preferences > Plugins
