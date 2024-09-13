@@ -108,6 +108,8 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
     -   Check _Show Hidden Photo Album_
 -   Messages > Settings > iMessage
     -   Check _Enable Messages in iCloud_
+-   Notes > Settings
+    -   Increase _Default text size_
 -   Safari > Settings > Advanced
     -   Check _Show Develop menu in menu bar_
 -   Podcasts > Settings > General
