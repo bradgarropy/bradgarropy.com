@@ -54,6 +54,7 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 -   Remove all applications from the dock
 -   Enable _Automatically hide and show the Dock_
 -   Setup _Mission Control_ hot corners
+-   Disable _Tiled windows have margins_
 
     |                   |                   |
     | ----------------- | ----------------- |
