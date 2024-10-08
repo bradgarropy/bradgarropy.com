@@ -53,8 +53,9 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 
 -   Remove all applications from the dock
 -   Enable _Automatically hide and show the Dock_
--   Setup _Mission Control_ hot corners
+-   Set _Click wallpaper to reveal desktop_ to _Only in Stage Manager_
 -   Disable _Tiled windows have margins_
+-   Setup _Mission Control_ hot corners
 
     |                   |                   |
     | ----------------- | ----------------- |
@@ -66,8 +67,15 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 ### wallpaper
 
 -   Select _Dynamic_ wallpaper
+-   Enable _Show as screen saver_
 
 ![Wallpaper][wallpaper]
+
+### notifications
+
+-   Allow notifications from all sources
+
+![Notifications][notifications]
 
 ### touch id & password
 
@@ -95,7 +103,6 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 
 ### mouse
 
--   Increase _Tracking speed_ to _Fast_
 -   Uncheck _Natural scrolling_
 -   Increase _Scrolling speed_
 
@@ -112,13 +119,13 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 -   Notes > Settings
     -   Increase _Default text size_
 -   Safari > Settings > Advanced
-    -   Check _Show Develop menu in menu bar_
+    -   Check _Show features for web developers_
 -   Podcasts > Settings > General
     -   Uncheck _Download When Saving_
     -   Select _Off_ for _Automatically Download_
 -   Podcasts > Settings > Playback
     -   Select _Stop when an episode ends_
--   Finder > General
+-   Finder > Settings> General
     -   Set _New Finder windows show_ to _Desktop_
 -   Finder > Settings > Tags
     -   Delete all tags
@@ -175,9 +182,9 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 -   [homebrew][homebrew]
 -   [git][git]
 -   [nvm][nvm]
+-   [Node.js][node]
 -   [GitHub CLI][github-cli]
 -   [Netlify CLI][netlify-cli]
--   [ngrok][ngrok]
 -   [Vercel CLI][vercel-cli]
 
 ```zsh
@@ -185,10 +192,10 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install git
 brew install gh
-brew install ngrok/ngrok/ngrok
 
-# npm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+# node
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/HEAD/install.sh | bash
+nvm install stable
 npm install --global netlify-cli
 npm install --global vercel
 ```
@@ -205,14 +212,15 @@ npm install --global vercel
 [homebrew]: https://brew.sh
 [git]: https://git-scm.com
 [nvm]: https://github.com/nvm-sh/nvm
+[node]: https://nodejs.org/en/download/package-manager
 [vercel-cli]: https://vercel.com/docs/cli
 [github-cli]: https://cli.github.com
 [netlify-cli]: https://www.netlify.com/products/cli
-[ngrok]: https://ngrok.com
 [vscode-cli]: https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
 [icloud]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/icloud.png
 [siri-and-spotlight]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/siri-and-spotlight.png
 [desktop-and-dock]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/desktop-and-dock.png
+[notifications]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/notifications.png
 [wallpaper]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/wallpaper.png
 [touch-id-and-password]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/touch-id-and-password.png
 [internet-accounts]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/internet-accounts.png
