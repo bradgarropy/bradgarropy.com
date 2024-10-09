@@ -116,6 +116,8 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
     -   Check _Show Hidden Photo Album_
 -   Mail > Settings > Composing
     -   Uncheck _Quote the text of the original message_
+-   Mail > Settings > Signatures
+    -   Move signatures to appropriate accounts
 -   Messages > Settings > General
     -   Check _Share Name and Photo_
     -   Increase _Text size_
