@@ -114,6 +114,8 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
     -   Uncheck _Shared with You_
 -   Photos > View
     -   Check _Show Hidden Photo Album_
+-   Mail > Settings > Composing
+    -   Uncheck _Quote the text of the original message_
 -   Messages > Settings > iMessage
     -   Check _Enable Messages in iCloud_
 -   Notes > Settings
