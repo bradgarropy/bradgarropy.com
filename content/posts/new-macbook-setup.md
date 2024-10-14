@@ -40,6 +40,8 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 
 -   Language & Region
     -   Change _First day of week_ to _Monday_
+-   Autofill & Passwords
+    -   Check _Delete after use_
 
 ![Lanuage & Region][language-and-region]
 
