@@ -110,6 +110,10 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 
 ![Mouse][mouse]
 
+### printers & scanners
+
+-   Go through the _Add Printer, Scanner, or Fax..._ flow
+
 ### applications
 
 -   Photos > View > Show
