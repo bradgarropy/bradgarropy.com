@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const typography = require("@tailwindcss/typography")
+import typography from "@tailwindcss/typography"
 
 const config = {
     content: [
