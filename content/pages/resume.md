@@ -24,13 +24,13 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 
 ### Software
 
-|             |                                                                        |
-| ----------- | ---------------------------------------------------------------------- |
-| _Languages_ | TypeScript, JavaScript, HTML, CSS, Bash, Markdown, YAML, TOML          |
-| _Runtimes_  | Node, Deno, Bun                                                        |
-| _Frontend_  | React, Remix, Next, Svelte, SvelteKit, Astro, Gatsby, esbuild, Webpack |
-| _Backend_   | Serverless, Webhooks, REST, GraphQL, Express, Fastify, Prisma          |
-| _Testing_   | Vitest, Playwright, Jest, Cypress, Mock Service Worker, Storybook      |
+|             |                                                                               |
+| ----------- | ----------------------------------------------------------------------------- |
+| _Languages_ | TypeScript, JavaScript, HTML, CSS, Bash, Markdown, YAML, TOML                 |
+| _Runtimes_  | Node, Deno, Bun                                                               |
+| _Frontend_  | React, Remix, Next, Svelte, SvelteKit, Astro, Gatsby, Redux, esbuild, Webpack |
+| _Backend_   | Serverless, Webhooks, REST, GraphQL, Express, Fastify, Prisma                 |
+| _Testing_   | Vitest, Playwright, Jest, Cypress, Mock Service Worker, Storybook             |
 
 ### Tools
 
