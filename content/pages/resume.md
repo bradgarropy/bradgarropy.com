@@ -48,7 +48,7 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 
 ## Work Experience
 
-**Stripe | Senior Frontend Engineer**  
+**Stripe | Senior Frontend Developer**  
 _August 2024 - Present_
 
 [_Link Modal Redesign_][link]
