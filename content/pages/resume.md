@@ -24,13 +24,13 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 
 ### Software
 
-|             |                                                                        |
-| ----------- | ---------------------------------------------------------------------- |
-| _Languages_ | TypeScript, JavaScript, HTML, CSS, Bash, Markdown, YAML, TOML          |
-| _Runtimes_  | Node, Deno, Bun                                                        |
-| _Frontend_  | React, Remix, Next, Svelte, SvelteKit, Astro, Gatsby, esbuild, Webpack |
-| _Backend_   | Serverless, Webhooks, REST, GraphQL, Express, Fastify, Prisma          |
-| _Testing_   | Vitest, Playwright, Jest, Cypress, Mock Service Worker, Storybook      |
+|             |                                                                               |
+| ----------- | ----------------------------------------------------------------------------- |
+| _Languages_ | TypeScript, JavaScript, HTML, CSS, Bash, Markdown, YAML, TOML                 |
+| _Runtimes_  | Node, Deno, Bun                                                               |
+| _Frontend_  | React, Remix, Next, Svelte, SvelteKit, Astro, Gatsby, Redux, esbuild, Webpack |
+| _Backend_   | Serverless, Webhooks, REST, GraphQL, Express, Fastify, Prisma                 |
+| _Testing_   | Vitest, Playwright, Jest, Cypress, Mock Service Worker, Storybook             |
 
 ### Tools
 
@@ -48,12 +48,22 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 
 ## Work Experience
 
-**Atlassian | Senior Frontend Engineer**  
+**Stripe | Senior Frontend Developer**  
 _August 2024 - Present_
 
-_Optimized Checkout Team_
+[_Link Modal Redesign_][link]
 
--   To be determined
+-   Led a team of two developers to implement testing infrastructure.
+-   Built with Playwright and Jest for test libraries.
+-   Drastically simplified test setup and mocking.
+-   Created a Splunk dashboard for monitoring rollout health.
+
+[_Raycast Stripe Extension_][raycast-stripe]
+
+-   Developed a command that automates filling out a Stripe checkout form.
+-   Includes all possible Stripe test cards.
+-   Saves over 5,000 developer hours per year.
+-   Implemented with React, TypeScript, and the Raycast library.
 
 **Atlassian | Senior Software Engineer**
 
@@ -264,6 +274,8 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 [npm][npm]  
 [LinkedIn][linkedin]
 
+[raycast-stripe]: https://raycast.com/pradeepb28/stripe
+[link]: https://link.com
 [email]: mailto:bradgarropy@gmail.com
 [prex]: https://magento.com/products/product-recommendations
 [recommendations-js-sdk]: https://npmjs.com/package/@magento/recommendations-js-sdk
