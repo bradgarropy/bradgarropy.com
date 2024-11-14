@@ -22,7 +22,7 @@ const Connect: FC = () => {
                 <p className="m-0">Let&apos;s connect on these platforms.</p>
             </div>
 
-            <div className="grid grid-flow-col content-center justify-center gap-x-5">
+            <div className="flex flex-wrap content-center justify-center gap-5">
                 <SocialLink platform="twitch" />
                 <SocialLink platform="github" />
                 <SocialLink platform="bluesky" />
