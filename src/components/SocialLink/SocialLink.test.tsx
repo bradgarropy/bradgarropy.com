@@ -3,6 +3,11 @@ import {expect, test} from "vitest"
 
 import SocialLink from "~/components/SocialLink"
 
+test("bluesky", () => {
+    render(<SocialLink platform="bluesky" />)
+    expect(screen.getByLabelText("bluesky")).toBeInTheDocument()
+})
+
 test("discord", () => {
     render(<SocialLink platform="discord" />)
     expect(screen.getByLabelText("discord")).toBeInTheDocument()

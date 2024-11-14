@@ -25,10 +25,12 @@ const Connect: FC = () => {
             <div className="grid grid-flow-col content-center justify-center gap-x-5">
                 <SocialLink platform="twitch" />
                 <SocialLink platform="github" />
+                <SocialLink platform="bluesky" />
                 <SocialLink platform="youtube" />
                 <SocialLink platform="x" />
                 <SocialLink platform="instagram" />
                 <SocialLink platform="discord" />
+                <SocialLink platform="feed" />
             </div>
         </div>
     )

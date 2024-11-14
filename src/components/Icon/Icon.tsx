@@ -1,6 +1,7 @@
 import type {FC, HTMLAttributes} from "react"
 
 import {
+    BlueskyIcon,
     CloseIcon,
     DiscordIcon,
     FeedIcon,
@@ -31,6 +32,8 @@ type IconProps = {
 
 const Icon: FC<IconProps> = ({name, ...props}) => {
     switch (name) {
+        case "bluesky":
+            return <BlueskyIcon {...props} />
         case "close":
             return <CloseIcon {...props} />
         case "discord":

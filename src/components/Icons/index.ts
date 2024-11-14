@@ -1,3 +1,4 @@
+export {default as BlueskyIcon} from "~/components/Icons/BlueskyIcon"
 export {default as CloseIcon} from "~/components/Icons/CloseIcon"
 export {default as DiscordIcon} from "~/components/Icons/DiscordIcon"
 export {default as FeedIcon} from "~/components/Icons/FeedIcon"

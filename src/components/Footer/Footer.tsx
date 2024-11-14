@@ -7,6 +7,7 @@ const Footer: FC = () => {
         <footer className="grid grid-flow-col content-center justify-center gap-5 pb-20 pt-28">
             <SocialLink platform="twitch" />
             <SocialLink platform="github" />
+            <SocialLink platform="bluesky" />
             <SocialLink platform="youtube" />
             <SocialLink platform="x" />
             <SocialLink platform="instagram" />

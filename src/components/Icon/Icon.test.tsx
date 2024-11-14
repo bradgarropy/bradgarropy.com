@@ -5,6 +5,7 @@ import Icon from "~/components/Icon"
 
 const icons = [
     "close",
+    "bluesky",
     "discord",
     "feed",
     "gatsby",
