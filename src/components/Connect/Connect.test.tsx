@@ -13,7 +13,16 @@ test("shows connect", () => {
         screen.getByText("Let's connect on these platforms."),
     ).toBeInTheDocument()
 
-    const labels = ["twitch", "github", "youtube", "x", "instagram", "discord"]
+    const labels = [
+        "bluesky",
+        "discord",
+        "feed",
+        "github",
+        "instagram",
+        "twitch",
+        "x",
+        "youtube",
+    ]
 
     labels.forEach(label => {
         expect(screen.getByLabelText(label)).toBeInTheDocument()

@@ -4,6 +4,7 @@ import {expect, test} from "vitest"
 import Footer from "~/components/Footer"
 
 const labels = [
+    "bluesky",
     "discord",
     "feed",
     "github",

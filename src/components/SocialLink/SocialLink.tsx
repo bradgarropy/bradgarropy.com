@@ -5,6 +5,7 @@ import Icon from "~/components/Icon"
 
 type SocialLinkProps = {
     platform:
+        | "bluesky"
         | "discord"
         | "github"
         | "instagram"
@@ -20,6 +21,11 @@ const SocialLink: FC<SocialLinkProps> = ({platform}) => {
     let name
 
     switch (platform) {
+        case "bluesky":
+            url = "/bluesky"
+            name = "bluesky"
+            break
+
         case "discord":
             url = "/discord"
             name = "discord"
