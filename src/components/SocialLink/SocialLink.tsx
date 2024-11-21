@@ -10,6 +10,7 @@ type SocialLinkProps = {
         | "github"
         | "instagram"
         | "feed"
+        | "linkedin"
         | "twitch"
         | "twitter"
         | "x"
@@ -44,6 +45,11 @@ const SocialLink: FC<SocialLinkProps> = ({platform}) => {
         case "feed":
             url = "/feed.json"
             name = "feed"
+            break
+
+        case "linkedin":
+            url = "https://linkedin.com/in/bradgarropy"
+            name = "linkedin"
             break
 
         case "twitch":

@@ -28,6 +28,11 @@ test("instagram", () => {
     expect(screen.getByLabelText("instagram")).toBeInTheDocument()
 })
 
+test("linkedin", () => {
+    render(<SocialLink platform="linkedin" />)
+    expect(screen.getByLabelText("linkedin")).toBeInTheDocument()
+})
+
 test("twitter", () => {
     render(<SocialLink platform="twitter" />)
     expect(screen.getByLabelText("twitter")).toBeInTheDocument()

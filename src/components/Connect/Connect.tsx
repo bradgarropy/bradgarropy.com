@@ -23,13 +23,14 @@ const Connect: FC = () => {
             </div>
 
             <div className="flex flex-wrap content-center justify-center gap-5">
-                <SocialLink platform="twitch" />
-                <SocialLink platform="github" />
-                <SocialLink platform="bluesky" />
                 <SocialLink platform="youtube" />
-                <SocialLink platform="x" />
-                <SocialLink platform="instagram" />
                 <SocialLink platform="discord" />
+                <SocialLink platform="bluesky" />
+                <SocialLink platform="linkedin" />
+                <SocialLink platform="github" />
+                <SocialLink platform="instagram" />
+                <SocialLink platform="x" />
+                <SocialLink platform="twitch" />
                 <SocialLink platform="feed" />
             </div>
         </div>

@@ -19,6 +19,7 @@ test("shows connect", () => {
         "feed",
         "github",
         "instagram",
+        "linkedin",
         "twitch",
         "x",
         "youtube",
