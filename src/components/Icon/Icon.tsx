@@ -9,6 +9,7 @@ import {
     GithubIcon,
     InstagramIcon,
     JavascriptIcon,
+    LinkedinIcon,
     LinkIcon,
     MenuIcon,
     MoonIcon,
@@ -50,6 +51,8 @@ const Icon: FC<IconProps> = ({name, ...props}) => {
             return <JavascriptIcon {...props} />
         case "link":
             return <LinkIcon {...props} />
+        case "linkedin":
+            return <LinkedinIcon {...props} />
         case "menu":
             return <MenuIcon {...props} />
         case "moon":

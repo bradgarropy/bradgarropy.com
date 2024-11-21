@@ -13,6 +13,7 @@ const icons = [
     "instagram",
     "javascript",
     "link",
+    "linkedin",
     "menu",
     "moon",
     "next",

@@ -9,6 +9,7 @@ const labels = [
     "feed",
     "github",
     "instagram",
+    "linkedin",
     "twitch",
     "x",
     "youtube",
