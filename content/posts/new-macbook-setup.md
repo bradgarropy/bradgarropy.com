@@ -45,6 +45,12 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 
 ![Lanuage & Region][language-and-region]
 
+### control center
+
+-   Select _Show in Menu Bar_ for _Bluetooth_
+
+![Control Center][control-center]
+
 ### siri & spotlight
 
 -   Enable _Listen for "Hey Siri"_
@@ -231,6 +237,7 @@ npm install --global vercel
 [netlify-cli]: https://www.netlify.com/products/cli
 [vscode-cli]: https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
 [icloud]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/icloud.png
+[control-center]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/control-center.png
 [siri-and-spotlight]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/siri-and-spotlight.png
 [desktop-and-dock]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/desktop-and-dock.png
 [notifications]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/notifications.png
