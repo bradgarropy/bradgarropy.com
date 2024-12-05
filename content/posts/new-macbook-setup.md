@@ -138,6 +138,7 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 -   Notes > Settings
     -   Increase _Default text size_
 -   Safari > Settings > Advanced
+    -   Check _Show full website address_
     -   Check _Show features for web developers_
 -   Podcasts > Settings > General
     -   Uncheck _Download When Saving_
