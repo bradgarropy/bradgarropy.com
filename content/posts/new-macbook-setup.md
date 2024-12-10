@@ -12,58 +12,58 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 
 ## 🔺 install updates
 
--   Check for system updates
--   Check for app store updates
+- Check for system updates
+- Check for app store updates
 
 ## 🗑️ uninstall applications
 
--   GarageBand
--   Keynote
--   Pages
+- GarageBand
+- Keynote
+- Pages
 
 ## 🎛️ adjust settings
 
 ### icloud
 
--   Login to iCloud
+- Login to iCloud
 
 ![iCloud][icloud]
 
 ### sound
 
--   Set _Output_ to _Elgato Wave XLR_
--   Set _Input_ to _Wave Link Stream_
+- Set _Output_ to _Elgato Wave XLR_
+- Set _Input_ to _Wave Link Stream_
 
 ![Sound][sound]
 
 ### general
 
--   Language & Region
-    -   Change _First day of week_ to _Monday_
--   Autofill & Passwords
-    -   Check _Delete after use_
+- Language & Region
+    - Change _First day of week_ to _Monday_
+- Autofill & Passwords
+    - Check _Delete after use_
 
 ![Lanuage & Region][language-and-region]
 
 ### control center
 
--   Select _Show in Menu Bar_ for _Bluetooth_
+- Select _Show in Menu Bar_ for _Bluetooth_
 
 ![Control Center][control-center]
 
 ### siri & spotlight
 
--   Enable _Listen for "Hey Siri"_
+- Enable _Listen for "Hey Siri"_
 
 ![Siri & Spotlight][siri-and-spotlight]
 
 ### desktop & dock
 
--   Remove all applications from the dock
--   Enable _Automatically hide and show the Dock_
--   Set _Click wallpaper to reveal desktop_ to _Only in Stage Manager_
--   Disable _Tiled windows have margins_
--   Setup _Mission Control_ hot corners
+- Remove all applications from the dock
+- Enable _Automatically hide and show the Dock_
+- Set _Click wallpaper to reveal desktop_ to _Only in Stage Manager_
+- Disable _Tiled windows have margins_
+- Setup _Mission Control_ hot corners
 
     |                   |                   |
     | ----------------- | ----------------- |
@@ -74,139 +74,139 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 
 ### wallpaper
 
--   Select _Dynamic_ wallpaper
--   Enable _Show as screen saver_
+- Select _Dynamic_ wallpaper
+- Enable _Show as screen saver_
 
 ![Wallpaper][wallpaper]
 
 ### notifications
 
--   Allow notifications from all sources
+- Allow notifications from all sources
 
 ![Notifications][notifications]
 
 ### touch id & password
 
--   Add fingerprint
--   Enable _Touch ID_
--   Allow unlocking with Apple Watch
+- Add fingerprint
+- Enable _Touch ID_
+- Allow unlocking with Apple Watch
 
 ![Touch ID & Password][touch-id-and-password]
 
 ### internet accounts
 
--   Add `bradgarropy@gmail.com` account
-    -   Select _Mail_ and _Calendar_
--   Add `brad@compressed.fm` account
-    -   Select _Mail_ and _Calendar_
+- Add `bradgarropy@gmail.com` account
+    - Select _Mail_ and _Calendar_
+- Add `brad@compressed.fm` account
+    - Select _Mail_ and _Calendar_
 
 ![Internet Accounts][internet-accounts]
 
 ### keyboard
 
--   Keyboard Shortcuts > Modifier
-    -   Swap the _Control_ and _Command_ keys on external keyboard
+- Keyboard Shortcuts > Modifier
+    - Swap the _Control_ and _Command_ keys on external keyboard
 
 ![Keyboard][keyboard]
 
 ### mouse
 
--   Uncheck _Natural scrolling_
--   Increase _Scrolling speed_
+- Uncheck _Natural scrolling_
+- Increase _Scrolling speed_
 
 ![Mouse][mouse]
 
 ### printers & scanners
 
--   Go through the _Add Printer, Scanner, or Fax..._ flow
+- Go through the _Add Printer, Scanner, or Fax..._ flow
 
 ### applications
 
--   Photos > View > Show
-    -   Uncheck _Shared with You_
--   Photos > View
-    -   Check _Show Hidden Photo Album_
--   Mail > Settings > Composing
-    -   Uncheck _Quote the text of the original message_
--   Mail > Settings > Signatures
-    -   Move signatures to appropriate accounts
--   Messages > Settings > General
-    -   Check _Share Name and Photo_
-    -   Increase _Text size_
--   Messages > Settings > iMessage
-    -   Check _Enable Messages in iCloud_
--   Notes > Settings
-    -   Increase _Default text size_
--   Safari > Settings > Advanced
-    -   Check _Show full website address_
-    -   Check _Show features for web developers_
--   Podcasts > Settings > General
-    -   Uncheck _Download When Saving_
-    -   Select _Off_ for _Automatically Download_
--   Podcasts > Settings > Playback
-    -   Select _Stop when an episode ends_
--   Finder > Settings> General
-    -   Set _New Finder windows show_ to _Desktop_
--   Finder > Settings > Tags
-    -   Delete all tags
--   Finder > Settings > Sidebar
-    -   Enable only the following options
-        -   _Applications_
-        -   _Desktop_
-        -   _Downloads_
-        -   _bradgarropy_
-        -   _iCloud Drive_
-        -   _Shared_
-        -   _Hard Disks_
-        -   _External Disks_
-    -   Disable everything else
--   Elgato Control Center > Preferences > Startup
-    -   Check _Open automatically on Log In_
--   Elgato Stream Deck > Preferences > Plugins
-    -   [Apple Music][apple-music-plugin]
-    -   [Control Center][control-center-plugin]
-    -   [OBS Studio][obs-studio-plugin]
-    -   [Wave Link][wave-link-plugin]
--   Elgato Wave Link > Configure Wave Link
-    -   Add _Elgato Wave XLR_ as audio input
-    -   Install [DeeGate][deegate]
-    -   Set noise gate to `36db`
+- Photos > View > Show
+    - Uncheck _Shared with You_
+- Photos > View
+    - Check _Show Hidden Photo Album_
+- Mail > Settings > Composing
+    - Uncheck _Quote the text of the original message_
+- Mail > Settings > Signatures
+    - Move signatures to appropriate accounts
+- Messages > Settings > General
+    - Check _Share Name and Photo_
+    - Increase _Text size_
+- Messages > Settings > iMessage
+    - Check _Enable Messages in iCloud_
+- Notes > Settings
+    - Increase _Default text size_
+- Safari > Settings > Advanced
+    - Check _Show full website address_
+    - Check _Show features for web developers_
+- Podcasts > Settings > General
+    - Uncheck _Download When Saving_
+    - Select _Off_ for _Automatically Download_
+- Podcasts > Settings > Playback
+    - Select _Stop when an episode ends_
+- Finder > Settings> General
+    - Set _New Finder windows show_ to _Desktop_
+- Finder > Settings > Tags
+    - Delete all tags
+- Finder > Settings > Sidebar
+    - Enable only the following options
+        - _Applications_
+        - _Desktop_
+        - _Downloads_
+        - _bradgarropy_
+        - _iCloud Drive_
+        - _Shared_
+        - _Hard Disks_
+        - _External Disks_
+    - Disable everything else
+- Elgato Control Center > Preferences > Startup
+    - Check _Open automatically on Log In_
+- Elgato Stream Deck > Preferences > Plugins
+    - [Apple Music][apple-music-plugin]
+    - [Control Center][control-center-plugin]
+    - [OBS Studio][obs-studio-plugin]
+    - [Wave Link][wave-link-plugin]
+- Elgato Wave Link > Configure Wave Link
+    - Add _Elgato Wave XLR_ as audio input
+    - Install [DeeGate][deegate]
+    - Set noise gate to `36db`
 
 ![Finder][finder]
 
 ## 📥 install applications
 
--   [Arc][arc]
-    -   Sign in
-    -   Set as default browser
--   [Raycast][raycast]
-    -   [Replace Spotlight][raycast-hotkey]
--   [Discord][discord]
--   [Elgato Camera Hub][elgato]
--   [Elgato Control Center][elgato]
--   [Elgato Stream Deck][elgato]
--   [Elgato Wave Link][elgato]
--   [OBS][obs]
--   [vscode][vscode]
-    -   Update
-    -   Sign in with GitHub
-    -   [Install shell command][vscode-cli]
--   [iMovie][imovie]
--   [Postgres.app][postgres-app]
+- [Arc][arc]
+    - Sign in
+    - Set as default browser
+- [Raycast][raycast]
+    - [Replace Spotlight][raycast-hotkey]
+- [Discord][discord]
+- [Elgato Camera Hub][elgato]
+- [Elgato Control Center][elgato]
+- [Elgato Stream Deck][elgato]
+- [Elgato Wave Link][elgato]
+- [OBS][obs]
+- [vscode][vscode]
+    - Update
+    - Sign in with GitHub
+    - [Install shell command][vscode-cli]
+- [iMovie][imovie]
+- [Postgres.app][postgres-app]
 
 ## 🖋️ fonts
 
--   [Cascadia Code][cascadia-code]
+- [Cascadia Code][cascadia-code]
 
 ## 📦 development packages
 
--   [homebrew][homebrew]
--   [git][git]
--   [nvm][nvm]
--   [Node.js][node]
--   [GitHub CLI][github-cli]
--   [Netlify CLI][netlify-cli]
--   [Vercel CLI][vercel-cli]
+- [homebrew][homebrew]
+- [git][git]
+- [nvm][nvm]
+- [Node.js][node]
+- [GitHub CLI][github-cli]
+- [Netlify CLI][netlify-cli]
+- [Vercel CLI][vercel-cli]
 
 ```zsh
 # brew

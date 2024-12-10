@@ -9,11 +9,11 @@ To find a fully remote position in a smaller company where I can architect, lead
 
 ## Summary
 
--   14 years of engineering experience across 4 companies
--   Led multiple teams to build applications from scratch
--   Specialize in frontend development with React and TypeScript
--   Maintain many open source projects and repositories
--   Create videos, podcasts, and streams to educate others
+- 14 years of engineering experience across 4 companies
+- Led multiple teams to build applications from scratch
+- Specialize in frontend development with React and TypeScript
+- Maintain many open source projects and repositories
+- Create videos, podcasts, and streams to educate others
 
 ## Education
 
@@ -53,17 +53,17 @@ _August 2024 - Present_
 
 [_Link Modal Redesign_][link]
 
--   Led a team of two developers to implement testing infrastructure.
--   Built with Playwright and Jest for test libraries.
--   Drastically simplified test setup and mocking.
--   Created a Splunk dashboard for monitoring rollout health.
+- Led a team of two developers to implement testing infrastructure.
+- Built with Playwright and Jest for test libraries.
+- Drastically simplified test setup and mocking.
+- Created a Splunk dashboard for monitoring rollout health.
 
 [_Raycast Stripe Extension_][raycast-stripe]
 
--   Developed a command that automates filling out a Stripe checkout form.
--   Includes all possible Stripe test cards.
--   Saves over 5,000 developer hours per year.
--   Implemented with React, TypeScript, and the Raycast library.
+- Developed a command that automates filling out a Stripe checkout form.
+- Includes all possible Stripe test cards.
+- Saves over 5,000 developer hours per year.
+- Implemented with React, TypeScript, and the Raycast library.
 
 **Atlassian | Senior Software Engineer**
 
@@ -71,129 +71,129 @@ _October 2021 - August 2024_
 
 _Notion Importer OAuth Flow_
 
--   Designed and implemented a Notion OAuth integration for Confluence.
--   Drastically reduced the number of clicks for authentication.
--   Unblocked team for general availability release.
--   Used `postMessage` for cross window communication.
+- Designed and implemented a Notion OAuth integration for Confluence.
+- Drastically reduced the number of clicks for authentication.
+- Unblocked team for general availability release.
+- Used `postMessage` for cross window communication.
 
 _Confluence Observatory_
 
--   Application to generate SignalFX dashboards and monitor alerts for all Confluence services and APIs.
--   Built with Remix, Tailwind, Vitest, Mock Service Worker, Playwright.
--   Led and mentored a team of three developers to build the application.
--   Stored dashboard configuration in PostgreSQL and accessed with Prisma.
--   Generated dashboards with Terraform based on user configuration.
+- Application to generate SignalFX dashboards and monitor alerts for all Confluence services and APIs.
+- Built with Remix, Tailwind, Vitest, Mock Service Worker, Playwright.
+- Led and mentored a team of three developers to build the application.
+- Stored dashboard configuration in PostgreSQL and accessed with Prisma.
+- Generated dashboards with Terraform based on user configuration.
 
 _Confluence Task Dashboard_
 
--   Dashboard to monitor health and metrics of 330+ million daily asynchronous tasks that power Confluence.
--   Built with Remix, Tailwind, Vitest, Mock Service Worker, and Playwright.
--   Proposed and implemented the application architecture.
--   Led and mentored a team of two developers to build the application.
--   Wrote continuous integration with Bitbucket Pipelines and Spinnaker deploys.
--   Integrated the application with services like Sentry, SonarQube, Splunk, and Launch Darkly.
--   Leveraged the Atlassian component library for UI elements.
+- Dashboard to monitor health and metrics of 330+ million daily asynchronous tasks that power Confluence.
+- Built with Remix, Tailwind, Vitest, Mock Service Worker, and Playwright.
+- Proposed and implemented the application architecture.
+- Led and mentored a team of two developers to build the application.
+- Wrote continuous integration with Bitbucket Pipelines and Spinnaker deploys.
+- Integrated the application with services like Sentry, SonarQube, Splunk, and Launch Darkly.
+- Leveraged the Atlassian component library for UI elements.
 
 _Trello Developer CLI_
 
--   Standardized and extensible CLI tool across all Trello teams.
--   Built with Node, TypeScript, Commander, and esbuild.
--   Integrated analytics and error reporting to track developer productivity.
--   Compiled discovered commands on the fly with `esbuild`.
+- Standardized and extensible CLI tool across all Trello teams.
+- Built with Node, TypeScript, Commander, and esbuild.
+- Integrated analytics and error reporting to track developer productivity.
+- Compiled discovered commands on the fly with `esbuild`.
 
 _Trello Web Platform_
 
--   Deployed and monitored production releases to ensure incident free deployments.
--   Created code generators for components, tests, stories, and packages.
--   Implemented custom `eslint` rules to enforce best practices.
--   Majorly contributed to converting JavaScript to TypeScript.
--   Wrote documentation and guides for frontend contributors.
+- Deployed and monitored production releases to ensure incident free deployments.
+- Created code generators for components, tests, stories, and packages.
+- Implemented custom `eslint` rules to enforce best practices.
+- Majorly contributed to converting JavaScript to TypeScript.
+- Wrote documentation and guides for frontend contributors.
 
 **Adobe | Senior Frontend Developer**  
 _July 2020 - October 2021_
 
 _Magento Storefront Eventing Platform_
 
--   Platform which leverages a common data layer to collect storefront events.
--   Led the effort to refactor storefront event gathering to an open source implementation.
--   Collaborated with frontend, backend, core, and data engineers to architect the solution.
--   Created two open source libraries.
-    -   [Magento Storefront Events SDK][events-sdk]
-    -   [Magento Storefront Event Collector][event-collector]
--   Solution works across monolithic, PWA, and headless storefronts.
+- Platform which leverages a common data layer to collect storefront events.
+- Led the effort to refactor storefront event gathering to an open source implementation.
+- Collaborated with frontend, backend, core, and data engineers to architect the solution.
+- Created two open source libraries.
+    - [Magento Storefront Events SDK][events-sdk]
+    - [Magento Storefront Event Collector][event-collector]
+- Solution works across monolithic, PWA, and headless storefronts.
 
 [_Magento Live Search_][search]
 
--   Lead frontend developer, joined just after proof of concept was started.
--   Made React storefront UI components to display results in the search bar and on the search results page.
--   Built a React admin UI for configuring search facets and results.
--   Created a Magento extension to load the storefront and admin UI.
--   Implemented testing and continuous integration and deployment for all projects.
+- Lead frontend developer, joined just after proof of concept was started.
+- Made React storefront UI components to display results in the search bar and on the search results page.
+- Built a React admin UI for configuring search facets and results.
+- Created a Magento extension to load the storefront and admin UI.
+- Implemented testing and continuous integration and deployment for all projects.
 
 **Adobe | Frontend Developer**  
 _April 2019 - July 2020_
 
 [_Magento Product Recommendations_][prex]
 
--   Lead frontend developer from first proof of concept to release.
--   Created a Chrome extension to test initial feasibility.
--   Implemented a [JavaScript SDK][recommendations-js-sdk] for the backend API.
--   Built a React admin UI for configuring recommendations.
--   Created shopper event tracking mechanism to track recommendations performance.
--   Made a Magento extension to load the admin UI.
--   Implemented testing and continuous integration and deployment for all projects.
--   Communicated directly with customers to help with onboarding and bugs during early access program.
+- Lead frontend developer from first proof of concept to release.
+- Created a Chrome extension to test initial feasibility.
+- Implemented a [JavaScript SDK][recommendations-js-sdk] for the backend API.
+- Built a React admin UI for configuring recommendations.
+- Created shopper event tracking mechanism to track recommendations performance.
+- Made a Magento extension to load the admin UI.
+- Implemented testing and continuous integration and deployment for all projects.
+- Communicated directly with customers to help with onboarding and bugs during early access program.
 
 _Leadership_
 
--   Led and spoke at the Adobe Frontend Guild.
--   Mentored two junior developers on a bi-weekly basis.
--   Ran team meetings (standup, retrospectives, demos).
--   Led a Hackathon team to federate our GraphQL APIs.
+- Led and spoke at the Adobe Frontend Guild.
+- Mentored two junior developers on a bi-weekly basis.
+- Ran team meetings (standup, retrospectives, demos).
+- Led a Hackathon team to federate our GraphQL APIs.
 
 **Dell | Server Software Release Engineer**  
 _February 2014 - April 2019_
 
 _Build Verification Test (BVT) Lead_
 
--   Guided the firmware development organization on automated testing best practices.
--   Integrated testing into the continuous integration workflow.
--   Enforced buildly and nightly testing on all releases.
--   Led a team of five contractors to test more in depth issues.
--   Weekly interlocks on automated testing status with developers.
--   Managed the entire stack supporting development testing.
+- Guided the firmware development organization on automated testing best practices.
+- Integrated testing into the continuous integration workflow.
+- Enforced buildly and nightly testing on all releases.
+- Led a team of five contractors to test more in depth issues.
+- Weekly interlocks on automated testing status with developers.
+- Managed the entire stack supporting development testing.
 
 _Modular Automated Test Framework (MATF)_
 
--   Python test framework distributed used by the server firmware development teams.
--   Supported four products, over 300 developers, and over 50 product releases.
--   Developers contributed over 20,000 test cases.
--   Created libraries for all supported platforms to update, restart, gather logs, etc.
--   Gave knowledge sharing talks on test case development and tool usage.
--   Enabled performance testing, code coverage, stress testing, unit testing, and security audits.
+- Python test framework distributed used by the server firmware development teams.
+- Supported four products, over 300 developers, and over 50 product releases.
+- Developers contributed over 20,000 test cases.
+- Created libraries for all supported platforms to update, restart, gather logs, etc.
+- Gave knowledge sharing talks on test case development and tool usage.
+- Enabled performance testing, code coverage, stress testing, unit testing, and security audits.
 
 _Generic Resource Manager (GRM)_
 
--   Web application, Python CLI, and Python library to manage and reserve hardware.
--   React front end with Node and Express backend hooked up to MongoDB.
--   Exposed an authenticated REST API.
--   Built authentication that integrated with company LDAP, implemented with JSON Web Tokens.
--   Hooked into continuous integration process to reserve test hardware from MATF.
--   Tracks all requests, checkins, checkouts, and resources.
+- Web application, Python CLI, and Python library to manage and reserve hardware.
+- React front end with Node and Express backend hooked up to MongoDB.
+- Exposed an authenticated REST API.
+- Built authentication that integrated with company LDAP, implemented with JSON Web Tokens.
+- Hooked into continuous integration process to reserve test hardware from MATF.
+- Tracks all requests, checkins, checkouts, and resources.
 
 _Topic Status_
 
--   Web application to view status of code commits in the continuous integration process.
--   Scaled to twelve concurrent releases.
--   Pulled code commit data from MySQL database.
--   Built with vanilla JavaScript and Bulma CSS.
--   Completely searchable, with links to each commit and button to contact the author.
+- Web application to view status of code commits in the continuous integration process.
+- Scaled to twelve concurrent releases.
+- Pulled code commit data from MySQL database.
+- Built with vanilla JavaScript and Bulma CSS.
+- Completely searchable, with links to each commit and button to contact the author.
 
 ## YouTube
 
--   Over 140 videos and 1,500 subscribers on [YouTube][youtube]
--   Published tutorial series on [Remix][remix-tutorial], [Webpack][webpack-tutorial], [Firebase][firebase-tutorial], [Plop][plop-tutorial], and [NPM Packages][npm-tutorial]
--   Created three [Dev Hints][dev-hints] videos for [Cloudinary][cloudinary]
+- Over 140 videos and 1,500 subscribers on [YouTube][youtube]
+- Published tutorial series on [Remix][remix-tutorial], [Webpack][webpack-tutorial], [Firebase][firebase-tutorial], [Plop][plop-tutorial], and [NPM Packages][npm-tutorial]
+- Created three [Dev Hints][dev-hints] videos for [Cloudinary][cloudinary]
 
 ## Podcasts
 
@@ -218,52 +218,52 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 
 [🏡 bradgarropy.com][bg]
 
--   Portfolio and blog with embedded CMS.
--   Sourced data from YouTube and an embedded CMS.
--   Developed with TypeScript, React, Remix and Tailwind, hosted on Vercel.
+- Portfolio and blog with embedded CMS.
+- Sourced data from YouTube and an embedded CMS.
+- Developed with TypeScript, React, Remix and Tailwind, hosted on Vercel.
 
 [🤠 daily texas country][dtxc]
 
--   Texas country music lifestyle website.
--   Sourced data from Spotify, YouTube, and an embedded CMS.
--   Email signup through ConvertKit.
--   Developed with Gatsby and React, hosted on Netlify.
+- Texas country music lifestyle website.
+- Sourced data from Spotify, YouTube, and an embedded CMS.
+- Email signup through ConvertKit.
+- Developed with Gatsby and React, hosted on Netlify.
 
 [⏱ murphy][murphy]
 
--   Specialized CrossFit Murph timer.
--   Scales and saves workouts.
--   Built with Svelte, Tailwind CSS, FaunaDB, and Netlify.
--   Released on the [Google Play Store][murphy-app].
+- Specialized CrossFit Murph timer.
+- Scales and saves workouts.
+- Built with Svelte, Tailwind CSS, FaunaDB, and Netlify.
+- Released on the [Google Play Store][murphy-app].
 
 ### Packages / Extensions / Bots
 
 [⏳ use-countdown][use-countdown]
 
--   React hook countdown timer.
--   Written in TypeScript.
--   Powers my Twitch starting soon page.
--   Over 101,000 downloads!
+- React hook countdown timer.
+- Written in TypeScript.
+- Powers my Twitch starting soon page.
+- Over 101,000 downloads!
 
 [🤖 bg codes twitch bot][twitch-bot]
 
--   Twitch bot that responds to chat commands and offers redemptions.
--   Integrates with the Hue SDK to control lights.
--   Modifies the vscode theme based on chat commands.
+- Twitch bot that responds to chat commands and offers redemptions.
+- Integrates with the Hue SDK to control lights.
+- Modifies the vscode theme based on chat commands.
 
 [👨🏼‍🔬 labman][labman]
 
--   Command line tool for managing issue labels across GitHub repositories.
--   Built with JavaScript and Node.js.
--   Integrated into the offical GitHub CLI in [v2.9.0][github-cli].
--   Over 800 downloads!
+- Command line tool for managing issue labels across GitHub repositories.
+- Built with JavaScript and Node.js.
+- Integrated into the offical GitHub CLI in [v2.9.0][github-cli].
+- Over 800 downloads!
 
 [🃏 business-card][business-card]
 
--   Digital business card.
--   Run `npx bradgarropy` to see for yourself.
--   Interactive CLI to help users create their own business card.
--   Over 1,100 downloads!
+- Digital business card.
+- Run `npx bradgarropy` to see for yourself.
+- Interactive CLI to help users create their own business card.
+- Over 1,100 downloads!
 
 ## Platforms
 

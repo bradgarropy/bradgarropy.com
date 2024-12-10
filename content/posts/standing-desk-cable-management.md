@@ -12,11 +12,11 @@ During the midst of COVID while I was working from home, I decided to purchase a
 
 I had a few goals in mind when I started this project.
 
--   No visible wires
--   Minimize outgoing wires
--   Desk mounted peripherals
--   No wires touching my feet or legs while sitting
--   Usable in both the sitting and standing position
+- No visible wires
+- Minimize outgoing wires
+- Desk mounted peripherals
+- No wires touching my feet or legs while sitting
+- Usable in both the sitting and standing position
 
 With so many power cords and USB cables, I needed some special hardware, plenty of zip ties, and tons of patience to get it done.
 

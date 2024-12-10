@@ -64,11 +64,11 @@ Overall it was a [net negative PR][pr], as I removed the need for the `<ThemePro
 
 In my opinion, transitioning from a `styled-components` theme to `css` custom properties has many benefits.
 
--   Runtime access to variables
--   Improved style readability
--   No rendering overhead
--   Reduced bundle size
--   Simpler test setup
+- Runtime access to variables
+- Improved style readability
+- No rendering overhead
+- Reduced bundle size
+- Simpler test setup
 
 I'm considering dropping CSS-in-JS completely now that vanilla `css` offers variables and modules, as that was really the only reason I chose `styled-components` in the first place.
 

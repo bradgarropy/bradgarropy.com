@@ -26,10 +26,10 @@ I also decided to use a different library for date manipulation. Usually I would
 
 While I'm happy with the basic functionality at this point and time, there's lots that could be done.
 
--   [#6 remove calculate button][issue-6]
--   [#11 duration in months or years][issue-11]
--   [#12 additional payments][issue-12]
--   [#13 add graphs][issue-13]
+- [#6 remove calculate button][issue-6]
+- [#11 duration in months or years][issue-11]
+- [#12 additional payments][issue-12]
+- [#13 add graphs][issue-13]
 
 If you've got any other ideas you should [create an issue][issues]!
 

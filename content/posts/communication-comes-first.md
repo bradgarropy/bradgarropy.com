@@ -12,10 +12,10 @@ https://twitter.com/bradgarropy/status/1331482232121389058
 
 Folks like [Wes Bos][wes-bos], [Jason Lengstorf][jason-lengstorf], [Ahmad Awais][ahmad-awais], and [Morgan Richardson][morgan-richardson] all reached out with feedback, comments, and/or concerns. The messages covered a variety of topics.
 
--   Asking creator permission
--   Who should get free shirts
--   Color theme modifications
--   Royalty requests
+- Asking creator permission
+- Who should get free shirts
+- Color theme modifications
+- Royalty requests
 
 After getting these messages, I took a step back and spoke with all of the creators individually about the use of their theme, royalty expectations, permissions, and communication in general. All of the conversations proved to be a great learning experience for me, no matter the outcome.
 

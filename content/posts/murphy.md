@@ -14,11 +14,11 @@ Recently my buddy [Todd Austin][todd] challenged me to do half a [murph][murph] 
 
 I began building [MURPHY][store] as a learning experience, using a completely new technology stack. While new frameworks and tools are fun to explore, they definitely slowed me down in the beginning. Here's what I went with.
 
--   [Svelte][svelte]
--   [Tailwind][tailwind]
--   [FaunaDB][fauna]
--   [Netlify][netlify]
--   [Netlify Identity][identity]
+- [Svelte][svelte]
+- [Tailwind][tailwind]
+- [FaunaDB][fauna]
+- [Netlify][netlify]
+- [Netlify Identity][identity]
 
 I found [Svelte][svelte] very easy to work with, and animations were a breeze. [Tailwind][tailwind] was also very easy, except for the lack of `grid` properties. Lucky for me [v1.8][grid] released and added the missing properties. I still felt a bit weird every time I had to edit the `tailwind.config.js` file just to use a custom `grid` layout. [FaunaDB][fauna] is amazing, as was their developer relations team who provided me tons of help (shoutout [@databrecht][databrecht]). After getting over the `FQL` learning curve, I felt like I had super powers.
 

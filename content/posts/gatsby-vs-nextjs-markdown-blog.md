@@ -35,11 +35,11 @@ I much preferred Gatsby's slow start for a fast runtime, as I usually only start
 
 Markdown parsing and transformation is key when creating a blog. I usually rely on Gatsby's [plugin ecosystem][gatsby-plugins] to handle all that for me, but with Next.js I was on my own. I had to become an expert at [remark][remark] and its plugins in order to get the transformations I wanted. I even had to [fix a bug][bug] in one of the libraries!
 
--   GitHub Flavored Markdown
--   Linked headings
--   Media embeds
--   Code highlighting
--   External links open in new tab
+- GitHub Flavored Markdown
+- Linked headings
+- Media embeds
+- Code highlighting
+- External links open in new tab
 
 In order to accomplish this I dug deep into the list of [remark plugins][remark-plugins], and leveraged a few of them to create my own `parseMarkdown` function. Even though it's only twenty lines of code, this simple function took a lot of investment to create, and it's still not perfect.
 

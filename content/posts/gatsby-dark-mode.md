@@ -94,8 +94,8 @@ When the `theme` changes, a `useEffect` runs and updates the custom properties f
 
 While this dark modes works very well, and persists through page navigation, it's far from complete. It still lacks the following features:
 
--   initialize the color theme to match system preferences
--   persist the color theme across page reloads
+- initialize the color theme to match system preferences
+- persist the color theme across page reloads
 
 [Josh Comeau][josh-comeau] wrote a great article about the [perfect dark mode][perfect-dark-mode], which I'll use as a reference to implement these last two features.
 

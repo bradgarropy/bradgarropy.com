@@ -8,10 +8,10 @@ tags: ["next"]
 
 The dark mode on my website was always pretty half baked, so while I was [converting to Tailwind][tailwind-migration], I spent some time improving it. There were a few major requirements I wanted to implement.
 
--   The color theme can be modified by the user.
--   The color theme is persisted across reloads.
--   The color theme is persisted across page transitions.
--   There is no light mode flicker.
+- The color theme can be modified by the user.
+- The color theme is persisted across reloads.
+- The color theme is persisted across page transitions.
+- There is no light mode flicker.
 
 The rest of the post will go into more detail explaining how I accomplished this. You can also reference the [pull request][pull-request] for the full implementation.
 

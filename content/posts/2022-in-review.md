@@ -26,15 +26,15 @@ After researching a few of my own ideas and hitting brick walls, I lost interest
 
 I had planned to read six books this year, one every other month. But I went above and beyond this goal and wound up reading nine books this year!
 
--   [Atomic Habits][atomic-habits]
--   [Getting Things Done][getting-things-done]
--   [Deep Work][deep-work]
--   [Digital Minimalism][digital-minimalism]
--   [Steal Like An Artist][steal-like-an-artist]
--   [Show Your Work][show-your-work]
--   [Keep Going][keep-going]
--   [Hell Yeah Or No][hell-yeah-or-no]
--   [The Subtle Art Of Not Giving A Fuck][not-giving-a-fuck]
+- [Atomic Habits][atomic-habits]
+- [Getting Things Done][getting-things-done]
+- [Deep Work][deep-work]
+- [Digital Minimalism][digital-minimalism]
+- [Steal Like An Artist][steal-like-an-artist]
+- [Show Your Work][show-your-work]
+- [Keep Going][keep-going]
+- [Hell Yeah Or No][hell-yeah-or-no]
+- [The Subtle Art Of Not Giving A Fuck][not-giving-a-fuck]
 
 Not only that, I got super into it and ordered five more books that I'm planning to get through next year. But I did feel like the every other month schedule was a little constricting, so I'll be more free with starting new books.
 
@@ -54,11 +54,11 @@ Although I only produced three videos in 2022, my channel crossed 1000 subscribe
 
 I set a goal to reach $1000 of side income, and completely smashed it by earning $3400.40 last year! I earned money from multiple different sources such as:
 
--   [consulting][hire-me]
--   [t-shirt sales][cotton-bureau]
--   [github sponsors][github-sponsors]
--   [live streaming][twitch]
--   [affiliate links][level-up-tutorials]
+- [consulting][hire-me]
+- [t-shirt sales][cotton-bureau]
+- [github sponsors][github-sponsors]
+- [live streaming][twitch]
+- [affiliate links][level-up-tutorials]
 
 Creating multiple streams of side income will continue to be a major goal of mine in 2023, and I'd like to see the number of income streams and the total income grow year over year.
 

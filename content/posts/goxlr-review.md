@@ -24,17 +24,17 @@ I was able to uninstall Voicemeeter, its macro pad for keyboard shortcuts, and a
 
 > **Output**
 >
-> -   System
-> -   Chat
-> -   Music
-> -   Game
-> -   Sample
+> - System
+> - Chat
+> - Music
+> - Game
+> - Sample
 >
 > **Input**
 >
-> -   Broadcast Stream Mix
-> -   Chat Mic
-> -   Sample
+> - Broadcast Stream Mix
+> - Chat Mic
+> - Sample
 
 This is amazing because now you can assign the different outputs to the GoXLR faders, and use the routing table to determine which inputs go to which outputs. And that's just the beginning, you can customize literally everything on this machine, like the LEDs, faders, mute buttons, and cough button. It even supports multiple banks of samples and voicemods.
 

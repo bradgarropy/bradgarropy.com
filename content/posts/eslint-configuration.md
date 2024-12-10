@@ -12,9 +12,9 @@ Previously I kept my [ESLint][eslint] configuration in my [dotfiles][dotfiles] r
 
 Beyond setting all of the basic rules, I've also included a few plugins in my configuration.
 
--   `eslint-plugin-jsx-a11y`
--   `eslint-plugin-react`
--   `eslint-plugin-react-hooks`
+- `eslint-plugin-jsx-a11y`
+- `eslint-plugin-react`
+- `eslint-plugin-react-hooks`
 
 As I'm primarily a [React][react] developer, these plugins help me with basic linting and the new rules of [hooks][hooks]. Additionally, the `jsx-a11y` plugin nags me to write more accessible HTML.
 
