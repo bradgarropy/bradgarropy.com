@@ -192,6 +192,7 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
     -   Sign in with GitHub
     -   [Install shell command][vscode-cli]
 -   [iMovie][imovie]
+-   [Postgres.app][postgres-app]
 
 ## 🖋️ fonts
 
@@ -250,6 +251,7 @@ npm install --global vercel
 [finder]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/finder.png
 [cascadia-code]: https://github.com/microsoft/cascadia-code
 [imovie]: https://apps.apple.com/us/app/imovie/id408981434
+[postgres-app]: https://postgresapp.com
 [language-and-region]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/language-and-region.png
 [sound]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/sound.png
 [apple-music-plugin]: https://marketplace.elgato.com/product/apple-music-719b94df-ee43-47b3-a7c0-a3ea176ebbec
