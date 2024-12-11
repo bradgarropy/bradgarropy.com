@@ -89,6 +89,8 @@
         "@bradgarropy/plop-generator-react-hook": "^1.1.1",
         "@bradgarropy/rehype-cloudinary-image-size": "^1.0.1",
         "@remix-run/dev": "^2.5.1",
+        "@remix-run/fs-routes": "^2.15.1",
+        "@remix-run/route-config": "^2.15.1",
         "@remix-run/serve": "^2.5.1",
         "@rollup/pluginutils": "^5.1.0",
         "@tailwindcss/typography": "^0.5.9",
