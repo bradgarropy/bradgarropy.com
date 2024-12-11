@@ -1,5 +1,4 @@
 import type {MetaFunction} from "@remix-run/node"
-import {json} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 
 import Home from "~/components/Home"
@@ -14,11 +13,11 @@ export const loader = async () => {
     const latestVideos = await getLatestVideos(2)
     const featuredProjects = await getFeaturedProjects()
 
-    return json({
+    return {
         latestPosts,
         latestVideos,
         featuredProjects,
-    })
+    }
 }
 
 export const meta: MetaFunction = () => {

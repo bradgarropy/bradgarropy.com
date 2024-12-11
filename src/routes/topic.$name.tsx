@@ -1,5 +1,4 @@
 import type {LoaderFunctionArgs, MetaFunction} from "@remix-run/node"
-import {json} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 
 import Layout from "~/components/Layout"
@@ -14,7 +13,7 @@ export const loader = async ({params}: LoaderFunctionArgs) => {
     const topic = getTopic(name)
     const posts = getPostsByTopic(topic.name)
 
-    return json({topic, posts})
+    return {topic, posts}
 }
 
 export const meta: MetaFunction<typeof loader> = ({data}) => {

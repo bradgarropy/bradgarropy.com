@@ -1,5 +1,4 @@
 import type {MetaFunction} from "@remix-run/node"
-import {json} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 
 import Layout from "~/components/Layout"
@@ -9,7 +8,7 @@ import {getMeta} from "~/utils/meta"
 
 export const loader = async () => {
     const uses = await getMarkdownBySlug("uses")
-    return json({uses})
+    return {uses}
 }
 
 export const meta: MetaFunction = () => {

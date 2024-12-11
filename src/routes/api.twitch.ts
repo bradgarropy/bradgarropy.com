@@ -1,5 +1,5 @@
 import {http} from "@bradgarropy/http"
-import {json} from "@remix-run/node"
+import {data} from "@remix-run/node"
 
 type ChannelStatus = {
     isLive: boolean
@@ -53,11 +53,11 @@ export const loader = async () => {
     )
 
     if (!channel) {
-        return json("Not found", {status: 404})
+        return data("Not found", {status: 404})
     }
 
     const channelStatus: ChannelStatus = {isLive: channel.is_live}
-    return json(channelStatus)
+    return data(channelStatus)
 }
 
 export type {ChannelStatus}
