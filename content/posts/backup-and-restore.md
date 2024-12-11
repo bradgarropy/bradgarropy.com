@@ -10,21 +10,21 @@ When transitioning between computers, I always backup settings so that I can res
 
 ## 🎤 wave link
 
--   Click the Wave Link menu bar item.
--   Select the _Backup and Restore..._ option.
--   Click _Save Current Mixer Settings..._.
--   Right click the manual backup and select _Export_.
--   Save the file in iCloud Drive.
+- Click the Wave Link menu bar item.
+- Select the _Backup and Restore..._ option.
+- Click _Save Current Mixer Settings..._.
+- Right click the manual backup and select _Export_.
+- Save the file in iCloud Drive.
 
 ![Wave Link][wave-link]
 
 ## 🎛️ stream deck
 
--   Click the Stream Deck menu bar item.
--   Select the _Preferences..._ option.
--   Open the _Profiles_ tab.
--   Click the arrow and select _Backup All_ then click _Create Backup..._.
--   Save the file in iCloud Drive.
+- Click the Stream Deck menu bar item.
+- Select the _Preferences..._ option.
+- Open the _Profiles_ tab.
+- Click the arrow and select _Backup All_ then click _Create Backup..._.
+- Save the file in iCloud Drive.
 
 ![Stream Deck][stream-deck]
 
@@ -34,41 +34,41 @@ When transitioning between computers, I always backup settings so that I can res
 
 Perform the following steps for each profile.
 
--   Open the _Profile_ menu then click _Export_.
--   Save the file in iCloud Drive.
+- Open the _Profile_ menu then click _Export_.
+- Save the file in iCloud Drive.
 
 ### scenes
 
 Perform the following steps for each scene collection.
 
--   Open the _Scene Collection_ menu then click _Export_.
--   Save the file in iCloud Drive.
+- Open the _Scene Collection_ menu then click _Export_.
+- Save the file in iCloud Drive.
 
 ## 🟥 raycast
 
--   Click the Raycast menu bar item.
--   Select the _Settings..._ option.
--   Under the _Advanced_ tab click _Export_.
--   Save the file in iCloud Drive.
+- Click the Raycast menu bar item.
+- Select the _Settings..._ option.
+- Under the _Advanced_ tab click _Export_.
+- Save the file in iCloud Drive.
 
 ![Raycast][raycast]
 
 ## 🎬 imovie
 
--   Open _Finder_.
--   Navigate to _Macintosh HD / Users / bgarropy / Movies_.
--   Copy the _iMovie Library.imovielibrary_ file.
--   Save the file in iCloud Drive.
+- Open _Finder_.
+- Navigate to _Macintosh HD / Users / bgarropy / Movies_.
+- Copy the _iMovie Library.imovielibrary_ file.
+- Save the file in iCloud Drive.
 
 ![iMovie][imovie]
 
 ## 🛜 arc
 
--   Click on _Arc_ and then _Settings..._.
--   Go to the _Profiles_ tab.
--   Click _Passwords_.
--   Click _Settings_.
--   Click _Download file_.
+- Click on _Arc_ and then _Settings..._.
+- Go to the _Profiles_ tab.
+- Click _Passwords_.
+- Click _Settings_.
+- Click _Download file_.
 
 ![Arc][arc]
 

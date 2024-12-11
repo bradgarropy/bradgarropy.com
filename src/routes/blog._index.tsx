@@ -1,5 +1,4 @@
 import type {MetaFunction} from "@remix-run/node"
-import {json} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 import {useState} from "react"
 
@@ -12,7 +11,7 @@ import {getPosts} from "~/utils/posts"
 
 export const loader = async () => {
     const allPosts = getPosts()
-    return json({allPosts})
+    return {allPosts}
 }
 
 export const meta: MetaFunction = () => {

@@ -61,13 +61,13 @@ When using local Markdown to store blog posts, it's up to your application to tr
 
 My Markdown parsing solution entails parsing Markdown to HTML on the server (`transformMarkdown`), and then parsing HTML to React on the client (`useMarkdown`). They each handle different parts of the transformation.
 
--   [Server][transform-markdown]
-    -   Embedding videos, tweets, streams, etc.
-    -   Syntax highlighting
-    -   Linking to external sites
--   [Client][use-markdown]
-    -   Next `<Link>` components
-    -   Next `<Image>` components
+- [Server][transform-markdown]
+    - Embedding videos, tweets, streams, etc.
+    - Syntax highlighting
+    - Linking to external sites
+- [Client][use-markdown]
+    - Next `<Link>` components
+    - Next `<Image>` components
 
 ## 🟦 typescript support
 

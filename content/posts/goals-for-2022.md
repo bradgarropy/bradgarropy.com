@@ -16,10 +16,10 @@ My wife and I have started having monthly _marriage checkups_. It's a dedicated 
 
 A second goal I have is to create new memorable moments for my wife and I. It was so easy to do without kids, but now we have to be more intentional about when and how we have fun together. So we locked down two different babysitters for nights that we want to go out, and for nights that we stay in I bought a ton of games for us to try.
 
--   [Exploding Kittens][exploding-kittens]
--   [A Little Wordy][a-little-wordy]
--   [Cards Against Humanity][cards-against-humanity]
--   [Yahtzee][yahtzee]
+- [Exploding Kittens][exploding-kittens]
+- [A Little Wordy][a-little-wordy]
+- [Cards Against Humanity][cards-against-humanity]
+- [Yahtzee][yahtzee]
 
 I'm hoping that more interesting date nights and playing games together will lead to more fun and memorable moments together.
 
@@ -35,12 +35,12 @@ This goal is a big first step towards a sustainable side hustle. I have a few id
 
 While I normally preach creation over consumption, I do think reading books is a very productive form of consumpion. I've been looking to improve on productivity, focus, and organization, so I picked up the following books.
 
--   [Atomic Habits][atomic-habits]
--   [Getting Things Done][getting-things-done]
--   [Deep Work][deep-work]
--   [Digital Minimalism][digital-minimalism]
--   [Hell Yeah Or No][hell-yeah-or-no]
--   [The Subtle Art Of Not Giving A Fuck][not-giving-a-fuck]
+- [Atomic Habits][atomic-habits]
+- [Getting Things Done][getting-things-done]
+- [Deep Work][deep-work]
+- [Digital Minimalism][digital-minimalism]
+- [Hell Yeah Or No][hell-yeah-or-no]
+- [The Subtle Art Of Not Giving A Fuck][not-giving-a-fuck]
 
 My goal is to get through all of them in 2022. One book every other month seems totally doable!
 

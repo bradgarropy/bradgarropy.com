@@ -8,9 +8,9 @@ tags: ["jest"]
 
 In [jest][jest], there are three different ways to clean up a [mock function][mock-function].
 
--   [mockClear][mock-clear]
--   [mockReset][mock-reset]
--   [mockRestore][mock-restore]
+- [mockClear][mock-clear]
+- [mockReset][mock-reset]
+- [mockRestore][mock-restore]
 
 Each different method cleans up a different subset of functionality, with `mockClear` being the least destructive and `mockReset` being the most destructive.
 

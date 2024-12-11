@@ -1,5 +1,4 @@
 import type {LinksFunction, LoaderFunctionArgs} from "@remix-run/node"
-import {json} from "@remix-run/node"
 import type {MetaFunction} from "@remix-run/react"
 import {
     Links,
@@ -25,7 +24,7 @@ export const loader = async ({request}: LoaderFunctionArgs) => {
     const measurementId = process.env.GOOGLE_ANALYTICS_MEASUREMENT_ID || ""
 
     const theme = await getTheme(request)
-    return json({measurementId, theme})
+    return {measurementId, theme}
 }
 
 export const meta: MetaFunction = () => {

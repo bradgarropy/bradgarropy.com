@@ -8,10 +8,10 @@ tags: ["eslint"]
 
 I feel like I revamp my [eslint][eslint] configuration almost annually nowadays. This year the focus was on modularizing the configuration to support different technologies. Here's what I currently support.
 
--   [React][npm-eslint-react]
--   [Svelte][npm-eslint-svelte]
--   [JavaScript][npm-eslint-base]
--   [Typescript][npm-eslint-typescript]
+- [React][npm-eslint-react]
+- [Svelte][npm-eslint-svelte]
+- [JavaScript][npm-eslint-base]
+- [Typescript][npm-eslint-typescript]
 
 The configurations are intended to extend one another, starting from the base [JavaScript][npm-eslint-base] configuration. It can be installed like this.
 

@@ -16,14 +16,14 @@ https://youtu.be/ZL4NA9mXns8
 
 [Adobe Lunch][adobe-lunch] is the first side project that I really drove to the finish line. I took a [Jamstack][jamstack] approach to building the site, so I chose technologies that I'm very comfortable with.
 
--   [Gatsby][gatsby]
--   [React][react]
--   [styled-components][styled-components]
--   [Google Maps][google-maps]
--   [Foursquare][foursquare]
--   [Airtable][airtable]
--   [Netlify][netlify]
--   [Google Cloud Scheduler][scheduler]
+- [Gatsby][gatsby]
+- [React][react]
+- [styled-components][styled-components]
+- [Google Maps][google-maps]
+- [Foursquare][foursquare]
+- [Airtable][airtable]
+- [Netlify][netlify]
+- [Google Cloud Scheduler][scheduler]
 
 I focused on speed and simplicity for the first release to get user feedback as early as possible. This feedback will guide the project road map. I already have plenty of ideas of my own which I'll share in another post soon.
 

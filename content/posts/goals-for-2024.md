@@ -42,13 +42,13 @@ Ultimately I'd like this strategy to include where I save my money, like a 401k,
 
 Although I think my side income from last year will be hard to beat, I'd like to try. That means my new goal is anything over `$5,172.15`. The income streams remain the same.
 
--   [consulting][hire-me]
--   [t-shirt sales][shirts]
--   saas application (tbd)
--   [youtube monetization][youtube]
--   [github sponsors][sponsors]
--   [twitch streaming][twitch]
--   [affiliate links][uses]
+- [consulting][hire-me]
+- [t-shirt sales][shirts]
+- saas application (tbd)
+- [youtube monetization][youtube]
+- [github sponsors][sponsors]
+- [twitch streaming][twitch]
+- [affiliate links][uses]
 
 I'm already working with [Cloudinary][cloudinary] on some video content, so hopefully that amounts to more additional work throughout the year. As with last year, my biggest hurdles will be building a real SaaS application and getting monetized on [YouTube][youtube].
 
@@ -62,18 +62,18 @@ I've also been journaling a bit lately with Apple's new [Journal][journal] app. 
 
 After reading literally nothing last year, I want to set a very small goal of three books for this year. Here they are in order of my interest.
 
--   [No Rules Rules][no-rules]
--   [Shape Up][shape-up]
--   [Engineering Management For The Rest Of Us][eng-mgmt]
+- [No Rules Rules][no-rules]
+- [Shape Up][shape-up]
+- [Engineering Management For The Rest Of Us][eng-mgmt]
 
 ## 🎮 games
 
 I went hard on the [Nintendo Switch][switch] last year, it was so much fun gaming on that thing! Here's a few more games I want to explore this year. No hard requirements to finish them, but this is how I want to relax.
 
--   [Link's Awakening][link]
--   [Super Mario Wonder][wonder]
--   [Zelda: Tears of the Kingdom][totk]
--   [Hades][hades]
+- [Link's Awakening][link]
+- [Super Mario Wonder][wonder]
+- [Zelda: Tears of the Kingdom][totk]
+- [Hades][hades]
 
 ---
 

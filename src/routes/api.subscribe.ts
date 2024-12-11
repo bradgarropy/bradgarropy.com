@@ -1,6 +1,5 @@
 import {http} from "@bradgarropy/http"
 import type {ActionFunctionArgs} from "@remix-run/node"
-import {json} from "@remix-run/node"
 
 export const action = async ({request}: ActionFunctionArgs) => {
     const {email} = await request.json()
@@ -19,5 +18,5 @@ export const action = async ({request}: ActionFunctionArgs) => {
         },
     )
 
-    return json(subscriber)
+    return subscriber
 }

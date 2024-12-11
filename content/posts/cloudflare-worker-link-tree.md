@@ -176,9 +176,9 @@ Now is a good time to open a browser and check that `127.0.0.1:8787` is returnin
 
 Another powerful feature of Cloudflare Workers is the ability to modify a request or response as needed based on your application logic. In our case, we'll be using our worker to change the static HTML template in a few different ways.
 
--   Add a profile image
--   Include our name
--   Insert our links
+- Add a profile image
+- Include our name
+- Insert our links
 
 This can be accomplished using the [HTMLRewriter API][htmlrewriter]. Based on the template, we'll need four rewriters to handle modifying different HTML elements. The `HTMLRewriter` API maps a document query selector to a rewriter class which commits the necessary changes.
 

@@ -72,12 +72,12 @@ Not even a question, I kept my [Duolingo][duolingo] streak going strong! As of t
 
 I didn't read a single book this year, mostly because I felt a little burnt out from reading last year. I did, however, pick up a [Nintendo Switch OLED][switch] in May and got super sucked into gaming. I explored a bunch of different games, as it was my first time owning a Nintendo system.
 
--   [Mario Kart 8][mario-kart]
--   [Super Mario Wonder][super-mario]
--   [Super Smash Bros Ultimate][super-smash]
--   [Zelda: Tears of the Kingom][totk]
--   [It Takes Two][it-takes-two]
--   [Hades][hades]
+- [Mario Kart 8][mario-kart]
+- [Super Mario Wonder][super-mario]
+- [Super Smash Bros Ultimate][super-smash]
+- [Zelda: Tears of the Kingom][totk]
+- [It Takes Two][it-takes-two]
+- [Hades][hades]
 
 Mostly I just loved how flexible the Switch was. It could play my favorite indie games, or I could play with the kids. It worked beautifully on an airplane, or on the couch. Not to mention, all of the games felt so easy to pick up and play.
 

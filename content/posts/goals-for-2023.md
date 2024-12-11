@@ -12,8 +12,8 @@ After a very successful [2022][2022-in-review], I'm kicking off the new year wit
 
 My wife and I are starting off the year by reading two marriage books together. We normally don't read any of the same things, so we thought it would spark a lot of conversation to read books about marriage.
 
--   [The Seven Principles for Making Marriage Work][seven-principles]
--   [Eight Dates][eight-dates]
+- [The Seven Principles for Making Marriage Work][seven-principles]
+- [Eight Dates][eight-dates]
 
 We also want to try new things on our dates to make fun new memories together. From new restaurants like [Suerte][suerte], to fun experiences like [Electric Shuffle][electric-shuffle], we think trying something different together will bring us some excitement!
 
@@ -31,13 +31,13 @@ With all the chaos happening on [Twitter][twitter], it seems like personal blogs
 
 Last year I more than tripled my goal for side income! As I stated in my [2022 in review][2022-in-review] post, I want to see that number continue to climb year over year. So this year I'm setting my side income goal at $5000. I plan on reaching this goal by generating income from multiple streams.
 
--   [consulting][hire-me]
--   [t-shirt sales][cotton-bureau]
--   saas application (tbd)
--   [youtube monetization][youtube]
--   [github sponsors][github-sponsors]
--   [twitch streaming][twitch]
--   [affiliate links][level-up-tutorials]
+- [consulting][hire-me]
+- [t-shirt sales][cotton-bureau]
+- saas application (tbd)
+- [youtube monetization][youtube]
+- [github sponsors][github-sponsors]
+- [twitch streaming][twitch]
+- [affiliate links][level-up-tutorials]
 
 While some of these revenue sources are fairly reliable, others are sporadic, and some haven't even been created yet!
 
@@ -59,19 +59,19 @@ I started [Duolingo][duolingo] early last year and have become so much more comf
 
 Finally, I want to feel like it's okay to take breaks from hustling on side projects. I've got a few books waiting to be read this year, and while I'm not setting a goal to get through all of them, I'd like to finish a few.
 
--   [The Seven Principles for Making Marriage Work][seven-principles]
--   [Eight Dates][eight-dates]
--   [No Rules Rules][no-rules-rules]
--   [Shape Up][shape-up]
--   [Anything You Want][anything-you-want]
--   [The One Thing][the-one-thing]
--   [Eat That Frog][eat-that-frog]
+- [The Seven Principles for Making Marriage Work][seven-principles]
+- [Eight Dates][eight-dates]
+- [No Rules Rules][no-rules-rules]
+- [Shape Up][shape-up]
+- [Anything You Want][anything-you-want]
+- [The One Thing][the-one-thing]
+- [Eat That Frog][eat-that-frog]
 
 And I even want to feel like video games every now and then are okay. I finished a few last year, and I've got a couple I'm already looking forward to this year.
 
--   [Hades][hades]
--   [High On Life][high-on-life]
--   [Call of Duty: Modern Warfare II][cod]
+- [Hades][hades]
+- [High On Life][high-on-life]
+- [Call of Duty: Modern Warfare II][cod]
 
 So hopefully my goals for this year keep me entertained, connected, and funded while not burning me out along the way. What are your goals for 2023? Share them on [Twitter][twitter]!
 

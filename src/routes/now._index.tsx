@@ -1,5 +1,4 @@
 import type {MetaFunction} from "@remix-run/node"
-import {json} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 
 import Layout from "~/components/Layout"
@@ -12,7 +11,7 @@ export const loader = async () => {
     const newerNow = await getNewerNow(latestNow)
     const olderNow = await getOlderNow(latestNow)
 
-    return json({latestNow, newerNow, olderNow})
+    return {latestNow, newerNow, olderNow}
 }
 
 export const meta: MetaFunction = () => {

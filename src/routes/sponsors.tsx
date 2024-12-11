@@ -1,5 +1,4 @@
 import type {MetaFunction} from "@remix-run/node"
-import {json} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 
 import Layout from "~/components/Layout"
@@ -9,7 +8,7 @@ import {getSponsors} from "~/utils/sponsors"
 
 export const loader = async () => {
     const sponsors = await getSponsors()
-    return json({sponsors})
+    return {sponsors}
 }
 
 export const meta: MetaFunction = () => {

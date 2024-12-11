@@ -16,14 +16,14 @@ The site is statically generated, and sources the content from many different pl
 
 I used a few different pieces of [Jamstack][jamstack] and [serverless][serverless] technology to stitch the website together.
 
--   [Gatsby][gatsby]
--   [React][react]
--   [styled-components][styled-components]
--   [Netlify][netlify]
--   [Google Cloud Scheduler][gcp]
--   [Spotify][spotify]
--   [YouTube][youtube]
--   [ConvertKit][convertkit]
+- [Gatsby][gatsby]
+- [React][react]
+- [styled-components][styled-components]
+- [Netlify][netlify]
+- [Google Cloud Scheduler][gcp]
+- [Spotify][spotify]
+- [YouTube][youtube]
+- [ConvertKit][convertkit]
 
 So if you happen to like Texas country music, or want to know more about the tech I used to create this side project, [take a look][dtxc]!
 
