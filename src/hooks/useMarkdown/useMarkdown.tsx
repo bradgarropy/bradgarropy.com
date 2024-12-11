@@ -1,6 +1,6 @@
 import {Link} from "@remix-run/react"
-import type {ReactNode} from "react"
-import {createElement, Fragment} from "react"
+import type {JSX, ReactNode} from "react"
+import {Fragment, jsx, jsxs} from "react/jsx-runtime"
 import rehypeParse from "rehype-parse"
 import rehypeReact from "rehype-react"
 import {unified} from "unified"
@@ -10,11 +10,10 @@ import Heading from "~/components/Heading"
 const useMarkdown = (html: string) => {
     const processor = unified()
         .use(rehypeParse)
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
         .use(rehypeReact, {
-            createElement,
             Fragment,
+            jsx,
+            jsxs,
             components: {
                 html: ({children}: {children: ReactNode}) => children,
                 head: ({children}: {children: ReactNode}) => children,
