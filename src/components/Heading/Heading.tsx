@@ -10,9 +10,12 @@ type HeadingProps = {
 }
 
 const Heading: FC<HeadingProps> = ({level, id, children}) => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    const text = typeof children === "string" ? children : children[0]
+    if (!children) {
+        console.warn("A heading was rendered without any text.")
+        return null
+    }
+
+    const text = children.toString()
 
     const slug = id
         ? id

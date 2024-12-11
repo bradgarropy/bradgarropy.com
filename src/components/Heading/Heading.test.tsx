@@ -52,3 +52,8 @@ test("overrides id", () => {
 
     expect(screen.getByText("Heading one")).toHaveAttribute("id", "custom")
 })
+
+test("handles empy headings", () => {
+    render(<Heading level={1}>{null}</Heading>)
+    expect(screen.queryByRole("heading")).toBeNull()
+})
