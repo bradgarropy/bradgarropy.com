@@ -108,10 +108,7 @@ describe("transforms markdown", () => {
     test("embeds twitch", async () => {
         const html = await transformMarkdown("https://twitch.tv/bradgarropy")
 
-        expect(html).toEqual(
-            // eslint-disable-next-line quotes
-            expect.stringContaining("<iframe"),
-        )
+        expect(html).toEqual(expect.stringContaining("<iframe"))
 
         expect(html).toEqual(
             expect.stringContaining(
@@ -172,12 +169,7 @@ describe("transforms markdown", () => {
             ),
         )
 
-        expect(html).toEqual(
-            expect.stringContaining(
-                // eslint-disable-next-line quotes
-                "external link</a>",
-            ),
-        )
+        expect(html).toEqual(expect.stringContaining("external link</a>"))
 
         expect(html).toEqual(
             expect.stringContaining(
