@@ -63,6 +63,5 @@ test("transforms twitch clips", () => {
 
     const emptyHtml = twitchTransformer.getHTML("https://twitch.tv")
 
-    // eslint-disable-next-line quotes
     expect(emptyHtml).toEqual('<div class="twitch"></div>')
 })
