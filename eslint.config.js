@@ -3,6 +3,7 @@ import {fileURLToPath} from "node:url"
 
 import {includeIgnoreFile} from "@eslint/compat"
 import js from "@eslint/js"
+import vitest from "@vitest/eslint-plugin"
 import jsxA11y from "eslint-plugin-jsx-a11y"
 import react from "eslint-plugin-react"
 import reactHooks from "eslint-plugin-react-hooks"
@@ -35,6 +36,7 @@ const config = ts.config([
         plugins: {
             "simple-import-sort": simpleImportSort,
             "react-hooks": reactHooks,
+            "vitest": vitest,
         },
         settings: {
             react: {
@@ -50,6 +52,7 @@ const config = ts.config([
     {
         rules: {
             ...reactHooks.configs.recommended.rules,
+            ...vitest.configs.recommended.rules,
             "@typescript-eslint/consistent-type-imports": [
                 "error",
                 {
