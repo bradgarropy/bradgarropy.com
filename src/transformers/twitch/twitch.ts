@@ -17,7 +17,6 @@ const getHTML = (string: string): string => {
     } else if (isClip(string)) {
         src = `https://clips.twitch.tv/embed?clip=${id}`
     } else {
-        // eslint-disable-next-line quotes
         const html = '<div class="twitch"></div>'
         return html
     }

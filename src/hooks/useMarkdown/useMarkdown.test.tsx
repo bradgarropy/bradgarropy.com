@@ -40,7 +40,6 @@ test("renders images", () => {
 
     const {result} = renderHook(() =>
         useMarkdown(
-            // eslint-disable-next-line quotes
             '<img src="https://bradgarropy.com/profile.jpg" alt="profile" width="100" height="100"/>',
         ),
     )

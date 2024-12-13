@@ -63,8 +63,6 @@ test("caches json feed", async () => {
     expect(feedCache.get("feed")).toBeUndefined()
 
     const feed = await generateFeed("json")
-
-    // eslint-disable-next-line quotes
     expect(feed).toContain('"title": "bradgarropy.com"')
     expect(feed).not.toBeUndefined()
 

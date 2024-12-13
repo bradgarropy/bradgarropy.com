@@ -22,18 +22,15 @@ test("transforms twitter links", async () => {
     )
 
     expect(html).toEqual(
-        // eslint-disable-next-line quotes
         expect.stringContaining('<div class="grid justify-center">'),
     )
 
     expect(html).toEqual(
-        // eslint-disable-next-line quotes
         expect.stringContaining('<blockquote class="twitter-tweet">'),
     )
 
     expect(html).toEqual(
         expect.stringContaining(
-            // eslint-disable-next-line quotes
             '<script async src="https://platform.twitter.com/widgets.js" charset="utf-8">',
         ),
     )

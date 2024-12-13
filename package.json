@@ -108,7 +108,6 @@
         "@vitest/coverage-v8": "^1.1.0",
         "all-contributors-cli": "^6.24.0",
         "eslint": "^9.16.0",
-        "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-jsx-a11y": "^6.10.2",
         "eslint-plugin-react": "^7.37.2",
         "eslint-plugin-react-hooks": "^5.1.0",

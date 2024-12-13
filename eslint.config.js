@@ -3,7 +3,6 @@ import {fileURLToPath} from "node:url"
 
 import {includeIgnoreFile} from "@eslint/compat"
 import js from "@eslint/js"
-import prettier from "eslint-config-prettier"
 import jsxA11y from "eslint-plugin-jsx-a11y"
 import react from "eslint-plugin-react"
 import reactHooks from "eslint-plugin-react-hooks"
@@ -60,7 +59,6 @@ const config = [
     react.configs.flat.recommended,
     react.configs.flat["jsx-runtime"],
     jsxA11y.flatConfigs.recommended,
-    prettier,
     {
         rules: {
             ...reactHooks.configs.recommended.rules,
@@ -85,72 +83,23 @@ const config = [
                     ignoreRestSiblings: true,
                 },
             ],
-            "comma-dangle": ["error", "always-multiline"],
-            "comma-spacing": [
-                "error",
-                {
-                    before: false,
-                    after: true,
-                },
-            ],
-            "comma-style": ["error", "last"],
-            "eol-last": ["error", "always"],
             "eqeqeq": ["error", "always"],
             "function-paren-newline": ["off"],
             "indent": ["off"],
             "jsx-a11y/accessible-emoji": ["off"],
             "no-console": ["off"],
-            "no-mixed-spaces-and-tabs": ["error"],
             "no-unused-vars": [
                 "error",
                 {
                     ignoreRestSiblings: true,
                 },
             ],
-            "object-curly-newline": [
-                "error",
-                {
-                    consistent: true,
-                },
-            ],
-            "object-curly-spacing": ["error", "never"],
-            "object-property-newline": [
-                "error",
-                {
-                    allowAllPropertiesOnSameLine: true,
-                },
-            ],
             "prefer-const": ["error"],
-            "quote-props": ["error", "consistent-as-needed"],
-            "quotes": ["error", "double"],
-            "react/jsx-tag-spacing": [
-                "error",
-                {
-                    beforeSelfClosing: "always",
-                },
-            ],
             "react/react-in-jsx-scope": ["off"],
             "react-hooks/rules-of-hooks": ["error"],
             "react-hooks/exhaustive-deps": ["error"],
-            "semi": ["error", "never"],
-            "semi-spacing": [
-                "error",
-                {
-                    before: false,
-                    after: true,
-                },
-            ],
-            "semi-style": ["error", "last"],
             "simple-import-sort/imports": ["error"],
             "simple-import-sort/exports": ["error"],
-            "space-before-function-paren": [
-                "error",
-                {
-                    anonymous: "never",
-                    named: "never",
-                    asyncArrow: "always",
-                },
-            ],
         },
     },
 ]
