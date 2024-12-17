@@ -1,8 +1,9 @@
 import {render} from "@testing-library/react"
-import {test} from "vitest"
+import {expect, test} from "vitest"
 
 import Logo from "~/components/Logo"
 
 test("shows logo", () => {
-    render(<Logo />)
+    const {container} = render(<Logo />)
+    expect(container.getElementsByTagName("svg")).toHaveLength(1)
 })

@@ -30,7 +30,6 @@ describe("transforms markdown", () => {
         )
 
         expect(html).toEqual(
-            // eslint-disable-next-line quotes
             '<a href="https://bradgarropy.com/profile.jpg"><img src="https://bradgarropy.com/profile.jpg" alt="brad garropy"></a>',
         )
     })
@@ -43,7 +42,6 @@ describe("transforms markdown", () => {
         )
 
         expect(html).toEqual(
-            // eslint-disable-next-line quotes
             '<a href="http://res.cloudinary.com/profile.jpg"><img src="http://res.cloudinary.com/profile.jpg" alt="brad garropy" width="100" height="100"></a>',
         )
 
@@ -52,7 +50,6 @@ describe("transforms markdown", () => {
         )
 
         expect(html).toEqual(
-            // eslint-disable-next-line quotes
             '<a href="https://res.cloudinary.com/profile.jpg"><img src="https://res.cloudinary.com/profile.jpg" alt="brad garropy" width="100" height="100"></a>',
         )
     })
@@ -63,7 +60,6 @@ describe("transforms markdown", () => {
         )
 
         expect(html).toEqual(
-            // eslint-disable-next-line quotes
             '<a href="https://bradgarropy.com/profile.jpg"><img src="https://bradgarropy.com/profile.jpg" alt="brad garropy"></a>',
         )
     })
@@ -74,7 +70,6 @@ describe("transforms markdown", () => {
         )
 
         expect(html).toEqual(
-            // eslint-disable-next-line quotes
             '<a href="https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/profile.jpg"><img src="https://res.cloudinary.com/bradgarropy/image/upload/f_auto,q_auto,w_660,c_limit/bradgarropy.com/profile.jpg" alt="brad garropy" width="100" height="100"></a>',
         )
     })
@@ -85,7 +80,6 @@ describe("transforms markdown", () => {
         )
 
         expect(html).toEqual(
-            // eslint-disable-next-line quotes
             '<a href="https://bradgarropy.com/profile.jpg"><img src="https://bradgarropy.com/profile.jpg" alt="brad garropy"></a>',
         )
     })
@@ -99,7 +93,6 @@ describe("transforms markdown", () => {
 
         expect(html).toEqual(
             expect.stringContaining(
-                // eslint-disable-next-line quotes
                 'src="https://codesandbox.io/embed/exciting-pascal-j5hwu"',
             ),
         )
@@ -108,14 +101,10 @@ describe("transforms markdown", () => {
     test("embeds twitch", async () => {
         const html = await transformMarkdown("https://twitch.tv/bradgarropy")
 
-        expect(html).toEqual(
-            // eslint-disable-next-line quotes
-            expect.stringContaining("<iframe"),
-        )
+        expect(html).toEqual(expect.stringContaining("<iframe"))
 
         expect(html).toEqual(
             expect.stringContaining(
-                // eslint-disable-next-line quotes
                 'src="https://player.twitch.tv?channel=bradgarropy&#x26;parent=bradgarropy.com"',
             ),
         )
@@ -127,18 +116,15 @@ describe("transforms markdown", () => {
         )
 
         expect(html).toEqual(
-            // eslint-disable-next-line quotes
             expect.stringContaining('<div class="grid justify-center">'),
         )
 
         expect(html).toEqual(
-            // eslint-disable-next-line quotes
             expect.stringContaining('<blockquote class="twitter-tweet">'),
         )
 
         expect(html).toEqual(
             expect.stringContaining(
-                // eslint-disable-next-line quotes
                 '<script async src="https://platform.twitter.com/widgets.js" charset="utf-8">',
             ),
         )
@@ -149,12 +135,10 @@ describe("transforms markdown", () => {
 
         expect(html).toEqual(expect.stringContaining("<iframe"))
 
-        // eslint-disable-next-line quotes
         expect(html).toEqual(expect.stringContaining('title="9zcU6oUOHVc"'))
 
         expect(html).toEqual(
             expect.stringContaining(
-                // eslint-disable-next-line quotes
                 'src="https://www.youtube-nocookie.com/embed/9zcU6oUOHVc"',
             ),
         )
@@ -166,31 +150,15 @@ describe("transforms markdown", () => {
         )
 
         expect(html).toEqual(
-            expect.stringContaining(
-                // eslint-disable-next-line quotes
-                '<a href="https://example.com"',
-            ),
+            expect.stringContaining('<a href="https://example.com"'),
         )
 
-        expect(html).toEqual(
-            expect.stringContaining(
-                // eslint-disable-next-line quotes
-                "external link</a>",
-            ),
-        )
+        expect(html).toEqual(expect.stringContaining("external link</a>"))
 
         expect(html).toEqual(
-            expect.stringContaining(
-                // eslint-disable-next-line quotes
-                'rel="noopener noreferrer"',
-            ),
+            expect.stringContaining('rel="noopener noreferrer"'),
         )
 
-        expect(html).toEqual(
-            expect.stringContaining(
-                // eslint-disable-next-line quotes
-                'target="_blank"',
-            ),
-        )
+        expect(html).toEqual(expect.stringContaining('target="_blank"'))
     })
 })
