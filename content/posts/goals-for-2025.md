@@ -1,0 +1,21 @@
+---
+title: 🏆 goals for 2025
+slug: goals-for-2025
+date: "2025-01-03"
+topic: life
+tags: ["goals"]
+---
+
+TODO
+
+## BE ADVENTUROUS WITH GABY
+
+## FUCKING BUILD SOMETHING
+
+## DAILY SPANISH CONVERSATIONS
+
+## SUB 180 FOR SUMMER
+
+## SOCIAL WITH ONLINE FRIENDS
+
+## VIDEO GAMES DUDE
