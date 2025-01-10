@@ -22,6 +22,12 @@ TODO
 
 ## VIDEO GAMES DUDE
 
+diablo  
+wayfinder  
+balatro  
+warhammer  
+plucky squire
+
 ## NO CAFFEINE & ALCOHOL
 
 ## PHYSICAL THINGS
