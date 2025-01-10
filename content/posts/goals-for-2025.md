@@ -1,7 +1,7 @@
 ---
 title: 🏆 goals for 2025
 slug: goals-for-2025
-date: "2025-01-03"
+date: "2025-01-010"
 topic: life
 tags: ["goals"]
 ---
@@ -21,3 +21,11 @@ TODO
 ## SOCIAL WITH ONLINE FRIENDS
 
 ## VIDEO GAMES DUDE
+
+## NO CAFFEINE & ALCOHOL
+
+## PHYSICAL THINGS
+
+guitar  
+raspberry pi  
+3d printing
