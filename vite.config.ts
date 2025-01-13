@@ -21,7 +21,11 @@ export default defineConfig({
         tsconfigPaths(),
         json5(),
         markdown({mode: [Mode.MARKDOWN]}),
-        remixDevTools(),
+        remixDevTools({
+            client: {
+                showBreakpointIndicator: false,
+            },
+        }),
         process.env.VITEST
             ? react()
             : remix({
