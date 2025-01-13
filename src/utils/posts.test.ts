@@ -109,7 +109,7 @@ test("gets tags", () => {
 test("gets posts by tag", () => {
     const posts = getPostsByTag("thoughts")
 
-    expect(posts).toHaveLength(4)
+    expect(posts).toHaveLength(5)
 
     expect(posts).toContainEqual(
         expect.objectContaining({
@@ -145,20 +145,10 @@ test("gets related posts", () => {
 
     expect(relatedPosts).toContainEqual(
         expect.objectContaining({
-            date: "2020-12-08",
-            slug: "communication-comes-first",
+            date: "2025-01-09",
+            slug: "what-really-matters",
             tags: ["thoughts"],
-            title: "🥇 communication comes first",
-            topic: "life",
-        }),
-    )
-
-    expect(relatedPosts).toContainEqual(
-        expect.objectContaining({
-            date: "2020-12-08",
-            slug: "communication-comes-first",
-            tags: ["thoughts"],
-            title: "🥇 communication comes first",
+            title: "🌟 what really matters",
             topic: "life",
         }),
     )
