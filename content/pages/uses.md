@@ -34,10 +34,10 @@ I'm getting more serious about [streaming][stream] my coding sessions, and now I
 [Sony a6000 Camera][a6000]  
 [Sigma 16mm f1.4 Lens][sigma]  
 [Elgato Cam Link 4K][camlink]  
-[Elgato Key Light][key-light]  
+2x [Elgato Key Light][key-light]  
 [Elgato Multi Mount][multi-mount]  
 [Elgato Stream Deck+][stream-deck]  
-[Elgato Wave XLR][wave-xlr]  
+[Elgato XLR Dock][xlr-dock]  
 [Rode PSA1 Boom Arm][psa1]  
 [Shure SM7B Microphone][sm7b]
 
@@ -46,7 +46,7 @@ I'm getting more serious about [streaming][stream] my coding sessions, and now I
 Regardless of what computer I'm on, I use these applications. As you may guess, cross platform compatibility is important to me.
 
 [Visual Studio Code][vscode]  
-[Arc][arc]  
+[Google Chrome][chrome]  
 [Figma][figma]  
 [Discord][discord]  
 [Insomnia][insomnia]  
@@ -79,7 +79,7 @@ These pieces of tech are always within reach.
 [google-nest]: https://store.google.com/product/google_nest_mini
 [stream]: https://bradgarropy.com/stream
 [sm7b]: https://www.amazon.com/Shure-SM7B-Cardioid-Dynamic-Microphone/dp/B0002E4Z8M?tag=bradgarropy00-20
-[wave-xlr]: https://amzn.to/46B6Anv
+[xlr-dock]: https://amzn.to/3PGrYzX
 [psa1]: https://www.amazon.com/gp/product/B001D7UYBO?tag=bradgarropy00-20
 [a6000]: https://www.amazon.com/Sony-Mirrorless-Digitial-3-0-Inch-16-50mm/dp/B00I8BICB2?tag=bradgarropy00-20
 [sigma]: https://www.amazon.com/Sigma-16mm-Contemporary-Lens-Sony/dp/B077BWD2BB?tag=bradgarropy00-20
@@ -88,7 +88,7 @@ These pieces of tech are always within reach.
 [multi-mount]: https://www.elgato.com/en/gaming/multi-mount
 [key-light]: https://www.elgato.com/en/gaming/key-light
 [vscode]: https://code.visualstudio.com
-[arc]: https://arc.net
+[chrome]: https://www.google.com/chrome
 [figma]: https://www.figma.com
 [obs]: https://obsproject.com
 [github-cli]: https://cli.github.com
