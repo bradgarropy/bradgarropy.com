@@ -226,7 +226,7 @@ npm install --global vercel
 
 [macbook-pro]: https://amzn.to/3AW5abz
 [backup]: https://bradgarropy.com/blog/backup-and-restore
-[chrome]: https://www.google.com/chrome/dr/download
+[chrome]: https://www.google.com/chrome
 [raycast]: https://www.raycast.com
 [raycast-hotkey]: https://manual.raycast.com/hotkey
 [vscode]: https://code.visualstudio.com/download
