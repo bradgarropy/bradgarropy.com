@@ -139,6 +139,8 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
     - Check _Enable Messages in iCloud_
 - Notes > Settings
     - Increase _Default text size_
+- Safari > View
+    - Select _Show Status Bar_
 - Safari > Settings > Advanced
     - Check _Show full website address_
     - Check _Show features for web developers_
@@ -172,15 +174,14 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 - Elgato Wave Link > Configure Wave Link
     - Add _Elgato Wave XLR_ as audio input
     - Install [DeeGate][deegate]
-    - Set noise gate to `36db`
+    - Set noise gate to `26db`
 
 ![Finder][finder]
 
 ## 📥 install applications
 
-- [Arc][arc]
+- [Google Chrome][chrome]
     - Sign in
-    - Set as default browser
 - [Raycast][raycast]
     - [Replace Spotlight][raycast-hotkey]
 - [Discord][discord]
@@ -225,7 +226,7 @@ npm install --global vercel
 
 [macbook-pro]: https://amzn.to/3AW5abz
 [backup]: https://bradgarropy.com/blog/backup-and-restore
-[arc]: https://arc.net/download
+[chrome]: https://www.google.com/chrome/dr/download
 [raycast]: https://www.raycast.com
 [raycast-hotkey]: https://manual.raycast.com/hotkey
 [vscode]: https://code.visualstudio.com/download
