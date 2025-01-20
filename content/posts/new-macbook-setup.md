@@ -128,12 +128,15 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
     - Uncheck _Shared with You_
 - Photos > View
     - Check _Show Hidden Photo Album_
+- Mail > Settings > Viewing
+    - Uncheck _Summarize Message Previews_
 - Mail > Settings > Composing
     - Uncheck _Quote the text of the original message_
 - Mail > Settings > Signatures
     - Move signatures to appropriate accounts
 - Messages > Settings > General
     - Check _Share Name and Photo_
+    - Uncheck _Summarize messages_
     - Increase _Text size_
 - Messages > Settings > iMessage
     - Check _Enable Messages in iCloud_
