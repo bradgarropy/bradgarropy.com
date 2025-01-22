@@ -209,6 +209,7 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 - [homebrew][homebrew]
 - [git][git]
 - [nvm][nvm]
+- [vsce][vsce]
 - [Node.js][node]
 - [GitHub CLI][github-cli]
 - [Netlify CLI][netlify-cli]
@@ -225,6 +226,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/HEAD/install.sh | bash
 nvm install stable
 npm install --global netlify-cli
 npm install --global vercel
+npm install --global @vcode/vsce
 ```
 
 [macbook-pro]: https://amzn.to/3AW5abz
@@ -244,6 +246,7 @@ npm install --global vercel
 [github-cli]: https://cli.github.com
 [netlify-cli]: https://www.netlify.com/products/cli
 [vscode-cli]: https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
+[vsce]: https://github.com/microsoft/vscode-vsce
 [icloud]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/icloud.png
 [control-center]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/control-center.png
 [siri-and-spotlight]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/siri-and-spotlight.png
