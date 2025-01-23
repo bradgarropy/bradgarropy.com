@@ -48,6 +48,7 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 ### control center
 
 - Select _Show in Menu Bar_ for _Bluetooth_
+- Select _Show in Menu Bar_ for _Focus_
 - Select _Don't Show in Menu Bar_ for _Spotlight_
 - Select _Don't Show in Menu Bar_ for _Siri_
 
