@@ -1,6 +1,6 @@
 {
     "name": "bradgarropy.com",
-    "version": "8.4.0",
+    "version": "8.5.0",
     "description": "🏠 my home on the web",
     "type": "module",
     "keywords": [
@@ -92,17 +92,18 @@
         "@remix-run/serve": "^2.5.1",
         "@rollup/pluginutils": "^5.1.0",
         "@tailwindcss/typography": "^0.5.9",
+        "@testing-library/dom": "^10.4.0",
         "@testing-library/jest-dom": "^6.1.5",
-        "@testing-library/react": "^14.0.0",
+        "@testing-library/react": "^16.2.0",
         "@testing-library/user-event": "^14.4.3",
         "@types/node": "^20.10.4",
         "@types/react": "^19.0.1",
         "@types/react-dom": "^19.0.2",
         "@vitejs/plugin-react": "^4.2.1",
-        "@vitest/coverage-v8": "^1.1.0",
+        "@vitest/coverage-v8": "^3.0.4",
         "all-contributors-cli": "^6.24.0",
         "jest": "^29.7.0",
-        "jsdom": "^24.0.0",
+        "jsdom": "^26.0.0",
         "plop": "^4.0.1",
         "plop-helper-bradgarropy": "^1.0.0",
         "plop-helper-date": "^1.0.0",
@@ -114,11 +115,11 @@
         "tailwindcss": "^3.3.0",
         "tsx": "^4.6.0",
         "typescript": "^5.0.2",
-        "vite": "^5.4.14",
+        "vite": "^6.0.11",
         "vite-plugin-json5": "^1.1.2",
         "vite-plugin-markdown": "^2.2.0",
-        "vite-tsconfig-paths": "^4.2.1",
-        "vitest": "^1.0.2"
+        "vite-tsconfig-paths": "^5.1.4",
+        "vitest": "^3.0.4"
     },
     "optionalDependencies": {
         "@rollup/rollup-linux-x64-gnu": "^4.12.0"
