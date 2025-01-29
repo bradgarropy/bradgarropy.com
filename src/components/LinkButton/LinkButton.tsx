@@ -21,7 +21,7 @@ const LinkButton: FC<LinkButtonProps> = ({
             "shadow-reverse-box dark:shadow-reverse-box-white": reverse,
             "text-gray-300 dark:text-gray-300 border-gray-300 shadow-gray-300":
                 disabled,
-            "hover:text-inherit hover:shadow-none hover:dark:shadow-none":
+            "hover:text-inherit hover:shadow-none dark:hover:shadow-none":
                 !disabled,
         },
     )

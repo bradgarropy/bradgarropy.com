@@ -1,6 +1,6 @@
 {
     "name": "bradgarropy.com",
-    "version": "8.4.0",
+    "version": "8.5.0",
     "description": "🏠 my home on the web",
     "type": "module",
     "keywords": [
@@ -92,6 +92,7 @@
         "@remix-run/serve": "^2.5.1",
         "@rollup/pluginutils": "^5.1.0",
         "@tailwindcss/typography": "^0.5.9",
+        "@tailwindcss/vite": "^4.0.0",
         "@testing-library/dom": "^10.4.0",
         "@testing-library/jest-dom": "^6.1.5",
         "@testing-library/react": "^16.2.0",
@@ -109,10 +110,10 @@
         "plop-helper-date": "^1.0.0",
         "plop-helper-slugify": "^1.1.0",
         "prettier": "^3.1.1",
-        "prettier-plugin-tailwindcss": "^0.5.9",
+        "prettier-plugin-tailwindcss": "^0.6.11",
         "react": "^19.0.0",
         "remix-development-tools": "^4.7.7",
-        "tailwindcss": "^3.3.0",
+        "tailwindcss": "^4.0.0",
         "tsx": "^4.6.0",
         "typescript": "^5.0.2",
         "vite": "^6.0.11",

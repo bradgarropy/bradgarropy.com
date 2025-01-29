@@ -5,7 +5,7 @@ import {createImageUrl} from "~/utils/cloudinary"
 
 const Hero: FC = () => {
     return (
-        <div className="grid grid-cols-hero items-start self-center justify-self-center max-[700px]:grid-cols-1">
+        <div className="grid-cols-hero grid items-start self-center justify-self-center max-[700px]:grid-cols-1">
             <Link
                 to="https://instagram.com/bradgarropy"
                 className="max-[700px]:m-auto max-[700px]:w-4/5"
@@ -20,7 +20,7 @@ const Hero: FC = () => {
             </Link>
 
             <div>
-                <h1 className="m-0 font-heading text-5xl font-black leading-normal -tracking-[0.2rem]">
+                <h1 className="font-heading m-0 text-5xl leading-normal font-black -tracking-[0.2rem]">
                     i&apos;m brad garropy
                 </h1>
 
@@ -28,28 +28,28 @@ const Hero: FC = () => {
                     <h2 className="m-0 justify-self-start text-2xl font-medium">
                         lead frontend developer
                     </h2>
-                    <span className="m-0 text-2xl font-medium leading-normal">
+                    <span className="m-0 text-2xl leading-normal font-medium">
                         👨🏼‍💻
                     </span>
 
                     <h2 className="m-0 justify-self-start text-2xl font-medium">
                         growing content creator
                     </h2>
-                    <span className="m-0 text-2xl font-medium leading-normal">
+                    <span className="m-0 text-2xl leading-normal font-medium">
                         🎥
                     </span>
 
                     <h2 className="m-0 justify-self-start text-2xl font-medium">
                         side project connoisseur
                     </h2>
-                    <span className="m-0 text-2xl font-medium leading-normal">
+                    <span className="m-0 text-2xl leading-normal font-medium">
                         🥃
                     </span>
 
                     <h2 className="m-0 justify-self-start text-2xl font-medium">
                         open source maintainer
                     </h2>
-                    <span className="m-0 text-2xl font-medium leading-normal">
+                    <span className="m-0 text-2xl leading-normal font-medium">
                         ✨
                     </span>
                 </div>

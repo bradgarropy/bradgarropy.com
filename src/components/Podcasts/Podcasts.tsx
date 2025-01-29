@@ -13,7 +13,7 @@ const Podcast: FC = () => {
                 <img
                     src={createImageUrl("/pages/home/compressed-fm.jpg")}
                     alt="Compressed.fm"
-                    className="box-border rounded border-3 border-black shadow-box transition duration-300 hover:shadow-none dark:border-white dark:shadow-box-white hover:dark:shadow-none"
+                    className="shadow-box dark:shadow-box-white box-border rounded border-3 border-black transition duration-300 hover:shadow-none dark:border-white dark:hover:shadow-none"
                     width="500"
                     height="500"
                 />
@@ -26,7 +26,7 @@ const Podcast: FC = () => {
                 <img
                     src={createImageUrl("/pages/home/web-dev-weekly.jpg")}
                     alt="Web Dev Weekly"
-                    className="box-border rounded border-3 border-black shadow-box transition duration-300 hover:shadow-none dark:border-white dark:shadow-box-white hover:dark:shadow-none"
+                    className="shadow-box dark:shadow-box-white box-border rounded border-3 border-black transition duration-300 hover:shadow-none dark:border-white dark:hover:shadow-none"
                     width="500"
                     height="500"
                 />

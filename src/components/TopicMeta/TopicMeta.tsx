@@ -10,7 +10,7 @@ const TopicMeta: FC<TopicMetaProps> = ({topic}) => {
     const {name, icon} = topic
 
     return (
-        <h1 className="mb-16 text-center font-heading text-4xl font-semibold">
+        <h1 className="font-heading mb-16 text-center text-4xl font-semibold">
             {icon} {name}
         </h1>
     )

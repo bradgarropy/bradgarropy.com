@@ -4,7 +4,7 @@ import SocialLink from "~/components/SocialLink"
 
 const Footer: FC = () => {
     return (
-        <footer className="flex flex-wrap content-center justify-center gap-5 px-5 pb-20 pt-28">
+        <footer className="flex flex-wrap content-center justify-center gap-5 px-5 pt-28 pb-20">
             <SocialLink platform="youtube" />
             <SocialLink platform="discord" />
             <SocialLink platform="bluesky" />

@@ -9,7 +9,7 @@ type LayoutProps = {
 
 const Layout: FC<LayoutProps> = ({children}) => {
     return (
-        <div className="m-auto grid min-h-screen max-w-5xl grid-rows-[auto_1fr_auto] gap-y-10 font-text text-black transition-all dark:text-white">
+        <div className="font-text m-auto grid min-h-screen max-w-5xl grid-rows-[auto_1fr_auto] gap-y-10 text-black transition-all dark:text-white">
             <Header />
 
             <main className="box-border w-full max-w-[700px] justify-self-center px-5 py-0">

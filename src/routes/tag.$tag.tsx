@@ -33,7 +33,7 @@ const TagRoute = () => {
                         posts tagged
                     </span>
 
-                    <span className="rounded-lg bg-black px-6 py-1 text-center font-heading text-6xl font-bold text-white dark:bg-white dark:text-black">
+                    <span className="font-heading rounded-lg bg-black px-6 py-1 text-center text-6xl font-bold text-white dark:bg-white dark:text-black">
                         {tag}
                     </span>
                 </h1>
