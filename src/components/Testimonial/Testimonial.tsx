@@ -17,7 +17,7 @@ const Testimonial: FC<TestimonialProps> = ({testimonial}) => {
 
     return (
         <div
-            className="grid max-w-xl justify-items-start gap-8 rounded border-3 border-black p-8 shadow-box transition duration-300 hover:shadow-none dark:border-white dark:shadow-box-white hover:dark:shadow-none"
+            className="grid max-w-xl justify-items-start gap-8 rounded border-3 border-black p-8 shadow-box transition duration-300 hover:shadow-none dark:border-white dark:shadow-box-white dark:hover:shadow-none"
             id={slug}
             key={testimonial.frontmatter.name}
         >

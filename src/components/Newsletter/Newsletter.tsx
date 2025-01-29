@@ -33,7 +33,7 @@ const Newsletter: FC = () => {
                 onSubmit={onSubmit}
             >
                 <input
-                    className="rounded border-3 border-black px-8 py-4 text-base shadow-box placeholder:text-gray-400 focus:border-purple-400 focus:outline-none dark:shadow-box-white"
+                    className="rounded border-3 border-black px-8 py-4 text-base shadow-box placeholder:text-gray-400 focus:border-purple-400 focus:outline-hidden dark:shadow-box-white"
                     placeholder="email@example.com"
                     type="email"
                     name="email"

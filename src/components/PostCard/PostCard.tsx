@@ -14,7 +14,7 @@ const PostCard: FC<PostCardProps> = ({post, className}) => {
     return (
         <div
             className={classnames(
-                "rounded border-3 border-black px-8 py-8 shadow-box duration-300 hover:shadow-none dark:border-white dark:shadow-box-white hover:dark:shadow-none",
+                "rounded border-3 border-black px-8 py-8 shadow-box duration-300 hover:shadow-none dark:border-white dark:shadow-box-white dark:hover:shadow-none",
                 className,
             )}
         >

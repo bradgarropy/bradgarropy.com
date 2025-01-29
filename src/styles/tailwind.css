@@ -1,6 +1,67 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --font-*: initial;
+    --font-text: Open Sans, sans-serif;
+    --font-heading: Montserrat, sans-serif;
+
+    --animate-pulse: pulse 2s infinite ease-out;
+
+    --radius: 0.3rem;
+
+    --border-width-3: 3px;
+    --border-width-5: 5px;
+    --border-width-7: 7px;
+
+    --shadow-box: 3px 3px 0 #000;
+    --shadow-reverse-box: -3px 3px 0 #000;
+    --shadow-box-white: 3px 3px 0 #fff;
+    --shadow-reverse-box-white: -3px 3px 0 #fff;
+    --shadow-link: inset 0 -2px oklch(0.714 0.203 305.504);
+    --shadow-link-hover: inset 0 -25px 0 oklch(0.714 0.203 305.504);
+
+    --grid-template-columns-hero: minmax(auto, 15.625rem) auto;
+
+    @keyframes pulse {
+        0% {
+            opacity: 100%;
+        }
+        50% {
+            opacity: 20%;
+        }
+        100% {
+            opacity: 100%;
+        }
+    }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
+
+@utility text-shadow-2 {
+    text-shadow: 2px 2px var(--color-purple-400);
+}
+
+@utility text-shadow-3 {
+    text-shadow: 3px 3px var(--color-purple-400);
+}
 
 @layer base {
     @font-face {
@@ -13,15 +74,6 @@
         font-family: "Open Sans";
         src: url("/fonts/open-sans.ttf") format("truetype");
         font-display: swap;
-    }
-}
-
-@layer utilities {
-    .text-shadow-2 {
-        text-shadow: 2px 2px theme("colors.purple.400");
-    }
-    .text-shadow-3 {
-        text-shadow: 3px 3px theme("colors.purple.400");
     }
 }
 

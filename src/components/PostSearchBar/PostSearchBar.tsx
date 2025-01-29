@@ -60,7 +60,7 @@ const PostSearchBar: FC<PostSearchBarProps> = ({posts, onSearch}) => {
             </label>
 
             <input
-                className="w-full rounded border-3 border-black px-8 py-4 text-base shadow-box placeholder:text-gray-400 focus:border-purple-400 focus:outline-none dark:shadow-box-white"
+                className="w-full rounded border-3 border-black px-8 py-4 text-base shadow-box placeholder:text-gray-400 focus:border-purple-400 focus:outline-hidden dark:shadow-box-white"
                 type="search"
                 id="search"
                 placeholder="search by title, topic, or tag..."

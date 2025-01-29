@@ -38,7 +38,7 @@ const Sponsors: FC<SponsorsProps> = ({sponsors}) => {
                                     to={sponsor.profile}
                                 >
                                     <img
-                                        className="m-0 w-[6.625rem] rounded-full border-5 border-black transition duration-300 hover:-rotate-2 hover:border-purple-400 dark:border-white hover:dark:border-purple-400"
+                                        className="m-0 w-[6.625rem] rounded-full border-5 border-black transition duration-300 hover:-rotate-2 hover:border-purple-400 dark:border-white dark:hover:border-purple-400"
                                         src={createExternalImageUrl(
                                             sponsor.avatar,
                                         )}

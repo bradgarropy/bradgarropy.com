@@ -11,7 +11,7 @@ type ProjectProps = {
 const Project: FC<ProjectProps> = ({project}) => {
     return (
         <Link
-            className="grid content-between gap-y-4 rounded border-3 border-black p-[1.125rem] shadow-box transition duration-300 hover:shadow-none dark:border-white dark:shadow-box-white hover:dark:shadow-none"
+            className="grid content-between gap-y-4 rounded border-3 border-black p-[1.125rem] shadow-box transition duration-300 hover:shadow-none dark:border-white dark:shadow-box-white dark:hover:shadow-none"
             to={`${project.url}#readme`}
         >
             <div>
