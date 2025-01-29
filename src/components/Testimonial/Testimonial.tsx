@@ -17,7 +17,7 @@ const Testimonial: FC<TestimonialProps> = ({testimonial}) => {
 
     return (
         <div
-            className="grid max-w-xl justify-items-start gap-8 rounded border-3 border-black p-8 shadow-box transition duration-300 hover:shadow-none dark:border-white dark:shadow-box-white dark:hover:shadow-none"
+            className="shadow-box dark:shadow-box-white grid max-w-xl justify-items-start gap-8 rounded border-3 border-black p-8 transition duration-300 hover:shadow-none dark:border-white dark:hover:shadow-none"
             id={slug}
             key={testimonial.frontmatter.name}
         >
@@ -33,7 +33,7 @@ const Testimonial: FC<TestimonialProps> = ({testimonial}) => {
                     className="rounded-full border-3 border-black dark:border-white"
                 />
 
-                <p className="m-0 font-heading text-2xl font-black tracking-[-0.075rem]">
+                <p className="font-heading m-0 text-2xl font-black tracking-[-0.075rem]">
                     {testimonial.frontmatter.name}
                 </p>
             </Link>

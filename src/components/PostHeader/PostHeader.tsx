@@ -15,7 +15,7 @@ const PostHeader: FC<PostHeaderProps> = ({date, tags, topic, title}) => {
         <section>
             <PostMeta date={date} topic={topic} tags={tags} />
 
-            <h1 className="mt-6 font-heading text-4xl font-semibold">
+            <h1 className="font-heading mt-6 text-4xl font-semibold">
                 {title}
             </h1>
         </section>

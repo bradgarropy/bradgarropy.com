@@ -25,7 +25,7 @@ const PostMeta: FC<PostMetaProps> = ({date, tags, topic}) => {
                     return (
                         <Link
                             key={tag}
-                            className="rounded bg-black px-2 font-heading text-sm font-bold text-white duration-300 hover:bg-purple-400 dark:bg-white dark:text-black dark:hover:bg-purple-400"
+                            className="font-heading rounded bg-black px-2 text-sm font-bold text-white duration-300 hover:bg-purple-400 dark:bg-white dark:text-black dark:hover:bg-purple-400"
                             to={`/tag/${tag}`}
                             prefetch="intent"
                         >

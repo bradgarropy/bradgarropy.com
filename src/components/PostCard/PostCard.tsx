@@ -14,11 +14,11 @@ const PostCard: FC<PostCardProps> = ({post, className}) => {
     return (
         <div
             className={classnames(
-                "rounded border-3 border-black px-8 py-8 shadow-box duration-300 hover:shadow-none dark:border-white dark:shadow-box-white dark:hover:shadow-none",
+                "shadow-box dark:shadow-box-white rounded border-3 border-black px-8 py-8 duration-300 hover:shadow-none dark:border-white dark:hover:shadow-none",
                 className,
             )}
         >
-            <h1 className="mb-10 font-heading text-3xl font-semibold max-[750px]:text-2xl">
+            <h1 className="font-heading mb-10 text-3xl font-semibold max-[750px]:text-2xl">
                 <Link
                     prefetch="intent"
                     to={`/blog/${post.slug}`}

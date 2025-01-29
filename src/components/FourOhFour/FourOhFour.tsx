@@ -13,7 +13,7 @@ type FourOhFourProps = {
 const FourOhFour: FC<FourOhFourProps> = ({post, videos}) => {
     return (
         <div className="grid h-full content-center">
-            <h1 className="mb-2 font-heading text-6xl font-black tracking-[-0.2rem]">
+            <h1 className="font-heading mb-2 text-6xl font-black tracking-[-0.2rem]">
                 There&apos;s nothing here.
             </h1>
 

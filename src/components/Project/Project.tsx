@@ -11,11 +11,11 @@ type ProjectProps = {
 const Project: FC<ProjectProps> = ({project}) => {
     return (
         <Link
-            className="grid content-between gap-y-4 rounded border-3 border-black p-[1.125rem] shadow-box transition duration-300 hover:shadow-none dark:border-white dark:shadow-box-white dark:hover:shadow-none"
+            className="shadow-box dark:shadow-box-white grid content-between gap-y-4 rounded border-3 border-black p-[1.125rem] transition duration-300 hover:shadow-none dark:border-white dark:hover:shadow-none"
             to={`${project.url}#readme`}
         >
             <div>
-                <h3 className="m-0 font-heading text-2xl font-black tracking-[-0.075rem]">
+                <h3 className="font-heading m-0 text-2xl font-black tracking-[-0.075rem]">
                     {project.name}
                 </h3>
 

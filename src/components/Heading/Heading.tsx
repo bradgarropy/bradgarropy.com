@@ -36,21 +36,21 @@ const Heading: FC<HeadingProps> = ({level, id, children}) => {
     switch (level) {
         case 1:
             return (
-                <h1 id={slug} className="group relative font-heading">
+                <h1 id={slug} className="group font-heading relative">
                     {link}
                     {children}
                 </h1>
             )
         case 2:
             return (
-                <h2 id={slug} className="group relative font-heading">
+                <h2 id={slug} className="group font-heading relative">
                     {link}
                     {children}
                 </h2>
             )
         case 3:
             return (
-                <h3 id={slug} className="group relative font-heading">
+                <h3 id={slug} className="group font-heading relative">
                     {link}
                     {children}
                 </h3>

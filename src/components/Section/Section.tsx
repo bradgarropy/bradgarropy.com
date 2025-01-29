@@ -12,7 +12,7 @@ type TitleProps = {
 
 const Title: FC<TitleProps> = ({title}) => {
     return (
-        <h2 className="hover:text-shadow-3 m-0 font-heading text-[clamp(3rem,_10vw,_4.5rem)] font-black tracking-[-0.2rem] transition-all duration-300">
+        <h2 className="hover:text-shadow-3 font-heading m-0 text-[clamp(3rem,_10vw,_4.5rem)] font-black tracking-[-0.2rem] transition-all duration-300">
             {title}
         </h2>
     )

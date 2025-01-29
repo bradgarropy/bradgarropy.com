@@ -13,7 +13,7 @@ const HireMe: FC<HireMeProps> = ({testimonials}) => {
     return (
         <div className="grid gap-y-16">
             <section>
-                <h1 className="mb-9 font-heading text-4xl font-extrabold">
+                <h1 className="font-heading mb-9 text-4xl font-extrabold">
                     🤝 let&apos;s work together
                 </h1>
 
@@ -50,7 +50,7 @@ const HireMe: FC<HireMeProps> = ({testimonials}) => {
             </section>
 
             <section>
-                <div className="prose mb-9 dark:prose-invert prose-h1:font-bold">
+                <div className="prose dark:prose-invert prose-h1:font-bold mb-9">
                     <Heading level={1} id="testimonials">
                         💯 what people think of me
                     </Heading>

@@ -33,7 +33,7 @@ const Newsletter: FC = () => {
                 onSubmit={onSubmit}
             >
                 <input
-                    className="rounded border-3 border-black px-8 py-4 text-base shadow-box placeholder:text-gray-400 focus:border-purple-400 focus:outline-hidden dark:shadow-box-white"
+                    className="shadow-box dark:shadow-box-white rounded border-3 border-black px-8 py-4 text-base placeholder:text-gray-400 focus:border-purple-400 focus:outline-hidden"
                     placeholder="email@example.com"
                     type="email"
                     name="email"
@@ -43,7 +43,7 @@ const Newsletter: FC = () => {
                 />
 
                 <button
-                    className="mb-[5px] inline-block cursor-pointer rounded border-2 border-black bg-purple-500 px-3 py-2 font-heading text-base font-black tracking-normal text-white shadow-box transition duration-300 hover:enabled:shadow-none disabled:cursor-default dark:shadow-box-white"
+                    className="font-heading shadow-box dark:shadow-box-white mb-[5px] inline-block cursor-pointer rounded border-2 border-black bg-purple-500 px-3 py-2 text-base font-black tracking-normal text-white transition duration-300 hover:enabled:shadow-none disabled:cursor-default"
                     type="submit"
                     disabled={subscribed}
                 >
