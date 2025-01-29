@@ -1,5 +1,6 @@
 import {vitePlugin as remix} from "@remix-run/dev"
 import {installGlobals} from "@remix-run/node"
+import tailwind from "@tailwindcss/vite"
 import {vercelPreset} from "@vercel/remix/vite"
 import react from "@vitejs/plugin-react"
 import {remixDevTools} from "remix-development-tools"
@@ -19,6 +20,7 @@ declare module "@remix-run/node" {
 export default defineConfig({
     plugins: [
         tsconfigPaths(),
+        tailwind(),
         json5(),
         markdown({mode: [Mode.MARKDOWN]}),
         remixDevTools({
