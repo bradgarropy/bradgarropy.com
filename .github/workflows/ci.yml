@@ -1,0 +1,73 @@
+name: "🏭 ci"
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+
+jobs:
+    lint:
+        name: "🧶 lint"
+        runs-on: ubuntu-latest
+        steps:
+            - name: "📚 checkout"
+              uses: actions/checkout@v4
+            - name: "🟢 node"
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  cache: "npm"
+            - name: "📦 install"
+              run: npm ci
+            - name: "🧶 lint"
+              run: npm run lint
+    format:
+        name: "💾 format"
+        runs-on: ubuntu-latest
+        steps:
+            - name: "📚 checkout"
+              uses: actions/checkout@v4
+            - name: "🟢 node"
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  cache: "npm"
+            - name: "📦 install"
+              run: npm ci
+            - name: "💾 format"
+              run: npm run format
+    typecheck:
+        name: "🟦 typecheck"
+        runs-on: ubuntu-latest
+        steps:
+            - name: "📚 checkout"
+              uses: actions/checkout@v4
+            - name: "🟢 node"
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  cache: "npm"
+            - name: "📦 install"
+              run: npm ci
+            - name: "🟦 typecheck"
+              run: npm run typecheck
+    test:
+        name: "🧪 test"
+        runs-on: ubuntu-latest
+        steps:
+            - name: "📚 checkout"
+              uses: actions/checkout@v4
+            - name: "🟢 node"
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  cache: "npm"
+            - name: "📦 install"
+              run: npm ci
+            - name: "🧪 test"
+              run: npm run test
+            - name: "☂️ coverage"
+              uses: codecov/codecov-action@v5
+              with:
+                  token: ${{ secrets.CODECOV_TOKEN }}
