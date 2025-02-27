@@ -3,8 +3,10 @@ name: "🏭 ci"
 on:
     push:
         branches:
-            - main
+            - $default-branch
     pull_request:
+        branches:
+            - $default-branch
 
 jobs:
     lint:
