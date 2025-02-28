@@ -1,0 +1,43 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "unit",
+            "type": "process",
+            "command": "npm",
+            "args": ["run", "test:watch"],
+            "icon": {
+                "id": "beaker"
+            },
+            "isBackground": true,
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
+        {
+            "label": "app",
+            "type": "process",
+            "command": "npm",
+            "args": ["start"],
+            "icon": {
+                "id": "preview"
+            },
+            "isBackground": true,
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
+        {
+            "label": "cli",
+            "type": "process",
+            "command": "",
+            "icon": {
+                "id": "terminal"
+            },
+            "isBackground": true,
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        }
+    ]
+}
