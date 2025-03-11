@@ -9,7 +9,7 @@ To find a fully remote position in a smaller company where I can architect, lead
 
 ## Summary
 
-- 14 years of engineering experience across 4 companies
+- 15 years of engineering experience across 4 companies
 - Led multiple teams to build applications from scratch
 - Specialize in frontend development with React and TypeScript
 - Maintain many open source projects and repositories
@@ -40,7 +40,7 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 | _Continuous Integration_ | GitHub Actions, Bitbucket Pipelines, Travis CI, Jenkins     |
 | _Cloud_                  | Amazon Web Services, Google Cloud Platform, Microsoft Azure |
 | _Hosting_                | Vercel, Netlify, Cloudflare, Fly, Render, Heroku            |
-| _Databases_              | PostgreSQL, MySQL, MongoDB, Redis, Firestore                |
+| _Databases_              | PostgreSQL, MySQL, SQLite, MongoDB, Redis, Firestore        |
 | _Infrastructure_         | Terraform, Puppet, Artifactory                              |
 | _Monitoring_             | Sentry, SignalFX, Splunk, OpsGenie, Pager Duty, New Relic   |
 | _Development Lifecycle_  | JIRA, GitHub Projects                                       |
@@ -53,6 +53,8 @@ _August 2024 - Present_
 
 [_Link Modal Redesign_][link]
 
+- Implemented a new Link entry point from the [Payment Element][payment-element].
+- Showed measurable increase to Link conversion rates.
 - Led a team of two developers to implement testing infrastructure.
 - Built with Playwright and Jest for test libraries.
 - Drastically simplified test setup and mocking.
@@ -191,9 +193,9 @@ _Topic Status_
 
 ## YouTube
 
-- Over 140 videos and 1,500 subscribers on [YouTube][youtube]
+- Over 170 videos and 1,600 subscribers on [YouTube][youtube]
 - Published tutorial series on [Remix][remix-tutorial], [Webpack][webpack-tutorial], [Firebase][firebase-tutorial], [Plop][plop-tutorial], and [NPM Packages][npm-tutorial]
-- Created three [Dev Hints][dev-hints] videos for [Cloudinary][cloudinary]
+- Created over 10 [Dev Hints][dev-hints] videos for [Cloudinary][cloudinary]
 
 ## Podcasts
 
@@ -270,6 +272,7 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 [Twitch][twitch]  
 [YouTube][youtube]  
 [Twitter][twitter]  
+[Bluesky][bluesky]  
 [GitHub][github]  
 [npm][npm]  
 [LinkedIn][linkedin]
@@ -317,3 +320,5 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 [rehype-cloudinary-image-size]: https://www.npmjs.com/package/@bradgarropy/rehype-cloudinary-image-size
 [cloudinary]: https://cloudinary.com
 [dev-hints]: https://youtube.com/playlist?list=PL8dVGjLA2oMpaTbvoKCaRNBMQzBUIv7N8
+[payment-element]: https://docs.stripe.com/payments/payment-element
+[bluesky]: https://bsky.app/profile/bradgarropy.com
