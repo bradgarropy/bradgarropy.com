@@ -37,7 +37,7 @@ const generateFeed = async (type: FeedType) => {
         link: "https://bradgarropy.com",
         language: "en",
         image: createImageUrl("/social/facebook.png"),
-        favicon: createImageUrl("/site/favicon.ico"),
+        favicon: createImageUrl("/site/favicon.png"),
         copyright: `© ${new Date().getFullYear()} Brad Garropy`,
         feedLinks: {
             rss: "https://bradgarropy.com/feed.xml",

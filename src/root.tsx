@@ -40,7 +40,7 @@ export const links: LinksFunction = () => {
         },
         {
             rel: "icon",
-            href: createImageUrl("/site/favicon.ico"),
+            href: createImageUrl("/site/favicon.png"),
         },
         {
             rel: "alternate",
