@@ -46,6 +46,7 @@ I'm getting more serious about [streaming][stream] my coding sessions, and now I
 Regardless of what computer I'm on, I use these applications. As you may guess, cross platform compatibility is important to me.
 
 [Visual Studio Code][vscode]  
+[GitHub Copilot][copilot]  
 [Google Chrome][chrome]  
 [Figma][figma]  
 [Discord][discord]  
@@ -61,8 +62,8 @@ These pieces of tech are always within reach.
 
 [Apple iPhone 14 Pro][iphone]  
 [Apple AirPods Pro (2nd gen)][airpods]  
+[Apple AirPods Max][airpods-max]  
 [Apple Watch Series 9][watch]  
-[Sony WH-1000XM3 Headphones][wh-1000mx3]  
 [Sony Playstation 5 Slim][playstation]  
 [Nintento Switch OLED][switch]
 
@@ -88,6 +89,7 @@ These pieces of tech are always within reach.
 [multi-mount]: https://www.elgato.com/en/gaming/multi-mount
 [key-light]: https://www.elgato.com/en/gaming/key-light
 [vscode]: https://code.visualstudio.com
+[copilot]: https://github.com/features/copilot
 [chrome]: https://www.google.com/chrome
 [figma]: https://www.figma.com
 [obs]: https://obsproject.com
@@ -96,8 +98,8 @@ These pieces of tech are always within reach.
 [ray]: https://ray.so
 [iphone]: https://www.apple.com/shop/buy-iphone/iphone-14
 [airpods]: https://www.amazon.com/Apple-Generation-Cancelling-Transparency-Personalized/dp/B0CHWRXH8B?tag=bradgarropy00-20
+[airpods-max]: https://www.amazon.com/Apple-Headphones-Cancellation-Transparency-Personalized/dp/B0DGVTBRTZ?tag=bradgarropy00-20
 [watch]: https://www.amazon.com/Apple-Cellular-Smartwatch-Midnight-Aluminum/dp/B0CHXB6CNY?tag=bradgarropy00-20
-[wh-1000mx3]: https://www.amazon.com/gp/product/B07G4MNFS1?tag=bradgarropy00-20
 [discord]: https://discord.com
 [insomnia]: https://insomnia.rest
 [uplift]: https://www.upliftdesk.com/uplift-4-leg-standing-desk-v2-v2-commercial
