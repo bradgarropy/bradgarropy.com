@@ -116,7 +116,7 @@
         "tailwindcss": "^4.0.0",
         "tsx": "^4.6.0",
         "typescript": "^5.0.2",
-        "vite": "^6.0.11",
+        "vite": "^6.0.14",
         "vite-plugin-json5": "^1.1.2",
         "vite-plugin-markdown": "^2.2.0",
         "vite-tsconfig-paths": "^5.1.4",
