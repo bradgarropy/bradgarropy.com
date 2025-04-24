@@ -1,6 +1,6 @@
 {
     "name": "bradgarropy.com",
-    "version": "8.7.1",
+    "version": "8.8.1",
     "description": "🏠 my home on the web",
     "type": "module",
     "keywords": [
@@ -97,7 +97,7 @@
         "@testing-library/jest-dom": "^6.1.5",
         "@testing-library/react": "^16.2.0",
         "@testing-library/user-event": "^14.4.3",
-        "@types/node": "^20.10.4",
+        "@types/node": "^22.15.0",
         "@types/react": "^19.0.1",
         "@types/react-dom": "^19.0.2",
         "@vitejs/plugin-react": "^4.2.1",
