@@ -1,5 +1,4 @@
 import type {LinksFunction, LoaderFunctionArgs} from "@remix-run/node"
-import type {MetaFunction} from "@remix-run/react"
 import {
     Links,
     Meta,
@@ -15,7 +14,6 @@ import {AppProvider} from "~/context/App"
 import {ThemeProvider} from "~/context/Theme"
 import styles from "~/styles/tailwind.css?url"
 import {createImageUrl} from "~/utils/cloudinary"
-import {getMeta} from "~/utils/meta"
 import {getTheme} from "~/utils/session.server"
 
 import pkg from "../package.json"
@@ -25,11 +23,6 @@ export const loader = async ({request}: LoaderFunctionArgs) => {
 
     const theme = await getTheme(request)
     return {measurementId, theme}
-}
-
-export const meta: MetaFunction = () => {
-    const meta = getMeta()
-    return meta
 }
 
 export const links: LinksFunction = () => {
