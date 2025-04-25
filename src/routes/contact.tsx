@@ -1,20 +1,11 @@
-import type {MetaFunction} from "@remix-run/node"
-
 import Contact from "~/components/Contact"
 import Layout from "~/components/Layout"
-import {getMeta} from "~/utils/meta"
-
-export const meta: MetaFunction = () => {
-    const meta = getMeta({
-        title: "👋🏼 say hi",
-    })
-
-    return meta
-}
+import Meta from "~/components/Meta"
 
 const ContactRoute = () => {
     return (
         <Layout>
+            <Meta title="👋🏼 say hi" />
             <Contact />
         </Layout>
     )

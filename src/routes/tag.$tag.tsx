@@ -1,10 +1,10 @@
-import type {LoaderFunctionArgs, MetaFunction} from "@remix-run/node"
+import type {LoaderFunctionArgs} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 
 import Layout from "~/components/Layout"
+import Meta from "~/components/Meta"
 import PostList from "~/components/PostList"
 import type {Tag} from "~/types/post"
-import {getMeta} from "~/utils/meta"
 import {getPostsByTag} from "~/utils/posts"
 
 export const loader = async ({params}: LoaderFunctionArgs) => {
@@ -14,19 +14,13 @@ export const loader = async ({params}: LoaderFunctionArgs) => {
     return {tag, posts}
 }
 
-export const meta: MetaFunction<typeof loader> = ({data}) => {
-    const meta = getMeta({
-        title: `🔖 tag | ${data?.tag}`,
-    })
-
-    return meta
-}
-
 const TagRoute = () => {
     const {tag, posts} = useLoaderData<typeof loader>()
 
     return (
         <Layout>
+            <Meta title={`🔖 tag | ${tag}`} />
+
             <div className="self-start">
                 <h1 className="mb-16 flex flex-col items-center gap-y-2">
                     <span className="font-heading text-4xl font-semibold">

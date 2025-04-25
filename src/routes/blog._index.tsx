@@ -1,25 +1,16 @@
-import type {MetaFunction} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 import {useState} from "react"
 
 import Layout from "~/components/Layout"
+import Meta from "~/components/Meta"
 import PostList from "~/components/PostList"
 import PostSearchBar from "~/components/PostSearchBar"
 import type {PostFrontmatter} from "~/types/post"
-import {getMeta} from "~/utils/meta"
 import {getPosts} from "~/utils/posts"
 
 export const loader = async () => {
     const allPosts = getPosts()
     return {allPosts}
-}
-
-export const meta: MetaFunction = () => {
-    const meta = getMeta({
-        title: "✍🏼 blog",
-    })
-
-    return meta
 }
 
 const BlogRoute = () => {
@@ -32,6 +23,8 @@ const BlogRoute = () => {
 
     return (
         <Layout>
+            <Meta title="✍🏼 blog" />
+
             <div>
                 <PostSearchBar posts={allPosts} onSearch={onSearch} />
                 <PostList posts={posts} />

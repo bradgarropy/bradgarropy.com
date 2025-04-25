@@ -1,10 +1,10 @@
-import type {LoaderFunctionArgs, MetaFunction} from "@remix-run/node"
+import type {LoaderFunctionArgs} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 
 import Layout from "~/components/Layout"
+import Meta from "~/components/Meta"
 import Now from "~/components/Now"
 import type {NowFrontmatter} from "~/types/now"
-import {getMeta} from "~/utils/meta"
 import {getNewerNow, getNowByDate, getOlderNow} from "~/utils/now"
 
 export const loader = async ({params}: LoaderFunctionArgs) => {
@@ -21,19 +21,12 @@ export const loader = async ({params}: LoaderFunctionArgs) => {
     }
 }
 
-export const meta: MetaFunction = () => {
-    const meta = getMeta({
-        title: "🧭 now",
-    })
-
-    return meta
-}
-
 const NowRoute = () => {
     const {currentNow, newerNow, olderNow} = useLoaderData<typeof loader>()
 
     return (
         <Layout>
+            <Meta title="🧭 now" />
             <Now now={currentNow} newer={newerNow} older={olderNow} />
         </Layout>
     )

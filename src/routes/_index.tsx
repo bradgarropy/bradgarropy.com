@@ -1,9 +1,8 @@
-import type {MetaFunction} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 
 import Home from "~/components/Home"
 import Layout from "~/components/Layout"
-import {getMeta} from "~/utils/meta"
+import Meta from "~/components/Meta"
 import {getPosts} from "~/utils/posts"
 import {getFeaturedProjects} from "~/utils/projects"
 import {getLatestVideos} from "~/utils/videos"
@@ -20,17 +19,13 @@ export const loader = async () => {
     }
 }
 
-export const meta: MetaFunction = () => {
-    const meta = getMeta({title: "🏠 my home on the web"})
-    return meta
-}
-
 const IndexRoute = () => {
     const {latestPosts, latestVideos, featuredProjects} =
         useLoaderData<typeof loader>()
 
     return (
         <Layout>
+            <Meta />
             <Home
                 latestPosts={latestPosts}
                 latestVideos={latestVideos}

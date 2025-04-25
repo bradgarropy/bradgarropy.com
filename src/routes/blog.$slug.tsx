@@ -1,13 +1,13 @@
-import type {LoaderFunctionArgs, MetaFunction} from "@remix-run/node"
+import type {LoaderFunctionArgs} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react"
 
 import Layout from "~/components/Layout"
+import Meta from "~/components/Meta"
 import Newsletter from "~/components/Newsletter"
 import Post from "~/components/Post"
 import PostList from "~/components/PostList"
 import Section from "~/components/Section"
 import type {PostFrontmatter} from "~/types/post"
-import {getMeta} from "~/utils/meta"
 import {getPostBySlug, getRelatedPosts} from "~/utils/posts"
 
 export const loader = async ({params}: LoaderFunctionArgs) => {
@@ -18,19 +18,13 @@ export const loader = async ({params}: LoaderFunctionArgs) => {
     return {post, relatedPosts}
 }
 
-export const meta: MetaFunction<typeof loader> = ({data}) => {
-    const meta = getMeta({
-        title: data?.post.frontmatter.title,
-    })
-
-    return meta
-}
-
 const BlogRoute = () => {
     const {post, relatedPosts} = useLoaderData<typeof loader>()
 
     return (
         <Layout>
+            <Meta title={post.frontmatter.title} />
+
             <div className="flex flex-col gap-y-28">
                 <Post post={post} />
 
