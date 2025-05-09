@@ -48,8 +48,13 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 
 ## Work Experience
 
+**Cloudflare | Senior Software Engineer**  
+_May 2025 - Present_
+
+- Working on the [Cloudflare dashboard][cloudflare-dashboard].
+
 **Stripe | Senior Frontend Developer**  
-_August 2024 - Present_
+_August 2024 - April 2025_
 
 [_Link Modal Redesign_][link]
 
@@ -277,6 +282,7 @@ _04/23/2020_ | [Headless vs Embedded CMS][cms] with James Quick
 [npm][npm]  
 [LinkedIn][linkedin]
 
+[cloudflare-dashboard]: http://dash.cloudflare.com
 [raycast-stripe]: https://raycast.com/pradeepb28/stripe
 [link]: https://link.com
 [email]: mailto:bradgarropy@gmail.com
