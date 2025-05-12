@@ -26,7 +26,8 @@
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "strict": true,
-        "target": "ESNext"
+        "target": "ESNext",
+        "types": ["@remix-run/node", "vite/client"]
     },
     "include": ["env.d.ts", "**/*.js", "**/*.ts", "**/*.tsx"],
     "exclude": ["node_modules"]

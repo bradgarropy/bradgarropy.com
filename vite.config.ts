@@ -31,6 +31,7 @@ export default defineConfig({
                   appDirectory: "src",
                   ignoredRouteFiles: ["**/.*"],
                   future: {
+                      unstable_optimizeDeps: true,
                       v3_fetcherPersist: true,
                       v3_relativeSplatPath: true,
                       v3_throwAbortReason: true,
