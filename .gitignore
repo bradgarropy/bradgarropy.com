@@ -3,6 +3,7 @@
 
 # build
 /.cache
+/.react-router
 /build
 /public/build
 /tsconfig.tsbuildinfo
