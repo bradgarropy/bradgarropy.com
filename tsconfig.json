@@ -24,11 +24,12 @@
             "~/utils/*": ["src/utils/*"]
         },
         "resolveJsonModule": true,
+        "rootDirs": [".", "./.react-router/types"],
         "skipLibCheck": true,
         "strict": true,
         "target": "ESNext",
-        "types": ["@remix-run/node", "vite/client"]
+        "types": ["@react-router/node", "vite/client"]
     },
-    "include": ["env.d.ts", "**/*.js", "**/*.ts", "**/*.tsx"],
+    "include": [".react-router/types/**/*", "**/*.js", "**/*.ts", "**/*.tsx"],
     "exclude": ["node_modules"]
 }
