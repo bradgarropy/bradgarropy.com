@@ -50,6 +50,8 @@ jobs:
                   cache: "npm"
             - name: "📦 install"
               run: npm ci
+            - name: "🔄 typegen"
+              run: npm run typegen
             - name: "🟦 typecheck"
               run: npm run typecheck
     test:
