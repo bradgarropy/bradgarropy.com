@@ -1,5 +1,4 @@
 import {vitePlugin as remix} from "@remix-run/dev"
-import {installGlobals} from "@remix-run/node"
 import tailwind from "@tailwindcss/vite"
 import {vercelPreset} from "@vercel/remix/vite"
 import react from "@vitejs/plugin-react"
@@ -8,8 +7,6 @@ import {defineConfig} from "vite"
 import json5 from "vite-plugin-json5"
 import {Mode, plugin as markdown} from "vite-plugin-markdown"
 import tsconfigPaths from "vite-tsconfig-paths"
-
-installGlobals()
 
 declare module "@remix-run/node" {
     interface Future {
