@@ -1,5 +1,5 @@
 import type {Config} from "@react-router/dev/config"
-import {vercelPreset} from "@vercel/remix/vite"
+import {vercelPreset} from "@vercel/react-router/vite"
 
 const config = {
     appDirectory: "src",
