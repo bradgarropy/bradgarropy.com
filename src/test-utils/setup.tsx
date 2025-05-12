@@ -9,4 +9,4 @@ afterEach(() => {
     cleanup()
 })
 
-vi.mock("@remix-run/react", () => mockRemix)
+vi.mock("react-router", () => mockRemix)

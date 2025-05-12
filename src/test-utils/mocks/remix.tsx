@@ -25,7 +25,7 @@ const mockUseFetcher = vi.fn().mockReturnValue({
     submit: mockSubmit,
 })
 
-const actualRemix = vi.importActual("@remix-run/react")
+const actualRemix = vi.importActual("react-router")
 
 const mockRemix = {
     ...actualRemix,
