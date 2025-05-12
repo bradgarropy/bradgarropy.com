@@ -1,4 +1,3 @@
-import type {LinksFunction, LoaderFunctionArgs} from "@remix-run/node"
 import {
     Links,
     Meta,
@@ -8,6 +7,7 @@ import {
     useLoaderData,
 } from "@remix-run/react"
 import classnames from "classnames"
+import type {LinksFunction, LoaderFunctionArgs} from "react-router"
 
 import GoogleAnalytics from "~/components/GoogleAnalytics"
 import {AppProvider} from "~/context/App"

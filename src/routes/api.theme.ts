@@ -1,4 +1,4 @@
-import {type ActionFunctionArgs, data} from "@remix-run/node"
+import {type ActionFunctionArgs, data} from "react-router"
 
 import type {Theme} from "~/types/theme"
 import {setTheme} from "~/utils/session.server"

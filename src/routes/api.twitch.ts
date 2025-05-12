@@ -1,5 +1,5 @@
 import {http} from "@bradgarropy/http"
-import {data} from "@remix-run/node"
+import {data} from "react-router"
 
 type ChannelStatus = {
     isLive: boolean
