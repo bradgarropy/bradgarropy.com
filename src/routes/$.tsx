@@ -1,4 +1,4 @@
-import {useLoaderData} from "@remix-run/react"
+import {useLoaderData} from "react-router"
 
 import FourOhFour from "~/components/FourOhFour"
 import Layout from "~/components/Layout"

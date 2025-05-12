@@ -1,6 +1,6 @@
-import {Link} from "@remix-run/react"
 import classnames from "classnames"
 import type {FC, ReactNode} from "react"
+import {Link} from "react-router"
 
 type LinkButtonProps = {
     to: string

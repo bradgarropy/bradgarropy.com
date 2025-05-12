@@ -1,5 +1,5 @@
-import {Link} from "@remix-run/react"
 import type {FC} from "react"
+import {Link} from "react-router"
 
 import FancyLink from "~/components/FancyLink"
 import Section from "~/components/Section"

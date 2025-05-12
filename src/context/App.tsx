@@ -1,6 +1,6 @@
-import {useLocation} from "@remix-run/react"
 import type {Dispatch, FC, ReactNode, SetStateAction} from "react"
 import {createContext, useEffect, useState} from "react"
+import {useLocation} from "react-router"
 
 type AppContextType = {
     open: boolean

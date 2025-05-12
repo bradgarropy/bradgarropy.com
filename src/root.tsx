@@ -1,3 +1,5 @@
+import classnames from "classnames"
+import type {LinksFunction, LoaderFunctionArgs} from "react-router"
 import {
     Links,
     Meta,
@@ -5,9 +7,7 @@ import {
     Scripts,
     ScrollRestoration,
     useLoaderData,
-} from "@remix-run/react"
-import classnames from "classnames"
-import type {LinksFunction, LoaderFunctionArgs} from "react-router"
+} from "react-router"
 
 import GoogleAnalytics from "~/components/GoogleAnalytics"
 import {AppProvider} from "~/context/App"

@@ -1,5 +1,5 @@
-import {Link} from "@remix-run/react"
 import type {FC} from "react"
+import {Link} from "react-router"
 
 import ProjectTech from "~/components/ProjectTech"
 import type {Project as ProjectType} from "~/types/project"

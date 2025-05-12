@@ -1,5 +1,5 @@
-import {Link} from "@remix-run/react"
 import type {FC} from "react"
+import {Link} from "react-router"
 
 import type {Video} from "~/types/video"
 import {createYouTubeUrl} from "~/utils/cloudinary"

@@ -1,5 +1,5 @@
-import {Link} from "@remix-run/react"
 import type {FC, ReactNode} from "react"
+import {Link} from "react-router"
 
 type FancyLinkProps = {
     to: string

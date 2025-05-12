@@ -1,7 +1,7 @@
-import {useLocation, useSearchParams} from "@remix-run/react"
 import Fuse from "fuse.js"
 import type {ChangeEventHandler, FC} from "react"
 import {useEffect, useState} from "react"
+import {useLocation, useSearchParams} from "react-router"
 
 import type {PostFrontmatter} from "~/types/post"
 

@@ -1,6 +1,6 @@
-import {Link} from "@remix-run/react"
 import classnames from "classnames"
 import type {FC} from "react"
+import {Link} from "react-router"
 
 import PostMeta from "~/components/PostMeta"
 import type {PostFrontmatter} from "~/types/post"

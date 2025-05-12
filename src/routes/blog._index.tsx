@@ -1,5 +1,5 @@
-import {useLoaderData} from "@remix-run/react"
 import {useState} from "react"
+import {useLoaderData} from "react-router"
 
 import Layout from "~/components/Layout"
 import Meta from "~/components/Meta"

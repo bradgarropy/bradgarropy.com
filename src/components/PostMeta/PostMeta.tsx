@@ -1,5 +1,5 @@
-import {Link} from "@remix-run/react"
 import type {FC} from "react"
+import {Link} from "react-router"
 
 import type {Post} from "~/types/post"
 import {formatDate} from "~/utils/date"

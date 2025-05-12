@@ -1,5 +1,5 @@
-import {Link} from "@remix-run/react"
 import type {FC} from "react"
+import {Link} from "react-router"
 
 import ColorTheme from "~/components/ColorTheme"
 import Logo from "~/components/Logo"

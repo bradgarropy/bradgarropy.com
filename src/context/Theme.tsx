@@ -1,6 +1,6 @@
-import {useFetcher} from "@remix-run/react"
 import type {FC, ReactNode} from "react"
 import {createContext, useEffect, useRef, useState} from "react"
+import {useFetcher} from "react-router"
 
 import type {ThemeContextType} from "~/types/context"
 import type {Theme} from "~/types/theme"

@@ -1,6 +1,6 @@
-import {Link} from "@remix-run/react"
 import type {JSX, ReactNode} from "react"
 import {Fragment, jsx, jsxs} from "react/jsx-runtime"
+import {Link} from "react-router"
 import rehypeParse from "rehype-parse"
 import rehypeReact from "rehype-react"
 import {unified} from "unified"
