@@ -2,7 +2,7 @@
     "buildCommand": "npm run build",
     "cleanUrls": true,
     "devCommand": "npm start",
-    "framework": "remix",
+    "framework": "react-router",
     "installCommand": "npm install",
     "redirects": [],
     "trailingSlash": false
