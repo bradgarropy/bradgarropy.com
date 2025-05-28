@@ -48,7 +48,7 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 
 ## Work Experience
 
-**Cloudflare | Senior Software Engineer**  
+**Cloudflare | Senior Systems Engineer**  
 _May 2025 - Present_
 
 - Working on the [Cloudflare dashboard][cloudflare-dashboard].
