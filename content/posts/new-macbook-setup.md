@@ -101,8 +101,6 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 
 - Add `bradgarropy@gmail.com` account
     - Select _Mail_ and _Calendar_
-- Add `brad@compressed.fm` account
-    - Select _Mail_ and _Calendar_
 
 ![Internet Accounts][internet-accounts]
 
