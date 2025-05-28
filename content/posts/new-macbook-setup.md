@@ -31,7 +31,7 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 
 ### sound
 
-- Set _Output_ to _Elgato Wave XLR_
+- Set _Output_ to _Elgato XLR Dock_
 - Set _Input_ to _Wave Link Stream_
 
 ![Sound][sound]
@@ -48,22 +48,23 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 ### control center
 
 - Select _Show in Menu Bar_ for _Bluetooth_
-- Select _Show in Menu Bar_ for _Focus_
+- Select _Always Show in Menu Bar_ for _Focus_
 - Select _Don't Show in Menu Bar_ for _Spotlight_
 - Select _Don't Show in Menu Bar_ for _Siri_
 
 ![Control Center][control-center]
 
-### siri & spotlight
+### apple intelligence & siri
 
-- Enable _Listen for "Hey Siri"_
+- Select _"Siri" or "Hey Siri"_ for _Listen for_
 
-![Siri & Spotlight][siri-and-spotlight]
+![Apple Intelligence & Siri][apple-intelligence-and-siri]
 
 ### desktop & dock
 
 - Remove all applications from the dock
 - Enable _Automatically hide and show the Dock_
+- Disable _Show suggested and recent apps in Dock_
 - Set _Click wallpaper to reveal desktop_ to _Only in Stage Manager_
 - Disable _Tiled windows have margins_
 - Setup _Mission Control_ hot corners
@@ -84,7 +85,7 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 
 ### notifications
 
-- Allow notifications from all sources
+- Disable _Summarize notifications_
 
 ![Notifications][notifications]
 
@@ -107,8 +108,8 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 
 ### keyboard
 
-- Keyboard Shortcuts > Modifier
-    - Swap the _Control_ and _Command_ keys on external keyboard
+- Keyboard Shortcuts > Modifier Keys
+    - Swap the _Control_ and _Command_ keys on the _CTRL Keyboard_
 
 ![Keyboard][keyboard]
 
@@ -134,7 +135,9 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
 - Mail > Settings > Composing
     - Uncheck _Quote the text of the original message_
 - Mail > Settings > Signatures
+
     - Move signatures to appropriate accounts
+
 - Messages > Settings > General
     - Check _Share Name and Photo_
     - Uncheck _Summarize messages_
@@ -168,6 +171,9 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
         - _Hard Disks_
         - _External Disks_
     - Disable everything else
+- Elgato Control Center > Preferences > General
+    - Check _Link accessory controls_
+    - Check _Automatically switch off accessories_
 - Elgato Control Center > Preferences > Startup
     - Check _Open automatically on Log In_
 - Elgato Stream Deck > Preferences > Plugins
@@ -176,9 +182,9 @@ _Before setting up a new computer, I always [backup][backup] all of my previous 
     - [OBS Studio][obs-studio-plugin]
     - [Wave Link][wave-link-plugin]
 - Elgato Wave Link > Configure Wave Link
-    - Add _Elgato Wave XLR_ as audio input
+    - Add _Elgato XLR Dock_ as audio input
     - Install [DeeGate][deegate]
-    - Set noise gate to `26db`
+    - Set noise gate to `36db`
 
 ![Finder][finder]
 
@@ -250,7 +256,7 @@ npm install --global @vcode/vsce
 [vsce]: https://github.com/microsoft/vscode-vsce
 [icloud]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/icloud.png
 [control-center]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/control-center.png
-[siri-and-spotlight]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/siri-and-spotlight.png
+[apple-intelligence-and-siri]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/apple-intelligence-and-siri.png
 [desktop-and-dock]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/desktop-and-dock.png
 [notifications]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/notifications.png
 [wallpaper]: https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/posts/wallpaper.png
