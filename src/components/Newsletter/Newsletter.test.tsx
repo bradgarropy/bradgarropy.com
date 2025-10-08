@@ -42,9 +42,7 @@ test("subscribes", async () => {
     const subscribeButton = screen.getByText("📧 subscribe")
     await userEvent.click(subscribeButton)
 
-    expect(http.post).toHaveBeenCalledTimes(1)
-
-    expect(http.post).toHaveBeenCalledWith("/api/subscribe", {
+    expect(http.post).toHaveBeenCalledExactlyOnceWith("/api/subscribe", {
         body: {
             email: "bradgarropy@gmail.com",
         },

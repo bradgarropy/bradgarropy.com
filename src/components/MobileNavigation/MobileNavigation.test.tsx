@@ -30,8 +30,7 @@ describe("closed mobile navigation", () => {
         render(<MobileNavigation />)
 
         await userEvent.click(screen.getByLabelText("menu"))
-        expect(mockAppCtxClosed.setOpen).toHaveBeenCalledTimes(1)
-        expect(mockAppCtxClosed.setOpen).toHaveBeenCalledWith(true)
+        expect(mockAppCtxClosed.setOpen).toHaveBeenCalledExactlyOnceWith(true)
     })
 })
 
@@ -54,7 +53,6 @@ describe("open mobile navigation", () => {
         render(<MobileNavigation />)
 
         await userEvent.click(screen.getByLabelText("close"))
-        expect(mockAppCtxOpen.setOpen).toHaveBeenCalledTimes(1)
-        expect(mockAppCtxOpen.setOpen).toHaveBeenCalledWith(false)
+        expect(mockAppCtxOpen.setOpen).toHaveBeenCalledExactlyOnceWith(false)
     })
 })

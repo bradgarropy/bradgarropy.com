@@ -21,7 +21,7 @@ test("generates xml feed", async () => {
             `<link>https://bradgarropy.com/blog/${post.slug}</link>`,
         )
 
-        expect(feed).toContain(`<guid>${post.slug}</guid>`)
+        expect(feed).toContain(`<guid isPermaLink="false">${post.slug}</guid>`)
 
         expect(feed).toContain(
             "<author>bradgarropy@gmail.com (Brad Garropy)</author>",
