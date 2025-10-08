@@ -20,8 +20,7 @@ test("toggles dark mode", async () => {
     render(<ColorTheme />)
 
     await userEvent.click(screen.getByLabelText("dark"))
-    expect(mockThemeCtxLight.setTheme).toHaveBeenCalledTimes(1)
-    expect(mockThemeCtxLight.setTheme).toHaveBeenCalledWith("dark")
+    expect(mockThemeCtxLight.setTheme).toHaveBeenCalledExactlyOnceWith("dark")
 })
 
 test("toggles light mode", async () => {
@@ -31,5 +30,5 @@ test("toggles light mode", async () => {
 
     await userEvent.click(screen.getByLabelText("light"))
     expect(mockThemeCtxDark.setTheme).toHaveBeenCalledTimes(1)
-    expect(mockThemeCtxDark.setTheme).toHaveBeenCalledWith("light")
+    expect(mockThemeCtxDark.setTheme).toHaveBeenCalledExactlyOnceWith("light")
 })
