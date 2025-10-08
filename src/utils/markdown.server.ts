@@ -9,11 +9,11 @@ import type {Options} from "rehype-pretty-code"
 import rehypePrettyCode from "rehype-pretty-code"
 import rehypeRaw from "rehype-raw"
 import rehypeStringify from "rehype-stringify"
+import rehypeUnwrapImages from "rehype-unwrap-images"
 import remarkGfm from "remark-gfm"
 import remarkInlineLinks from "remark-inline-links"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
-import remarkUnwrapImages from "remark-unwrap-images"
 import {createHighlighter} from "shiki"
 import {unified} from "unified"
 
@@ -55,7 +55,6 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
     const processor = unified()
         .use(remarkParse)
         .use(remarkGfm)
-        .use(remarkUnwrapImages)
         .use(remarkInlineLinks)
         .use(
             /* v8 ignore next 3 */
@@ -77,6 +76,7 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
             target: "_blank",
             rel: ["noopener", "noreferrer"],
         })
+        .use(rehypeUnwrapImages)
         .use(rehypeCloudinaryImageSize)
         .use(rehypeImageLinks, {
             srcTransform: (url: string) => {
