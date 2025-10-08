@@ -65,7 +65,7 @@ These pieces of tech are always within reach.
 [Apple AirPods Max][airpods-max]  
 [Apple Watch Series 9][watch]  
 [Sony Playstation 5 Slim][playstation]  
-[Nintento Switch OLED][switch]
+[Nintento Switch 2][switch]
 
 [developer]: https://bradgarropy.com/topic/coding
 [tech]: https://bradgarropy.com/topic/tech
@@ -104,4 +104,4 @@ These pieces of tech are always within reach.
 [insomnia]: https://insomnia.rest
 [uplift]: https://www.upliftdesk.com/uplift-4-leg-standing-desk-v2-v2-commercial
 [playstation]: https://amzn.to/3ynxTVP
-[switch]: https://www.amazon.com/Nintendo-Switch-OLED-Model-Neon-Joy/dp/B098RKWHHZ?tag=bradgarropy00-20
+[switch]: https://amzn.to/48lEtMe
