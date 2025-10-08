@@ -53,7 +53,6 @@ describe("open mobile navigation", () => {
         render(<MobileNavigation />)
 
         await userEvent.click(screen.getByLabelText("close"))
-        expect(mockAppCtxOpen.setOpen).toHaveBeenCalledTimes(1)
         expect(mockAppCtxOpen.setOpen).toHaveBeenCalledExactlyOnceWith(false)
     })
 })

@@ -29,6 +29,5 @@ test("toggles light mode", async () => {
     render(<ColorTheme />)
 
     await userEvent.click(screen.getByLabelText("light"))
-    expect(mockThemeCtxDark.setTheme).toHaveBeenCalledTimes(1)
     expect(mockThemeCtxDark.setTheme).toHaveBeenCalledExactlyOnceWith("light")
 })
