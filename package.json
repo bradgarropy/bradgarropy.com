@@ -110,7 +110,7 @@
         "plop-helper-date": "^1.0.0",
         "plop-helper-slugify": "^1.1.0",
         "prettier": "^3.6.2",
-        "prettier-plugin-tailwindcss": "^0.6.14",
+        "prettier-plugin-tailwindcss": "^0.7.1",
         "react": "^19.2.0",
         "remix-development-tools": "^4.7.7",
         "tailwindcss": "^4.1.14",
