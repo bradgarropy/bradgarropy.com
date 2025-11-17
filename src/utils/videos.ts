@@ -1,5 +1,5 @@
 import {http} from "@bradgarropy/http"
-import TTLCache from "@isaacs/ttlcache"
+import {TTLCache} from "@isaacs/ttlcache"
 
 import type {Video} from "~/types/video"
 
