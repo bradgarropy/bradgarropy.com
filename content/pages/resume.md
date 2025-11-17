@@ -9,7 +9,7 @@ To find a fully remote position in a smaller company where I can architect, lead
 
 ## Summary
 
-- 15 years of engineering experience across 4 companies
+- 15 years of engineering experience across 5 companies
 - Led multiple teams to build applications from scratch
 - Specialize in frontend development with React and TypeScript
 - Maintain many open source projects and repositories
@@ -51,7 +51,19 @@ _2010_ | Bachelor of Science in Electrical and Computer Engineering
 **Cloudflare | Senior Systems Engineer**  
 _May 2025 - Present_
 
-- Working on the [Cloudflare dashboard][cloudflare-dashboard].
+_Authorization Errors_
+
+- Reduced client authorization errors in dashboard by 50%
+- Led a team of 3 engineers and collaborated with access management team
+- Created authorization aware React hooks and components
+- Dramatically improved unauthorized user experience
+
+[_Dashboard Navigation_][cloudflare-dashboard]
+
+- Led a team of 4 engineers to build new navigation
+- Worked with product and design
+- Rolled out under a feature flag and is now default
+- Received positive custom feedback on social channels
 
 **Stripe | Senior Frontend Developer**  
 _August 2024 - April 2025_
