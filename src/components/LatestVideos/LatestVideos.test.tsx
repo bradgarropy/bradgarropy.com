@@ -21,7 +21,5 @@ test("shows latest videos", () => {
 test("handles youtube api limit", () => {
     render(<LatestVideos latestVideos={[]} />)
 
-    expect(
-        screen.getByText("⛔️ YouTube API Limit Reached"),
-    ).toBeInTheDocument()
+    expect(screen.getByText("⛔️ YouTube API Limit Reached")).toBeInTheDocument()
 })
