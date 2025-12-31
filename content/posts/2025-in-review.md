@@ -40,7 +40,7 @@ At this point, my learning is really coming down to practical application, and h
 
 ## 💪🏼 lean for summer
 
-Luckily Gaby and I had a reason to get lean in the summer, our anniversary trip to Cancun. I got down to `178`, and those last few pounds really made a difference! That cut went a little more aggressive that what I would have preferred, but I also reached `179` in the October just by staying consistent in the gym.
+Luckily Gaby and I had a reason to get lean in the summer, our anniversary trip to Cancun. I got down to `178`, and those last few pounds really made a difference! That cut went a little more aggressive than what I would have preferred, but I also reached `179` in the October just by staying consistent in the gym.
 
 ## 😶‍🌫️ understand caffeine and alcohol
 
@@ -89,7 +89,7 @@ I've kept up with the kids and their piano lessons, and it's been really fun to 
 
 My son got super into remote control cars this year. We spent a lot of time driving them, breaking them, and then fixing them. It scratched an itch I had to fix and tinker with things.
 
-As much as I wanted to pull the trigger on a [Bambu Labs P2S][p2s], especially during the Black Friday sales, I just couldn't justify it. I was nervous to spend so much money and then just run out of things to print.
+As much as I wanted to pull the trigger on a [Bambu Lab P2S][p2s], especially during the Black Friday sales, I just couldn't justify it. I was nervous to spend so much money and then just run out of things to print.
 
 But I did get a [Raspberry Pi][raspberry-pi] for Christmas, which could be the gateway into building small electronics projects, which could lead to 3D printing enclosures in the future.
 
