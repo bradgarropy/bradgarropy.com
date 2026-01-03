@@ -14,7 +14,7 @@ I love starting my goals with marriage because my wife is the center of my life.
 
 This year I'd like to deepen our connection. We definitely have our usual patterns, and that can sometimes lead us into the same surface level conversations.
 
-I plan to bring back monthly marriage checkins, and bring some specific questions or conversation topics to each one. I've found a bunch of good example. Some questions explore how we interact, how we support each other, and our satisfaction levels. Other questions ask about future goals, dreams and desires, and fears.
+I plan to bring back monthly marriage checkins, and to bring some specific questions or conversation topics to each one. Some questions explore how we interact, how we support each other, and our satisfaction levels. Other questions ask about future goals, dreams and desires, and fears.
 
 These types of intentional conversations should stop us from just watching TV in the evenings and allow us to get closer each night we spend on the couch.
 
@@ -45,9 +45,9 @@ This year I'd like to see our total assets reach `$1,000,000`. I know that sound
 
 ## 🇲🇽 spanish
 
-This year I still plan on doing my [Duolingo][duolingo] each day, but it's starting to reach the limit of what it can teach me. Therefore, my goal is to read one real book in Spanish. Gaby got me [El Future es Imperfecto][el-futuro] for Christmas, and I'll work my way through that over the course of the year.
+This year I still plan on doing my [Duolingo][duolingo] each day, but it's starting to reach the limit of what it can teach me. Therefore, my goal is to read one real book in Spanish. Gaby got me [El Futuro es Imperfecto][el-futuro] for Christmas, and I'll work my way through that over the course of the year.
 
-I think this is a great first step to immersing myself in the language, which will teach me more that any application could in the long run.
+I think this is a great first step to immersing myself in the language, which will teach me more than any application could in the long run.
 
 ## 🛠️ physical not digital
 
