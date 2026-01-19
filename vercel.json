@@ -1,7 +1,7 @@
 {
     "buildCommand": "npm run build",
     "cleanUrls": true,
-    "devCommand": "npm start",
+    "devCommand": "npm run dev",
     "framework": "remix",
     "installCommand": "npm install",
     "redirects": [],
