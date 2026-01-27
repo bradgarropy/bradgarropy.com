@@ -15,6 +15,7 @@ import {
     MoonIcon,
     NextIcon,
     NodeIcon,
+    RaspberryPiIcon,
     ReactIcon,
     RemixIcon,
     SunIcon,
@@ -23,6 +24,7 @@ import {
     TwitchIcon,
     TwitterIcon,
     TypescriptIcon,
+    VercelIcon,
     XIcon,
     YoutubeIcon,
 } from "~/components/Icons"
@@ -61,6 +63,8 @@ const Icon: FC<IconProps> = ({name, ...props}) => {
             return <NextIcon {...props} />
         case "node":
             return <NodeIcon {...props} />
+        case "raspberry-pi":
+            return <RaspberryPiIcon {...props} />
         case "react":
             return <ReactIcon {...props} />
         case "remix":
@@ -77,6 +81,8 @@ const Icon: FC<IconProps> = ({name, ...props}) => {
             return <TypescriptIcon {...props} />
         case "tailwind":
             return <TailwindIcon {...props} />
+        case "vercel":
+            return <VercelIcon {...props} />
         case "x":
             return <XIcon {...props} />
         case "youtube":
