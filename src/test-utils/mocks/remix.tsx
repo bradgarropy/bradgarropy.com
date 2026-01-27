@@ -25,6 +25,8 @@ const mockUseFetcher = vi.fn().mockReturnValue({
     submit: mockSubmit,
 })
 
+const mockUseRouteLoaderData = vi.fn()
+
 const actualRemix = vi.importActual("@remix-run/react")
 
 const mockRemix = {
@@ -33,6 +35,7 @@ const mockRemix = {
     useFetcher: mockUseFetcher,
     useLocation: mockUseLocation,
     useSearchParams: mockUseSearchParams,
+    useRouteLoaderData: mockUseRouteLoaderData,
 }
 
 export {
@@ -42,4 +45,5 @@ export {
     mockSubmit,
     mockUseFetcher,
     mockUseLocation,
+    mockUseRouteLoaderData,
 }
