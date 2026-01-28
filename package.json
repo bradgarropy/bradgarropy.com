@@ -1,6 +1,6 @@
 {
     "name": "bradgarropy.com",
-    "version": "8.8.0",
+    "version": "8.9.0",
     "description": "🏠 my home on the web",
     "type": "module",
     "keywords": [
@@ -15,7 +15,8 @@
         "hacktoberfest",
         "vercel",
         "cloudinary",
-        "tailwind"
+        "tailwind",
+        "raspberry pi"
     ],
     "homepage": "https://bradgarropy.com",
     "bugs": {
@@ -32,8 +33,9 @@
         "url": "https://github.com/bradgarropy/bradgarropy.com"
     },
     "scripts": {
-        "start": "remix vite:dev",
-        "prestart": "tsx src/scripts/copyTheme.ts",
+        "dev": "remix vite:dev",
+        "predev": "tsx src/scripts/copyTheme.ts",
+        "start": "remix-serve ./build/server/index.js",
         "build": "remix vite:build",
         "prebuild": "tsx src/scripts/copyTheme.ts",
         "lint": "eslint .",
@@ -56,9 +58,11 @@
         "@remark-embedder/core": "^3.0.3",
         "@remix-run/node": "^2.17.1",
         "@remix-run/react": "^2.17.1",
+        "@remix-run/serve": "^2.17.1",
         "@vercel/remix": "^2.16.7",
         "classnames": "^2.5.1",
         "date-fns": "^4.1.0",
+        "dotenv": "^17.2.3",
         "feed": "^5.1.0",
         "fuse.js": "^7.1.0",
         "isbot": "latest",
@@ -89,7 +93,6 @@
         "@remix-run/dev": "^2.17.1",
         "@remix-run/fs-routes": "^2.17.1",
         "@remix-run/route-config": "^2.17.1",
-        "@remix-run/serve": "^2.17.1",
         "@rollup/pluginutils": "^5.3.0",
         "@tailwindcss/typography": "^0.5.19",
         "@tailwindcss/vite": "^4.1.14",

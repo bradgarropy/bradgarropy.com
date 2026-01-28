@@ -13,16 +13,18 @@ import GoogleAnalytics from "~/components/GoogleAnalytics"
 import {AppProvider} from "~/context/App"
 import {ThemeProvider} from "~/context/Theme"
 import styles from "~/styles/tailwind.css?url"
+import type {Host} from "~/types/host"
 import {createImageUrl} from "~/utils/cloudinary"
 import {getTheme} from "~/utils/session.server"
 
 import pkg from "../package.json"
 
 export const loader = async ({request}: LoaderFunctionArgs) => {
+    const host: Host = process.env.VERCEL ? "vercel" : "raspberry-pi"
     const measurementId = process.env.GOOGLE_ANALYTICS_MEASUREMENT_ID || ""
 
     const theme = await getTheme(request)
-    return {measurementId, theme}
+    return {measurementId, theme, host}
 }
 
 export const links: LinksFunction = () => {

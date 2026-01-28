@@ -18,6 +18,7 @@ const icons = [
     "moon",
     "next",
     "node",
+    "raspberry-pi",
     "react",
     "remix",
     "sun",
@@ -26,6 +27,7 @@ const icons = [
     "twitter",
     "typescript",
     "tailwind",
+    "vercel",
     "x",
     "youtube",
 ]

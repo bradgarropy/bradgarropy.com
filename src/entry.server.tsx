@@ -3,8 +3,13 @@ import {PassThrough} from "node:stream"
 import type {EntryContext} from "@remix-run/node"
 import {createReadableStreamFromReadable} from "@remix-run/node"
 import {RemixServer} from "@remix-run/react"
+import dotenv from "dotenv"
 import {isbot} from "isbot"
 import {renderToPipeableStream} from "react-dom/server"
+
+if (!process.env.VERCEL) {
+    dotenv.config()
+}
 
 const streamTimeout = 5000
 
