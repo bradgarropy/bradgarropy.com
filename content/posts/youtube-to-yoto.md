@@ -16,9 +16,9 @@ Check it out for yourself at [yoto.bradgarropy.com][my-yoto]!
 
 The application is a complete rebuild of the existing [My Yotoplay][yotoplay] site. It offers all the same features like card creation, track uploads, and icon selection. But the main draw is that it can upload videos and playlists directly from YouTube!
 
-It also includes the entire selection of icons from [Yoto Icons][yoto-icons] built in. And one of my personal favorite features, it can automatically assign numberical icons corresponding to each track.
+It also includes the entire selection of icons from [Yoto Icons][yoto-icons] built in. And one of my personal favorite features, it can automatically assign numerical icons corresponding to each track.
 
-I've been using it for the past few weeks to manage my kids' Yoto playlists and it's been working like a charm. You login with your own Yoto account, and you'll see all of your existing cards and tracks. Then you can manage them in a much cleaner, streamlined experience. No [MYO Studio][myo-studio] required!
+I've been using it for the past few weeks to manage my kids' Yoto playlists and it's been working like a charm. You log in with your own Yoto account, and you'll see all of your existing cards and tracks. Then you can manage them in a much cleaner, streamlined experience. No [MYO Studio][myo-studio] required!
 
 ![yoto-card][yoto-card]
 
@@ -40,7 +40,7 @@ I deployed the application to [Cloudflare Workers][workers], and I'm using a [Cl
 
 ![yoto-architecture][yoto-architecture]
 
-A typical track import looks something like the diagram below. I'm using [Server Sent Events][sse] to show progress as tracks are downloading, uploading, and transcoding. I run them all in parallel on the same sanbox, but if I wanted to I could spin up independent sandboxes for each track to really improve efficiency.
+A typical track import looks something like the diagram below. I'm using [Server Sent Events][sse] to show progress as tracks are downloading, uploading, and transcoding. I run them all in parallel on the same sandbox, but if I wanted to I could spin up independent sandboxes for each track to really improve efficiency.
 
 ![yoto-request][yoto-request]
 
