@@ -10,21 +10,21 @@ After getting into electronics a few weeks ago, I set out to build my first _rea
 
 ## 📋 project planning
 
-The goal of the project was to have an LCD screen that displayed messages real time as users sent them to me. There would be a web application with a form that allows users to submit messages. I also wanted the web application to be real time as well, so it should also be able to receive and display the same messages as the LCD.
+The goal of the project was to have an LCD screen that displayed messages in real time as users sent them to me. There would be a web application with a form that allows users to submit messages. I also wanted the web application to be real time as well, so it should also be able to receive and display the same messages as the LCD.
 
 ## ⚡ hardware and microcontroller
 
-Starting with the hardware, I hooked up the [LCD screen][lcd] to my [Raspberry Pi 5][pi]. Even though the LCD had many inputs and outputs, the version I had simplified it down to only four wires.
+Starting with the hardware, I hooked up the [LCD screen][lcd] to my [Raspberry Pi 5][pi]. Even though the LCD had many inputs and outputs, the module I used simplified the connection to only four wires.
 
 ![lcd marquee][circuit-diagram]
 
-With just a few [lines of python][scroll-message] I had text scrolling across the screen. If you're interested in the full source code, you can find it in my [lcd-marquee-pi][lcd-marquee-pi] repository
+With just a few [lines of python][scroll-message] I had text scrolling across the screen. If you're interested in the full source code, you can find it in my [lcd-marquee-pi][lcd-marquee-pi] repository.
 
 ## ⏱️ realtime
 
 Now came the interesting part, setting up some sort of real time system to accept and deliver messages. Apparently in the IoT world there is a standard for this kind of stuff called [MQTT][mqtt]. Many hosts implement these protocols, so I went with [HiveMQ][hive-mq] to set up the MQTT service.
 
-The setup was super quick from the HiveMQ dashboard, the next step was implementing clients for both the JavaScript web application and the Python running on the microcontroller. Luckily there are libraries in both languages for MQTT that were easy to configure.
+The setup was super quick from the HiveMQ dashboard. The next step was implementing clients for both the JavaScript web application and the Python running on the microcontroller. Luckily there are libraries in both languages for MQTT that were easy to configure.
 
 ![hivemq console][hivemq-console]
 
@@ -36,13 +36,13 @@ The web application was the part of the project that I was most comfortable work
 
 ![lcd marquee][lcd-marquee]
 
-At its core, the web application is a simple form that submits messages and sends them off to the MQTT server. However, the MQTT client implementation wasn't as straightforward here. Because the web application is running as a [Cloudflare Worker][worker], I had to use a [Durable Object][do] to listen to the MQTT server and send web socket messages to the browser.
+At its core, the web application is a simple form that submits messages and sends them off to the MQTT server. However, the MQTT client implementation wasn't as straightforward here. Because the web application is running as a [Cloudflare Worker][worker], I had to use a [Durable Object][do] to listen to the MQTT server and send WebSocket messages to the browser.
 
 You can check out the full source code in my [lcd-marquee-web][lcd-marquee-web] repository.
 
 ## 🏰 architecture
 
-The overall architecture looks something like this. [HiveMQ][hive-mq] is at the center of it all. The browser acts as a publisher as well as a subscriber. The microcontroller acts only as a subscriber. There is an extra Durable Object in the mix to handle the real time communication between the MQTT server and the browser via web sockets.
+The overall architecture looks something like this. [HiveMQ][hive-mq] is at the center of it all. The browser acts as a publisher as well as a subscriber. The microcontroller acts only as a subscriber. There is an extra Durable Object in the mix to handle the real time communication between the MQTT server and the browser via WebSockets.
 
 ![lcd marquee architecture][lcd-marquee-architecture]
 
