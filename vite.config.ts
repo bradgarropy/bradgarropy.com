@@ -1,3 +1,5 @@
+/// <reference types="vitest/config" />
+
 import {vitePlugin as remix} from "@remix-run/dev"
 import {installGlobals} from "@remix-run/node"
 import tailwind from "@tailwindcss/vite"
@@ -7,7 +9,6 @@ import {remixDevTools} from "remix-development-tools"
 import {defineConfig} from "vite"
 import json5 from "vite-plugin-json5"
 import {Mode, plugin as markdown} from "vite-plugin-markdown"
-import tsconfigPaths from "vite-tsconfig-paths"
 
 installGlobals()
 
@@ -19,7 +20,6 @@ declare module "@remix-run/node" {
 
 export default defineConfig({
     plugins: [
-        tsconfigPaths(),
         tailwind(),
         json5(),
         markdown({mode: [Mode.MARKDOWN]}),
@@ -45,6 +45,9 @@ export default defineConfig({
                   serverModuleFormat: "esm",
               }),
     ],
+    resolve: {
+        tsconfigPaths: true,
+    },
     server: {
         open: true,
         port: 3000,
@@ -52,10 +55,10 @@ export default defineConfig({
     test: {
         clearMocks: true,
         coverage: {
-            all: false,
             clean: true,
             cleanOnRerun: true,
             enabled: true,
+            exclude: ["**/index.ts"],
             provider: "v8",
             reporter: ["text", "lcov"],
             reportOnFailure: false,
