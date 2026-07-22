@@ -12,7 +12,7 @@ test("generates xml feed", async () => {
     const posts = getPosts()
 
     expect(feed).toContain("<title>bradgarropy.com</title>")
-    expect(feed).toContain("<link>https://bradgarropy.com</link>")
+    expect(feed).toContain("<link>https://bradgarropy.com/</link>")
 
     posts.forEach(post => {
         expect(feed).toContain(`<title><![CDATA[${post.title}]]></title>`)
