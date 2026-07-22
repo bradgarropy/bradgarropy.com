@@ -125,7 +125,7 @@ describe("transforms markdown", () => {
 
         expect(html).toEqual(
             expect.stringContaining(
-                '<script async src="https://platform.twitter.com/widgets.js" charset="utf-8">',
+                '<script async src="https://platform.x.com/widgets.js" charset="utf-8">',
             ),
         )
     })

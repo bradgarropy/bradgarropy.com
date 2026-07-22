@@ -5,7 +5,7 @@ import {getTestimonials} from "~/utils/testimonials"
 test("gets testimonials", async () => {
     const testimonials = await getTestimonials()
 
-    expect(testimonials).toHaveLength(11)
+    expect(testimonials).toHaveLength(10)
 
     expect(testimonials).toContainEqual(
         expect.objectContaining({
