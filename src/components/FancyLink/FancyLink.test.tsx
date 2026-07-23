@@ -5,5 +5,5 @@ import FancyLink from "~/components/FancyLink"
 
 test("renders", () => {
     render(<FancyLink to="/blog">blog</FancyLink>)
-    expect(screen.getByText("blog")).toHaveClass("shadow-link")
+    expect(screen.getByText("blog")).toHaveClass("underline")
 })
