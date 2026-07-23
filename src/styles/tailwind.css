@@ -21,8 +21,6 @@
     --shadow-reverse-box: -3px 3px 0 #000;
     --shadow-box-white: 3px 3px 0 #fff;
     --shadow-reverse-box-white: -3px 3px 0 #fff;
-    --shadow-link: inset 0 -2px oklch(0.714 0.203 305.504);
-    --shadow-link-hover: inset 0 -25px 0 oklch(0.714 0.203 305.504);
 
     --grid-template-columns-hero: minmax(auto, 15.625rem) auto;
 
