@@ -49,12 +49,14 @@
     @font-face {
         font-family: "Montserrat";
         src: url("/fonts/montserrat.ttf") format("truetype");
+        font-weight: 100 900;
         font-display: swap;
     }
 
     @font-face {
         font-family: "Open Sans";
         src: url("/fonts/open-sans.ttf") format("truetype");
+        font-weight: 300 800;
         font-display: swap;
     }
 }
