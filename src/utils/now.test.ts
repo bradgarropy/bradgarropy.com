@@ -29,6 +29,12 @@ test("gets now by slug", async () => {
     })
 })
 
+test("returns null when a now entry does not exist", async () => {
+    const now = await getNowByDate("missing-now")
+
+    expect(now).toBeNull()
+})
+
 test("gets latest now", async () => {
     const now = await getLatestNow()
 
@@ -43,6 +49,11 @@ test("gets latest now", async () => {
 test("gets newer now", async () => {
     const nows = getAllNows()
     const now = await getNowByDate(nows[0])
+
+    if (!now) {
+        throw new Error("Expected now entry to exist.")
+    }
+
     const newerNow = await getNewerNow(now)
 
     expect(newerNow).not.toBeNull()
@@ -65,6 +76,11 @@ test("gets older now", async () => {
 
     // when there is no older now
     const earliestNow = await getNowByDate(nows[0])
+
+    if (!earliestNow) {
+        throw new Error("Expected earliest now entry to exist.")
+    }
+
     const emptyNow = await getOlderNow(earliestNow)
     expect(emptyNow).toBeNull()
 })

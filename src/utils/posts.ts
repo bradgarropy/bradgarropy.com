@@ -32,7 +32,9 @@ const getPosts = (count?: number): PostFrontmatter[] => {
     return latestPosts
 }
 
-const getPostBySlug = async (slug: PostFrontmatter["slug"]): Promise<Post> => {
+const getPostBySlug = async (
+    slug: PostFrontmatter["slug"],
+): Promise<Post | null> => {
     const files = import.meta.glob<Markdown<PostFrontmatter>>(
         "/content/posts/*.md",
         {
@@ -41,6 +43,11 @@ const getPostBySlug = async (slug: PostFrontmatter["slug"]): Promise<Post> => {
     )
 
     const file = files[`/content/posts/${slug}.md`]
+
+    if (!file) {
+        return null
+    }
+
     const html = await transformMarkdown(file.markdown)
 
     const post: Post = {

@@ -75,6 +75,13 @@ test("gets post by slug", async () => {
     })
 })
 
+test("returns null when a post does not exist", async () => {
+    const post = await getPostBySlug("missing-post")
+
+    expect(post).toBeNull()
+    expect(mockMarkdown).not.toHaveBeenCalled()
+})
+
 test("gets topic", () => {
     const topic = getTopic("coding")
     expect(topic).toEqual(mockTopic)

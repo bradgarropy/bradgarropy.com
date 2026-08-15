@@ -14,7 +14,9 @@ const getAllNows = (): NowFrontmatter["date"][] => {
     return nows
 }
 
-const getNowByDate = async (slug: NowFrontmatter["date"]): Promise<Now> => {
+const getNowByDate = async (
+    slug: NowFrontmatter["date"],
+): Promise<Now | null> => {
     const files = import.meta.glob<Markdown<NowFrontmatter>>(
         "/content/now/*.md",
         {
@@ -23,6 +25,11 @@ const getNowByDate = async (slug: NowFrontmatter["date"]): Promise<Now> => {
     )
 
     const file = files[`/content/now/${slug}.md`]
+
+    if (!file) {
+        return null
+    }
+
     const html = await transformMarkdown(file.markdown)
 
     const now: Now = {
@@ -37,6 +44,10 @@ const getLatestNow = async (): Promise<Now> => {
     const nows = getAllNows()
     const date = nows[nows.length - 1]
     const latestNow = await getNowByDate(date)
+
+    if (!latestNow) {
+        throw new Error(`Could not find now for ${date}.`)
+    }
 
     return latestNow
 }
@@ -55,6 +66,11 @@ const getNewerNow = async (currentNow: Now): Promise<NewerNow> => {
     }
 
     const newerNow = await getNowByDate(date)
+
+    if (!newerNow) {
+        throw new Error(`Could not find now for ${date}.`)
+    }
+
     return newerNow
 }
 
@@ -72,6 +88,11 @@ const getOlderNow = async (currentNow: Now): Promise<OlderNow> => {
     }
 
     const olderNow = await getNowByDate(date)
+
+    if (!olderNow) {
+        throw new Error(`Could not find now for ${date}.`)
+    }
+
     return olderNow
 }
 
