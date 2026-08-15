@@ -13,6 +13,11 @@ import {getPostBySlug, getRelatedPosts} from "~/utils/posts"
 export const loader = async ({params}: LoaderFunctionArgs) => {
     const slug = params.slug as PostFrontmatter["slug"]
     const post = await getPostBySlug(slug)
+
+    if (!post) {
+        throw new Error(`Could not find post for ${slug}.`)
+    }
+
     const relatedPosts = getRelatedPosts(post.frontmatter)
 
     return {post, relatedPosts}
