@@ -1,6 +1,7 @@
 import type {Expression} from "fuse.js"
 import Fuse from "fuse.js"
 
+import {postFrontmatterSchema} from "~/schemas/post"
 import type {Markdown} from "~/types/markdown"
 import type {Post, PostFrontmatter, Tag, Topic} from "~/types/post"
 import {transformMarkdown} from "~/utils/markdown.server"
@@ -19,33 +20,31 @@ const getLatestPost = (): PostFrontmatter => {
 }
 
 const getPosts = (count?: number): PostFrontmatter[] => {
-    const files = import.meta.glob<Markdown<PostFrontmatter>>(
-        "/content/posts/*.md",
-        {
-            eager: true,
-        },
-    )
+    const files = import.meta.glob<Markdown>("/content/posts/*.md", {
+        eager: true,
+    })
 
-    const posts = Object.values(files).map(file => file.attributes)
+    const posts = Object.values(files).map(file => {
+        const frontmatter = postFrontmatterSchema.parse(file.attributes)
+        return frontmatter
+    })
+
     const latestPosts = sortPostsByDate(posts).slice(0, count)
-
     return latestPosts
 }
 
 const getPostBySlug = async (slug: PostFrontmatter["slug"]): Promise<Post> => {
-    const files = import.meta.glob<Markdown<PostFrontmatter>>(
-        "/content/posts/*.md",
-        {
-            eager: true,
-        },
-    )
+    const files = import.meta.glob<Markdown>("/content/posts/*.md", {
+        eager: true,
+    })
 
     const file = files[`/content/posts/${slug}.md`]
     const html = await transformMarkdown(file.markdown)
+    const frontmatter = postFrontmatterSchema.parse(file.attributes)
 
     const post: Post = {
         html,
-        frontmatter: file.attributes,
+        frontmatter,
     }
 
     return post

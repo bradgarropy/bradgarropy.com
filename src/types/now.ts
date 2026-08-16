@@ -1,10 +1,8 @@
+import type {NowFrontmatter} from "~/schemas/now"
+
 type Now = {
     html: string
     frontmatter: NowFrontmatter
-}
-
-type NowFrontmatter = {
-    date: string
 }
 
 type AdjacentNow = Now | null
