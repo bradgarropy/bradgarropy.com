@@ -1,13 +1,13 @@
 import type {TransformedMarkdown} from "~/types/markdown"
 import type {Meta} from "~/types/meta"
 import type {Now, NowFrontmatter} from "~/types/now"
-import type {Post, PostFrontmatter, Topic} from "~/types/post"
+import type {PostFrontmatter, RenderedPost, Topic} from "~/types/post"
 import type {Project} from "~/types/project"
 import type {Sponsors} from "~/types/sponsor"
 import type {Testimonial} from "~/types/testimonial"
 import type {Video} from "~/types/video"
 
-const mockPosts: Post[] = [
+const mockPosts: RenderedPost[] = [
     {
         html: "<p>This is the first test post.</p>",
         frontmatter: {
@@ -50,7 +50,7 @@ const mockPosts: Post[] = [
     },
 ]
 
-const mockSortedPosts: Post[] = [
+const mockSortedPosts: RenderedPost[] = [
     mockPosts[2],
     mockPosts[3],
     mockPosts[1],
@@ -65,7 +65,7 @@ const mockSortedPostsFrontmatter: PostFrontmatter[] = mockSortedPosts.map(
     mockPost => mockPost.frontmatter,
 )
 
-const mockPost: Post = mockPosts[0]
+const mockPost: RenderedPost = mockPosts[0]
 
 const mockPostFrontmatter: PostFrontmatter = mockPost.frontmatter
 

@@ -2,7 +2,7 @@ import type {Expression} from "fuse.js"
 import Fuse from "fuse.js"
 
 import {postFrontmatterSchema} from "~/schemas/post"
-import type {Post, PostFrontmatter, Tag, Topic} from "~/types/post"
+import type {PostFrontmatter, RenderedPost, Tag, Topic} from "~/types/post"
 import {postFiles} from "~/utils/files.server"
 import {transformMarkdown} from "~/utils/markdown.server"
 
@@ -29,12 +29,14 @@ const getPosts = (count?: number): PostFrontmatter[] => {
     return latestPosts
 }
 
-const getPostBySlug = async (slug: PostFrontmatter["slug"]): Promise<Post> => {
+const getPostBySlug = async (
+    slug: PostFrontmatter["slug"],
+): Promise<RenderedPost> => {
     const file = postFiles[`/content/posts/${slug}.md`]
     const html = await transformMarkdown(file.markdown)
     const frontmatter = postFrontmatterSchema.parse(file.attributes)
 
-    const post: Post = {
+    const post: RenderedPost = {
         html,
         frontmatter,
     }
