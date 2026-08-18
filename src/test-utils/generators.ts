@@ -1,5 +1,7 @@
-import {mockAppCtx, mockThemeCtx} from "~/test-utils/mocks"
+import {mockAppCtx, mockPostFrontmatter, mockThemeCtx} from "~/test-utils/mocks"
 import type {AppContextType, ThemeContextType} from "~/types/context"
+import type {Markdown} from "~/types/markdown"
+import type {PostFrontmatter} from "~/types/post"
 
 const generateAppCtx = (
     overrides?: Partial<AppContextType>,
@@ -23,4 +25,18 @@ const generateThemeCtx = (
     return themeCtx
 }
 
-export {generateAppCtx, generateThemeCtx}
+const generatePostFile = (
+    overrides?: Partial<PostFrontmatter>,
+): Markdown<PostFrontmatter> => {
+    const file = {
+        markdown: "Mock post.",
+        attributes: {
+            ...mockPostFrontmatter,
+            ...overrides,
+        },
+    }
+
+    return file
+}
+
+export {generateAppCtx, generatePostFile, generateThemeCtx}
