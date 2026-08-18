@@ -11,6 +11,12 @@ type RenderedPost = {
     frontmatter: PostFrontmatter
 }
 
+type PostCollection = {
+    getAll: () => Post[]
+    getBySlug: (slug: PostFrontmatter["slug"]) => Post | null
+    getLatest: () => Post | null
+}
+
 type Topic = {
     icon: string
     name: PostFrontmatter["topic"]
@@ -18,4 +24,4 @@ type Topic = {
 
 type Tag = PostFrontmatter["tags"][number]
 
-export type {Post, PostFrontmatter, RenderedPost, Tag, Topic}
+export type {Post, PostCollection, PostFrontmatter, RenderedPost, Tag, Topic}
