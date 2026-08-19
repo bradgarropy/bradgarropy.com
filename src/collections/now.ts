@@ -2,6 +2,7 @@ import {nowFrontmatterSchema} from "~/schemas/now"
 import type {Markdown} from "~/types/markdown"
 import type {Now, NowFrontmatter} from "~/types/now"
 import {nowFiles} from "~/utils/files.server"
+import {parseFrontmatter} from "~/utils/frontmatter"
 
 const validateNowDate = (now: Now): void => {
     const {path, frontmatter} = now
@@ -27,7 +28,12 @@ const validateNowDate = (now: Now): void => {
 const createNows = (files: Record<string, Markdown<unknown>>): Now[] => {
     const nows = Object.entries(files).map(([path, file]) => {
         const {attributes, markdown} = file
-        const frontmatter = nowFrontmatterSchema.parse(attributes)
+
+        const frontmatter = parseFrontmatter(
+            path,
+            nowFrontmatterSchema,
+            attributes,
+        )
 
         const now: Now = {
             path,
