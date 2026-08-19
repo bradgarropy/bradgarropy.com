@@ -21,26 +21,6 @@ import {codesandboxTransformer} from "~/transformers/codesandbox"
 import {twitchTransformer} from "~/transformers/twitch"
 import {twitterTransformer} from "~/transformers/twitter"
 import {youtubeTransformer} from "~/transformers/youtube"
-import type {Markdown, TransformedMarkdown} from "~/types/markdown"
-
-const getMarkdownBySlug = async (
-    slug: string,
-): Promise<TransformedMarkdown> => {
-    const files = import.meta.glob<Markdown>("/content/pages/*.md", {
-        eager: true,
-    })
-
-    const file = files[`/content/pages/${slug}.md`]
-    const html = await transformMarkdown(file.markdown)
-
-    const markdown: TransformedMarkdown = {
-        html,
-        frontmatter: file.attributes,
-    }
-
-    return markdown
-}
-
 const transformMarkdown = async (markdown: string): Promise<string> => {
     const options: Options = {
         theme,
@@ -101,4 +81,4 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
     return html
 }
 
-export {getMarkdownBySlug, transformMarkdown}
+export {transformMarkdown}

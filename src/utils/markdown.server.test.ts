@@ -1,21 +1,12 @@
 import {describe, expect, test, vi} from "vitest"
 
-import {getMarkdownBySlug, transformMarkdown} from "~/utils/markdown.server"
+import {transformMarkdown} from "~/utils/markdown.server"
 
 const mockFetch = vi.fn()
 global.fetch = mockFetch
 
 mockFetch.mockResolvedValue({
     json: () => Promise.resolve({output: {width: 100, height: 100}}),
-})
-
-test("gets markdown by slug", async () => {
-    const markdown = await getMarkdownBySlug("uses")
-
-    expect(markdown).toEqual({
-        frontmatter: {},
-        html: expect.any(String),
-    })
 })
 
 describe("transforms markdown", () => {

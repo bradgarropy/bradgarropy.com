@@ -1,6 +1,6 @@
-import type {TransformedMarkdown} from "~/types/markdown"
 import type {Meta} from "~/types/meta"
 import type {NowFrontmatter, RenderedNow} from "~/types/now"
+import type {RenderedPage} from "~/types/page"
 import type {PostFrontmatter, RenderedPost, Topic} from "~/types/post"
 import type {Project} from "~/types/project"
 import type {Sponsors} from "~/types/sponsor"
@@ -218,9 +218,8 @@ const mockSponsors: Sponsors = {
 
 const mockChannelStatus = {isLive: true}
 
-const mockResume: TransformedMarkdown = {
+const mockResume: RenderedPage = {
     html: "<p>resume</p>",
-    frontmatter: {},
 }
 
 const mockTestimonials: RenderedTestimonial[] = [
@@ -306,9 +305,8 @@ const mockRepositoryTopics: string[] = [
     "portfolio",
 ]
 
-const mockUses: TransformedMarkdown = {
+const mockUses: RenderedPage = {
     html: "<p>uses</p>",
-    frontmatter: {},
 }
 
 export {
