@@ -1,7 +1,8 @@
 import {readdirSync} from "node:fs"
 
-import {expect, test} from "vitest"
+import {assert, expect, test, vi} from "vitest"
 
+import {nows} from "~/collections/now"
 import {
     getAllNows,
     getLatestNow,
@@ -9,6 +10,8 @@ import {
     getNowByDate,
     getOlderNow,
 } from "~/utils/now"
+
+const mockNows = vi.spyOn(nows, "at")
 
 test("gets all nows", () => {
     const nows = getAllNows()
@@ -18,7 +21,7 @@ test("gets all nows", () => {
     expect(nows).toContain("2020-09-25")
 })
 
-test("gets now by slug", async () => {
+test("gets now by date", async () => {
     const now = await getNowByDate("2020-09-25")
 
     expect(now).toMatchObject({
@@ -27,6 +30,11 @@ test("gets now by slug", async () => {
             date: "2020-09-25",
         },
     })
+})
+
+test("returns null when now does not exist", async () => {
+    const now = await getNowByDate("invalid-date")
+    expect(now).toBeNull()
 })
 
 test("gets latest now", async () => {
@@ -40,9 +48,17 @@ test("gets latest now", async () => {
     })
 })
 
+test("throws when latest now does not exist", async () => {
+    mockNows.mockReturnValueOnce(undefined)
+
+    await expect(getLatestNow()).rejects.toThrow("Could not find latest now.")
+})
+
 test("gets newer now", async () => {
     const nows = getAllNows()
     const now = await getNowByDate(nows[0])
+    assert(now)
+
     const newerNow = await getNewerNow(now)
 
     expect(newerNow).not.toBeNull()
@@ -65,6 +81,8 @@ test("gets older now", async () => {
 
     // when there is no older now
     const earliestNow = await getNowByDate(nows[0])
+    assert(earliestNow)
+
     const emptyNow = await getOlderNow(earliestNow)
     expect(emptyNow).toBeNull()
 })
