@@ -1,4 +1,5 @@
 import type {TestimonialFrontmatter} from "~/schemas/testimonial"
+import type {RenderedMarkdown} from "~/types/markdown"
 
 type Testimonial = {
     path: string
@@ -6,9 +7,6 @@ type Testimonial = {
     frontmatter: TestimonialFrontmatter
 }
 
-type RenderedTestimonial = {
-    html: string
-    frontmatter: TestimonialFrontmatter
-}
+type RenderedTestimonial = RenderedMarkdown<TestimonialFrontmatter>
 
 export type {RenderedTestimonial, Testimonial, TestimonialFrontmatter}

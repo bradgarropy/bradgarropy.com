@@ -6,10 +6,10 @@ import type {
     OlderNow,
     RenderedNow,
 } from "~/types/now"
-import {transformMarkdown} from "~/utils/markdown.server"
+import {renderMarkdown} from "~/utils/markdown.server"
 
 const renderNow = async (now: Now): Promise<RenderedNow> => {
-    const html = await transformMarkdown(now.markdown)
+    const html = await renderMarkdown(now.markdown)
 
     const renderedNow: RenderedNow = {
         html,

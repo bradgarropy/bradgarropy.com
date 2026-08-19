@@ -1,9 +1,6 @@
 import {rehypeCloudinaryImageSize} from "@bradgarropy/rehype-cloudinary-image-size"
 import {rehypeImageLinks} from "@bradgarropy/rehype-image-links"
 import remarkEmbedder from "@remark-embedder/core"
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-import theme from "node_modules/shades-of-purple/themes/shades-of-purple-color-theme.json5"
 import rehypeExternalLinks from "rehype-external-links"
 import type {Options} from "rehype-pretty-code"
 import rehypePrettyCode from "rehype-pretty-code"
@@ -14,6 +11,9 @@ import remarkGfm from "remark-gfm"
 import remarkInlineLinks from "remark-inline-links"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import theme from "shades-of-purple/themes/shades-of-purple-color-theme.json5"
 import {createHighlighter} from "shiki"
 import {unified} from "unified"
 
@@ -21,7 +21,8 @@ import {codesandboxTransformer} from "~/transformers/codesandbox"
 import {twitchTransformer} from "~/transformers/twitch"
 import {twitterTransformer} from "~/transformers/twitter"
 import {youtubeTransformer} from "~/transformers/youtube"
-const transformMarkdown = async (markdown: string): Promise<string> => {
+
+const renderMarkdown = async (markdown: string): Promise<string> => {
     const options: Options = {
         theme,
         keepBackground: true,
@@ -81,4 +82,4 @@ const transformMarkdown = async (markdown: string): Promise<string> => {
     return html
 }
 
-export {transformMarkdown}
+export {renderMarkdown}

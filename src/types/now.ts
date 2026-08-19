@@ -1,4 +1,5 @@
 import type {NowFrontmatter} from "~/schemas/now"
+import type {RenderedMarkdown} from "~/types/markdown"
 
 type Now = {
     path: string
@@ -6,10 +7,7 @@ type Now = {
     frontmatter: NowFrontmatter
 }
 
-type RenderedNow = {
-    html: string
-    frontmatter: NowFrontmatter
-}
+type RenderedNow = RenderedMarkdown<NowFrontmatter>
 
 type AdjacentNow = RenderedNow | null
 

@@ -1,7 +1,11 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type Markdown<T = Record<string, any>> = {
+type Markdown<T = unknown> = {
     markdown: string
     attributes: T
 }
 
-export type {Markdown}
+type RenderedMarkdown<T> = {
+    html: string
+    frontmatter: T
+}
+
+export type {Markdown, RenderedMarkdown}

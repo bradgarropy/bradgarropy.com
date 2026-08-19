@@ -23,7 +23,7 @@ import {
     sortPostsByDate,
 } from "~/utils/posts"
 
-const mockMarkdown = vi.spyOn(markdown, "transformMarkdown")
+const mockMarkdown = vi.spyOn(markdown, "renderMarkdown")
 const mockPosts = vi.spyOn(posts, "at")
 
 test("gets posts", async () => {
