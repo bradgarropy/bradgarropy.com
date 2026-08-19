@@ -22,10 +22,8 @@ const mockFiles = {
     },
 }
 
-const mockFirstFile =
-    mockFiles["/content/testimonials/first-testimonial.md"]
-const mockSecondFile =
-    mockFiles["/content/testimonials/second-testimonial.md"]
+const mockFirstFile = mockFiles["/content/testimonials/first-testimonial.md"]
+const mockSecondFile = mockFiles["/content/testimonials/second-testimonial.md"]
 
 const mockFirstTestimonial = {
     path: "/content/testimonials/first-testimonial.md",
@@ -41,10 +39,7 @@ const mockSecondTestimonial = {
 
 test("creates testimonials", () => {
     const testimonials = createTestimonials(mockFiles)
-    expect(testimonials).toEqual([
-        mockFirstTestimonial,
-        mockSecondTestimonial,
-    ])
+    expect(testimonials).toEqual([mockFirstTestimonial, mockSecondTestimonial])
 })
 
 test("creates no testimonials", () => {
