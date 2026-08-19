@@ -1,9 +1,8 @@
 import type {Expression} from "fuse.js"
 import Fuse from "fuse.js"
 
-import {postFrontmatterSchema} from "~/schemas/post"
-import type {Post, PostFrontmatter, Tag, Topic} from "~/types/post"
-import {postFiles} from "~/utils/files.server"
+import {posts} from "~/collections/post"
+import type {PostFrontmatter, RenderedPost, Tag, Topic} from "~/types/post"
 import {transformMarkdown} from "~/utils/markdown.server"
 
 const icons: Record<string, string> = {
@@ -13,33 +12,40 @@ const icons: Record<string, string> = {
 }
 
 const getLatestPost = (): PostFrontmatter => {
-    const latestPosts = getPosts(1)
-    const latestPost = latestPosts[0]
+    const latestPost = posts.at(0)
 
-    return latestPost
+    if (!latestPost) {
+        throw new Error("Could not find latest post.")
+    }
+
+    return latestPost.frontmatter
 }
 
 const getPosts = (count?: number): PostFrontmatter[] => {
-    const posts = Object.values(postFiles).map(file => {
-        const frontmatter = postFrontmatterSchema.parse(file.attributes)
-        return frontmatter
+    const latestPosts = posts.slice(0, count).map(post => {
+        return post.frontmatter
     })
 
-    const latestPosts = sortPostsByDate(posts).slice(0, count)
     return latestPosts
 }
 
-const getPostBySlug = async (slug: PostFrontmatter["slug"]): Promise<Post> => {
-    const file = postFiles[`/content/posts/${slug}.md`]
-    const html = await transformMarkdown(file.markdown)
-    const frontmatter = postFrontmatterSchema.parse(file.attributes)
+const getPostBySlug = async (
+    slug: PostFrontmatter["slug"],
+): Promise<RenderedPost | null> => {
+    const post = posts.find(post => post.frontmatter.slug === slug)
 
-    const post: Post = {
-        html,
-        frontmatter,
+    if (!post) {
+        return null
     }
 
-    return post
+    const html = await transformMarkdown(post.markdown)
+
+    const renderedPost: RenderedPost = {
+        html,
+        frontmatter: post.frontmatter,
+    }
+
+    return renderedPost
 }
 
 const getTopic = (name: Topic["name"]): Topic => {

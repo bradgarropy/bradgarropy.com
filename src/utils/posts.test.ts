@@ -2,6 +2,7 @@ import {readdirSync} from "node:fs"
 
 import {expect, test, vi} from "vitest"
 
+import {posts} from "~/collections/post"
 import {
     mockPostsFrontmatter,
     mockSortedPostsFrontmatter,
@@ -23,6 +24,7 @@ import {
 } from "~/utils/posts"
 
 const mockMarkdown = vi.spyOn(markdown, "transformMarkdown")
+const mockPosts = vi.spyOn(posts, "at")
 
 test("gets posts", async () => {
     const posts = getPosts()
@@ -53,6 +55,12 @@ test("gets latest post", () => {
     })
 })
 
+test("throws when latest post does not exist", () => {
+    mockPosts.mockReturnValueOnce(undefined)
+
+    expect(() => getLatestPost()).toThrow("Could not find latest post.")
+})
+
 test("gets particular number of posts", () => {
     const posts = getPosts(2)
     expect(posts).toHaveLength(2)
@@ -73,6 +81,11 @@ test("gets post by slug", async () => {
             tags: ["thoughts"],
         },
     })
+})
+
+test("returns null when post does not exist", async () => {
+    const post = await getPostBySlug("missing-post")
+    expect(post).toBeNull()
 })
 
 test("gets topic", () => {

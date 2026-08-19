@@ -3,10 +3,10 @@ import type {FC} from "react"
 import PostBody from "~/components/PostBody"
 import PostFooter from "~/components/PostFooter"
 import PostHeader from "~/components/PostHeader"
-import type {Post as PostType} from "~/types/post"
+import type {RenderedPost} from "~/types/post"
 
 type PostProps = {
-    post: PostType
+    post: RenderedPost
 }
 
 const Post: FC<PostProps> = ({post}) => {
