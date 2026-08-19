@@ -12,7 +12,7 @@ const icons: Record<string, string> = {
 }
 
 const getLatestPost = (): PostFrontmatter => {
-    const latestPost = posts[0]
+    const latestPost = posts.at(0)
 
     if (!latestPost) {
         throw new Error("Could not find latest post.")

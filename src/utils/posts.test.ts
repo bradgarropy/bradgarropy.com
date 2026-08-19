@@ -2,6 +2,7 @@ import {readdirSync} from "node:fs"
 
 import {expect, test, vi} from "vitest"
 
+import {posts} from "~/collections/post"
 import {
     mockPostsFrontmatter,
     mockSortedPostsFrontmatter,
@@ -23,6 +24,7 @@ import {
 } from "~/utils/posts"
 
 const mockMarkdown = vi.spyOn(markdown, "transformMarkdown")
+const mockPosts = vi.spyOn(posts, "at")
 
 test("gets posts", async () => {
     const posts = getPosts()
@@ -51,6 +53,12 @@ test("gets latest post", () => {
         topic: expect.any(String),
         tags: expect.arrayContaining([expect.any(String)]),
     })
+})
+
+test("throws when latest post does not exist", () => {
+    mockPosts.mockReturnValueOnce(undefined)
+
+    expect(() => getLatestPost()).toThrow("Could not find latest post.")
 })
 
 test("gets particular number of posts", () => {
