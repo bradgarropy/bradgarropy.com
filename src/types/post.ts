@@ -1,4 +1,5 @@
 import type {PostFrontmatter} from "~/schemas/post"
+import type {RenderedMarkdown} from "~/types/markdown"
 
 type Post = {
     path: string
@@ -6,10 +7,7 @@ type Post = {
     frontmatter: PostFrontmatter
 }
 
-type RenderedPost = {
-    html: string
-    frontmatter: PostFrontmatter
-}
+type RenderedPost = RenderedMarkdown<PostFrontmatter>
 
 type Topic = {
     icon: string

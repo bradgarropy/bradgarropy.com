@@ -1,8 +1,8 @@
 import {useRouteLoaderData} from "@remix-run/react"
 import type {FC} from "react"
-import type {loader} from "src/root"
 
 import SocialLink from "~/components/SocialLink"
+import type {loader} from "~/root"
 
 const Footer: FC = () => {
     const root = useRouteLoaderData<typeof loader>("root")

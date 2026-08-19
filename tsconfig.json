@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
         "allowJs": true,
-        "baseUrl": ".",
         "erasableSyntaxOnly": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
@@ -13,17 +12,7 @@
         "moduleResolution": "Bundler",
         "noEmit": true,
         "paths": {
-            "~/collections/*": ["src/collections/*"],
-            "~/components/*": ["src/components/*"],
-            "~/context/*": ["src/context/*"],
-            "~/hooks/*": ["src/hooks/*"],
-            "~/routes/*": ["src/routes/*"],
-            "~/schemas/*": ["src/schemas/*"],
-            "~/styles/*": ["src/styles/*"],
-            "~/test-utils/*": ["src/test-utils/*"],
-            "~/transformers/*": ["src/transformers/*"],
-            "~/types/*": ["src/types/*"],
-            "~/utils/*": ["src/utils/*"]
+            "~/*": ["./src/*"]
         },
         "resolveJsonModule": true,
         "skipLibCheck": true,

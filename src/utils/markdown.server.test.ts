@@ -1,6 +1,6 @@
 import {describe, expect, test, vi} from "vitest"
 
-import {transformMarkdown} from "~/utils/markdown.server"
+import {renderMarkdown} from "~/utils/markdown.server"
 
 const mockFetch = vi.fn()
 global.fetch = mockFetch
@@ -11,12 +11,12 @@ mockFetch.mockResolvedValue({
 
 describe("transforms markdown", () => {
     test("supports gfm", async () => {
-        const html = await transformMarkdown("~~nope~~")
+        const html = await renderMarkdown("~~nope~~")
         expect(html).toEqual("<p><del>nope</del></p>")
     })
 
     test("unwraps images", async () => {
-        const html = await transformMarkdown(
+        const html = await renderMarkdown(
             "![brad garropy](https://bradgarropy.com/profile.jpg)",
         )
 
@@ -28,7 +28,7 @@ describe("transforms markdown", () => {
     test("adds dimensions to cloudinary images", async () => {
         let html
 
-        html = await transformMarkdown(
+        html = await renderMarkdown(
             "![brad garropy](http://res.cloudinary.com/profile.jpg)",
         )
 
@@ -36,7 +36,7 @@ describe("transforms markdown", () => {
             '<a href="http://res.cloudinary.com/profile.jpg"><img src="http://res.cloudinary.com/profile.jpg" alt="brad garropy" width="100" height="100"></a>',
         )
 
-        html = await transformMarkdown(
+        html = await renderMarkdown(
             "![brad garropy](https://res.cloudinary.com/profile.jpg)",
         )
 
@@ -46,7 +46,7 @@ describe("transforms markdown", () => {
     })
 
     test("does not add dimensions to other images", async () => {
-        const html = await transformMarkdown(
+        const html = await renderMarkdown(
             "![brad garropy](https://bradgarropy.com/profile.jpg)",
         )
 
@@ -56,7 +56,7 @@ describe("transforms markdown", () => {
     })
 
     test("adds optimizations to cloudinary images", async () => {
-        const html = await transformMarkdown(
+        const html = await renderMarkdown(
             "![brad garropy](https://res.cloudinary.com/bradgarropy/image/upload/bradgarropy.com/profile.jpg)",
         )
 
@@ -66,7 +66,7 @@ describe("transforms markdown", () => {
     })
 
     test("does not add optimizations to other images", async () => {
-        const html = await transformMarkdown(
+        const html = await renderMarkdown(
             "![brad garropy](https://bradgarropy.com/profile.jpg)",
         )
 
@@ -76,7 +76,7 @@ describe("transforms markdown", () => {
     })
 
     test("embeds codesandbox", async () => {
-        const html = await transformMarkdown(
+        const html = await renderMarkdown(
             "https://codesandbox.io/s/exciting-pascal-j5hwu",
         )
 
@@ -90,7 +90,7 @@ describe("transforms markdown", () => {
     })
 
     test("embeds twitch", async () => {
-        const html = await transformMarkdown("https://twitch.tv/bradgarropy")
+        const html = await renderMarkdown("https://twitch.tv/bradgarropy")
 
         expect(html).toEqual(expect.stringContaining("<iframe"))
 
@@ -102,7 +102,7 @@ describe("transforms markdown", () => {
     })
 
     test("embeds twitter", async () => {
-        const html = await transformMarkdown(
+        const html = await renderMarkdown(
             "https://twitter.com/bradgarropy/status/1458449938157801490",
         )
 
@@ -122,7 +122,7 @@ describe("transforms markdown", () => {
     })
 
     test("embeds youtube", async () => {
-        const html = await transformMarkdown("https://youtu.be/9zcU6oUOHVc")
+        const html = await renderMarkdown("https://youtu.be/9zcU6oUOHVc")
 
         expect(html).toEqual(expect.stringContaining("<iframe"))
 
@@ -136,7 +136,7 @@ describe("transforms markdown", () => {
     })
 
     test("opens external links in new tabs", async () => {
-        const html = await transformMarkdown(
+        const html = await renderMarkdown(
             "This is an [external link](https://example.com).",
         )
 

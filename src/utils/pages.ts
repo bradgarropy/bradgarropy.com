@@ -1,6 +1,6 @@
 import {pages} from "~/collections/page"
 import type {Page, RenderedPage} from "~/types/page"
-import {transformMarkdown} from "~/utils/markdown.server"
+import {renderMarkdown} from "~/utils/markdown.server"
 
 const getPageBySlug = async (
     slug: Page["slug"],
@@ -11,7 +11,7 @@ const getPageBySlug = async (
         return null
     }
 
-    const html = await transformMarkdown(page.markdown)
+    const html = await renderMarkdown(page.markdown)
     return {html}
 }
 

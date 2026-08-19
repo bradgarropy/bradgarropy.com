@@ -3,7 +3,7 @@ import Fuse from "fuse.js"
 
 import {posts} from "~/collections/post"
 import type {PostFrontmatter, RenderedPost, Tag, Topic} from "~/types/post"
-import {transformMarkdown} from "~/utils/markdown.server"
+import {renderMarkdown} from "~/utils/markdown.server"
 
 const icons: Record<string, string> = {
     coding: "💻",
@@ -38,7 +38,7 @@ const getPostBySlug = async (
         return null
     }
 
-    const html = await transformMarkdown(post.markdown)
+    const html = await renderMarkdown(post.markdown)
 
     const renderedPost: RenderedPost = {
         html,

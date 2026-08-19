@@ -3,7 +3,7 @@ import {expect, test, vi} from "vitest"
 import * as markdown from "~/utils/markdown.server"
 import {getPageBySlug} from "~/utils/pages"
 
-const mockMarkdown = vi.spyOn(markdown, "transformMarkdown")
+const mockMarkdown = vi.spyOn(markdown, "renderMarkdown")
 
 test("gets page", async () => {
     mockMarkdown.mockResolvedValueOnce("Uses page.")
