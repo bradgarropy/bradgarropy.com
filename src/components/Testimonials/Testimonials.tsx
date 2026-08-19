@@ -1,10 +1,10 @@
 import type {FC} from "react"
 
 import Testimonial from "~/components/Testimonial"
-import type {Testimonial as TestimonialType} from "~/types/testimonial"
+import type {RenderedTestimonial} from "~/types/testimonial"
 
 type TestimonialsProps = {
-    testimonials: TestimonialType[]
+    testimonials: RenderedTestimonial[]
 }
 
 const Testimonials: FC<TestimonialsProps> = ({testimonials}) => {

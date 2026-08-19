@@ -4,11 +4,11 @@ import slugify from "slugify"
 
 import Markdown from "~/components/Markdown"
 import useMarkdown from "~/hooks/useMarkdown"
-import type {Testimonial as TestimonialType} from "~/types/testimonial"
+import type {RenderedTestimonial} from "~/types/testimonial"
 import {createImageUrl} from "~/utils/cloudinary"
 
 type TestimonialProps = {
-    testimonial: TestimonialType
+    testimonial: RenderedTestimonial
 }
 
 const Testimonial: FC<TestimonialProps> = ({testimonial}) => {

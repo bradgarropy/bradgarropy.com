@@ -1,23 +1,21 @@
-import {testimonialFrontmatterSchema} from "~/schemas/testimonial"
-import type {Testimonial} from "~/types/testimonial"
-import {testimonialFiles} from "~/utils/files.server"
+import {testimonials} from "~/collections/testimonial"
+import type {RenderedTestimonial} from "~/types/testimonial"
 import {transformMarkdown} from "~/utils/markdown.server"
 
-const getTestimonials = async (): Promise<Testimonial[]> => {
-    const promises = Object.values(testimonialFiles).map(async file => {
-        const html = await transformMarkdown(file.markdown)
-        const frontmatter = testimonialFrontmatterSchema.parse(file.attributes)
+const getTestimonials = async (): Promise<RenderedTestimonial[]> => {
+    const promises = testimonials.map(async testimonial => {
+        const html = await transformMarkdown(testimonial.markdown)
 
-        const testimonial: Testimonial = {
+        const renderedTestimonial: RenderedTestimonial = {
             html,
-            frontmatter,
+            frontmatter: testimonial.frontmatter,
         }
 
-        return testimonial
+        return renderedTestimonial
     })
 
-    const testimonials = await Promise.all(promises)
-    return testimonials
+    const renderedTestimonials = await Promise.all(promises)
+    return renderedTestimonials
 }
 
 export {getTestimonials}

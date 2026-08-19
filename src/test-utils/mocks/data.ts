@@ -4,7 +4,7 @@ import type {NowFrontmatter, RenderedNow} from "~/types/now"
 import type {PostFrontmatter, RenderedPost, Topic} from "~/types/post"
 import type {Project} from "~/types/project"
 import type {Sponsors} from "~/types/sponsor"
-import type {Testimonial} from "~/types/testimonial"
+import type {RenderedTestimonial} from "~/types/testimonial"
 import type {Video} from "~/types/video"
 
 const mockPosts: RenderedPost[] = [
@@ -223,13 +223,13 @@ const mockResume: TransformedMarkdown = {
     frontmatter: {},
 }
 
-const mockTestimonials: Testimonial[] = [
+const mockTestimonials: RenderedTestimonial[] = [
     {
         html: "<p>First test review.</p>",
         frontmatter: {
             name: "First Test User",
             profile: "https://twitter.com/first-test-user",
-            photo: "https://twitter.com/first-test-user.jpg",
+            photo: "/testimonials/first-test-user.jpg",
         },
     },
     {
@@ -237,12 +237,12 @@ const mockTestimonials: Testimonial[] = [
         frontmatter: {
             name: "Second Test User",
             profile: "https://twitter.com/second-test-user",
-            photo: "https://twitter.com/second-test-user.jpg",
+            photo: "/testimonials/second-test-user.jpg",
         },
     },
 ]
 
-const mockTestimonial: Testimonial = mockTestimonials[0]
+const mockTestimonial: RenderedTestimonial = mockTestimonials[0]
 
 const mockNows: RenderedNow[] = [
     {

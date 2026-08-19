@@ -2,12 +2,14 @@ import {
     mockAppCtx,
     mockNow,
     mockPostFrontmatter,
+    mockTestimonial,
     mockThemeCtx,
 } from "~/test-utils/mocks"
 import type {AppContextType, ThemeContextType} from "~/types/context"
 import type {Markdown} from "~/types/markdown"
 import type {NowFrontmatter} from "~/types/now"
 import type {PostFrontmatter} from "~/types/post"
+import type {TestimonialFrontmatter} from "~/types/testimonial"
 
 const generateAppCtx = (
     overrides?: Partial<AppContextType>,
@@ -59,4 +61,24 @@ const generateNowFile = (
     return file
 }
 
-export {generateAppCtx, generateNowFile, generatePostFile, generateThemeCtx}
+const generateTestimonialFile = (
+    overrides?: Partial<TestimonialFrontmatter>,
+): Markdown<TestimonialFrontmatter> => {
+    const file = {
+        markdown: "Mock testimonial.",
+        attributes: {
+            ...mockTestimonial.frontmatter,
+            ...overrides,
+        },
+    }
+
+    return file
+}
+
+export {
+    generateAppCtx,
+    generateNowFile,
+    generatePostFile,
+    generateTestimonialFile,
+    generateThemeCtx,
+}
