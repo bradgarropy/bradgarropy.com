@@ -62,7 +62,6 @@
         "@vercel/remix": "^2.16.7",
         "classnames": "^2.5.1",
         "date-fns": "^4.1.0",
-        "dotenv": "^17.2.3",
         "feed": "^6.0.0",
         "fuse.js": "^7.1.0",
         "isbot": "latest",
