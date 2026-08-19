@@ -1,6 +1,7 @@
 import {postFrontmatterSchema} from "~/schemas/post"
 import type {Markdown} from "~/types/markdown"
-import type {Post, PostCollection, PostFrontmatter} from "~/types/post"
+import type {Post, PostFrontmatter} from "~/types/post"
+import {postFiles} from "~/utils/files.server"
 
 const validatePostSlug = (post: Post): void => {
     const {path, frontmatter} = post
@@ -23,9 +24,7 @@ const validatePostSlug = (post: Post): void => {
     }
 }
 
-const createPostCollection = (
-    files: Record<string, Markdown<unknown>>,
-): PostCollection => {
+const createPosts = (files: Record<string, Markdown<unknown>>): Post[] => {
     const posts = Object.entries(files).map(([path, file]) => {
         const {attributes, markdown} = file
         const frontmatter = postFrontmatterSchema.parse(attributes)
@@ -59,31 +58,9 @@ const createPostCollection = (
         return b.frontmatter.date.localeCompare(a.frontmatter.date)
     })
 
-    const getAll = (): Post[] => {
-        return [...posts]
-    }
-
-    const getBySlug = (slug: PostFrontmatter["slug"]): Post | null => {
-        const post = postsBySlug.get(slug)
-
-        if (!post) {
-            return null
-        }
-
-        return post
-    }
-
-    const getLatest = (): Post | null => {
-        const post = posts[0]
-
-        if (!post) {
-            return null
-        }
-
-        return post
-    }
-
-    return {getAll, getBySlug, getLatest}
+    return posts
 }
 
-export {createPostCollection}
+const posts = createPosts(postFiles)
+
+export {createPosts, posts}
