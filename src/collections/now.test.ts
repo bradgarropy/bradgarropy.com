@@ -50,7 +50,9 @@ test("rejects invalid frontmatter", () => {
         "/content/now/invalid-date.md": mockNowFile,
     }
 
-    expect(() => createNows(invalidFiles)).toThrow()
+    expect(() => createNows(invalidFiles)).toThrow(
+        "Invalid frontmatter in /content/now/invalid-date.md:\n✖ Invalid ISO date\n  → at date",
+    )
 })
 
 test("rejects missing filename", () => {

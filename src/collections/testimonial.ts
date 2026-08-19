@@ -2,6 +2,7 @@ import {testimonialFrontmatterSchema} from "~/schemas/testimonial"
 import type {Markdown} from "~/types/markdown"
 import type {Testimonial} from "~/types/testimonial"
 import {testimonialFiles} from "~/utils/files.server"
+import {parseFrontmatter} from "~/utils/frontmatter"
 
 const validateTestimonialPath = (testimonial: Testimonial): void => {
     const {path} = testimonial
@@ -21,7 +22,12 @@ const createTestimonials = (
 ): Testimonial[] => {
     const testimonials = Object.entries(files).map(([path, file]) => {
         const {attributes, markdown} = file
-        const frontmatter = testimonialFrontmatterSchema.parse(attributes)
+
+        const frontmatter = parseFrontmatter(
+            path,
+            testimonialFrontmatterSchema,
+            attributes,
+        )
 
         const testimonial: Testimonial = {
             path,

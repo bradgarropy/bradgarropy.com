@@ -61,7 +61,9 @@ test("rejects invalid frontmatter", () => {
         "/content/posts/invalid-post.md": mockPostFile,
     }
 
-    expect(() => createPosts(invalidFiles)).toThrow()
+    expect(() => createPosts(invalidFiles)).toThrow(
+        "Invalid frontmatter in /content/posts/invalid-post.md:\n✖ Invalid ISO date\n  → at date",
+    )
 })
 
 test("rejects missing filename", () => {

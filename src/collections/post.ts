@@ -2,6 +2,7 @@ import {postFrontmatterSchema} from "~/schemas/post"
 import type {Markdown} from "~/types/markdown"
 import type {Post, PostFrontmatter} from "~/types/post"
 import {postFiles} from "~/utils/files.server"
+import {parseFrontmatter} from "~/utils/frontmatter"
 
 const validatePostSlug = (post: Post): void => {
     const {path, frontmatter} = post
@@ -27,7 +28,12 @@ const validatePostSlug = (post: Post): void => {
 const createPosts = (files: Record<string, Markdown<unknown>>): Post[] => {
     const posts = Object.entries(files).map(([path, file]) => {
         const {attributes, markdown} = file
-        const frontmatter = postFrontmatterSchema.parse(attributes)
+
+        const frontmatter = parseFrontmatter(
+            path,
+            postFrontmatterSchema,
+            attributes,
+        )
 
         const post: Post = {
             path,

@@ -54,7 +54,9 @@ test("rejects invalid frontmatter", () => {
         "/content/testimonials/invalid-testimonial.md": mockTestimonialFile,
     }
 
-    expect(() => createTestimonials(invalidFiles)).toThrow()
+    expect(() => createTestimonials(invalidFiles)).toThrow(
+        "Invalid frontmatter in /content/testimonials/invalid-testimonial.md:\n✖ Invalid URL\n  → at profile",
+    )
 })
 
 test("rejects missing filename", () => {
