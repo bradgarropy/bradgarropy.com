@@ -11,6 +11,11 @@ export const loader = async ({params}: LoaderFunctionArgs) => {
     const date = params.slug as NowFrontmatter["date"]
 
     const currentNow = await getNowByDate(date)
+
+    if (!currentNow) {
+        throw new Response("Not Found", {status: 404})
+    }
+
     const newerNow = await getNewerNow(currentNow)
     const olderNow = await getOlderNow(currentNow)
 

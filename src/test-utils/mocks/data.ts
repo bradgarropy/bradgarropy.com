@@ -1,6 +1,6 @@
 import type {TransformedMarkdown} from "~/types/markdown"
 import type {Meta} from "~/types/meta"
-import type {Now, NowFrontmatter} from "~/types/now"
+import type {NowFrontmatter, RenderedNow} from "~/types/now"
 import type {PostFrontmatter, RenderedPost, Topic} from "~/types/post"
 import type {Project} from "~/types/project"
 import type {Sponsors} from "~/types/sponsor"
@@ -244,7 +244,7 @@ const mockTestimonials: Testimonial[] = [
 
 const mockTestimonial: Testimonial = mockTestimonials[0]
 
-const mockNows: Now[] = [
+const mockNows: RenderedNow[] = [
     {
         html: "<p>This is a newer now.</p>",
         frontmatter: {
@@ -269,11 +269,11 @@ const mockNowsFrontmatter: NowFrontmatter[] = mockNows.map(
     mockNow => mockNow.frontmatter,
 )
 
-const mockNow: Now = mockNows[1]
+const mockNow: RenderedNow = mockNows[1]
 
-const mockNewerNow: Now = mockNows[0]
+const mockNewerNow: RenderedNow = mockNows[0]
 
-const mockOlderNow: Now = mockNows[2]
+const mockOlderNow: RenderedNow = mockNows[2]
 
 const mockTopics: Topic[] = [
     {

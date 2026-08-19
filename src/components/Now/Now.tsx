@@ -4,11 +4,11 @@ import FancyLink from "~/components/FancyLink"
 import LinkButton from "~/components/LinkButton"
 import Markdown from "~/components/Markdown"
 import useMarkdown from "~/hooks/useMarkdown"
-import type {NewerNow, Now as NowType, OlderNow} from "~/types/now"
+import type {NewerNow, OlderNow, RenderedNow} from "~/types/now"
 import {formatDate} from "~/utils/date"
 
 type NowProps = {
-    now: NowType
+    now: RenderedNow
     newer?: NewerNow
     older?: OlderNow
 }
