@@ -3,10 +3,15 @@ import {useLoaderData} from "@remix-run/react"
 import Layout from "~/components/Layout"
 import Meta from "~/components/Meta"
 import Resume from "~/components/Resume"
-import {getMarkdownBySlug} from "~/utils/markdown.server"
+import {getPageBySlug} from "~/utils/pages"
 
 export const loader = async () => {
-    const resume = await getMarkdownBySlug("resume")
+    const resume = await getPageBySlug("resume")
+
+    if (!resume) {
+        throw new Response("Not Found", {status: 404})
+    }
+
     return {resume}
 }
 

@@ -47,6 +47,15 @@ const generatePostFile = (
     return file
 }
 
+const generatePageFile = (): Markdown<Record<string, never>> => {
+    const file = {
+        markdown: "Mock page.",
+        attributes: {},
+    }
+
+    return file
+}
+
 const generateNowFile = (
     overrides?: Partial<NowFrontmatter>,
 ): Markdown<NowFrontmatter> => {
@@ -78,6 +87,7 @@ const generateTestimonialFile = (
 export {
     generateAppCtx,
     generateNowFile,
+    generatePageFile,
     generatePostFile,
     generateTestimonialFile,
     generateThemeCtx,
