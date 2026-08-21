@@ -12,7 +12,7 @@ const Layout: FC<LayoutProps> = ({children}) => {
         <div className="font-text m-auto grid min-h-screen max-w-5xl grid-rows-[auto_1fr_auto] gap-y-10 text-black transition-all dark:text-white">
             <Header />
 
-            <main className="box-border w-full max-w-[700px] justify-self-center px-5 py-0">
+            <main className="box-border w-full max-w-175 justify-self-center px-5 py-0">
                 {children}
             </main>
 
