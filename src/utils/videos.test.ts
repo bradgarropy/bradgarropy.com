@@ -1,11 +1,13 @@
 import {http} from "@bradgarropy/http"
 import type {Mock} from "vitest"
-import {expect, test, vi} from "vitest"
+import {beforeEach, expect, test, vi} from "vitest"
 
 import {
     mockVideos,
     mockYoutubeErrorResponse,
+    mockYoutubeLiveVideosResponse,
     mockYoutubeResponse,
+    mockYoutubeVideosResponse,
 } from "~/test-utils/mocks"
 import {getLatestVideo, getLatestVideos, videoCache} from "~/utils/videos"
 
@@ -13,18 +15,44 @@ vi.mock("@bradgarropy/http")
 
 const mockGet = http.get as Mock
 
+beforeEach(() => {
+    videoCache.clear()
+})
+
 test("gets latest video", async () => {
-    mockGet.mockResolvedValue(mockYoutubeResponse)
+    mockGet
+        .mockResolvedValueOnce(mockYoutubeResponse)
+        .mockResolvedValueOnce(mockYoutubeVideosResponse)
 
     const latestVideo = await getLatestVideo()
     expect(latestVideo).toEqual(mockVideos[0])
 })
 
 test("gets latest videos", async () => {
-    mockGet.mockResolvedValue(mockYoutubeResponse)
+    mockGet
+        .mockResolvedValueOnce(mockYoutubeResponse)
+        .mockResolvedValueOnce(mockYoutubeVideosResponse)
 
     const latestVideos = await getLatestVideos()
     expect(latestVideos).toEqual(mockVideos)
+})
+
+test("gets cached videos", async () => {
+    videoCache.set("videos", mockVideos)
+
+    const latestVideos = await getLatestVideos()
+
+    expect(latestVideos).toEqual(mockVideos)
+    expect(mockGet).not.toHaveBeenCalled()
+})
+
+test("ignores live videos", async () => {
+    mockGet
+        .mockResolvedValueOnce(mockYoutubeResponse)
+        .mockResolvedValueOnce(mockYoutubeLiveVideosResponse)
+
+    const latestVideos = await getLatestVideos()
+    expect(latestVideos).toEqual([mockVideos[1]])
 })
 
 test("handles youtube error", async () => {

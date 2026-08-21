@@ -3,30 +3,44 @@ import {TTLCache} from "@isaacs/ttlcache"
 
 import type {Video} from "~/types/video"
 
+const YOUTUBE_PLAYLIST_ID = "UUgbFhcZKt36Upo7oxWlLEig"
+const YOUTUBE_RESULTS_COUNT = 50
+
 const videoCache = new TTLCache<"videos", Video[]>({
     max: 1,
     ttl: 1000 * 60 * 60, // 1 hour
 })
 
-type YouTubeSearchResponse = {
-    kind: string
-    etag: string
-    nextPageToken: string
-    regionCode: string
-    pageInfo: PageInfo
+type YouTubePlaylistResponse = {
     items: {
-        kind: string
-        etag: string
-        id: {
-            kind: string
-            videoId: string
+        snippet: {
+            title: string
+            thumbnails: {
+                default: Thumbnail
+            }
+            resourceId: {
+                videoId: string
+            }
         }
-        snippet: Snippet
     }[]
-    error?: Error
+    error?: YouTubeError
 }
 
-type Error = {
+type YouTubeVideosResponse = {
+    items: {
+        id: string
+        liveStreamingDetails?: Record<string, unknown>
+    }[]
+    error?: YouTubeError
+}
+
+type Thumbnail = {
+    url: string
+    width: number
+    height: number
+}
+
+type YouTubeError = {
     code: number
     message: string
     errors: {
@@ -34,32 +48,6 @@ type Error = {
         domain: string
         reason: string
     }
-}
-
-type PageInfo = {
-    totalResults: number
-    resultsPerPage: number
-}
-
-type Snippet = {
-    publishedAt: string
-    channelId: string
-    title: string
-    description: string
-    thumbnails: {
-        default: Thumbnail
-        medium: Thumbnail
-        high: Thumbnail
-    }
-    channelTitle: string
-    liveBroadcastContent: string
-    publishTime: string
-}
-
-type Thumbnail = {
-    url: string
-    width: number
-    height: number
 }
 
 const getLatestVideo = async (): Promise<Video> => {
@@ -87,37 +75,61 @@ const getLatestVideos = async (count = 2): Promise<Video[]> => {
         console.log("video cache miss")
     }
 
-    const response = await http.get<YouTubeSearchResponse>(
-        "https://www.googleapis.com/youtube/v3/search",
+    const playlistResponse = await http.get<YouTubePlaylistResponse>(
+        "https://www.googleapis.com/youtube/v3/playlistItems",
         {
             params: {
                 key: process.env.YOUTUBE_API_KEY,
-                channelId: "UCgbFhcZKt36Upo7oxWlLEig",
-                maxResults: count,
+                maxResults: YOUTUBE_RESULTS_COUNT,
                 part: "snippet",
-                order: "date",
-                type: "video",
+                playlistId: YOUTUBE_PLAYLIST_ID,
             },
         },
     )
 
-    if (response.error?.code === 403) {
+    if (playlistResponse.error?.code === 403) {
         console.log("youtube quota limit reached")
         return []
     }
 
-    const videos: Video[] = response.items.map(item => {
-        const video: Video = {
-            id: item.id.videoId,
-            thumbnail: item.snippet.thumbnails.default.url.replace(
-                "default.jpg",
-                "maxresdefault.jpg",
-            ),
-            title: item.snippet.title,
-        }
-
-        return video
+    const videoIds = playlistResponse.items.map(item => {
+        return item.snippet.resourceId.videoId
     })
+
+    const videosResponse = await http.get<YouTubeVideosResponse>(
+        "https://www.googleapis.com/youtube/v3/videos",
+        {
+            params: {
+                id: videoIds.join(","),
+                key: process.env.YOUTUBE_API_KEY,
+                part: "liveStreamingDetails",
+            },
+        },
+    )
+
+    const liveVideoIds = new Set(
+        videosResponse.items
+            .filter(video => video.liveStreamingDetails)
+            .map(video => video.id),
+    )
+
+    const videos: Video[] = playlistResponse.items
+        .filter(item => {
+            return !liveVideoIds.has(item.snippet.resourceId.videoId)
+        })
+        .slice(0, count)
+        .map(item => {
+            const video: Video = {
+                id: item.snippet.resourceId.videoId,
+                thumbnail: item.snippet.thumbnails.default.url.replace(
+                    "default.jpg",
+                    "maxresdefault.jpg",
+                ),
+                title: item.snippet.title,
+            }
+
+            return video
+        })
 
     console.log("updated video cache")
     videoCache.set("videos", videos)
