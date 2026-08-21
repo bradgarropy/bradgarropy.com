@@ -18,6 +18,7 @@ const mockUseSearchParams = () => {
 }
 
 const mockUseLocation = vi.fn().mockReturnValue({pathname: "/"})
+const mockUseLoaderData = vi.fn()
 
 const mockSubmit = vi.fn()
 
@@ -33,6 +34,7 @@ const mockRemix = {
     ...actualRemix,
     Link: MockLink,
     useFetcher: mockUseFetcher,
+    useLoaderData: mockUseLoaderData,
     useLocation: mockUseLocation,
     useSearchParams: mockUseSearchParams,
     useRouteLoaderData: mockUseRouteLoaderData,
@@ -44,6 +46,7 @@ export {
     mockSetSearchParams,
     mockSubmit,
     mockUseFetcher,
+    mockUseLoaderData,
     mockUseLocation,
     mockUseRouteLoaderData,
 }
