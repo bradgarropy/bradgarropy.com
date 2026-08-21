@@ -1,3 +1,7 @@
 import {flatRoutes} from "@remix-run/fs-routes"
 
-export default flatRoutes()
+const routes = flatRoutes({
+    ignoredRouteFiles: ["**/*.test.{ts,tsx}"],
+})
+
+export default routes
