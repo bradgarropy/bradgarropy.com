@@ -1,46 +1,3 @@
-const mockYoutubeResponse = {
-    items: [
-        {
-            id: {
-                videoId: "abc123",
-            },
-            snippet: {
-                thumbnails: {
-                    default: {
-                        url: "https://youtube.com/first.jpg",
-                    },
-                },
-                title: "first test video",
-            },
-        },
-        {
-            id: {
-                videoId: "def456",
-            },
-            snippet: {
-                thumbnails: {
-                    default: {
-                        url: "https://youtube.com/second.jpg",
-                    },
-                },
-                title: "second test video",
-            },
-        },
-    ],
-}
-
-const mockYoutubeErrorResponse = {
-    error: {
-        code: 403,
-        message: "quota exceeded",
-        errors: {
-            message: "you made too many requests",
-            domain: "youtube.com",
-            reason: "quota exceeded",
-        },
-    },
-}
-
 const mockGitHubSponsorsResponse = {
     user: {
         sponsorshipsAsMaintainer: {
@@ -524,6 +481,4 @@ export {
     mockNowsResponse,
     mockPostsPaths,
     mockPostsResponse,
-    mockYoutubeErrorResponse,
-    mockYoutubeResponse,
 }
